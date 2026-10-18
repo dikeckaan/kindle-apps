@@ -35,6 +35,17 @@ Kullanıcıyla kararlaştırılanlar (kullanıcının kararı):
    - **Sistem bilgisi** (pil, boş alan, IP, sıcaklık vb.)
    - **Wi-Fi ile dosya yükleme** (tarayıcıdan Kindle'a kitap atma)
 7. **Tek GitHub reposu**, Kindle'a kurulabilir (kpm deposu olarak).
+8. **Gazete** (kullanıcının sonradan eklediği): Anadolu Ajansı veya TRT Haber'den haberler
+   (herkese açık RSS; anahtarsız). Kategoriler, başlık listesi, dokununca okunabilir metin,
+   çevrimdışı okumak için önbellek. Kaynak seçimi (AA/TRT, ikisi birden) ve metin çıkarımı
+   builder'a bırakıldı; telif için yalnızca kaynakların RSS'te verdiği içerik + kaynak bağlantısı
+   gösterilir, görsel indirilmez.
+9. **Tek uygulama çatısı — "Uygulamalar"** (kullanıcının kararı: "KOReader gibi bir app içinde
+   toplayalım"): kitaplıkta **tek giriş**. Açınca simge ızgaralı ana menü; bir uygulamadan
+   çıkınca menüye, menüden çıkınca Kindle'a dönülür. Kindle arayüzü bu süre boyunca duraklatılmış
+   kalır (uygulama geçişlerinde ana ekran gidip gelmez). SSH aç/kapa da menüdeki bir uygulamadır.
+   Uygulamalar menüye kayıt dosyasıyla (`/mnt/us/kindle-apps/apps/<id>/app.ini`: ad, sıra,
+   ikili) eklenir; kurulu olmayan görünmez — benim kararım.
 
 **Ortak ekran kuralı (kullanıcının kararı, tüm uygulamalar):** her hamlede tam ekran yenileme
 (siyah flaş) YOK. Yalnızca değişen bölge hızlı/flaşsız kipte güncellenir. Tam yenileme sadece
@@ -198,9 +209,11 @@ yol geçişine (`../`) karşı korumalı.
 - Depo: `github.com/dikeckaan/kindle-apps` (**herkese açık** — kpm'in indirebilmesi için;
   benim kararım).
 - Her uygulama bir **kpm paketi** (`.kpkg` = tar.gz: `manifest.json` (v2), `install.sh`,
-  `uninstall.sh`, `launch.sh`, `scriptlets/<ad>.sh`), `supported_platforms: ["kindlehf"]`.
-  Ortak çalışma zamanı (font, `kui-run.sh`, motor vb. paylaşılanlar) ayrı bir
-  çekirdek paket olur ve diğerleri ona bağımlıdır. Kurulum yalnızca `/mnt/us` altına yazar.
+  `uninstall.sh`, `launch.sh`), `supported_platforms: ["kindlehf"]`; uygulama paketleri
+  scriptlet koymaz, `apps/<id>/app.ini` ile menüye kaydolur.
+  Ortak çalışma zamanı (font, `kui-run.sh`, **"Uygulamalar" menüsü** ve tek scriptlet
+  `/mnt/us/documents/uygulamalar.sh`) çekirdek paket `kindle-apps-core`'dur; diğerleri ona
+  bağımlıdır. Kurulum yalnızca `/mnt/us` altına yazar.
 - Depo manifesti (`manifest.json`, KMC v2 biçimi — bkz. `repo.kindlemodding.org/manifest.v2.json`)
   ve paketler **GitHub Pages** üzerinden yayınlanır; **GitHub Actions** her etikette
   Docker içinde kindlehf araç zinciriyle derler, paketler ve Pages'e yükler.

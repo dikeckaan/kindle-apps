@@ -2,7 +2,7 @@
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
-**Goal:** Kitaplıktan açılan, flaşsız güncellenen bir 2048 uygulamasını; bütün diğer uygulamaların
+**Goal:** Kitaplıktaki tek "Uygulamalar" girişinden açılan menü ve içinde flaşsız güncellenen bir 2048 uygulamasını; bütün diğer uygulamaların
 kullanacağı ortak çatı (`kui`), güvenli başlatıcı, Docker derleme ve kpm deposu üzerinden
 GitHub'dan kurulabilir hâlde uçtan uca teslim etmek.
 
@@ -19,7 +19,7 @@ POSIX sh, GitHub Actions + Pages.
 **Spec:** `docs/superpowers/specs/2026-10-18-kindle-apps-design.md`
 
 **Sonraki planlar (bu planın dışı):** Plan 2 Satranç (+Stockfish) · Plan 3 Wordle (+Türkçe
-klavye) · Plan 4 Hava, Masa saati, Döviz · Plan 5 Mayın, Solitaire, Sudoku · Plan 6 SSH,
+klavye) · Plan 4 Hava, Masa saati, Döviz, Gazete · Plan 5 Mayın, Solitaire, Sudoku · Plan 6 SSH,
 Sistem bilgisi, Wi-Fi yükleme. Hepsi bu planın `kui` arayüzlerini tüketir.
 
 ## Global Constraints
@@ -28,7 +28,8 @@ Sistem bilgisi, Wi-Fi yükleme. Hepsi bu planın `kui` arayüzlerini tüketir.
 - Kurulum ve çalışma yalnızca `/mnt/us` altına yazar; rootfs (`/`, `/etc`, `/usr`) asla değiştirilmez.
 - `/mnt/us` symlink desteklemez — paketlerde symlink olmayacak.
 - Kurulum kökü: `/mnt/us/kindle-apps/` ; veri: `/mnt/us/kindle-apps/data/<app>/` ;
-  günlük: `/mnt/us/kindle-apps/logs/<app>.log` ; scriptlet: `/mnt/us/documents/<app>.sh`.
+  günlük: `/mnt/us/kindle-apps/logs/<app>.log` ; **tek scriptlet** `/mnt/us/documents/uygulamalar.sh`
+  (`# Name: Uygulamalar`); uygulamalar menüye `/mnt/us/kindle-apps/apps/<id>/app.ini` ile kaydolur.
 - Arayüz dili Türkçe (UTF-8). Her ekranda sol üstte Çıkış (✕) düğmesi.
 - Yenileme: hamlelerde tam yenileme YOK; bölgesel flaşsız güncelleme; tam yenileme yalnızca
   ekran değişiminde/yeni oyunda ve 25 bölgesel güncellemede bir (ayar `full_refresh_every`,
@@ -80,7 +81,8 @@ core/kui-run.sh                  # arayüzü duraklat → uygulama → her durum
 core/pkg/                        # "kindle-apps-core" kpm paketi şablonu
 apps/game2048/g2048.c/.h         # 2048 saf mantık
 apps/game2048/main.c             # 2048 ekran katmanı
-apps/game2048/pkg/               # kpm paketi şablonu (manifest, install/uninstall/launch, scriptlet)
+apps/game2048/pkg/               # kpm paketi şablonu (manifest, install/uninstall/launch, app.ini)
+core/hub/main.c                  # "Uygulamalar" menüsü: app.ini'leri okur, ızgara, alt süreç başlatır
 tests/host/t.h                   # mini test makroları
 tests/host/test_*.c              # host birim testleri
 .github/workflows/release.yml    # etikette derle + paketle + Pages'e yayınla
@@ -360,10 +362,37 @@ Her hamlede durum `data/game2048/save.txt`'ye atomik yazılır; açılışta yü
 
 ---
 
+### Task 8b: "Uygulamalar" menüsü (hub)
+
+**Files:**
+- Create: `core/hub/main.c`, `core/hub/appreg.c`, `core/hub/appreg.h`
+- Test: `tests/host/test_appreg.c`
+
+**Interfaces (Produces):**
+```c
+typedef struct { char id[32]; char name[48]; char exec[256]; int order; } HubApp;
+/* $KUI_ROOT/apps/*/app.ini okur ("name=", "exec=" (app dizinine göre göreli), "order="); order, sonra ad sırası; en çok 32 */
+int hub_scan_apps(const char *root, HubApp *out, int max);
+```
+`app.ini` örneği: `name=2048\nexec=game2048\norder=20`.
+Menü: üst çubuk "Uygulamalar" (✕ → Kindle'a dön), uygulamalar 3 sütunlu ızgarada büyük etiketli
+kutular (kui_grid_cell, alan genişliği `kui_width()-80`); 9'dan fazla ise alt kısımda ◀ ▶ sayfa.
+Dokununca: `kui_quit()` → `fork`+`execl(exec)` (env `KUI_ROOT` korunur) → `waitpid` → `kui_init("hub")`
+→ tam yeniden çiz + `kui_flush(1)`. Alt süreç ≠0 çıkarsa `kui_dialog("Hata", "<ad> beklenmedik şekilde kapandı", {"Tamam"},1)`.
+
+- [ ] **Step 1: Testler:** `test_scan_sorts_by_order_then_name`, `test_scan_skips_dir_without_ini`,
+  `test_scan_skips_ini_without_exec`, `test_scan_resolves_exec_relative_to_app_dir`, `test_scan_caps_at_max`. FAIL.
+- [ ] **Step 2:** `appreg.c` uygula → OK. **Step 3:** `main.c` yaz, `make build`.
+- [ ] **Step 4: Cihazda doğrula:** `kui-run.sh hub <hub>` → menüde "2048" → aç → ✕ → menüye döndü (Kindle ana ekranı
+  arada görünmedi) → ✕ → Kindle ana ekranı geldi. 2048'i `kill -9` → menü geri geldi + hata diyaloğu.
+- [ ] **Step 5: Commit** — `feat(hub): Uygulamalar launcher menu`
+
+---
+
 ### Task 9: Paketleme, depo manifesti, yerel kurulum
 
 **Files:**
-- Create: `tools/pack.sh`, `tools/gen-manifest.sh`, `apps/game2048/pkg/{manifest.json,install.sh,uninstall.sh,launch.sh,scriptlets/game2048.sh}`
+- Create: `tools/pack.sh`, `tools/gen-manifest.sh`, `apps/game2048/pkg/{manifest.json,install.sh,uninstall.sh,launch.sh,app.ini}`, `core/pkg/scriptlets/uygulamalar.sh`
 - Modify: `Makefile` (`dist`, `deploy`)
 
 **Interfaces:**
@@ -373,8 +402,9 @@ Her hamlede durum `data/game2048/save.txt`'ye atomik yazılır; açılışta yü
 - Paket kimlikleri: `kindle-apps-core`, `kindle-apps-2048` (2048 → core'a bağımlı). Sürüm `[2026,10,1]`.
 - `gen-manifest.sh` → `dist/manifest.json` (`manifest_version:2, id:"kindle-apps", name:"Kindle Apps (TR)"`, her paket için
   `artifacts[{url:"packages/<id>/<id>_<ver>_kindlehf.kpkg", version, dependencies, supported_platforms}]`).
-- Scriptlet başlığı: `# Name: 2048`, `# Author: Kaan Dikeç`, `# DontUseFBInk`; gövde `/var/local/kmc/bin/kpm launch kindle-apps-2048`.
-  `launch.sh`: `exec /mnt/us/kindle-apps/bin/kui-run.sh game2048 /mnt/us/kindle-apps/apps/game2048/game2048`.
+- Tek scriptlet (core paketinde) başlığı: `# Name: Uygulamalar`, `# Author: Kaan Dikeç`, `# DontUseFBInk`; gövde
+  `/var/local/kmc/bin/kpm launch kindle-apps-core`. Core `launch.sh`: `exec /mnt/us/kindle-apps/bin/kui-run.sh hub /mnt/us/kindle-apps/bin/hub`.
+  2048 paketi `/mnt/us/kindle-apps/apps/game2048/{game2048,app.ini}` kurar; `launch.sh`'ı yalnız hub'ı açar.
 
 - [ ] **Step 1: Test:** `tests/pkg/test_pack.sh`: `make dist` sonrası her `.kpkg` için `tar tzf` → `manifest.json`,
   `install.sh`, `uninstall.sh`, `launch.sh` var; `find` ile symlink yok; `manifest.json` geçerli JSON (`python3 -m json.tool`).
@@ -382,8 +412,8 @@ Her hamlede durum `data/game2048/save.txt`'ye atomik yazılır; açılışta yü
 - [ ] **Step 2:** Uygula; testi geçir.
 - [ ] **Step 3: Cihazda yerel kurulum:** `make deploy` her `.kpkg` için kpm'in yaptığını taklit eder: paketi cihazda
   `/mnt/us/kindle-apps-staging/<id>/` içine açar ve o dizinde `sh install.sh` çalıştırır (önce core, sonra 2048),
-  sonra staging'i siler. Kitaplıkta "2048" görünür, açılır.
-  Kaldır (`uninstall.sh`) → scriptlet ve uygulama dosyaları gider, `data/game2048/` kalır; tekrar kur → kayıt duruyor.
+  sonra staging'i siler. Kitaplıkta "Uygulamalar" görünür, menüde 2048 var, açılır.
+  2048'i kaldır (`uninstall.sh`) → menüden kaybolur, uygulama dosyaları gider, `data/game2048/` kalır; tekrar kur → kayıt duruyor.
 - [ ] **Step 4: Commit** — `feat: kpkg packaging, repo manifest, deploy`
 
 ---
@@ -406,5 +436,5 @@ Her hamlede durum `data/game2048/save.txt`'ye atomik yazılır; açılışta yü
 - [ ] **Step 2:** `git tag v2026.10.1 && git push --tags`; `gh run watch` → başarılı;
   `curl -sf https://dikeckaan.github.io/kindle-apps/manifest.json | python3 -m json.tool` → `kindle-apps-2048` içerir.
 - [ ] **Step 3: Cihazda gerçek kurulum:** Task 9'daki yerel kurulumu kaldır; cihazda
-  `kpm add-repo …; kpm update; kpm -y install kindle-apps-2048` → çıkış 0, kitaplıkta "2048", açılıyor, oynanıyor, çıkışta arayüz geri geliyor.
+  `kpm add-repo …; kpm update; kpm -y install kindle-apps-2048` → çıkış 0, kitaplıkta "Uygulamalar", menüde 2048, açılıyor, oynanıyor, çıkışta arayüz geri geliyor.
 - [ ] **Step 4: Commit** — `ci: build and publish kpm repo to GitHub Pages`
