@@ -67,7 +67,10 @@ int  kui_width(void);
 int  kui_height(void);
 void kui_fill(KuiRect r, unsigned char gray); /* 0 = black, 255 = white; draws into the buffer only */
 void kui_frame(KuiRect r, int thickness, unsigned char gray);
-void kui_text(KuiRect box, const char *utf8, KuiFont f, int px, KuiAlign a, unsigned char fg); /* vertically centred */
+void kui_text(KuiRect box, const char *utf8, KuiFont f, int px, KuiAlign a, unsigned char fg); /* vertically centred; blends onto
+                                       * whatever is below — reliable for dark text only (FBInk Y8 bgless path) */
+/* Text on a known solid background (use for light/white text): the glyphs' line box is painted with bg. */
+void kui_text_on(KuiRect box, const char *utf8, KuiFont f, int px, KuiAlign a, unsigned char fg, unsigned char bg);
 int  kui_text_width(const char *utf8, KuiFont f, int px);
 void kui_mark_dirty(KuiRect r);
 void kui_flush(int screen_changed); /* the only place that refreshes the panel */

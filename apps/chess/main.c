@@ -82,7 +82,7 @@ static void draw_square(int sq)
 	int p = game.pos.sq[sq];
 	if (p != EMPTY) {
 		int c = chess_piece_color(p), t = c ? p - 6 : p;
-		if (c == 0) kui_text(r, glyph_solid[t], KUI_FONT_REG, 104, KUI_ALIGN_CENTER, 0xFF); /* white body */
+		if (c == 0) kui_text_on(r, glyph_solid[t], KUI_FONT_REG, 104, KUI_ALIGN_CENTER, 0xFF, dark ? 0xBB : 0xFF); /* white body */
 		kui_text(r, c == 0 ? glyph_outline[t] : glyph_solid[t], KUI_FONT_REG, 104, KUI_ALIGN_CENTER, 0);
 	}
 	if (is_target(sq)) {

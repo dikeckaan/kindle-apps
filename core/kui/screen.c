@@ -112,7 +112,7 @@ int kui_text_width(const char *utf8, KuiFont f, int px)
 	return w;
 }
 
-void kui_text(KuiRect box, const char *utf8, KuiFont f, int px, KuiAlign a, unsigned char fg)
+static void draw_text(KuiRect box, const char *utf8, KuiFont f, int px, KuiAlign a, unsigned char fg, int bg)
 {
 	int w, h;
 	measure(utf8, f, px, &w, &h);
@@ -125,9 +125,30 @@ void kui_text(KuiRect box, const char *utf8, KuiFont f, int px, KuiAlign a, unsi
 	ot.margins.top = (short) (box.y + (h < box.h ? (box.h - h) / 2 : 0));
 	ot.margins.left = (short) left;
 	ot.margins.right = (short) (kui_width() - (box.x + box.w));
-	/* FBInk applies fg_color only at init/pen update, so set the pen for every call */
-	fbink_set_fg_pen_gray(fg, false, true);
-	fbink_print_ot(fb, utf8, &ot, &cfg, NULL);
+	/* print_ot takes its colours from the config's palette indices (FG_BLACK = 0 … FG_WHITE = 15,
+	 * BG_WHITE = 0 … BG_BLACK = 15). Its "bgless" blend is wrong for light text on 8bpp panels,
+	 * so light text is drawn with an explicit background instead. */
+	FBInkConfig c = cfg;
+	/* FBInk's pure black/white shortcut (|fg - bg| == 0xFF) always paints dark-on-light, so white on black
+	 * is drawn with an almost-white foreground to take the general (correct) path. */
+	if (bg >= 0 && fg - bg == 0xFF) fg = 0xEE;
+	c.fg_color = (FG_COLOR_INDEX_T) (fg / 0x11);
+	if (bg >= 0) {
+		c.bg_color = (BG_COLOR_INDEX_T) ((255 - bg) / 0x11);
+		c.is_bgless = false;
+	}
+	fbink_update_pen_colors(&c);
+	fbink_print_ot(fb, utf8, &ot, &c, NULL);
+}
+
+void kui_text(KuiRect box, const char *utf8, KuiFont f, int px, KuiAlign a, unsigned char fg)
+{
+	draw_text(box, utf8, f, px, a, fg, -1);
+}
+
+void kui_text_on(KuiRect box, const char *utf8, KuiFont f, int px, KuiAlign a, unsigned char fg, unsigned char bg)
+{
+	draw_text(box, utf8, f, px, a, fg, bg);
 }
 
 void kui_mark_dirty(KuiRect r) { kui_dirty_add(&dirty, r); }

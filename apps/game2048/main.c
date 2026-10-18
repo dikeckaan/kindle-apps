@@ -43,7 +43,7 @@ static void draw_cell(int r, int c)
 		snprintf(s, sizeof s, "%d", v);
 		int digits = (int) strlen(s);
 		int px = digits <= 2 ? 120 : digits == 3 ? 100 : digits == 4 ? 76 : 60;
-		kui_text(rc, s, KUI_FONT_BOLD, px, KUI_ALIGN_CENTER, bg >= 0x99 ? 0 : 255);
+		kui_text_on(rc, s, KUI_FONT_BOLD, px, KUI_ALIGN_CENTER, bg >= 0x99 ? 0 : 255, bg);
 	}
 	kui_mark_dirty(rc);
 }

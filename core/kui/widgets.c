@@ -20,7 +20,7 @@ void kui_button(const KuiButton *b, int pressed)
 {
 	kui_fill(b->r, pressed ? 0 : 255);
 	kui_frame(b->r, 4, 0);
-	kui_text(b->r, b->label, KUI_FONT_BOLD, b->r.h > 140 ? 52 : 40, KUI_ALIGN_CENTER, pressed ? 255 : 0);
+	kui_text_on(b->r, b->label, KUI_FONT_BOLD, b->r.h > 140 ? 52 : 40, KUI_ALIGN_CENTER, pressed ? 255 : 0, pressed ? 0 : 255);
 	kui_mark_dirty(b->r);
 }
 

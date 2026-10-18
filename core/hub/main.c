@@ -114,7 +114,7 @@ int main(void)
 			if (k >= n_apps || !kui_rect_contains(tile(i), e.x, e.y)) continue;
 			KuiRect r = tile(i); /* tap feedback before the app takes over the screen */
 			kui_fill(r, 0);
-			kui_text((KuiRect){ r.x + 10, r.y, r.w - 20, r.h }, apps[k].name, KUI_FONT_BOLD, 52, KUI_ALIGN_CENTER, 255);
+			kui_text_on((KuiRect){ r.x + 10, r.y, r.w - 20, r.h }, apps[k].name, KUI_FONT_BOLD, 52, KUI_ALIGN_CENTER, 255, 0);
 			kui_mark_dirty(r);
 			kui_flush(0);
 			int st = run_app(&apps[k]);
