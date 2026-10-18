@@ -2,14 +2,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <fcntl.h>
-#include <unistd.h>
 #include "fw.h"
+#include "ssh/sshsrv.h"
 #include "kui.h"
 
 /* Kindle's own default rules: root-owned on the read-only rootfs, so nothing writable is ever restored. */
 #define DEFAULT_RULES "/etc/sysconfig/iptables"
-#define SSH_PIDFILE "/tmp/kindle-apps-ssh.pid"
 
 static int wall_down(void)
 {
@@ -22,29 +20,13 @@ static int wall_down(void)
 	return fw_is_open_policy(out);
 }
 
-/* Re-opens the port of our SSH server (if it is running) after the default rules were restored.
- * The port is taken from the live process' command line, never from a writable file. */
+/* Re-opens the port of our SSH server (if running) after the default rules were restored. The port comes
+ * from ssh_server_port(), which only trusts a root-owned pidfile and a root process running our binary. */
 static void keep_ssh_reachable(void)
 {
-	char buf[32], path[64], cmd[96];
-	int fd = open(SSH_PIDFILE, O_RDONLY | O_NOFOLLOW);
-	if (fd < 0) return;
-	ssize_t n = read(fd, buf, sizeof buf - 1);
-	close(fd);
-	if (n <= 0) return;
-	buf[n] = '\0';
-	int pid = atoi(buf);
-	if (pid <= 1) return;
-	snprintf(path, sizeof path, "/proc/%d/cmdline", pid);
-	static char cl[1024];
-	fd = open(path, O_RDONLY);
-	if (fd < 0) return;
-	n = read(fd, cl, sizeof cl - 1);
-	close(fd);
-	if (n <= 0) return;
-	cl[n] = '\0';
-	int port = fw_dropbear_port(cl, (int) n);
-	if (port < 0) return;
+	char cmd[96];
+	int port = ssh_server_port();
+	if (port <= 0) return;
 	snprintf(cmd, sizeof cmd, "iptables -I INPUT -p tcp --dport %d -j ACCEPT", port);
 	if (system(cmd) != 0) fprintf(stderr, "could not re-open ssh port %d\n", port);
 }

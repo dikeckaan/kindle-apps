@@ -25,6 +25,8 @@ TEST_test_levels_SRCS := apps/chess/levels.c
 TEST_test_sleep_opts_SRCS := apps/sleep/sleep_opts.c
 TEST_test_sha256_SRCS := core/kui/sha256.c
 TEST_test_fw_SRCS := apps/firewall/fw.c
+TEST_test_sshcfg_SRCS := apps/ssh/sshcfg.c core/kui/sha256.c
+TEST_test_sshsrv_SRCS := apps/ssh/sshsrv.c
 TEST_test_keyboard_SRCS := core/kui/keyboard.c core/kui/layout.c core/kui/utf8tr.c
 TEST_test_uci_SRCS := apps/chess/uci.c apps/chess/levels.c
 
@@ -51,8 +53,9 @@ $(FBINK_A):
 	$(MAKE) -C third_party/FBInk staticlib KINDLE=1 CROSS_TC=$(CROSS_TC)
 
 # APPS: each entry <name> builds $(OUT)/<name> from APP_<name>_SRCS + kui + FBInk
-APPS := hub game2048 chess sleep firewall
-APP_firewall_SRCS := apps/firewall/main.c apps/firewall/fw.c
+APPS := hub game2048 chess sleep firewall ssh
+APP_ssh_SRCS := apps/ssh/main.c apps/ssh/sshcfg.c apps/ssh/sshsrv.c
+APP_firewall_SRCS := apps/firewall/main.c apps/firewall/fw.c apps/ssh/sshsrv.c
 APP_sleep_SRCS := apps/sleep/main.c apps/sleep/sleep_opts.c
 APP_chess_SRCS := apps/chess/main.c apps/chess/chess_game.c apps/chess/chess_rules.c apps/chess/levels.c apps/chess/uci.c
 APP_hub_SRCS := core/hub/main.c core/hub/appreg.c
@@ -63,7 +66,10 @@ $(OUT)/%: $$(APP_$$*_SRCS) $(FBINK_A) $(KUI_SRCS) $(wildcard core/kui/*.h)
 	$(CROSS_CC) $(CROSS_CFLAGS) -o $@ $(APP_$*_SRCS) $(KUI_SRCS) $(FBINK_A) -lm
 	$(CROSS_TC)-strip $@
 
-cross: $(FBINK_A) $(addprefix $(OUT)/,$(APPS)) $(OUT)/stockfish
+cross: $(FBINK_A) $(addprefix $(OUT)/,$(APPS)) $(OUT)/stockfish $(OUT)/dropbear
+
+$(OUT)/dropbear: tools/build-dropbear.sh tools/patches/dropbear-apppass.patch apps/ssh/sshcfg.c core/kui/sha256.c
+	./tools/build-dropbear.sh
 
 $(OUT)/stockfish: tools/build-stockfish.sh
 	./tools/build-stockfish.sh

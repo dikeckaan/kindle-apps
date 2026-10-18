@@ -1,0 +1,32 @@
+--- a/src/svr-authpasswd.c	2026-10-18 12:24:43
++++ b/src/svr-authpasswd.c	2026-10-18 12:24:43
+@@ -31,6 +31,12 @@
+ #include "auth.h"
+ #include "runopts.h"
+ 
++/* kindle-apps password records (single translation unit: no Makefile changes) */
++#define KAV1_PASSWD_FILE "/var/local/kindle-apps/ssh/passwd"
++#include "sshcfg.h"
++#include "sshcfg.c"
++#include "sha256.c"
++
+ #if DROPBEAR_SVR_PASSWORD_AUTH
+ 
+ /* not constant time when strings are differing lengths. 
+@@ -66,9 +72,13 @@
+ 
+ 	password = buf_getstring(ses.payload, &passwordlen);
+ 	if (valid_user && passwordlen <= DROPBEAR_MAX_PASSWORD_LEN) {
+-		/* the first bytes of passwdcrypt are the salt */
+-		passwdcrypt = ses.authstate.pw_passwd;
+-		testcrypt = crypt(password, passwdcrypt);
++		/* kindle-apps: check root's password against the app's own record (root-only dir), never
++		 * /etc/shadow (root has no password on jailbroken Kindles). The crypt-style variables are
++		 * mapped onto the result so the original flow below stays unchanged. */
++		static char ok_mark[] = "kav1-ok", bad_mark[] = "kav1-bad";
++		int r = strcmp(ses.authstate.pw_name, "root") == 0 ? ssh_check_file(KAV1_PASSWD_FILE, password) : -1;
++		passwdcrypt = ok_mark;
++		testcrypt = r < 0 ? NULL : (r == 1 ? ok_mark : bad_mark);
+ 	}
+ 	m_burn(password, passwordlen);
+ 	m_free(password);
