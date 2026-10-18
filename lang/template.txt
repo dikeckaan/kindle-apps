@@ -71,6 +71,8 @@
 %s° K, %s° D	
 # apps/weather/main.c
 + Ekle	
+# apps/ajanda/main.c
++ Not ekle	
 # apps/odak/main.c
 + Yeni	
 # apps/sky/main.c
@@ -115,6 +117,8 @@
 70.000'den fazla ücretsiz e-kitap. Arama İngilizce başlık ve yazar adlarıyla en iyi sonucu verir.	
 # apps/ebooks/main.c
 AZW3 Kindle'ın kendi okuyucusunda, EPUB KOReader'da açılır.	
+# apps/ajanda/main.c
+Ajanda	
 # apps/sky/skydata.c
 Akrep	
 # apps/pano/pano.c
@@ -139,6 +143,8 @@ Alış
 Anastasia matı	
 # apps/sky/skydata.c
 Andromeda	
+# apps/ajanda/agenda.c
+Anneler Günü	
 # apps/sky/skydata.c
 Antares	
 # apps/ebooks/main.c
@@ -163,6 +169,10 @@ Aslan
 At	
 # apps/puzzle/puzzle.c
 At oyun sonu	
+# apps/ajanda/agenda.c
+Atatürk'ü Anma Günü	
+# apps/ajanda/agenda.c
+Atatürk'ü Anma, Gençlik ve Spor Bayramı	
 # apps/sky/skydata.c
 Avcı	
 # apps/pano/main.c
@@ -203,6 +213,8 @@ Açılış
 Ağustos	
 # apps/weather/wx.c
 B	
+# apps/ajanda/agenda.c
+Babalar Günü	
 # apps/sky/skydata.c
 Balıklar	
 # core/hub/upd_ui.c
@@ -225,6 +237,8 @@ Başla
 Baştan başla	
 # apps/sysinfo/main.c
 Bellek	
+# apps/ajanda/agenda.c
+Berat Kandili	
 # apps/sky/skydata.c
 Betelgöz	
 # apps/chess/main.c
@@ -249,6 +263,8 @@ Boğmaca mat
 Bu gece görünen gezegenler: %s	
 # apps/sky/main.c
 Bu gece parlak gezegen görünmüyor	
+# apps/ajanda/main.c
+Bu gün için not yok.	
 # apps/odak/main.c
 Bu hafta	
 # apps/upload/main.c
@@ -261,7 +277,7 @@ Bu oyun bitirilsin mi?
 Bu sefer olmadı	
 # apps/deprem/main.c
 Bu süzgeçle deprem yok.	
-# apps/odak/main.c
+# apps/ajanda/main.c
 Bugün	
 # apps/weather/main.c
 Bugün  en yüksek %s · en düşük %s · ☼ %s – %s	
@@ -289,6 +305,10 @@ Bütün kartları yerleştirdin.
 Büyükayı	
 # apps/sky/skydata.c
 Büyükköpek	
+# apps/ajanda/agenda.c
+Cemaziyelahir	
+# apps/ajanda/agenda.c
+Cemaziyelevvel	
 # core/kui/trfmt.c
 Cmt	
 # core/kui/trfmt.c
@@ -297,6 +317,10 @@ Cum
 Cuma	
 # core/kui/trfmt.c
 Cumartesi	
+# apps/ajanda/agenda.c
+Cumhuriyet Bayramı	
+# apps/ajanda/agenda.c
+Cumhuriyet Bayramı arifesi	
 # apps/currency/fx.c
 Cumhuriyet altını	
 # apps/weather/wx.c
@@ -307,6 +331,8 @@ DURAKLATILDI
 Daha fazla	
 # apps/puzzle/main.c
 Daha önce çözüldü · Seri: %d	
+# apps/ajanda/agenda.c
+Demokrasi ve Millî Birlik Günü	
 # apps/sky/skydata.c
 Deneb	
 # core/hub/upd_ui.c
@@ -369,6 +395,8 @@ Döviz & Altın
 Döviz ve altın	
 # apps/news/news.c
 Dünya	
+# apps/ajanda/main.c
+Düzenle	
 # apps/chess/main.c
 Düşünüyor… (%s)	
 # apps/ebooks/main.c
@@ -379,6 +407,8 @@ Ejderha
 Ekim	
 # apps/news/news.c
 Ekonomi	
+# apps/ajanda/agenda.c
+Emek ve Dayanışma Günü	
 # core/kui/widgets.c
 En az %d karakter girin	
 # apps/deprem/main.c
@@ -483,7 +513,7 @@ Haber kaynağı: %s
 Haber ve döviz: %d saatte bir	
 # apps/news/main.c
 Haberler alınamadı.\nWi-Fi bağlantısını kontrol edin.	
-# apps/pano/main.c
+# apps/ajanda/main.c
 Hafta %d · Gün %d	
 # apps/puzzle/main.c
 Hamlenizi yapın · Seri: %d	
@@ -525,8 +555,16 @@ Henüz parola yok
 Henüz çözülen bulmaca yok.	
 # apps/chess/main.c
 Her hamlede tahtayı çevir	
+# apps/ajanda/main.c
+Her yıl	
 # apps/sky/skydata.c
 Herkül	
+# apps/ajanda/main.c
+Hf	
+# apps/ajanda/agenda.c
+Hicri yılbaşı	
+# apps/ajanda/main.c
+Hicri: %d %s %d	
 # apps/pano/pano.c
 Hilal (büyüyen)	
 # apps/pano/pano.c
@@ -545,6 +583,8 @@ KAPALI
 KB	
 # apps/weather/wx.c
 KD	
+# apps/ajanda/agenda.c
+Kadir Gecesi	
 # apps/sky/skydata.c
 Kahraman	
 # core/kui/powerui.c
@@ -563,6 +603,8 @@ Kale oyun sonu
 Kanatlı At	
 # apps/puzzle/puzzle.c
 Kanca matı	
+# apps/ajanda/main.c
+Kandil	
 # apps/weather/wx.c
 Kapalı	
 # apps/sysinfo/main.c
@@ -649,6 +691,16 @@ Kullanıcı adı: root\nSunucu bu uygulama kapanınca da çalışır.\nKindle uy
 Kur	
 # apps/pano/main.c
 Kur bilgisi yok	
+# apps/ajanda/agenda.c
+Kurban Bayramı 1. gün	
+# apps/ajanda/agenda.c
+Kurban Bayramı 2. gün	
+# apps/ajanda/agenda.c
+Kurban Bayramı 3. gün	
+# apps/ajanda/agenda.c
+Kurban Bayramı 4. gün	
+# apps/ajanda/agenda.c
+Kurban Bayramı arifesi	
 # core/hub/upd_ui.c
 Kurulamadı: %s	
 # core/hub/upd_ui.c
@@ -703,6 +755,10 @@ Menü
 Menü sırası	
 # apps/game2048/main.c
 Mevcut oyun silinsin mi?	
+# apps/ajanda/agenda.c
+Mevlid Kandili	
+# apps/ajanda/agenda.c
+Miraç Kandili	
 # apps/sky/skydata.c
 Mizar	
 # apps/odak/main.c
@@ -715,6 +771,8 @@ Mola zamanı
 Mola: %s	
 # apps/chess/main.c
 Motor yanıt vermedi	
+# apps/ajanda/agenda.c
+Muharrem	
 # apps/wordle/main.c
 Muhteşem!	
 # apps/pano/main.c
@@ -725,10 +783,20 @@ Namaz vakitleri alınamadı
 Nem %s	
 # core/kui/trfmt.c
 Nisan	
+# apps/ajanda/main.c
+Not	
+# apps/ajanda/main.c
+Not kaydedilemedi.	
 # apps/sudoku/main.c
 Not: Açık	
 # apps/sudoku/main.c
 Not: Kapalı	
+# apps/ajanda/main.c
+Notlar	
+# apps/ajanda/main.c
+Notlar %d–%d / %d · kaydırın	
+# apps/ajanda/main.c
+Notu düzenle	
 # apps/odak/main.c
 ODAK	
 # core/kui/trfmt.c
@@ -823,12 +891,34 @@ Prokyon
 Puan %d	
 # core/kui/trfmt.c
 Pzt	
+# apps/ajanda/agenda.c
+Ramazan	
+# apps/ajanda/agenda.c
+Ramazan Bayramı 1. gün	
+# apps/ajanda/agenda.c
+Ramazan Bayramı 2. gün	
+# apps/ajanda/agenda.c
+Ramazan Bayramı 3. gün	
+# apps/ajanda/agenda.c
+Ramazan Bayramı arifesi	
+# apps/ajanda/agenda.c
+Ramazan başlangıcı	
 # apps/chess/main.c
 Rastgele	
+# apps/ajanda/agenda.c
+Rebiülahir	
+# apps/ajanda/agenda.c
+Rebiülevvel	
+# apps/ajanda/agenda.c
+Receb	
+# apps/ajanda/agenda.c
+Regaib Kandili	
 # apps/sky/skydata.c
 Regulus	
 # apps/chess/main.c
 Renginiz	
+# apps/ajanda/main.c
+Resmi tatil	
 # apps/sky/skydata.c
 Rigel	
 # apps/puzzle/puzzle.c
@@ -845,6 +935,8 @@ SON DAKİKA · %s
 SSH Sunucusu	
 # apps/sysinfo/main.c
 SSH sunucusu	
+# apps/ajanda/agenda.c
+Safer	
 # core/kui/trfmt.c
 Sal	
 # core/kui/trfmt.c
@@ -875,7 +967,7 @@ Seri
 Seri: %d · En iyi seri: %d	
 # apps/puzzle/puzzle.c
 Sessiz hamle	
-# apps/odak/main.c
+# apps/ajanda/main.c
 Sil	
 # apps/sky/skydata.c
 Sirius	
@@ -963,7 +1055,7 @@ Takımyıldız · %s
 Tam	
 # apps/currency/fx.c
 Tam altın	
-# apps/ebooks/main.c
+# apps/ajanda/main.c
 Tamam	
 # apps/solitaire/main.c
 Tamamla	
@@ -1007,6 +1099,8 @@ Türkiye
 Türkiye saati	
 # apps/odak/main.c
 UZUN MOLA	
+# apps/ajanda/agenda.c
+Ulusal Egemenlik ve Çocuk Bayramı	
 # apps/chess/levels.c
 Usta	
 # core/hub/main.c
@@ -1031,7 +1125,7 @@ Uzaklık %s AB (Güneş–Dünya = 1)
 Uzun mola: %s	
 # apps/odak/main.c
 Uzun · 50 / 10 dk	
-# apps/ebooks/main.c
+# apps/ajanda/main.c
 Vazgeç	
 # apps/sky/skydata.c
 Vega	
@@ -1051,10 +1145,14 @@ Wi-Fi ile Yükle
 Wi-Fi kapalı	
 # apps/upload/main.c
 Wi-Fi'yi açın; adres burada görünecek.	
+# apps/ajanda/main.c
+Yaklaşanlar	
 # core/kui/powerui.c
 Yarım	
 # apps/currency/fx.c
 Yarım altın	
+# apps/ajanda/main.c
+Yarım gün	
 # apps/pano/pano.c
 Yatsı	
 # apps/sky/skydata.c
@@ -1079,6 +1177,8 @@ Yeni SSH parolası (en az 6)
 Yeni ay	
 # apps/odak/main.c
 Yeni etiket	
+# apps/ajanda/main.c
+Yeni not	
 # apps/chess/main.c
 Yeni oyun	
 # apps/ebooks/main.c
@@ -1099,12 +1199,20 @@ Yükleniyor…
 Yükseklik %d° · yön %s (%d°)	
 # apps/sky/skydata.c
 Yılancı	
+# apps/ajanda/agenda.c
+Yılbaşı	
 # apps/sky/main.c
 Yıldız	
 # apps/sky/main.c
 Yıldız · %s	
 # apps/sky/main.c
 Yıldız · %s · %s	
+# apps/ajanda/agenda.c
+Zafer Bayramı	
+# apps/ajanda/agenda.c
+Zilhicce	
+# apps/ajanda/agenda.c
+Zilkade	
 # apps/chess/levels.c
 Zor	
 # apps/chess/main.c
@@ -1131,6 +1239,8 @@ f2/f7 saldırısı
 güncellendi %02d:%02d	
 # apps/deprem/main.c
 son 24 saat	
+# apps/ajanda/main.c
+yarım gün	
 # apps/sky/skydata.c
 Çalgı	
 # apps/sysinfo/main.c
@@ -1193,10 +1303,16 @@ son 24 saat
 Ön ışık	
 # apps/sudoku/main.c
 Önce boş bir hücre seçin.	
+# apps/ajanda/main.c
+Önümüzdeki 7 günde not ya da özel gün yok.	
+# apps/ajanda/main.c
+Özel gün	
 # apps/odak/main.c
 Özel · %d / %d dk	
 # apps/pano/pano.c
 Öğle	
+# apps/ajanda/agenda.c
+Öğretmenler Günü	
 # apps/puzzle/puzzle.c
 Üstünlük	
 # apps/solitaire/main.c
@@ -1241,6 +1357,8 @@ son 24 saat
 İş	
 # apps/firewall/main.c
 İşlem başarısız oldu.	
+# apps/ajanda/agenda.c
+Şaban	
 # apps/puzzle/puzzle.c
 Şah kanadı saldırısı	
 # apps/chess/chess_game.c
@@ -1261,6 +1379,8 @@ son 24 saat
 Şehirler	
 # apps/weather/main.c
 Şehri sil	
+# apps/ajanda/agenda.c
+Şevval	
 # apps/weather/wx.c
 Şiddetli sağanak	
 # apps/weather/wx.c
@@ -1287,6 +1407,8 @@ son 24 saat
 Şubat	
 # apps/ebooks/main.c
 “%s” · %d kitap%s	
+# apps/ajanda/main.c
+… ve %d daha	
 # apps/sky/main.c
 −1 gün	
 # apps/sky/main.c

@@ -660,3 +660,64 @@ dk	min
 İş	Arbeid
 Şarjda: uyanık kalıyor	Lader: holder seg våken
 ☾ Kindle dakikalar arasında uyuyor	☾ Kindle sover mellom minuttene
+Muharrem	Muharram
+Safer	Safar
+Rebiülevvel	Rabi al-awwal
+Rebiülahir	Rabi al-thani
+Cemaziyelevvel	Jumada al-ula
+Cemaziyelahir	Jumada al-thani
+Receb	Rajab
+Şaban	Shaban
+Ramazan	Ramadan
+Şevval	Shawwal
+Zilkade	Dhu al-qada
+Zilhicce	Dhu al-hijja
+Ramazan Bayramı 1. gün	Id al-fitr, dag 1
+Ramazan Bayramı 2. gün	Id al-fitr, dag 2
+Ramazan Bayramı 3. gün	Id al-fitr, dag 3
+Kurban Bayramı 1. gün	Offerfesten, dag 1
+Kurban Bayramı 2. gün	Offerfesten, dag 2
+Kurban Bayramı 3. gün	Offerfesten, dag 3
+Kurban Bayramı 4. gün	Offerfesten, dag 4
+Yılbaşı	Første nyttårsdag
+Ulusal Egemenlik ve Çocuk Bayramı	Nasjonal suverenitets- og barnedag
+Emek ve Dayanışma Günü	Arbeidets og solidaritetens dag
+Atatürk'ü Anma, Gençlik ve Spor Bayramı	Atatürks minnedag, ungdoms- og idrettsdag
+Demokrasi ve Millî Birlik Günü	Demokratiets og den nasjonale enhetens dag
+Zafer Bayramı	Seiersdagen
+Cumhuriyet Bayramı	Republikkdagen
+Cumhuriyet Bayramı arifesi	Dagen før Republikkdagen
+Ramazan Bayramı arifesi	Dagen før id al-fitr
+Kurban Bayramı arifesi	Dagen før offerfesten
+Regaib Kandili	Ragaib-natten
+Miraç Kandili	Himmelferdsnatten (Miraj)
+Berat Kandili	Tilgivelsens natt (Bara'at)
+Ramazan başlangıcı	Ramadan begynner
+Kadir Gecesi	Maktens natt (Laylat al-Qadr)
+Hicri yılbaşı	Islamsk nyttår
+Mevlid Kandili	Mawlid (Profetens fødsel)
+Anneler Günü	Morsdag
+Babalar Günü	Farsdag
+Atatürk'ü Anma Günü	Atatürks minnedag
+Öğretmenler Günü	Lærernes dag
+Ajanda	Kalender
+Not kaydedilemedi.	Notatet kunne ikke lagres.
+Resmi tatil	Helligdag
+Yarım gün	Halv dag
+Kandil	Hellig natt
+Özel gün	Merkedag
+Not	Notat
+Yaklaşanlar	Kommende
+Önümüzdeki 7 günde not ya da özel gün yok.	Ingen notater eller merkedager de neste 7 dagene.
+… ve %d daha	… og %d til
+yarım gün	halv dag
+Hf	Uke
+Her yıl	Hvert år
+Hicri: %d %s %d	Hijra: %d %s %d
+Notlar	Notater
++ Not ekle	+ Nytt notat
+Bu gün için not yok.	Ingen notater for denne dagen.
+Notlar %d–%d / %d · kaydırın	Notater %d–%d / %d · sveip
+Düzenle	Rediger
+Notu düzenle	Rediger notat
+Yeni not	Nytt notat

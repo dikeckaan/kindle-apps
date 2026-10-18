@@ -660,3 +660,64 @@ dk	min
 İş	Työ
 Şarjda: uyanık kalıyor	Latautuu: pysyy hereillä
 ☾ Kindle dakikalar arasında uyuyor	☾ Kindle nukkuu minuuttien välillä
+Muharrem	Muharram
+Safer	Safar
+Rebiülevvel	Rabi al-awwal
+Rebiülahir	Rabi al-thani
+Cemaziyelevvel	Džumada al-ula
+Cemaziyelahir	Džumada al-thani
+Receb	Radžab
+Şaban	Šaban
+Ramazan	Ramadan
+Şevval	Šawwal
+Zilkade	Dhu al-qada
+Zilhicce	Dhu al-hiddža
+Ramazan Bayramı 1. gün	Id al-fitr, 1. päivä
+Ramazan Bayramı 2. gün	Id al-fitr, 2. päivä
+Ramazan Bayramı 3. gün	Id al-fitr, 3. päivä
+Kurban Bayramı 1. gün	Uhrijuhla, 1. päivä
+Kurban Bayramı 2. gün	Uhrijuhla, 2. päivä
+Kurban Bayramı 3. gün	Uhrijuhla, 3. päivä
+Kurban Bayramı 4. gün	Uhrijuhla, 4. päivä
+Yılbaşı	Uudenvuodenpäivä
+Ulusal Egemenlik ve Çocuk Bayramı	Kansallisen itsemääräämisen ja lasten päivä
+Emek ve Dayanışma Günü	Työn ja solidaarisuuden päivä
+Atatürk'ü Anma, Gençlik ve Spor Bayramı	Atatürkin muistopäivä, nuorison ja urheilun päivä
+Demokrasi ve Millî Birlik Günü	Demokratian ja kansallisen yhtenäisyyden päivä
+Zafer Bayramı	Voitonpäivä
+Cumhuriyet Bayramı	Tasavallan päivä
+Cumhuriyet Bayramı arifesi	Tasavallan päivän aatto
+Ramazan Bayramı arifesi	Id al-fitrin aatto
+Kurban Bayramı arifesi	Uhrijuhlan aatto
+Regaib Kandili	Ragaibin yö
+Miraç Kandili	Taivaaseenastumisen yö (Miraj)
+Berat Kandili	Anteeksiannon yö (Bara'at)
+Ramazan başlangıcı	Ramadan alkaa
+Kadir Gecesi	Voiman yö (Laylat al-Qadr)
+Hicri yılbaşı	Islamilainen uusivuosi
+Mevlid Kandili	Mawlid (Profeetan syntymä)
+Anneler Günü	Äitienpäivä
+Babalar Günü	Isänpäivä
+Atatürk'ü Anma Günü	Atatürkin muistopäivä
+Öğretmenler Günü	Opettajien päivä
+Ajanda	Kalenteri
+Not kaydedilemedi.	Muistiinpanoa ei voitu tallentaa.
+Resmi tatil	Pyhäpäivä
+Yarım gün	Puolipäivä
+Kandil	Pyhä yö
+Özel gün	Merkkipäivä
+Not	Muistiinpano
+Yaklaşanlar	Tulossa
+Önümüzdeki 7 günde not ya da özel gün yok.	Ei muistiinpanoja tai merkkipäiviä seuraavan 7 päivän aikana.
+… ve %d daha	… ja %d lisää
+yarım gün	puolipäivä
+Hf	Vk
+Her yıl	Joka vuosi
+Hicri: %d %s %d	Hidžra: %d %s %d
+Notlar	Muistiinpanot
++ Not ekle	+ Lisää muistiinpano
+Bu gün için not yok.	Tälle päivälle ei ole muistiinpanoja.
+Notlar %d–%d / %d · kaydırın	Muistiinpanot %d–%d / %d · pyyhkäise
+Düzenle	Muokkaa
+Notu düzenle	Muokkaa muistiinpanoa
+Yeni not	Uusi muistiinpano

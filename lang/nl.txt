@@ -660,3 +660,64 @@ dk	min
 İş	Werk
 Şarjda: uyanık kalıyor	Aan de lader: blijft wakker
 ☾ Kindle dakikalar arasında uyuyor	☾ Kindle slaapt tussen de minuten
+Muharrem	Muharram
+Safer	Safar
+Rebiülevvel	Rabi al-Awwal
+Rebiülahir	Rabi al-Thani
+Cemaziyelevvel	Djoemada al-Awwal
+Cemaziyelahir	Djoemada al-Thani
+Receb	Radjab
+Şaban	Sja'ban
+Ramazan	Ramadan
+Şevval	Sjawwal
+Zilkade	Dhu al-Qa'da
+Zilhicce	Dhu al-Hiddja
+Ramazan Bayramı 1. gün	Suikerfeest, dag 1
+Ramazan Bayramı 2. gün	Suikerfeest, dag 2
+Ramazan Bayramı 3. gün	Suikerfeest, dag 3
+Kurban Bayramı 1. gün	Offerfeest, dag 1
+Kurban Bayramı 2. gün	Offerfeest, dag 2
+Kurban Bayramı 3. gün	Offerfeest, dag 3
+Kurban Bayramı 4. gün	Offerfeest, dag 4
+Yılbaşı	Nieuwjaarsdag
+Ulusal Egemenlik ve Çocuk Bayramı	Dag van de Nationale Soevereiniteit en het Kind
+Emek ve Dayanışma Günü	Dag van de Arbeid en Solidariteit
+Atatürk'ü Anma, Gençlik ve Spor Bayramı	Atatürk-herdenking, Dag van de Jeugd en Sport
+Demokrasi ve Millî Birlik Günü	Dag van Democratie en Nationale Eenheid
+Zafer Bayramı	Dag van de Overwinning
+Cumhuriyet Bayramı	Dag van de Republiek
+Cumhuriyet Bayramı arifesi	Vooravond van de Dag van de Republiek
+Ramazan Bayramı arifesi	Dag voor het Suikerfeest
+Kurban Bayramı arifesi	Dag voor het Offerfeest
+Regaib Kandili	Regaib-nacht
+Miraç Kandili	Nacht van de Hemelvaart (Miraj)
+Berat Kandili	Nacht van de Vergeving (Bara'at)
+Ramazan başlangıcı	Begin van de ramadan
+Kadir Gecesi	Nacht van de Beschikking (Laylat al-Qadr)
+Hicri yılbaşı	Islamitisch Nieuwjaar
+Mevlid Kandili	Mawlid (geboorte van de Profeet)
+Anneler Günü	Moederdag
+Babalar Günü	Vaderdag
+Atatürk'ü Anma Günü	Atatürk-herdenkingsdag
+Öğretmenler Günü	Dag van de Leraar
+Ajanda	Agenda
+Not kaydedilemedi.	Notitie kon niet worden opgeslagen.
+Resmi tatil	Feestdag
+Yarım gün	Halve dag
+Kandil	Heilige nacht
+Özel gün	Bijzondere dag
+Not	Notitie
+Yaklaşanlar	Binnenkort
+Önümüzdeki 7 günde not ya da özel gün yok.	Geen notities of bijzondere dagen in de komende 7 dagen.
+… ve %d daha	… en nog %d
+yarım gün	halve dag
+Hf	Wk
+Her yıl	Elk jaar
+Hicri: %d %s %d	Hidjra: %d %s %d
+Notlar	Notities
++ Not ekle	+ Notitie
+Bu gün için not yok.	Geen notities voor deze dag.
+Notlar %d–%d / %d · kaydırın	Notities %d–%d / %d · veeg
+Düzenle	Bewerken
+Notu düzenle	Notitie bewerken
+Yeni not	Nieuwe notitie

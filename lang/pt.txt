@@ -660,3 +660,64 @@ dk	min
 İş	Trabalho
 Şarjda: uyanık kalıyor	A carregar: fica acordado
 ☾ Kindle dakikalar arasında uyuyor	☾ O Kindle dorme entre os minutos
+Muharrem	Muharram
+Safer	Safar
+Rebiülevvel	Rabi al-Awwal
+Rebiülahir	Rabi al-Thani
+Cemaziyelevvel	Jumada al-Awwal
+Cemaziyelahir	Jumada al-Thani
+Receb	Rajab
+Şaban	Xaban
+Ramazan	Ramadão
+Şevval	Xawal
+Zilkade	Dhu al-Qada
+Zilhicce	Dhu al-Hijja
+Ramazan Bayramı 1. gün	Festa do Ramadão, 1.º dia
+Ramazan Bayramı 2. gün	Festa do Ramadão, 2.º dia
+Ramazan Bayramı 3. gün	Festa do Ramadão, 3.º dia
+Kurban Bayramı 1. gün	Festa do Sacrifício, 1.º dia
+Kurban Bayramı 2. gün	Festa do Sacrifício, 2.º dia
+Kurban Bayramı 3. gün	Festa do Sacrifício, 3.º dia
+Kurban Bayramı 4. gün	Festa do Sacrifício, 4.º dia
+Yılbaşı	Ano Novo
+Ulusal Egemenlik ve Çocuk Bayramı	Dia da Soberania Nacional e das Crianças
+Emek ve Dayanışma Günü	Dia do Trabalho e da Solidariedade
+Atatürk'ü Anma, Gençlik ve Spor Bayramı	Comemoração de Atatürk, Dia da Juventude e do Desporto
+Demokrasi ve Millî Birlik Günü	Dia da Democracia e da Unidade Nacional
+Zafer Bayramı	Dia da Vitória
+Cumhuriyet Bayramı	Dia da República
+Cumhuriyet Bayramı arifesi	Véspera do Dia da República
+Ramazan Bayramı arifesi	Véspera da Festa do Ramadão
+Kurban Bayramı arifesi	Véspera da Festa do Sacrifício
+Regaib Kandili	Noite de Ragaib
+Miraç Kandili	Noite da Ascensão (Miraj)
+Berat Kandili	Noite do Perdão (Bara'at)
+Ramazan başlangıcı	Início do Ramadão
+Kadir Gecesi	Noite do Destino (Laylat al-Qadr)
+Hicri yılbaşı	Ano Novo islâmico
+Mevlid Kandili	Mawlid (nascimento do Profeta)
+Anneler Günü	Dia da Mãe
+Babalar Günü	Dia do Pai
+Atatürk'ü Anma Günü	Dia de Homenagem a Atatürk
+Öğretmenler Günü	Dia do Professor
+Ajanda	Agenda
+Not kaydedilemedi.	Não foi possível guardar a nota.
+Resmi tatil	Feriado
+Yarım gün	Meio dia
+Kandil	Noite santa
+Özel gün	Dia especial
+Not	Nota
+Yaklaşanlar	A seguir
+Önümüzdeki 7 günde not ya da özel gün yok.	Sem notas nem dias especiais nos próximos 7 dias.
+… ve %d daha	… e mais %d
+yarım gün	meio dia
+Hf	Sem
+Her yıl	Todos os anos
+Hicri: %d %s %d	Hégira: %d %s %d
+Notlar	Notas
++ Not ekle	+ Adicionar nota
+Bu gün için not yok.	Sem notas para este dia.
+Notlar %d–%d / %d · kaydırın	Notas %d–%d / %d · deslize
+Düzenle	Editar
+Notu düzenle	Editar nota
+Yeni not	Nova nota

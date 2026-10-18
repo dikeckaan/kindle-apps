@@ -660,3 +660,64 @@ dk	perc
 İş	Munka
 Şarjda: uyanık kalıyor	Töltőn: ébren marad
 ☾ Kindle dakikalar arasında uyuyor	☾ A Kindle a percek között alszik
+Muharrem	Moharrem
+Safer	Szafar
+Rebiülevvel	Rabí al-avval
+Rebiülahir	Rabí asz-szání
+Cemaziyelevvel	Dzsumádá al-úlá
+Cemaziyelahir	Dzsumádá asz-szánija
+Receb	Radzsab
+Şaban	Saabán
+Ramazan	Ramadán
+Şevval	Savvál
+Zilkade	Dzú l-kada
+Zilhicce	Dzú l-hiddzsa
+Ramazan Bayramı 1. gün	Ramadán-ünnep, 1. nap
+Ramazan Bayramı 2. gün	Ramadán-ünnep, 2. nap
+Ramazan Bayramı 3. gün	Ramadán-ünnep, 3. nap
+Kurban Bayramı 1. gün	Áldozati ünnep, 1. nap
+Kurban Bayramı 2. gün	Áldozati ünnep, 2. nap
+Kurban Bayramı 3. gün	Áldozati ünnep, 3. nap
+Kurban Bayramı 4. gün	Áldozati ünnep, 4. nap
+Yılbaşı	Újév
+Ulusal Egemenlik ve Çocuk Bayramı	A nemzeti szuverenitás és a gyermekek napja
+Emek ve Dayanışma Günü	A munka és a szolidaritás napja
+Atatürk'ü Anma, Gençlik ve Spor Bayramı	Atatürk-emléknap, az ifjúság és a sport ünnepe
+Demokrasi ve Millî Birlik Günü	A demokrácia és a nemzeti egység napja
+Zafer Bayramı	A győzelem napja
+Cumhuriyet Bayramı	A köztársaság napja
+Cumhuriyet Bayramı arifesi	A köztársaság napjának előestéje
+Ramazan Bayramı arifesi	A ramadán-ünnep előestéje
+Kurban Bayramı arifesi	Az áldozati ünnep előestéje
+Regaib Kandili	Regaib éjszakája
+Miraç Kandili	A mennybemenetel éjszakája (Miradzs)
+Berat Kandili	A megbocsátás éjszakája (Bara'at)
+Ramazan başlangıcı	A ramadán kezdete
+Kadir Gecesi	A sors éjszakája (Lajlat al-Kadr)
+Hicri yılbaşı	Iszlám újév
+Mevlid Kandili	Mavlid (a Próféta születése)
+Anneler Günü	Anyák napja
+Babalar Günü	Apák napja
+Atatürk'ü Anma Günü	Atatürk-emléknap
+Öğretmenler Günü	Tanárok napja
+Ajanda	Határidőnapló
+Not kaydedilemedi.	A jegyzetet nem sikerült menteni.
+Resmi tatil	Munkaszüneti nap
+Yarım gün	Fél nap
+Kandil	Szent éjszaka
+Özel gün	Jeles nap
+Not	Jegyzet
+Yaklaşanlar	Közelgő
+Önümüzdeki 7 günde not ya da özel gün yok.	A következő 7 napban nincs jegyzet vagy jeles nap.
+… ve %d daha	… és még %d
+yarım gün	fél nap
+Hf	Hét
+Her yıl	Minden évben
+Hicri: %d %s %d	Hidzsra: %d %s %d
+Notlar	Jegyzetek
++ Not ekle	+ Új jegyzet
+Bu gün için not yok.	Erre a napra nincs jegyzet.
+Notlar %d–%d / %d · kaydırın	Jegyzetek %d–%d / %d · húzza
+Düzenle	Szerkesztés
+Notu düzenle	Jegyzet szerkesztése
+Yeni not	Új jegyzet

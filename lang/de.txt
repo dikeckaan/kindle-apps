@@ -660,3 +660,64 @@ dk	Min.
 İş	Arbeit
 Şarjda: uyanık kalıyor	Am Ladegerät: bleibt wach
 ☾ Kindle dakikalar arasında uyuyor	☾ Kindle schläft zwischen den Minuten
+Muharrem	Muharram
+Safer	Safar
+Rebiülevvel	Rabi al-Awwal
+Rebiülahir	Rabi al-Thani
+Cemaziyelevvel	Dschumada al-Ula
+Cemaziyelahir	Dschumada al-Thaniya
+Receb	Radschab
+Şaban	Schaban
+Ramazan	Ramadan
+Şevval	Schawwal
+Zilkade	Dhu l-Qa'da
+Zilhicce	Dhu l-Hiddscha
+Ramazan Bayramı 1. gün	Ramadanfest, 1. Tag
+Ramazan Bayramı 2. gün	Ramadanfest, 2. Tag
+Ramazan Bayramı 3. gün	Ramadanfest, 3. Tag
+Kurban Bayramı 1. gün	Opferfest, 1. Tag
+Kurban Bayramı 2. gün	Opferfest, 2. Tag
+Kurban Bayramı 3. gün	Opferfest, 3. Tag
+Kurban Bayramı 4. gün	Opferfest, 4. Tag
+Yılbaşı	Neujahr
+Ulusal Egemenlik ve Çocuk Bayramı	Tag der nationalen Souveränität und der Kinder
+Emek ve Dayanışma Günü	Tag der Arbeit und Solidarität
+Atatürk'ü Anma, Gençlik ve Spor Bayramı	Atatürk-Gedenktag, Tag der Jugend und des Sports
+Demokrasi ve Millî Birlik Günü	Tag der Demokratie und der nationalen Einheit
+Zafer Bayramı	Tag des Sieges
+Cumhuriyet Bayramı	Tag der Republik
+Cumhuriyet Bayramı arifesi	Vorabend des Tags der Republik
+Ramazan Bayramı arifesi	Vorabend des Ramadanfests
+Kurban Bayramı arifesi	Vorabend des Opferfests
+Regaib Kandili	Regaib-Nacht
+Miraç Kandili	Nacht der Himmelfahrt (Miradsch)
+Berat Kandili	Nacht der Vergebung (Bara'a)
+Ramazan başlangıcı	Beginn des Ramadan
+Kadir Gecesi	Nacht der Bestimmung (Lailat al-Qadr)
+Hicri yılbaşı	Islamisches Neujahr
+Mevlid Kandili	Maulid (Geburt des Propheten)
+Anneler Günü	Muttertag
+Babalar Günü	Vatertag
+Atatürk'ü Anma Günü	Atatürk-Gedenktag
+Öğretmenler Günü	Tag der Lehrer
+Ajanda	Terminplaner
+Not kaydedilemedi.	Notiz konnte nicht gespeichert werden.
+Resmi tatil	Feiertag
+Yarım gün	Halber Tag
+Kandil	Heilige Nacht
+Özel gün	Besonderer Tag
+Not	Notiz
+Yaklaşanlar	Demnächst
+Önümüzdeki 7 günde not ya da özel gün yok.	Keine Notizen oder besonderen Tage in den nächsten 7 Tagen.
+… ve %d daha	… und %d weitere
+yarım gün	halber Tag
+Hf	KW
+Her yıl	Jährlich
+Hicri: %d %s %d	Hidschri: %d %s %d
+Notlar	Notizen
++ Not ekle	+ Notiz
+Bu gün için not yok.	Keine Notizen für diesen Tag.
+Notlar %d–%d / %d · kaydırın	Notizen %d–%d / %d · wischen
+Düzenle	Bearbeiten
+Notu düzenle	Notiz bearbeiten
+Yeni not	Neue Notiz

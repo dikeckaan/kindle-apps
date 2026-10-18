@@ -660,3 +660,64 @@ dk	мин
 İş	Работа
 Şarjda: uyanık kalıyor	На зарядке: не засыпает
 ☾ Kindle dakikalar arasında uyuyor	☾ Kindle спит между минутами
+Muharrem	Мухаррам
+Safer	Сафар
+Rebiülevvel	Раби аль-авваль
+Rebiülahir	Раби ас-сани
+Cemaziyelevvel	Джумада аль-уля
+Cemaziyelahir	Джумада ас-сани
+Receb	Раджаб
+Şaban	Шаабан
+Ramazan	Рамадан
+Şevval	Шавваль
+Zilkade	Зуль-када
+Zilhicce	Зуль-хиджа
+Ramazan Bayramı 1. gün	Ураза-байрам, 1-й день
+Ramazan Bayramı 2. gün	Ураза-байрам, 2-й день
+Ramazan Bayramı 3. gün	Ураза-байрам, 3-й день
+Kurban Bayramı 1. gün	Курбан-байрам, 1-й день
+Kurban Bayramı 2. gün	Курбан-байрам, 2-й день
+Kurban Bayramı 3. gün	Курбан-байрам, 3-й день
+Kurban Bayramı 4. gün	Курбан-байрам, 4-й день
+Yılbaşı	Новый год
+Ulusal Egemenlik ve Çocuk Bayramı	День национального суверенитета и детей
+Emek ve Dayanışma Günü	День труда и солидарности
+Atatürk'ü Anma, Gençlik ve Spor Bayramı	День памяти Ататюрка, молодёжи и спорта
+Demokrasi ve Millî Birlik Günü	День демократии и национального единства
+Zafer Bayramı	День Победы
+Cumhuriyet Bayramı	День Республики
+Cumhuriyet Bayramı arifesi	Канун Дня Республики
+Ramazan Bayramı arifesi	Канун Ураза-байрама
+Kurban Bayramı arifesi	Канун Курбан-байрама
+Regaib Kandili	Ночь Рагаиб
+Miraç Kandili	Ночь Вознесения (Мирадж)
+Berat Kandili	Ночь Бараат
+Ramazan başlangıcı	Начало Рамадана
+Kadir Gecesi	Ночь предопределения (Ляйлят аль-Кадр)
+Hicri yılbaşı	Исламский Новый год
+Mevlid Kandili	Мавлид (рождение Пророка)
+Anneler Günü	День матери
+Babalar Günü	День отца
+Atatürk'ü Anma Günü	День памяти Ататюрка
+Öğretmenler Günü	День учителя
+Ajanda	Ежедневник
+Not kaydedilemedi.	Не удалось сохранить заметку.
+Resmi tatil	Выходной
+Yarım gün	Сокращённый день
+Kandil	Священная ночь
+Özel gün	Памятный день
+Not	Заметка
+Yaklaşanlar	Скоро
+Önümüzdeki 7 günde not ya da özel gün yok.	В ближайшие 7 дней нет заметок и памятных дней.
+… ve %d daha	… и ещё %d
+yarım gün	сокращённый день
+Hf	Нед
+Her yıl	Каждый год
+Hicri: %d %s %d	Хиджра: %d %s %d
+Notlar	Заметки
++ Not ekle	+ Заметка
+Bu gün için not yok.	На этот день заметок нет.
+Notlar %d–%d / %d · kaydırın	Заметки %d–%d / %d · листайте
+Düzenle	Изменить
+Notu düzenle	Изменить заметку
+Yeni not	Новая заметка

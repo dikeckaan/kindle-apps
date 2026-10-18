@@ -660,3 +660,64 @@ dk	dəq
 İş	İş
 Şarjda: uyanık kalıyor	Şarjda: oyaq qalır
 ☾ Kindle dakikalar arasında uyuyor	☾ Kindle dəqiqələr arasında yatır
+Muharrem	Məhərrəm
+Safer	Səfər
+Rebiülevvel	Rəbiüləvvəl
+Rebiülahir	Rəbiülaxır
+Cemaziyelevvel	Cəmadiyələvvəl
+Cemaziyelahir	Cəmadiyəlaxır
+Receb	Rəcəb
+Şaban	Şaban
+Ramazan	Ramazan
+Şevval	Şəvval
+Zilkade	Zilqədə
+Zilhicce	Zilhiccə
+Ramazan Bayramı 1. gün	Ramazan bayramı, 1-ci gün
+Ramazan Bayramı 2. gün	Ramazan bayramı, 2-ci gün
+Ramazan Bayramı 3. gün	Ramazan bayramı, 3-cü gün
+Kurban Bayramı 1. gün	Qurban bayramı, 1-ci gün
+Kurban Bayramı 2. gün	Qurban bayramı, 2-ci gün
+Kurban Bayramı 3. gün	Qurban bayramı, 3-cü gün
+Kurban Bayramı 4. gün	Qurban bayramı, 4-cü gün
+Yılbaşı	Yeni il
+Ulusal Egemenlik ve Çocuk Bayramı	Milli Hakimiyyət və Uşaqlar Bayramı
+Emek ve Dayanışma Günü	Əmək və Həmrəylik Günü
+Atatürk'ü Anma, Gençlik ve Spor Bayramı	Atatürkün Anım, Gənclik və İdman Bayramı
+Demokrasi ve Millî Birlik Günü	Demokratiya və Milli Birlik Günü
+Zafer Bayramı	Zəfər Bayramı
+Cumhuriyet Bayramı	Respublika Bayramı
+Cumhuriyet Bayramı arifesi	Respublika Bayramı ərəfəsi
+Ramazan Bayramı arifesi	Ramazan bayramı ərəfəsi
+Kurban Bayramı arifesi	Qurban bayramı ərəfəsi
+Regaib Kandili	Rəğaib gecəsi
+Miraç Kandili	Merac gecəsi
+Berat Kandili	Bərat gecəsi
+Ramazan başlangıcı	Ramazan ayının başlanğıcı
+Kadir Gecesi	Qədr gecəsi
+Hicri yılbaşı	Hicri yeni il
+Mevlid Kandili	Mövlud gecəsi
+Anneler Günü	Analar Günü
+Babalar Günü	Atalar Günü
+Atatürk'ü Anma Günü	Atatürkün Anım Günü
+Öğretmenler Günü	Müəllimlər Günü
+Ajanda	Gündəlik
+Not kaydedilemedi.	Qeyd saxlanılmadı.
+Resmi tatil	Rəsmi bayram
+Yarım gün	Yarım gün
+Kandil	Qandil
+Özel gün	Xüsusi gün
+Not	Qeyd
+Yaklaşanlar	Yaxınlaşanlar
+Önümüzdeki 7 günde not ya da özel gün yok.	Növbəti 7 gündə qeyd və ya xüsusi gün yoxdur.
+… ve %d daha	… və daha %d
+yarım gün	yarım gün
+Hf	Hf
+Her yıl	Hər il
+Hicri: %d %s %d	Hicri: %d %s %d
+Notlar	Qeydlər
++ Not ekle	+ Qeyd əlavə et
+Bu gün için not yok.	Bu gün üçün qeyd yoxdur.
+Notlar %d–%d / %d · kaydırın	Qeydlər %d–%d / %d · sürüşdürün
+Düzenle	Redaktə et
+Notu düzenle	Qeydi redaktə et
+Yeni not	Yeni qeyd

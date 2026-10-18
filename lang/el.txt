@@ -660,3 +660,64 @@ dk	λεπ.
 İş	Εργασία
 Şarjda: uyanık kalıyor	Φόρτιση: μένει ξύπνιο
 ☾ Kindle dakikalar arasında uyuyor	☾ Το Kindle κοιμάται ανάμεσα στα λεπτά
+Muharrem	Μουχαρράμ
+Safer	Σαφάρ
+Rebiülevvel	Ραμπί αλ-Αουάλ
+Rebiülahir	Ραμπί ας-Σάνι
+Cemaziyelevvel	Τζουμάντα αλ-Ούλα
+Cemaziyelahir	Τζουμάντα ας-Σάνι
+Receb	Ρατζάμπ
+Şaban	Σαμπάν
+Ramazan	Ραμαζάνι
+Şevval	Σαουάλ
+Zilkade	Ζουλ Κάντα
+Zilhicce	Ζουλ Χίτζα
+Ramazan Bayramı 1. gün	Μπαϊράμι του Ραμαζανιού, 1η ημέρα
+Ramazan Bayramı 2. gün	Μπαϊράμι του Ραμαζανιού, 2η ημέρα
+Ramazan Bayramı 3. gün	Μπαϊράμι του Ραμαζανιού, 3η ημέρα
+Kurban Bayramı 1. gün	Μπαϊράμι της Θυσίας, 1η ημέρα
+Kurban Bayramı 2. gün	Μπαϊράμι της Θυσίας, 2η ημέρα
+Kurban Bayramı 3. gün	Μπαϊράμι της Θυσίας, 3η ημέρα
+Kurban Bayramı 4. gün	Μπαϊράμι της Θυσίας, 4η ημέρα
+Yılbaşı	Πρωτοχρονιά
+Ulusal Egemenlik ve Çocuk Bayramı	Ημέρα Εθνικής Κυριαρχίας και του Παιδιού
+Emek ve Dayanışma Günü	Ημέρα Εργασίας και Αλληλεγγύης
+Atatürk'ü Anma, Gençlik ve Spor Bayramı	Ημέρα Μνήμης του Ατατούρκ, Νεολαίας και Αθλητισμού
+Demokrasi ve Millî Birlik Günü	Ημέρα Δημοκρατίας και Εθνικής Ενότητας
+Zafer Bayramı	Ημέρα της Νίκης
+Cumhuriyet Bayramı	Ημέρα της Δημοκρατίας
+Cumhuriyet Bayramı arifesi	Παραμονή της Ημέρας της Δημοκρατίας
+Ramazan Bayramı arifesi	Παραμονή του Μπαϊραμιού του Ραμαζανιού
+Kurban Bayramı arifesi	Παραμονή του Μπαϊραμιού της Θυσίας
+Regaib Kandili	Νύχτα Ραγκαΐμπ
+Miraç Kandili	Νύχτα της Ανάληψης (Μιράτζ)
+Berat Kandili	Νύχτα της Συγχώρεσης (Μπαράατ)
+Ramazan başlangıcı	Αρχή του Ραμαζανιού
+Kadir Gecesi	Νύχτα της Δύναμης (Λαϊλάτ αλ-Καντρ)
+Hicri yılbaşı	Ισλαμική Πρωτοχρονιά
+Mevlid Kandili	Μαουλίντ (γέννηση του Προφήτη)
+Anneler Günü	Γιορτή της Μητέρας
+Babalar Günü	Γιορτή του Πατέρα
+Atatürk'ü Anma Günü	Ημέρα Μνήμης του Ατατούρκ
+Öğretmenler Günü	Ημέρα του Εκπαιδευτικού
+Ajanda	Ατζέντα
+Not kaydedilemedi.	Δεν ήταν δυνατή η αποθήκευση της σημείωσης.
+Resmi tatil	Αργία
+Yarım gün	Μισή μέρα
+Kandil	Ιερή νύχτα
+Özel gün	Ξεχωριστή μέρα
+Not	Σημείωση
+Yaklaşanlar	Προσεχώς
+Önümüzdeki 7 günde not ya da özel gün yok.	Καμία σημείωση ή ξεχωριστή μέρα τις επόμενες 7 ημέρες.
+… ve %d daha	… και %d ακόμη
+yarım gün	μισή μέρα
+Hf	Εβδ
+Her yıl	Κάθε χρόνο
+Hicri: %d %s %d	Εγίρα: %d %s %d
+Notlar	Σημειώσεις
++ Not ekle	+ Νέα σημείωση
+Bu gün için not yok.	Δεν υπάρχουν σημειώσεις για αυτή τη μέρα.
+Notlar %d–%d / %d · kaydırın	Σημειώσεις %d–%d / %d · σύρετε
+Düzenle	Επεξεργασία
+Notu düzenle	Επεξεργασία σημείωσης
+Yeni not	Νέα σημείωση
