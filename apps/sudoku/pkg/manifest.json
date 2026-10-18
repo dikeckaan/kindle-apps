@@ -1,0 +1,10 @@
+{
+  "manifest_version": 2,
+  "id": "kindle-apps-sudoku",
+  "name": "Sudoku",
+  "author": "Kaan Dikeç",
+  "description": "Tek çözümlü Sudoku: üç zorluk, not alma, hata gösterme, geri alma ve ipucu",
+  "version": [2026, 10, 7],
+  "dependencies": [],
+  "supported_platforms": ["kindlehf"]
+}
