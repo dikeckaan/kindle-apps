@@ -1,0 +1,262 @@
+# Dutch catalog for kindle-apps
+%%%d	%d%%
+%d %s %d, %s	%d %s %d, %s
+%d/%d · güncellendi %02d:%02d	%d/%d · bijgewerkt %02d:%02d
+%d/%d · çevrimdışı, son veri %02d:%02d	%d/%d · offline, gegevens van %02d:%02d
+%s %d/6 tahminde bildin.	%s Geraden in %d/6 pogingen.
+%s beklenmedik şekilde kapandı	%s is onverwacht afgesloten
+%s silinsin mi?	%s verwijderen?
+%s · %d×%d · %d mayın	%s · %d×%d · %d mijnen
+%s · Süre: %ld:%02ld	%s · Tijd: %ld:%02ld
++ Ekle	+ Toevoegen
+1 saat	1 uur
+10 dakika	10 minuten
+2 saat	2 uur
+2048	2048
+2048'e ulaştın.	Je hebt 2048 bereikt.
+30 dakika	30 minuten
+5 dakika	5 minuten
+5 harf girin	Voer 5 letters in
+50 hamle kuralı — berabere	50-zettenregel — remise
+Altın (serbest piyasa, ₺)	Goud (vrije markt, ₺)
+Alış	Aankoop
+Aralık	december
+Aranıyor…	Zoeken…
+At	Paard
+Az bulutlu	Licht bewolkt
+AÇIK	AAN
+Aç	Inschakelen
+Açık	Helder
+Açıldı. Gelen bağlantılar engelleniyor.	Ingeschakeld. Inkomende verbindingen worden geblokkeerd.
+Ağustos	augustus
+B	W
+Bağlantı kurulamadı. Wi-Fi açık mı?	Geen verbinding. Staat wifi aan?
+Bağlantı yok, kurlar alınamadı	Geen verbinding, koersen niet opgehaald
+Bağlantı yok, veri alınamadı	Geen verbinding, geen gegevens
+Beyaz	Wit
+Bilim	Wetenschap
+Bu oyun bitirilsin mi?	Deze partij beëindigen?
+Bu sefer olmadı	Helaas, deze keer niet
+Bugün	Vandaag
+Bugün  en yüksek %s · en düşük %s · ☼ %s – %s	Vandaag  max. %s · min. %s · ☼ %s – %s
+Bulmacayı çözdünüz.	Je hebt de puzzel opgelost.
+Bütün kartlar açık. Oyun tamamlansın mı?	Alle kaarten liggen open. Spel afmaken?
+Bütün kartları yerleştirdin.	Je hebt alle kaarten weggelegd.
+Cmt	Za
+Cum	Vr
+Cuma	vrijdag
+Cumartesi	zaterdag
+Cumhuriyet altını	Republiek-goudmunt
+D	O
+Devam	Doorgaan
+Devam et	Doorgaan
+Dil	Taal
+Dokun: aç	Tik: openen
+Dokun: bayrak	Tik: vlag
+Dolu, fırtına	Hagel, onweer
+Donan yağmur	IJzel
+Donan çisenti	Aanvriezende motregen
+Dâhice!	Geniaal!
+Döviz & Altın	Valuta & Goud
+Dünya	Wereld
+Düşünüyor… (%s)	Denkt na… (%s)
+Ekim	oktober
+Ekonomi	Economie
+En az %d karakter girin	Voer minstens %d tekens in
+En fazla 10 şehir kaydedilebilir.	Maximaal 10 steden opslaan.
+En iyi	Beste
+En iyi seri	Beste reeks
+Evet	Ja
+Eylül	september
+Fil	Loper
+G	Z
+GB	ZW
+GD	ZO
+Gazete	Nieuws
+Geri al	Ongedaan
+Gram altın	Goud per gram
+Gök gürültülü	Onweer
+Gönder	Invoeren
+Güncel	Laatste nieuws
+Güncellendi %s · Open-Meteo	Bijgewerkt %s · Open-Meteo
+Güncelleniyor…	Bijwerken…
+Gündem	Actueel
+Güvenlik Duvarı	Firewall
+Güzel!	Mooi!
+Haberler alınamadı.\nWi-Fi bağlantısını kontrol edin.	Nieuws niet opgehaald.\nControleer de wifiverbinding.
+Harika!	Super!
+Hata	Fout
+Hataları göster: Açık	Fouten tonen: Aan
+Hataları göster: Kapalı	Fouten tonen: Uit
+Hava Durumu	Weer
+Hava durumu alınamadı.\nWi-Fi bağlantısını kontrol edip Yenile'ye basın.	Weer niet opgehaald.\nControleer de wifi en tik op Vernieuwen.
+Hava durumu yok (Wi-Fi kapalı olabilir)	Geen weer (wifi staat mogelijk uit)
+Hayır	Nee
+Haziran	juni
+Hedef para	Doelvaluta
+Henüz parola yok	Nog geen wachtwoord
+Henüz uygulama kurulu değil	Nog geen apps geïnstalleerd
+Her hamlede tahtayı çevir	Bord elke zet draaien
+Hissedilen %s	Voelt als %s
+Hiç uyuma	Nooit slapen
+K	N
+KAPALI	UIT
+KB	NW
+KD	NO
+Kale	Toren
+Kapalı	Bewolkt
+Kapat	Sluiten
+Kapatıldı. Kindle yeniden başlayınca tekrar açılır.	Uitgeschakeld. Gaat weer aan als de Kindle herstart.
+Kar sağanağı	Sneeuwbuien
+Kar taneleri	Korrelsneeuw
+Karlı	Sneeuw
+Kasım	november
+Kaydedilemedi.	Opslaan mislukt.
+Kaynak para	Bronvaluta
+Kaynak: %s	Bron: %s
+Kazandın!	Gewonnen!
+Kazanma %	Winst %
+Kelime Oyunu	Woordspel
+Kelime listesi bulunamadı. Uygulamayı yeniden kurun.	Woordenlijst niet gevonden. Installeer de app opnieuw.
+Kelime: %s	Woord: %s
+Kindle bu süre dokunulmadan kalınca uyur.\n"Hiç uyuma" pili hızlı tüketir.\nYeniden başlatınca varsayılana dönebilir.	De Kindle slaapt na deze tijd zonder aanraking.\n"Nooit slapen" put de accu snel uit.\nNa een herstart kan de standaard terugkeren.
+Kolay	Makkelijk
+Kullanıcı adı: root\nSunucu bu uygulama kapanınca da çalışır.\nKindle uyuyunca Wi-Fi ile birlikte bağlantı kopar.\nYeniden başlatınca kapalı açılır.	Gebruikersnaam: root\nDe server blijft draaien als deze app sluit.\nAls de Kindle slaapt, vallen wifi en verbinding weg.\nNa een herstart staat hij uit.
+Kültür	Cultuur
+Manşet	Voorpagina
+Mart	maart
+Masa Saati	Bureauklok
+Mayın Tarlası	Mijnenveger
+Mayın: %d	Mijnen: %d
+Mayına bastın	Je raakte een mijn
+Mayıs	mei
+Menü	Menu
+Mevcut oyun silinsin mi?	Huidig spel wissen?
+Motor yanıt vermedi	Engine reageert niet
+Muhteşem!	Geweldig!
+Nem %s	Vochtigheid %s
+Nisan	april
+Not: Açık	Notities: Aan
+Not: Kapalı	Notities: Uit
+Ocak	januari
+Ons (USD)	Ons (USD)
+Orta	Gemiddeld
+Otomatik tamamla	Automatisch afmaken
+Oynanan	Gespeeld
+Oyun bitti	Spel voorbij
+Parola	Wachtwoord
+Parola belirlenmiş	Wachtwoord ingesteld
+Parola kaydedildi.	Wachtwoord opgeslagen.
+Parola kaydedilemedi.	Wachtwoord niet opgeslagen.
+Parolalar aynı değil, tekrar deneyin.	Wachtwoorden verschillen, probeer opnieuw.
+Parolayı değiştir	Wachtwoord wijzigen
+Parolayı tekrar girin	Herhaal het wachtwoord
+Parçalı bulutlu	Half bewolkt
+Pat — berabere	Pat — remise
+Paz	Zo
+Pazar	zondag
+Pazartesi	maandag
+Per	Do
+Perşembe	donderdag
+Piyon hangi taşa dönüşsün?	Pion promoveren tot?
+Pzt	Ma
+Rastgele	Willekeurig
+Renginiz	Jouw kleur
+Rüzgâr %ld km/s %s	Wind %ld km/u %s
+Rüzgâr —	Wind —
+SSH Sunucusu	SSH-server
+Sal	Di
+Salı	dinsdag
+Satranç	Schaken
+Satranç motoru çalışmadı.	Schaakengine startte niet.
+Satış	Verkoop
+Sağanak	Buien
+Sağlık	Gezondheid
+Seri	Reeks
+Sil	Wissen
+Sisli	Mist
+Siyah	Zwart
+Skor	Score
+Skor: %d	Score: %d
+Solitaire	Patience
+Son anda!	Op het nippertje!
+Sonuç bulunamadı	Geen resultaten
+Sonuçlar	Resultaten
+Spor	Sport
+Sudoku	Sudoku
+Sunucu başlatılamadı (günlüğe bakın).	Server starten mislukt (zie het logboek).
+Sözlükte yok (yalnızca kök kelimeler)	Niet in het Turkse woordenboek (alleen stamwoorden)
+Süre: %ld:%02ld	Tijd: %ld:%02ld
+Sıra: %s	%s aan zet
+TCMB döviz kurları	TCMB-wisselkoersen
+TCMB satış kuru ile	Tegen TCMB-verkoopkoers
+TCMB · güncellendi %d %s %02d:%02d	TCMB · bijgewerkt %d %s %02d:%02d
+Tahmin dağılımı	Verdeling pogingen
+Tahta sabit	Bord vast
+Tahtaya bak	Bord bekijken
+Tahtayı çevir	Bord draaien
+Tam altın	Hele goudmunt
+Tamam	OK
+Tamamla	Afmaken
+Tebrikler!	Gefeliciteerd!
+Tek kart çek	Eén kaart trekken
+Tek oyunculu	Eén speler
+Tekrar dene	Opnieuw
+Temmuz	juli
+Terfi	Promotie
+Tüm kurlar	Alle koersen
+Usta	Meester
+Uygulamalar	Apps
+Uyku Ayarı	Slaapstand
+Vazgeç	Annuleren
+Vezir	Dame
+Yarım altın	Halve goudmunt
+Yağmurlu	Regen
+Yağış %s	Neerslag %s
+Yeni	Nieuw
+Yeni SSH parolası (en az 6)	Nieuw SSH-wachtwoord (min. 6)
+Yeni oyun	Nieuw spel
+Yenile	Vernieuwen
+Yetersiz taş — berabere	Onvoldoende materiaal — remise
+Yoğun kar	Zware sneeuwval
+Yükleniyor…	Laden…
+Zor	Moeilijk
+Zorluk	Niveau
+Zorluk seçin	Kies moeilijkheid
+boşluk	spatie
+Çar	Wo
+Çarşamba	woensdag
+Çevirici	Omrekenen
+Çevrimdışı · güncellendi %d %s %02d:%02d	Offline · bijgewerkt %d %s %02d:%02d
+Çevrimdışı — son veri %s · Open-Meteo	Offline — gegevens van %s · Open-Meteo
+Çeyrek altın	Kwart goudmunt
+Çisenti	Motregen
+Çok Kolay	Heel makkelijk
+Çok iyi!	Heel goed!
+Çıkış	Afsluiten
+Önce boş bir hücre seçin.	Kies eerst een leeg vakje.
+Üç kart çek	Drie kaarten trekken
+Üçlü tekrar — berabere	Drievoudige herhaling — remise
+İki oyunculu	Twee spelers
+İki oyunculu devam	Twee spelers verder
+İpucu	Hint
+İstatistik	Statistieken
+İyi	Gevorderd
+İşlem başarısız oldu.	Bewerking mislukt.
+Şah mat — Beyaz kazandı	Schaakmat — wit wint
+Şah mat — Siyah kazandı	Schaakmat — zwart wint
+Şah! Sıra: %s	Schaak! %s aan zet
+Şehir ara	Stad zoeken
+Şehir veya ilçe ara	Zoek stad of plaats
+Şehirler	Steden
+Şehri sil	Stad verwijderen
+Şiddetli sağanak	Zware buien
+Şiddetli yağmur	Zware regen
+Şu an AÇIK: gelen bağlantılar engelleniyor.\nKapatılsın mı?	Nu AAN: inkomende verbindingen worden geblokkeerd.\nUitschakelen?
+Şu an KAPALI: gelen bağlantılara izin veriliyor.\nAçılsın mı?	Nu UIT: inkomende verbindingen zijn toegestaan.\nInschakelen?
+Şu an: %d dakika	Nu: %d minuten
+Şu an: %d saat	Nu: %d uur
+Şu an: hiç uyumuyor	Nu: slaapt nooit
+Şubat	februari
+⚑ Açık	⚑ Aan
+⚑ Kapalı	⚑ Uit

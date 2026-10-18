@@ -1,0 +1,262 @@
+# English catalog for kindle-apps
+%%%d	%d%%
+%d %s %d, %s	%d %s %d, %s
+%d/%d · güncellendi %02d:%02d	%d/%d · updated %02d:%02d
+%d/%d · çevrimdışı, son veri %02d:%02d	%d/%d · offline, last data %02d:%02d
+%s %d/6 tahminde bildin.	%s Solved in %d/6 guesses.
+%s beklenmedik şekilde kapandı	%s closed unexpectedly
+%s silinsin mi?	Delete %s?
+%s · %d×%d · %d mayın	%s · %d×%d · %d mines
+%s · Süre: %ld:%02ld	%s · Time: %ld:%02ld
++ Ekle	+ Add
+1 saat	1 hour
+10 dakika	10 minutes
+2 saat	2 hours
+2048	2048
+2048'e ulaştın.	You reached 2048.
+30 dakika	30 minutes
+5 dakika	5 minutes
+5 harf girin	Enter 5 letters
+50 hamle kuralı — berabere	50-move rule — draw
+Altın (serbest piyasa, ₺)	Gold (free market, ₺)
+Alış	Buy
+Aralık	December
+Aranıyor…	Searching…
+At	Knight
+Az bulutlu	Mostly clear
+AÇIK	ON
+Aç	Turn on
+Açık	Clear
+Açıldı. Gelen bağlantılar engelleniyor.	Turned on. Incoming connections are blocked.
+Ağustos	August
+B	W
+Bağlantı kurulamadı. Wi-Fi açık mı?	Could not connect. Is Wi-Fi on?
+Bağlantı yok, kurlar alınamadı	No connection, could not get rates
+Bağlantı yok, veri alınamadı	No connection, could not get data
+Beyaz	White
+Bilim	Science
+Bu oyun bitirilsin mi?	End this game?
+Bu sefer olmadı	Not this time
+Bugün	Today
+Bugün  en yüksek %s · en düşük %s · ☼ %s – %s	Today  high %s · low %s · ☼ %s – %s
+Bulmacayı çözdünüz.	You solved the puzzle.
+Bütün kartlar açık. Oyun tamamlansın mı?	All cards are face up. Finish the game?
+Bütün kartları yerleştirdin.	You placed all the cards.
+Cmt	Sat
+Cum	Fri
+Cuma	Friday
+Cumartesi	Saturday
+Cumhuriyet altını	Republic gold coin
+D	E
+Devam	Continue
+Devam et	Continue
+Dil	Language
+Dokun: aç	Tap: reveal
+Dokun: bayrak	Tap: flag
+Dolu, fırtına	Hail, thunderstorm
+Donan yağmur	Freezing rain
+Donan çisenti	Freezing drizzle
+Dâhice!	Genius!
+Döviz & Altın	Currency & Gold
+Dünya	World
+Düşünüyor… (%s)	Thinking… (%s)
+Ekim	October
+Ekonomi	Economy
+En az %d karakter girin	Enter at least %d characters
+En fazla 10 şehir kaydedilebilir.	You can save up to 10 cities.
+En iyi	Best
+En iyi seri	Best streak
+Evet	Yes
+Eylül	September
+Fil	Bishop
+G	S
+GB	SW
+GD	SE
+Gazete	News
+Geri al	Undo
+Gram altın	Gram gold
+Gök gürültülü	Thunderstorm
+Gönder	Submit
+Güncel	Latest
+Güncellendi %s · Open-Meteo	Updated %s · Open-Meteo
+Güncelleniyor…	Updating…
+Gündem	In focus
+Güvenlik Duvarı	Firewall
+Güzel!	Nice!
+Haberler alınamadı.\nWi-Fi bağlantısını kontrol edin.	Could not load news.\nCheck the Wi-Fi connection.
+Harika!	Great!
+Hata	Error
+Hataları göster: Açık	Show errors: On
+Hataları göster: Kapalı	Show errors: Off
+Hava Durumu	Weather
+Hava durumu alınamadı.\nWi-Fi bağlantısını kontrol edip Yenile'ye basın.	Could not get the weather.\nCheck the Wi-Fi connection and tap Refresh.
+Hava durumu yok (Wi-Fi kapalı olabilir)	No weather (Wi-Fi may be off)
+Hayır	No
+Haziran	June
+Hedef para	To currency
+Henüz parola yok	No password yet
+Henüz uygulama kurulu değil	No apps installed yet
+Her hamlede tahtayı çevir	Flip board every move
+Hissedilen %s	Feels like %s
+Hiç uyuma	Never sleep
+K	N
+KAPALI	OFF
+KB	NW
+KD	NE
+Kale	Rook
+Kapalı	Overcast
+Kapat	Close
+Kapatıldı. Kindle yeniden başlayınca tekrar açılır.	Turned off. It turns back on when the Kindle restarts.
+Kar sağanağı	Snow showers
+Kar taneleri	Snow grains
+Karlı	Snow
+Kasım	November
+Kaydedilemedi.	Could not save.
+Kaynak para	From currency
+Kaynak: %s	Source: %s
+Kazandın!	You won!
+Kazanma %	Win %
+Kelime Oyunu	Word Game
+Kelime listesi bulunamadı. Uygulamayı yeniden kurun.	Word list not found. Reinstall the app.
+Kelime: %s	Word: %s
+Kindle bu süre dokunulmadan kalınca uyur.\n"Hiç uyuma" pili hızlı tüketir.\nYeniden başlatınca varsayılana dönebilir.	The Kindle sleeps after this long without a touch.\n"Never sleep" drains the battery fast.\nA restart may restore the default.
+Kolay	Easy
+Kullanıcı adı: root\nSunucu bu uygulama kapanınca da çalışır.\nKindle uyuyunca Wi-Fi ile birlikte bağlantı kopar.\nYeniden başlatınca kapalı açılır.	Username: root\nThe server keeps running after this app closes.\nWhen the Kindle sleeps, Wi-Fi and the connection drop.\nAfter a restart it starts off.
+Kültür	Culture
+Manşet	Headlines
+Mart	March
+Masa Saati	Desk Clock
+Mayın Tarlası	Minesweeper
+Mayın: %d	Mines: %d
+Mayına bastın	You hit a mine
+Mayıs	May
+Menü	Menu
+Mevcut oyun silinsin mi?	Discard the current game?
+Motor yanıt vermedi	Engine did not respond
+Muhteşem!	Magnificent!
+Nem %s	Humidity %s
+Nisan	April
+Not: Açık	Notes: On
+Not: Kapalı	Notes: Off
+Ocak	January
+Ons (USD)	Ounce (USD)
+Orta	Medium
+Otomatik tamamla	Auto-complete
+Oynanan	Played
+Oyun bitti	Game over
+Parola	Password
+Parola belirlenmiş	Password set
+Parola kaydedildi.	Password saved.
+Parola kaydedilemedi.	Could not save the password.
+Parolalar aynı değil, tekrar deneyin.	Passwords do not match, try again.
+Parolayı değiştir	Change password
+Parolayı tekrar girin	Enter the password again
+Parçalı bulutlu	Partly cloudy
+Pat — berabere	Stalemate — draw
+Paz	Sun
+Pazar	Sunday
+Pazartesi	Monday
+Per	Thu
+Perşembe	Thursday
+Piyon hangi taşa dönüşsün?	Promote the pawn to?
+Pzt	Mon
+Rastgele	Random
+Renginiz	Your colour
+Rüzgâr %ld km/s %s	Wind %ld km/h %s
+Rüzgâr —	Wind —
+SSH Sunucusu	SSH Server
+Sal	Tue
+Salı	Tuesday
+Satranç	Chess
+Satranç motoru çalışmadı.	The chess engine did not start.
+Satış	Sell
+Sağanak	Showers
+Sağlık	Health
+Seri	Streak
+Sil	Delete
+Sisli	Foggy
+Siyah	Black
+Skor	Score
+Skor: %d	Score: %d
+Solitaire	Solitaire
+Son anda!	Phew!
+Sonuç bulunamadı	No results
+Sonuçlar	Results
+Spor	Sports
+Sudoku	Sudoku
+Sunucu başlatılamadı (günlüğe bakın).	Could not start the server (see the log).
+Sözlükte yok (yalnızca kök kelimeler)	Not in the Turkish dictionary (root words only)
+Süre: %ld:%02ld	Time: %ld:%02ld
+Sıra: %s	%s to move
+TCMB döviz kurları	TCMB exchange rates
+TCMB satış kuru ile	At TCMB selling rate
+TCMB · güncellendi %d %s %02d:%02d	TCMB · updated %d %s %02d:%02d
+Tahmin dağılımı	Guess distribution
+Tahta sabit	Fixed board
+Tahtaya bak	View board
+Tahtayı çevir	Flip board
+Tam altın	Full gold coin
+Tamam	OK
+Tamamla	Finish
+Tebrikler!	Congratulations!
+Tek kart çek	Draw one card
+Tek oyunculu	One player
+Tekrar dene	Try again
+Temmuz	July
+Terfi	Promotion
+Tüm kurlar	All rates
+Usta	Master
+Uygulamalar	Apps
+Uyku Ayarı	Sleep Settings
+Vazgeç	Cancel
+Vezir	Queen
+Yarım altın	Half gold coin
+Yağmurlu	Rain
+Yağış %s	Rain %s
+Yeni	New
+Yeni SSH parolası (en az 6)	New SSH password (min. 6)
+Yeni oyun	New game
+Yenile	Refresh
+Yetersiz taş — berabere	Insufficient material — draw
+Yoğun kar	Heavy snow
+Yükleniyor…	Loading…
+Zor	Hard
+Zorluk	Difficulty
+Zorluk seçin	Choose difficulty
+boşluk	space
+Çar	Wed
+Çarşamba	Wednesday
+Çevirici	Converter
+Çevrimdışı · güncellendi %d %s %02d:%02d	Offline · updated %d %s %02d:%02d
+Çevrimdışı — son veri %s · Open-Meteo	Offline — last data %s · Open-Meteo
+Çeyrek altın	Quarter gold coin
+Çisenti	Drizzle
+Çok Kolay	Very easy
+Çok iyi!	Very good!
+Çıkış	Exit
+Önce boş bir hücre seçin.	Select an empty cell first.
+Üç kart çek	Draw three cards
+Üçlü tekrar — berabere	Threefold repetition — draw
+İki oyunculu	Two players
+İki oyunculu devam	Continue two-player
+İpucu	Hint
+İstatistik	Statistics
+İyi	Advanced
+İşlem başarısız oldu.	The operation failed.
+Şah mat — Beyaz kazandı	Checkmate — White wins
+Şah mat — Siyah kazandı	Checkmate — Black wins
+Şah! Sıra: %s	Check! %s to move
+Şehir ara	Search city
+Şehir veya ilçe ara	Search city or town
+Şehirler	Cities
+Şehri sil	Delete city
+Şiddetli sağanak	Heavy showers
+Şiddetli yağmur	Heavy rain
+Şu an AÇIK: gelen bağlantılar engelleniyor.\nKapatılsın mı?	Currently ON: incoming connections are blocked.\nTurn it off?
+Şu an KAPALI: gelen bağlantılara izin veriliyor.\nAçılsın mı?	Currently OFF: incoming connections are allowed.\nTurn it on?
+Şu an: %d dakika	Now: %d minutes
+Şu an: %d saat	Now: %d hours
+Şu an: hiç uyumuyor	Now: never sleeps
+Şubat	February
+⚑ Açık	⚑ On
+⚑ Kapalı	⚑ Off

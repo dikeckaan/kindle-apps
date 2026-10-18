@@ -1,0 +1,262 @@
+# French catalog for kindle-apps
+%%%d	%d %%
+%d %s %d, %s	%d %s %d, %s
+%d/%d · güncellendi %02d:%02d	%d/%d · mis à jour %02d:%02d
+%d/%d · çevrimdışı, son veri %02d:%02d	%d/%d · hors ligne, données de %02d:%02d
+%s %d/6 tahminde bildin.	%s Trouvé en %d/6 essais.
+%s beklenmedik şekilde kapandı	%s s'est fermé de façon inattendue
+%s silinsin mi?	Supprimer %s ?
+%s · %d×%d · %d mayın	%s · %d×%d · %d mines
+%s · Süre: %ld:%02ld	%s · Temps : %ld:%02ld
++ Ekle	+ Ajouter
+1 saat	1 heure
+10 dakika	10 minutes
+2 saat	2 heures
+2048	2048
+2048'e ulaştın.	Vous avez atteint 2048.
+30 dakika	30 minutes
+5 dakika	5 minutes
+5 harf girin	Entrez 5 lettres
+50 hamle kuralı — berabere	Règle des 50 coups — nulle
+Altın (serbest piyasa, ₺)	Or (marché libre, ₺)
+Alış	Achat
+Aralık	décembre
+Aranıyor…	Recherche…
+At	Cavalier
+Az bulutlu	Peu nuageux
+AÇIK	ACTIVÉ
+Aç	Activer
+Açık	Dégagé
+Açıldı. Gelen bağlantılar engelleniyor.	Activé. Les connexions entrantes sont bloquées.
+Ağustos	août
+B	O
+Bağlantı kurulamadı. Wi-Fi açık mı?	Connexion impossible. Le Wi-Fi est-il activé ?
+Bağlantı yok, kurlar alınamadı	Pas de connexion, cours indisponibles
+Bağlantı yok, veri alınamadı	Pas de connexion, données indisponibles
+Beyaz	Blancs
+Bilim	Sciences
+Bu oyun bitirilsin mi?	Terminer cette partie ?
+Bu sefer olmadı	Pas cette fois
+Bugün	Auj.
+Bugün  en yüksek %s · en düşük %s · ☼ %s – %s	Aujourd'hui  max. %s · min. %s · ☼ %s – %s
+Bulmacayı çözdünüz.	Vous avez résolu la grille.
+Bütün kartlar açık. Oyun tamamlansın mı?	Toutes les cartes sont visibles. Terminer la partie ?
+Bütün kartları yerleştirdin.	Vous avez placé toutes les cartes.
+Cmt	Sam
+Cum	Ven
+Cuma	vendredi
+Cumartesi	samedi
+Cumhuriyet altını	Pièce d'or République
+D	E
+Devam	Continuer
+Devam et	Continuer
+Dil	Langue
+Dokun: aç	Toucher : révéler
+Dokun: bayrak	Toucher : drapeau
+Dolu, fırtına	Grêle, orage
+Donan yağmur	Pluie verglaçante
+Donan çisenti	Bruine verglaçante
+Dâhice!	Génial !
+Döviz & Altın	Devises & Or
+Dünya	Monde
+Düşünüyor… (%s)	Réflexion… (%s)
+Ekim	octobre
+Ekonomi	Économie
+En az %d karakter girin	Entrez au moins %d caractères
+En fazla 10 şehir kaydedilebilir.	10 villes au maximum.
+En iyi	Record
+En iyi seri	Meilleure série
+Evet	Oui
+Eylül	septembre
+Fil	Fou
+G	S
+GB	SO
+GD	SE
+Gazete	Actualités
+Geri al	Annuler
+Gram altın	Or au gramme
+Gök gürültülü	Orage
+Gönder	Valider
+Güncel	Dernières infos
+Güncellendi %s · Open-Meteo	Mis à jour %s · Open-Meteo
+Güncelleniyor…	Mise à jour…
+Gündem	Actualité
+Güvenlik Duvarı	Pare-feu
+Güzel!	Bien !
+Haberler alınamadı.\nWi-Fi bağlantısını kontrol edin.	Actualités indisponibles.\nVérifiez la connexion Wi-Fi.
+Harika!	Super !
+Hata	Erreur
+Hataları göster: Açık	Erreurs : Oui
+Hataları göster: Kapalı	Erreurs : Non
+Hava Durumu	Météo
+Hava durumu alınamadı.\nWi-Fi bağlantısını kontrol edip Yenile'ye basın.	Météo indisponible.\nVérifiez le Wi-Fi puis touchez Actualiser.
+Hava durumu yok (Wi-Fi kapalı olabilir)	Pas de météo (Wi-Fi désactivé ?)
+Hayır	Non
+Haziran	juin
+Hedef para	Devise cible
+Henüz parola yok	Pas encore de mot de passe
+Henüz uygulama kurulu değil	Aucune application installée
+Her hamlede tahtayı çevir	Tourner l'échiquier à chaque coup
+Hissedilen %s	Ressenti %s
+Hiç uyuma	Jamais de veille
+K	N
+KAPALI	DÉSACTIVÉ
+KB	NO
+KD	NE
+Kale	Tour
+Kapalı	Couvert
+Kapat	Fermer
+Kapatıldı. Kindle yeniden başlayınca tekrar açılır.	Désactivé. Il se réactive au redémarrage du Kindle.
+Kar sağanağı	Averses de neige
+Kar taneleri	Neige en grains
+Karlı	Neige
+Kasım	novembre
+Kaydedilemedi.	Enregistrement impossible.
+Kaynak para	Devise source
+Kaynak: %s	Source : %s
+Kazandın!	Gagné !
+Kazanma %	Victoires %
+Kelime Oyunu	Jeu de mots
+Kelime listesi bulunamadı. Uygulamayı yeniden kurun.	Liste de mots introuvable. Réinstallez l'application.
+Kelime: %s	Mot : %s
+Kindle bu süre dokunulmadan kalınca uyur.\n"Hiç uyuma" pili hızlı tüketir.\nYeniden başlatınca varsayılana dönebilir.	Le Kindle se met en veille après ce délai sans contact.\n« Jamais de veille » vide vite la batterie.\nUn redémarrage peut rétablir la valeur par défaut.
+Kolay	Facile
+Kullanıcı adı: root\nSunucu bu uygulama kapanınca da çalışır.\nKindle uyuyunca Wi-Fi ile birlikte bağlantı kopar.\nYeniden başlatınca kapalı açılır.	Utilisateur : root\nLe serveur continue après la fermeture de l'appli.\nEn veille, le Wi-Fi et la connexion sont coupés.\nAprès un redémarrage, il est désactivé.
+Kültür	Culture
+Manşet	À la une
+Mart	mars
+Masa Saati	Horloge
+Mayın Tarlası	Démineur
+Mayın: %d	Mines : %d
+Mayına bastın	Vous avez sauté sur une mine
+Mayıs	mai
+Menü	Menu
+Mevcut oyun silinsin mi?	Abandonner la partie en cours ?
+Motor yanıt vermedi	Le moteur ne répond pas
+Muhteşem!	Magnifique !
+Nem %s	Humidité %s
+Nisan	avril
+Not: Açık	Notes : Oui
+Not: Kapalı	Notes : Non
+Ocak	janvier
+Ons (USD)	Once (USD)
+Orta	Moyen
+Otomatik tamamla	Terminer auto.
+Oynanan	Parties
+Oyun bitti	Partie terminée
+Parola	Mot de passe
+Parola belirlenmiş	Mot de passe défini
+Parola kaydedildi.	Mot de passe enregistré.
+Parola kaydedilemedi.	Échec de l'enregistrement du mot de passe.
+Parolalar aynı değil, tekrar deneyin.	Les mots de passe diffèrent, réessayez.
+Parolayı değiştir	Changer le mot de passe
+Parolayı tekrar girin	Confirmez le mot de passe
+Parçalı bulutlu	Partiellement nuageux
+Pat — berabere	Pat — nulle
+Paz	Dim
+Pazar	dimanche
+Pazartesi	lundi
+Per	Jeu
+Perşembe	jeudi
+Piyon hangi taşa dönüşsün?	Promouvoir le pion en ?
+Pzt	Lun
+Rastgele	Aléatoire
+Renginiz	Votre couleur
+Rüzgâr %ld km/s %s	Vent %ld km/h %s
+Rüzgâr —	Vent —
+SSH Sunucusu	Serveur SSH
+Sal	Mar
+Salı	mardi
+Satranç	Échecs
+Satranç motoru çalışmadı.	Le moteur d'échecs n'a pas démarré.
+Satış	Vente
+Sağanak	Averses
+Sağlık	Santé
+Seri	Série
+Sil	Effacer
+Sisli	Brouillard
+Siyah	Noirs
+Skor	Score
+Skor: %d	Score : %d
+Solitaire	Solitaire
+Son anda!	Ouf !
+Sonuç bulunamadı	Aucun résultat
+Sonuçlar	Résultats
+Spor	Sport
+Sudoku	Sudoku
+Sunucu başlatılamadı (günlüğe bakın).	Démarrage du serveur impossible (voir le journal).
+Sözlükte yok (yalnızca kök kelimeler)	Absent du dictionnaire turc (mots racines seuls)
+Süre: %ld:%02ld	Temps : %ld:%02ld
+Sıra: %s	Au tour des %s
+TCMB döviz kurları	Taux de change TCMB
+TCMB satış kuru ile	Au cours de vente TCMB
+TCMB · güncellendi %d %s %02d:%02d	TCMB · mis à jour %d %s %02d:%02d
+Tahmin dağılımı	Répartition des essais
+Tahta sabit	Échiquier fixe
+Tahtaya bak	Voir l'échiquier
+Tahtayı çevir	Tourner l'échiquier
+Tam altın	Pièce d'or entière
+Tamam	OK
+Tamamla	Terminer
+Tebrikler!	Bravo !
+Tek kart çek	Tirer une carte
+Tek oyunculu	Un joueur
+Tekrar dene	Réessayer
+Temmuz	juillet
+Terfi	Promotion
+Tüm kurlar	Tous les cours
+Usta	Maître
+Uygulamalar	Applications
+Uyku Ayarı	Veille
+Vazgeç	Annuler
+Vezir	Dame
+Yarım altın	Demi-pièce d'or
+Yağmurlu	Pluie
+Yağış %s	Pluie %s
+Yeni	Nouveau
+Yeni SSH parolası (en az 6)	Nouveau mot de passe SSH (6 min.)
+Yeni oyun	Nouvelle partie
+Yenile	Actualiser
+Yetersiz taş — berabere	Matériel insuffisant — nulle
+Yoğun kar	Fortes chutes de neige
+Yükleniyor…	Chargement…
+Zor	Difficile
+Zorluk	Difficulté
+Zorluk seçin	Choisir la difficulté
+boşluk	espace
+Çar	Mer
+Çarşamba	mercredi
+Çevirici	Convertir
+Çevrimdışı · güncellendi %d %s %02d:%02d	Hors ligne · mis à jour %d %s %02d:%02d
+Çevrimdışı — son veri %s · Open-Meteo	Hors ligne — données de %s · Open-Meteo
+Çeyrek altın	Quart de pièce d'or
+Çisenti	Bruine
+Çok Kolay	Très facile
+Çok iyi!	Très bien !
+Çıkış	Quitter
+Önce boş bir hücre seçin.	Sélectionnez d'abord une case vide.
+Üç kart çek	Tirer trois cartes
+Üçlü tekrar — berabere	Triple répétition — nulle
+İki oyunculu	Deux joueurs
+İki oyunculu devam	Reprendre à deux
+İpucu	Indice
+İstatistik	Statistiques
+İyi	Avancé
+İşlem başarısız oldu.	L'opération a échoué.
+Şah mat — Beyaz kazandı	Échec et mat — les Blancs gagnent
+Şah mat — Siyah kazandı	Échec et mat — les Noirs gagnent
+Şah! Sıra: %s	Échec ! Au tour des %s
+Şehir ara	Chercher une ville
+Şehir veya ilçe ara	Chercher une ville ou commune
+Şehirler	Villes
+Şehri sil	Supprimer la ville
+Şiddetli sağanak	Fortes averses
+Şiddetli yağmur	Forte pluie
+Şu an AÇIK: gelen bağlantılar engelleniyor.\nKapatılsın mı?	Actuellement ACTIVÉ : connexions entrantes bloquées.\nLe désactiver ?
+Şu an KAPALI: gelen bağlantılara izin veriliyor.\nAçılsın mı?	Actuellement DÉSACTIVÉ : connexions entrantes autorisées.\nL'activer ?
+Şu an: %d dakika	Actuel : %d minutes
+Şu an: %d saat	Actuel : %d heures
+Şu an: hiç uyumuyor	Actuel : jamais de veille
+Şubat	février
+⚑ Açık	⚑ Oui
+⚑ Kapalı	⚑ Non
