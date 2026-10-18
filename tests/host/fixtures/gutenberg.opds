@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:opds="http://opds-spec.org/2010/catalog" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:relevance="http://a9.com/-/opensearch/extensions/relevance/1.0/">
+<id>http://www.gutenberg.org/ebooks/search.opds/?query=dickens+christmas</id>
+<updated>2026-10-18T14:42:25Z</updated>
+<title>Books: dickens christmas</title>
+<subtitle>Free eBooks since 1971.</subtitle>
+<author>
+<name>Project Gutenberg</name>
+<uri>https://www.gutenberg.org</uri>
+<email>webmaster@gutenberg.org</email>
+</author>
+<icon>https://www.gutenberg.org/gutenberg/favicon.ico</icon>
+<link rel="search" type="application/opensearchdescription+xml" title="Project Gutenberg Catalog Search" href="https://www.gutenberg.org/catalog/osd-books.xml"/>
+<link rel="self" title="This Page" type="application/atom+xml;profile=opds-catalog" href="/ebooks/search.opds/?query=dickens+christmas"/>
+<link rel="alternate" type="text/html" title="HTML Page" href="/ebooks/search/?query=dickens+christmas"/>
+<link rel="start" title="Start Page" type="application/atom+xml;profile=opds-catalog" href="/ebooks.opds/"/>
+<link rel="next" title="Next Page" type="application/atom+xml;profile=opds-catalog" href="/ebooks/search.opds/?query=dickens+christmas&amp;start_index=26"/>
+<opensearch:itemsPerPage>25</opensearch:itemsPerPage>
+<opensearch:startIndex>1</opensearch:startIndex>
+<entry>
+<updated>2026-10-18T14:42:25Z</updated>
+<id>https://www.gutenberg.org/ebooks/subjects/search.opds/?query=dickens+christmas</id>
+<title>Subjects</title>
+<content type="text">One subject heading matches your search.</content>
+<link type="application/atom+xml;profile=opds-catalog" rel="subsection" href="/ebooks/subjects/search.opds/?query=dickens+christmas"/>
+<link type="image/png" rel="http://opds-spec.org/image/thumbnail" href="data:image/png;base64,AAAA"/>
+</entry>
+<entry>
+<updated>2026-10-18T14:42:25Z</updated>
+<id>https://www.gutenberg.org/ebooks/46.opds</id>
+<title>A Christmas Carol in Prose; Being a Ghost Story of Christmas</title>
+<content type="text">Charles Dickens</content>
+<link type="application/atom+xml;profile=opds-catalog" rel="subsection" href="/ebooks/46.opds"/>
+<link type="image/png" rel="http://opds-spec.org/image/thumbnail" href="data:image/png;base64,AAAA"/>
+</entry>
+<entry>
+<updated>2026-10-18T14:42:25Z</updated>
+<id>https://www.gutenberg.org/ebooks/25948.opds</id>
+<title>Fifty-Two Stories For Girls</title>
+<content type="text">6339 downloads</content>
+<link type="application/atom+xml;profile=opds-catalog" rel="subsection" href="/ebooks/25948.opds"/>
+<link type="image/png" rel="http://opds-spec.org/image/thumbnail" href="data:image/png;base64,AAAA"/>
+</entry>
+<entry>
+<updated>2026-10-18T14:42:25Z</updated>
+<id>https://www.gutenberg.org/ebooks/24022.opds</id>
+<title>A Christmas Carol</title>
+<content type="text">Charles Dickens</content>
+<link type="application/atom+xml;profile=opds-catalog" rel="subsection" href="/ebooks/24022.opds"/>
+<link type="image/png" rel="http://opds-spec.org/image/thumbnail" href="data:image/png;base64,AAAA"/>
+</entry>
+<entry>
+<updated>2026-10-18T14:42:25Z</updated>
+<id>https://www.gutenberg.org/ebooks/19337.opds</id>
+<title>A Christmas Carol</title>
+<content type="text">Charles Dickens</content>
+<link type="application/atom+xml;profile=opds-catalog" rel="subsection" href="/ebooks/19337.opds"/>
+<link type="image/png" rel="http://opds-spec.org/image/thumbnail" href="data:image/png;base64,AAAA"/>
+</entry>
+<entry>
+<updated>2026-10-18T14:42:25Z</updated>
+<id>https://www.gutenberg.org/ebooks/28198.opds</id>
+<title>A Budget of Christmas Tales by Charles Dickens and Others</title>
+<content type="text">1969 downloads</content>
+<link type="application/atom+xml;profile=opds-catalog" rel="subsection" href="/ebooks/28198.opds"/>
+<link type="image/png" rel="http://opds-spec.org/image/thumbnail" href="data:image/png;base64,AAAA"/>
+</entry>
+<entry>
+<updated>2026-10-18T14:42:25Z</updated>
+<id>https://www.gutenberg.org/ebooks/30368.opds</id>
+<title>A Christmas Carol</title>
+<content type="text">Charles Dickens</content>
+<link type="application/atom+xml;profile=opds-catalog" rel="subsection" href="/ebooks/30368.opds"/>
+<link type="image/png" rel="http://opds-spec.org/image/thumbnail" href="data:image/png;base64,AAAA"/>
+</entry>
+<entry>
+<updated>2026-10-18T14:42:25Z</updated>
+<id>https://www.gutenberg.org/ebooks/678.opds</id>
+<title>The Cricket on the Hearth: A Fairy Tale of Home</title>
+<content type="text">Charles Dickens</content>
+<link type="application/atom+xml;profile=opds-catalog" rel="subsection" href="/ebooks/678.opds"/>
+<link type="image/png" rel="http://opds-spec.org/image/thumbnail" href="data:image/png;base64,AAAA"/>
+</entry>
+<entry>
+<updated>2026-10-18T14:42:25Z</updated>
+<id>https://www.gutenberg.org/ebooks/1467.opds</id>
+<title>Some Christmas Stories</title>
+<content type="text">Charles Dickens</content>
+<link type="application/atom+xml;profile=opds-catalog" rel="subsection" href="/ebooks/1467.opds"/>
+<link type="image/png" rel="http://opds-spec.org/image/thumbnail" href="data:image/png;base64,AAAA"/>
+</entry>
+<entry>
+<updated>2026-10-18T14:42:25Z</updated>
+<id>https://www.gutenberg.org/ebooks/653.opds</id>
+<title>The Chimes
+</title>
+<content type="text">Charles Dickens</content>
+<link type="application/atom+xml;profile=opds-catalog" rel="subsection" href="/ebooks/653.opds"/>
+<link type="image/png" rel="http://opds-spec.org/image/thumbnail" href="data:image/png;base64,AAAA"/>
+</entry>
+<entry>
+<updated>2026-10-18T14:42:25Z</updated>
+<id>https://www.gutenberg.org/ebooks/22465.opds</id>
+<title>Der Weihnachtsabend (German)</title>
+<content type="text">Charles Dickens</content>
+<link type="application/atom+xml;profile=opds-catalog" rel="subsection" href="/ebooks/22465.opds"/>
+<link type="image/png" rel="http://opds-spec.org/image/thumbnail" href="data:image/png;base64,AAAA"/>
+</entry>
+<entry>
+<updated>2026-10-18T14:42:25Z</updated>
+<id>https://www.gutenberg.org/ebooks/644.opds</id>
+<title>The Haunted Man and the Ghost's Bargain</title>
+<content type="text">Charles Dickens</content>
+<link type="application/atom+xml;profile=opds-catalog" rel="subsection" href="/ebooks/644.opds"/>
+<link type="image/png" rel="http://opds-spec.org/image/thumbnail" href="data:image/png;base64,AAAA"/>
+</entry>
+<entry>
+<updated>2026-10-18T14:42:25Z</updated>
+<id>https://www.gutenberg.org/ebooks/20673.opds</id>
+<title>A Christmas Carol</title>
+<content type="text">Charles Dickens</content>
+<link type="application/atom+xml;profile=opds-catalog" rel="subsection" href="/ebooks/20673.opds"/>
+<link type="image/png" rel="http://opds-spec.org/image/thumbnail" href="data:image/png;base64,AAAA"/>
+</entry>
+<entry>
+<updated>2026-10-18T14:42:25Z</updated>
+<id>https://www.gutenberg.org/ebooks/60057.opds</id>
+<title>The Uses of Diversity: A book of essays</title>
+<content type="text">G. K. Chesterton</content>
+<link type="application/atom+xml;profile=opds-catalog" rel="subsection" href="/ebooks/60057.opds"/>
+<link type="image/png" rel="http://opds-spec.org/image/thumbnail" href="data:image/png;base64,AAAA"/>
+</entry>
+<entry>
+<updated>2026-10-18T14:42:25Z</updated>
+<id>https://www.gutenberg.org/ebooks/19505.opds</id>
+<title>A Christmas Carol</title>
+<content type="text">Charles Dickens</content>
+<link type="application/atom+xml;profile=opds-catalog" rel="subsection" href="/ebooks/19505.opds"/>
+<link type="image/png" rel="http://opds-spec.org/image/thumbnail" href="data:image/png;base64,AAAA"/>
+</entry>
+<entry>
+<updated>2026-10-18T14:42:25Z</updated>
+<id>https://www.gutenberg.org/ebooks/40729.opds</id>
+<title>"Old Scrooge": A Christmas Carol in Five Staves.
+</title>
+<content type="text">Charles Dickens and Charles Augustus Scott</content>
+<link type="application/atom+xml;profile=opds-catalog" rel="subsection" href="/ebooks/40729.opds"/>
+<link type="image/png" rel="http://opds-spec.org/image/thumbnail" href="data:image/png;base64,AAAA"/>
+</entry>
+<entry>
+<updated>2026-10-18T14:42:25Z</updated>
+<id>https://www.gutenberg.org/ebooks/28560.opds</id>
+<title>Een Kerstlied in Proza (Dutch)</title>
+<content type="text">Charles Dickens</content>
+<link type="application/atom+xml;profile=opds-catalog" rel="subsection" href="/ebooks/28560.opds"/>
+<link type="image/png" rel="http://opds-spec.org/image/thumbnail" href="data:image/png;base64,AAAA"/>
+</entry>
+<entry>
+<updated>2026-10-18T14:42:25Z</updated>
+<id>https://www.gutenberg.org/ebooks/676.opds</id>
+<title>The Battle of Life</title>
+<content type="text">Charles Dickens</content>
+<link type="application/atom+xml;profile=opds-catalog" rel="subsection" href="/ebooks/676.opds"/>
+<link type="image/png" rel="http://opds-spec.org/image/thumbnail" href="data:image/png;base64,AAAA"/>
+</entry>
+<entry>
+<updated>2026-10-18T14:42:25Z</updated>
+<id>https://www.gutenberg.org/ebooks/41739.opds</id>
+<title>A Christmas Carol; Or, The Miser's Warning!
+</title>
+<content type="text">Charles Dickens and C. Z. Barnett</content>
+<link type="application/atom+xml;profile=opds-catalog" rel="subsection" href="/ebooks/41739.opds"/>
+<link type="image/png" rel="http://opds-spec.org/image/thumbnail" href="data:image/png;base64,AAAA"/>
+</entry>
+<entry>
+<updated>2026-10-18T14:42:25Z</updated>
+<id>https://www.gutenberg.org/ebooks/68682.opds</id>
+<title>Charles Dickens: A critical study</title>
+<content type="text">G. K. Chesterton</content>
+<link type="application/atom+xml;profile=opds-catalog" rel="subsection" href="/ebooks/68682.opds"/>
+<link type="image/png" rel="http://opds-spec.org/image/thumbnail" href="data:image/png;base64,AAAA"/>
+</entry>
+<entry>
+<updated>2026-10-18T14:42:25Z</updated>
+<id>https://www.gutenberg.org/ebooks/10483.opds</id>
+<title>Short Stories Old and New</title>
+<content type="text">998 downloads</content>
+<link type="application/atom+xml;profile=opds-catalog" rel="subsection" href="/ebooks/10483.opds"/>
+<link type="image/png" rel="http://opds-spec.org/image/thumbnail" href="data:image/png;base64,AAAA"/>
+</entry>
+<entry>
+<updated>2026-10-18T14:42:25Z</updated>
+<id>https://www.gutenberg.org/ebooks/69503.opds</id>
+<title>Looking toward sunset</title>
+<content type="text">952 downloads</content>
+<link type="application/atom+xml;profile=opds-catalog" rel="subsection" href="/ebooks/69503.opds"/>
+<link type="image/png" rel="http://opds-spec.org/image/thumbnail" href="data:image/png;base64,AAAA"/>
+</entry>
+<entry>
+<updated>2026-10-18T14:42:25Z</updated>
+<id>https://www.gutenberg.org/ebooks/1392.opds</id>
+<title>The Seven Poor Travellers</title>
+<content type="text">Charles Dickens</content>
+<link type="application/atom+xml;profile=opds-catalog" rel="subsection" href="/ebooks/1392.opds"/>
+<link type="image/png" rel="http://opds-spec.org/image/thumbnail" href="data:image/png;base64,AAAA"/>
+</entry>
+<entry>
+<updated>2026-10-18T14:42:25Z</updated>
+<id>https://www.gutenberg.org/ebooks/1415.opds</id>
+<title>Doctor Marigold</title>
+<content type="text">Charles Dickens</content>
+<link type="application/atom+xml;profile=opds-catalog" rel="subsection" href="/ebooks/1415.opds"/>
+<link type="image/png" rel="http://opds-spec.org/image/thumbnail" href="data:image/png;base64,AAAA"/>
+</entry>
+<entry>
+<updated>2026-10-18T14:42:25Z</updated>
+<id>https://www.gutenberg.org/ebooks/74549.opds</id>
+<title>Great short stories, Volume 2 (of 3) :  Ghost stories</title>
+<content type="text">903 downloads</content>
+<link type="application/atom+xml;profile=opds-catalog" rel="subsection" href="/ebooks/74549.opds"/>
+<link type="image/png" rel="http://opds-spec.org/image/thumbnail" href="data:image/png;base64,AAAA"/>
+</entry>
+<entry>
+<updated>2026-10-18T14:42:25Z</updated>
+<id>https://www.gutenberg.org/ebooks/40723.opds</id>
+<title>The Battle of Life: A Love Story</title>
+<content type="text">Charles Dickens</content>
+<link type="application/atom+xml;profile=opds-catalog" rel="subsection" href="/ebooks/40723.opds"/>
+<link type="image/png" rel="http://opds-spec.org/image/thumbnail" href="data:image/png;base64,AAAA"/>
+</entry>
+</feed>
