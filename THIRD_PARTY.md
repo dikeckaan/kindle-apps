@@ -18,6 +18,8 @@ Because FBInk is linked statically and is GPLv3+, this project is distributed un
 | Source | Terms | Used by |
 |--------|-------|---------|
 | Open-Meteo forecast + geocoding API | CC BY 4.0, free for non-commercial use; attributed on screen | Hava Durumu, Masa Saati |
+| Aladhan prayer-times API (Diyanet method 13) | free public API | Masa Panosu |
+| Wikimedia "On this day" feed | CC BY-SA (Wikipedia text) | Masa Panosu |
 | TCMB `kurlar/today.xml` | public daily indicative rates | Döviz & Altın |
 | Truncgil Finans `today.json` | free public API | Döviz & Altın (gold) |
 | Turkish news RSS/Atom feeds (AA, TRT Haber, Hürriyet, Sözcü, NTV, CNN Türk, BBC Türkçe, Cumhuriyet, Milliyet, Sabah, Habertürk, DW Türkçe, Euronews, Yeni Şafak, BirGün, Karar, Star, Akşam, Dünya, Bloomberg HT) | publishers' public feeds; only the feed text and the article link are shown, no images | Gazete |

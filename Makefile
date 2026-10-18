@@ -38,6 +38,7 @@ TEST_test_fx_SRCS := apps/currency/fx.c core/net/xml.c core/kui/utf8tr.c core/ve
 TEST_test_news_SRCS := apps/news/news.c core/net/xml.c core/kui/utf8tr.c core/kui/trfmt.c
 TEST_test_wordle_SRCS := apps/wordle/wordle.c core/kui/utf8tr.c
 TEST_test_i18n_SRCS := core/kui/i18n.c core/kui/trfmt.c core/kui/store.c core/kui/utf8tr.c
+TEST_test_pano_SRCS := apps/pano/pano.c core/vendor/cjson/cJSON.c
 TEST_test_uci_SRCS := apps/chess/uci.c apps/chess/levels.c
 TEST_test_mines_SRCS := apps/mines/mines.c
 TEST_test_sudoku_SRCS := apps/sudoku/sudoku.c
@@ -72,7 +73,7 @@ $(FBINK_A):
 NET_SRCS := core/net/http.c core/net/xml.c core/vendor/cjson/cJSON.c
 
 # APPS: each entry <name> builds $(OUT)/<name> from APP_<name>_SRCS + kui + FBInk
-APPS := hub game2048 chess sleep firewall ssh weather clock currency news wordle mines sudoku solitaire sysinfo ebooks upload
+APPS := hub pano game2048 chess sleep firewall ssh weather clock currency news wordle mines sudoku solitaire sysinfo ebooks upload
 APP_weather_SRCS := apps/weather/main.c apps/weather/wx.c apps/weather/wxdraw.c $(NET_SRCS)
 APP_clock_SRCS := apps/clock/main.c apps/weather/wx.c apps/weather/wxdraw.c $(NET_SRCS)
 APP_currency_SRCS := apps/currency/main.c apps/currency/fx.c $(NET_SRCS)
@@ -81,6 +82,7 @@ APP_wordle_SRCS := apps/wordle/main.c apps/wordle/wordle.c
 APP_sysinfo_SRCS := apps/sysinfo/main.c apps/sysinfo/si.c apps/firewall/fw.c apps/ssh/sshsrv.c
 APP_ebooks_SRCS := apps/ebooks/main.c apps/ebooks/opds.c $(NET_SRCS)
 APP_upload_SRCS := apps/upload/main.c apps/upload/server.c apps/upload/httpd.c apps/ssh/sshsrv.c
+APP_pano_SRCS := apps/pano/main.c apps/pano/pano.c apps/weather/wx.c apps/weather/wxdraw.c apps/news/news.c apps/currency/fx.c $(NET_SRCS)
 APP_ssh_SRCS := apps/ssh/main.c apps/ssh/sshcfg.c apps/ssh/sshsrv.c
 APP_firewall_SRCS := apps/firewall/main.c apps/firewall/fw.c apps/ssh/sshsrv.c
 APP_sleep_SRCS := apps/sleep/main.c apps/sleep/sleep_opts.c
@@ -116,7 +118,8 @@ clean:
 # ---- packaging: stage each package under build/pkg/<id>, then tar it into dist/ ----
 
 # PKGS: each <appdir> under apps/ with a pkg/ dir; PKG_<appdir>_FILES go to files/ (installed next to app.ini)
-PKGS := game2048 chess sleep ssh firewall weather clock currency news wordle mines sudoku solitaire sysinfo upload ebooks
+PKGS := pano game2048 chess sleep ssh firewall weather clock currency news wordle mines sudoku solitaire sysinfo upload ebooks
+PKG_pano_FILES := $(OUT)/pano
 PKG_game2048_FILES := $(OUT)/game2048
 PKG_chess_FILES := $(OUT)/chess $(OUT)/stockfish $(OUT)/COPYING-stockfish
 PKG_sleep_FILES := $(OUT)/sleep
@@ -154,7 +157,7 @@ SSH    := sshpass -p '' ssh -o PubkeyAuthentication=no -p $(PORT) root@$(KINDLE)
 
 # Installs dist packages the way kpm does: unpack into a staging dir and run install.sh there (core first).
 deploy:
-	@for id in kindle-apps-core kindle-apps-2048 kindle-apps-chess kindle-apps-sleep kindle-apps-ssh kindle-apps-firewall kindle-apps-weather kindle-apps-clock kindle-apps-currency kindle-apps-news kindle-apps-wordle kindle-apps-mines kindle-apps-sudoku kindle-apps-solitaire kindle-apps-sysinfo kindle-apps-upload kindle-apps-ebooks; do \
+	@for id in kindle-apps-core kindle-apps-2048 kindle-apps-chess kindle-apps-sleep kindle-apps-ssh kindle-apps-firewall kindle-apps-weather kindle-apps-clock kindle-apps-currency kindle-apps-news kindle-apps-wordle kindle-apps-mines kindle-apps-sudoku kindle-apps-solitaire kindle-apps-sysinfo kindle-apps-upload kindle-apps-ebooks kindle-apps-pano; do \
 		k=$$(ls dist/packages/$$id/*.kpkg | tail -1); echo "deploy $$k"; \
 		cat $$k | $(SSH) "S=/mnt/us/kindle-apps-staging/$$id; rm -rf \$$S; mkdir -p \$$S && cd \$$S && tar xzf - && sh ./install.sh && cd / && rm -rf \$$S && echo installed $$id" || exit 1; \
 	done

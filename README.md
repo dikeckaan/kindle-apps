@@ -19,6 +19,7 @@ Kitaplıkta tek bir **"Uygulamalar"** girişi olur; açınca bütün uygulamalar
 | Kelime Oyunu (Türkçe Wordle: 5 harf, yalnızca kök kelimeler, sınırsız) | ✅ |
 | Hava Durumu (Open-Meteo, kayıtlı şehirler, 12 saat + 7 gün) | ✅ |
 | Masa Saati (büyük saat, tarih, hava özeti; açıkken uyumaz) | ✅ |
+| Masa Panosu (saat, hava, seçilen kaynaktan son dakika, döviz/altın, tarihte bugün, namaz vakitleri, ay evresi, pil) | ✅ |
 | Döviz & Altın (TCMB kurları, altın fiyatları, çevirici) | ✅ |
 | Gazete (20 kaynaktan gazete tadında ön sayfa: AA, TRT, Hürriyet, Sözcü, NTV, CNN Türk, BBC Türkçe, Cumhuriyet, Milliyet, Sabah, Habertürk, DW, Euronews…) | ✅ |
 | Mayın Tarlası (3 zorluk, bayrak kipi) | ✅ |
@@ -61,6 +62,7 @@ dosyasını indirip USB ile Kindle'ın `documents` klasörüne kopyalayın, kita
 /var/local/kmc/bin/kpm -y install kindle-apps-sysinfo
 /var/local/kmc/bin/kpm -y install kindle-apps-upload
 /var/local/kmc/bin/kpm -y install kindle-apps-ebooks
+/var/local/kmc/bin/kpm -y install kindle-apps-pano
 ```
 
 Ardından kitaplıkta **Uygulamalar**'ı açın.
@@ -74,7 +76,7 @@ root'un okuyabildiği `/var/local/kindle-apps/ssh` içinde tuzlu ve 10 000 tur S
 ## Kaldırma
 
 ```sh
-/var/local/kmc/bin/kpm uninstall kindle-apps-2048 kindle-apps-chess kindle-apps-sleep kindle-apps-ssh kindle-apps-firewall kindle-apps-weather kindle-apps-clock kindle-apps-currency kindle-apps-news kindle-apps-wordle kindle-apps-mines kindle-apps-sudoku kindle-apps-solitaire kindle-apps-sysinfo kindle-apps-upload kindle-apps-ebooks kindle-apps-core
+/var/local/kmc/bin/kpm uninstall kindle-apps-2048 kindle-apps-chess kindle-apps-sleep kindle-apps-ssh kindle-apps-firewall kindle-apps-weather kindle-apps-clock kindle-apps-currency kindle-apps-news kindle-apps-wordle kindle-apps-mines kindle-apps-sudoku kindle-apps-solitaire kindle-apps-sysinfo kindle-apps-upload kindle-apps-ebooks kindle-apps-pano kindle-apps-core
 ```
 
 Oyun kayıtları ve ayarlar `/mnt/us/kindle-apps/data/` içinde kalır; tamamen silmek için o klasörü de silin.

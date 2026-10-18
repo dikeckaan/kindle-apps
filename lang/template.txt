@@ -1,5 +1,5 @@
 # Translatable texts (Turkish source). Catalog lines: source<TAB>translation; \n and \t escaped.
-# apps/sysinfo/main.c
+# apps/pano/main.c
 %%%d	
 # apps/sysinfo/main.c
 %%%d · şarj oluyor	
@@ -61,6 +61,8 @@
 70.000'den fazla ücretsiz e-kitap. Arama İngilizce başlık ve yazar adlarıyla en iyi sonucu verir.	
 # apps/ebooks/main.c
 AZW3 Kindle'ın kendi okuyucusunda, EPUB KOReader'da açılır.	
+# apps/pano/pano.c
+Akşam	
 # apps/currency/main.c
 Altın (serbest piyasa, ₺)	
 # apps/upload/main.c
@@ -77,6 +79,12 @@ Aralık
 Aranıyor…	
 # apps/chess/main.c
 At	
+# apps/pano/main.c
+Ay evresi	
+# apps/pano/main.c
+Ay: %s, %%%d	
+# apps/pano/main.c
+Ayarlar	
 # apps/weather/wx.c
 Az bulutlu	
 # apps/ssh/main.c
@@ -159,6 +167,8 @@ Dokun: aç
 Dokun: bayrak	
 # apps/weather/wx.c
 Dolu, fırtına	
+# apps/pano/pano.c
+Dolunay	
 # apps/weather/wx.c
 Donan yağmur	
 # apps/weather/wx.c
@@ -169,6 +179,8 @@ Dosya bekleniyor…
 Dâhice!	
 # apps/currency/main.c
 Döviz & Altın	
+# apps/pano/main.c
+Döviz ve altın	
 # apps/news/news.c
 Dünya	
 # apps/chess/main.c
@@ -219,14 +231,24 @@ Güncellendi %s · Open-Meteo
 Güncelleniyor…	
 # apps/news/news.c
 Gündem	
+# apps/pano/pano.c
+Güneş	
 # apps/firewall/main.c
 Güvenlik Duvarı	
 # apps/sysinfo/main.c
 Güvenlik duvarı	
 # apps/wordle/main.c
 Güzel!	
+# apps/pano/main.c
+Haber alınamadı.	
+# apps/pano/main.c
+Haber kaynağı	
+# apps/pano/main.c
+Haber kaynağı: %s	
 # apps/news/main.c
 Haberler alınamadı.\nWi-Fi bağlantısını kontrol edin.	
+# apps/pano/main.c
+Hafta %d · Gün %d	
 # apps/wordle/main.c
 Harika!	
 # core/hub/main.c
@@ -237,8 +259,12 @@ Hataları göster: Açık
 Hataları göster: Kapalı	
 # apps/weather/main.c
 Hava Durumu	
+# apps/pano/main.c
+Hava durumu	
 # apps/weather/main.c
 Hava durumu alınamadı.\nWi-Fi bağlantısını kontrol edip Yenile'ye basın.	
+# apps/pano/main.c
+Hava durumu ve namaz vakitleri Hava Durumu uygulamasındaki ilk şehre göredir. Namaz vakitleri Diyanet yöntemiyle hesaplanır.	
 # apps/clock/main.c
 Hava durumu yok (Wi-Fi kapalı olabilir)	
 # apps/chess/main.c
@@ -255,6 +281,10 @@ Henüz parola yok
 Henüz uygulama kurulu değil	
 # apps/chess/main.c
 Her hamlede tahtayı çevir	
+# apps/pano/pano.c
+Hilal (büyüyen)	
+# apps/pano/pano.c
+Hilal (küçülen)	
 # apps/weather/main.c
 Hissedilen %s	
 # apps/sleep/sleep_opts.c
@@ -323,12 +353,16 @@ Kitaplığa eklendi:\n%s
 Kolay	
 # apps/ssh/main.c
 Kullanıcı adı: root\nSunucu bu uygulama kapanınca da çalışır.\nKindle uyuyunca Wi-Fi ile birlikte bağlantı kopar.\nYeniden başlatınca kapalı açılır.	
+# apps/pano/main.c
+Kur bilgisi yok	
 # apps/news/news.c
 Kültür	
 # apps/news/news.c
 Manşet	
 # core/kui/trfmt.c
 Mart	
+# apps/pano/pkg/app.ini
+Masa Panosu	
 # apps/clock/pkg/app.ini
 Masa Saati	
 # apps/mines/main.c
@@ -347,6 +381,10 @@ Mevcut oyun silinsin mi?
 Motor yanıt vermedi	
 # apps/wordle/main.c
 Muhteşem!	
+# apps/pano/main.c
+Namaz vakitleri	
+# apps/pano/main.c
+Namaz vakitleri alınamadı	
 # apps/weather/main.c
 Nem %s	
 # core/kui/trfmt.c
@@ -413,6 +451,8 @@ Renginiz
 Rüzgâr %ld km/s %s	
 # apps/weather/main.c
 Rüzgâr —	
+# apps/pano/main.c
+SON DAKİKA · %s	
 # apps/ssh/main.c
 SSH Sunucusu	
 # apps/sysinfo/main.c
@@ -451,6 +491,10 @@ Solitaire
 Son anda!	
 # apps/news/news.c
 Son dakika	
+# apps/pano/main.c
+Son dakika haberleri	
+# apps/pano/pano.c
+Son dördün	
 # apps/weather/main.c
 Sonuç bulunamadı	
 # apps/ebooks/main.c
@@ -471,6 +515,8 @@ Sözlükte yok (yalnızca kök kelimeler)
 Süre: %ld:%02ld	
 # apps/chess/main.c
 Sıra: %s	
+# apps/pano/main.c
+Sıradaki: %s %s · %d sa %d dk	
 # apps/currency/main.c
 TCMB döviz kurları	
 # apps/currency/main.c
@@ -493,6 +539,10 @@ Tamam
 Tamamla	
 # apps/upload/main.c
 Tarayıcıda bu adresi açın:	
+# apps/pano/main.c
+Tarihte bugün	
+# apps/pano/main.c
+Tarihte bugün · %d	
 # apps/game2048/main.c
 Tebrikler!	
 # apps/solitaire/main.c
@@ -533,6 +583,8 @@ Wi-Fi kapalı
 Wi-Fi'yi açın; adres burada görünecek.	
 # apps/currency/fx.c
 Yarım altın	
+# apps/pano/pano.c
+Yatsı	
 # apps/ebooks/main.c
 Yazar bilinmiyor	
 # apps/sysinfo/main.c
@@ -545,6 +597,8 @@ Yağış %s
 Yeni	
 # apps/ssh/main.c
 Yeni SSH parolası (en az 6)	
+# apps/pano/pano.c
+Yeni ay	
 # apps/chess/main.c
 Yeni oyun	
 # apps/ebooks/main.c
@@ -599,6 +653,8 @@ boşluk
 Ön sayfada kaynak yok.\nKaynaklar'dan seçin.	
 # apps/sudoku/main.c
 Önce boş bir hücre seçin.	
+# apps/pano/pano.c
+Öğle	
 # apps/solitaire/main.c
 Üç kart çek	
 # apps/chess/chess_game.c
@@ -607,6 +663,12 @@ boşluk
 İki oyunculu	
 # apps/chess/main.c
 İki oyunculu devam	
+# apps/pano/pano.c
+İkindi	
+# apps/pano/pano.c
+İlk dördün	
+# apps/pano/pano.c
+İmsak	
 # apps/ebooks/main.c
 İndir	
 # apps/ebooks/main.c
@@ -641,6 +703,10 @@ boşluk
 Şiddetli sağanak	
 # apps/weather/wx.c
 Şiddetli yağmur	
+# apps/pano/pano.c
+Şişkin ay (büyüyen)	
+# apps/pano/pano.c
+Şişkin ay (küçülen)	
 # apps/firewall/main.c
 Şu an AÇIK: gelen bağlantılar engelleniyor.\nKapatılsın mı?	
 # apps/firewall/main.c
