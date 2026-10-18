@@ -264,3 +264,75 @@ Seçim: süre → `lipc-set-prop com.lab126.powerd preventScreenSaver 0` + `scre
 - [ ] **Step 4:** Commit, `main`'e ff-merge, `v2026.10.5` etiketi, `gh workflow run release --ref v2026.10.5`, Pages manifestinde 4 paket;
   cihazda kpm ile `kindle-apps-chess` ve `kindle-apps-sleep` kurulumu çıkış 0.
 - [ ] **Step 5: Commit** — `feat: package chess and sleep apps; release v2026.10.5`
+
+---
+
+## Ek görevler (kullanıcının 2. isteği: Güvenlik Duvarı ve SSH menüde uygulama; SSH girişi **parolalı** — kullanıcının kararı)
+
+Paket kimlikleri: `kindle-apps-firewall` (order 92), `kindle-apps-ssh` (order 91). Task 7'deki paketleme bu iki paketi de kapsar
+(test_pack 6 paket bekler); sürüm `[2026,10,5]`.
+
+### Task 8: Ekran klavyesi ve SHA-256 (kui)
+
+**Files:** Create `core/kui/keyboard.c`, `core/kui/sha256.c` (+ `kui.h`); Test `tests/host/test_keyboard.c`, `tests/host/test_sha256.c`
+
+**Interfaces (Produces, Plan 3 Wordle da kullanır):**
+```c
+typedef enum { KUI_KB_TR_LETTERS, KUI_KB_SYMBOLS } KuiKbPage;
+typedef struct { KuiRect r; int cp; const char *label; } KuiKey;   /* cp: kod noktası; özel: KUI_KEY_BACK, KUI_KEY_ENTER, KUI_KEY_SHIFT, KUI_KEY_PAGE */
+#define KUI_KEY_BACK  (-10)
+#define KUI_KEY_ENTER (-11)
+#define KUI_KEY_SHIFT (-12)
+#define KUI_KEY_PAGE  (-13)
+int  kui_kb_layout(KuiRect area, KuiKbPage page, int shift, KuiKey *out, int max); /* saf: tuşları yerleştirir */
+int  kui_kb_hit(const KuiKey *keys, int n, int x, int y);                          /* tuş indeksi veya -1 */
+/* Modal metin girişi: başlık, gizli (parola: ●) seçeneği, en az/en çok uzunluk; Tamam → 1, ✕ → 0 */
+int  kui_input_text(const char *title, char *buf, int cap, int secret, int min_len, void (*redraw_bg)(void));
+void kui_sha256(const void *data, int len, unsigned char out[32]);
+```
+Türkçe Q harf sayfası: `Q W E R T Y U I O P Ğ Ü` / `A S D F G H J K L Ş İ` / `⇧ Z X C V B N M Ö Ç ⌫` / `123 boşluk Tamam`;
+küçük harfte I→ı, İ→i (kui_tr_lower). Sembol sayfası: rakamlar ve `-_.@#!?*+=/`. Basılan tuş yalnız kendi dikdörtgeninde yenilenir.
+
+- [ ] **Step 1: Testler:** `test_sha256_vectors` ("" → e3b0c442…b855, "abc" → ba7816bf…15ad, 1 000 000 × 'a' → cdc76e5c…c7c0);
+  `test_kb_layout_has_turkish_letters` (Ğ Ü Ş İ Ö Ç ve I mevcut); `test_kb_lowercase_dotless` (shift=0 iken I tuşu cp 0x131);
+  `test_kb_keys_inside_area_no_overlap`; `test_kb_hit`. FAIL → uygula → OK.
+- [ ] **Step 2: Commit** — `feat(kui): Turkish on-screen keyboard, text input, sha256`
+
+### Task 9: Güvenlik Duvarı uygulaması
+
+**Files:** Create `apps/firewall/fw.c/.h` (saf: `iptables -S INPUT` çıktısından durum), `apps/firewall/main.c`, `apps/firewall/pkg/*`; Test `tests/host/test_fw.c`
+
+```c
+int fw_is_open_policy(const char *iptables_S_output); /* "-P INPUT ACCEPT" ve kural yok/hepsi ACCEPT → 1 (duvar kapalı), "-P INPUT DROP" → 0 */
+```
+Akış: aç → durumu oku (`iptables -S INPUT`, popen) → `kui_dialog("Güvenlik Duvarı", "Şu an AÇIK (gelen bağlantılar engelleniyor).\nKapatılsın mı?", {"Kapat","Vazgeç"})`
+veya KAPALI için `{"Aç","Vazgeç"}` → işlem (kapat: `iptables-save > /tmp/iptables_backup.rules` yoksa, `-P INPUT ACCEPT`, `-F INPUT`; aç: yedekten
+`iptables-restore`, yoksa `-P INPUT DROP`) → sonuç diyaloğu ("Kapatıldı — yeniden başlatana kadar") → menüye dön.
+install.sh `documents/firewall_kapat.sh` ve `firewall_ac.sh` dosyalarını siler.
+
+- [ ] **Step 1: Testler:** `test_fw_drop_policy_is_closed_wall` (gerçek cihaz çıktısı örneğiyle), `test_fw_accept_flushed_is_open_wall`. FAIL → uygula → OK.
+- [ ] **Step 2: Cihazda:** iki yön; `iptables -S INPUT | head -1` ile doğrula; ekran görüntüsü. **Step 3: Commit** — `feat(firewall): firewall toggle app`
+
+### Task 10: SSH Sunucusu uygulaması (parolalı)
+
+**Files:** Create `tools/build-dropbear.sh`, `tools/patches/dropbear-apppass.patch`, `apps/ssh/sshcfg.c/.h` (saf), `apps/ssh/main.c`, `apps/ssh/pkg/*`; Test `tests/host/test_sshcfg.c`
+
+- Dropbear (sabit sürüm, MIT) kaynaktan derlenir; yama: parola doğrulaması `/etc/shadow` yerine
+  `/mnt/us/kindle-apps/data/ssh/passwd` dosyasındaki `kav1$<tuz hex 16B>$<hex>` kaydına karşı yapılır;
+  `<hex>` = SHA-256'nın 10 000 kez yinelenmesi (`h0 = sha256(tuz||parola)`, `h(i+1) = sha256(h(i)||tuz)`), dropbear'ın libtomcrypt
+  SHA-256'sı ile. Dosya yoksa parola girişi reddedilir. Yalnız `root` kullanıcısı. Anahtarla giriş: `data/ssh/authorized_keys`.
+- `sshcfg.c`: `int ssh_make_record(const char *password, const unsigned char salt[16], char *out, int cap)`,
+  `int ssh_check_record(const char *record, const char *password)` (aynı algoritma, host'ta test edilir; yamadaki C ile aynı vektörleri verir).
+- Sunucu: `dropbear -R -p <port> -P /tmp/kindle-apps-ssh.pid -r <hostkey>` (host anahtarı `data/ssh/` içinde, ilk açılışta `dropbearkey` ile).
+  Port 22, KOReader SSH'ı 22'deyse 2222. Açarken `iptables -I INPUT -p tcp --dport <port> -j ACCEPT`, kapatırken siler.
+  Sunucu uygulamadan bağımsız çalışır (setsid); uygulama yalnız durum gösterir ve aç/kapa yapar.
+- Ekran: "SSH: AÇIK — ssh root@192.168.x.y -p 22" veya "KAPALI"; düğmeler "Aç"/"Kapat", "Parolayı değiştir". İlk açılışta parola
+  yoksa `kui_input_text("SSH parolası belirleyin", …, secret=1, min_len=6)`.
+
+- [ ] **Step 1: Testler:** `test_record_roundtrip`, `test_record_wrong_password`, `test_record_rejects_malformed`, `test_record_known_vector`
+  (sabit tuz + "kindle123" → sabit hex; aynı vektör yama testinde de kullanılır). FAIL → uygula → OK.
+- [ ] **Step 2:** Dropbear'ı yamayla derle (Docker); host'ta yama doğrulaması: yamalı dropbear'ın parola fonksiyonu aynı vektörü kabul etmeli
+  (dropbear'ı host için de derleyip `localhost`'ta `sshpass` ile bağlanarak, ya da yamadaki fonksiyonu ayrı test ikilisinde çağırarak).
+- [ ] **Step 3: Cihazda:** parola belirle → aç → Mac'ten `sshpass -p <parola> ssh -p <port> root@<ip> echo ok` başarılı, yanlış parola reddedilir,
+  parolasız (`-p ''`) reddedilir; kapat → bağlantı reddedilir ve iptables kuralı silinmiş; uygulamayı kapatınca sunucu çalışmaya devam eder.
+- [ ] **Step 4: Commit** — `feat(ssh): password-protected SSH server app`
