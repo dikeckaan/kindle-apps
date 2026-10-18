@@ -1,0 +1,262 @@
+# Russian catalog for kindle-apps
+%%%d	%%%d
+%d %s %d, %s	%d %s %d, %s
+%d/%d · güncellendi %02d:%02d	%d/%d · обновлено %02d:%02d
+%d/%d · çevrimdışı, son veri %02d:%02d	%d/%d · офлайн, данные от %02d:%02d
+%s %d/6 tahminde bildin.	%s Угадано с попытки %d/6.
+%s beklenmedik şekilde kapandı	Приложение %s неожиданно закрылось
+%s silinsin mi?	Удалить %s?
+%s · %d×%d · %d mayın	%s · %d×%d · мин: %d
+%s · Süre: %ld:%02ld	%s · Время: %ld:%02ld
++ Ekle	+ Добавить
+1 saat	1 час
+10 dakika	10 минут
+2 saat	2 часа
+2048	2048
+2048'e ulaştın.	Вы собрали 2048.
+30 dakika	30 минут
+5 dakika	5 минут
+5 harf girin	Введите 5 букв
+50 hamle kuralı — berabere	Правило 50 ходов — ничья
+Altın (serbest piyasa, ₺)	Золото (свободный рынок, ₺)
+Alış	Покупка
+Aralık	декабря
+Aranıyor…	Поиск…
+At	Конь
+Az bulutlu	Малооблачно
+AÇIK	ВКЛ
+Aç	Включить
+Açık	Ясно
+Açıldı. Gelen bağlantılar engelleniyor.	Включён. Входящие соединения блокируются.
+Ağustos	августа
+B	З
+Bağlantı kurulamadı. Wi-Fi açık mı?	Не удалось подключиться. Wi-Fi включён?
+Bağlantı yok, kurlar alınamadı	Нет связи, курсы не получены
+Bağlantı yok, veri alınamadı	Нет связи, данные не получены
+Beyaz	Белые
+Bilim	Наука
+Bu oyun bitirilsin mi?	Завершить эту игру?
+Bu sefer olmadı	В этот раз не вышло
+Bugün	Сегодня
+Bugün  en yüksek %s · en düşük %s · ☼ %s – %s	Сегодня  макс. %s · мин. %s · ☼ %s – %s
+Bulmacayı çözdünüz.	Головоломка решена.
+Bütün kartlar açık. Oyun tamamlansın mı?	Все карты открыты. Завершить игру?
+Bütün kartları yerleştirdin.	Все карты разложены.
+Cmt	Сб
+Cum	Пт
+Cuma	пятница
+Cumartesi	суббота
+Cumhuriyet altını	Золото «Джумхуриет»
+D	В
+Devam	Продолжить
+Devam et	Продолжить
+Dil	Язык
+Dokun: aç	Нажатие: открыть
+Dokun: bayrak	Нажатие: флаг
+Dolu, fırtına	Град, гроза
+Donan yağmur	Ледяной дождь
+Donan çisenti	Ледяная морось
+Dâhice!	Гениально!
+Döviz & Altın	Валюта и золото
+Dünya	Мир
+Düşünüyor… (%s)	Думает… (%s)
+Ekim	октября
+Ekonomi	Экономика
+En az %d karakter girin	Минимум символов: %d
+En fazla 10 şehir kaydedilebilir.	Можно сохранить не более 10 городов.
+En iyi	Рекорд
+En iyi seri	Лучшая серия
+Evet	Да
+Eylül	сентября
+Fil	Слон
+G	Ю
+GB	ЮЗ
+GD	ЮВ
+Gazete	Новости
+Geri al	Отменить ход
+Gram altın	Грамм золота
+Gök gürültülü	Гроза
+Gönder	Ввод
+Güncel	Актуальное
+Güncellendi %s · Open-Meteo	Обновлено %s · Open-Meteo
+Güncelleniyor…	Обновление…
+Gündem	Главное
+Güvenlik Duvarı	Брандмауэр
+Güzel!	Хорошо!
+Haberler alınamadı.\nWi-Fi bağlantısını kontrol edin.	Не удалось загрузить новости.\nПроверьте подключение Wi-Fi.
+Harika!	Отлично!
+Hata	Ошибка
+Hataları göster: Açık	Показ ошибок: вкл
+Hataları göster: Kapalı	Показ ошибок: выкл
+Hava Durumu	Погода
+Hava durumu alınamadı.\nWi-Fi bağlantısını kontrol edip Yenile'ye basın.	Не удалось получить погоду.\nПроверьте Wi-Fi и нажмите «Обновить».
+Hava durumu yok (Wi-Fi kapalı olabilir)	Нет погоды (возможно, Wi-Fi выключен)
+Hayır	Нет
+Haziran	июня
+Hedef para	Валюта назначения
+Henüz parola yok	Пароль ещё не задан
+Henüz uygulama kurulu değil	Приложения ещё не установлены
+Her hamlede tahtayı çevir	Поворачивать после каждого хода
+Hissedilen %s	Ощущается %s
+Hiç uyuma	Никогда
+K	С
+KAPALI	ВЫКЛ
+KB	СЗ
+KD	СВ
+Kale	Ладья
+Kapalı	Пасмурно
+Kapat	Закрыть
+Kapatıldı. Kindle yeniden başlayınca tekrar açılır.	Выключен. Включится снова после перезагрузки Kindle.
+Kar sağanağı	Снегопад
+Kar taneleri	Снежная крупа
+Karlı	Снег
+Kasım	ноября
+Kaydedilemedi.	Не удалось сохранить.
+Kaynak para	Исходная валюта
+Kaynak: %s	Источник: %s
+Kazandın!	Победа!
+Kazanma %	Победы %
+Kelime Oyunu	Словесная игра
+Kelime listesi bulunamadı. Uygulamayı yeniden kurun.	Список слов не найден. Переустановите приложение.
+Kelime: %s	Слово: %s
+Kindle bu süre dokunulmadan kalınca uyur.\n"Hiç uyuma" pili hızlı tüketir.\nYeniden başlatınca varsayılana dönebilir.	Kindle засыпает после этого времени бездействия.\n«Никогда» быстро разряжает батарею.\nПосле перезагрузки может вернуться значение по умолчанию.
+Kolay	Лёгкий
+Kullanıcı adı: root\nSunucu bu uygulama kapanınca da çalışır.\nKindle uyuyunca Wi-Fi ile birlikte bağlantı kopar.\nYeniden başlatınca kapalı açılır.	Имя пользователя: root\nСервер работает и после закрытия приложения.\nКогда Kindle засыпает, связь рвётся вместе с Wi-Fi.\nПосле перезагрузки сервер выключен.
+Kültür	Культура
+Manşet	Заголовки
+Mart	марта
+Masa Saati	Настольные часы
+Mayın Tarlası	Сапёр
+Mayın: %d	Мины: %d
+Mayına bastın	Вы подорвались на мине
+Mayıs	мая
+Menü	Меню
+Mevcut oyun silinsin mi?	Удалить текущую игру?
+Motor yanıt vermedi	Движок не отвечает
+Muhteşem!	Великолепно!
+Nem %s	Влажность %s
+Nisan	апреля
+Not: Açık	Заметки: вкл
+Not: Kapalı	Заметки: выкл
+Ocak	января
+Ons (USD)	Унция (USD)
+Orta	Средний
+Otomatik tamamla	Автозавершение
+Oynanan	Сыграно
+Oyun bitti	Игра окончена
+Parola	Пароль
+Parola belirlenmiş	Пароль задан
+Parola kaydedildi.	Пароль сохранён.
+Parola kaydedilemedi.	Не удалось сохранить пароль.
+Parolalar aynı değil, tekrar deneyin.	Пароли не совпадают, попробуйте ещё раз.
+Parolayı değiştir	Сменить пароль
+Parolayı tekrar girin	Повторите пароль
+Parçalı bulutlu	Переменная облачность
+Pat — berabere	Пат — ничья
+Paz	Вс
+Pazar	воскресенье
+Pazartesi	понедельник
+Per	Чт
+Perşembe	четверг
+Piyon hangi taşa dönüşsün?	В какую фигуру превратить пешку?
+Pzt	Пн
+Rastgele	Случайно
+Renginiz	Ваш цвет
+Rüzgâr %ld km/s %s	Ветер %ld км/ч %s
+Rüzgâr —	Ветер —
+SSH Sunucusu	SSH-сервер
+Sal	Вт
+Salı	вторник
+Satranç	Шахматы
+Satranç motoru çalışmadı.	Шахматный движок не запустился.
+Satış	Продажа
+Sağanak	Ливень
+Sağlık	Здоровье
+Seri	Серия
+Sil	Стереть
+Sisli	Туман
+Siyah	Чёрные
+Skor	Очки
+Skor: %d	Очки: %d
+Solitaire	Пасьянс
+Son anda!	В последний момент!
+Sonuç bulunamadı	Ничего не найдено
+Sonuçlar	Результаты
+Spor	Спорт
+Sudoku	Судоку
+Sunucu başlatılamadı (günlüğe bakın).	Не удалось запустить сервер (см. журнал).
+Sözlükte yok (yalnızca kök kelimeler)	Нет в турецком словаре (только корневые слова)
+Süre: %ld:%02ld	Время: %ld:%02ld
+Sıra: %s	Ход: %s
+TCMB döviz kurları	Курсы валют ЦБ Турции
+TCMB satış kuru ile	По курсу продажи ЦБ Турции
+TCMB · güncellendi %d %s %02d:%02d	TCMB · обновлено %d %s %02d:%02d
+Tahmin dağılımı	Распределение попыток
+Tahta sabit	Доска неподвижна
+Tahtaya bak	Посмотреть доску
+Tahtayı çevir	Повернуть доску
+Tam altın	Полная монета
+Tamam	OK
+Tamamla	Завершить
+Tebrikler!	Поздравляем!
+Tek kart çek	Сдавать по одной
+Tek oyunculu	Один игрок
+Tekrar dene	Повторить
+Temmuz	июля
+Terfi	Превращение
+Tüm kurlar	Все курсы
+Usta	Мастер
+Uygulamalar	Приложения
+Uyku Ayarı	Настройки сна
+Vazgeç	Отмена
+Vezir	Ферзь
+Yarım altın	Полмонеты
+Yağmurlu	Дождь
+Yağış %s	Осадки %s
+Yeni	Новая
+Yeni SSH parolası (en az 6)	Новый пароль SSH (мин. 6)
+Yeni oyun	Новая игра
+Yenile	Обновить
+Yetersiz taş — berabere	Недостаточно материала — ничья
+Yoğun kar	Сильный снег
+Yükleniyor…	Загрузка…
+Zor	Сложный
+Zorluk	Сложность
+Zorluk seçin	Выберите сложность
+boşluk	пробел
+Çar	Ср
+Çarşamba	среда
+Çevirici	Конвертер
+Çevrimdışı · güncellendi %d %s %02d:%02d	Офлайн · обновлено %d %s %02d:%02d
+Çevrimdışı — son veri %s · Open-Meteo	Офлайн — данные от %s · Open-Meteo
+Çeyrek altın	Четверть монеты
+Çisenti	Морось
+Çok Kolay	Очень лёгкий
+Çok iyi!	Очень хорошо!
+Çıkış	Выход
+Önce boş bir hücre seçin.	Сначала выберите пустую клетку.
+Üç kart çek	Сдавать по три
+Üçlü tekrar — berabere	Троекратное повторение — ничья
+İki oyunculu	Два игрока
+İki oyunculu devam	Продолжить (два игрока)
+İpucu	Подсказка
+İstatistik	Статистика
+İyi	Хороший
+İşlem başarısız oldu.	Операция не удалась.
+Şah mat — Beyaz kazandı	Мат — белые победили
+Şah mat — Siyah kazandı	Мат — чёрные победили
+Şah! Sıra: %s	Шах! Ход: %s
+Şehir ara	Найти город
+Şehir veya ilçe ara	Поиск города или района
+Şehirler	Города
+Şehri sil	Удалить город
+Şiddetli sağanak	Сильный ливень
+Şiddetli yağmur	Сильный дождь
+Şu an AÇIK: gelen bağlantılar engelleniyor.\nKapatılsın mı?	Сейчас ВКЛ: входящие соединения блокируются.\nВыключить?
+Şu an KAPALI: gelen bağlantılara izin veriliyor.\nAçılsın mı?	Сейчас ВЫКЛ: входящие соединения разрешены.\nВключить?
+Şu an: %d dakika	Сейчас: %d мин
+Şu an: %d saat	Сейчас: %d ч
+Şu an: hiç uyumuyor	Сейчас: без сна
+Şubat	февраля
+⚑ Açık	⚑ Вкл
+⚑ Kapalı	⚑ Выкл

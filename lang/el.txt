@@ -1,0 +1,262 @@
+# Greek catalog for kindle-apps
+%%%d	%%%d
+%d %s %d, %s	%d %s %d, %s
+%d/%d · güncellendi %02d:%02d	%d/%d · ενημέρωση %02d:%02d
+%d/%d · çevrimdışı, son veri %02d:%02d	%d/%d · εκτός σύνδεσης, τελευταία %02d:%02d
+%s %d/6 tahminde bildin.	%s Το βρήκες σε %d/6 προσπάθειες.
+%s beklenmedik şekilde kapandı	Το %s έκλεισε απροσδόκητα
+%s silinsin mi?	Διαγραφή: %s;
+%s · %d×%d · %d mayın	%s · %d×%d · νάρκες: %d
+%s · Süre: %ld:%02ld	%s · Χρόνος: %ld:%02ld
++ Ekle	+ Προσθήκη
+1 saat	1 ώρα
+10 dakika	10 λεπτά
+2 saat	2 ώρες
+2048	2048
+2048'e ulaştın.	Έφτασες το 2048.
+30 dakika	30 λεπτά
+5 dakika	5 λεπτά
+5 harf girin	Γράψτε 5 γράμματα
+50 hamle kuralı — berabere	Κανόνας 50 κινήσεων — ισοπαλία
+Altın (serbest piyasa, ₺)	Χρυσός (ελεύθερη αγορά, ₺)
+Alış	Αγορά
+Aralık	Δεκεμβρίου
+Aranıyor…	Αναζήτηση…
+At	Ίππος
+Az bulutlu	Λίγα σύννεφα
+AÇIK	ΕΝΕΡΓΟ
+Aç	Άνοιγμα
+Açık	Αίθριος
+Açıldı. Gelen bağlantılar engelleniyor.	Ενεργοποιήθηκε. Οι εισερχόμενες συνδέσεις αποκλείονται.
+Ağustos	Αυγούστου
+B	Δ
+Bağlantı kurulamadı. Wi-Fi açık mı?	Αποτυχία σύνδεσης. Είναι ανοιχτό το Wi-Fi;
+Bağlantı yok, kurlar alınamadı	Χωρίς σύνδεση, δεν λήφθηκαν ισοτιμίες
+Bağlantı yok, veri alınamadı	Χωρίς σύνδεση, δεν λήφθηκαν δεδομένα
+Beyaz	Λευκά
+Bilim	Επιστήμη
+Bu oyun bitirilsin mi?	Τερματισμός του παιχνιδιού;
+Bu sefer olmadı	Όχι αυτή τη φορά
+Bugün	Σήμερα
+Bugün  en yüksek %s · en düşük %s · ☼ %s – %s	Σήμερα  μέγ. %s · ελάχ. %s · ☼ %s – %s
+Bulmacayı çözdünüz.	Λύσατε τον γρίφο.
+Bütün kartlar açık. Oyun tamamlansın mı?	Όλες οι κάρτες είναι ανοιχτές. Ολοκλήρωση παιχνιδιού;
+Bütün kartları yerleştirdin.	Τοποθέτησες όλες τις κάρτες.
+Cmt	Σάβ
+Cum	Παρ
+Cuma	Παρασκευή
+Cumartesi	Σάββατο
+Cumhuriyet altını	Χρυσό Cumhuriyet
+D	Α
+Devam	Συνέχεια
+Devam et	Συνέχεια
+Dil	Γλώσσα
+Dokun: aç	Πάτημα: άνοιγμα
+Dokun: bayrak	Πάτημα: σημαία
+Dolu, fırtına	Χαλάζι, καταιγίδα
+Donan yağmur	Παγωμένη βροχή
+Donan çisenti	Παγωμένο ψιχάλισμα
+Dâhice!	Ιδιοφυές!
+Döviz & Altın	Συνάλλαγμα & Χρυσός
+Dünya	Κόσμος
+Düşünüyor… (%s)	Σκέφτεται… (%s)
+Ekim	Οκτωβρίου
+Ekonomi	Οικονομία
+En az %d karakter girin	Τουλάχιστον %d χαρακτήρες
+En fazla 10 şehir kaydedilebilir.	Μπορούν να αποθηκευτούν έως 10 πόλεις.
+En iyi	Ρεκόρ
+En iyi seri	Καλύτερο σερί
+Evet	Ναι
+Eylül	Σεπτεμβρίου
+Fil	Αξιωματικός
+G	Ν
+GB	ΝΔ
+GD	ΝΑ
+Gazete	Ειδήσεις
+Geri al	Αναίρεση
+Gram altın	Γραμμάριο χρυσού
+Gök gürültülü	Καταιγίδα
+Gönder	Αποστολή
+Güncel	Επικαιρότητα
+Güncellendi %s · Open-Meteo	Ενημέρωση %s · Open-Meteo
+Güncelleniyor…	Ενημέρωση…
+Gündem	Ατζέντα
+Güvenlik Duvarı	Τείχος προστασίας
+Güzel!	Ωραία!
+Haberler alınamadı.\nWi-Fi bağlantısını kontrol edin.	Δεν λήφθηκαν ειδήσεις.\nΕλέγξτε τη σύνδεση Wi-Fi.
+Harika!	Τέλεια!
+Hata	Σφάλμα
+Hataları göster: Açık	Εμφάνιση λαθών: Ναι
+Hataları göster: Kapalı	Εμφάνιση λαθών: Όχι
+Hava Durumu	Καιρός
+Hava durumu alınamadı.\nWi-Fi bağlantısını kontrol edip Yenile'ye basın.	Δεν λήφθηκε ο καιρός.\nΕλέγξτε το Wi-Fi και πατήστε Ανανέωση.
+Hava durumu yok (Wi-Fi kapalı olabilir)	Χωρίς καιρό (ίσως το Wi-Fi είναι κλειστό)
+Hayır	Όχι
+Haziran	Ιουνίου
+Hedef para	Νόμισμα-στόχος
+Henüz parola yok	Δεν έχει οριστεί κωδικός
+Henüz uygulama kurulu değil	Δεν υπάρχουν εγκατεστημένες εφαρμογές
+Her hamlede tahtayı çevir	Περιστροφή σε κάθε κίνηση
+Hissedilen %s	Αίσθηση %s
+Hiç uyuma	Ποτέ
+K	Β
+KAPALI	ΑΝΕΝΕΡΓΟ
+KB	ΒΔ
+KD	ΒΑ
+Kale	Πύργος
+Kapalı	Συννεφιά
+Kapat	Κλείσιμο
+Kapatıldı. Kindle yeniden başlayınca tekrar açılır.	Απενεργοποιήθηκε. Ενεργοποιείται ξανά με την επανεκκίνηση του Kindle.
+Kar sağanağı	Χιονόπτωση
+Kar taneleri	Νιφάδες χιονιού
+Karlı	Χιόνι
+Kasım	Νοεμβρίου
+Kaydedilemedi.	Αποτυχία αποθήκευσης.
+Kaynak para	Νόμισμα-πηγή
+Kaynak: %s	Πηγή: %s
+Kazandın!	Κέρδισες!
+Kazanma %	Νίκες %
+Kelime Oyunu	Λεξούλα
+Kelime listesi bulunamadı. Uygulamayı yeniden kurun.	Δεν βρέθηκε λίστα λέξεων. Εγκαταστήστε ξανά την εφαρμογή.
+Kelime: %s	Λέξη: %s
+Kindle bu süre dokunulmadan kalınca uyur.\n"Hiç uyuma" pili hızlı tüketir.\nYeniden başlatınca varsayılana dönebilir.	Το Kindle κοιμάται μετά από τόση ώρα αδράνειας.\nΤο «Ποτέ» αδειάζει γρήγορα την μπαταρία.\nΜετά από επανεκκίνηση ίσως επανέλθει η προεπιλογή.
+Kolay	Εύκολο
+Kullanıcı adı: root\nSunucu bu uygulama kapanınca da çalışır.\nKindle uyuyunca Wi-Fi ile birlikte bağlantı kopar.\nYeniden başlatınca kapalı açılır.	Όνομα χρήστη: root\nΟ διακομιστής λειτουργεί και όταν κλείσει η εφαρμογή.\nΌταν το Kindle κοιμάται, η σύνδεση κόβεται μαζί με το Wi-Fi.\nΜετά από επανεκκίνηση ξεκινά ανενεργός.
+Kültür	Πολιτισμός
+Manşet	Πρωτοσέλιδα
+Mart	Μαρτίου
+Masa Saati	Επιτραπέζιο ρολόι
+Mayın Tarlası	Ναρκαλιευτής
+Mayın: %d	Νάρκες: %d
+Mayına bastın	Πάτησες νάρκη
+Mayıs	Μαΐου
+Menü	Μενού
+Mevcut oyun silinsin mi?	Διαγραφή τρέχοντος παιχνιδιού;
+Motor yanıt vermedi	Η μηχανή δεν αποκρίθηκε
+Muhteşem!	Υπέροχα!
+Nem %s	Υγρασία %s
+Nisan	Απριλίου
+Not: Açık	Σημειώσεις: Ναι
+Not: Kapalı	Σημειώσεις: Όχι
+Ocak	Ιανουαρίου
+Ons (USD)	Ουγγιά (USD)
+Orta	Μέτριο
+Otomatik tamamla	Αυτόματη ολοκλήρωση
+Oynanan	Παιχνίδια
+Oyun bitti	Τέλος παιχνιδιού
+Parola	Κωδικός
+Parola belirlenmiş	Ο κωδικός έχει οριστεί
+Parola kaydedildi.	Ο κωδικός αποθηκεύτηκε.
+Parola kaydedilemedi.	Αποτυχία αποθήκευσης κωδικού.
+Parolalar aynı değil, tekrar deneyin.	Οι κωδικοί διαφέρουν, δοκιμάστε ξανά.
+Parolayı değiştir	Αλλαγή κωδικού
+Parolayı tekrar girin	Πληκτρολογήστε ξανά τον κωδικό
+Parçalı bulutlu	Μερική νεφοκάλυψη
+Pat — berabere	Πατ — ισοπαλία
+Paz	Κυρ
+Pazar	Κυριακή
+Pazartesi	Δευτέρα
+Per	Πέμ
+Perşembe	Πέμπτη
+Piyon hangi taşa dönüşsün?	Σε ποιο κομμάτι να γίνει το πιόνι;
+Pzt	Δευ
+Rastgele	Τυχαία
+Renginiz	Το χρώμα σας
+Rüzgâr %ld km/s %s	Άνεμος %ld km/h %s
+Rüzgâr —	Άνεμος —
+SSH Sunucusu	Διακομιστής SSH
+Sal	Τρί
+Salı	Τρίτη
+Satranç	Σκάκι
+Satranç motoru çalışmadı.	Η μηχανή σκακιού δεν ξεκίνησε.
+Satış	Πώληση
+Sağanak	Μπόρες
+Sağlık	Υγεία
+Seri	Σερί
+Sil	Διαγραφή
+Sisli	Ομίχλη
+Siyah	Μαύρα
+Skor	Σκορ
+Skor: %d	Σκορ: %d
+Solitaire	Πασιέντσα
+Son anda!	Στο παρά πέντε!
+Sonuç bulunamadı	Δεν βρέθηκαν αποτελέσματα
+Sonuçlar	Αποτελέσματα
+Spor	Αθλητικά
+Sudoku	Sudoku
+Sunucu başlatılamadı (günlüğe bakın).	Ο διακομιστής δεν ξεκίνησε (δείτε το αρχείο καταγραφής).
+Sözlükte yok (yalnızca kök kelimeler)	Δεν υπάρχει στο τουρκικό λεξικό (μόνο ρίζες λέξεων)
+Süre: %ld:%02ld	Χρόνος: %ld:%02ld
+Sıra: %s	Σειρά: %s
+TCMB döviz kurları	Ισοτιμίες TCMB
+TCMB satış kuru ile	Με την τιμή πώλησης TCMB
+TCMB · güncellendi %d %s %02d:%02d	TCMB · ενημέρωση %d %s %02d:%02d
+Tahmin dağılımı	Κατανομή προσπαθειών
+Tahta sabit	Σταθερή σκακιέρα
+Tahtaya bak	Δες τη σκακιέρα
+Tahtayı çevir	Περιστροφή σκακιέρας
+Tam altın	Ολόκληρο χρυσό
+Tamam	OK
+Tamamla	Ολοκλήρωση
+Tebrikler!	Συγχαρητήρια!
+Tek kart çek	Τράβηγμα μίας κάρτας
+Tek oyunculu	Ένας παίκτης
+Tekrar dene	Ξανά
+Temmuz	Ιουλίου
+Terfi	Προαγωγή
+Tüm kurlar	Όλες οι ισοτιμίες
+Usta	Ειδικός
+Uygulamalar	Εφαρμογές
+Uyku Ayarı	Ρυθμίσεις ύπνου
+Vazgeç	Άκυρο
+Vezir	Βασίλισσα
+Yarım altın	Μισό χρυσό
+Yağmurlu	Βροχή
+Yağış %s	Υετός %s
+Yeni	Νέο
+Yeni SSH parolası (en az 6)	Νέος κωδικός SSH (τουλ. 6)
+Yeni oyun	Νέο παιχνίδι
+Yenile	Ανανέωση
+Yetersiz taş — berabere	Ανεπαρκές υλικό — ισοπαλία
+Yoğun kar	Πυκνό χιόνι
+Yükleniyor…	Φόρτωση…
+Zor	Δύσκολο
+Zorluk	Δυσκολία
+Zorluk seçin	Επιλέξτε δυσκολία
+boşluk	κενό
+Çar	Τετ
+Çarşamba	Τετάρτη
+Çevirici	Μετατροπέας
+Çevrimdışı · güncellendi %d %s %02d:%02d	Εκτός σύνδεσης · ενημέρωση %d %s %02d:%02d
+Çevrimdışı — son veri %s · Open-Meteo	Εκτός σύνδεσης — τελευταία %s · Open-Meteo
+Çeyrek altın	Τέταρτο χρυσό
+Çisenti	Ψιχάλισμα
+Çok Kolay	Πολύ εύκολο
+Çok iyi!	Πολύ καλά!
+Çıkış	Έξοδος
+Önce boş bir hücre seçin.	Επιλέξτε πρώτα ένα κενό κελί.
+Üç kart çek	Τράβηγμα τριών καρτών
+Üçlü tekrar — berabere	Τριπλή επανάληψη — ισοπαλία
+İki oyunculu	Δύο παίκτες
+İki oyunculu devam	Συνέχεια δύο παικτών
+İpucu	Βοήθεια
+İstatistik	Στατιστικά
+İyi	Καλό
+İşlem başarısız oldu.	Η ενέργεια απέτυχε.
+Şah mat — Beyaz kazandı	Ματ — κέρδισαν τα Λευκά
+Şah mat — Siyah kazandı	Ματ — κέρδισαν τα Μαύρα
+Şah! Sıra: %s	Σαχ! Σειρά: %s
+Şehir ara	Αναζήτηση πόλης
+Şehir veya ilçe ara	Αναζήτηση πόλης ή περιοχής
+Şehirler	Πόλεις
+Şehri sil	Διαγραφή πόλης
+Şiddetli sağanak	Ισχυρές μπόρες
+Şiddetli yağmur	Ισχυρή βροχή
+Şu an AÇIK: gelen bağlantılar engelleniyor.\nKapatılsın mı?	Τώρα ΕΝΕΡΓΟ: οι εισερχόμενες συνδέσεις αποκλείονται.\nΑπενεργοποίηση;
+Şu an KAPALI: gelen bağlantılara izin veriliyor.\nAçılsın mı?	Τώρα ΑΝΕΝΕΡΓΟ: οι εισερχόμενες συνδέσεις επιτρέπονται.\nΕνεργοποίηση;
+Şu an: %d dakika	Τώρα: %d λεπ.
+Şu an: %d saat	Τώρα: %d ώρ.
+Şu an: hiç uyumuyor	Τώρα: δεν κοιμάται ποτέ
+Şubat	Φεβρουαρίου
+⚑ Açık	⚑ Ναι
+⚑ Kapalı	⚑ Όχι

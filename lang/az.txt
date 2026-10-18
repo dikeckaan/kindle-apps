@@ -1,0 +1,262 @@
+# Azerbaijani catalog for kindle-apps
+%%%d	%%%d
+%d %s %d, %s	%d %s %d, %s
+%d/%d · güncellendi %02d:%02d	%d/%d · yeniləndi %02d:%02d
+%d/%d · çevrimdışı, son veri %02d:%02d	%d/%d · oflayn, son məlumat %02d:%02d
+%s %d/6 tahminde bildin.	%s %d/6 təxmində tapdın.
+%s beklenmedik şekilde kapandı	%s gözlənilmədən bağlandı
+%s silinsin mi?	%s silinsin?
+%s · %d×%d · %d mayın	%s · %d×%d · %d mina
+%s · Süre: %ld:%02ld	%s · Vaxt: %ld:%02ld
++ Ekle	+ Əlavə et
+1 saat	1 saat
+10 dakika	10 dəqiqə
+2 saat	2 saat
+2048	2048
+2048'e ulaştın.	2048-ə çatdın.
+30 dakika	30 dəqiqə
+5 dakika	5 dəqiqə
+5 harf girin	5 hərf daxil edin
+50 hamle kuralı — berabere	50 gediş qaydası — heç-heçə
+Altın (serbest piyasa, ₺)	Qızıl (sərbəst bazar, ₺)
+Alış	Alış
+Aralık	dekabr
+Aranıyor…	Axtarılır…
+At	At
+Az bulutlu	Az buludlu
+AÇIK	AÇIQ
+Aç	Aç
+Açık	Aydın
+Açıldı. Gelen bağlantılar engelleniyor.	Açıldı. Gələn bağlantılar bloklanır.
+Ağustos	avqust
+B	Q
+Bağlantı kurulamadı. Wi-Fi açık mı?	Bağlantı qurulmadı. Wi-Fi açıqdır?
+Bağlantı yok, kurlar alınamadı	Bağlantı yoxdur, məzənnələr alınmadı
+Bağlantı yok, veri alınamadı	Bağlantı yoxdur, məlumat alınmadı
+Beyaz	Ağ
+Bilim	Elm
+Bu oyun bitirilsin mi?	Bu oyun bitirilsin?
+Bu sefer olmadı	Bu dəfə alınmadı
+Bugün	Bu gün
+Bugün  en yüksek %s · en düşük %s · ☼ %s – %s	Bu gün  ən yüksək %s · ən aşağı %s · ☼ %s – %s
+Bulmacayı çözdünüz.	Tapmacanı həll etdiniz.
+Bütün kartlar açık. Oyun tamamlansın mı?	Bütün kartlar açıqdır. Oyun tamamlansın?
+Bütün kartları yerleştirdin.	Bütün kartları yerləşdirdin.
+Cmt	Şnb
+Cum	Cüm
+Cuma	cümə
+Cumartesi	şənbə
+Cumhuriyet altını	Cümhuriyyət qızılı
+D	Şr
+Devam	Davam
+Devam et	Davam et
+Dil	Dil
+Dokun: aç	Toxun: aç
+Dokun: bayrak	Toxun: bayraq
+Dolu, fırtına	Dolu, tufan
+Donan yağmur	Donan yağış
+Donan çisenti	Donan çiskin
+Dâhice!	Dahiyanə!
+Döviz & Altın	Valyuta və qızıl
+Dünya	Dünya
+Düşünüyor… (%s)	Düşünür… (%s)
+Ekim	oktyabr
+Ekonomi	İqtisadiyyat
+En az %d karakter girin	Ən azı %d simvol daxil edin
+En fazla 10 şehir kaydedilebilir.	Ən çox 10 şəhər saxlamaq olar.
+En iyi	Rekord
+En iyi seri	Ən yaxşı seriya
+Evet	Bəli
+Eylül	sentyabr
+Fil	Fil
+G	C
+GB	CQ
+GD	CŞr
+Gazete	Xəbərlər
+Geri al	Geri al
+Gram altın	Qram qızıl
+Gök gürültülü	İldırımlı
+Gönder	Göndər
+Güncel	Aktual
+Güncellendi %s · Open-Meteo	Yeniləndi %s · Open-Meteo
+Güncelleniyor…	Yenilənir…
+Gündem	Gündəm
+Güvenlik Duvarı	Təhlükəsizlik divarı
+Güzel!	Gözəl!
+Haberler alınamadı.\nWi-Fi bağlantısını kontrol edin.	Xəbərlər alınmadı.\nWi-Fi bağlantısını yoxlayın.
+Harika!	Əla!
+Hata	Xəta
+Hataları göster: Açık	Xətaları göstər: Açıq
+Hataları göster: Kapalı	Xətaları göstər: Bağlı
+Hava Durumu	Hava
+Hava durumu alınamadı.\nWi-Fi bağlantısını kontrol edip Yenile'ye basın.	Hava məlumatı alınmadı.\nWi-Fi bağlantısını yoxlayıb Yenilə düyməsinə basın.
+Hava durumu yok (Wi-Fi kapalı olabilir)	Hava məlumatı yoxdur (Wi-Fi bağlı ola bilər)
+Hayır	Xeyr
+Haziran	iyun
+Hedef para	Hədəf valyuta
+Henüz parola yok	Hələ parol yoxdur
+Henüz uygulama kurulu değil	Hələ tətbiq quraşdırılmayıb
+Her hamlede tahtayı çevir	Hər gedişdə taxtanı çevir
+Hissedilen %s	Hiss olunan %s
+Hiç uyuma	Heç yatma
+K	Şm
+KAPALI	BAĞLI
+KB	ŞmQ
+KD	ŞmŞr
+Kale	Top
+Kapalı	Tutqun
+Kapat	Bağla
+Kapatıldı. Kindle yeniden başlayınca tekrar açılır.	Bağlandı. Kindle yenidən başladılanda yenə açılır.
+Kar sağanağı	Qar leysanı
+Kar taneleri	Qar dənələri
+Karlı	Qarlı
+Kasım	noyabr
+Kaydedilemedi.	Saxlanılmadı.
+Kaynak para	Mənbə valyuta
+Kaynak: %s	Mənbə: %s
+Kazandın!	Qazandın!
+Kazanma %	Qələbə %
+Kelime Oyunu	Söz oyunu
+Kelime listesi bulunamadı. Uygulamayı yeniden kurun.	Söz siyahısı tapılmadı. Tətbiqi yenidən quraşdırın.
+Kelime: %s	Söz: %s
+Kindle bu süre dokunulmadan kalınca uyur.\n"Hiç uyuma" pili hızlı tüketir.\nYeniden başlatınca varsayılana dönebilir.	Kindle bu müddət toxunulmadan qalanda yuxuya gedir.\n"Heç yatma" batareyanı tez boşaldır.\nYenidən başladanda standart dəyərə qayıda bilər.
+Kolay	Asan
+Kullanıcı adı: root\nSunucu bu uygulama kapanınca da çalışır.\nKindle uyuyunca Wi-Fi ile birlikte bağlantı kopar.\nYeniden başlatınca kapalı açılır.	İstifadəçi adı: root\nServer bu tətbiq bağlananda da işləyir.\nKindle yuxuya gedəndə Wi-Fi ilə birlikdə bağlantı kəsilir.\nYenidən başladanda bağlı vəziyyətdə açılır.
+Kültür	Mədəniyyət
+Manşet	Manşet
+Mart	mart
+Masa Saati	Stolüstü saat
+Mayın Tarlası	Mina sahəsi
+Mayın: %d	Mina: %d
+Mayına bastın	Minaya basdın
+Mayıs	may
+Menü	Menyu
+Mevcut oyun silinsin mi?	Cari oyun silinsin?
+Motor yanıt vermedi	Mühərrik cavab vermədi
+Muhteşem!	Möhtəşəm!
+Nem %s	Rütubət %s
+Nisan	aprel
+Not: Açık	Qeyd: Açıq
+Not: Kapalı	Qeyd: Bağlı
+Ocak	yanvar
+Ons (USD)	Unsiya (USD)
+Orta	Orta
+Otomatik tamamla	Avtomatik tamamla
+Oynanan	Oynanılan
+Oyun bitti	Oyun bitdi
+Parola	Parol
+Parola belirlenmiş	Parol təyin edilib
+Parola kaydedildi.	Parol saxlanıldı.
+Parola kaydedilemedi.	Parol saxlanılmadı.
+Parolalar aynı değil, tekrar deneyin.	Parollar eyni deyil, yenidən cəhd edin.
+Parolayı değiştir	Parolu dəyiş
+Parolayı tekrar girin	Parolu təkrar daxil edin
+Parçalı bulutlu	Qismən buludlu
+Pat — berabere	Pat — heç-heçə
+Paz	Baz
+Pazar	bazar
+Pazartesi	bazar ertəsi
+Per	C.a
+Perşembe	cümə axşamı
+Piyon hangi taşa dönüşsün?	Piyada hansı fiqura çevrilsin?
+Pzt	B.e
+Rastgele	Təsadüfi
+Renginiz	Rənginiz
+Rüzgâr %ld km/s %s	Külək %ld km/s %s
+Rüzgâr —	Külək —
+SSH Sunucusu	SSH serveri
+Sal	Ç.a
+Salı	çərşənbə axşamı
+Satranç	Şahmat
+Satranç motoru çalışmadı.	Şahmat mühərriki işə düşmədi.
+Satış	Satış
+Sağanak	Leysan
+Sağlık	Sağlamlıq
+Seri	Seriya
+Sil	Sil
+Sisli	Dumanlı
+Siyah	Qara
+Skor	Xal
+Skor: %d	Xal: %d
+Solitaire	Solitaire
+Son anda!	Son anda!
+Sonuç bulunamadı	Nəticə tapılmadı
+Sonuçlar	Nəticələr
+Spor	İdman
+Sudoku	Sudoku
+Sunucu başlatılamadı (günlüğe bakın).	Server başladılmadı (jurnala baxın).
+Sözlükte yok (yalnızca kök kelimeler)	Türkcə lüğətdə yoxdur (yalnız kök sözlər)
+Süre: %ld:%02ld	Vaxt: %ld:%02ld
+Sıra: %s	Növbə: %s
+TCMB döviz kurları	TCMB valyuta məzənnələri
+TCMB satış kuru ile	TCMB satış məzənnəsi ilə
+TCMB · güncellendi %d %s %02d:%02d	TCMB · yeniləndi %d %s %02d:%02d
+Tahmin dağılımı	Təxmin bölgüsü
+Tahta sabit	Taxta sabit
+Tahtaya bak	Taxtaya bax
+Tahtayı çevir	Taxtanı çevir
+Tam altın	Tam qızıl
+Tamam	Tamam
+Tamamla	Tamamla
+Tebrikler!	Təbriklər!
+Tek kart çek	Bir kart çək
+Tek oyunculu	Tək oyunçu
+Tekrar dene	Yenidən cəhd et
+Temmuz	iyul
+Terfi	Çevrilmə
+Tüm kurlar	Bütün məzənnələr
+Usta	Usta
+Uygulamalar	Tətbiqlər
+Uyku Ayarı	Yuxu ayarı
+Vazgeç	İmtina
+Vezir	Vəzir
+Yarım altın	Yarım qızıl
+Yağmurlu	Yağışlı
+Yağış %s	Yağıntı %s
+Yeni	Yeni
+Yeni SSH parolası (en az 6)	Yeni SSH parolu (ən azı 6)
+Yeni oyun	Yeni oyun
+Yenile	Yenilə
+Yetersiz taş — berabere	Fiqur çatmır — heç-heçə
+Yoğun kar	Güclü qar
+Yükleniyor…	Yüklənir…
+Zor	Çətin
+Zorluk	Çətinlik
+Zorluk seçin	Çətinlik seçin
+boşluk	boşluq
+Çar	Çər
+Çarşamba	çərşənbə
+Çevirici	Çevirici
+Çevrimdışı · güncellendi %d %s %02d:%02d	Oflayn · yeniləndi %d %s %02d:%02d
+Çevrimdışı — son veri %s · Open-Meteo	Oflayn — son məlumat %s · Open-Meteo
+Çeyrek altın	Çərək qızıl
+Çisenti	Çiskin
+Çok Kolay	Çox asan
+Çok iyi!	Çox yaxşı!
+Çıkış	Çıxış
+Önce boş bir hücre seçin.	Əvvəlcə boş xana seçin.
+Üç kart çek	Üç kart çək
+Üçlü tekrar — berabere	Üçqat təkrar — heç-heçə
+İki oyunculu	İki oyunçu
+İki oyunculu devam	İki oyunçu ilə davam
+İpucu	İpucu
+İstatistik	Statistika
+İyi	Yaxşı
+İşlem başarısız oldu.	Əməliyyat alınmadı.
+Şah mat — Beyaz kazandı	Mat — Ağlar qazandı
+Şah mat — Siyah kazandı	Mat — Qaralar qazandı
+Şah! Sıra: %s	Şah! Növbə: %s
+Şehir ara	Şəhər axtar
+Şehir veya ilçe ara	Şəhər və ya rayon axtar
+Şehirler	Şəhərlər
+Şehri sil	Şəhəri sil
+Şiddetli sağanak	Güclü leysan
+Şiddetli yağmur	Güclü yağış
+Şu an AÇIK: gelen bağlantılar engelleniyor.\nKapatılsın mı?	Hazırda AÇIQ: gələn bağlantılar bloklanır.\nBağlansın?
+Şu an KAPALI: gelen bağlantılara izin veriliyor.\nAçılsın mı?	Hazırda BAĞLI: gələn bağlantılara icazə verilir.\nAçılsın?
+Şu an: %d dakika	Hazırda: %d dəqiqə
+Şu an: %d saat	Hazırda: %d saat
+Şu an: hiç uyumuyor	Hazırda: heç yatmır
+Şubat	fevral
+⚑ Açık	⚑ Açıq
+⚑ Kapalı	⚑ Bağlı
