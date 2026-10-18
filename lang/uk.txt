@@ -379,3 +379,89 @@ Denetleniyor…	Перевірка…
 Depoya ulaşılamadı.\nWi-Fi bağlantısını kontrol edin.	Репозиторій недоступний.\nПеревірте з'єднання Wi-Fi.
 Tüm uygulamalar güncel	Усі застосунки оновлено
 Bazı güncellemeler kurulamadı	Деякі оновлення не встановлено
+Baştan başla	Почати заново
+Başka bulmaca	Інша задача
+Sonraki hamle	Наступний хід
+Çözümü göster	Показати розв'язок
+Satranç Bulmacası	Шахова задача
+Günün bulmacası	Задача дня
+Siyah oynar	Хід чорних
+Beyaz oynar	Хід білих
+Puan %d	Рейтинг %d
+Bulmaca: lichess.org · çevrimdışı, son veri %s	Задача: lichess.org · офлайн, дані від %s
+Bulmaca: lichess.org · güncellendi %s	Задача: lichess.org · оновлено %s
+Bulmaca: lichess.org	Задача: lichess.org
+Daha önce çözüldü · Seri: %d	Уже розв'язана · Серія: %d
+Hamlenizi yapın · Seri: %d	Ваш хід · Серія: %d
+Bulmaca alınamadı	Не вдалося завантажити задачу
+Wi-Fi bağlantısını kontrol edin.	Перевірте з'єднання Wi-Fi.
+Çözüm gösterildi	Розв'язок показано
+Çözüldü (hatalı) · Seri: %d	Розв'язана (з помилкою) · Серія: %d
+Doğru! Çözüldü · Seri: %d	Правильно! Розв'язана · Серія: %d
+Doğru! Devam edin	Правильно! Продовжуйте
+Doğru değil, tekrar dene	Не зовсім, спробуйте ще
+Doğru!	Правильно!
+Çözüm: %s · bitti	Розв'язок: %s · готово
+Çözüm: %s (%d/%d)	Розв'язок: %s (%d/%d)
+Çözüldü	Розв'язана
+Hatalı çözüldü	Розв'язана з помилкою
+Geçmiş	Історія
+Seri: %d · En iyi seri: %d	Серія: %d · Найкраща серія: %d
+Çözülen: %d / %d	Розв'язано: %d / %d
+Henüz çözülen bulmaca yok.	Ще немає розв'язаних задач.
+Bulmaca alınamadı.\nWi-Fi bağlantısını kontrol edin.	Не вдалося завантажити задачу.\nПеревірте з'єднання Wi-Fi.
+İpucu: işaretli taşı oynayın	Підказка: ходіть позначеною фігурою
+1 hamlede mat	Мат в 1 хід
+2 hamlede mat	Мат в 2 ходи
+3 hamlede mat	Мат в 3 ходи
+4 hamlede mat	Мат в 4 ходи
+5+ hamlede mat	Мат в 5+ ходів
+Mat	Мат
+Çatal	Вилка
+Açmaz	Зв'язка
+Şiş	Лінійний удар
+Fedâ	Жертва
+Açılış	Дебют
+Oyun ortası	Мітельшпіль
+Oyun sonu	Ендшпіль
+Açarak saldırı	Розкрита атака
+Açarak şah	Розкритий шах
+Çifte şah	Подвійний шах
+Korumasız taş	Незахищена фігура
+Kapana kısılan taş	Фігура в пастці
+Çekme	Заманювання
+Saptırma	Відволікання
+Araya girme	Перекриття
+Ara hamle	Проміжний хід
+Yol açma	Звільнення лінії
+Sessiz hamle	Тихий хід
+Savunma hamlesi	Захисний хід
+Röntgen saldırısı	Рентген
+Zugzwang	Цугцванг
+Küçük terfi	Слабке перетворення
+Rok	Рокіровка
+Geçerken alma	Взяття на проході
+Son sıra matı	Мат по останній горизонталі
+Boğmaca mat	Спертий мат
+Anastasia matı	Мат Анастасії
+Arap matı	Арабський мат
+Boden matı	Мат Бодена
+Çifte fil matı	Мат двома слонами
+Kırlangıç matı	Мат «ластівчин хвіст»
+Kanca matı	Мат гаком
+Köşe matı	Кутовий мат
+Şah kanadı saldırısı	Атака на королівському фланзі
+Vezir kanadı saldırısı	Атака на ферзевому фланзі
+f2/f7 saldırısı	Атака на f2 або f7
+Savunanı alma	Знищення захисника
+Açıkta şah	Незахищений король
+İlerlemiş piyon	Просунутий пішак
+Ezici üstünlük	Розгромна перевага
+Üstünlük	Перевага
+Eşitlik	Рівність
+Piyon oyun sonu	Пішаковий ендшпіль
+Kale oyun sonu	Туровий ендшпіль
+Vezir oyun sonu	Ферзевий ендшпіль
+Fil oyun sonu	Слоновий ендшпіль
+At oyun sonu	Кінний ендшпіль
+Vezir ve kale oyun sonu	Ендшпіль ферзя і тури

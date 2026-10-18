@@ -379,3 +379,89 @@ Denetleniyor…	A verificar…
 Depoya ulaşılamadı.\nWi-Fi bağlantısını kontrol edin.	Não foi possível aceder ao repositório.\nVerifique a ligação Wi-Fi.
 Tüm uygulamalar güncel	Todas as apps estão atualizadas
 Bazı güncellemeler kurulamadı	Algumas atualizações não foram instaladas
+Baştan başla	Recomeçar
+Başka bulmaca	Outro problema
+Sonraki hamle	Próximo lance
+Çözümü göster	Ver solução
+Satranç Bulmacası	Problema de xadrez
+Günün bulmacası	Problema do dia
+Siyah oynar	Pretas jogam
+Beyaz oynar	Brancas jogam
+Puan %d	Pontuação %d
+Bulmaca: lichess.org · çevrimdışı, son veri %s	Problema: lichess.org · offline, últimos dados %s
+Bulmaca: lichess.org · güncellendi %s	Problema: lichess.org · atualizado %s
+Bulmaca: lichess.org	Problema: lichess.org
+Daha önce çözüldü · Seri: %d	Já resolvido · Sequência: %d
+Hamlenizi yapın · Seri: %d	Sua vez · Sequência: %d
+Bulmaca alınamadı	Não foi possível obter o problema
+Wi-Fi bağlantısını kontrol edin.	Verifique a conexão Wi-Fi.
+Çözüm gösterildi	Solução exibida
+Çözüldü (hatalı) · Seri: %d	Resolvido (com um erro) · Sequência: %d
+Doğru! Çözüldü · Seri: %d	Correto! Resolvido · Sequência: %d
+Doğru! Devam edin	Correto! Continue
+Doğru değil, tekrar dene	Quase, tente de novo
+Doğru!	Correto!
+Çözüm: %s · bitti	Solução: %s · concluído
+Çözüm: %s (%d/%d)	Solução: %s (%d/%d)
+Çözüldü	Resolvido
+Hatalı çözüldü	Resolvido com um erro
+Geçmiş	Histórico
+Seri: %d · En iyi seri: %d	Sequência: %d · Melhor sequência: %d
+Çözülen: %d / %d	Resolvidos: %d / %d
+Henüz çözülen bulmaca yok.	Nenhum problema resolvido ainda.
+Bulmaca alınamadı.\nWi-Fi bağlantısını kontrol edin.	Não foi possível obter o problema.\nVerifique a conexão Wi-Fi.
+İpucu: işaretli taşı oynayın	Dica: mova a peça marcada
+1 hamlede mat	Mate em 1
+2 hamlede mat	Mate em 2
+3 hamlede mat	Mate em 3
+4 hamlede mat	Mate em 4
+5+ hamlede mat	Mate em 5 ou mais
+Mat	Xeque-mate
+Çatal	Garfo
+Açmaz	Cravada
+Şiş	Espeto
+Fedâ	Sacrifício
+Açılış	Abertura
+Oyun ortası	Meio-jogo
+Oyun sonu	Final
+Açarak saldırı	Ataque descoberto
+Açarak şah	Xeque descoberto
+Çifte şah	Xeque duplo
+Korumasız taş	Peça pendurada
+Kapana kısılan taş	Peça presa
+Çekme	Atração
+Saptırma	Desvio
+Araya girme	Interferência
+Ara hamle	Lance intermediário
+Yol açma	Desobstrução
+Sessiz hamle	Lance silencioso
+Savunma hamlesi	Lance defensivo
+Röntgen saldırısı	Ataque raio-X
+Zugzwang	Zugzwang
+Küçük terfi	Subpromoção
+Rok	Roque
+Geçerken alma	En passant
+Son sıra matı	Mate do corredor
+Boğmaca mat	Mate sufocado
+Anastasia matı	Mate de Anastácia
+Arap matı	Mate árabe
+Boden matı	Mate de Boden
+Çifte fil matı	Mate com dois bispos
+Kırlangıç matı	Mate cauda de andorinha
+Kanca matı	Mate do gancho
+Köşe matı	Mate do canto
+Şah kanadı saldırısı	Ataque na ala do rei
+Vezir kanadı saldırısı	Ataque na ala da dama
+f2/f7 saldırısı	Ataque a f2 ou f7
+Savunanı alma	Capturar o defensor
+Açıkta şah	Rei exposto
+İlerlemiş piyon	Peão avançado
+Ezici üstünlük	Esmagador
+Üstünlük	Vantagem
+Eşitlik	Igualdade
+Piyon oyun sonu	Final de peões
+Kale oyun sonu	Final de torres
+Vezir oyun sonu	Final de damas
+Fil oyun sonu	Final de bispos
+At oyun sonu	Final de cavalos
+Vezir ve kale oyun sonu	Final de dama e torre

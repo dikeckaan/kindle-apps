@@ -379,3 +379,89 @@ Denetleniyor…	Проверка…
 Depoya ulaşılamadı.\nWi-Fi bağlantısını kontrol edin.	Репозиторий недоступен.\nПроверьте подключение Wi-Fi.
 Tüm uygulamalar güncel	Все приложения обновлены
 Bazı güncellemeler kurulamadı	Некоторые обновления не установлены
+Baştan başla	Начать заново
+Başka bulmaca	Другая задача
+Sonraki hamle	Следующий ход
+Çözümü göster	Показать решение
+Satranç Bulmacası	Шахматная задача
+Günün bulmacası	Задача дня
+Siyah oynar	Ход чёрных
+Beyaz oynar	Ход белых
+Puan %d	Рейтинг %d
+Bulmaca: lichess.org · çevrimdışı, son veri %s	Задача: lichess.org · офлайн, данные от %s
+Bulmaca: lichess.org · güncellendi %s	Задача: lichess.org · обновлено %s
+Bulmaca: lichess.org	Задача: lichess.org
+Daha önce çözüldü · Seri: %d	Уже решена · Серия: %d
+Hamlenizi yapın · Seri: %d	Ваш ход · Серия: %d
+Bulmaca alınamadı	Не удалось загрузить задачу
+Wi-Fi bağlantısını kontrol edin.	Проверьте подключение Wi-Fi.
+Çözüm gösterildi	Решение показано
+Çözüldü (hatalı) · Seri: %d	Решена (с ошибкой) · Серия: %d
+Doğru! Çözüldü · Seri: %d	Верно! Решена · Серия: %d
+Doğru! Devam edin	Верно! Продолжайте
+Doğru değil, tekrar dene	Не совсем, попробуйте ещё
+Doğru!	Верно!
+Çözüm: %s · bitti	Решение: %s · готово
+Çözüm: %s (%d/%d)	Решение: %s (%d/%d)
+Çözüldü	Решена
+Hatalı çözüldü	Решена с ошибкой
+Geçmiş	История
+Seri: %d · En iyi seri: %d	Серия: %d · Лучшая серия: %d
+Çözülen: %d / %d	Решено: %d / %d
+Henüz çözülen bulmaca yok.	Пока нет решённых задач.
+Bulmaca alınamadı.\nWi-Fi bağlantısını kontrol edin.	Не удалось загрузить задачу.\nПроверьте подключение Wi-Fi.
+İpucu: işaretli taşı oynayın	Подсказка: ходите отмеченной фигурой
+1 hamlede mat	Мат в 1 ход
+2 hamlede mat	Мат в 2 хода
+3 hamlede mat	Мат в 3 хода
+4 hamlede mat	Мат в 4 хода
+5+ hamlede mat	Мат в 5+ ходов
+Mat	Мат
+Çatal	Вилка
+Açmaz	Связка
+Şiş	Сквозной удар
+Fedâ	Жертва
+Açılış	Дебют
+Oyun ortası	Миттельшпиль
+Oyun sonu	Эндшпиль
+Açarak saldırı	Вскрытое нападение
+Açarak şah	Вскрытый шах
+Çifte şah	Двойной шах
+Korumasız taş	Незащищённая фигура
+Kapana kısılan taş	Пойманная фигура
+Çekme	Завлечение
+Saptırma	Отвлечение
+Araya girme	Перекрытие
+Ara hamle	Промежуточный ход
+Yol açma	Освобождение линии
+Sessiz hamle	Тихий ход
+Savunma hamlesi	Защитный ход
+Röntgen saldırısı	Рентген
+Zugzwang	Цугцванг
+Küçük terfi	Слабое превращение
+Rok	Рокировка
+Geçerken alma	Взятие на проходе
+Son sıra matı	Мат по последней горизонтали
+Boğmaca mat	Спёртый мат
+Anastasia matı	Мат Анастасии
+Arap matı	Арабский мат
+Boden matı	Мат Бодена
+Çifte fil matı	Мат двумя слонами
+Kırlangıç matı	Мат «ласточкин хвост»
+Kanca matı	Мат крюком
+Köşe matı	Угловой мат
+Şah kanadı saldırısı	Атака на королевском фланге
+Vezir kanadı saldırısı	Атака на ферзевом фланге
+f2/f7 saldırısı	Атака на f2 или f7
+Savunanı alma	Уничтожение защитника
+Açıkta şah	Незащищённый король
+İlerlemiş piyon	Продвинутая пешка
+Ezici üstünlük	Разгромный перевес
+Üstünlük	Преимущество
+Eşitlik	Равенство
+Piyon oyun sonu	Пешечный эндшпиль
+Kale oyun sonu	Ладейный эндшпиль
+Vezir oyun sonu	Ферзевый эндшпиль
+Fil oyun sonu	Слоновый эндшпиль
+At oyun sonu	Коневый эндшпиль
+Vezir ve kale oyun sonu	Эндшпиль ферзя и ладьи

@@ -379,3 +379,89 @@ Denetleniyor…	Kontrollerar…
 Depoya ulaşılamadı.\nWi-Fi bağlantısını kontrol edin.	Kunde inte nå förrådet.\nKontrollera wifi-anslutningen.
 Tüm uygulamalar güncel	Alla appar är uppdaterade
 Bazı güncellemeler kurulamadı	Vissa uppdateringar kunde inte installeras
+Baştan başla	Börja om
+Başka bulmaca	Ny problem
+Sonraki hamle	Nästa drag
+Çözümü göster	Visa lösning
+Satranç Bulmacası	Schackproblem
+Günün bulmacası	Dagens problem
+Siyah oynar	Svart drar
+Beyaz oynar	Vit drar
+Puan %d	Rating %d
+Bulmaca: lichess.org · çevrimdışı, son veri %s	Problem: lichess.org · offline, senaste data %s
+Bulmaca: lichess.org · güncellendi %s	Problem: lichess.org · uppdaterad %s
+Bulmaca: lichess.org	Problem: lichess.org
+Daha önce çözüldü · Seri: %d	Löst tidigare · Svit: %d
+Hamlenizi yapın · Seri: %d	Ditt drag · Svit: %d
+Bulmaca alınamadı	Kunde inte hämta problemet
+Wi-Fi bağlantısını kontrol edin.	Kontrollera Wi-Fi-anslutningen.
+Çözüm gösterildi	Lösningen visad
+Çözüldü (hatalı) · Seri: %d	Löst (med ett misstag) · Svit: %d
+Doğru! Çözüldü · Seri: %d	Rätt! Löst · Svit: %d
+Doğru! Devam edin	Rätt! Fortsätt
+Doğru değil, tekrar dene	Inte riktigt, försök igen
+Doğru!	Rätt!
+Çözüm: %s · bitti	Lösning: %s · klar
+Çözüm: %s (%d/%d)	Lösning: %s (%d/%d)
+Çözüldü	Löst
+Hatalı çözüldü	Löst med misstag
+Geçmiş	Historik
+Seri: %d · En iyi seri: %d	Svit: %d · Bästa svit: %d
+Çözülen: %d / %d	Lösta: %d / %d
+Henüz çözülen bulmaca yok.	Inga lösta problem än.
+Bulmaca alınamadı.\nWi-Fi bağlantısını kontrol edin.	Kunde inte hämta problemet.\nKontrollera Wi-Fi-anslutningen.
+İpucu: işaretli taşı oynayın	Ledtråd: flytta den markerade pjäsen
+1 hamlede mat	Matt i 1 drag
+2 hamlede mat	Matt i 2 drag
+3 hamlede mat	Matt i 3 drag
+4 hamlede mat	Matt i 4 drag
+5+ hamlede mat	Matt i 5+ drag
+Mat	Schackmatt
+Çatal	Gaffel
+Açmaz	Bindning
+Şiş	Spett
+Fedâ	Offer
+Açılış	Öppning
+Oyun ortası	Mittspel
+Oyun sonu	Slutspel
+Açarak saldırı	Avtäckningsangrepp
+Açarak şah	Avtäckningsschack
+Çifte şah	Dubbelschack
+Korumasız taş	Hängande pjäs
+Kapana kısılan taş	Instängd pjäs
+Çekme	Lockning
+Saptırma	Avledning
+Araya girme	Interferens
+Ara hamle	Mellandrag
+Yol açma	Linjeröjning
+Sessiz hamle	Stilla drag
+Savunma hamlesi	Försvarsdrag
+Röntgen saldırısı	Röntgenangrepp
+Zugzwang	Zugzwang
+Küçük terfi	Underpromovering
+Rok	Rockad
+Geçerken alma	En passant
+Son sıra matı	Baslinjematt
+Boğmaca mat	Kvävningsmatt
+Anastasia matı	Anastasias matt
+Arap matı	Arabisk matt
+Boden matı	Bodens matt
+Çifte fil matı	Dubbellöparmatt
+Kırlangıç matı	Laxstjärtsmatt
+Kanca matı	Krokmatt
+Köşe matı	Hörnmatt
+Şah kanadı saldırısı	Kungsflygelangrepp
+Vezir kanadı saldırısı	Damflygelangrepp
+f2/f7 saldırısı	Angrepp på f2 eller f7
+Savunanı alma	Slå försvararen
+Açıkta şah	Utsatt kung
+İlerlemiş piyon	Framskjuten bonde
+Ezici üstünlük	Krossande
+Üstünlük	Fördel
+Eşitlik	Jämnt
+Piyon oyun sonu	Bondeslutspel
+Kale oyun sonu	Tornslutspel
+Vezir oyun sonu	Damslutspel
+Fil oyun sonu	Löparslutspel
+At oyun sonu	Springarslutspel
+Vezir ve kale oyun sonu	Dam- och tornslutspel

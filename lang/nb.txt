@@ -379,3 +379,89 @@ Denetleniyor…	Sjekker…
 Depoya ulaşılamadı.\nWi-Fi bağlantısını kontrol edin.	Fikk ikke kontakt med pakkebrønnen.\nSjekk wifi-tilkoblingen.
 Tüm uygulamalar güncel	Alle apper er oppdatert
 Bazı güncellemeler kurulamadı	Noen oppdateringer kunne ikke installeres
+Baştan başla	Start på nytt
+Başka bulmaca	Ny oppgave
+Sonraki hamle	Neste trekk
+Çözümü göster	Vis løsning
+Satranç Bulmacası	Sjakkoppgave
+Günün bulmacası	Dagens oppgave
+Siyah oynar	Svart i trekket
+Beyaz oynar	Hvit i trekket
+Puan %d	Rating %d
+Bulmaca: lichess.org · çevrimdışı, son veri %s	Oppgave: lichess.org · frakoblet, siste data %s
+Bulmaca: lichess.org · güncellendi %s	Oppgave: lichess.org · oppdatert %s
+Bulmaca: lichess.org	Oppgave: lichess.org
+Daha önce çözüldü · Seri: %d	Løst tidligere · Rekke: %d
+Hamlenizi yapın · Seri: %d	Ditt trekk · Rekke: %d
+Bulmaca alınamadı	Kunne ikke hente oppgaven
+Wi-Fi bağlantısını kontrol edin.	Sjekk Wi-Fi-tilkoblingen.
+Çözüm gösterildi	Løsningen vist
+Çözüldü (hatalı) · Seri: %d	Løst (med en feil) · Rekke: %d
+Doğru! Çözüldü · Seri: %d	Riktig! Løst · Rekke: %d
+Doğru! Devam edin	Riktig! Fortsett
+Doğru değil, tekrar dene	Ikke helt, prøv igjen
+Doğru!	Riktig!
+Çözüm: %s · bitti	Løsning: %s · ferdig
+Çözüm: %s (%d/%d)	Løsning: %s (%d/%d)
+Çözüldü	Løst
+Hatalı çözüldü	Løst med feil
+Geçmiş	Historikk
+Seri: %d · En iyi seri: %d	Rekke: %d · Beste rekke: %d
+Çözülen: %d / %d	Løst: %d / %d
+Henüz çözülen bulmaca yok.	Ingen løste oppgaver ennå.
+Bulmaca alınamadı.\nWi-Fi bağlantısını kontrol edin.	Kunne ikke hente oppgaven.\nSjekk Wi-Fi-tilkoblingen.
+İpucu: işaretli taşı oynayın	Hint: flytt den markerte brikken
+1 hamlede mat	Matt i 1 trekk
+2 hamlede mat	Matt i 2 trekk
+3 hamlede mat	Matt i 3 trekk
+4 hamlede mat	Matt i 4 trekk
+5+ hamlede mat	Matt i 5+ trekk
+Mat	Sjakkmatt
+Çatal	Gaffel
+Açmaz	Binding
+Şiş	Spidding
+Fedâ	Offer
+Açılış	Åpning
+Oyun ortası	Midtspill
+Oyun sonu	Sluttspill
+Açarak saldırı	Avdekkingsangrep
+Açarak şah	Avdekkingssjakk
+Çifte şah	Dobbeltsjakk
+Korumasız taş	Hengende brikke
+Kapana kısılan taş	Fanget brikke
+Çekme	Tiltrekking
+Saptırma	Avledning
+Araya girme	Interferens
+Ara hamle	Mellomtrekk
+Yol açma	Rydning
+Sessiz hamle	Stille trekk
+Savunma hamlesi	Forsvarstrekk
+Röntgen saldırısı	Røntgenangrep
+Zugzwang	Trekktvang
+Küçük terfi	Underforvandling
+Rok	Rokade
+Geçerken alma	En passant
+Son sıra matı	Matt på baklinjen
+Boğmaca mat	Kvelningsmatt
+Anastasia matı	Anastasias matt
+Arap matı	Arabisk matt
+Boden matı	Bodens matt
+Çifte fil matı	Matt med to løpere
+Kırlangıç matı	Svalehalematt
+Kanca matı	Krokmatt
+Köşe matı	Hjørnematt
+Şah kanadı saldırısı	Kongefløyangrep
+Vezir kanadı saldırısı	Dronningfløyangrep
+f2/f7 saldırısı	Angrep på f2 eller f7
+Savunanı alma	Slå forsvareren
+Açıkta şah	Utsatt konge
+İlerlemiş piyon	Fremskutt bonde
+Ezici üstünlük	Knusende
+Üstünlük	Fordel
+Eşitlik	Likevekt
+Piyon oyun sonu	Bondesluttspill
+Kale oyun sonu	Tårnsluttspill
+Vezir oyun sonu	Dronningsluttspill
+Fil oyun sonu	Løpersluttspill
+At oyun sonu	Springersluttspill
+Vezir ve kale oyun sonu	Dronning- og tårnsluttspill

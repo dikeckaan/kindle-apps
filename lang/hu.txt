@@ -379,3 +379,89 @@ Denetleniyor…	Ellenőrzés…
 Depoya ulaşılamadı.\nWi-Fi bağlantısını kontrol edin.	A tároló nem érhető el.\nEllenőrizze a Wi-Fi-kapcsolatot.
 Tüm uygulamalar güncel	Minden alkalmazás naprakész
 Bazı güncellemeler kurulamadı	Néhány frissítést nem sikerült telepíteni
+Baştan başla	Újrakezdés
+Başka bulmaca	Másik feladvány
+Sonraki hamle	Következő lépés
+Çözümü göster	Megoldás mutatása
+Satranç Bulmacası	Sakkfeladvány
+Günün bulmacası	A nap feladványa
+Siyah oynar	Sötét lép
+Beyaz oynar	Világos lép
+Puan %d	Értékszám %d
+Bulmaca: lichess.org · çevrimdışı, son veri %s	Feladvány: lichess.org · offline, utolsó adat %s
+Bulmaca: lichess.org · güncellendi %s	Feladvány: lichess.org · frissítve %s
+Bulmaca: lichess.org	Feladvány: lichess.org
+Daha önce çözüldü · Seri: %d	Korábban megoldva · Sorozat: %d
+Hamlenizi yapın · Seri: %d	Te lépsz · Sorozat: %d
+Bulmaca alınamadı	Nem sikerült lekérni a feladványt
+Wi-Fi bağlantısını kontrol edin.	Ellenőrizd a Wi-Fi-kapcsolatot.
+Çözüm gösterildi	Megoldás megjelenítve
+Çözüldü (hatalı) · Seri: %d	Megoldva (hibával) · Sorozat: %d
+Doğru! Çözüldü · Seri: %d	Helyes! Megoldva · Sorozat: %d
+Doğru! Devam edin	Helyes! Folytasd
+Doğru değil, tekrar dene	Nem egészen, próbáld újra
+Doğru!	Helyes!
+Çözüm: %s · bitti	Megoldás: %s · kész
+Çözüm: %s (%d/%d)	Megoldás: %s (%d/%d)
+Çözüldü	Megoldva
+Hatalı çözüldü	Hibával megoldva
+Geçmiş	Előzmények
+Seri: %d · En iyi seri: %d	Sorozat: %d · Legjobb sorozat: %d
+Çözülen: %d / %d	Megoldva: %d / %d
+Henüz çözülen bulmaca yok.	Még nincs megoldott feladvány.
+Bulmaca alınamadı.\nWi-Fi bağlantısını kontrol edin.	Nem sikerült lekérni a feladványt.\nEllenőrizd a Wi-Fi-kapcsolatot.
+İpucu: işaretli taşı oynayın	Tipp: lépj a jelölt figurával
+1 hamlede mat	Matt 1 lépésben
+2 hamlede mat	Matt 2 lépésben
+3 hamlede mat	Matt 3 lépésben
+4 hamlede mat	Matt 4 lépésben
+5+ hamlede mat	Matt 5+ lépésben
+Mat	Matt
+Çatal	Villa
+Açmaz	Kötés
+Şiş	Nyárs
+Fedâ	Áldozat
+Açılış	Megnyitás
+Oyun ortası	Középjáték
+Oyun sonu	Végjáték
+Açarak saldırı	Felfedett támadás
+Açarak şah	Felfedett sakk
+Çifte şah	Kettős sakk
+Korumasız taş	Védtelen figura
+Kapana kısılan taş	Csapdába esett figura
+Çekme	Odacsalás
+Saptırma	Elterelés
+Araya girme	Közbeékelés
+Ara hamle	Közbenső lépés
+Yol açma	Vonalnyitás
+Sessiz hamle	Csendes lépés
+Savunma hamlesi	Védekező lépés
+Röntgen saldırısı	Röntgentámadás
+Zugzwang	Lépéskényszer
+Küçük terfi	Alulváltozás
+Rok	Sáncolás
+Geçerken alma	Menet közbeni ütés
+Son sıra matı	Alapsori matt
+Boğmaca mat	Fojtott matt
+Anastasia matı	Anasztázia-matt
+Arap matı	Arab matt
+Boden matı	Boden-matt
+Çifte fil matı	Futópár-matt
+Kırlangıç matı	Fecskefarok-matt
+Kanca matı	Kampós matt
+Köşe matı	Sarokmatt
+Şah kanadı saldırısı	Királyszárnyi támadás
+Vezir kanadı saldırısı	Vezérszárnyi támadás
+f2/f7 saldırısı	f2 vagy f7 támadása
+Savunanı alma	A védő leütése
+Açıkta şah	Fedetlen király
+İlerlemiş piyon	Előretolt gyalog
+Ezici üstünlük	Megsemmisítő előny
+Üstünlük	Előny
+Eşitlik	Egyenlőség
+Piyon oyun sonu	Gyalogvégjáték
+Kale oyun sonu	Bástyavégjáték
+Vezir oyun sonu	Vezérvégjáték
+Fil oyun sonu	Futóvégjáték
+At oyun sonu	Huszárvégjáték
+Vezir ve kale oyun sonu	Vezér-bástya végjáték

@@ -379,3 +379,89 @@ Denetleniyor…	Kontrollerer…
 Depoya ulaşılamadı.\nWi-Fi bağlantısını kontrol edin.	Kunne ikke nå pakkearkivet.\nTjek wifi-forbindelsen.
 Tüm uygulamalar güncel	Alle apps er opdaterede
 Bazı güncellemeler kurulamadı	Nogle opdateringer kunne ikke installeres
+Baştan başla	Start forfra
+Başka bulmaca	Ny opgave
+Sonraki hamle	Næste træk
+Çözümü göster	Vis løsning
+Satranç Bulmacası	Skakopgave
+Günün bulmacası	Dagens opgave
+Siyah oynar	Sort trækker
+Beyaz oynar	Hvid trækker
+Puan %d	Rating %d
+Bulmaca: lichess.org · çevrimdışı, son veri %s	Opgave: lichess.org · offline, sidste data %s
+Bulmaca: lichess.org · güncellendi %s	Opgave: lichess.org · opdateret %s
+Bulmaca: lichess.org	Opgave: lichess.org
+Daha önce çözüldü · Seri: %d	Løst før · Serie: %d
+Hamlenizi yapın · Seri: %d	Dit træk · Serie: %d
+Bulmaca alınamadı	Kunne ikke hente opgaven
+Wi-Fi bağlantısını kontrol edin.	Tjek Wi-Fi-forbindelsen.
+Çözüm gösterildi	Løsning vist
+Çözüldü (hatalı) · Seri: %d	Løst (med fejl) · Serie: %d
+Doğru! Çözüldü · Seri: %d	Korrekt! Løst · Serie: %d
+Doğru! Devam edin	Korrekt! Fortsæt
+Doğru değil, tekrar dene	Ikke helt, prøv igen
+Doğru!	Korrekt!
+Çözüm: %s · bitti	Løsning: %s · færdig
+Çözüm: %s (%d/%d)	Løsning: %s (%d/%d)
+Çözüldü	Løst
+Hatalı çözüldü	Løst med fejl
+Geçmiş	Historik
+Seri: %d · En iyi seri: %d	Serie: %d · Bedste serie: %d
+Çözülen: %d / %d	Løst: %d / %d
+Henüz çözülen bulmaca yok.	Ingen opgaver løst endnu.
+Bulmaca alınamadı.\nWi-Fi bağlantısını kontrol edin.	Kunne ikke hente opgaven.\nTjek Wi-Fi-forbindelsen.
+İpucu: işaretli taşı oynayın	Tip: flyt den markerede brik
+1 hamlede mat	Mat i 1
+2 hamlede mat	Mat i 2
+3 hamlede mat	Mat i 3
+4 hamlede mat	Mat i 4
+5+ hamlede mat	Mat i 5 eller flere
+Mat	Skakmat
+Çatal	Gaffel
+Açmaz	Binding
+Şiş	Spid
+Fedâ	Offer
+Açılış	Åbning
+Oyun ortası	Midtspil
+Oyun sonu	Slutspil
+Açarak saldırı	Afdækkerangreb
+Açarak şah	Afdækkerskak
+Çifte şah	Dobbeltskak
+Korumasız taş	Hængende brik
+Kapana kısılan taş	Fanget brik
+Çekme	Tiltrækning
+Saptırma	Afledning
+Araya girme	Interferens
+Ara hamle	Mellemtræk
+Yol açma	Rydning
+Sessiz hamle	Stille træk
+Savunma hamlesi	Forsvarstræk
+Röntgen saldırısı	Røntgenangreb
+Zugzwang	Træktvang
+Küçük terfi	Underforvandling
+Rok	Rokade
+Geçerken alma	En passant
+Son sıra matı	Grundrækkemat
+Boğmaca mat	Kvælningsmat
+Anastasia matı	Anastasias mat
+Arap matı	Arabisk mat
+Boden matı	Bodens mat
+Çifte fil matı	Dobbeltløbermat
+Kırlangıç matı	Svalehalemat
+Kanca matı	Krogmat
+Köşe matı	Hjørnemat
+Şah kanadı saldırısı	Angreb på kongefløjen
+Vezir kanadı saldırısı	Angreb på dronningefløjen
+f2/f7 saldırısı	Angreb på f2 eller f7
+Savunanı alma	Slå forsvareren
+Açıkta şah	Udsat konge
+İlerlemiş piyon	Fremskudt bonde
+Ezici üstünlük	Knusende
+Üstünlük	Fordel
+Eşitlik	Lige stilling
+Piyon oyun sonu	Bondeslutspil
+Kale oyun sonu	Tårnslutspil
+Vezir oyun sonu	Dronningeslutspil
+Fil oyun sonu	Løberslutspil
+At oyun sonu	Springerslutspil
+Vezir ve kale oyun sonu	Dronning- og tårnslutspil

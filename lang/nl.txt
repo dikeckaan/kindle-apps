@@ -379,3 +379,89 @@ Denetleniyor…	Controleren…
 Depoya ulaşılamadı.\nWi-Fi bağlantısını kontrol edin.	Repository niet bereikbaar.\nControleer de wifiverbinding.
 Tüm uygulamalar güncel	Alle apps zijn bijgewerkt
 Bazı güncellemeler kurulamadı	Sommige updates zijn niet geïnstalleerd
+Baştan başla	Opnieuw beginnen
+Başka bulmaca	Andere puzzel
+Sonraki hamle	Volgende zet
+Çözümü göster	Toon oplossing
+Satranç Bulmacası	Schaakpuzzel
+Günün bulmacası	Puzzel van de dag
+Siyah oynar	Zwart aan zet
+Beyaz oynar	Wit aan zet
+Puan %d	Rating %d
+Bulmaca: lichess.org · çevrimdışı, son veri %s	Puzzel: lichess.org · offline, laatste gegevens %s
+Bulmaca: lichess.org · güncellendi %s	Puzzel: lichess.org · bijgewerkt %s
+Bulmaca: lichess.org	Puzzel: lichess.org
+Daha önce çözüldü · Seri: %d	Eerder opgelost · Reeks: %d
+Hamlenizi yapın · Seri: %d	Jouw zet · Reeks: %d
+Bulmaca alınamadı	Puzzel niet opgehaald
+Wi-Fi bağlantısını kontrol edin.	Controleer de wifiverbinding.
+Çözüm gösterildi	Oplossing getoond
+Çözüldü (hatalı) · Seri: %d	Opgelost (met een fout) · Reeks: %d
+Doğru! Çözüldü · Seri: %d	Goed! Opgelost · Reeks: %d
+Doğru! Devam edin	Goed! Ga door
+Doğru değil, tekrar dene	Niet helemaal, probeer opnieuw
+Doğru!	Goed!
+Çözüm: %s · bitti	Oplossing: %s · klaar
+Çözüm: %s (%d/%d)	Oplossing: %s (%d/%d)
+Çözüldü	Opgelost
+Hatalı çözüldü	Opgelost met een fout
+Geçmiş	Geschiedenis
+Seri: %d · En iyi seri: %d	Reeks: %d · Beste reeks: %d
+Çözülen: %d / %d	Opgelost: %d / %d
+Henüz çözülen bulmaca yok.	Nog geen puzzels opgelost.
+Bulmaca alınamadı.\nWi-Fi bağlantısını kontrol edin.	Puzzel niet opgehaald.\nControleer de wifiverbinding.
+İpucu: işaretli taşı oynayın	Hint: zet het gemarkeerde stuk
+1 hamlede mat	Mat in 1
+2 hamlede mat	Mat in 2
+3 hamlede mat	Mat in 3
+4 hamlede mat	Mat in 4
+5+ hamlede mat	Mat in 5 of meer
+Mat	Schaakmat
+Çatal	Vork
+Açmaz	Penning
+Şiş	Spies
+Fedâ	Offer
+Açılış	Opening
+Oyun ortası	Middenspel
+Oyun sonu	Eindspel
+Açarak saldırı	Aftrekaanval
+Açarak şah	Aftrekschaak
+Çifte şah	Dubbelschaak
+Korumasız taş	Hangend stuk
+Kapana kısılan taş	Ingesloten stuk
+Çekme	Lokken
+Saptırma	Afleiding
+Araya girme	Onderbreking
+Ara hamle	Tussenzet
+Yol açma	Ruimen
+Sessiz hamle	Stille zet
+Savunma hamlesi	Verdedigende zet
+Röntgen saldırısı	Röntgenaanval
+Zugzwang	Zugzwang
+Küçük terfi	Minorpromotie
+Rok	Rokade
+Geçerken alma	En passant
+Son sıra matı	Mat op de achterste rij
+Boğmaca mat	Stikmat
+Anastasia matı	Anastasia's mat
+Arap matı	Arabisch mat
+Boden matı	Bodens mat
+Çifte fil matı	Mat met twee lopers
+Kırlangıç matı	Zwaluwstaartmat
+Kanca matı	Haakmat
+Köşe matı	Hoekmat
+Şah kanadı saldırısı	Aanval op de koningsvleugel
+Vezir kanadı saldırısı	Aanval op de damevleugel
+f2/f7 saldırısı	Aanval op f2 of f7
+Savunanı alma	Verdediger slaan
+Açıkta şah	Blootgestelde koning
+İlerlemiş piyon	Opgerukte pion
+Ezici üstünlük	Verpletterend
+Üstünlük	Voordeel
+Eşitlik	Gelijkwaardig
+Piyon oyun sonu	Pionneneindspel
+Kale oyun sonu	Toreneindspel
+Vezir oyun sonu	Dame-eindspel
+Fil oyun sonu	Lopereindspel
+At oyun sonu	Paardeneindspel
+Vezir ve kale oyun sonu	Dame-en-toreneindspel

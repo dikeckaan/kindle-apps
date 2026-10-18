@@ -379,3 +379,89 @@ Denetleniyor…	Kontrola…
 Depoya ulaşılamadı.\nWi-Fi bağlantısını kontrol edin.	Repozitář není dostupný.\nZkontrolujte připojení Wi-Fi.
 Tüm uygulamalar güncel	Všechny aplikace jsou aktuální
 Bazı güncellemeler kurulamadı	Některé aktualizace se nepodařilo nainstalovat
+Baştan başla	Začít znovu
+Başka bulmaca	Jiná úloha
+Sonraki hamle	Další tah
+Çözümü göster	Ukázat řešení
+Satranç Bulmacası	Šachová úloha
+Günün bulmacası	Úloha dne
+Siyah oynar	Táhne černý
+Beyaz oynar	Táhne bílý
+Puan %d	Hodnocení %d
+Bulmaca: lichess.org · çevrimdışı, son veri %s	Úloha: lichess.org · offline, poslední data %s
+Bulmaca: lichess.org · güncellendi %s	Úloha: lichess.org · aktualizováno %s
+Bulmaca: lichess.org	Úloha: lichess.org
+Daha önce çözüldü · Seri: %d	Již vyřešeno · Série: %d
+Hamlenizi yapın · Seri: %d	Váš tah · Série: %d
+Bulmaca alınamadı	Úlohu se nepodařilo získat
+Wi-Fi bağlantısını kontrol edin.	Zkontrolujte připojení Wi-Fi.
+Çözüm gösterildi	Řešení zobrazeno
+Çözüldü (hatalı) · Seri: %d	Vyřešeno (s chybou) · Série: %d
+Doğru! Çözüldü · Seri: %d	Správně! Vyřešeno · Série: %d
+Doğru! Devam edin	Správně! Pokračujte
+Doğru değil, tekrar dene	Ne tak docela, zkuste znovu
+Doğru!	Správně!
+Çözüm: %s · bitti	Řešení: %s · hotovo
+Çözüm: %s (%d/%d)	Řešení: %s (%d/%d)
+Çözüldü	Vyřešeno
+Hatalı çözüldü	Vyřešeno s chybou
+Geçmiş	Historie
+Seri: %d · En iyi seri: %d	Série: %d · Nejlepší série: %d
+Çözülen: %d / %d	Vyřešeno: %d / %d
+Henüz çözülen bulmaca yok.	Zatím žádné vyřešené úlohy.
+Bulmaca alınamadı.\nWi-Fi bağlantısını kontrol edin.	Úlohu se nepodařilo získat.\nZkontrolujte připojení Wi-Fi.
+İpucu: işaretli taşı oynayın	Nápověda: táhněte označenou figurou
+1 hamlede mat	Mat 1 tahem
+2 hamlede mat	Mat 2 tahy
+3 hamlede mat	Mat 3 tahy
+4 hamlede mat	Mat 4 tahy
+5+ hamlede mat	Mat 5+ tahy
+Mat	Mat
+Çatal	Vidlička
+Açmaz	Vazba
+Şiş	Špíz
+Fedâ	Oběť
+Açılış	Zahájení
+Oyun ortası	Střední hra
+Oyun sonu	Koncovka
+Açarak saldırı	Odtažný útok
+Açarak şah	Odtažný šach
+Çifte şah	Dvojitý šach
+Korumasız taş	Visící figura
+Kapana kısılan taş	Chycená figura
+Çekme	Lákání
+Saptırma	Odlákání
+Araya girme	Přerušení
+Ara hamle	Mezitah
+Yol açma	Uvolnění linie
+Sessiz hamle	Tichý tah
+Savunma hamlesi	Obranný tah
+Röntgen saldırısı	Rentgenový útok
+Zugzwang	Zugzwang
+Küçük terfi	Podproměna
+Rok	Rošáda
+Geçerken alma	Braní mimochodem
+Son sıra matı	Mat na základní řadě
+Boğmaca mat	Udušený mat
+Anastasia matı	Anastasiin mat
+Arap matı	Arabský mat
+Boden matı	Bodenův mat
+Çifte fil matı	Mat dvěma střelci
+Kırlangıç matı	Mat rybinou
+Kanca matı	Hákový mat
+Köşe matı	Rohový mat
+Şah kanadı saldırısı	Útok na královském křídle
+Vezir kanadı saldırısı	Útok na dámském křídle
+f2/f7 saldırısı	Útok na f2 nebo f7
+Savunanı alma	Sebrání obránce
+Açıkta şah	Odkrytý král
+İlerlemiş piyon	Postoupený pěšec
+Ezici üstünlük	Drtivá výhoda
+Üstünlük	Výhoda
+Eşitlik	Vyrovnaná pozice
+Piyon oyun sonu	Pěšcová koncovka
+Kale oyun sonu	Věžová koncovka
+Vezir oyun sonu	Dámská koncovka
+Fil oyun sonu	Střelcová koncovka
+At oyun sonu	Jezdcová koncovka
+Vezir ve kale oyun sonu	Koncovka dámy a věže

@@ -379,3 +379,89 @@ Denetleniyor…	Tarkistetaan…
 Depoya ulaşılamadı.\nWi-Fi bağlantısını kontrol edin.	Pakettivarastoon ei saada yhteyttä.\nTarkista Wi-Fi-yhteys.
 Tüm uygulamalar güncel	Kaikki sovellukset ovat ajan tasalla
 Bazı güncellemeler kurulamadı	Joitakin päivityksiä ei voitu asentaa
+Baştan başla	Aloita alusta
+Başka bulmaca	Uusi tehtävä
+Sonraki hamle	Seuraava siirto
+Çözümü göster	Näytä ratkaisu
+Satranç Bulmacası	Shakkitehtävä
+Günün bulmacası	Päivän tehtävä
+Siyah oynar	Musta siirtää
+Beyaz oynar	Valkea siirtää
+Puan %d	Vahvuusluku %d
+Bulmaca: lichess.org · çevrimdışı, son veri %s	Tehtävä: lichess.org · offline, viimeisin data %s
+Bulmaca: lichess.org · güncellendi %s	Tehtävä: lichess.org · päivitetty %s
+Bulmaca: lichess.org	Tehtävä: lichess.org
+Daha önce çözüldü · Seri: %d	Ratkaistu aiemmin · Putki: %d
+Hamlenizi yapın · Seri: %d	Sinun siirtosi · Putki: %d
+Bulmaca alınamadı	Tehtävän haku epäonnistui
+Wi-Fi bağlantısını kontrol edin.	Tarkista Wi-Fi-yhteys.
+Çözüm gösterildi	Ratkaisu näytetty
+Çözüldü (hatalı) · Seri: %d	Ratkaistu (virheellä) · Putki: %d
+Doğru! Çözüldü · Seri: %d	Oikein! Ratkaistu · Putki: %d
+Doğru! Devam edin	Oikein! Jatka
+Doğru değil, tekrar dene	Ei aivan, yritä uudelleen
+Doğru!	Oikein!
+Çözüm: %s · bitti	Ratkaisu: %s · valmis
+Çözüm: %s (%d/%d)	Ratkaisu: %s (%d/%d)
+Çözüldü	Ratkaistu
+Hatalı çözüldü	Ratkaistu virheellä
+Geçmiş	Historia
+Seri: %d · En iyi seri: %d	Putki: %d · Paras putki: %d
+Çözülen: %d / %d	Ratkaistu: %d / %d
+Henüz çözülen bulmaca yok.	Ei vielä ratkaistuja tehtäviä.
+Bulmaca alınamadı.\nWi-Fi bağlantısını kontrol edin.	Tehtävän haku epäonnistui.\nTarkista Wi-Fi-yhteys.
+İpucu: işaretli taşı oynayın	Vihje: siirrä merkittyä nappulaa
+1 hamlede mat	Matti 1 siirrossa
+2 hamlede mat	Matti 2 siirrossa
+3 hamlede mat	Matti 3 siirrossa
+4 hamlede mat	Matti 4 siirrossa
+5+ hamlede mat	Matti 5+ siirrossa
+Mat	Matti
+Çatal	Haarukka
+Açmaz	Kiinnitys
+Şiş	Varras
+Fedâ	Uhraus
+Açılış	Avaus
+Oyun ortası	Keskipeli
+Oyun sonu	Loppupeli
+Açarak saldırı	Paljastushyökkäys
+Açarak şah	Paljastusshakki
+Çifte şah	Kaksoisshakki
+Korumasız taş	Suojaamaton nappula
+Kapana kısılan taş	Ansaan jäänyt nappula
+Çekme	Houkuttelu
+Saptırma	Harhautus
+Araya girme	Häirintä
+Ara hamle	Välisiirto
+Yol açma	Raivaus
+Sessiz hamle	Hiljainen siirto
+Savunma hamlesi	Puolustussiirto
+Röntgen saldırısı	Röntgenhyökkäys
+Zugzwang	Siirtopakko
+Küçük terfi	Alikorotus
+Rok	Linnoitus
+Geçerken alma	Ohestalyönti
+Son sıra matı	Takarivimatti
+Boğmaca mat	Tukehdutusmatti
+Anastasia matı	Anastasian matti
+Arap matı	Arabialainen matti
+Boden matı	Bodenin matti
+Çifte fil matı	Kaksoislähettimatti
+Kırlangıç matı	Pääskysenpyrstömatti
+Kanca matı	Koukkumatti
+Köşe matı	Kulmamatti
+Şah kanadı saldırısı	Kuningassivustan hyökkäys
+Vezir kanadı saldırısı	Kuningatarsivustan hyökkäys
+f2/f7 saldırısı	Hyökkäys f2:een tai f7:ään
+Savunanı alma	Puolustajan lyönti
+Açıkta şah	Paljas kuningas
+İlerlemiş piyon	Edennyt sotilas
+Ezici üstünlük	Murskaava
+Üstünlük	Etu
+Eşitlik	Tasainen
+Piyon oyun sonu	Sotilasloppupeli
+Kale oyun sonu	Torniloppupeli
+Vezir oyun sonu	Kuningatarloppupeli
+Fil oyun sonu	Lähettiloppupeli
+At oyun sonu	Ratsuloppupeli
+Vezir ve kale oyun sonu	Kuningatar- ja torniloppupeli
