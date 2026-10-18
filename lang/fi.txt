@@ -328,3 +328,4 @@ Bu oturumda henüz dosya gelmedi	Tässä istunnossa ei ole vielä saapunut tiedo
 Wi-Fi ile Yükle	Lähetä Wi-Fillä
 %d kez yanlış PIN girildi: yeni PIN üretildi.	Väärä PIN, kertoja: %d. Uusi PIN luotu.
 Alındı: %s	Vastaanotettu: %s
+%d-%d portları dolu ya da %s yok.	Portit %d-%d ovat varattuja tai puuttuu: %s.

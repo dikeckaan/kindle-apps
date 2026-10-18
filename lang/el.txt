@@ -328,3 +328,4 @@ Bu oturumda henüz dosya gelmedi	Δεν έχουν ληφθεί αρχεία σ�
 Wi-Fi ile Yükle	Μεταφόρτωση μέσω Wi-Fi
 %d kez yanlış PIN girildi: yeni PIN üretildi.	Λάθος PIN %d φορές: δημιουργήθηκε νέο PIN.
 Alındı: %s	Ελήφθη: %s
+%d-%d portları dolu ya da %s yok.	Οι θύρες %d-%d είναι κατειλημμένες ή λείπει: %s.

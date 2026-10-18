@@ -328,3 +328,4 @@ Bu oturumda henüz dosya gelmedi	Ingen filer mottatt i denne økten
 Wi-Fi ile Yükle	Last opp via Wi-Fi
 %d kez yanlış PIN girildi: yeni PIN üretildi.	Feil PIN %d ganger: ny PIN laget.
 Alındı: %s	Mottatt: %s
+%d-%d portları dolu ya da %s yok.	Portene %d-%d er opptatt, eller %s mangler.

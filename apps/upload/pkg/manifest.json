@@ -4,7 +4,7 @@
   "name": "Wi-Fi ile Yükle",
   "author": "Kaan Dikeç",
   "description": "Tarayıcıdan Wi-Fi ile Kindle'a e-kitap gönderin (PIN korumalı, yalnızca uygulama açıkken)",
-  "version": [2026, 10, 8],
+  "version": [2026, 10, 9],
   "dependencies": [],
   "supported_platforms": ["kindlehf"]
 }

@@ -263,7 +263,7 @@ int main(void)
 		run(cmd);
 		fprintf(stderr, "upload: port %d, dir %s\n", upload_port(srv), dir);
 	} else {
-		snprintf(fail_msg, sizeof fail_msg, "%d-%d portları dolu ya da %s yok.", UPLOAD_PORT_FIRST, UPLOAD_PORT_LAST, dir);
+		snprintf(fail_msg, sizeof fail_msg, T("%d-%d portları dolu ya da %s yok."), UPLOAD_PORT_FIRST, UPLOAD_PORT_LAST, dir);
 	}
 	wifi_ip(ip, sizeof ip);
 	last_ip_check = now_ms();

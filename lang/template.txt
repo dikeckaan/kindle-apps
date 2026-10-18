@@ -7,6 +7,8 @@
 %d %s %d, %s	
 # apps/upload/main.c
 %d kez yanlış PIN girildi: yeni PIN üretildi.	
+# apps/upload/main.c
+%d-%d portları dolu ya da %s yok.	
 # apps/news/main.c
 %d/%d · güncellendi %02d:%02d	
 # apps/news/main.c

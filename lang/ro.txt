@@ -328,3 +328,4 @@ Bu oturumda henüz dosya gelmedi	Niciun fișier primit în această sesiune
 Wi-Fi ile Yükle	Încărcare prin Wi-Fi
 %d kez yanlış PIN girildi: yeni PIN üretildi.	PIN greșit de %d ori: s-a generat un PIN nou.
 Alındı: %s	Primit: %s
+%d-%d portları dolu ya da %s yok.	Porturile %d-%d sunt ocupate sau lipsește %s.

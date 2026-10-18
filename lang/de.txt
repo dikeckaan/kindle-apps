@@ -328,3 +328,4 @@ Bu oturumda henüz dosya gelmedi	In dieser Sitzung noch keine Dateien
 Wi-Fi ile Yükle	Per WLAN hochladen
 %d kez yanlış PIN girildi: yeni PIN üretildi.	%d-mal falsche PIN: neue PIN erzeugt.
 Alındı: %s	Empfangen: %s
+%d-%d portları dolu ya da %s yok.	Ports %d-%d belegt oder %s fehlt.

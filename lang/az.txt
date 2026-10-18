@@ -328,3 +328,4 @@ Bu oturumda henüz dosya gelmedi	Bu seansda hələ fayl gəlməyib
 Wi-Fi ile Yükle	Wi-Fi ilə yüklə
 %d kez yanlış PIN girildi: yeni PIN üretildi.	%d dəfə yanlış PIN daxil edildi: yeni PIN yaradıldı.
 Alındı: %s	Qəbul edildi: %s
+%d-%d portları dolu ya da %s yok.	%d-%d portları məşğuldur və ya %s yoxdur.

@@ -328,3 +328,4 @@ Bu oturumda henüz dosya gelmedi	Ebben a munkamenetben még nem érkezett fájl
 Wi-Fi ile Yükle	Feltöltés Wi-Fin
 %d kez yanlış PIN girildi: yeni PIN üretildi.	Hibás PIN-ek száma: %d. Új PIN készült.
 Alındı: %s	Megérkezett: %s
+%d-%d portları dolu ya da %s yok.	A(z) %d-%d portok foglaltak, vagy hiányzik: %s.

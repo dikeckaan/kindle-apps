@@ -328,3 +328,4 @@ Bu oturumda henüz dosya gelmedi	За этот сеанс файлов пока 
 Wi-Fi ile Yükle	Загрузка по Wi-Fi
 %d kez yanlış PIN girildi: yeni PIN üretildi.	Неверных попыток PIN: %d. Создан новый PIN.
 Alındı: %s	Получено: %s
+%d-%d portları dolu ya da %s yok.	Порты %d-%d заняты или нет %s.

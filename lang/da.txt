@@ -328,3 +328,4 @@ Bu oturumda henüz dosya gelmedi	Ingen filer modtaget i denne session
 Wi-Fi ile Yükle	Upload via Wi-Fi
 %d kez yanlış PIN girildi: yeni PIN üretildi.	Forkert PIN %d gange: ny PIN oprettet.
 Alındı: %s	Modtaget: %s
+%d-%d portları dolu ya da %s yok.	Portene %d-%d er optaget, eller %s mangler.

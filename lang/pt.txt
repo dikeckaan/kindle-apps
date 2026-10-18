@@ -328,3 +328,4 @@ Bu oturumda henüz dosya gelmedi	Nenhum arquivo recebido nesta sessão
 Wi-Fi ile Yükle	Enviar por Wi-Fi
 %d kez yanlış PIN girildi: yeni PIN üretildi.	PIN errado %d vezes: novo PIN gerado.
 Alındı: %s	Recebido: %s
+%d-%d portları dolu ya da %s yok.	Portas %d-%d ocupadas ou %s não existe.

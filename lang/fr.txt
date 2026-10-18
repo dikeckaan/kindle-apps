@@ -328,3 +328,4 @@ Bu oturumda henüz dosya gelmedi	Aucun fichier reçu pendant cette session
 Wi-Fi ile Yükle	Envoi par Wi-Fi
 %d kez yanlış PIN girildi: yeni PIN üretildi.	PIN erroné %d fois : nouveau PIN généré.
 Alındı: %s	Reçu : %s
+%d-%d portları dolu ya da %s yok.	Ports %d-%d occupés ou %s introuvable.

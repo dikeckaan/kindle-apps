@@ -328,3 +328,4 @@ Bu oturumda henüz dosya gelmedi	Aún no hay archivos en esta sesión
 Wi-Fi ile Yükle	Subir por Wi-Fi
 %d kez yanlış PIN girildi: yeni PIN üretildi.	PIN incorrecto %d veces: se generó un nuevo PIN.
 Alındı: %s	Recibido: %s
+%d-%d portları dolu ya da %s yok.	Puertos %d-%d ocupados o falta %s.

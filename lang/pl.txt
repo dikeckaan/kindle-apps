@@ -328,3 +328,4 @@ Bu oturumda henüz dosya gelmedi	Brak plików w tej sesji
 Wi-Fi ile Yükle	Wyślij przez Wi-Fi
 %d kez yanlış PIN girildi: yeni PIN üretildi.	Błędny PIN (%d razy): wygenerowano nowy PIN.
 Alındı: %s	Odebrano: %s
+%d-%d portları dolu ya da %s yok.	Porty %d-%d zajęte lub brak %s.

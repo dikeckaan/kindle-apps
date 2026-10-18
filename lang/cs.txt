@@ -328,3 +328,4 @@ Bu oturumda henüz dosya gelmedi	V této relaci zatím žádné soubory
 Wi-Fi ile Yükle	Nahrát přes Wi-Fi
 %d kez yanlış PIN girildi: yeni PIN üretildi.	Chybný PIN (%d×): vytvořen nový PIN.
 Alındı: %s	Přijato: %s
+%d-%d portları dolu ya da %s yok.	Porty %d-%d jsou obsazené nebo chybí %s.

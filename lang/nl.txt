@@ -328,3 +328,4 @@ Bu oturumda henüz dosya gelmedi	Nog geen bestanden deze sessie
 Wi-Fi ile Yükle	Uploaden via wifi
 %d kez yanlış PIN girildi: yeni PIN üretildi.	%d keer verkeerde pincode: nieuwe pincode gemaakt.
 Alındı: %s	Ontvangen: %s
+%d-%d portları dolu ya da %s yok.	Poorten %d-%d bezet of %s ontbreekt.
