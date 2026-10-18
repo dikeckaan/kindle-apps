@@ -1,14 +1,90 @@
 # Translatable texts (Turkish source). Catalog lines: source<TAB>translation; \n and \t escaped.
+# apps/weather/main.c
+%%%d	
 # core/kui/trfmt.c
 %d %s %d, %s	
+# apps/news/main.c
+%d/%d · güncellendi %02d:%02d	
+# apps/news/main.c
+%d/%d · çevrimdışı, son veri %02d:%02d	
+# apps/wordle/main.c
+%s %d/6 tahminde bildin.	
 # core/hub/main.c
 %s beklenmedik şekilde kapandı	
+# apps/weather/main.c
+%s silinsin mi?	
+# apps/mines/main.c
+%s · %d×%d · %d mayın	
+# apps/mines/main.c
+%s · Süre: %ld:%02ld	
+# apps/weather/main.c
++ Ekle	
+# apps/sleep/sleep_opts.c
+1 saat	
+# apps/sleep/sleep_opts.c
+10 dakika	
+# apps/sleep/sleep_opts.c
+2 saat	
 # apps/game2048/pkg/app.ini
 2048	
+# apps/game2048/main.c
+2048'e ulaştın.	
+# apps/sleep/sleep_opts.c
+30 dakika	
+# apps/sleep/sleep_opts.c
+5 dakika	
+# apps/wordle/main.c
+5 harf girin	
+# apps/chess/chess_game.c
+50 hamle kuralı — berabere	
+# apps/currency/main.c
+Altın (serbest piyasa, ₺)	
+# apps/currency/main.c
+Alış	
 # core/kui/trfmt.c
 Aralık	
+# apps/weather/main.c
+Aranıyor…	
+# apps/chess/main.c
+At	
+# apps/weather/wx.c
+Az bulutlu	
+# apps/ssh/main.c
+AÇIK	
+# apps/firewall/main.c
+Aç	
+# apps/weather/wx.c
+Açık	
+# apps/firewall/main.c
+Açıldı. Gelen bağlantılar engelleniyor.	
 # core/kui/trfmt.c
 Ağustos	
+# apps/weather/wx.c
+B	
+# apps/weather/main.c
+Bağlantı kurulamadı. Wi-Fi açık mı?	
+# apps/currency/main.c
+Bağlantı yok, kurlar alınamadı	
+# apps/weather/main.c
+Bağlantı yok, veri alınamadı	
+# apps/chess/main.c
+Beyaz	
+# apps/news/news.c
+Bilim	
+# apps/chess/main.c
+Bu oyun bitirilsin mi?	
+# apps/wordle/main.c
+Bu sefer olmadı	
+# apps/weather/main.c
+Bugün	
+# apps/weather/main.c
+Bugün  en yüksek %s · en düşük %s · ☼ %s – %s	
+# apps/sudoku/main.c
+Bulmacayı çözdünüz.	
+# apps/solitaire/main.c
+Bütün kartlar açık. Oyun tamamlansın mı?	
+# apps/solitaire/main.c
+Bütün kartları yerleştirdin.	
 # core/kui/trfmt.c
 Cmt	
 # core/kui/trfmt.c
@@ -17,42 +93,220 @@ Cum
 Cuma	
 # core/kui/trfmt.c
 Cumartesi	
+# apps/currency/fx.c
+Cumhuriyet altını	
+# apps/weather/wx.c
+D	
+# apps/game2048/main.c
+Devam	
+# apps/chess/main.c
+Devam et	
 # core/hub/main.c
 Dil	
-# apps/currency/pkg/app.ini
+# apps/mines/main.c
+Dokun: aç	
+# apps/mines/main.c
+Dokun: bayrak	
+# apps/weather/wx.c
+Dolu, fırtına	
+# apps/weather/wx.c
+Donan yağmur	
+# apps/weather/wx.c
+Donan çisenti	
+# apps/wordle/main.c
+Dâhice!	
+# apps/currency/main.c
 Döviz & Altın	
+# apps/news/news.c
+Dünya	
+# apps/chess/main.c
+Düşünüyor… (%s)	
 # core/kui/trfmt.c
 Ekim	
+# apps/news/news.c
+Ekonomi	
+# core/kui/widgets.c
+En az %d karakter girin	
+# apps/weather/main.c
+En fazla 10 şehir kaydedilebilir.	
+# apps/game2048/main.c
+En iyi	
+# apps/wordle/main.c
+En iyi seri	
+# apps/chess/main.c
+Evet	
 # core/kui/trfmt.c
 Eylül	
-# apps/news/pkg/app.ini
+# apps/chess/main.c
+Fil	
+# apps/weather/wx.c
+G	
+# apps/weather/wx.c
+GB	
+# apps/weather/wx.c
+GD	
+# apps/news/main.c
 Gazete	
-# apps/firewall/pkg/app.ini
+# apps/chess/main.c
+Geri al	
+# apps/currency/fx.c
+Gram altın	
+# apps/weather/wx.c
+Gök gürültülü	
+# apps/wordle/main.c
+Gönder	
+# apps/news/news.c
+Güncel	
+# apps/weather/main.c
+Güncellendi %s · Open-Meteo	
+# apps/currency/main.c
+Güncelleniyor…	
+# apps/news/news.c
+Gündem	
+# apps/firewall/main.c
 Güvenlik Duvarı	
+# apps/wordle/main.c
+Güzel!	
+# apps/news/main.c
+Haberler alınamadı.\nWi-Fi bağlantısını kontrol edin.	
+# apps/wordle/main.c
+Harika!	
 # core/hub/main.c
 Hata	
-# apps/weather/pkg/app.ini
+# apps/sudoku/main.c
+Hataları göster: Açık	
+# apps/sudoku/main.c
+Hataları göster: Kapalı	
+# apps/weather/main.c
 Hava Durumu	
+# apps/weather/main.c
+Hava durumu alınamadı.\nWi-Fi bağlantısını kontrol edip Yenile'ye basın.	
+# apps/clock/main.c
+Hava durumu yok (Wi-Fi kapalı olabilir)	
+# apps/chess/main.c
+Hayır	
 # core/kui/trfmt.c
 Haziran	
+# apps/currency/main.c
+Hedef para	
+# apps/ssh/main.c
+Henüz parola yok	
 # core/hub/main.c
 Henüz uygulama kurulu değil	
+# apps/chess/main.c
+Her hamlede tahtayı çevir	
+# apps/weather/main.c
+Hissedilen %s	
+# apps/sleep/sleep_opts.c
+Hiç uyuma	
+# apps/weather/wx.c
+K	
+# apps/ssh/main.c
+KAPALI	
+# apps/weather/wx.c
+KB	
+# apps/weather/wx.c
+KD	
+# apps/chess/main.c
+Kale	
+# apps/weather/wx.c
+Kapalı	
+# apps/chess/main.c
+Kapat	
+# apps/firewall/main.c
+Kapatıldı. Kindle yeniden başlayınca tekrar açılır.	
+# apps/weather/wx.c
+Kar sağanağı	
+# apps/weather/wx.c
+Kar taneleri	
+# apps/weather/wx.c
+Karlı	
 # core/kui/trfmt.c
 Kasım	
-# apps/wordle/pkg/app.ini
+# apps/weather/main.c
+Kaydedilemedi.	
+# apps/currency/main.c
+Kaynak para	
+# apps/news/main.c
+Kaynak: %s	
+# apps/mines/main.c
+Kazandın!	
+# apps/wordle/main.c
+Kazanma %	
+# apps/wordle/main.c
 Kelime Oyunu	
+# apps/wordle/main.c
+Kelime listesi bulunamadı. Uygulamayı yeniden kurun.	
+# apps/wordle/main.c
+Kelime: %s	
+# apps/sleep/main.c
+Kindle bu süre dokunulmadan kalınca uyur.\n"Hiç uyuma" pili hızlı tüketir.\nYeniden başlatınca varsayılana dönebilir.	
+# apps/chess/levels.c
+Kolay	
+# apps/ssh/main.c
+Kullanıcı adı: root\nSunucu bu uygulama kapanınca da çalışır.\nKindle uyuyunca Wi-Fi ile birlikte bağlantı kopar.\nYeniden başlatınca kapalı açılır.	
+# apps/news/news.c
+Kültür	
+# apps/news/news.c
+Manşet	
 # core/kui/trfmt.c
 Mart	
 # apps/clock/pkg/app.ini
 Masa Saati	
-# apps/mines/pkg/app.ini
+# apps/mines/main.c
 Mayın Tarlası	
+# apps/mines/main.c
+Mayın: %d	
+# apps/mines/main.c
+Mayına bastın	
 # core/kui/trfmt.c
 Mayıs	
+# apps/chess/main.c
+Menü	
+# apps/game2048/main.c
+Mevcut oyun silinsin mi?	
+# apps/chess/main.c
+Motor yanıt vermedi	
+# apps/wordle/main.c
+Muhteşem!	
+# apps/weather/main.c
+Nem %s	
 # core/kui/trfmt.c
 Nisan	
+# apps/sudoku/main.c
+Not: Açık	
+# apps/sudoku/main.c
+Not: Kapalı	
 # core/kui/trfmt.c
 Ocak	
+# apps/currency/fx.c
+Ons (USD)	
+# apps/chess/levels.c
+Orta	
+# apps/solitaire/main.c
+Otomatik tamamla	
+# apps/wordle/main.c
+Oynanan	
+# apps/chess/main.c
+Oyun bitti	
+# apps/ssh/main.c
+Parola	
+# apps/ssh/main.c
+Parola belirlenmiş	
+# apps/ssh/main.c
+Parola kaydedildi.	
+# apps/ssh/main.c
+Parola kaydedilemedi.	
+# apps/ssh/main.c
+Parolalar aynı değil, tekrar deneyin.	
+# apps/ssh/main.c
+Parolayı değiştir	
+# apps/ssh/main.c
+Parolayı tekrar girin	
+# apps/weather/wx.c
+Parçalı bulutlu	
+# apps/chess/chess_game.c
+Pat — berabere	
 # core/kui/trfmt.c
 Paz	
 # core/kui/trfmt.c
@@ -63,31 +317,207 @@ Pazartesi
 Per	
 # core/kui/trfmt.c
 Perşembe	
+# apps/chess/main.c
+Piyon hangi taşa dönüşsün?	
 # core/kui/trfmt.c
 Pzt	
-# apps/ssh/pkg/app.ini
+# apps/chess/main.c
+Rastgele	
+# apps/chess/main.c
+Renginiz	
+# apps/weather/main.c
+Rüzgâr %ld km/s %s	
+# apps/weather/main.c
+Rüzgâr —	
+# apps/ssh/main.c
 SSH Sunucusu	
 # core/kui/trfmt.c
 Sal	
 # core/kui/trfmt.c
 Salı	
-# apps/chess/pkg/app.ini
+# apps/chess/main.c
 Satranç	
-# apps/solitaire/pkg/app.ini
+# apps/chess/main.c
+Satranç motoru çalışmadı.	
+# apps/currency/main.c
+Satış	
+# apps/weather/wx.c
+Sağanak	
+# apps/news/news.c
+Sağlık	
+# apps/wordle/main.c
+Seri	
+# apps/sudoku/main.c
+Sil	
+# apps/weather/wx.c
+Sisli	
+# apps/chess/main.c
+Siyah	
+# apps/game2048/main.c
+Skor	
+# apps/game2048/main.c
+Skor: %d	
+# apps/solitaire/main.c
 Solitaire	
-# apps/sudoku/pkg/app.ini
+# apps/wordle/main.c
+Son anda!	
+# apps/weather/main.c
+Sonuç bulunamadı	
+# apps/weather/main.c
+Sonuçlar	
+# apps/news/news.c
+Spor	
+# apps/sudoku/main.c
 Sudoku	
-# core/hub/main.c
+# apps/ssh/main.c
+Sunucu başlatılamadı (günlüğe bakın).	
+# apps/wordle/main.c
+Sözlükte yok (yalnızca kök kelimeler)	
+# apps/mines/main.c
+Süre: %ld:%02ld	
+# apps/chess/main.c
+Sıra: %s	
+# apps/currency/main.c
+TCMB döviz kurları	
+# apps/currency/main.c
+TCMB satış kuru ile	
+# apps/currency/main.c
+TCMB · güncellendi %d %s %02d:%02d	
+# apps/wordle/main.c
+Tahmin dağılımı	
+# apps/chess/main.c
+Tahta sabit	
+# apps/chess/main.c
+Tahtaya bak	
+# apps/chess/main.c
+Tahtayı çevir	
+# apps/currency/fx.c
+Tam altın	
+# apps/firewall/main.c
 Tamam	
+# apps/solitaire/main.c
+Tamamla	
+# apps/game2048/main.c
+Tebrikler!	
+# apps/solitaire/main.c
+Tek kart çek	
+# apps/chess/main.c
+Tek oyunculu	
+# apps/chess/main.c
+Tekrar dene	
 # core/kui/trfmt.c
 Temmuz	
+# apps/chess/main.c
+Terfi	
+# apps/currency/main.c
+Tüm kurlar	
+# apps/chess/levels.c
+Usta	
 # core/hub/main.c
 Uygulamalar	
-# apps/sleep/pkg/app.ini
+# apps/sleep/main.c
 Uyku Ayarı	
+# apps/firewall/main.c
+Vazgeç	
+# apps/chess/main.c
+Vezir	
+# apps/currency/fx.c
+Yarım altın	
+# apps/weather/wx.c
+Yağmurlu	
+# apps/weather/main.c
+Yağış %s	
+# apps/game2048/main.c
+Yeni	
+# apps/ssh/main.c
+Yeni SSH parolası (en az 6)	
+# apps/chess/main.c
+Yeni oyun	
+# apps/currency/main.c
+Yenile	
+# apps/chess/chess_game.c
+Yetersiz taş — berabere	
+# apps/weather/wx.c
+Yoğun kar	
+# apps/currency/main.c
+Yükleniyor…	
+# apps/chess/levels.c
+Zor	
+# apps/chess/main.c
+Zorluk	
+# apps/sudoku/main.c
+Zorluk seçin	
+# core/kui/keyboard.c
+boşluk	
 # core/kui/trfmt.c
 Çar	
 # core/kui/trfmt.c
 Çarşamba	
+# apps/currency/main.c
+Çevirici	
+# apps/currency/main.c
+Çevrimdışı · güncellendi %d %s %02d:%02d	
+# apps/weather/main.c
+Çevrimdışı — son veri %s · Open-Meteo	
+# apps/currency/fx.c
+Çeyrek altın	
+# apps/weather/wx.c
+Çisenti	
+# apps/chess/levels.c
+Çok Kolay	
+# apps/wordle/main.c
+Çok iyi!	
+# apps/mines/main.c
+Çıkış	
+# apps/sudoku/main.c
+Önce boş bir hücre seçin.	
+# apps/solitaire/main.c
+Üç kart çek	
+# apps/chess/chess_game.c
+Üçlü tekrar — berabere	
+# apps/chess/main.c
+İki oyunculu	
+# apps/chess/main.c
+İki oyunculu devam	
+# apps/sudoku/main.c
+İpucu	
+# apps/wordle/main.c
+İstatistik	
+# apps/chess/levels.c
+İyi	
+# apps/firewall/main.c
+İşlem başarısız oldu.	
+# apps/chess/chess_game.c
+Şah mat — Beyaz kazandı	
+# apps/chess/chess_game.c
+Şah mat — Siyah kazandı	
+# apps/chess/main.c
+Şah! Sıra: %s	
+# apps/weather/main.c
+Şehir ara	
+# apps/weather/main.c
+Şehir veya ilçe ara	
+# apps/weather/main.c
+Şehirler	
+# apps/weather/main.c
+Şehri sil	
+# apps/weather/wx.c
+Şiddetli sağanak	
+# apps/weather/wx.c
+Şiddetli yağmur	
+# apps/firewall/main.c
+Şu an AÇIK: gelen bağlantılar engelleniyor.\nKapatılsın mı?	
+# apps/firewall/main.c
+Şu an KAPALI: gelen bağlantılara izin veriliyor.\nAçılsın mı?	
+# apps/sleep/sleep_opts.c
+Şu an: %d dakika	
+# apps/sleep/sleep_opts.c
+Şu an: %d saat	
+# apps/sleep/sleep_opts.c
+Şu an: hiç uyumuyor	
 # core/kui/trfmt.c
 Şubat	
+# apps/mines/main.c
+⚑ Açık	
+# apps/mines/main.c
+⚑ Kapalı	
