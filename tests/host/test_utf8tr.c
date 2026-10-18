@@ -64,6 +64,21 @@ static void test_utf8_invalid(void)
 	T_EQ_INT(cp, 0xFFFD);
 }
 
+static void test_utf8_rejects_overlong_surrogate_and_out_of_range(void)
+{
+	int cp = 0;
+	T_EQ_INT(kui_utf8_decode("\xC0\xAF", &cp), 1);         /* overlong '/' */
+	T_EQ_INT(cp, 0xFFFD);
+	T_EQ_INT(kui_utf8_decode("\xE0\x80\xAF", &cp), 1);     /* overlong 3-byte */
+	T_EQ_INT(cp, 0xFFFD);
+	T_EQ_INT(kui_utf8_decode("\xED\xA0\x80", &cp), 1);     /* UTF-16 surrogate */
+	T_EQ_INT(cp, 0xFFFD);
+	T_EQ_INT(kui_utf8_decode("\xF4\x90\x80\x80", &cp), 1); /* > 0x10FFFF */
+	T_EQ_INT(cp, 0xFFFD);
+	T_EQ_INT(kui_utf8_decode("\xF0\x9F\x98\x80", &cp), 4); /* valid 4-byte */
+	T_EQ_INT(cp, 0x1F600);
+}
+
 int main(void)
 {
 	T_RUN(test_tr_upper);
@@ -72,5 +87,6 @@ int main(void)
 	T_RUN(test_fold_circumflex);
 	T_RUN(test_utf8_roundtrip);
 	T_RUN(test_utf8_invalid);
+	T_RUN(test_utf8_rejects_overlong_surrogate_and_out_of_range);
 	return T_DONE();
 }

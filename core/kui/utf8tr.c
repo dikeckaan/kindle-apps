@@ -13,6 +13,8 @@ int kui_utf8_decode(const char *s, int *cp)
 		if ((u[i] & 0xC0) != 0x80) { *cp = 0xFFFD; return 1; }
 		c = (c << 6) | (u[i] & 0x3F);
 	}
+	static const int min_cp[5] = { 0, 0, 0x80, 0x800, 0x10000 };
+	if (c < min_cp[n] || (c >= 0xD800 && c <= 0xDFFF) || c > 0x10FFFF) { *cp = 0xFFFD; return 1; }
 	*cp = c;
 	return n;
 }
