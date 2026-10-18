@@ -16,12 +16,14 @@ Kitaplıkta tek bir **"Uygulamalar"** girişi olur; açınca bütün uygulamalar
 | Uyku Ayarı (uyku süresini uzat / kapat) | ✅ |
 | SSH Sunucusu (parolalı, menüden aç/kapat) | ✅ |
 | Güvenlik Duvarı (aç/kapat) | ✅ |
-| Türkçe Wordle | yakında |
+| Kelime Oyunu (Türkçe Wordle: 5 harf, yalnızca kök kelimeler, sınırsız) | ✅ |
 | Hava Durumu (Open-Meteo, kayıtlı şehirler, 12 saat + 7 gün) | ✅ |
 | Masa Saati (büyük saat, tarih, hava özeti; açıkken uyumaz) | ✅ |
 | Döviz & Altın (TCMB kurları, altın fiyatları, çevirici) | ✅ |
 | Gazete (Anadolu Ajansı ve TRT Haber manşetleri) | ✅ |
-| Mayın Tarlası, Solitaire, Sudoku | yakında |
+| Mayın Tarlası (3 zorluk, bayrak kipi) | ✅ |
+| Sudoku (3 zorluk, tek çözümlü, not kipi, ipucu) | ✅ |
+| Solitaire (Klondike, 1 / 3 kart çekme, geri al) | ✅ |
 | Sistem bilgisi, Wi-Fi ile dosya yükleme | yakında |
 
 ## Gereksinimler
@@ -50,6 +52,10 @@ dosyasını indirip USB ile Kindle'ın `documents` klasörüne kopyalayın, kita
 /var/local/kmc/bin/kpm -y install kindle-apps-clock
 /var/local/kmc/bin/kpm -y install kindle-apps-currency
 /var/local/kmc/bin/kpm -y install kindle-apps-news
+/var/local/kmc/bin/kpm -y install kindle-apps-wordle
+/var/local/kmc/bin/kpm -y install kindle-apps-mines
+/var/local/kmc/bin/kpm -y install kindle-apps-sudoku
+/var/local/kmc/bin/kpm -y install kindle-apps-solitaire
 ```
 
 Ardından kitaplıkta **Uygulamalar**'ı açın.
@@ -63,7 +69,7 @@ root'un okuyabildiği `/var/local/kindle-apps/ssh` içinde tuzlu ve 10 000 tur S
 ## Kaldırma
 
 ```sh
-/var/local/kmc/bin/kpm uninstall kindle-apps-2048 kindle-apps-chess kindle-apps-sleep kindle-apps-ssh kindle-apps-firewall kindle-apps-weather kindle-apps-clock kindle-apps-currency kindle-apps-news kindle-apps-core
+/var/local/kmc/bin/kpm uninstall kindle-apps-2048 kindle-apps-chess kindle-apps-sleep kindle-apps-ssh kindle-apps-firewall kindle-apps-weather kindle-apps-clock kindle-apps-currency kindle-apps-news kindle-apps-wordle kindle-apps-mines kindle-apps-sudoku kindle-apps-solitaire kindle-apps-core
 ```
 
 Oyun kayıtları ve ayarlar `/mnt/us/kindle-apps/data/` içinde kalır; tamamen silmek için o klasörü de silin.

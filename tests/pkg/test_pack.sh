@@ -25,7 +25,7 @@ assert all(isinstance(d,dict) and isinstance(d.get("id"),str) for d in m["depend
     grep -q "\"$id\"" dist/manifest.json 2>/dev/null && ok "repo manifest lists $id" || bad "repo manifest misses $id"
     rm -rf "$t"
 done
-for id in core 2048 chess sleep ssh firewall weather clock currency news; do
+for id in core 2048 chess sleep ssh firewall weather clock currency news wordle mines sudoku solitaire; do
     ls dist/packages/kindle-apps-$id/*.kpkg >/dev/null 2>&1 && ok "package kindle-apps-$id built" || bad "package kindle-apps-$id missing"
 done
 has() { tar tzf dist/packages/$1/*.kpkg | grep -qx "$2" && ok "$1 has $2" || bad "$1 lacks $2"; }
@@ -34,6 +34,9 @@ has kindle-apps-chess files/COPYING-stockfish
 has kindle-apps-ssh files/dropbear
 has kindle-apps-ssh files/dropbearkey
 has kindle-apps-ssh files/LICENSE-dropbear
+has kindle-apps-wordle files/guesses.txt
+has kindle-apps-wordle files/answers.txt
+has kindle-apps-wordle files/LICENSE
 t=$(mktemp -d); tar xzf dist/packages/kindle-apps-ssh/*.kpkg -C "$t"
 # an upgrade must stop the running server (and its sessions) before the binary is replaced
 awk '/pre-install.sh/{s=NR} /cp -f/{c=NR} END{exit !(s && c && s < c)}' "$t/install.sh" \

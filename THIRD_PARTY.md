@@ -6,6 +6,8 @@
 | Stockfish 11 | GPL-3.0 (`COPYING-stockfish` in the chess package) | https://github.com/official-stockfish/Stockfish (tag `sf_11`) | chess engine, run as a separate process |
 | Dropbear SSH (DROPBEAR_2026.94) | MIT-style (`LICENSE-dropbear` in the SSH package) | https://github.com/mkj/dropbear | SSH server; patched by `tools/patches/dropbear-apppass.patch` |
 | cJSON 1.7.18 (Dave Gamble) | MIT (`core/vendor/cjson/LICENSE`) | https://github.com/DaveGamble/cJSON | JSON parsing |
+| Zemberek-NLP lexicon (commit 037202c) | Apache-2.0 | https://github.com/ahmetaa/zemberek-nlp | Kelime Oyunu guess list (`apps/wordle/words/guesses.txt`) |
+| FrequencyWords tr_50k (commit 525f9b5) | CC BY-SA 4.0 | https://github.com/hermitdave/FrequencyWords | Kelime Oyunu answer list (`answers.txt`, CC BY-SA 4.0) |
 | stb_truetype (Sean Barrett) | public domain / MIT | https://github.com/nothings/stb | host simulator only (`tools/sim`), not shipped |
 | DejaVu Fonts 2.37 | Bitstream Vera / DejaVu license (free, see `DejaVu-LICENSE`) | https://dejavu-fonts.github.io | UI font (Turkish + chess glyphs) |
 

@@ -4,7 +4,7 @@
   "name": "Gazete",
   "author": "Kaan Dikeç",
   "description": "Anadolu Ajansı ve TRT Haber manşetleri",
-  "version": [2026, 10, 6],
+  "version": [2026, 10, 7],
   "dependencies": [],
   "supported_platforms": ["kindlehf"]
 }
