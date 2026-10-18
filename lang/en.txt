@@ -260,3 +260,71 @@ boşluk	space
 Şubat	February
 ⚑ Açık	⚑ On
 ⚑ Kapalı	⚑ Off
+E-Kitap	E-Books
+Ara	Search
+Project Gutenberg'deki telifsiz kitaplar	Free books from Project Gutenberg
+70.000'den fazla ücretsiz e-kitap. Arama İngilizce başlık ve yazar adlarıyla en iyi sonucu verir.	Over 70,000 free e-books. Search works best with English titles and author names.
+Kitap ara	Search books
+Biçim:	Format:
+AZW3 Kindle'ın kendi okuyucusunda, EPUB KOReader'da açılır.	AZW3 opens in the Kindle's own reader, EPUB in KOReader.
+İndirilenler	Downloads
+Henüz kitap indirilmedi.	No books downloaded yet.
+Daha fazla	More
+“%s” · %d kitap%s	“%s” · %d%s books
+Sonuç bulunamadı.\nBaşka bir başlık ya da yazar adı deneyin.	No results.\nTry another title or author name.
+Yazar bilinmiyor	Unknown author
+Kitap	Book
+Biçim: %s	Format: %s
+Kaynak: gutenberg.org/ebooks/%d	Source: gutenberg.org/ebooks/%d
+İndir	Download
+İndiriliyor…\nGutenberg yavaş olabilir, lütfen bekleyin.	Downloading…\nGutenberg can be slow, please wait.
+Kitaplığa eklendi:\n%s	Added to the library:\n%s
+İndirilemedi.\nWi-Fi bağlantısını kontrol edip yeniden deneyin.	Download failed.\nCheck the Wi-Fi connection and try again.
+Yeniden dene	Try again
+Bağlantı yok	No connection
+Kitap ara (başlık veya yazar)	Search books (title or author)
+Gutenberg'e ulaşılamadı. Wi-Fi bağlantısını kontrol edip yeniden deneyin.	Could not reach Gutenberg. Check the Wi-Fi connection and try again.
+Kaynaklar	Sources
+Kaynağa dokunun: haberlerini açar. ☑ / ☐: ön sayfada gösterilsin mi.	Tap a source to open its news. ☑ / ☐: show on the front page.
+%s yükleniyor… (%d)	Loading %s… (%d)
+%s · Manşetler · Sayfa %d/%d	%s · Headlines · Page %d/%d
+Ön sayfada kaynak yok.\nKaynaklar'dan seçin.	No sources on the front page.\nChoose them in Sources.
+Teknoloji	Technology
+Türkiye	Türkiye
+Tümü	All
+Son dakika	Breaking news
+%%%d · şarj oluyor	%d%% · charging
+Pil	Battery
+Pil sıcaklığı	Battery temperature
+%s boş / %s	%s free / %s
+Depolama	Storage
+Bellek	Memory
+bağlı değil	not connected
+Yazılım	Firmware
+Çekirdek	Kernel
+Açık kalma süresi	Uptime
+Güvenlik duvarı	Firewall
+Kapalı (gelen bağlantılara açık)	OFF (open to incoming connections)
+Açık (gelen bağlantılar engelli)	ON (incoming connections blocked)
+Çalışıyor · port %d	Running · port %d
+Çalışmıyor	Not running
+SSH sunucusu	SSH server
+Sistem Bilgisi	System Info
+%ld gün %ld sa	%ld d %ld h
+%ld sa %ld dk	%ld h %ld min
+%ld dk	%ld min
+Sunucu başlatılamadı	Could not start the server
+Wi-Fi kapalı	Wi-Fi is off
+Wi-Fi'yi açın; adres burada görünecek.	Turn on Wi-Fi; the address will appear here.
+Tarayıcıda bu adresi açın:	Open this address in a browser:
+Çok fazla yanlış PIN denendi.\nGüvenlik için yükleme durduruldu.	Too many wrong PINs.\nUploading stopped for security.
+Kilidi aç (yeni PIN)	Unlock (new PIN)
+Telefon ya da bilgisayar aynı Wi-Fi ağında olmalı. Sayfada PIN'i girin, kitapları seçip Gönder'e basın. Uygulamayı kapatınca sunucu durur.	The phone or computer must be on the same Wi-Fi network. Enter the PIN on the page, choose the books and send them. Closing the app stops the server.
+Alınıyor: %s	Receiving: %s
+%s / %s  (%%%d)	%s / %s  (%d%%)
+Dosya bekleniyor…	Waiting for files…
+Bu oturumda gelenler (%d)	Received this session (%d)
+Bu oturumda henüz dosya gelmedi	No files received this session yet
+Wi-Fi ile Yükle	Upload via Wi-Fi
+%d kez yanlış PIN girildi: yeni PIN üretildi.	Wrong PIN entered %d times: a new PIN was generated.
+Alındı: %s	Received: %s

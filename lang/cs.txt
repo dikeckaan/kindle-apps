@@ -260,3 +260,71 @@ boşluk	mezera
 Şubat	února
 ⚑ Açık	⚑ Zap.
 ⚑ Kapalı	⚑ Vyp.
+E-Kitap	E-knihy
+Ara	Hledat
+Project Gutenberg'deki telifsiz kitaplar	Volné knihy z Project Gutenberg
+70.000'den fazla ücretsiz e-kitap. Arama İngilizce başlık ve yazar adlarıyla en iyi sonucu verir.	Přes 70 000 e-knih zdarma. Hledání funguje nejlépe s anglickými názvy a jmény autorů.
+Kitap ara	Hledat knihy
+Biçim:	Formát:
+AZW3 Kindle'ın kendi okuyucusunda, EPUB KOReader'da açılır.	AZW3 se otevře ve čtečce Kindlu, EPUB v KOReaderu.
+İndirilenler	Stažené
+Henüz kitap indirilmedi.	Zatím žádné stažené knihy.
+Daha fazla	Další
+“%s” · %d kitap%s	„%s“ · výsledky: %d%s
+Sonuç bulunamadı.\nBaşka bir başlık ya da yazar adı deneyin.	Žádné výsledky.\nZkuste jiný název nebo autora.
+Yazar bilinmiyor	Neznámý autor
+Kitap	Kniha
+Biçim: %s	Formát: %s
+Kaynak: gutenberg.org/ebooks/%d	Zdroj: gutenberg.org/ebooks/%d
+İndir	Stáhnout
+İndiriliyor…\nGutenberg yavaş olabilir, lütfen bekleyin.	Stahování…\nGutenberg může být pomalý, čekejte prosím.
+Kitaplığa eklendi:\n%s	Přidáno do knihovny:\n%s
+İndirilemedi.\nWi-Fi bağlantısını kontrol edip yeniden deneyin.	Stažení se nezdařilo.\nZkontrolujte připojení Wi-Fi a zkuste znovu.
+Yeniden dene	Zkusit znovu
+Bağlantı yok	Bez připojení
+Kitap ara (başlık veya yazar)	Hledat knihy (název nebo autor)
+Gutenberg'e ulaşılamadı. Wi-Fi bağlantısını kontrol edip yeniden deneyin.	Gutenberg je nedostupný. Zkontrolujte připojení Wi-Fi a zkuste znovu.
+Kaynaklar	Zdroje
+Kaynağa dokunun: haberlerini açar. ☑ / ☐: ön sayfada gösterilsin mi.	Klepnutím na zdroj otevřete jeho zprávy. ☑ / ☐: zobrazit na titulní straně.
+%s yükleniyor… (%d)	Načítání: %s… (%d)
+%s · Manşetler · Sayfa %d/%d	%s · Titulky · Strana %d/%d
+Ön sayfada kaynak yok.\nKaynaklar'dan seçin.	Na titulní straně nejsou zdroje.\nVyberte je ve Zdrojích.
+Teknoloji	Technologie
+Türkiye	Turecko
+Tümü	Vše
+Son dakika	Aktuálně
+%%%d · şarj oluyor	%d %% · nabíjí se
+Pil	Baterie
+Pil sıcaklığı	Teplota baterie
+%s boş / %s	%s volno / %s
+Depolama	Úložiště
+Bellek	Paměť
+bağlı değil	nepřipojeno
+Yazılım	Firmware
+Çekirdek	Jádro
+Açık kalma süresi	Doba provozu
+Güvenlik duvarı	Firewall
+Kapalı (gelen bağlantılara açık)	VYPNUTO (otevřeno příchozím spojením)
+Açık (gelen bağlantılar engelli)	ZAPNUTO (příchozí spojení blokována)
+Çalışıyor · port %d	Běží · port %d
+Çalışmıyor	Neběží
+SSH sunucusu	SSH server
+Sistem Bilgisi	Informace o systému
+%ld gün %ld sa	%ld d %ld h
+%ld sa %ld dk	%ld h %ld min
+%ld dk	%ld min
+Sunucu başlatılamadı	Server se nepodařilo spustit
+Wi-Fi kapalı	Wi-Fi vypnuto
+Wi-Fi'yi açın; adres burada görünecek.	Zapněte Wi-Fi; adresa se zobrazí zde.
+Tarayıcıda bu adresi açın:	Otevřete tuto adresu v prohlížeči:
+Çok fazla yanlış PIN denendi.\nGüvenlik için yükleme durduruldu.	Příliš mnoho chybných PINů.\nNahrávání zastaveno z bezpečnostních důvodů.
+Kilidi aç (yeni PIN)	Odemknout (nový PIN)
+Telefon ya da bilgisayar aynı Wi-Fi ağında olmalı. Sayfada PIN'i girin, kitapları seçip Gönder'e basın. Uygulamayı kapatınca sunucu durur.	Telefon nebo počítač musí být ve stejné síti Wi-Fi. Zadejte PIN na stránce, vyberte knihy a odešlete je. Zavřením aplikace se server zastaví.
+Alınıyor: %s	Přijímání: %s
+%s / %s  (%%%d)	%s / %s  (%d %%)
+Dosya bekleniyor…	Čekání na soubory…
+Bu oturumda gelenler (%d)	Přijato v této relaci (%d)
+Bu oturumda henüz dosya gelmedi	V této relaci zatím žádné soubory
+Wi-Fi ile Yükle	Nahrát přes Wi-Fi
+%d kez yanlış PIN girildi: yeni PIN üretildi.	Chybný PIN (%d×): vytvořen nový PIN.
+Alındı: %s	Přijato: %s

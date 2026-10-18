@@ -260,3 +260,71 @@ boşluk	Leerzeichen
 Şubat	Februar
 ⚑ Açık	⚑ An
 ⚑ Kapalı	⚑ Aus
+E-Kitap	E-Books
+Ara	Suchen
+Project Gutenberg'deki telifsiz kitaplar	Freie Bücher von Project Gutenberg
+70.000'den fazla ücretsiz e-kitap. Arama İngilizce başlık ve yazar adlarıyla en iyi sonucu verir.	Über 70.000 kostenlose E-Books. Die Suche funktioniert am besten mit englischen Titeln und Autorennamen.
+Kitap ara	Bücher suchen
+Biçim:	Format:
+AZW3 Kindle'ın kendi okuyucusunda, EPUB KOReader'da açılır.	AZW3 öffnet im Kindle-Reader, EPUB in KOReader.
+İndirilenler	Downloads
+Henüz kitap indirilmedi.	Noch keine Bücher geladen.
+Daha fazla	Mehr
+“%s” · %d kitap%s	„%s“ · %d%s Bücher
+Sonuç bulunamadı.\nBaşka bir başlık ya da yazar adı deneyin.	Keine Ergebnisse.\nAnderen Titel oder Autor versuchen.
+Yazar bilinmiyor	Autor unbekannt
+Kitap	Buch
+Biçim: %s	Format: %s
+Kaynak: gutenberg.org/ebooks/%d	Quelle: gutenberg.org/ebooks/%d
+İndir	Laden
+İndiriliyor…\nGutenberg yavaş olabilir, lütfen bekleyin.	Wird geladen…\nGutenberg kann langsam sein, bitte warten.
+Kitaplığa eklendi:\n%s	Zur Bibliothek hinzugefügt:\n%s
+İndirilemedi.\nWi-Fi bağlantısını kontrol edip yeniden deneyin.	Download fehlgeschlagen.\nWLAN-Verbindung prüfen und erneut versuchen.
+Yeniden dene	Erneut versuchen
+Bağlantı yok	Keine Verbindung
+Kitap ara (başlık veya yazar)	Bücher suchen (Titel oder Autor)
+Gutenberg'e ulaşılamadı. Wi-Fi bağlantısını kontrol edip yeniden deneyin.	Gutenberg nicht erreichbar. WLAN-Verbindung prüfen und erneut versuchen.
+Kaynaklar	Quellen
+Kaynağa dokunun: haberlerini açar. ☑ / ☐: ön sayfada gösterilsin mi.	Quelle antippen: öffnet ihre Nachrichten. ☑ / ☐: auf der Startseite zeigen.
+%s yükleniyor… (%d)	%s lädt… (%d)
+%s · Manşetler · Sayfa %d/%d	%s · Schlagzeilen · Seite %d/%d
+Ön sayfada kaynak yok.\nKaynaklar'dan seçin.	Keine Quellen auf der Startseite.\nUnter Quellen auswählen.
+Teknoloji	Technik
+Türkiye	Türkei
+Tümü	Alle
+Son dakika	Eilmeldungen
+%%%d · şarj oluyor	%d %% · lädt
+Pil	Akku
+Pil sıcaklığı	Akkutemperatur
+%s boş / %s	%s frei / %s
+Depolama	Speicher
+Bellek	Arbeitsspeicher
+bağlı değil	nicht verbunden
+Yazılım	Firmware
+Çekirdek	Kernel
+Açık kalma süresi	Laufzeit
+Güvenlik duvarı	Firewall
+Kapalı (gelen bağlantılara açık)	AUS (offen für eingehende Verbindungen)
+Açık (gelen bağlantılar engelli)	AN (eingehende Verbindungen blockiert)
+Çalışıyor · port %d	Läuft · Port %d
+Çalışmıyor	Läuft nicht
+SSH sunucusu	SSH-Server
+Sistem Bilgisi	Systeminfo
+%ld gün %ld sa	%ld T. %ld Std.
+%ld sa %ld dk	%ld Std. %ld Min.
+%ld dk	%ld Min.
+Sunucu başlatılamadı	Server startet nicht
+Wi-Fi kapalı	WLAN aus
+Wi-Fi'yi açın; adres burada görünecek.	WLAN einschalten; die Adresse erscheint hier.
+Tarayıcıda bu adresi açın:	Diese Adresse im Browser öffnen:
+Çok fazla yanlış PIN denendi.\nGüvenlik için yükleme durduruldu.	Zu viele falsche PINs.\nUpload aus Sicherheitsgründen gestoppt.
+Kilidi aç (yeni PIN)	Entsperren (neue PIN)
+Telefon ya da bilgisayar aynı Wi-Fi ağında olmalı. Sayfada PIN'i girin, kitapları seçip Gönder'e basın. Uygulamayı kapatınca sunucu durur.	Handy oder Computer muss im selben WLAN sein. PIN auf der Seite eingeben, Bücher wählen und senden. Beim Schließen der App stoppt der Server.
+Alınıyor: %s	Empfange: %s
+%s / %s  (%%%d)	%s / %s  (%d %%)
+Dosya bekleniyor…	Warte auf Dateien…
+Bu oturumda gelenler (%d)	In dieser Sitzung empfangen (%d)
+Bu oturumda henüz dosya gelmedi	In dieser Sitzung noch keine Dateien
+Wi-Fi ile Yükle	Per WLAN hochladen
+%d kez yanlış PIN girildi: yeni PIN üretildi.	%d-mal falsche PIN: neue PIN erzeugt.
+Alındı: %s	Empfangen: %s

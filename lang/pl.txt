@@ -260,3 +260,71 @@ boşluk	spacja
 Şubat	lutego
 ⚑ Açık	⚑ Wł.
 ⚑ Kapalı	⚑ Wył.
+E-Kitap	E-booki
+Ara	Szukaj
+Project Gutenberg'deki telifsiz kitaplar	Wolne książki z Project Gutenberg
+70.000'den fazla ücretsiz e-kitap. Arama İngilizce başlık ve yazar adlarıyla en iyi sonucu verir.	Ponad 70 000 darmowych e-booków. Wyszukiwanie działa najlepiej z angielskimi tytułami i nazwiskami autorów.
+Kitap ara	Szukaj książek
+Biçim:	Format:
+AZW3 Kindle'ın kendi okuyucusunda, EPUB KOReader'da açılır.	AZW3 otwiera się w czytniku Kindle, EPUB w KOReader.
+İndirilenler	Pobrane
+Henüz kitap indirilmedi.	Nie pobrano jeszcze książek.
+Daha fazla	Więcej
+“%s” · %d kitap%s	„%s” · wyniki: %d%s
+Sonuç bulunamadı.\nBaşka bir başlık ya da yazar adı deneyin.	Brak wyników.\nSpróbuj innego tytułu lub autora.
+Yazar bilinmiyor	Autor nieznany
+Kitap	Książka
+Biçim: %s	Format: %s
+Kaynak: gutenberg.org/ebooks/%d	Źródło: gutenberg.org/ebooks/%d
+İndir	Pobierz
+İndiriliyor…\nGutenberg yavaş olabilir, lütfen bekleyin.	Pobieranie…\nGutenberg bywa wolny, proszę czekać.
+Kitaplığa eklendi:\n%s	Dodano do biblioteki:\n%s
+İndirilemedi.\nWi-Fi bağlantısını kontrol edip yeniden deneyin.	Nie udało się pobrać.\nSprawdź połączenie Wi-Fi i spróbuj ponownie.
+Yeniden dene	Spróbuj ponownie
+Bağlantı yok	Brak połączenia
+Kitap ara (başlık veya yazar)	Szukaj książek (tytuł lub autor)
+Gutenberg'e ulaşılamadı. Wi-Fi bağlantısını kontrol edip yeniden deneyin.	Brak dostępu do Gutenberg. Sprawdź połączenie Wi-Fi i spróbuj ponownie.
+Kaynaklar	Źródła
+Kaynağa dokunun: haberlerini açar. ☑ / ☐: ön sayfada gösterilsin mi.	Dotknij źródła, by otworzyć wiadomości. ☑ / ☐: pokaż na stronie głównej.
+%s yükleniyor… (%d)	Ładowanie: %s… (%d)
+%s · Manşetler · Sayfa %d/%d	%s · Nagłówki · Strona %d/%d
+Ön sayfada kaynak yok.\nKaynaklar'dan seçin.	Brak źródeł na stronie głównej.\nWybierz je w Źródłach.
+Teknoloji	Technologia
+Türkiye	Turcja
+Tümü	Wszystko
+Son dakika	Z ostatniej chwili
+%%%d · şarj oluyor	%d %% · ładowanie
+Pil	Bateria
+Pil sıcaklığı	Temperatura baterii
+%s boş / %s	%s wolne / %s
+Depolama	Pamięć masowa
+Bellek	Pamięć RAM
+bağlı değil	brak połączenia
+Yazılım	Oprogramowanie
+Çekirdek	Jądro
+Açık kalma süresi	Czas pracy
+Güvenlik duvarı	Zapora
+Kapalı (gelen bağlantılara açık)	WYŁĄCZONA (otwarta na połączenia przychodzące)
+Açık (gelen bağlantılar engelli)	WŁĄCZONA (połączenia przychodzące zablokowane)
+Çalışıyor · port %d	Działa · port %d
+Çalışmıyor	Nie działa
+SSH sunucusu	Serwer SSH
+Sistem Bilgisi	Informacje o systemie
+%ld gün %ld sa	%ld d. %ld godz.
+%ld sa %ld dk	%ld godz. %ld min
+%ld dk	%ld min
+Sunucu başlatılamadı	Nie udało się uruchomić serwera
+Wi-Fi kapalı	Wi-Fi wyłączone
+Wi-Fi'yi açın; adres burada görünecek.	Włącz Wi-Fi; adres pojawi się tutaj.
+Tarayıcıda bu adresi açın:	Otwórz ten adres w przeglądarce:
+Çok fazla yanlış PIN denendi.\nGüvenlik için yükleme durduruldu.	Zbyt wiele błędnych PIN-ów.\nWysyłanie wstrzymane dla bezpieczeństwa.
+Kilidi aç (yeni PIN)	Odblokuj (nowy PIN)
+Telefon ya da bilgisayar aynı Wi-Fi ağında olmalı. Sayfada PIN'i girin, kitapları seçip Gönder'e basın. Uygulamayı kapatınca sunucu durur.	Telefon lub komputer musi być w tej samej sieci Wi-Fi. Wpisz PIN na stronie, wybierz książki i wyślij. Zamknięcie aplikacji zatrzymuje serwer.
+Alınıyor: %s	Odbieranie: %s
+%s / %s  (%%%d)	%s / %s  (%d %%)
+Dosya bekleniyor…	Oczekiwanie na pliki…
+Bu oturumda gelenler (%d)	Odebrane w tej sesji (%d)
+Bu oturumda henüz dosya gelmedi	Brak plików w tej sesji
+Wi-Fi ile Yükle	Wyślij przez Wi-Fi
+%d kez yanlış PIN girildi: yeni PIN üretildi.	Błędny PIN (%d razy): wygenerowano nowy PIN.
+Alındı: %s	Odebrano: %s

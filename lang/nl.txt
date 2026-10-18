@@ -260,3 +260,71 @@ boşluk	spatie
 Şubat	februari
 ⚑ Açık	⚑ Aan
 ⚑ Kapalı	⚑ Uit
+E-Kitap	E-books
+Ara	Zoeken
+Project Gutenberg'deki telifsiz kitaplar	Vrije boeken van Project Gutenberg
+70.000'den fazla ücretsiz e-kitap. Arama İngilizce başlık ve yazar adlarıyla en iyi sonucu verir.	Meer dan 70.000 gratis e-books. Zoeken werkt het best met Engelse titels en auteursnamen.
+Kitap ara	Boeken zoeken
+Biçim:	Formaat:
+AZW3 Kindle'ın kendi okuyucusunda, EPUB KOReader'da açılır.	AZW3 opent in de eigen lezer van de Kindle, EPUB in KOReader.
+İndirilenler	Downloads
+Henüz kitap indirilmedi.	Nog geen boeken gedownload.
+Daha fazla	Meer
+“%s” · %d kitap%s	‘%s’ · %d%s boeken
+Sonuç bulunamadı.\nBaşka bir başlık ya da yazar adı deneyin.	Geen resultaten.\nProbeer een andere titel of auteur.
+Yazar bilinmiyor	Auteur onbekend
+Kitap	Boek
+Biçim: %s	Formaat: %s
+Kaynak: gutenberg.org/ebooks/%d	Bron: gutenberg.org/ebooks/%d
+İndir	Downloaden
+İndiriliyor…\nGutenberg yavaş olabilir, lütfen bekleyin.	Downloaden…\nGutenberg kan traag zijn, even geduld.
+Kitaplığa eklendi:\n%s	Toegevoegd aan bibliotheek:\n%s
+İndirilemedi.\nWi-Fi bağlantısını kontrol edip yeniden deneyin.	Downloaden mislukt.\nControleer de wifi-verbinding en probeer opnieuw.
+Yeniden dene	Opnieuw
+Bağlantı yok	Geen verbinding
+Kitap ara (başlık veya yazar)	Boeken zoeken (titel of auteur)
+Gutenberg'e ulaşılamadı. Wi-Fi bağlantısını kontrol edip yeniden deneyin.	Gutenberg niet bereikbaar. Controleer de wifi-verbinding en probeer opnieuw.
+Kaynaklar	Bronnen
+Kaynağa dokunun: haberlerini açar. ☑ / ☐: ön sayfada gösterilsin mi.	Tik op een bron om het nieuws te openen. ☑ / ☐: tonen op de voorpagina.
+%s yükleniyor… (%d)	%s laden… (%d)
+%s · Manşetler · Sayfa %d/%d	%s · Voorpagina · Pagina %d/%d
+Ön sayfada kaynak yok.\nKaynaklar'dan seçin.	Geen bronnen op de voorpagina.\nKies ze bij Bronnen.
+Teknoloji	Technologie
+Türkiye	Turkije
+Tümü	Alles
+Son dakika	Laatste nieuws
+%%%d · şarj oluyor	%d%% · laden
+Pil	Batterij
+Pil sıcaklığı	Batterijtemperatuur
+%s boş / %s	%s vrij / %s
+Depolama	Opslag
+Bellek	Geheugen
+bağlı değil	niet verbonden
+Yazılım	Firmware
+Çekirdek	Kernel
+Açık kalma süresi	Uptime
+Güvenlik duvarı	Firewall
+Kapalı (gelen bağlantılara açık)	UIT (open voor inkomende verbindingen)
+Açık (gelen bağlantılar engelli)	AAN (inkomende verbindingen geblokkeerd)
+Çalışıyor · port %d	Actief · poort %d
+Çalışmıyor	Niet actief
+SSH sunucusu	SSH-server
+Sistem Bilgisi	Systeeminfo
+%ld gün %ld sa	%ld d %ld u
+%ld sa %ld dk	%ld u %ld min
+%ld dk	%ld min
+Sunucu başlatılamadı	Server starten mislukt
+Wi-Fi kapalı	Wifi uit
+Wi-Fi'yi açın; adres burada görünecek.	Zet wifi aan; het adres verschijnt hier.
+Tarayıcıda bu adresi açın:	Open dit adres in een browser:
+Çok fazla yanlış PIN denendi.\nGüvenlik için yükleme durduruldu.	Te vaak een verkeerde pincode.\nUploaden gestopt voor veiligheid.
+Kilidi aç (yeni PIN)	Ontgrendelen (nieuwe pincode)
+Telefon ya da bilgisayar aynı Wi-Fi ağında olmalı. Sayfada PIN'i girin, kitapları seçip Gönder'e basın. Uygulamayı kapatınca sunucu durur.	Telefoon of computer moet op hetzelfde wifi-netwerk zitten. Voer de pincode in op de pagina, kies de boeken en verstuur ze. Sluit je de app, dan stopt de server.
+Alınıyor: %s	Ontvangen: %s
+%s / %s  (%%%d)	%s / %s  (%d%%)
+Dosya bekleniyor…	Wachten op bestanden…
+Bu oturumda gelenler (%d)	Ontvangen deze sessie (%d)
+Bu oturumda henüz dosya gelmedi	Nog geen bestanden deze sessie
+Wi-Fi ile Yükle	Uploaden via wifi
+%d kez yanlış PIN girildi: yeni PIN üretildi.	%d keer verkeerde pincode: nieuwe pincode gemaakt.
+Alındı: %s	Ontvangen: %s

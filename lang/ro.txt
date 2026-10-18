@@ -260,3 +260,71 @@ boşluk	spațiu
 Şubat	februarie
 ⚑ Açık	⚑ Pornit
 ⚑ Kapalı	⚑ Oprit
+E-Kitap	Cărți electronice
+Ara	Caută
+Project Gutenberg'deki telifsiz kitaplar	Cărți libere de la Project Gutenberg
+70.000'den fazla ücretsiz e-kitap. Arama İngilizce başlık ve yazar adlarıyla en iyi sonucu verir.	Peste 70.000 de cărți electronice gratuite. Căutarea merge cel mai bine cu titluri și autori în engleză.
+Kitap ara	Caută cărți
+Biçim:	Format:
+AZW3 Kindle'ın kendi okuyucusunda, EPUB KOReader'da açılır.	AZW3 se deschide în cititorul Kindle, EPUB în KOReader.
+İndirilenler	Descărcări
+Henüz kitap indirilmedi.	Nicio carte descărcată încă.
+Daha fazla	Mai multe
+“%s” · %d kitap%s	„%s” · %d%s cărți
+Sonuç bulunamadı.\nBaşka bir başlık ya da yazar adı deneyin.	Niciun rezultat.\nÎncercați alt titlu sau autor.
+Yazar bilinmiyor	Autor necunoscut
+Kitap	Carte
+Biçim: %s	Format: %s
+Kaynak: gutenberg.org/ebooks/%d	Sursa: gutenberg.org/ebooks/%d
+İndir	Descarcă
+İndiriliyor…\nGutenberg yavaş olabilir, lütfen bekleyin.	Se descarcă…\nGutenberg poate fi lent, așteptați.
+Kitaplığa eklendi:\n%s	Adăugată în bibliotecă:\n%s
+İndirilemedi.\nWi-Fi bağlantısını kontrol edip yeniden deneyin.	Descărcare eșuată.\nVerificați conexiunea Wi-Fi și reîncercați.
+Yeniden dene	Reîncearcă
+Bağlantı yok	Fără conexiune
+Kitap ara (başlık veya yazar)	Caută cărți (titlu sau autor)
+Gutenberg'e ulaşılamadı. Wi-Fi bağlantısını kontrol edip yeniden deneyin.	Gutenberg nu răspunde. Verificați conexiunea Wi-Fi și reîncercați.
+Kaynaklar	Surse
+Kaynağa dokunun: haberlerini açar. ☑ / ☐: ön sayfada gösterilsin mi.	Atingeți o sursă pentru a-i deschide știrile. ☑ / ☐: afișare pe prima pagină.
+%s yükleniyor… (%d)	Se încarcă %s… (%d)
+%s · Manşetler · Sayfa %d/%d	%s · Titluri · Pagina %d/%d
+Ön sayfada kaynak yok.\nKaynaklar'dan seçin.	Nicio sursă pe prima pagină.\nAlegeți din Surse.
+Teknoloji	Tehnologie
+Türkiye	Turcia
+Tümü	Toate
+Son dakika	Ultima oră
+%%%d · şarj oluyor	%d %% · se încarcă
+Pil	Baterie
+Pil sıcaklığı	Temperatura bateriei
+%s boş / %s	%s liber / %s
+Depolama	Stocare
+Bellek	Memorie
+bağlı değil	neconectat
+Yazılım	Firmware
+Çekirdek	Kernel
+Açık kalma süresi	Timp de funcționare
+Güvenlik duvarı	Firewall
+Kapalı (gelen bağlantılara açık)	OPRIT (deschis conexiunilor de intrare)
+Açık (gelen bağlantılar engelli)	PORNIT (conexiunile de intrare blocate)
+Çalışıyor · port %d	Pornit · port %d
+Çalışmıyor	Oprit
+SSH sunucusu	Server SSH
+Sistem Bilgisi	Informații sistem
+%ld gün %ld sa	%ld z %ld h
+%ld sa %ld dk	%ld h %ld min
+%ld dk	%ld min
+Sunucu başlatılamadı	Serverul nu a pornit
+Wi-Fi kapalı	Wi-Fi oprit
+Wi-Fi'yi açın; adres burada görünecek.	Porniți Wi-Fi; adresa va apărea aici.
+Tarayıcıda bu adresi açın:	Deschideți această adresă în browser:
+Çok fazla yanlış PIN denendi.\nGüvenlik için yükleme durduruldu.	Prea multe PIN-uri greșite.\nÎncărcarea a fost oprită din motive de securitate.
+Kilidi aç (yeni PIN)	Deblocare (PIN nou)
+Telefon ya da bilgisayar aynı Wi-Fi ağında olmalı. Sayfada PIN'i girin, kitapları seçip Gönder'e basın. Uygulamayı kapatınca sunucu durur.	Telefonul sau computerul trebuie să fie în aceeași rețea Wi-Fi. Introduceți PIN-ul pe pagină, alegeți cărțile și trimiteți-le. Închiderea aplicației oprește serverul.
+Alınıyor: %s	Se primește: %s
+%s / %s  (%%%d)	%s / %s  (%d %%)
+Dosya bekleniyor…	Se așteaptă fișiere…
+Bu oturumda gelenler (%d)	Primite în această sesiune (%d)
+Bu oturumda henüz dosya gelmedi	Niciun fișier primit în această sesiune
+Wi-Fi ile Yükle	Încărcare prin Wi-Fi
+%d kez yanlış PIN girildi: yeni PIN üretildi.	PIN greșit de %d ori: s-a generat un PIN nou.
+Alındı: %s	Primit: %s
