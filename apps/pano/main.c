@@ -36,7 +36,8 @@ static PanoEvent events[8];
 static int n_events;
 static PanoPrayer prayer;
 static int have_prayer;
-static long t_news, t_wx, t_fx; /* last fetch attempts */
+static long t_news, t_wx, t_fx, t_otd, t_prayer; /* last fetch attempts: failures are retried after 30 min at most */
+static int quit_requested;
 static int last_day = -1, shown_min = -1, shown_hour = -1;
 static KuiRect r_clock, r_news, r_prayer, r_settings;
 
@@ -176,14 +177,16 @@ static void load_daily(int fetch)
 	char name[96], url[300];
 	snprintf(name, sizeof name, "otd_%s_%02d%02d.json", kui_lang(), tm.tm_mon + 1, tm.tm_mday);
 	n_events = read_cache("pano", name, buf, sizeof buf, NULL) > 0 ? pano_parse_onthisday(buf, events, 8) : 0;
-	if (fetch && !n_events && opt(OPT_HISTORY)) {
+	if (fetch && !n_events && opt(OPT_HISTORY) && time(NULL) - t_otd > 30 * 60) {
+		t_otd = (long) time(NULL);
 		pano_onthisday_url(kui_lang(), tm.tm_mon + 1, tm.tm_mday, url, sizeof url);
 		if (fetch_to(url, "pano", name, valid_otd))
 			n_events = read_cache("pano", name, buf, sizeof buf, NULL) > 0 ? pano_parse_onthisday(buf, events, 8) : 0;
 	}
 	snprintf(name, sizeof name, "prayer_%.4f_%.4f_%04d%02d%02d.json", city.lat, city.lon, tm.tm_year + 1900, tm.tm_mon + 1, tm.tm_mday);
 	have_prayer = read_cache("pano", name, buf, sizeof buf, NULL) > 0 && pano_parse_prayer(buf, &prayer) == 0;
-	if (fetch && !have_prayer && opt(OPT_PRAYER)) {
+	if (fetch && !have_prayer && opt(OPT_PRAYER) && time(NULL) - t_prayer > 30 * 60) {
+		t_prayer = (long) time(NULL);
 		pano_prayer_url(city.lat, city.lon, tm.tm_mday, tm.tm_mon + 1, tm.tm_year + 1900, url, sizeof url);
 		if (fetch_to(url, "pano", name, valid_prayer))
 			have_prayer = read_cache("pano", name, buf, sizeof buf, NULL) > 0 && pano_parse_prayer(buf, &prayer) == 0;
@@ -471,7 +474,10 @@ static void settings_screen(void)
 		}
 		full = 0;
 		KuiEvent e = kui_next_event(-1);
-		if (e.type == KUI_EV_QUIT) return;
+		if (e.type == KUI_EV_QUIT) {
+			quit_requested = 1;
+			return;
+		}
 		if (e.type == KUI_EV_WAKE) { full = 1; continue; }
 		if (e.type != KUI_EV_TAP) continue;
 		if (kui_topbar_hit(w, 0, e.x, e.y) == KUI_BTN_EXIT) return;
@@ -490,7 +496,10 @@ static void settings_screen(void)
 			kui_flush(1);
 			for (;;) {
 				KuiEvent f = kui_next_event(-1);
-				if (f.type == KUI_EV_QUIT) return;
+				if (f.type == KUI_EV_QUIT) {
+					quit_requested = 1;
+					return;
+				}
 				if (f.type != KUI_EV_TAP) continue;
 				if (kui_topbar_hit(w, 0, f.x, f.y) == KUI_BTN_EXIT) break;
 				int id = kui_buttons_hit(bs, ns < 32 ? ns : 32, f.x, f.y);
@@ -574,10 +583,15 @@ int main(void)
 			draw_all(1);
 			continue;
 		}
-		if (e.type != KUI_EV_TAP) continue;
+		if (e.type != KUI_EV_TAP) {
+			if (!kui_input_asleep()) tick(); /* swipes etc. reset the timeout: keep the minute current */
+			continue;
+		}
 		if (e.x < 120 && e.y < 90) break;
 		if (kui_rect_contains(r_settings, e.x, e.y)) {
 			settings_screen();
+			if (quit_requested) break; /* no network waits on the way out */
+			t_otd = t_prayer = 0;      /* options may have been switched on */
 			load_all(1);
 			draw_all(1);
 			continue;
@@ -587,6 +601,7 @@ int main(void)
 			draw_news();
 			kui_flush(0);
 		}
+		if (!kui_input_asleep()) tick(); /* a tap near the minute boundary must not delay the clock a minute */
 	}
 	kui_prevent_sleep(0);
 	news_free(news, n_news);

@@ -536,20 +536,31 @@ static void body_bytes(Conn *c, const char *d, size_t n)
 {
 	UploadServer *s = c->srv;
 	if ((long long) n > c->body_left) n = (size_t) c->body_left;
-	c->body_left -= (long long) n;
-	if (!c->pin_ok && (c->pre_pin += (long long) n) > PRE_PIN_MAX) { /* the PIN must come first */
-		respond(c, 403, NULL);
-		return;
-	}
-	if (s->active == (int) (c - s->c)) s->body_recv += (long long) n;
-	int rc = mp_feed(&c->mp, d, n, &CALLBACKS, c);
-	if (rc == MP_ABORT) {
-		respond(c, c->fail_status ? c->fail_status : 500, NULL);
-		return;
-	}
-	if (rc == MP_ERR) {
-		respond(c, 400, NULL);
-		return;
+	while (n > 0) {
+		/* before the PIN is verified only PRE_PIN_MAX bytes are parsed; the PIN part may end inside this slice,
+		 * so a burst of "PIN + file" in one read still works */
+		size_t k = n;
+		if (!c->pin_ok) {
+			if (c->pre_pin >= PRE_PIN_MAX) { /* the PIN must come first */
+				respond(c, 403, NULL);
+				return;
+			}
+			if ((long long) k > PRE_PIN_MAX - c->pre_pin) k = (size_t) (PRE_PIN_MAX - c->pre_pin);
+			c->pre_pin += (long long) k;
+		}
+		c->body_left -= (long long) k;
+		if (s->active == (int) (c - s->c)) s->body_recv += (long long) k;
+		int rc = mp_feed(&c->mp, d, k, &CALLBACKS, c);
+		if (rc == MP_ABORT) {
+			respond(c, c->fail_status ? c->fail_status : 500, NULL);
+			return;
+		}
+		if (rc == MP_ERR) {
+			respond(c, 400, NULL);
+			return;
+		}
+		d += k;
+		n -= k;
 	}
 	if (c->body_left == 0) finish_upload(c);
 }

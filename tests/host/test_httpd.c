@@ -708,6 +708,44 @@ static void test_e2e(void)
 	rmdir(tmpdir);
 }
 
+/* a browser or curl may send the head alone and then the PIN field and a big file in one burst:
+ * the PIN arrives within the first bytes, so the upload must succeed */
+static void test_e2e_pin_field_then_big_burst(void)
+{
+	char dir[256];
+	snprintf(dir, sizeof dir, "/tmp/test_httpd_burst.XXXXXX");
+	T_ASSERT(mkdtemp(dir) != NULL);
+	UploadServer *s = upload_open(dir, 0, 0);
+	T_ASSERT(s != NULL);
+	if (!s) return;
+	upload_set_limits(s, 5000, 0);
+	static char data[200000];
+	memset(data, 'e', sizeof data);
+	size_t len;
+	char *req = build(NULL, upload_pin(s), "big.epub", data, sizeof data, &len);
+	char *body = strstr(req, "\r\n\r\n") + 4;
+	int fd = connect_to(upload_port(s));
+	fcntl(fd, F_SETFL, fcntl(fd, F_GETFL) & ~O_NONBLOCK);
+	T_ASSERT(send(fd, req, (size_t) (body - req), 0) > 0); /* the head alone */
+	for (int i = 0; i < 10; i++) upload_poll(s, 2);         /* … is read before the body arrives */
+	size_t blen = len - (size_t) (body - req), off = 0;
+	while (off < blen) { /* the whole body at once, while the server is not reading */
+		ssize_t w = send(fd, body + off, blen - off, MSG_DONTWAIT);
+		if (w > 0) off += (size_t) w;
+		else upload_poll(s, 2);
+	}
+	fcntl(fd, F_SETFL, fcntl(fd, F_GETFL) | O_NONBLOCK);
+	T_EQ_INT(exchange(s, fd, "", 0), 200);
+	char path[400];
+	snprintf(path, sizeof path, "%s/big.epub", dir);
+	T_ASSERT(file_equals(path, data, sizeof data));
+	free(req);
+	upload_close(s);
+	char cmd[300];
+	snprintf(cmd, sizeof cmd, "rm -rf '%s'", dir);
+	T_EQ_INT(system(cmd), 0);
+}
+
 /* abuse from someone on the LAN without the PIN must not lock the owner out */
 static void test_e2e_abuse(void)
 {
@@ -841,6 +879,7 @@ int main(void)
 	T_RUN(test_multipart_splits);
 	T_RUN(test_multipart_errors);
 	T_RUN(test_e2e);
+	T_RUN(test_e2e_pin_field_then_big_burst);
 	T_RUN(test_e2e_abuse);
 	T_RUN(test_port_pick);
 	return T_DONE();

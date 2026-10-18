@@ -96,6 +96,12 @@ static void test_dates(void)
 	T_EQ_INT(news_date_epoch("Sun, 18 Oct 2026 14:54:24 Z"), a);
 	T_EQ_INT(news_date_epoch("Sun, 18 Oct 2026 14:54:24  Z"), a); /* Milliyet's double space */
 	T_EQ_INT(news_date_epoch("garbage"), 0);
+	/* hostile or broken dates: refused, never overflowing (32-bit long on the Kindle) */
+	T_EQ_INT(news_date_epoch("Sun, 1 Jan 2147483647 10:00:00 +0300"), 0);
+	T_EQ_INT(news_date_epoch("Sun, 18 Oct 2026 25:61:00 +0300"), 0);
+	T_EQ_INT(news_date_epoch("2026-13-40T10:00:00Z"), 0);
+	news_date_short("Sun, 1 Jan 2147483647 2147483647:2147483647:00", s, sizeof s);
+	T_EQ_STR(s, "");
 }
 
 static void test_local_times(void)

@@ -4,7 +4,7 @@
   "name": "Hava Durumu",
   "author": "Kaan Dikeç",
   "description": "Open-Meteo ile kayıtlı şehirlerin hava durumu ve 7 günlük tahmin",
-  "version": [2026, 10, 9],
+  "version": [2026, 10, 10],
   "dependencies": [],
   "supported_platforms": ["kindlehf"]
 }

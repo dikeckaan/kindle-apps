@@ -172,7 +172,11 @@ static int parse_date(const char *s, int *y, int *mo, int *d, int *hh, int *mm, 
 		if (sscanf(zone + 1, "%2d:%2d", &zh, &zm) != 2 && sscanf(zone + 1, "%2d%2d", &zh, &zm) != 2) zh = zm = 0;
 		*off_min = (zone[0] == '-' ? -1 : 1) * (zh * 60 + zm);
 	}
-	return *y >= 1970 && *mo >= 0 && *mo < 12 && *d >= 1 && *d <= 31 ? 0 : -1;
+	/* plausible dates only: keeps the arithmetic far from overflow on a 32-bit long */
+	return *y >= 1970 && *y <= 2100 && *mo >= 0 && *mo < 12 && *d >= 1 && *d <= 31 && *hh >= 0 && *hh < 24 && *mm >= 0 && *mm < 60 &&
+			       *ss >= 0 && *ss <= 60
+		       ? 0
+		       : -1;
 }
 
 /* days since 1970-01-01 of a civil date (proleptic Gregorian) */
