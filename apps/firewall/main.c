@@ -1,0 +1,90 @@
+/* Güvenlik Duvarı: tells whether incoming connections are blocked and offers to toggle it (runtime only). */
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <fcntl.h>
+#include <unistd.h>
+#include "fw.h"
+#include "kui.h"
+
+/* Kindle's own default rules: root-owned on the read-only rootfs, so nothing writable is ever restored. */
+#define DEFAULT_RULES "/etc/sysconfig/iptables"
+#define SSH_PIDFILE "/tmp/kindle-apps-ssh.pid"
+
+static int wall_down(void)
+{
+	static char out[8192];
+	FILE *p = popen("iptables -S INPUT 2>/dev/null", "r");
+	if (!p) return 0;
+	size_t n = fread(out, 1, sizeof out - 1, p);
+	pclose(p);
+	out[n] = '\0';
+	return fw_is_open_policy(out);
+}
+
+/* Re-opens the port of our SSH server (if it is running) after the default rules were restored.
+ * The port is taken from the live process' command line, never from a writable file. */
+static void keep_ssh_reachable(void)
+{
+	char buf[32], path[64], cmd[96];
+	int fd = open(SSH_PIDFILE, O_RDONLY | O_NOFOLLOW);
+	if (fd < 0) return;
+	ssize_t n = read(fd, buf, sizeof buf - 1);
+	close(fd);
+	if (n <= 0) return;
+	buf[n] = '\0';
+	int pid = atoi(buf);
+	if (pid <= 1) return;
+	snprintf(path, sizeof path, "/proc/%d/cmdline", pid);
+	static char cl[1024];
+	fd = open(path, O_RDONLY);
+	if (fd < 0) return;
+	n = read(fd, cl, sizeof cl - 1);
+	close(fd);
+	if (n <= 0) return;
+	cl[n] = '\0';
+	int port = fw_dropbear_port(cl, (int) n);
+	if (port < 0) return;
+	snprintf(cmd, sizeof cmd, "iptables -I INPUT -p tcp --dport %d -j ACCEPT", port);
+	if (system(cmd) != 0) fprintf(stderr, "could not re-open ssh port %d\n", port);
+}
+
+static void blank(void)
+{
+	kui_fill((KuiRect){ 0, 0, kui_width(), kui_height() }, 255);
+	kui_topbar("Güvenlik Duvarı", NULL);
+}
+
+static void redraw(void)
+{
+	blank();
+	kui_flush(1);
+}
+
+int main(void)
+{
+	if (kui_init("firewall") != 0) return 1;
+	redraw();
+	int down = wall_down();
+	const char *ch_down[] = { "Aç", "Vazgeç" }, *ch_up[] = { "Kapat", "Vazgeç" };
+	int k = down ? kui_dialog("Güvenlik Duvarı", "Şu an KAPALI: gelen bağlantılara izin veriliyor.\nAçılsın mı?", ch_down, 2, redraw)
+		     : kui_dialog("Güvenlik Duvarı", "Şu an AÇIK: gelen bağlantılar engelleniyor.\nKapatılsın mı?", ch_up, 2, redraw);
+	if (k == 0) {
+		int rc;
+		if (down) {
+			rc = system("iptables-restore < " DEFAULT_RULES);
+			if (rc == 0) keep_ssh_reachable();
+		} else {
+			rc = system("iptables -P INPUT ACCEPT && iptables -F INPUT");
+		}
+		int now_down = wall_down();
+		const char *msg = rc != 0 || now_down == down ? "İşlem başarısız oldu."
+				  : now_down ? "Kapatıldı. Kindle yeniden başlayınca tekrar açılır."
+					     : "Açıldı. Gelen bağlantılar engelleniyor.";
+		const char *ok[] = { "Tamam" };
+		redraw();
+		kui_dialog("Güvenlik Duvarı", msg, ok, 1, redraw);
+	}
+	kui_quit();
+	return 0;
+}

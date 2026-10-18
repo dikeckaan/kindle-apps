@@ -24,6 +24,7 @@ TEST_test_chess_game_SRCS := apps/chess/chess_game.c apps/chess/chess_rules.c
 TEST_test_levels_SRCS := apps/chess/levels.c
 TEST_test_sleep_opts_SRCS := apps/sleep/sleep_opts.c
 TEST_test_sha256_SRCS := core/kui/sha256.c
+TEST_test_fw_SRCS := apps/firewall/fw.c
 TEST_test_keyboard_SRCS := core/kui/keyboard.c core/kui/layout.c core/kui/utf8tr.c
 TEST_test_uci_SRCS := apps/chess/uci.c apps/chess/levels.c
 
@@ -50,7 +51,8 @@ $(FBINK_A):
 	$(MAKE) -C third_party/FBInk staticlib KINDLE=1 CROSS_TC=$(CROSS_TC)
 
 # APPS: each entry <name> builds $(OUT)/<name> from APP_<name>_SRCS + kui + FBInk
-APPS := hub game2048 chess sleep
+APPS := hub game2048 chess sleep firewall
+APP_firewall_SRCS := apps/firewall/main.c apps/firewall/fw.c
 APP_sleep_SRCS := apps/sleep/main.c apps/sleep/sleep_opts.c
 APP_chess_SRCS := apps/chess/main.c apps/chess/chess_game.c apps/chess/chess_rules.c apps/chess/levels.c apps/chess/uci.c
 APP_hub_SRCS := core/hub/main.c core/hub/appreg.c
