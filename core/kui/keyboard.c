@@ -20,8 +20,8 @@ static void set_label(KuiKey *k)
 	switch (k->cp) {
 	case KUI_KEY_SHIFT: strcpy(k->label, "⇧"); return;
 	case KUI_KEY_BACK: strcpy(k->label, "⌫"); return;
-	case KUI_KEY_ENTER: strcpy(k->label, "Tamam"); return;
-	case ' ': strcpy(k->label, "boşluk"); return;
+	case KUI_KEY_ENTER: strcpy(k->label, N_("Tamam")); return; /* word labels fit label[8]; widgets.c translates them when drawn */
+	case ' ': strcpy(k->label, N_("boşluk")); return;
 	default: break;
 	}
 	if (k->cp == KUI_KEY_PAGE) return; /* label set by caller */

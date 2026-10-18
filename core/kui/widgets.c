@@ -46,7 +46,8 @@ int kui_dialog(const char *title, const char *msg, const char **choices, int n, 
 	for (;;) {
 		kui_fill(box, 255);
 		kui_frame(box, 6, 0);
-		kui_text((KuiRect){ box.x + 30, box.y + 30, box.w - 60, 110 }, title, KUI_FONT_BOLD, 60, KUI_ALIGN_CENTER, 0);
+		kui_text((KuiRect){ box.x + 30, box.y + 30, box.w - 60, 110 }, title, KUI_FONT_BOLD, kui_fit_px(title, KUI_FONT_BOLD, 60, box.w - 60),
+			 KUI_ALIGN_CENTER, 0);
 		kui_text((KuiRect){ box.x + 30, box.y + 150, box.w - 60, 300 }, msg, KUI_FONT_REG, 46, KUI_ALIGN_CENTER, 0);
 		for (int i = 0; i < n; i++) kui_button(&bs[i], 0);
 		kui_mark_dirty(box);
@@ -87,7 +88,7 @@ static void draw_field(KuiRect field, const char *buf, int secret, const char *h
 	kui_text((KuiRect){ field.x + 24, field.y, field.w - 48, field.h }, line, KUI_FONT_REG, 56, KUI_ALIGN_LEFT, 0);
 	KuiRect h = { field.x, field.y + field.h + 10, field.w, 60 };
 	kui_fill(h, 255);
-	if (hint) kui_text(h, hint, KUI_FONT_REG, 38, KUI_ALIGN_CENTER, 0);
+	if (hint) kui_text(h, hint, KUI_FONT_REG, kui_fit_px(hint, KUI_FONT_REG, 38, h.w), KUI_ALIGN_CENTER, 0);
 	kui_mark_dirty(field);
 	kui_mark_dirty(h);
 }
@@ -97,8 +98,10 @@ static void draw_keys(const KuiKey *keys, int n, KuiRect area)
 	kui_fill(area, 255);
 	for (int i = 0; i < n; i++) {
 		kui_frame(keys[i].r, 3, 0);
-		int px = kui_fit_px(keys[i].label, KUI_FONT_BOLD, keys[i].r.w > 200 ? 40 : 48, keys[i].r.w - 16);
-		kui_text(keys[i].r, keys[i].label, KUI_FONT_BOLD, px, KUI_ALIGN_CENTER, 0);
+		/* "Tamam" and "boşluk" are word labels (N_ in keyboard.c); letters and symbols stay as they are */
+		const char *label = keys[i].cp == KUI_KEY_ENTER || keys[i].cp == ' ' ? T(keys[i].label) : keys[i].label;
+		int px = kui_fit_px(label, KUI_FONT_BOLD, keys[i].r.w > 200 ? 40 : 48, keys[i].r.w - 16);
+		kui_text(keys[i].r, label, KUI_FONT_BOLD, px, KUI_ALIGN_CENTER, 0);
 	}
 	kui_mark_dirty(area);
 }
@@ -110,7 +113,7 @@ int kui_input_text(const char *title, char *buf, int cap, int secret, int min_le
 	KuiRect field = { 40, KUI_TOPBAR_H + 60, w - 80, 140 }, area = { 0, h - 580, w, 560 };
 	KuiKey keys[64];
 	int n = kui_kb_layout(area, (KuiKbPage) page, shift, keys, 64);
-	char hint[64] = "";
+	char hint[128] = "";
 	for (int full = 1;;) {
 		if (full) {
 			kui_fill((KuiRect){ 0, 0, w, h }, 255);
@@ -131,7 +134,7 @@ int kui_input_text(const char *title, char *buf, int cap, int secret, int min_le
 		hint[0] = '\0';
 		if (cp == KUI_KEY_ENTER) {
 			if (kui_utf8_len(buf) >= min_len) return 1;
-			snprintf(hint, sizeof hint, "En az %d karakter girin", min_len);
+			snprintf(hint, sizeof hint, T("En az %d karakter girin"), min_len);
 		} else if (cp == KUI_KEY_BACK) {
 			while (len > 0 && (buf[len - 1] & 0xC0) == 0x80) len--; /* drop continuation bytes */
 			if (len > 0) len--;

@@ -23,7 +23,7 @@ static KuiRect board_r, status_r;
 static KuiButton buttons[2];
 static int selected = -1, last_from = -1, last_to = -1;
 static int drawn[64]; /* look of each square as drawn; -1 = unknown */
-static char status_drawn[96];
+static char status_drawn[160];
 
 static long now_ms(void)
 {
@@ -98,19 +98,20 @@ static void draw_square(int sq)
 static void status_text(char *out, int cap)
 {
 	Result res = game_result(&game);
-	if (res != RES_ONGOING) snprintf(out, (size_t) cap, "%s", result_text(res, game.pos.side));
-	else if (thinking) snprintf(out, (size_t) cap, "Düşünüyor… (%s)", level_get(game.level)->name);
-	else if (chess_in_check(&game.pos, game.pos.side)) snprintf(out, (size_t) cap, "Şah! Sıra: %s", game.pos.side ? "Siyah" : "Beyaz");
-	else snprintf(out, (size_t) cap, "Sıra: %s", game.pos.side ? "Siyah" : "Beyaz");
+	const char *color = game.pos.side ? T("Siyah") : T("Beyaz");
+	if (res != RES_ONGOING) snprintf(out, (size_t) cap, "%s", T(result_text(res, game.pos.side)));
+	else if (thinking) snprintf(out, (size_t) cap, T("Düşünüyor… (%s)"), T(level_get(game.level)->name));
+	else if (chess_in_check(&game.pos, game.pos.side)) snprintf(out, (size_t) cap, T("Şah! Sıra: %s"), color);
+	else snprintf(out, (size_t) cap, T("Sıra: %s"), color);
 }
 
 static void draw_status(int force)
 {
-	char s[96];
+	char s[160];
 	status_text(s, sizeof s);
 	if (!force && strcmp(s, status_drawn) == 0) return;
 	kui_fill(status_r, 255);
-	kui_text(status_r, s, KUI_FONT_BOLD, 46, KUI_ALIGN_CENTER, 0);
+	kui_text(status_r, s, KUI_FONT_BOLD, kui_fit_px(s, KUI_FONT_BOLD, 46, status_r.w), KUI_ALIGN_CENTER, 0);
 	kui_mark_dirty(status_r);
 	snprintf(status_drawn, sizeof status_drawn, "%s", s);
 }
@@ -128,13 +129,13 @@ static void draw_all(void)
 {
 	int w = kui_width(), h = kui_height();
 	kui_fill((KuiRect){ 0, 0, w, h }, 255);
-	kui_topbar("Satranç", "Menü");
+	kui_topbar(T("Satranç"), T("Menü"));
 	board_r = (KuiRect){ (w - 8 * SQ) / 2, KUI_TOPBAR_H + 30, 8 * SQ, 8 * SQ };
 	kui_frame((KuiRect){ board_r.x - 4, board_r.y - 4, board_r.w + 8, board_r.h + 8 }, 4, 0);
 	status_r = (KuiRect){ 20, board_r.y + board_r.h + 14, w - 40, 80 };
 	int by = h - 24 - 120, bw = (w - 3 * 40) / 2;
-	buttons[0] = (KuiButton){ { 40, by, bw, 120 }, "Geri al", BTN_UNDO };
-	buttons[1] = (KuiButton){ { 80 + bw, by, bw, 120 }, "Yeni oyun", BTN_NEW };
+	buttons[0] = (KuiButton){ { 40, by, bw, 120 }, T("Geri al"), BTN_UNDO };
+	buttons[1] = (KuiButton){ { 80 + bw, by, bw, 120 }, T("Yeni oyun"), BTN_NEW };
 	for (int i = 0; i < 2; i++) kui_button(&buttons[i], 0);
 	for (int sq = 0; sq < 64; sq++) draw_square(sq);
 	draw_status(1);
@@ -207,8 +208,8 @@ static void engine_cancel(void)
 static void engine_failed(void)
 {
 	engine_shutdown();
-	const char *ch[] = { "Tekrar dene", "İki oyunculu devam" };
-	int k = kui_dialog("Motor yanıt vermedi", "Satranç motoru çalışmadı.", ch, 2, draw_all);
+	const char *ch[] = { T("Tekrar dene"), T("İki oyunculu devam") };
+	int k = kui_dialog(T("Motor yanıt vermedi"), T("Satranç motoru çalışmadı."), ch, 2, draw_all);
 	draw_all();
 	if (k == 1) {
 		game.mode = 2;
@@ -227,8 +228,8 @@ static void check_end(void)
 	Result r = game_result(&game);
 	if (r == RES_ONGOING) return;
 	over = 1;
-	const char *ch[] = { "Yeni oyun", "Tahtaya bak" };
-	int k = kui_dialog("Oyun bitti", result_text(r, game.pos.side), ch, 2, draw_all);
+	const char *ch[] = { T("Yeni oyun"), T("Tahtaya bak") };
+	int k = kui_dialog(T("Oyun bitti"), T(result_text(r, game.pos.side)), ch, 2, draw_all);
 	draw_all();
 	if (k == 0) {
 		game_new(&game, game.mode, game.level, game.human_side);
@@ -253,9 +254,9 @@ static void after_move(void)
 
 static int choose_promotion(void)
 {
-	const char *ch[] = { "Vezir", "Kale", "Fil", "At" };
+	const char *ch[] = { T("Vezir"), T("Kale"), T("Fil"), T("At") };
 	static const int promo[] = { WQ, WR, WB, WN };
-	int k = kui_dialog("Terfi", "Piyon hangi taşa dönüşsün?", ch, 4, draw_all);
+	int k = kui_dialog(T("Terfi"), T("Piyon hangi taşa dönüşsün?"), ch, 4, draw_all);
 	draw_all();
 	return k < 0 ? 0 : promo[k];
 }
@@ -333,15 +334,16 @@ static int setup(int can_resume)
 	for (;;) {
 		const char *start[3];
 		int n = 0, resume_idx = -1;
-		if (can_resume) { resume_idx = n; start[n++] = "Devam et"; }
-		start[n++] = "Tek oyunculu";
-		start[n++] = "İki oyunculu";
-		int k = choose("Satranç", start, n);
+		if (can_resume) { resume_idx = n; start[n++] = T("Devam et"); }
+		start[n++] = T("Tek oyunculu");
+		int two_idx = n;
+		start[n++] = T("İki oyunculu");
+		int k = choose(T("Satranç"), start, n);
 		if (k < 0) return 0;
 		if (k == resume_idx) return 1;
-		if (strcmp(start[k], "İki oyunculu") == 0) {
-			const char *fl[] = { "Tahta sabit", "Her hamlede tahtayı çevir" };
-			int f = choose("İki oyunculu", fl, 2);
+		if (k == two_idx) {
+			const char *fl[] = { T("Tahta sabit"), T("Her hamlede tahtayı çevir") };
+			int f = choose(T("İki oyunculu"), fl, 2);
 			if (f == -2) return 0;
 			if (f < 0) continue;
 			game_new(&game, 2, 3, 0);
@@ -349,12 +351,12 @@ static int setup(int can_resume)
 			return 1;
 		}
 		const char *lv[LEVEL_COUNT];
-		for (int i = 0; i < LEVEL_COUNT; i++) lv[i] = level_get(i + 1)->name;
-		int l = choose("Zorluk", lv, LEVEL_COUNT);
+		for (int i = 0; i < LEVEL_COUNT; i++) lv[i] = T(level_get(i + 1)->name);
+		int l = choose(T("Zorluk"), lv, LEVEL_COUNT);
 		if (l == -2) return 0;
 		if (l < 0) continue;
-		const char *cl[] = { "Beyaz", "Siyah", "Rastgele" };
-		int c = choose("Renginiz", cl, 3);
+		const char *cl[] = { T("Beyaz"), T("Siyah"), T("Rastgele") };
+		int c = choose(T("Renginiz"), cl, 3);
 		if (c == -2) return 0;
 		if (c < 0) continue;
 		if (c == 2) c = (int) (time(NULL) & 1);
@@ -406,8 +408,8 @@ int main(void)
 			int t = kui_topbar_hit(kui_width(), 1, e.x, e.y);
 			if (t == KUI_BTN_EXIT) { quit = 1; break; }
 			if (t == KUI_BTN_MENU) {
-				const char *ch[] = { "Tahtayı çevir", "Yeni oyun", "Kapat" };
-				int k = kui_dialog("Menü", "", ch, 3, draw_all);
+				const char *ch[] = { T("Tahtayı çevir"), T("Yeni oyun"), T("Kapat") };
+				int k = kui_dialog(T("Menü"), "", ch, 3, draw_all);
 				if (k == 0) view_flip = !view_flip;
 				if (k == 1) {
 					engine_cancel();
@@ -426,8 +428,8 @@ int main(void)
 			int id = kui_buttons_hit(buttons, 2, e.x, e.y);
 			if (id == BTN_UNDO) undo();
 			else if (id == BTN_NEW) {
-				const char *ch[] = { "Evet", "Hayır" };
-				if (kui_dialog("Yeni oyun", "Bu oyun bitirilsin mi?", ch, 2, draw_all) == 0) {
+				const char *ch[] = { T("Evet"), T("Hayır") };
+				if (kui_dialog(T("Yeni oyun"), T("Bu oyun bitirilsin mi?"), ch, 2, draw_all) == 0) {
 					engine_cancel();
 					engine_shutdown();
 					game_new(&game, game.mode, game.level, game.human_side);

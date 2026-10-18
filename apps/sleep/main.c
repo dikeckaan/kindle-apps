@@ -38,24 +38,24 @@ static void read_state(void)
 static void draw(int full)
 {
 	int w = kui_width(), h = kui_height();
-	char s[64];
+	char s[128];
 	if (full) {
 		kui_fill((KuiRect){ 0, 0, w, h }, 255);
-		kui_topbar("Uyku Ayarı", NULL);
+		kui_topbar(T("Uyku Ayarı"), NULL);
 	}
 	KuiRect now = { 40, KUI_TOPBAR_H + 40, w - 80, 120 };
 	kui_fill(now, 255);
 	sleep_describe(timeout_s, prevent, s, sizeof s);
-	kui_text(now, s, KUI_FONT_BOLD, 60, KUI_ALIGN_CENTER, 0);
+	kui_text(now, s, KUI_FONT_BOLD, kui_fit_px(s, KUI_FONT_BOLD, 60, now.w), KUI_ALIGN_CENTER, 0);
 	kui_mark_dirty(now);
 	int cur = sleep_current_index(timeout_s, prevent), bw = (w - 3 * 40) / 2;
 	for (int i = 0; i < n_opts; i++) {
-		buttons[i] = (KuiButton){ { 40 + (i % 2) * (bw + 40), KUI_TOPBAR_H + 220 + (i / 2) * 200, bw, 160 }, opts[i].label, i + 1 };
+		buttons[i] = (KuiButton){ { 40 + (i % 2) * (bw + 40), KUI_TOPBAR_H + 220 + (i / 2) * 200, bw, 160 }, T(opts[i].label), i + 1 };
 		kui_button(&buttons[i], i == cur);
 	}
 	if (full) {
 		KuiRect note = { 40, KUI_TOPBAR_H + 860, w - 80, 260 };
-		kui_text(note, "Kindle bu süre dokunulmadan kalınca uyur.\n\"Hiç uyuma\" pili hızlı tüketir.\nYeniden başlatınca varsayılana dönebilir.",
+		kui_text(note, T("Kindle bu süre dokunulmadan kalınca uyur.\n\"Hiç uyuma\" pili hızlı tüketir.\nYeniden başlatınca varsayılana dönebilir."),
 			 KUI_FONT_REG, 38, KUI_ALIGN_CENTER, 0);
 		kui_flush(1);
 	} else {
@@ -78,6 +78,7 @@ static void choose(int i)
 int main(void)
 {
 	if (kui_init("sleep") != 0) return 1;
+	sleep_set_text_hook(kui_t);
 	n_opts = sleep_opts(&opts);
 	read_state();
 	draw(1);

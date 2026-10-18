@@ -5,4 +5,5 @@ typedef struct { const char *label; int seconds; } SleepOpt; /* seconds 0 = neve
 int  sleep_opts(const SleepOpt **out);
 int  sleep_current_index(int timeout_s, int prevent); /* -1 if the current timeout is not one of the options */
 void sleep_describe(int timeout_s, int prevent, char *out, int cap);
+void sleep_set_text_hook(const char *(*translate)(const char *)); /* translates the describe text; NULL = Turkish */
 #endif

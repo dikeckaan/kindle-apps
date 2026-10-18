@@ -144,12 +144,12 @@ static void describe(void)
 	if (port > 0) {
 		char ip[64];
 		wifi_ip(ip, sizeof ip);
-		snprintf(status_line, sizeof status_line, "AÇIK");
+		snprintf(status_line, sizeof status_line, "%s", T("AÇIK"));
 		if (port == 22) snprintf(detail_line, sizeof detail_line, "ssh root@%s", ip);
 		else snprintf(detail_line, sizeof detail_line, "ssh root@%s -p %d", ip, port);
 	} else {
-		snprintf(status_line, sizeof status_line, "KAPALI");
-		snprintf(detail_line, sizeof detail_line, have_password() ? "Parola belirlenmiş" : "Henüz parola yok");
+		snprintf(status_line, sizeof status_line, "%s", T("KAPALI"));
+		snprintf(detail_line, sizeof detail_line, "%s", have_password() ? T("Parola belirlenmiş") : T("Henüz parola yok"));
 	}
 }
 
@@ -158,22 +158,24 @@ static void draw(void)
 	int w = kui_width(), h = kui_height();
 	describe();
 	kui_fill((KuiRect){ 0, 0, w, h }, 255);
-	kui_topbar("SSH Sunucusu", NULL);
-	kui_text((KuiRect){ 40, KUI_TOPBAR_H + 60, w - 80, 120 }, status_line, KUI_FONT_BOLD, 90, KUI_ALIGN_CENTER, 0);
-	kui_text((KuiRect){ 40, KUI_TOPBAR_H + 200, w - 80, 100 }, detail_line, KUI_FONT_REG, 50, KUI_ALIGN_CENTER, 0);
+	kui_topbar(T("SSH Sunucusu"), NULL);
+	kui_text((KuiRect){ 40, KUI_TOPBAR_H + 60, w - 80, 120 }, status_line, KUI_FONT_BOLD, kui_fit_px(status_line, KUI_FONT_BOLD, 90, w - 80),
+		 KUI_ALIGN_CENTER, 0);
+	kui_text((KuiRect){ 40, KUI_TOPBAR_H + 200, w - 80, 100 }, detail_line, KUI_FONT_REG, kui_fit_px(detail_line, KUI_FONT_REG, 50, w - 80),
+		 KUI_ALIGN_CENTER, 0);
 	int on = ssh_server_pid() > 0;
-	buttons[0] = (KuiButton){ { 120, KUI_TOPBAR_H + 380, w - 240, 150 }, on ? "Kapat" : "Aç", BTN_TOGGLE };
-	buttons[1] = (KuiButton){ { 120, KUI_TOPBAR_H + 570, w - 240, 150 }, "Parolayı değiştir", BTN_PASSWORD };
+	buttons[0] = (KuiButton){ { 120, KUI_TOPBAR_H + 380, w - 240, 150 }, on ? T("Kapat") : T("Aç"), BTN_TOGGLE };
+	buttons[1] = (KuiButton){ { 120, KUI_TOPBAR_H + 570, w - 240, 150 }, T("Parolayı değiştir"), BTN_PASSWORD };
 	for (int i = 0; i < 2; i++) kui_button(&buttons[i], 0);
 	kui_text((KuiRect){ 40, KUI_TOPBAR_H + 800, w - 80, 300 },
-		 "Kullanıcı adı: root\nSunucu bu uygulama kapanınca da çalışır.\nKindle uyuyunca Wi-Fi ile birlikte bağlantı kopar.\nYeniden başlatınca kapalı açılır.",
+		 T("Kullanıcı adı: root\nSunucu bu uygulama kapanınca da çalışır.\nKindle uyuyunca Wi-Fi ile birlikte bağlantı kopar.\nYeniden başlatınca kapalı açılır."),
 		 KUI_FONT_REG, 36, KUI_ALIGN_CENTER, 0);
 	kui_flush(1);
 }
 
 static void message(const char *title, const char *msg)
 {
-	const char *ok[] = { "Tamam" };
+	const char *ok[] = { T("Tamam") };
 	kui_dialog(title, msg, ok, 1, draw);
 	draw();
 }
@@ -182,23 +184,23 @@ static void message(const char *title, const char *msg)
 static int set_password(void)
 {
 	char a[128] = "", b[128] = "";
-	if (!kui_input_text("Yeni SSH parolası (en az 6)", a, sizeof a, 1, 6, NULL)) {
+	if (!kui_input_text(T("Yeni SSH parolası (en az 6)"), a, sizeof a, 1, 6, NULL)) {
 		draw();
 		return 0;
 	}
-	if (!kui_input_text("Parolayı tekrar girin", b, sizeof b, 1, 6, NULL)) {
+	if (!kui_input_text(T("Parolayı tekrar girin"), b, sizeof b, 1, 6, NULL)) {
 		draw();
 		return 0;
 	}
 	draw();
 	if (strcmp(a, b) != 0) {
-		message("Parola", "Parolalar aynı değil, tekrar deneyin.");
+		message(T("Parola"), T("Parolalar aynı değil, tekrar deneyin."));
 		return 0;
 	}
 	int ok = ensure_dir() == 0 && write_password(a) == 0;
 	memset(a, 0, sizeof a);
 	memset(b, 0, sizeof b);
-	message("Parola", ok ? "Parola kaydedildi." : "Parola kaydedilemedi.");
+	message(T("Parola"), ok ? T("Parola kaydedildi.") : T("Parola kaydedilemedi."));
 	return ok;
 }
 
@@ -219,7 +221,7 @@ int main(void)
 				draw();
 			} else {
 				if (!have_password() && !set_password()) continue;
-				if (start_server() != 0) message("SSH", "Sunucu başlatılamadı (günlüğe bakın).");
+				if (start_server() != 0) message("SSH", T("Sunucu başlatılamadı (günlüğe bakın)."));
 				else draw();
 			}
 		} else if (id == BTN_PASSWORD) {

@@ -22,7 +22,7 @@ static void layout(void)
 	int top = KUI_TOPBAR_H + 180, side = y - 30 - top; /* board fills the space between scores and buttons */
 	if (side > w - 80) side = w - 80;
 	board = (KuiRect){ (w - side) / 2, top, side, side };
-	const char *labels[5] = { "Geri al", "◀", "▲", "▼", "▶" };
+	const char *labels[5] = { T("Geri al"), "◀", "▲", "▼", "▶" };
 	for (int i = 0; i < 5; i++)
 		buttons[i] = (KuiButton){ { 40 + i * (bw + 20), y, bw, bh }, labels[i], i + 1 };
 }
@@ -54,7 +54,7 @@ static void draw_score(KuiRect box, const char *label, int value)
 	snprintf(s, sizeof s, "%d", value);
 	kui_fill(box, 255);
 	kui_frame(box, 3, 0);
-	kui_text((KuiRect){ box.x, box.y + 6, box.w, 44 }, label, KUI_FONT_REG, 36, KUI_ALIGN_CENTER, 0);
+	kui_text((KuiRect){ box.x, box.y + 6, box.w, 44 }, label, KUI_FONT_REG, kui_fit_px(label, KUI_FONT_REG, 36, box.w - 20), KUI_ALIGN_CENTER, 0);
 	kui_text((KuiRect){ box.x, box.y + 50, box.w, 74 }, s, KUI_FONT_BOLD, 60, KUI_ALIGN_CENTER, 0);
 	kui_mark_dirty(box);
 }
@@ -62,9 +62,9 @@ static void draw_score(KuiRect box, const char *label, int value)
 static void draw_all(void)
 {
 	kui_fill((KuiRect){ 0, 0, kui_width(), kui_height() }, 255);
-	kui_topbar("2048", "Yeni");
-	draw_score(score_box, "Skor", game.score);
-	draw_score(best_box, "En iyi", game.best);
+	kui_topbar("2048", T("Yeni"));
+	draw_score(score_box, T("Skor"), game.score);
+	draw_score(best_box, T("En iyi"), game.best);
 	kui_fill(board, 0xAA);
 	for (int r = 0; r < 4; r++)
 		for (int c = 0; c < 4; c++) draw_cell(r, c);
@@ -85,8 +85,8 @@ static void draw_changes(int before[4][4], int old_score, int old_best)
 	for (int r = 0; r < 4; r++)
 		for (int c = 0; c < 4; c++)
 			if (before[r][c] != game.cell[r][c]) draw_cell(r, c);
-	if (old_score != game.score) draw_score(score_box, "Skor", game.score);
-	if (old_best != game.best) draw_score(best_box, "En iyi", game.best);
+	if (old_score != game.score) draw_score(score_box, T("Skor"), game.score);
+	if (old_best != game.best) draw_score(best_box, T("En iyi"), game.best);
 	kui_flush(0);
 }
 
@@ -104,16 +104,16 @@ static int after_move(void)
 	save();
 	if (!won_shown && g2048_max_tile(&game) >= 2048) {
 		won_shown = 1;
-		const char *ch[] = { "Devam", "Yeni oyun" };
-		int k = kui_dialog("Tebrikler!", "2048'e ulaştın.", ch, 2, draw_all);
+		const char *ch[] = { T("Devam"), T("Yeni oyun") };
+		int k = kui_dialog(T("Tebrikler!"), T("2048'e ulaştın."), ch, 2, draw_all);
 		if (k == 1) new_game();
 		else draw_all();
 	}
 	if (!g2048_can_move(&game)) {
 		char msg[64];
-		snprintf(msg, sizeof msg, "Skor: %d", game.score);
-		const char *ch[] = { "Yeni oyun", "Kapat" };
-		int k = kui_dialog("Oyun bitti", msg, ch, 2, draw_all);
+		snprintf(msg, sizeof msg, T("Skor: %d"), game.score);
+		const char *ch[] = { T("Yeni oyun"), T("Kapat") };
+		int k = kui_dialog(T("Oyun bitti"), msg, ch, 2, draw_all);
 		if (k == 0) new_game();
 		else return 1;
 	}
@@ -156,8 +156,8 @@ int main(void)
 			int t = kui_topbar_hit(kui_width(), 1, e.x, e.y);
 			if (t == KUI_BTN_EXIT) { quit = 1; break; }
 			if (t == KUI_BTN_MENU) {
-				const char *ch[] = { "Evet", "Hayır" };
-				if (kui_dialog("Yeni oyun", "Mevcut oyun silinsin mi?", ch, 2, draw_all) == 0) new_game();
+				const char *ch[] = { T("Evet"), T("Hayır") };
+				if (kui_dialog(T("Yeni oyun"), T("Mevcut oyun silinsin mi?"), ch, 2, draw_all) == 0) new_game();
 				else draw_all();
 				break;
 			}

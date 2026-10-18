@@ -3,6 +3,10 @@
 #include <string.h>
 #include "chess_game.h"
 
+#ifndef N_
+#define N_(s) (s) /* translatable; shown with T() */
+#endif
+
 void game_new(Game *g, int mode, int level, int human_side)
 {
 	memset(g, 0, sizeof *g);
@@ -183,11 +187,11 @@ int game_load(Game *out, const char *buf)
 const char *result_text(Result r, int loser_side)
 {
 	switch (r) {
-	case RES_MATE: return loser_side == 0 ? "Şah mat — Siyah kazandı" : "Şah mat — Beyaz kazandı";
-	case RES_STALEMATE: return "Pat — berabere";
-	case RES_FIFTY: return "50 hamle kuralı — berabere";
-	case RES_REPETITION: return "Üçlü tekrar — berabere";
-	case RES_MATERIAL: return "Yetersiz taş — berabere";
+	case RES_MATE: return loser_side == 0 ? N_("Şah mat — Siyah kazandı") : N_("Şah mat — Beyaz kazandı");
+	case RES_STALEMATE: return N_("Pat — berabere");
+	case RES_FIFTY: return N_("50 hamle kuralı — berabere");
+	case RES_REPETITION: return N_("Üçlü tekrar — berabere");
+	case RES_MATERIAL: return N_("Yetersiz taş — berabere");
 	default: return "";
 	}
 }

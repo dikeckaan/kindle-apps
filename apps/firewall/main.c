@@ -34,7 +34,7 @@ static void keep_ssh_reachable(void)
 static void blank(void)
 {
 	kui_fill((KuiRect){ 0, 0, kui_width(), kui_height() }, 255);
-	kui_topbar("Güvenlik Duvarı", NULL);
+	kui_topbar(T("Güvenlik Duvarı"), NULL);
 }
 
 static void redraw(void)
@@ -48,9 +48,9 @@ int main(void)
 	if (kui_init("firewall") != 0) return 1;
 	redraw();
 	int down = wall_down();
-	const char *ch_down[] = { "Aç", "Vazgeç" }, *ch_up[] = { "Kapat", "Vazgeç" };
-	int k = down ? kui_dialog("Güvenlik Duvarı", "Şu an KAPALI: gelen bağlantılara izin veriliyor.\nAçılsın mı?", ch_down, 2, redraw)
-		     : kui_dialog("Güvenlik Duvarı", "Şu an AÇIK: gelen bağlantılar engelleniyor.\nKapatılsın mı?", ch_up, 2, redraw);
+	const char *ch_down[] = { T("Aç"), T("Vazgeç") }, *ch_up[] = { T("Kapat"), T("Vazgeç") };
+	int k = down ? kui_dialog(T("Güvenlik Duvarı"), T("Şu an KAPALI: gelen bağlantılara izin veriliyor.\nAçılsın mı?"), ch_down, 2, redraw)
+		     : kui_dialog(T("Güvenlik Duvarı"), T("Şu an AÇIK: gelen bağlantılar engelleniyor.\nKapatılsın mı?"), ch_up, 2, redraw);
 	if (k == 0) {
 		int rc;
 		if (down) {
@@ -60,12 +60,12 @@ int main(void)
 			rc = system("iptables -P INPUT ACCEPT && iptables -F INPUT");
 		}
 		int now_down = wall_down();
-		const char *msg = rc != 0 || now_down == down ? "İşlem başarısız oldu."
-				  : now_down ? "Kapatıldı. Kindle yeniden başlayınca tekrar açılır."
-					     : "Açıldı. Gelen bağlantılar engelleniyor.";
-		const char *ok[] = { "Tamam" };
+		const char *msg = rc != 0 || now_down == down ? T("İşlem başarısız oldu.")
+				  : now_down ? T("Kapatıldı. Kindle yeniden başlayınca tekrar açılır.")
+					     : T("Açıldı. Gelen bağlantılar engelleniyor.");
+		const char *ok[] = { T("Tamam") };
 		redraw();
-		kui_dialog("Güvenlik Duvarı", msg, ok, 1, redraw);
+		kui_dialog(T("Güvenlik Duvarı"), msg, ok, 1, redraw);
 	}
 	kui_quit();
 	return 0;
