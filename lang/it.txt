@@ -608,3 +608,64 @@ Kastor	Castore
 Kutup Yıldızı	Stella Polare
 Algol	Algol
 Mizar	Mizar
+Muharrem	Muharram
+Safer	Safar
+Rebiülevvel	Rabi' al-awwal
+Rebiülahir	Rabi' al-thani
+Cemaziyelevvel	Jumada al-ula
+Cemaziyelahir	Jumada al-thaniya
+Receb	Rajab
+Şaban	Sha'ban
+Ramazan	Ramadan
+Şevval	Shawwal
+Zilkade	Dhu l-qa'da
+Zilhicce	Dhu l-hijja
+Ramazan Bayramı 1. gün	Eid al-Fitr, 1º giorno
+Ramazan Bayramı 2. gün	Eid al-Fitr, 2º giorno
+Ramazan Bayramı 3. gün	Eid al-Fitr, 3º giorno
+Kurban Bayramı 1. gün	Festa del Sacrificio, 1º giorno
+Kurban Bayramı 2. gün	Festa del Sacrificio, 2º giorno
+Kurban Bayramı 3. gün	Festa del Sacrificio, 3º giorno
+Kurban Bayramı 4. gün	Festa del Sacrificio, 4º giorno
+Yılbaşı	Capodanno
+Ulusal Egemenlik ve Çocuk Bayramı	Festa della sovranità nazionale e dei bambini
+Emek ve Dayanışma Günü	Festa del lavoro e della solidarietà
+Atatürk'ü Anma, Gençlik ve Spor Bayramı	Commemorazione di Atatürk, festa della gioventù e dello sport
+Demokrasi ve Millî Birlik Günü	Giornata della democrazia e dell'unità nazionale
+Zafer Bayramı	Festa della Vittoria
+Cumhuriyet Bayramı	Festa della Repubblica
+Cumhuriyet Bayramı arifesi	Vigilia della Festa della Repubblica
+Ramazan Bayramı arifesi	Vigilia dell'Eid al-Fitr
+Kurban Bayramı arifesi	Vigilia della Festa del Sacrificio
+Regaib Kandili	Notte di Ragha'ib
+Miraç Kandili	Notte dell'Ascensione (Mi'raj)
+Berat Kandili	Notte del perdono (Bara'at)
+Ramazan başlangıcı	Inizio del Ramadan
+Kadir Gecesi	Notte del Destino (Laylat al-Qadr)
+Hicri yılbaşı	Capodanno islamico
+Mevlid Kandili	Mawlid (nascita del Profeta)
+Anneler Günü	Festa della mamma
+Babalar Günü	Festa del papà
+Atatürk'ü Anma Günü	Giorno della commemorazione di Atatürk
+Öğretmenler Günü	Giornata degli insegnanti
+Ajanda	Agenda
+Not kaydedilemedi.	Impossibile salvare la nota.
+Resmi tatil	Festivo
+Yarım gün	Mezza giornata
+Kandil	Notte santa
+Özel gün	Giornata speciale
+Not	Nota
+Yaklaşanlar	In arrivo
+Önümüzdeki 7 günde not ya da özel gün yok.	Nessuna nota o giornata speciale nei prossimi 7 giorni.
+… ve %d daha	… e altri %d
+yarım gün	mezza giornata
+Hf	Sett
+Her yıl	Ogni anno
+Hicri: %d %s %d	Egira: %d %s %d
+Notlar	Note
++ Not ekle	+ Aggiungi nota
+Bu gün için not yok.	Nessuna nota per questo giorno.
+Notlar %d–%d / %d · kaydırın	Note %d–%d / %d · scorri
+Düzenle	Modifica
+Notu düzenle	Modifica nota
+Yeni not	Nuova nota

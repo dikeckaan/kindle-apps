@@ -608,3 +608,64 @@ Kastor	Castor
 Kutup Yıldızı	Steaua Polară
 Algol	Algol
 Mizar	Mizar
+Muharrem	Muharram
+Safer	Safar
+Rebiülevvel	Rabi al-Awwal
+Rebiülahir	Rabi al-Thani
+Cemaziyelevvel	Jumada al-Awwal
+Cemaziyelahir	Jumada al-Thani
+Receb	Rajab
+Şaban	Șaban
+Ramazan	Ramadan
+Şevval	Șawwal
+Zilkade	Dhu al-Qada
+Zilhicce	Dhu al-Hijja
+Ramazan Bayramı 1. gün	Sărbătoarea Ramadanului, ziua 1
+Ramazan Bayramı 2. gün	Sărbătoarea Ramadanului, ziua 2
+Ramazan Bayramı 3. gün	Sărbătoarea Ramadanului, ziua 3
+Kurban Bayramı 1. gün	Sărbătoarea Sacrificiului, ziua 1
+Kurban Bayramı 2. gün	Sărbătoarea Sacrificiului, ziua 2
+Kurban Bayramı 3. gün	Sărbătoarea Sacrificiului, ziua 3
+Kurban Bayramı 4. gün	Sărbătoarea Sacrificiului, ziua 4
+Yılbaşı	Anul Nou
+Ulusal Egemenlik ve Çocuk Bayramı	Ziua Suveranității Naționale și a Copiilor
+Emek ve Dayanışma Günü	Ziua Muncii și a Solidarității
+Atatürk'ü Anma, Gençlik ve Spor Bayramı	Comemorarea lui Atatürk, Ziua Tineretului și Sportului
+Demokrasi ve Millî Birlik Günü	Ziua Democrației și a Unității Naționale
+Zafer Bayramı	Ziua Victoriei
+Cumhuriyet Bayramı	Ziua Republicii
+Cumhuriyet Bayramı arifesi	Ajunul Zilei Republicii
+Ramazan Bayramı arifesi	Ajunul Sărbătorii Ramadanului
+Kurban Bayramı arifesi	Ajunul Sărbătorii Sacrificiului
+Regaib Kandili	Noaptea Ragaib
+Miraç Kandili	Noaptea Înălțării (Miraj)
+Berat Kandili	Noaptea Iertării (Bara'at)
+Ramazan başlangıcı	Începutul Ramadanului
+Kadir Gecesi	Noaptea Destinului (Laylat al-Qadr)
+Hicri yılbaşı	Anul Nou islamic
+Mevlid Kandili	Mawlid (nașterea Profetului)
+Anneler Günü	Ziua Mamei
+Babalar Günü	Ziua Tatălui
+Atatürk'ü Anma Günü	Ziua Comemorării lui Atatürk
+Öğretmenler Günü	Ziua Profesorului
+Ajanda	Agendă
+Not kaydedilemedi.	Nota nu a putut fi salvată.
+Resmi tatil	Sărbătoare legală
+Yarım gün	Jumătate de zi
+Kandil	Noapte sfântă
+Özel gün	Zi specială
+Not	Notă
+Yaklaşanlar	Urmează
+Önümüzdeki 7 günde not ya da özel gün yok.	Nicio notă sau zi specială în următoarele 7 zile.
+… ve %d daha	… și încă %d
+yarım gün	jumătate de zi
+Hf	Săpt
+Her yıl	În fiecare an
+Hicri: %d %s %d	Hegira: %d %s %d
+Notlar	Note
++ Not ekle	+ Adaugă notă
+Bu gün için not yok.	Nicio notă pentru această zi.
+Notlar %d–%d / %d · kaydırın	Note %d–%d / %d · glisați
+Düzenle	Editează
+Notu düzenle	Editează nota
+Yeni not	Notă nouă

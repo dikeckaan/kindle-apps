@@ -608,3 +608,64 @@ Kastor	Castor
 Kutup Yıldızı	Étoile polaire
 Algol	Algol
 Mizar	Mizar
+Muharrem	Mouharram
+Safer	Safar
+Rebiülevvel	Rabia al-awal
+Rebiülahir	Rabia ath-thani
+Cemaziyelevvel	Joumada al-oula
+Cemaziyelahir	Joumada ath-thania
+Receb	Rajab
+Şaban	Chaabane
+Ramazan	Ramadan
+Şevval	Chawwal
+Zilkade	Dhou al-qi'da
+Zilhicce	Dhou al-hijja
+Ramazan Bayramı 1. gün	Aïd al-Fitr, 1er jour
+Ramazan Bayramı 2. gün	Aïd al-Fitr, 2e jour
+Ramazan Bayramı 3. gün	Aïd al-Fitr, 3e jour
+Kurban Bayramı 1. gün	Aïd al-Adha, 1er jour
+Kurban Bayramı 2. gün	Aïd al-Adha, 2e jour
+Kurban Bayramı 3. gün	Aïd al-Adha, 3e jour
+Kurban Bayramı 4. gün	Aïd al-Adha, 4e jour
+Yılbaşı	Jour de l'An
+Ulusal Egemenlik ve Çocuk Bayramı	Fête de la souveraineté nationale et des enfants
+Emek ve Dayanışma Günü	Fête du travail et de la solidarité
+Atatürk'ü Anma, Gençlik ve Spor Bayramı	Commémoration d'Atatürk, fête de la jeunesse et des sports
+Demokrasi ve Millî Birlik Günü	Journée de la démocratie et de l'unité nationale
+Zafer Bayramı	Fête de la Victoire
+Cumhuriyet Bayramı	Fête de la République
+Cumhuriyet Bayramı arifesi	Veille de la fête de la République
+Ramazan Bayramı arifesi	Veille de l'Aïd al-Fitr
+Kurban Bayramı arifesi	Veille de l'Aïd al-Adha
+Regaib Kandili	Nuit de Ragha'ib
+Miraç Kandili	Nuit de l'Ascension (Miraj)
+Berat Kandili	Nuit du pardon (Bara'at)
+Ramazan başlangıcı	Début du ramadan
+Kadir Gecesi	Nuit du Destin (Laylat al-Qadr)
+Hicri yılbaşı	Nouvel An islamique
+Mevlid Kandili	Mawlid (naissance du Prophète)
+Anneler Günü	Fête des mères
+Babalar Günü	Fête des pères
+Atatürk'ü Anma Günü	Journée de commémoration d'Atatürk
+Öğretmenler Günü	Journée des enseignants
+Ajanda	Agenda
+Not kaydedilemedi.	Impossible d'enregistrer la note.
+Resmi tatil	Jour férié
+Yarım gün	Demi-journée
+Kandil	Nuit sainte
+Özel gün	Journée spéciale
+Not	Note
+Yaklaşanlar	À venir
+Önümüzdeki 7 günde not ya da özel gün yok.	Aucune note ni journée spéciale dans les 7 prochains jours.
+… ve %d daha	… et %d de plus
+yarım gün	demi-journée
+Hf	Sem
+Her yıl	Chaque année
+Hicri: %d %s %d	Hégire : %d %s %d
+Notlar	Notes
++ Not ekle	+ Ajouter une note
+Bu gün için not yok.	Aucune note pour ce jour.
+Notlar %d–%d / %d · kaydırın	Notes %d–%d / %d · balayez
+Düzenle	Modifier
+Notu düzenle	Modifier la note
+Yeni not	Nouvelle note

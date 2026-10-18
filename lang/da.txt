@@ -608,3 +608,64 @@ Kastor	Kastor
 Kutup Yıldızı	Polarstjernen
 Algol	Algol
 Mizar	Mizar
+Muharrem	Muharram
+Safer	Safar
+Rebiülevvel	Rabi al-awwal
+Rebiülahir	Rabi al-thani
+Cemaziyelevvel	Jumada al-ula
+Cemaziyelahir	Jumada al-thani
+Receb	Rajab
+Şaban	Shaban
+Ramazan	Ramadan
+Şevval	Shawwal
+Zilkade	Dhu al-qada
+Zilhicce	Dhu al-hijja
+Ramazan Bayramı 1. gün	Eid al-fitr, dag 1
+Ramazan Bayramı 2. gün	Eid al-fitr, dag 2
+Ramazan Bayramı 3. gün	Eid al-fitr, dag 3
+Kurban Bayramı 1. gün	Offerfesten, dag 1
+Kurban Bayramı 2. gün	Offerfesten, dag 2
+Kurban Bayramı 3. gün	Offerfesten, dag 3
+Kurban Bayramı 4. gün	Offerfesten, dag 4
+Yılbaşı	Nytårsdag
+Ulusal Egemenlik ve Çocuk Bayramı	National suverænitets- og børnedag
+Emek ve Dayanışma Günü	Arbejdets og solidaritetens dag
+Atatürk'ü Anma, Gençlik ve Spor Bayramı	Atatürks mindedag, ungdoms- og idrætsdag
+Demokrasi ve Millî Birlik Günü	Demokratiets og den nationale enheds dag
+Zafer Bayramı	Sejrsdagen
+Cumhuriyet Bayramı	Republikkens dag
+Cumhuriyet Bayramı arifesi	Dagen før Republikkens dag
+Ramazan Bayramı arifesi	Dagen før eid al-fitr
+Kurban Bayramı arifesi	Dagen før offerfesten
+Regaib Kandili	Ragaib-natten
+Miraç Kandili	Himmelfartsnatten (Miraj)
+Berat Kandili	Tilgivelsens nat (Bara'at)
+Ramazan başlangıcı	Ramadan begynder
+Kadir Gecesi	Magtens nat (Laylat al-Qadr)
+Hicri yılbaşı	Islamisk nytår
+Mevlid Kandili	Mawlid (Profetens fødsel)
+Anneler Günü	Mors dag
+Babalar Günü	Fars dag
+Atatürk'ü Anma Günü	Atatürks mindedag
+Öğretmenler Günü	Lærernes dag
+Ajanda	Kalender
+Not kaydedilemedi.	Noten kunne ikke gemmes.
+Resmi tatil	Helligdag
+Yarım gün	Halv dag
+Kandil	Hellig nat
+Özel gün	Mærkedag
+Not	Note
+Yaklaşanlar	Kommende
+Önümüzdeki 7 günde not ya da özel gün yok.	Ingen noter eller mærkedage de næste 7 dage.
+… ve %d daha	… og %d mere
+yarım gün	halv dag
+Hf	Uge
+Her yıl	Hvert år
+Hicri: %d %s %d	Hijra: %d %s %d
+Notlar	Noter
++ Not ekle	+ Ny note
+Bu gün için not yok.	Ingen noter for denne dag.
+Notlar %d–%d / %d · kaydırın	Noter %d–%d / %d · stryg
+Düzenle	Rediger
+Notu düzenle	Rediger note
+Yeni not	Ny note

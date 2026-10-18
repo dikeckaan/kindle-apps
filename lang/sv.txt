@@ -608,3 +608,64 @@ Kastor	Kastor
 Kutup Yıldızı	Polstjärnan
 Algol	Algol
 Mizar	Mizar
+Muharrem	Muharram
+Safer	Safar
+Rebiülevvel	Rabi al-awwal
+Rebiülahir	Rabi al-thani
+Cemaziyelevvel	Jumada al-ula
+Cemaziyelahir	Jumada al-thani
+Receb	Rajab
+Şaban	Shaban
+Ramazan	Ramadan
+Şevval	Shawwal
+Zilkade	Dhu al-qada
+Zilhicce	Dhu al-hijja
+Ramazan Bayramı 1. gün	Id al-fitr, dag 1
+Ramazan Bayramı 2. gün	Id al-fitr, dag 2
+Ramazan Bayramı 3. gün	Id al-fitr, dag 3
+Kurban Bayramı 1. gün	Offerfesten, dag 1
+Kurban Bayramı 2. gün	Offerfesten, dag 2
+Kurban Bayramı 3. gün	Offerfesten, dag 3
+Kurban Bayramı 4. gün	Offerfesten, dag 4
+Yılbaşı	Nyårsdagen
+Ulusal Egemenlik ve Çocuk Bayramı	Nationella suveränitetens och barnens dag
+Emek ve Dayanışma Günü	Arbetets och solidaritetens dag
+Atatürk'ü Anma, Gençlik ve Spor Bayramı	Atatürks minnesdag, ungdomens och idrottens dag
+Demokrasi ve Millî Birlik Günü	Demokratins och den nationella enhetens dag
+Zafer Bayramı	Segerdagen
+Cumhuriyet Bayramı	Republikens dag
+Cumhuriyet Bayramı arifesi	Dagen före Republikens dag
+Ramazan Bayramı arifesi	Dagen före id al-fitr
+Kurban Bayramı arifesi	Dagen före offerfesten
+Regaib Kandili	Ragaib-natten
+Miraç Kandili	Himmelsfärdsnatten (Miraj)
+Berat Kandili	Förlåtelsens natt (Bara'at)
+Ramazan başlangıcı	Ramadan börjar
+Kadir Gecesi	Maktens natt (Laylat al-Qadr)
+Hicri yılbaşı	Islamiskt nyår
+Mevlid Kandili	Mawlid (Profetens födelse)
+Anneler Günü	Mors dag
+Babalar Günü	Fars dag
+Atatürk'ü Anma Günü	Atatürks minnesdag
+Öğretmenler Günü	Lärarnas dag
+Ajanda	Almanacka
+Not kaydedilemedi.	Anteckningen kunde inte sparas.
+Resmi tatil	Helgdag
+Yarım gün	Halvdag
+Kandil	Helig natt
+Özel gün	Särskild dag
+Not	Anteckning
+Yaklaşanlar	Kommande
+Önümüzdeki 7 günde not ya da özel gün yok.	Inga anteckningar eller särskilda dagar de närmaste 7 dagarna.
+… ve %d daha	… och %d till
+yarım gün	halvdag
+Hf	V
+Her yıl	Varje år
+Hicri: %d %s %d	Hijra: %d %s %d
+Notlar	Anteckningar
++ Not ekle	+ Ny anteckning
+Bu gün için not yok.	Inga anteckningar för den här dagen.
+Notlar %d–%d / %d · kaydırın	Anteckningar %d–%d / %d · svep
+Düzenle	Redigera
+Notu düzenle	Redigera anteckning
+Yeni not	Ny anteckning

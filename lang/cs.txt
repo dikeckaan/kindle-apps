@@ -608,3 +608,64 @@ Kastor	Kastor
 Kutup Yıldızı	Polárka
 Algol	Algol
 Mizar	Mizar
+Muharrem	Muharram
+Safer	Safar
+Rebiülevvel	Rabí al-avval
+Rebiülahir	Rabí as-sání
+Cemaziyelevvel	Džumádá al-úlá
+Cemaziyelahir	Džumádá as-sáníja
+Receb	Radžab
+Şaban	Šabán
+Ramazan	Ramadán
+Şevval	Šawwál
+Zilkade	Zú al-kada
+Zilhicce	Zú al-hidždža
+Ramazan Bayramı 1. gün	Svátek ramadánu, 1. den
+Ramazan Bayramı 2. gün	Svátek ramadánu, 2. den
+Ramazan Bayramı 3. gün	Svátek ramadánu, 3. den
+Kurban Bayramı 1. gün	Svátek oběti, 1. den
+Kurban Bayramı 2. gün	Svátek oběti, 2. den
+Kurban Bayramı 3. gün	Svátek oběti, 3. den
+Kurban Bayramı 4. gün	Svátek oběti, 4. den
+Yılbaşı	Nový rok
+Ulusal Egemenlik ve Çocuk Bayramı	Den národní suverenity a dětí
+Emek ve Dayanışma Günü	Svátek práce a solidarity
+Atatürk'ü Anma, Gençlik ve Spor Bayramı	Den památky Atatürka, mládeže a sportu
+Demokrasi ve Millî Birlik Günü	Den demokracie a národní jednoty
+Zafer Bayramı	Den vítězství
+Cumhuriyet Bayramı	Den republiky
+Cumhuriyet Bayramı arifesi	Předvečer Dne republiky
+Ramazan Bayramı arifesi	Předvečer svátku ramadánu
+Kurban Bayramı arifesi	Předvečer svátku oběti
+Regaib Kandili	Noc Ragáib
+Miraç Kandili	Noc Nanebevstoupení (Mirádž)
+Berat Kandili	Noc odpuštění (Bara'at)
+Ramazan başlangıcı	Začátek ramadánu
+Kadir Gecesi	Noc moci (Lajlat al-kadr)
+Hicri yılbaşı	Islámský nový rok
+Mevlid Kandili	Maulid (narození Proroka)
+Anneler Günü	Den matek
+Babalar Günü	Den otců
+Atatürk'ü Anma Günü	Den památky Atatürka
+Öğretmenler Günü	Den učitelů
+Ajanda	Diář
+Not kaydedilemedi.	Poznámku nelze uložit.
+Resmi tatil	Státní svátek
+Yarım gün	Půlden
+Kandil	Svatá noc
+Özel gün	Významný den
+Not	Poznámka
+Yaklaşanlar	Nadcházející
+Önümüzdeki 7 günde not ya da özel gün yok.	V příštích 7 dnech žádné poznámky ani významné dny.
+… ve %d daha	… a %d dalších
+yarım gün	půlden
+Hf	Týd
+Her yıl	Každý rok
+Hicri: %d %s %d	Hidžra: %d %s %d
+Notlar	Poznámky
++ Not ekle	+ Přidat poznámku
+Bu gün için not yok.	Pro tento den nejsou žádné poznámky.
+Notlar %d–%d / %d · kaydırın	Poznámky %d–%d / %d · přejeďte
+Düzenle	Upravit
+Notu düzenle	Upravit poznámku
+Yeni not	Nová poznámka

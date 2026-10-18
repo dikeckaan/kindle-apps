@@ -608,3 +608,64 @@ Kastor	Kastor
 Kutup Yıldızı	Gwiazda Polarna
 Algol	Algol
 Mizar	Mizar
+Muharrem	Muharram
+Safer	Safar
+Rebiülevvel	Rabi al-Awwal
+Rebiülahir	Rabi as-Sani
+Cemaziyelevvel	Dżumada al-Awwal
+Cemaziyelahir	Dżumada as-Sani
+Receb	Radżab
+Şaban	Szaban
+Ramazan	Ramadan
+Şevval	Szawwal
+Zilkade	Zu al-Kada
+Zilhicce	Zu al-Hidżdża
+Ramazan Bayramı 1. gün	Święto Ramadanu, dzień 1
+Ramazan Bayramı 2. gün	Święto Ramadanu, dzień 2
+Ramazan Bayramı 3. gün	Święto Ramadanu, dzień 3
+Kurban Bayramı 1. gün	Święto Ofiarowania, dzień 1
+Kurban Bayramı 2. gün	Święto Ofiarowania, dzień 2
+Kurban Bayramı 3. gün	Święto Ofiarowania, dzień 3
+Kurban Bayramı 4. gün	Święto Ofiarowania, dzień 4
+Yılbaşı	Nowy Rok
+Ulusal Egemenlik ve Çocuk Bayramı	Święto Suwerenności Narodowej i Dzieci
+Emek ve Dayanışma Günü	Święto Pracy i Solidarności
+Atatürk'ü Anma, Gençlik ve Spor Bayramı	Dzień Pamięci Atatürka, Młodzieży i Sportu
+Demokrasi ve Millî Birlik Günü	Dzień Demokracji i Jedności Narodowej
+Zafer Bayramı	Święto Zwycięstwa
+Cumhuriyet Bayramı	Święto Republiki
+Cumhuriyet Bayramı arifesi	Wigilia Święta Republiki
+Ramazan Bayramı arifesi	Wigilia Święta Ramadanu
+Kurban Bayramı arifesi	Wigilia Święta Ofiarowania
+Regaib Kandili	Noc Ragaib
+Miraç Kandili	Noc Wniebowstąpienia (Miradż)
+Berat Kandili	Noc Przebaczenia (Bara'at)
+Ramazan başlangıcı	Początek ramadanu
+Kadir Gecesi	Noc Przeznaczenia (Lajlat al-Kadr)
+Hicri yılbaşı	Nowy Rok islamski
+Mevlid Kandili	Maulid (urodziny Proroka)
+Anneler Günü	Dzień Matki
+Babalar Günü	Dzień Ojca
+Atatürk'ü Anma Günü	Dzień Pamięci Atatürka
+Öğretmenler Günü	Dzień Nauczyciela
+Ajanda	Terminarz
+Not kaydedilemedi.	Nie udało się zapisać notatki.
+Resmi tatil	Dzień wolny
+Yarım gün	Pół dnia
+Kandil	Święta noc
+Özel gün	Szczególny dzień
+Not	Notatka
+Yaklaşanlar	Nadchodzące
+Önümüzdeki 7 günde not ya da özel gün yok.	Brak notatek i szczególnych dni w najbliższych 7 dniach.
+… ve %d daha	… i %d więcej
+yarım gün	pół dnia
+Hf	Tydz
+Her yıl	Co roku
+Hicri: %d %s %d	Hidżra: %d %s %d
+Notlar	Notatki
++ Not ekle	+ Dodaj notatkę
+Bu gün için not yok.	Brak notatek na ten dzień.
+Notlar %d–%d / %d · kaydırın	Notatki %d–%d / %d · przesuń
+Düzenle	Edytuj
+Notu düzenle	Edytuj notatkę
+Yeni not	Nowa notatka

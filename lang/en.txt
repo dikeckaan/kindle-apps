@@ -608,3 +608,64 @@ Kastor	Castor
 Kutup Yıldızı	Polaris
 Algol	Algol
 Mizar	Mizar
+Muharrem	Muharram
+Safer	Safar
+Rebiülevvel	Rabi al-Awwal
+Rebiülahir	Rabi al-Thani
+Cemaziyelevvel	Jumada al-Awwal
+Cemaziyelahir	Jumada al-Thani
+Receb	Rajab
+Şaban	Shaban
+Ramazan	Ramadan
+Şevval	Shawwal
+Zilkade	Dhu al-Qadah
+Zilhicce	Dhu al-Hijjah
+Ramazan Bayramı 1. gün	Eid al-Fitr, day 1
+Ramazan Bayramı 2. gün	Eid al-Fitr, day 2
+Ramazan Bayramı 3. gün	Eid al-Fitr, day 3
+Kurban Bayramı 1. gün	Eid al-Adha, day 1
+Kurban Bayramı 2. gün	Eid al-Adha, day 2
+Kurban Bayramı 3. gün	Eid al-Adha, day 3
+Kurban Bayramı 4. gün	Eid al-Adha, day 4
+Yılbaşı	New Year's Day
+Ulusal Egemenlik ve Çocuk Bayramı	National Sovereignty and Children's Day
+Emek ve Dayanışma Günü	Labour and Solidarity Day
+Atatürk'ü Anma, Gençlik ve Spor Bayramı	Commemoration of Atatürk, Youth and Sports Day
+Demokrasi ve Millî Birlik Günü	Democracy and National Unity Day
+Zafer Bayramı	Victory Day
+Cumhuriyet Bayramı	Republic Day
+Cumhuriyet Bayramı arifesi	Eve of Republic Day
+Ramazan Bayramı arifesi	Eve of Eid al-Fitr
+Kurban Bayramı arifesi	Eve of Eid al-Adha
+Regaib Kandili	Night of Raghaib
+Miraç Kandili	Night of the Ascension (Miraj)
+Berat Kandili	Night of Forgiveness (Bara'at)
+Ramazan başlangıcı	Start of Ramadan
+Kadir Gecesi	Night of Power (Laylat al-Qadr)
+Hicri yılbaşı	Islamic New Year
+Mevlid Kandili	Mawlid (the Prophet's birthday)
+Anneler Günü	Mother's Day
+Babalar Günü	Father's Day
+Atatürk'ü Anma Günü	Atatürk Memorial Day
+Öğretmenler Günü	Teachers' Day
+Ajanda	Planner
+Not kaydedilemedi.	Could not save the note.
+Resmi tatil	Public holiday
+Yarım gün	Half day
+Kandil	Holy night
+Özel gün	Special day
+Not	Note
+Yaklaşanlar	Coming up
+Önümüzdeki 7 günde not ya da özel gün yok.	No notes or special days in the next 7 days.
+… ve %d daha	… and %d more
+yarım gün	half day
+Hf	Wk
+Her yıl	Every year
+Hicri: %d %s %d	Hijri: %d %s %d
+Notlar	Notes
++ Not ekle	+ Add note
+Bu gün için not yok.	No notes for this day.
+Notlar %d–%d / %d · kaydırın	Notes %d–%d / %d · swipe
+Düzenle	Edit
+Notu düzenle	Edit note
+Yeni not	New note

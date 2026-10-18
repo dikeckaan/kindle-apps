@@ -608,3 +608,64 @@ Kastor	Кастор
 Kutup Yıldızı	Полярна зоря
 Algol	Алголь
 Mizar	Міцар
+Muharrem	Мухаррам
+Safer	Сафар
+Rebiülevvel	Рабі аль-авваль
+Rebiülahir	Рабі ас-сані
+Cemaziyelevvel	Джумада аль-уля
+Cemaziyelahir	Джумада ас-сані
+Receb	Раджаб
+Şaban	Шаабан
+Ramazan	Рамадан
+Şevval	Шавваль
+Zilkade	Зуль-када
+Zilhicce	Зуль-хіджа
+Ramazan Bayramı 1. gün	Ураза-байрам, 1-й день
+Ramazan Bayramı 2. gün	Ураза-байрам, 2-й день
+Ramazan Bayramı 3. gün	Ураза-байрам, 3-й день
+Kurban Bayramı 1. gün	Курбан-байрам, 1-й день
+Kurban Bayramı 2. gün	Курбан-байрам, 2-й день
+Kurban Bayramı 3. gün	Курбан-байрам, 3-й день
+Kurban Bayramı 4. gün	Курбан-байрам, 4-й день
+Yılbaşı	Новий рік
+Ulusal Egemenlik ve Çocuk Bayramı	День національного суверенітету та дітей
+Emek ve Dayanışma Günü	День праці та солідарності
+Atatürk'ü Anma, Gençlik ve Spor Bayramı	День пам'яті Ататюрка, молоді та спорту
+Demokrasi ve Millî Birlik Günü	День демократії та національної єдності
+Zafer Bayramı	День Перемоги
+Cumhuriyet Bayramı	День Республіки
+Cumhuriyet Bayramı arifesi	Переддень Дня Республіки
+Ramazan Bayramı arifesi	Переддень Ураза-байраму
+Kurban Bayramı arifesi	Переддень Курбан-байраму
+Regaib Kandili	Ніч Рагаїб
+Miraç Kandili	Ніч Вознесіння (Мірадж)
+Berat Kandili	Ніч Бараат
+Ramazan başlangıcı	Початок Рамадану
+Kadir Gecesi	Ніч приречення (Ляйлят аль-Кадр)
+Hicri yılbaşı	Ісламський Новий рік
+Mevlid Kandili	Мавлід (народження Пророка)
+Anneler Günü	День матері
+Babalar Günü	День батька
+Atatürk'ü Anma Günü	День пам'яті Ататюрка
+Öğretmenler Günü	День учителя
+Ajanda	Щоденник
+Not kaydedilemedi.	Не вдалося зберегти нотатку.
+Resmi tatil	Вихідний
+Yarım gün	Скорочений день
+Kandil	Священна ніч
+Özel gün	Пам'ятний день
+Not	Нотатка
+Yaklaşanlar	Найближчі
+Önümüzdeki 7 günde not ya da özel gün yok.	Найближчі 7 днів немає нотаток і пам'ятних днів.
+… ve %d daha	… і ще %d
+yarım gün	скорочений день
+Hf	Тиж
+Her yıl	Щороку
+Hicri: %d %s %d	Хіджра: %d %s %d
+Notlar	Нотатки
++ Not ekle	+ Нотатка
+Bu gün için not yok.	На цей день нотаток немає.
+Notlar %d–%d / %d · kaydırın	Нотатки %d–%d / %d · гортайте
+Düzenle	Змінити
+Notu düzenle	Змінити нотатку
+Yeni not	Нова нотатка
