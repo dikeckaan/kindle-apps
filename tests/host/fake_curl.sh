@@ -13,5 +13,6 @@ case "$FAKE_CURL_MODE" in
     hang) printf 'partial'; sleep 30 ;;
     big) head -c 3000000 /dev/zero | tr '\0' x ;;
     empty) ;;
+    endless) yes xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx ;; # no Content-Length: curl's --max-filesize cannot stop it
     *) printf 'hello body' ;;
 esac

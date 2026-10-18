@@ -101,6 +101,28 @@ static void read_args(char *args, int cap)
 	args[n] = '\0';
 }
 
+static void test_url_must_be_http(void)
+{
+	use_fake("ok");
+	unlink(ARGS);
+	char *body = NULL;
+	int len = 0;
+	T_EQ_INT(net_get("-o/tmp/evil", &body, &len, 5), -1); /* would be read as a curl option */
+	T_EQ_INT(net_get("file:///etc/shadow", &body, &len, 5), -1);
+	T_EQ_INT(net_download("--config=/tmp/x", "build/host/dl_evil", 1000, 5), -1);
+	T_ASSERT(access(ARGS, F_OK) != 0); /* curl never ran */
+}
+
+static void test_download_cap_enforced_while_streaming(void)
+{
+	use_fake("endless");
+	time_t t0 = time(NULL);
+	T_EQ_INT(net_download("https://example.com/endless", "build/host/dl_endless", 200000, 30), -1);
+	T_ASSERT(time(NULL) - t0 <= 5); /* stopped at the cap, not at the 30 s timeout */
+	T_ASSERT(access("build/host/dl_endless", F_OK) != 0);
+	T_ASSERT(access("build/host/dl_endless.part", F_OK) != 0);
+}
+
 static void test_download_renames_on_success(void)
 {
 	use_fake("ok");
@@ -116,8 +138,7 @@ static void test_download_renames_on_success(void)
 	T_EQ_STR(buf, "hello body");
 	char args[2048];
 	read_args(args, sizeof args);
-	T_ASSERT(strstr(args, "\n-o\n" DL_PART "\n") != NULL);
-	T_ASSERT(strstr(args, "--max-filesize\n1000\n") != NULL);
+	T_ASSERT(strstr(args, "-o") == NULL); /* the body streams through us (size cap), curl writes no file */
 	T_ASSERT(strstr(args, "--max-time\n30\n") != NULL);
 	T_ASSERT(strstr(args, "\nhttps://www.gutenberg.org/ebooks/46.kf8.images\n") != NULL);
 	unlink(DL);
@@ -162,6 +183,8 @@ int main(void)
 	T_RUN(test_get_too_big);
 	T_RUN(test_get_missing_curl);
 	T_RUN(test_urlencode);
+	T_RUN(test_url_must_be_http);
+	T_RUN(test_download_cap_enforced_while_streaming);
 	T_RUN(test_download_renames_on_success);
 	T_RUN(test_download_failure_leaves_nothing);
 	T_RUN(test_download_timeout);
