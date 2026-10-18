@@ -1,0 +1,51 @@
+name: release
+on:
+  push:
+    tags: ["v*"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fetch dependencies
+        run: ./tools/fetch-deps.sh
+      - name: Host unit tests
+        run: make test
+      - name: Build toolchain image
+        run: docker build -t kindle-apps-tc tools/docker
+      - name: Cross build
+        run: docker run --rm --user "$(id -u):$(id -g)" -v "$PWD":/src kindle-apps-tc make cross
+      - name: Package
+        run: make dist
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+      - name: Attach packages to the release
+        if: startsWith(github.ref, 'refs/tags/')
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "$GITHUB_REF_NAME" --title "$GITHUB_REF_NAME" --notes "Kurulum için README'ye bakın." \
+            dist/packages/*/*.kpkg tools/kindle-apps-depo.sh || \
+          gh release upload "$GITHUB_REF_NAME" dist/packages/*/*.kpkg tools/kindle-apps-depo.sh --clobber
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
