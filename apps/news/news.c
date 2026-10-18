@@ -69,22 +69,22 @@ void news_free(NewsItem *it, int n)
 const NewsFeed *news_feeds(int *n)
 {
 	static const NewsFeed f[] = {
-		{ "AA", "Güncel", "https://www.aa.com.tr/tr/rss/default?cat=guncel", "aa_guncel" },
-		{ "AA", "Gündem", "https://www.aa.com.tr/tr/rss/default?cat=gundem", "aa_gundem" },
-		{ "AA", "Dünya", "https://www.aa.com.tr/tr/rss/default?cat=dunya", "aa_dunya" },
-		{ "AA", "Ekonomi", "https://www.aa.com.tr/tr/rss/default?cat=ekonomi", "aa_ekonomi" },
-		{ "AA", "Spor", "https://www.aa.com.tr/tr/rss/default?cat=spor", "aa_spor" },
-		{ "AA", "Bilim", "https://www.aa.com.tr/tr/rss/default?cat=bilim-teknoloji", "aa_bilim" },
-		{ "AA", "Sağlık", "https://www.aa.com.tr/tr/rss/default?cat=saglik", "aa_saglik" },
-		{ "AA", "Kültür", "https://www.aa.com.tr/tr/rss/default?cat=kultur", "aa_kultur" },
-		{ "TRT", "Manşet", "https://www.trthaber.com/manset_articles.rss", "trt_manset" },
-		{ "TRT", "Gündem", "https://www.trthaber.com/gundem_articles.rss", "trt_gundem" },
-		{ "TRT", "Dünya", "https://www.trthaber.com/dunya_articles.rss", "trt_dunya" },
-		{ "TRT", "Ekonomi", "https://www.trthaber.com/ekonomi_articles.rss", "trt_ekonomi" },
-		{ "TRT", "Spor", "https://www.trthaber.com/spor_articles.rss", "trt_spor" },
-		{ "TRT", "Bilim", "https://www.trthaber.com/bilim_teknoloji_articles.rss", "trt_bilim" },
-		{ "TRT", "Sağlık", "https://www.trthaber.com/saglik_articles.rss", "trt_saglik" },
-		{ "TRT", "Kültür", "https://www.trthaber.com/kultur_sanat_articles.rss", "trt_kultur" },
+		{ "AA", N_("Güncel"), "https://www.aa.com.tr/tr/rss/default?cat=guncel", "aa_guncel" },
+		{ "AA", N_("Gündem"), "https://www.aa.com.tr/tr/rss/default?cat=gundem", "aa_gundem" },
+		{ "AA", N_("Dünya"), "https://www.aa.com.tr/tr/rss/default?cat=dunya", "aa_dunya" },
+		{ "AA", N_("Ekonomi"), "https://www.aa.com.tr/tr/rss/default?cat=ekonomi", "aa_ekonomi" },
+		{ "AA", N_("Spor"), "https://www.aa.com.tr/tr/rss/default?cat=spor", "aa_spor" },
+		{ "AA", N_("Bilim"), "https://www.aa.com.tr/tr/rss/default?cat=bilim-teknoloji", "aa_bilim" },
+		{ "AA", N_("Sağlık"), "https://www.aa.com.tr/tr/rss/default?cat=saglik", "aa_saglik" },
+		{ "AA", N_("Kültür"), "https://www.aa.com.tr/tr/rss/default?cat=kultur", "aa_kultur" },
+		{ "TRT", N_("Manşet"), "https://www.trthaber.com/manset_articles.rss", "trt_manset" },
+		{ "TRT", N_("Gündem"), "https://www.trthaber.com/gundem_articles.rss", "trt_gundem" },
+		{ "TRT", N_("Dünya"), "https://www.trthaber.com/dunya_articles.rss", "trt_dunya" },
+		{ "TRT", N_("Ekonomi"), "https://www.trthaber.com/ekonomi_articles.rss", "trt_ekonomi" },
+		{ "TRT", N_("Spor"), "https://www.trthaber.com/spor_articles.rss", "trt_spor" },
+		{ "TRT", N_("Bilim"), "https://www.trthaber.com/bilim_teknoloji_articles.rss", "trt_bilim" },
+		{ "TRT", N_("Sağlık"), "https://www.trthaber.com/saglik_articles.rss", "trt_saglik" },
+		{ "TRT", N_("Kültür"), "https://www.trthaber.com/kultur_sanat_articles.rss", "trt_kultur" },
 	};
 	*n = (int) (sizeof f / sizeof f[0]);
 	return f;

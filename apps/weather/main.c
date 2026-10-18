@@ -70,37 +70,52 @@ static int fetch(void)
 }
 
 /* city-local wall time of a unix timestamp, from the forecast's UTC offset */
+/* first n characters (not bytes) of a UTF-8 string, so short month names never end in half a letter */
+static void utf8_head(const char *s, int n, char *out, int cap)
+{
+	int o = 0;
+	for (; *s && n > 0 && o < cap - 4; n--) {
+		do out[o++] = *s++;
+		while ((*s & 0xC0) == 0x80);
+	}
+	out[o] = '\0';
+}
+
 static void local_hhmm(long t, char *out, int cap)
 {
 	time_t lt = (time_t) (t + (have_wx ? wx.utc_offset : 0));
 	struct tm tm;
 	gmtime_r(&lt, &tm);
-	if (time(NULL) - t > 20 * 3600) snprintf(out, (size_t) cap, "%d %.3s %02d:%02d", tm.tm_mday, kui_tr_month(tm.tm_mon), tm.tm_hour, tm.tm_min);
-	else snprintf(out, (size_t) cap, "%02d:%02d", tm.tm_hour, tm.tm_min);
+	if (time(NULL) - t > 20 * 3600) {
+		char mon[16];
+		utf8_head(kui_tr_month(tm.tm_mon), 3, mon, sizeof mon);
+		snprintf(out, (size_t) cap, "%d %s %02d:%02d", tm.tm_mday, mon, tm.tm_hour, tm.tm_min);
+	} else snprintf(out, (size_t) cap, "%02d:%02d", tm.tm_hour, tm.tm_min);
 }
 
-static void fmt_int(int v, const char *pre, const char *post, char *out, int cap)
+/* percentage in the language's style: "%73" in Turkish, "73 %" in German … */
+static void fmt_pct(int v, char *out, int cap)
 {
 	if (v < 0) snprintf(out, (size_t) cap, "—");
-	else snprintf(out, (size_t) cap, "%s%d%s", pre, v, post);
+	else snprintf(out, (size_t) cap, T("%%%d"), v);
 }
 
 static void draw_status(void)
 {
 	int w = kui_width(), h = kui_height();
 	KuiRect bar = { 0, h - 110, w - 300, 110 };
-	char s[96], t[48];
+	char s[160], t[48];
 	kui_fill(bar, 255);
 	if (status_msg) {
 		snprintf(s, sizeof s, "%s", status_msg);
 	} else if (have_wx) {
 		local_hhmm(fetched, t, sizeof t);
-		snprintf(s, sizeof s, offline ? "Çevrimdışı — son veri %s · Open-Meteo" : "Güncellendi %s · Open-Meteo", t);
+		snprintf(s, sizeof s, offline ? T("Çevrimdışı — son veri %s · Open-Meteo") : T("Güncellendi %s · Open-Meteo"), t);
 	} else {
-		snprintf(s, sizeof s, "%s", offline ? "Bağlantı yok, veri alınamadı" : "");
+		snprintf(s, sizeof s, "%s", offline ? T("Bağlantı yok, veri alınamadı") : "");
 	}
-	kui_text((KuiRect){ 30, bar.y, bar.w - 30, bar.h }, s, KUI_FONT_REG, 34, KUI_ALIGN_LEFT, 0);
-	nav[2] = (KuiButton){ { w - 280, h - 100, 250, 90 }, "Yenile", BTN_REFRESH };
+	kui_text((KuiRect){ 30, bar.y, bar.w - 30, bar.h }, s, KUI_FONT_REG, kui_fit_px(s, KUI_FONT_REG, 34, bar.w - 40), KUI_ALIGN_LEFT, 0);
+	nav[2] = (KuiButton){ { w - 280, h - 100, 250, 90 }, T("Yenile"), BTN_REFRESH };
 	kui_button(&nav[2], 0);
 	kui_mark_dirty((KuiRect){ 0, h - 110, w, 110 });
 }
@@ -110,7 +125,7 @@ static void draw(int full)
 	int w = kui_width(), h = kui_height();
 	char s[160], a[32], b[32];
 	kui_fill((KuiRect){ 0, 0, w, h }, 255);
-	kui_topbar("Hava Durumu", "Şehirler");
+	kui_topbar(T("Hava Durumu"), T("Şehirler"));
 	const WxCity *c = &cities[cur];
 	int y = KUI_TOPBAR_H;
 	/* city row with ◀ ▶ when there is more than one city */
@@ -125,34 +140,35 @@ static void draw(int full)
 	y += 110;
 	kui_fill((KuiRect){ 30, y, w - 60, 2 }, 0);
 	if (!have_wx) {
-		kui_text((KuiRect){ 40, y + 200, w - 80, 300 }, offline ? "Hava durumu alınamadı.\nWi-Fi bağlantısını kontrol edip Yenile'ye basın."
-									: "Yükleniyor…",
+		kui_text((KuiRect){ 40, y + 200, w - 80, 300 }, offline ? T("Hava durumu alınamadı.\nWi-Fi bağlantısını kontrol edip Yenile'ye basın.")
+									: T("Yükleniyor…"),
 			 KUI_FONT_REG, 44, KUI_ALIGN_CENTER, 0);
 	} else {
 		/* now: icon, temperature, condition; details on the right */
 		wx_draw_icon((KuiRect){ 30, y + 30, 260, 260 }, wx_code_icon(wx.code, wx.is_day));
 		wx_fmt_temp(wx.temp, s, sizeof s);
 		kui_text((KuiRect){ 290, y + 20, 360, 200 }, s, KUI_FONT_BOLD, 170, KUI_ALIGN_LEFT, 0);
-		kui_text((KuiRect){ 290, y + 220, 380, 70 }, wx_code_text(wx.code), KUI_FONT_REG, 46, KUI_ALIGN_LEFT, 0);
+		const char *cond = T(wx_code_text(wx.code));
+		kui_text((KuiRect){ 290, y + 220, 380, 70 }, cond, KUI_FONT_REG, kui_fit_px(cond, KUI_FONT_REG, 46, 380), KUI_ALIGN_LEFT, 0);
 		int dx = 680, dy = y + 40;
 		wx_fmt_temp(wx.feels, a, sizeof a);
-		snprintf(s, sizeof s, "Hissedilen %s", a);
-		kui_text((KuiRect){ dx, dy, w - dx - 20, 60 }, s, KUI_FONT_REG, 36, KUI_ALIGN_LEFT, 0);
-		if (isnan(wx.wind)) snprintf(s, sizeof s, "Rüzgâr —");
-		else snprintf(s, sizeof s, "Rüzgâr %ld km/s %s", lround(wx.wind), wx_wind_dir(wx.wind_dir));
-		kui_text((KuiRect){ dx, dy + 65, w - dx - 20, 60 }, s, KUI_FONT_REG, 36, KUI_ALIGN_LEFT, 0);
-		fmt_int(wx.hum, "%", "", a, sizeof a);
-		snprintf(s, sizeof s, "Nem %s", a);
-		kui_text((KuiRect){ dx, dy + 130, w - dx - 20, 60 }, s, KUI_FONT_REG, 36, KUI_ALIGN_LEFT, 0);
-		fmt_int(wx.n_hours ? wx.hour[0].pop : (wx.n_days ? wx.day[0].pop : -1), "%", "", a, sizeof a);
-		snprintf(s, sizeof s, "Yağış %s", a);
-		kui_text((KuiRect){ dx, dy + 195, w - dx - 20, 60 }, s, KUI_FONT_REG, 36, KUI_ALIGN_LEFT, 0);
+		snprintf(s, sizeof s, T("Hissedilen %s"), a);
+		kui_text((KuiRect){ dx, dy, w - dx - 20, 60 }, s, KUI_FONT_REG, kui_fit_px(s, KUI_FONT_REG, 36, w - dx - 20), KUI_ALIGN_LEFT, 0);
+		if (isnan(wx.wind)) snprintf(s, sizeof s, "%s", T("Rüzgâr —"));
+		else snprintf(s, sizeof s, T("Rüzgâr %ld km/s %s"), lround(wx.wind), wx.wind_dir < 0 ? "" : T(wx_wind_dir(wx.wind_dir)));
+		kui_text((KuiRect){ dx, dy + 65, w - dx - 20, 60 }, s, KUI_FONT_REG, kui_fit_px(s, KUI_FONT_REG, 36, w - dx - 20), KUI_ALIGN_LEFT, 0);
+		fmt_pct(wx.hum, a, sizeof a);
+		snprintf(s, sizeof s, T("Nem %s"), a);
+		kui_text((KuiRect){ dx, dy + 130, w - dx - 20, 60 }, s, KUI_FONT_REG, kui_fit_px(s, KUI_FONT_REG, 36, w - dx - 20), KUI_ALIGN_LEFT, 0);
+		fmt_pct(wx.n_hours ? wx.hour[0].pop : (wx.n_days ? wx.day[0].pop : -1), a, sizeof a);
+		snprintf(s, sizeof s, T("Yağış %s"), a);
+		kui_text((KuiRect){ dx, dy + 195, w - dx - 20, 60 }, s, KUI_FONT_REG, kui_fit_px(s, KUI_FONT_REG, 36, w - dx - 20), KUI_ALIGN_LEFT, 0);
 		y += 310;
 		if (wx.n_days) {
 			wx_fmt_temp(wx.day[0].tmax, a, sizeof a);
 			wx_fmt_temp(wx.day[0].tmin, b, sizeof b);
-			snprintf(s, sizeof s, "Bugün  en yüksek %s · en düşük %s · ☼ %s – %s", a, b, wx.day[0].sunrise, wx.day[0].sunset);
-			kui_text((KuiRect){ 30, y, w - 60, 60 }, s, KUI_FONT_REG, 32, KUI_ALIGN_CENTER, 0);
+			snprintf(s, sizeof s, T("Bugün  en yüksek %s · en düşük %s · ☼ %s – %s"), a, b, wx.day[0].sunrise, wx.day[0].sunset);
+			kui_text((KuiRect){ 30, y, w - 60, 60 }, s, KUI_FONT_REG, kui_fit_px(s, KUI_FONT_REG, 32, w - 60), KUI_ALIGN_CENTER, 0);
 		}
 		y += 75;
 		kui_fill((KuiRect){ 30, y, w - 60, 2 }, 0);
@@ -167,7 +183,7 @@ static void draw(int full)
 				wx_draw_icon((KuiRect){ x + 4, y + 60, cw - 8, cw - 8 }, wx_code_icon(wx.hour[i].code, day));
 				wx_fmt_temp(wx.hour[i].t, s, sizeof s);
 				kui_text((KuiRect){ x, y + 60 + cw, cw, 45 }, s, KUI_FONT_BOLD, 30, KUI_ALIGN_CENTER, 0);
-				fmt_int(wx.hour[i].pop, "%", "", s, sizeof s);
+				fmt_pct(wx.hour[i].pop, s, sizeof s);
 				kui_text((KuiRect){ x, y + 105 + cw, cw, 40 }, wx.hour[i].pop > 0 ? s : "", KUI_FONT_REG, 24, KUI_ALIGN_CENTER, 0);
 			}
 			y += 160 + cw;
@@ -178,15 +194,16 @@ static void draw(int full)
 		if (rh > 80) rh = 80;
 		for (int i = 0; i < wx.n_days; i++) {
 			int ry = y + 10 + i * rh;
-			kui_text((KuiRect){ 30, ry, 160, rh }, i == 0 ? "Bugün" : kui_tr_weekday_short(wx.day[i].wday), KUI_FONT_BOLD, 36,
-				 KUI_ALIGN_LEFT, 0);
+			const char *dn = i == 0 ? T("Bugün") : kui_tr_weekday_short(wx.day[i].wday);
+			kui_text((KuiRect){ 30, ry, 160, rh }, dn, KUI_FONT_BOLD, kui_fit_px(dn, KUI_FONT_BOLD, 36, 155), KUI_ALIGN_LEFT, 0);
 			wx_draw_icon((KuiRect){ 190, ry + 4, rh - 8, rh - 8 }, wx_code_icon(wx.day[i].code, 1));
-			kui_text((KuiRect){ 200 + rh, ry, 400, rh }, wx_code_text(wx.day[i].code), KUI_FONT_REG, 34, KUI_ALIGN_LEFT, 0);
+			const char *dc = T(wx_code_text(wx.day[i].code));
+			kui_text((KuiRect){ 200 + rh, ry, 640 - 210 - rh, rh }, dc, KUI_FONT_REG, kui_fit_px(dc, KUI_FONT_REG, 34, 640 - 210 - rh), KUI_ALIGN_LEFT, 0);
 			wx_fmt_temp(wx.day[i].tmax, a, sizeof a);
 			wx_fmt_temp(wx.day[i].tmin, b, sizeof b);
 			snprintf(s, sizeof s, "%s / %s", a, b);
 			kui_text((KuiRect){ 640, ry, 230, rh }, s, KUI_FONT_BOLD, 36, KUI_ALIGN_RIGHT, 0);
-			fmt_int(wx.day[i].pop, "%", "", s, sizeof s);
+			fmt_pct(wx.day[i].pop, s, sizeof s);
 			kui_text((KuiRect){ 880, ry, w - 910, rh }, wx.day[i].pop > 0 ? s : "", KUI_FONT_REG, 32, KUI_ALIGN_RIGHT, 0);
 		}
 	}
@@ -203,7 +220,7 @@ static void redraw_full(void) { draw(1); }
 
 static void refresh(void)
 {
-	status_msg = "Güncelleniyor…";
+	status_msg = T("Güncelleniyor…");
 	draw_status();
 	kui_flush(0);
 	fetch();
@@ -224,7 +241,7 @@ static void show_city(int i, int full)
 
 static void message(const char *title, const char *msg)
 {
-	const char *ok[] = { "Tamam" };
+	const char *ok[] = { T("Tamam") };
 	kui_dialog(title, msg, ok, 1, NULL);
 }
 
@@ -246,7 +263,7 @@ static int pick_list(const char *title, const char *right, const WxCity *list, i
 				kui_text((KuiRect){ r.x + 20, r.y, r.w - (deletable ? 220 : 40), r.h }, s, i == cur && deletable ? KUI_FONT_BOLD : KUI_FONT_REG,
 					 40, KUI_ALIGN_LEFT, 0);
 				if (deletable && n > 1) {
-					KuiButton del = { { r.x + r.w - 180, r.y + 15, 160, r.h - 30 }, "Sil", 1 };
+					KuiButton del = { { r.x + r.w - 180, r.y + 15, 160, r.h - 30 }, T("Sil"), 1 };
 					kui_button(&del, 0);
 				}
 			}
@@ -272,13 +289,13 @@ static int pick_list(const char *title, const char *right, const WxCity *list, i
 static void add_city(void)
 {
 	if (n_cities >= WX_MAX_CITIES) {
-		message("Şehirler", "En fazla 10 şehir kaydedilebilir.");
+		message(T("Şehirler"), T("En fazla 10 şehir kaydedilebilir."));
 		return;
 	}
 	char q[96] = "";
-	if (!kui_input_text("Şehir veya ilçe ara", q, sizeof q, 0, 2, NULL)) return;
+	if (!kui_input_text(T("Şehir veya ilçe ara"), q, sizeof q, 0, 2, NULL)) return;
 	kui_fill((KuiRect){ 0, 0, kui_width(), kui_height() }, 255);
-	kui_topbar("Aranıyor…", NULL);
+	kui_topbar(T("Aranıyor…"), NULL);
 	kui_text((KuiRect){ 40, 500, kui_width() - 80, 120 }, q, KUI_FONT_BOLD, 48, KUI_ALIGN_CENTER, 0);
 	kui_flush(1);
 	char url[600];
@@ -286,24 +303,24 @@ static void add_city(void)
 	int len = 0;
 	WxCity found[10];
 	int n = -1;
-	wx_geocode_url(q, url, sizeof url);
+	wx_geocode_url(q, kui_lang(), url, sizeof url);
 	if (net_get(url, &body, &len, 20) == 0) n = wx_geocode_parse(body, q, found, 10);
 	free(body);
 	if (n < 0) {
-		message("Şehir ara", "Bağlantı kurulamadı. Wi-Fi açık mı?");
+		message(T("Şehir ara"), T("Bağlantı kurulamadı. Wi-Fi açık mı?"));
 		return;
 	}
-	int i = pick_list("Sonuçlar", NULL, found, n, 0, "Sonuç bulunamadı");
+	int i = pick_list(T("Sonuçlar"), NULL, found, n, 0, T("Sonuç bulunamadı"));
 	if (i < 0) return;
 	cities[n_cities++] = found[i];
-	if (wx_cities_save(cities_path(), cities, n_cities) != 0) message("Şehirler", "Kaydedilemedi.");
+	if (wx_cities_save(cities_path(), cities, n_cities) != 0) message(T("Şehirler"), T("Kaydedilemedi."));
 	cur = n_cities - 1;
 }
 
 static void cities_screen(void)
 {
 	for (;;) {
-		int r = pick_list("Şehirler", "+ Ekle", cities, n_cities, 1, "");
+		int r = pick_list(T("Şehirler"), T("+ Ekle"), cities, n_cities, 1, "");
 		if (r == -1) return;
 		if (r == -100) {
 			int before = n_cities;
@@ -317,9 +334,9 @@ static void cities_screen(void)
 		}
 		int d = -2 - r;
 		char msg[160];
-		snprintf(msg, sizeof msg, "%s silinsin mi?", cities[d].name);
-		const char *yn[] = { "Sil", "Vazgeç" };
-		if (kui_dialog("Şehri sil", msg, yn, 2, NULL) != 0) continue;
+		snprintf(msg, sizeof msg, T("%s silinsin mi?"), cities[d].name);
+		const char *yn[] = { T("Sil"), T("Vazgeç") };
+		if (kui_dialog(T("Şehri sil"), msg, yn, 2, NULL) != 0) continue;
 		memmove(&cities[d], &cities[d + 1], sizeof cities[0] * (size_t) (n_cities - d - 1));
 		n_cities--;
 		if (cur >= n_cities) cur = n_cities - 1;

@@ -77,8 +77,8 @@ static void row(int y, int h, const char *a, const char *b, const char *c, KuiFo
 {
 	int w = kui_width();
 	kui_text((KuiRect){ 40, y, 440, h }, a, f, kui_fit_px(a, f, 40, 440), KUI_ALIGN_LEFT, 0);
-	kui_text((KuiRect){ 480, y, 260, h }, b, f, 40, KUI_ALIGN_RIGHT, 0);
-	kui_text((KuiRect){ 760, y, w - 800, h }, c, f, 40, KUI_ALIGN_RIGHT, 0);
+	kui_text((KuiRect){ 480, y, 260, h }, b, f, kui_fit_px(b, f, 40, 260), KUI_ALIGN_RIGHT, 0);
+	kui_text((KuiRect){ 760, y, w - 800, h }, c, f, kui_fit_px(c, f, 40, w - 800), KUI_ALIGN_RIGHT, 0);
 }
 
 static void rate_row(int y, const FxRate *r)
@@ -91,35 +91,48 @@ static void rate_row(int y, const FxRate *r)
 	row(y, 62, a, b, c, KUI_FONT_REG);
 }
 
+/* first n characters (not bytes) of a UTF-8 string, so short month names never end in half a letter */
+static void utf8_head(const char *s, int n, char *out, int cap)
+{
+	int o = 0;
+	for (; *s && n > 0 && o < cap - 4; n--) {
+		do out[o++] = *s++;
+		while ((*s & 0xC0) == 0x80);
+	}
+	out[o] = '\0';
+}
+
 static void draw_status(int y)
 {
 	int w = kui_width();
 	char s[128] = "";
 	if (!n_rates) {
-		snprintf(s, sizeof s, "%s", offline ? "Bağlantı yok, kurlar alınamadı" : "Yükleniyor…");
+		snprintf(s, sizeof s, "%s", offline ? T("Bağlantı yok, kurlar alınamadı") : T("Yükleniyor…"));
 	} else {
 		time_t t = (time_t) fetched;
 		struct tm tm;
 		localtime_r(&t, &tm);
-		snprintf(s, sizeof s, "%s · güncellendi %d %.3s %02d:%02d", offline ? "Çevrimdışı" : "TCMB", tm.tm_mday, kui_tr_month(tm.tm_mon),
-			 tm.tm_hour, tm.tm_min);
+		char mon[16];
+		utf8_head(kui_tr_month(tm.tm_mon), 3, mon, sizeof mon);
+		snprintf(s, sizeof s, offline ? T("Çevrimdışı · güncellendi %d %s %02d:%02d") : T("TCMB · güncellendi %d %s %02d:%02d"), tm.tm_mday,
+			 mon, tm.tm_hour, tm.tm_min);
 	}
 	kui_fill((KuiRect){ 0, y, w, 60 }, 255);
-	kui_text((KuiRect){ 40, y, w - 80, 60 }, s, KUI_FONT_REG, 32, KUI_ALIGN_CENTER, 0);
+	kui_text((KuiRect){ 40, y, w - 80, 60 }, s, KUI_FONT_REG, kui_fit_px(s, KUI_FONT_REG, 32, w - 80), KUI_ALIGN_CENTER, 0);
 	kui_mark_dirty((KuiRect){ 0, y, w, 60 });
 }
 
 static void draw(int full)
 {
 	int w = kui_width(), h = kui_height();
-	char s[96];
+	char s[160];
 	kui_fill((KuiRect){ 0, 0, w, h }, 255);
-	kui_topbar("Döviz & Altın", "Çevirici");
+	kui_topbar(T("Döviz & Altın"), T("Çevirici"));
 	int y = KUI_TOPBAR_H + 10;
-	snprintf(s, sizeof s, "TCMB döviz kurları%s%s", tcmb_date[0] ? " · " : "", tcmb_date);
-	kui_text((KuiRect){ 40, y, w - 80, 60 }, s, KUI_FONT_BOLD, 38, KUI_ALIGN_LEFT, 0);
+	snprintf(s, sizeof s, "%s%s%s", T("TCMB döviz kurları"), tcmb_date[0] ? " · " : "", tcmb_date);
+	kui_text((KuiRect){ 40, y, w - 80, 60 }, s, KUI_FONT_BOLD, kui_fit_px(s, KUI_FONT_BOLD, 38, w - 80), KUI_ALIGN_LEFT, 0);
 	y += 65;
-	row(y, 50, "", "Alış", "Satış", KUI_FONT_BOLD);
+	row(y, 50, "", T("Alış"), T("Satış"), KUI_FONT_BOLD);
 	y += 55;
 	kui_fill((KuiRect){ 40, y, w - 80, 2 }, 0);
 	for (size_t i = 0; i < sizeof MAIN / sizeof MAIN[0]; i++) {
@@ -130,20 +143,21 @@ static void draw(int full)
 	}
 	y += 20;
 	if (n_gold) {
-		kui_text((KuiRect){ 40, y, w - 80, 60 }, "Altın (serbest piyasa, ₺)", KUI_FONT_BOLD, 38, KUI_ALIGN_LEFT, 0);
+		const char *gh = T("Altın (serbest piyasa, ₺)");
+		kui_text((KuiRect){ 40, y, w - 80, 60 }, gh, KUI_FONT_BOLD, kui_fit_px(gh, KUI_FONT_BOLD, 38, w - 80), KUI_ALIGN_LEFT, 0);
 		y += 65;
 		kui_fill((KuiRect){ 40, y, w - 80, 2 }, 0);
 		for (int i = 0; i < n_gold; i++) {
 			char b[32], c[32];
 			kui_fmt_num(gold[i].buy, 2, b, sizeof b);
 			kui_fmt_num(gold[i].sell, 2, c, sizeof c);
-			row(y + 4, 62, gold[i].label, b, c, KUI_FONT_REG);
+			row(y + 4, 62, T(gold[i].label), b, c, KUI_FONT_REG);
 			y += 64;
 		}
 	}
 	draw_status(h - 190);
-	bottom[0] = (KuiButton){ { 40, h - 120, (w - 120) / 2, 100 }, "Tüm kurlar", BTN_ALL };
-	bottom[1] = (KuiButton){ { 80 + (w - 120) / 2, h - 120, (w - 120) / 2, 100 }, "Yenile", BTN_REFRESH };
+	bottom[0] = (KuiButton){ { 40, h - 120, (w - 120) / 2, 100 }, T("Tüm kurlar"), BTN_ALL };
+	bottom[1] = (KuiButton){ { 80 + (w - 120) / 2, h - 120, (w - 120) / 2, 100 }, T("Yenile"), BTN_REFRESH };
 	kui_button(&bottom[0], 0);
 	kui_button(&bottom[1], 0);
 	if (full) kui_flush(1);
@@ -156,7 +170,7 @@ static void draw(int full)
 static void refresh(void)
 {
 	kui_fill((KuiRect){ 0, kui_height() - 190, kui_width(), 60 }, 255);
-	kui_text((KuiRect){ 40, kui_height() - 190, kui_width() - 80, 60 }, "Güncelleniyor…", KUI_FONT_REG, 32, KUI_ALIGN_CENTER, 0);
+	kui_text((KuiRect){ 40, kui_height() - 190, kui_width() - 80, 60 }, T("Güncelleniyor…"), KUI_FONT_REG, 32, KUI_ALIGN_CENTER, 0);
 	kui_mark_dirty((KuiRect){ 0, kui_height() - 190, kui_width(), 60 });
 	kui_flush(0);
 	fetch();
@@ -171,9 +185,9 @@ static void all_rates(void)
 	KuiButton nav[2];
 	for (int full = 1;;) {
 		kui_fill((KuiRect){ 0, 0, w, h }, 255);
-		kui_topbar("Tüm kurlar", NULL);
+		kui_topbar(T("Tüm kurlar"), NULL);
 		int y = KUI_TOPBAR_H + 10;
-		row(y, 50, "", "Alış", "Satış", KUI_FONT_BOLD);
+		row(y, 50, "", T("Alış"), T("Satış"), KUI_FONT_BOLD);
 		y += 55;
 		kui_fill((KuiRect){ 40, y, w - 80, 2 }, 0);
 		for (int i = page * per; i < n_rates && i < (page + 1) * per; i++) {
@@ -264,7 +278,7 @@ static void converter(void)
 	for (int full = 1;;) {
 		if (full) {
 			kui_fill((KuiRect){ 0, 0, w, h }, 255);
-			kui_topbar("Çevirici", NULL);
+			kui_topbar(T("Çevirici"), NULL);
 			int bw = (w - 80 - 2 * 30 - 160) / 2;
 			top[0] = (KuiButton){ { 40, KUI_TOPBAR_H + 40, bw, 120 }, from, 1 };
 			top[1] = (KuiButton){ { 40 + bw + 30, KUI_TOPBAR_H + 40, 160, 120 }, "⇄", 2 };
@@ -291,7 +305,8 @@ static void converter(void)
 			snprintf(s, sizeof s, "—");
 		}
 		kui_text((KuiRect){ res.x + 20, res.y, res.w - 40, res.h }, s, KUI_FONT_BOLD, kui_fit_px(s, KUI_FONT_BOLD, 64, res.w - 40), KUI_ALIGN_RIGHT, 0);
-		kui_text((KuiRect){ 40, res.y + res.h, w - 80, 60 }, "TCMB satış kuru ile", KUI_FONT_REG, 30, KUI_ALIGN_RIGHT, 0);
+		const char *note = T("TCMB satış kuru ile");
+		kui_text((KuiRect){ 40, res.y + res.h, w - 80, 60 }, note, KUI_FONT_REG, kui_fit_px(note, KUI_FONT_REG, 30, w - 80), KUI_ALIGN_RIGHT, 0);
 		kui_mark_dirty(amt);
 		kui_mark_dirty(res);
 		kui_flush(full);
@@ -305,7 +320,7 @@ static void converter(void)
 		if (!id) id = kui_buttons_hit(keys, 12, e.x, e.y);
 		size_t len = strlen(amount);
 		if (id == 1 || id == 3) {
-			const char *c = pick_currency(id == 1 ? "Kaynak para" : "Hedef para");
+			const char *c = pick_currency(id == 1 ? T("Kaynak para") : T("Hedef para"));
 			if (c) snprintf(id == 1 ? from : to, 4, "%s", c);
 			full = 1;
 		} else if (id == 2) {

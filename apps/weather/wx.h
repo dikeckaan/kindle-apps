@@ -20,12 +20,12 @@ typedef struct {
 
 int  wx_parse(const char *json, Wx *out); /* 0 = ok (current block present), -1 = unusable */
 void wx_forecast_url(const WxCity *c, char *out, int cap);
-void wx_geocode_url(const char *query, char *out, int cap);
+void wx_geocode_url(const char *query, const char *lang, char *out, int cap); /* lang: "tr", "de", … */
 /* up to max results ranked for `query`: exact name, then capitals/district centres, then population */
 int  wx_geocode_parse(const char *json, const char *query, WxCity *out, int max);
-const char *wx_code_text(int code); /* WMO weather code → Turkish, "—" when unknown */
+const char *wx_code_text(int code); /* WMO weather code → Turkish source text (show with T()), "—" when unknown */
 WxIcon      wx_code_icon(int code, int is_day);
-const char *wx_wind_dir(int deg);   /* "K", "KD", … ; "" when unknown */
+const char *wx_wind_dir(int deg);   /* "K", "KD", … (Turkish source, show with T()); "" when unknown */
 
 /* cache file name for a city's last forecast (keyed by coordinates, so deleting/reordering cities is safe) */
 void wx_cache_name(const WxCity *c, char *out, int cap);

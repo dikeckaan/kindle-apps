@@ -4,7 +4,7 @@
 
 #define NEWS_MAX 64
 typedef struct { char title[256], link[256], date[40]; char *text; } NewsItem; /* text is malloc'd */
-typedef struct { const char *source, *label, *url, *id; } NewsFeed;
+typedef struct { const char *source, *label, *url, *id; } NewsFeed; /* label: Turkish source text, show with T() */
 
 /* complete <item>s of an RSS document of len bytes; text = content:encoded or description, whichever says more */
 int  news_parse_rss(const char *xml, int len, NewsItem *out, int max);

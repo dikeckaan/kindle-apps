@@ -96,7 +96,7 @@ static void draw_list(int full)
 {
 	int w = kui_width(), h = kui_height();
 	kui_fill((KuiRect){ 0, 0, w, h }, 255);
-	kui_topbar("Gazete", "Yenile");
+	kui_topbar(T("Gazete"), T("Yenile"));
 	int tw = (w - 120) / 2;
 	tabs[0] = (KuiButton){ { 40, KUI_TOPBAR_H + 15, tw, 90 }, "Anadolu Ajansı", 1 };
 	tabs[1] = (KuiButton){ { 80 + tw, KUI_TOPBAR_H + 15, tw, 90 }, "TRT Haber", 2 };
@@ -105,13 +105,13 @@ static void draw_list(int full)
 	build_cats();
 	int cw = (w - 40 - 3 * 15) / 4;
 	for (int i = 0; i < n_cats; i++) {
-		cats[i] = (KuiButton){ { 20 + (i % 4) * (cw + 15), KUI_TOPBAR_H + 125 + (i / 4) * 95, cw, 80 }, feeds[cat_feed[i]].label, 10 + i };
+		cats[i] = (KuiButton){ { 20 + (i % 4) * (cw + 15), KUI_TOPBAR_H + 125 + (i / 4) * 95, cw, 80 }, T(feeds[cat_feed[i]].label), 10 + i };
 		kui_button(&cats[i], cat_feed[i] == feed);
 	}
 	int y0 = KUI_TOPBAR_H + 330;
 	kui_fill((KuiRect){ 20, y0 - 10, w - 40, 3 }, 0);
 	if (!n_items) {
-		kui_text((KuiRect){ 40, y0 + 200, w - 80, 200 }, offline ? "Haberler alınamadı.\nWi-Fi bağlantısını kontrol edin." : "Yükleniyor…",
+		kui_text((KuiRect){ 40, y0 + 200, w - 80, 200 }, offline ? T("Haberler alınamadı.\nWi-Fi bağlantısını kontrol edin.") : T("Yükleniyor…"),
 			 KUI_FONT_REG, 42, KUI_ALIGN_CENTER, 0);
 	}
 	for (int i = 0; i < PER_PAGE; i++) {
@@ -125,7 +125,7 @@ static void draw_list(int full)
 		kui_fill((KuiRect){ 30, y + ROW_H - 4, w - 60, 1 }, 0);
 	}
 	/* bottom: page navigation and freshness */
-	char s[96];
+	char s[160];
 	nav[0] = (KuiButton){ { 20, h - 100, 160, 90 }, "◀", 1 };
 	nav[1] = (KuiButton){ { w - 180, h - 100, 160, 90 }, "▶", 2 };
 	if (pages() > 1) {
@@ -136,8 +136,9 @@ static void draw_list(int full)
 		time_t t = (time_t) fetched;
 		struct tm tm;
 		localtime_r(&t, &tm);
-		snprintf(s, sizeof s, "%d/%d · %s %02d:%02d", page + 1, pages(), offline ? "çevrimdışı, son veri" : "güncellendi", tm.tm_hour, tm.tm_min);
-		kui_text((KuiRect){ 190, h - 100, w - 380, 90 }, s, KUI_FONT_REG, 30, KUI_ALIGN_CENTER, 0);
+		snprintf(s, sizeof s, offline ? T("%d/%d · çevrimdışı, son veri %02d:%02d") : T("%d/%d · güncellendi %02d:%02d"), page + 1, pages(),
+			 tm.tm_hour, tm.tm_min);
+		kui_text((KuiRect){ 190, h - 100, w - 380, 90 }, s, KUI_FONT_REG, kui_fit_px(s, KUI_FONT_REG, 30, w - 390), KUI_ALIGN_CENTER, 0);
 	}
 	if (full) kui_flush(1);
 	else {
@@ -172,7 +173,7 @@ static void article(const NewsItem *it)
 	int n = 0;
 	char date[32], src[320];
 	news_date_short(it->date, date, sizeof date);
-	snprintf(src, sizeof src, "Kaynak: %s", it->link);
+	snprintf(src, sizeof src, T("Kaynak: %s"), it->link);
 	struct { const char *t; KuiFont f; int px; } parts[] = {
 		{ it->title, KUI_FONT_BOLD, 46 }, { date, KUI_FONT_REG, 30 }, { "", KUI_FONT_REG, 20 },
 		{ it->text, KUI_FONT_REG, 40 },   { "", KUI_FONT_REG, 20 }, { src, KUI_FONT_REG, 28 },

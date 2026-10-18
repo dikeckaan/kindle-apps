@@ -89,7 +89,7 @@ static void test_urls(void)
 	const char *want = "https://api.open-meteo.com/v1/forecast?latitude=40.9350&longitude=29.1550&";
 	T_ASSERT(strncmp(u, want, strlen(want)) == 0);
 	T_ASSERT(strstr(u, "timezone=auto") != NULL);
-	wx_geocode_url("Kadıköy", u, sizeof u);
+	wx_geocode_url("Kadıköy", "tr", u, sizeof u);
 	T_EQ_STR(u, "https://geocoding-api.open-meteo.com/v1/search?name=Kad%C4%B1k%C3%B6y&count=50&language=tr&format=json");
 }
 

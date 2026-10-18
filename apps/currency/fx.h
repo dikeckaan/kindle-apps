@@ -5,7 +5,7 @@
 #define FX_MAX 32
 #define FX_GOLD_MAX 8
 typedef struct { char code[4], name[64]; int unit; double buy, sell; } FxRate; /* TRY per `unit` of the currency */
-typedef struct { char label[32]; double buy, sell; } FxGold;
+typedef struct { char label[32]; double buy, sell; } FxGold; /* label: Turkish source text, show with T() */
 
 int fx_parse_tcmb(const char *xml, FxRate *out, int max, char date[11]); /* rates in TCMB order; 0 if unusable */
 int fx_parse_gold(const char *json, FxGold *out, int max);               /* gram, çeyrek, yarım, tam, cumhuriyet, ons */

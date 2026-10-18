@@ -3,6 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include "fx.h"
+#include "kui.h"
 #include "net/net.h"
 #include "vendor/cjson/cJSON.h"
 
@@ -62,8 +63,8 @@ double fx_parse_trnum(const char *s)
 int fx_parse_gold(const char *json, FxGold *out, int max)
 {
 	static const struct { const char *key, *label; } kinds[] = {
-		{ "gram-altin", "Gram altın" },   { "ceyrek-altin", "Çeyrek altın" },          { "yarim-altin", "Yarım altın" },
-		{ "tam-altin", "Tam altın" },     { "cumhuriyet-altini", "Cumhuriyet altını" }, { "ons", "Ons (USD)" },
+		{ "gram-altin", N_("Gram altın") }, { "ceyrek-altin", N_("Çeyrek altın") },          { "yarim-altin", N_("Yarım altın") },
+		{ "tam-altin", N_("Tam altın") },   { "cumhuriyet-altini", N_("Cumhuriyet altını") }, { "ons", N_("Ons (USD)") },
 	};
 	cJSON *root = cJSON_Parse(json);
 	int n = 0;

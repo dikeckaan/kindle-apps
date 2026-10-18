@@ -95,13 +95,14 @@ static void draw_all(const struct tm *tm)
 	kui_text((KuiRect){ 20, 590, w - 40, 100 }, s, KUI_FONT_REG, kui_fit_px(s, KUI_FONT_REG, 64, w - 60), KUI_ALIGN_CENTER, 0);
 	kui_fill((KuiRect){ 60, 720, w - 120, 3 }, 0);
 	if (!have_wx) {
-		kui_text((KuiRect){ 40, 800, w - 80, 200 }, "Hava durumu yok (Wi-Fi kapalı olabilir)", KUI_FONT_REG, 40, KUI_ALIGN_CENTER, 0);
+		kui_text((KuiRect){ 40, 800, w - 80, 200 }, T("Hava durumu yok (Wi-Fi kapalı olabilir)"), KUI_FONT_REG, 40, KUI_ALIGN_CENTER, 0);
 		return;
 	}
 	wx_draw_icon((KuiRect){ 70, 760, 230, 230 }, wx_code_icon(wx.code, wx.is_day));
 	wx_fmt_temp(wx.temp, s, sizeof s);
 	kui_text((KuiRect){ 330, 750, 380, 170 }, s, KUI_FONT_BOLD, 140, KUI_ALIGN_LEFT, 0);
-	kui_text((KuiRect){ 330, 920, w - 360, 70 }, wx_code_text(wx.code), KUI_FONT_REG, 46, KUI_ALIGN_LEFT, 0);
+	const char *cond = T(wx_code_text(wx.code));
+	kui_text((KuiRect){ 330, 920, w - 360, 70 }, cond, KUI_FONT_REG, kui_fit_px(cond, KUI_FONT_REG, 46, w - 360), KUI_ALIGN_LEFT, 0);
 	kui_text((KuiRect){ 700, 760, w - 740, 70 }, city.name, KUI_FONT_BOLD, kui_fit_px(city.name, KUI_FONT_BOLD, 44, w - 740), KUI_ALIGN_RIGHT, 0);
 	if (wx.n_days) {
 		wx_fmt_temp(wx.day[0].tmax, a, sizeof a);
@@ -114,7 +115,8 @@ static void draw_all(const struct tm *tm)
 	if (cols > 0) kui_fill((KuiRect){ 60, 1030, w - 120, 2 }, 0);
 	for (int i = 0; i < cols; i++) {
 		int x = 60 + i * cw, d = i + 1;
-		kui_text((KuiRect){ x, 1060, cw, 70 }, kui_tr_weekday(wx.day[d].wday), KUI_FONT_BOLD, 42, KUI_ALIGN_CENTER, 0);
+		const char *wd = kui_tr_weekday(wx.day[d].wday);
+		kui_text((KuiRect){ x, 1060, cw, 70 }, wd, KUI_FONT_BOLD, kui_fit_px(wd, KUI_FONT_BOLD, 42, cw - 10), KUI_ALIGN_CENTER, 0);
 		wx_draw_icon((KuiRect){ x + cw / 2 - 70, 1140, 140, 140 }, wx_code_icon(wx.day[d].code, 1));
 		wx_fmt_temp(wx.day[d].tmax, a, sizeof a);
 		wx_fmt_temp(wx.day[d].tmin, b, sizeof b);

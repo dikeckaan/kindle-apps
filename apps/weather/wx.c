@@ -110,11 +110,11 @@ void wx_forecast_url(const WxCity *c, char *out, int cap)
 		 c->lat, c->lon);
 }
 
-void wx_geocode_url(const char *query, char *out, int cap)
+void wx_geocode_url(const char *query, const char *lang, char *out, int cap)
 {
 	char q[256];
 	net_urlencode(query, q, sizeof q);
-	snprintf(out, (size_t) cap, "https://geocoding-api.open-meteo.com/v1/search?name=%s&count=50&language=tr&format=json", q);
+	snprintf(out, (size_t) cap, "https://geocoding-api.open-meteo.com/v1/search?name=%s&count=50&language=%s&format=json", q, lang);
 }
 
 static void copy_str(char *dst, int cap, const cJSON *o, const char *k)
@@ -183,24 +183,24 @@ int wx_geocode_parse(const char *json, const char *query, WxCity *out, int max)
 const char *wx_code_text(int c)
 {
 	switch (c) {
-	case 0: return "Açık";
-	case 1: return "Az bulutlu";
-	case 2: return "Parçalı bulutlu";
-	case 3: return "Kapalı";
-	case 45: case 48: return "Sisli";
-	case 51: case 53: case 55: return "Çisenti";
-	case 56: case 57: return "Donan çisenti";
-	case 61: case 63: return "Yağmurlu";
-	case 65: return "Şiddetli yağmur";
-	case 66: case 67: return "Donan yağmur";
-	case 71: case 73: return "Karlı";
-	case 75: return "Yoğun kar";
-	case 77: return "Kar taneleri";
-	case 80: case 81: return "Sağanak";
-	case 82: return "Şiddetli sağanak";
-	case 85: case 86: return "Kar sağanağı";
-	case 95: return "Gök gürültülü";
-	case 96: case 99: return "Dolu, fırtına";
+	case 0: return N_("Açık");
+	case 1: return N_("Az bulutlu");
+	case 2: return N_("Parçalı bulutlu");
+	case 3: return N_("Kapalı");
+	case 45: case 48: return N_("Sisli");
+	case 51: case 53: case 55: return N_("Çisenti");
+	case 56: case 57: return N_("Donan çisenti");
+	case 61: case 63: return N_("Yağmurlu");
+	case 65: return N_("Şiddetli yağmur");
+	case 66: case 67: return N_("Donan yağmur");
+	case 71: case 73: return N_("Karlı");
+	case 75: return N_("Yoğun kar");
+	case 77: return N_("Kar taneleri");
+	case 80: case 81: return N_("Sağanak");
+	case 82: return N_("Şiddetli sağanak");
+	case 85: case 86: return N_("Kar sağanağı");
+	case 95: return N_("Gök gürültülü");
+	case 96: case 99: return N_("Dolu, fırtına");
 	default: return "—";
 	}
 }
@@ -219,7 +219,7 @@ WxIcon wx_code_icon(int c, int is_day)
 
 const char *wx_wind_dir(int deg)
 {
-	static const char *const d[] = { "K", "KD", "D", "GD", "G", "GB", "B", "KB" };
+	static const char *const d[] = { /* N_ */ "K", "KD", "D", "GD", "G", "GB", "B", "KB" };
 	if (deg < 0) return "";
 	return d[((deg % 360) * 2 + 45) / 90 % 8];
 }
