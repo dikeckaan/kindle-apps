@@ -608,3 +608,14 @@ Kastor	Кастор
 Kutup Yıldızı	Полярная звезда
 Algol	Алголь
 Mizar	Мицар
+Şiir Defteri	Тетрадь стихов
+Günün şiiri	Стихотворение дня
+Şairler	Поэты
+Favoriler	Избранное
+Bütün şiirlerden biri	Любое стихотворение
+%d şair, yüzyıllara göre	Поэтов: %d, по векам
+%d şiir yıldızlı	Отмечено звёздочкой: %d
+%d şiir	Стихотворений: %d
+%d şiir · %d şair · kaynak: Vikikaynak (kamu malı)	Стихотворений: %d · поэтов: %d · источник: Викитека (общественное достояние)
+Şiirler yüklenemedi.	Не удалось загрузить стихи.
+Henüz favori şiir yok.\nBir şiirde ☆ düğmesine dokunun.	Избранных стихов пока нет.\nНажмите ☆ у стихотворения.

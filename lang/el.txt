@@ -608,3 +608,14 @@ Kastor	Κάστωρ
 Kutup Yıldızı	Πολικός Αστέρας
 Algol	Αλγκόλ
 Mizar	Μιζάρ
+Şiir Defteri	Τετράδιο ποιημάτων
+Günün şiiri	Ποίημα της ημέρας
+Şairler	Ποιητές
+Favoriler	Αγαπημένα
+Bütün şiirlerden biri	Ένα οποιοδήποτε ποίημα
+%d şair, yüzyıllara göre	%d ποιητές, ανά αιώνα
+%d şiir yıldızlı	%d ποιήματα με αστέρι
+%d şiir	%d ποιήματα
+%d şiir · %d şair · kaynak: Vikikaynak (kamu malı)	%d ποιήματα · %d ποιητές · πηγή: Βικιθήκη (κοινό κτήμα)
+Şiirler yüklenemedi.	Δεν ήταν δυνατή η φόρτωση των ποιημάτων.
+Henüz favori şiir yok.\nBir şiirde ☆ düğmesine dokunun.	Δεν υπάρχουν ακόμη αγαπημένα ποιήματα.\nΠατήστε ☆ σε ένα ποίημα.

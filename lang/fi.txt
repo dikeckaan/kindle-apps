@@ -608,3 +608,14 @@ Kastor	Kastor
 Kutup Yıldızı	Pohjantähti
 Algol	Algol
 Mizar	Mizar
+Şiir Defteri	Runovihko
+Günün şiiri	Päivän runo
+Şairler	Runoilijat
+Favoriler	Suosikit
+Bütün şiirlerden biri	Mikä tahansa runo
+%d şair, yüzyıllara göre	Runoilijoita: %d, vuosisadoittain
+%d şiir yıldızlı	Tähdellä merkittyjä runoja: %d
+%d şiir	Runoja: %d
+%d şiir · %d şair · kaynak: Vikikaynak (kamu malı)	Runoja: %d · runoilijoita: %d · lähde: Wikiaineisto (vapaa)
+Şiirler yüklenemedi.	Runoja ei voitu ladata.
+Henüz favori şiir yok.\nBir şiirde ☆ düğmesine dokunun.	Ei vielä suosikkirunoja.\nNapauta runon kohdalla ☆.

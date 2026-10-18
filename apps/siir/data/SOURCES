@@ -1,0 +1,465 @@
+Şiir Defteri — poem sources
+
+Every poem in poems.txt was taken from Turkish Wikisource (https://tr.wikisource.org) on 2026-10-19 by
+tools/siir/build-poems.py and only reformatted (wiki markup removed, stanza breaks kept, spelling as on Wikisource).
+All poets died more than 70 years ago (death years from their Kişi: pages on Wikisource), so under Turkish law
+(FSEK art. 27: protection ends 70 years after the end of the year of the author's death) the poems are in the
+public domain in Türkiye. Translations and pages marked as copyrighted were excluded; scan-based pages were only
+used when every transcluded page is proofread. The author notes were written for this app.
+Wikisource's own page layout and transcription work is offered under CC BY-SA 4.0: this file credits each page.
+
+Yunus Emre (1240–1321; died 1321, public domain in Türkiye since 1392)
+  Ah N'ideyim Ömrüm Seni — https://tr.wikisource.org/wiki/Ah_N%27ideyim_%C3%96mr%C3%BCm_Seni (revision 173796)
+  Aşk Bezirganı — https://tr.wikisource.org/wiki/A%C5%9Fk_Bezirgan%C4%B1 (revision 147568)
+  Aşk İmamdır Bize — https://tr.wikisource.org/wiki/A%C5%9Fk_%C4%B0mamd%C4%B1r_Bize (revision 173802)
+  Aşk Ver Bana — https://tr.wikisource.org/wiki/A%C5%9Fk_Ver_Bana (revision 173809)
+  Bir Kez Gönül Yıktın İse — https://tr.wikisource.org/wiki/Bir_kez_g%C3%B6n%C3%BCl_y%C4%B1kt%C4%B1n_ise (revision 152136)
+  Bir Kez Yüzün Gören Senün Ömrünce Hiç Unutmaya — https://tr.wikisource.org/wiki/Bir_Kez_Y%C3%BCz%C3%BCn_G%C3%B6ren_Sen%C3%BCn_%C3%96mr%C3%BCnce_Hi%C3%A7_Unutmaya (revision 147920); page tags: KM-ÇY
+  Bir Sakiden İçtik Şarap — https://tr.wikisource.org/wiki/Bir_Sakiden_%C4%B0%C3%A7tik_%C5%9Earap (revision 152133)
+  Bülbül Kasidesi — https://tr.wikisource.org/wiki/B%C3%BClb%C3%BCl_Kasidesi (revision 170981)
+  Canım Kurban Olsun — https://tr.wikisource.org/wiki/Can%C4%B1m_Kurban_Olsun (revision 173836)
+  Dertli Dolap — https://tr.wikisource.org/wiki/Dertli_Dolap (revision 169055)
+  Haber eylen âşıklara — https://tr.wikisource.org/wiki/Haber_eylen_%C3%A2%C5%9F%C4%B1klara (revision 152376)
+  Hak’dan İnen Şerbeti İçtik Elhamdülillah — https://tr.wikisource.org/wiki/Hak%E2%80%99dan_%C4%B0nen_%C5%9Eerbeti_%C4%B0%C3%A7tik_Elhamd%C3%BClillah (revision 143954)
+  İşitin Ey Yarenler — https://tr.wikisource.org/wiki/%C4%B0%C5%9Fitin_Ey_Yarenler (revision 153367)
+  Kime gönül verir isem — https://tr.wikisource.org/wiki/Kime_g%C3%B6n%C3%BCl_verir_isem (revision 152633)
+  Ol Calab'ımın aşkı — https://tr.wikisource.org/wiki/Ol_calab%C4%B1m%C4%B1n_a%C5%9Fk%C4%B1 (revision 152885)
+  Sevelim sevilelim — https://tr.wikisource.org/wiki/Sevelim_sevilelim (revision 172078)
+  Severem ben seni candan içeri — https://tr.wikisource.org/wiki/Severem_ben_seni_candan_i%C3%A7eri (revision 153035)
+  Sırra erdim — https://tr.wikisource.org/wiki/S%C4%B1rra_erdim (revision 153066)
+  Sun kadehi ey saki — https://tr.wikisource.org/wiki/Sun_kadehi_ey_saki (revision 153060)
+  Taştın yine deli gönül — https://tr.wikisource.org/wiki/Ta%C5%9Ft%C4%B1n_yine_deli_g%C3%B6n%C3%BCl (revision 153077)
+Kadı Burhaneddin (1345–1398; died 1398, public domain in Türkiye since 1469)
+  Ben Leblerini canıma emsem görürem — https://tr.wikisource.org/wiki/Ben_Leblerini_Can%C4%B1ma_Emsem_G%C3%B6r%C3%BCrem (revision 142038); page tags: KM-Osmanlı
+  Gönülüme ben dedim ki kandesin — https://tr.wikisource.org/wiki/G%C3%B6n%C3%BCl%C3%BCme_Ben_Dedim_ki_Kandesin (revision 141011)
+  Hevâ ki şol senemün zülfini müşevveş ider — https://tr.wikisource.org/wiki/Gazel:(Hev%C3%A2_ki_%C5%9Fol_senem%C3%BCn_z%C3%BClfini_m%C3%BC%C5%9Fevve%C5%9F_ider) (revision 141010)
+  İy yârenler yâr yolına nem kaldı ki yanmamışam — https://tr.wikisource.org/wiki/%C4%B0y_y%C3%A2renler_y%C3%A2r_yol%C4%B1na_nem_kald%C4%B1_ki_yanmam%C4%B1%C5%9Fam (revision 142027)
+  Nice ki ömrüm var benim, yüzün gibi yüz görmedim — https://tr.wikisource.org/wiki/Nice_ki_%C3%B6mr%C3%BCm_var_benim,_y%C3%BCz%C3%BCn_gibi_y%C3%BCz_g%C3%B6rmedim (revision 142041)
+  Ölmüş tenüme ‘aşkı anun rûh değül mi — https://tr.wikisource.org/wiki/%C3%96lm%C3%BC%C5%9F_ten%C3%BCme_%E2%80%98a%C5%9Fk%C4%B1_anun_r%C3%BBh_de%C4%9F%C3%BCl_mi (revision 141012)
+Seyyid Nesîmî (1369–1417; died 1417, public domain in Türkiye since 1488)
+  Bir kişinin sorma aslın, izzetinden bellidir — https://tr.wikisource.org/wiki/Bir_ki%C5%9Finin_sorma_asl%C4%B1n,_izzetinden_bellidir (revision 141909)
+  Böyle kem zamanda cihana geldim — https://tr.wikisource.org/wiki/B%C3%B6yle_kem_zamanda_cihana_geldim (revision 152155)
+  Erenler şahtan gelirler — https://tr.wikisource.org/wiki/Erenler_%C5%9Fahtan_gelirler (revision 141911)
+  Ey müselmânlar, medet, ol yâr pünhan ayrılır — https://tr.wikisource.org/wiki/Ey_M%C3%BCselm%C3%A2nlar,_Medet,_Ol_Y%C3%A2r_P%C3%BCnh%C3%A2n_Ayr%C4%B1l%C4%B1r (revision 166670); page tags: KM-Türkiye
+  İki Cihana Sığmazam — https://tr.wikisource.org/wiki/%C4%B0ki_Cihana_S%C4%B1%C4%9Fmazam (revision 174602); page tags: KM-Osmanlı
+  Lebine ehl-î nezer çeşme-i heyvan dediler — https://tr.wikisource.org/wiki/Lebine_ehl-%C3%AE_nezer_%C3%A7e%C5%9Fme-i_heyvan_dediler (revision 166059); page tags: KM-Türkiye
+  Merhaba hoş geldin ey ruh-i revanım — https://tr.wikisource.org/wiki/Merhaba_ho%C5%9F_geldin_ey_ruh-i_revan%C4%B1m (revision 141912)
+  Seher oldu ey nigarım — https://tr.wikisource.org/wiki/Seher_oldu_ey_nigar%C4%B1m (revision 141913)
+Şeyhî (ö. 1431; died 1431, public domain in Türkiye since 1502)
+  Cihân hüsnü yüzünden bir varakdır — https://tr.wikisource.org/wiki/Cih%C3%A2n_h%C3%BCsn%C3%BC_y%C3%BCz%C3%BCnden_bir_varakd%C4%B1r (revision 141030)
+  Çün yüzün vasfı bülbüle düşdü — https://tr.wikisource.org/wiki/%C3%87%C3%BCn_y%C3%BCz%C3%BCn_vasf%C4%B1_b%C3%BClb%C3%BCle_d%C3%BC%C5%9Fd%C3%BC (revision 141033)
+  Ölme gönül firaak ile Îsâ-nefes gelür — https://tr.wikisource.org/wiki/Gazel_(%27gel%C3%BCr%27_redifli) (revision 140955)
+  Rind-i melâmetiz bizim hâtırımız güzeldedir — https://tr.wikisource.org/wiki/Rind-i_mel%C3%A2metiz_bizim_h%C3%A2t%C4%B1r%C4%B1m%C4%B1z_g%C3%BCzeldedir (revision 141031)
+  Sanemâ gün yüzün âyine-i cândır bilirim — https://tr.wikisource.org/wiki/Sanem%C3%A2_g%C3%BCn_y%C3%BCz%C3%BCn_%C3%A2yine-i_c%C3%A2nd%C4%B1r_bilirim (revision 141032)
+  Zâhidi gör ki gezer ‘aşk ile meyhâneleri — https://tr.wikisource.org/wiki/Z%C3%A2hidi_G%C3%B6r_ki_Gezer_%E2%80%98A%C5%9Fk_%C4%B0le_Meyh%C3%A2neleri (revision 141029)
+Eşrefoğlu Rûmî (1353–1469; died 1469, public domain in Türkiye since 1540)
+  Adı Aşk — https://tr.wikisource.org/wiki/Ad%C4%B1_A%C5%9Fk (revision 143533); page tags: KM-ÇY
+  Bir Gönül Deriçesinden Yine Bir Nur Oldı Peydâ — https://tr.wikisource.org/wiki/Bir_G%C3%B6n%C3%BCl_Deri%C3%A7esinden_Yine_Bir_Nur_Old%C4%B1_Peyd%C3%A2 (revision 147904); page tags: KM-ÇY
+  Canımı Uryân Edüp Saldım Bu Aşk Deryâsına — https://tr.wikisource.org/wiki/Can%C4%B1m%C4%B1_Ury%C3%A2n_Ed%C3%BCp_Sald%C4%B1m_Bu_A%C5%9Fk_Dery%C3%A2s%C4%B1na (revision 147502); page tags: KM-ÇY
+  Ey Allahım Beni Senden Ayırma — https://tr.wikisource.org/wiki/Ey_Allah%C4%B1m_Beni_Senden_Ay%C4%B1rma (revision 168901); page tags: KM-ÇY
+  Işk Beni Yağma Kılupdur Sen Beni Sorma Bana — https://tr.wikisource.org/wiki/I%C5%9Fk_Beni_Ya%C4%9Fma_K%C4%B1lupdur_Sen_Beni_Sorma_Bana (revision 147912); page tags: KM-ÇY
+  Tövbeye Gel — https://tr.wikisource.org/wiki/T%C3%B6vbeye_Gel (revision 143534); page tags: KM-ÇY
+  Yine Cânum Dimâğına İrişdi Ol Lezzeti-i Dôst — https://tr.wikisource.org/wiki/Yine_C%C3%A2num_Dim%C3%A2%C4%9F%C4%B1na_%C4%B0ri%C5%9Fdi_Ol_Lezzeti-i_D%C3%B4st (revision 147897); page tags: KM-ÇY
+Ahmed Paşa (1426–1497; died 1497, public domain in Türkiye since 1568)
+  Ey Fitnesi Çok Kavli Yalan Yandum Elünden — https://tr.wikisource.org/wiki/Ey_Fitnesi_%C3%87ok_Kavli_Yalan_Yandum_El%C3%BCnden (revision 169582); page tags: Telif bilgisiz
+  Gazel ('olmamış' redifli) — https://tr.wikisource.org/wiki/Gazel_(%27olmam%C4%B1%C5%9F%27_redifli) (revision 165521); page tags: Telif bilgisiz
+  Gazel ('safâca mısın' redifli) — https://tr.wikisource.org/wiki/Gazel_(%27saf%C3%A2ca_m%C4%B1s%C4%B1n%27_redifli) (revision 165522); page tags: Telif bilgisiz
+  Kaside ("kerem" redifli) — https://tr.wikisource.org/wiki/Kaside_(%27kerem%27_redifli) (revision 165523); page tags: Telif bilgisiz
+Kaygusuz Abdal (14.–15. yüzyıl; no death year on Wikisource, died by 1500: public domain)
+  Dervişlik Hırkada Tacda Değildir — https://tr.wikisource.org/wiki/Dervi%C5%9Flik_H%C4%B1rkada_Tacda_De%C4%9Fildir (revision 144170)
+  Eyâ Akl İle İrfânım Deyenler — https://tr.wikisource.org/wiki/Ey%C3%A2_Akl_%C4%B0le_%C4%B0rf%C3%A2n%C4%B1m_Deyenler (revision 144472)
+  Suâl Ettim Bu Gün Ben Bir Dolaba — https://tr.wikisource.org/wiki/Su%C3%A2l_Ettim_Bu_G%C3%BCn_Ben_Bir_Dolaba (revision 144471)
+  Tama’ımız Ne Azadır Ne Çoğa — https://tr.wikisource.org/wiki/Tama%E2%80%99%C4%B1m%C4%B1z_Ne_Azad%C4%B1r_Ne_%C3%87o%C4%9Fa (revision 144169)
+Necâtî (ö. 1509; died 1509, public domain in Türkiye since 1580)
+  Bir yüzi gül gonce-leb dil-dâr dirsen işte sen — https://tr.wikisource.org/wiki/Bir_y%C3%BCzi_g%C3%BCl_gonce-leb_dil-d%C3%A2r_dirsen_i%C5%9Fte_sen (revision 141036); page tags: KM-Osmanlı
+  Dağları Ferhâd anunçün hâk ile yeksân ider — https://tr.wikisource.org/wiki/Da%C4%9Flar%C4%B1_Ferh%C3%A2d_anun%C3%A7%C3%BCn_h%C3%A2k_ile_yeks%C3%A2n_ider (revision 142074)
+  Gamzeler kim cân iline tîr-i müjgân yağdurur — https://tr.wikisource.org/wiki/Gamzeler_kim_c%C3%A2n_iline_t%C3%AEr-i_m%C3%BCjg%C3%A2n_ya%C4%9Fdurur (revision 141040); page tags: KM-Osmanlı
+  Lâle-hadler yine gülşende neler etmediler — https://tr.wikisource.org/wiki/L%C3%A2le-hadler_yine_g%C3%BCl%C5%9Fende_neler_etmediler (revision 171243)
+  Tutalum zenbîl ile gökden iner meh-pâreler — https://tr.wikisource.org/wiki/Tutalum_zenb%C3%AEl_ile_g%C3%B6kden_iner_meh-p%C3%A2reler (revision 141037); page tags: KM-Osmanlı
+  Yâra Ne Ey Müddeî Çok Çok Gün Ahumdan Benüm — https://tr.wikisource.org/wiki/Y%C3%A2ra_Ne_Ey_M%C3%BCdde%C3%AE_%C3%87ok_%C3%87ok_G%C3%BCn_Ahumdan_Ben%C3%BCm (revision 141039); page tags: KM-Osmanlı
+Şah Hatâyî (1487–1524; no death year on Wikisource, died by 1524: public domain)
+  Bir Nefescük Söyleyeyüm — https://tr.wikisource.org/wiki/Bir_Nefesc%C3%BCk_S%C3%B6yleyey%C3%BCm (revision 144000)
+  Dervişlük Aydur Bana — https://tr.wikisource.org/wiki/Dervi%C5%9Fl%C3%BCk_Aydur_Bana (revision 144001)
+  Erenler Cemi — https://tr.wikisource.org/wiki/Erenler_Cemi (revision 169137); page tags: KM-Türkiye
+  Ey perî hüsnün senin nûr-i Huda’dır bilmiş ol — https://tr.wikisource.org/wiki/Ey_Per%C3%AE_H%C3%BCsn%C3%BCn_Senin_N%C3%BBr-i_Huda%E2%80%99d%C4%B1r_Bilmi%C5%9F_Ol (revision 163568)
+  Hak’ı Gönülde Sır Sakla Özünden Bî Haber Sofî — https://tr.wikisource.org/wiki/Hak%E2%80%99%C4%B1_G%C3%B6n%C3%BClde_S%C4%B1r_Sakla_%C3%96z%C3%BCnden_B%C3%AE_Haber_Sof%C3%AE (revision 163534)
+  Kudret Kandilinde Parlayub Duran — https://tr.wikisource.org/wiki/Kudret_Kandilinde_Parlayub_Duran (revision 143990)
+  Ne dersin? — https://tr.wikisource.org/wiki/Ne_dersin%3F (revision 169041)
+  Şah menem — https://tr.wikisource.org/wiki/%C5%9Eah_Menem (revision 169039)
+Muhyiddin Abdal (ö. 1529; died 1529, public domain in Türkiye since 1600)
+  Bize Serleşker Olmağa — https://tr.wikisource.org/wiki/Bize_Serle%C5%9Fker_Olma%C4%9Fa (revision 143972)
+  Bizim Tâcımız Sûretâ — https://tr.wikisource.org/wiki/Bizim_T%C3%A2c%C4%B1m%C4%B1z_S%C3%BBret%C3%A2 (revision 143974)
+  Hızır’ın Suyu Benem — https://tr.wikisource.org/wiki/H%C4%B1z%C4%B1r%E2%80%99%C4%B1n_Suyu_Benem (revision 143977)
+  Şâh-ı Merdan Hurûc Etti — https://tr.wikisource.org/wiki/%C5%9E%C3%A2h-%C4%B1_Merdan_Hur%C3%BBc_Etti (revision 143971)
+  Şükür Elhamdülillâh — https://tr.wikisource.org/wiki/%C5%9E%C3%BCk%C3%BCr_Elhamd%C3%BClill%C3%A2h (revision 143976)
+  Varmagıl Bir Yere Gel Olmayınca — https://tr.wikisource.org/wiki/Varmag%C4%B1l_Bir_Yere_Gel_Olmay%C4%B1nca (revision 143965)
+Hayretî (ö. 1534; died 1534, public domain in Türkiye since 1605)
+  Be bu Rûm illeridir bunda suhandanlar olur — https://tr.wikisource.org/wiki/Be_Bu_R%C3%BBm_%C4%B0lleridir_Bunda_Suhandanlar_Olur (revision 141043)
+  Ben bu bâzrun ne bazerganı ne bezzaâzıyam — https://tr.wikisource.org/wiki/Ben_Bu_B%C3%A2zrun_Ne_Bazergan%C4%B1_Ne_Bezza%C3%A2z%C4%B1yam (revision 141042)
+  Buldular Ol Bînişandan Çün Nişan Abdâllar — https://tr.wikisource.org/wiki/Buldular_Ol_B%C3%AEni%C5%9Fandan_%C3%87%C3%BCn_Ni%C5%9Fan_Abd%C3%A2llar (revision 170695)
+  Câna Kalmaz Bir Fedâyî Canlarız — https://tr.wikisource.org/wiki/C%C3%A2na_Kalmaz_Bir_Fed%C3%A2y%C3%AE_Canlar%C4%B1z (revision 170717)
+  Erenlerden Eğer Olursa Himmet — https://tr.wikisource.org/wiki/Erenlerden_E%C4%9Fer_Olursa_Himmet (revision 144532)
+Zâtî (1471–1546; died 1546, public domain in Türkiye since 1617)
+  Dem-be-dem seyl-âb-veş eşk-i revânum çağlar — https://tr.wikisource.org/wiki/Dem-be-dem_seyl-%C3%A2b-ve%C5%9F_e%C5%9Fk-i_rev%C3%A2num_%C3%A7a%C4%9Flar (revision 145229)
+  Gazel ('aldum' redifli) — https://tr.wikisource.org/wiki/Gazel_:_(aldum)_redifli (revision 145230)
+  N'oldun İnlersin Felek Hercai Cânânun mı Var — https://tr.wikisource.org/wiki/N%27oldun_%C4%B0nlersin_Felek_Hercai_C%C3%A2n%C3%A2nun_m%C4%B1_Var (revision 145231)
+Fuzûlî (1480–1556; died 1556, public domain in Türkiye since 1627)
+  Batalı kana ohun dîde-i giryân içre — https://tr.wikisource.org/wiki/Batal%C4%B1_kana_ohun_d%C3%AEde-i_giry%C3%A2n_i%C3%A7re (revision 140484); page tags: KM-ÇY
+  Cânı Kim Cânânı İçün Sevse Cânânın Sever — https://tr.wikisource.org/wiki/C%C3%A2n%C4%B1_Kim_C%C3%A2n%C3%A2n%C4%B1_%C4%B0%C3%A7%C3%BCn_Sevse_C%C3%A2n%C3%A2n%C4%B1n_Sever (revision 140453)
+  Çeşm-i Giryanım görüp — https://tr.wikisource.org/wiki/%C3%87e%C5%9Fm-i_Giryan%C4%B1m_g%C3%B6r%C3%BCp (revision 145266)
+  Dost bî-pervâ felek bî-rahm ü devran bî-sükûn — https://tr.wikisource.org/wiki/Dost_b%C3%AE-perv%C3%A2_felek_b%C3%AE-rahm_%C3%BC_devran_b%C3%AE-s%C3%BCk%C3%BBn (revision 140803); page tags: KM-ÇY
+  Ey felek şerm et ne bid'attir ki, bünyâd eyledin — https://tr.wikisource.org/wiki/Ey_felek_%C5%9Ferm_et_ne_bid%27attir_ki,_b%C3%BCny%C3%A2d_eyledin (revision 139718)
+  Ezel Kâtipleri Uşşâk Bahtın Kare Yazmışlar — https://tr.wikisource.org/wiki/Ezel_K%C3%A2tipleri_U%C5%9F%C5%9F%C3%A2k_Baht%C4%B1n_Kare_Yazm%C4%B1%C5%9Flar (revision 140485)
+  Hansı Gülşen — https://tr.wikisource.org/wiki/Hans%C4%B1_G%C3%BCl%C5%9Fen (revision 140811)
+  Hayret ey büt sûretin gördükte lâl eyler meni — https://tr.wikisource.org/wiki/Hayret_ey_b%C3%BCt_s%C3%BBretin_g%C3%B6rd%C3%BCkte_l%C3%A2l_eyler_meni (revision 169682)
+  Hüsnün Oldukça Füzûn Işk Ehli Artuk Zâr Olur — https://tr.wikisource.org/wiki/H%C3%BCsn%C3%BCn_Olduk%C3%A7a_F%C3%BCz%C3%BBn_I%C5%9Fk_Ehli_Artuk_Z%C3%A2r_Olur (revision 140487)
+  Muharrem'dir gönül feryâda gel âh eyle efgân kıl — https://tr.wikisource.org/wiki/Muharrem%27dir_g%C3%B6n%C3%BCl_fery%C3%A2da_gel_%C3%A2h_eyle_efg%C3%A2n_k%C4%B1l (revision 139721)
+  Ol benem kim cedd-i pâkimdir çerâğ-ı enbiyâ — https://tr.wikisource.org/wiki/Ol_benem_kim_cedd-i_p%C3%A2kimdir_%C3%A7er%C3%A2%C4%9F-%C4%B1_enbiy%C3%A2 (revision 139722)
+  Öyle ser-mestem ki idrâk etmezem dünyâ nedir — https://tr.wikisource.org/wiki/%C3%96yle_ser-mestem_ki_idr%C3%A2k_etmezem_d%C3%BCny%C3%A2_nedir (revision 171025)
+  Yâ Rab hemîşe et lutfunu reh-nümâ mana — https://tr.wikisource.org/wiki/Y%C3%A2_Rab_hem%C3%AE%C5%9Fe_et_lutfunu_reh-n%C3%BCm%C3%A2_mana (revision 145258)
+  Zülfü Kimi Ayağın Koymaz Öpem Nigârum — https://tr.wikisource.org/wiki/Z%C3%BClf%C3%BC_Kimi_Aya%C4%9F%C4%B1n_Koymaz_%C3%96pem_Nig%C3%A2rum (revision 145147)
+Muhibbî (Kanuni Sultan Süleyman) (1494–1566; died 1566, public domain in Türkiye since 1637)
+  Bahs — https://tr.wikisource.org/wiki/Bahs (revision 142023)
+  Celis-i halvetim, varım, habibim mah-ı tabanım — https://tr.wikisource.org/wiki/Celis-i_halvetim,_var%C4%B1m,_habibim_mah-%C4%B1_taban%C4%B1m (revision 166911)
+  Geç kaşıyla gözleri her lahza âl üstündedir — https://tr.wikisource.org/wiki/Ge%C3%A7_ka%C5%9F%C4%B1yla_g%C3%B6zleri_her_lahza_%C3%A2l_%C3%BCst%C3%BCndedir (revision 142021)
+  Karşında ben pervaneyem — https://tr.wikisource.org/wiki/Kar%C5%9F%C4%B1nda_ben_pervaneyem (revision 142026)
+  Müjde ey bîçare dil kim nâzla dilber gelür — https://tr.wikisource.org/wiki/M%C3%BCjde_ey_b%C3%AE%C3%A7are_dil_kim_n%C3%A2zla_dilber_gel%C3%BCr (revision 142020)
+  Sakın aldanma cihâna olmasun sende gurûr — https://tr.wikisource.org/wiki/Sak%C4%B1n_aldanma_cih%C3%A2na_olmasun_sende_gur%C3%BBr (revision 142022)
+Sürûrî (ö. 1591; died 1591, public domain in Türkiye since 1662)
+  Allemel’esmâ ki Geldi Âdem’e Allah’dan — https://tr.wikisource.org/wiki/Allemel%E2%80%99esm%C3%A2_ki_Geldi_%C3%82dem%E2%80%99e_Allah%E2%80%99dan (revision 144484)
+  Çün Sûret-i Âlemde Gösterdi Özün Allah — https://tr.wikisource.org/wiki/%C3%87%C3%BCn_S%C3%BBret-i_%C3%82lemde_G%C3%B6sterdi_%C3%96z%C3%BCn_Allah (revision 144479)
+  Ey Gönül Gel Dîde-i Tahkîk İle Eşyâya Bak — https://tr.wikisource.org/wiki/Ey_G%C3%B6n%C3%BCl_Gel_D%C3%AEde-i_Tahk%C3%AEk_%C4%B0le_E%C5%9Fy%C3%A2ya_Bak (revision 144482)
+  Ey Mushaf-ı Kerim ü Kelâm-ı Hudâ Ali — https://tr.wikisource.org/wiki/Ey_Mushaf-%C4%B1_Kerim_%C3%BC_Kel%C3%A2m-%C4%B1_Hud%C3%A2_Ali (revision 144480)
+  Ol Menem kim Yüz Tutub Âyîne-i İnsâna Men — https://tr.wikisource.org/wiki/Ol_Menem_kim_Y%C3%BCz_Tutub_%C3%82y%C3%AEne-i_%C4%B0ns%C3%A2na_Men (revision 144485)
+  Zâhidâ Esmâ-i Küllînin Müsemmâsı Nedir — https://tr.wikisource.org/wiki/Z%C3%A2hid%C3%A2_Esm%C3%A2-i_K%C3%BCll%C3%AEnin_M%C3%BCsemm%C3%A2s%C4%B1_Nedir (revision 144486)
+Pir Sultan Abdal (16. yüzyıl; no death year on Wikisource, died by 1600: public domain)
+  Ağlatmayın Beni Derdim Büyüktür — https://tr.wikisource.org/wiki/A%C4%9Flatmay%C4%B1n_Beni_Derdim_B%C3%BCy%C3%BCkt%C3%BCr (revision 174131); page tags: KM-Türkiye, Telif bilgisiz
+  Birlik Makamında Bir Güzel Gördüm — https://tr.wikisource.org/wiki/Birlik_makam%C4%B1nda_bir_g%C3%BCzel_g%C3%B6rd%C3%BCm (revision 174063); page tags: KM-Türkiye, Telif bilgisiz
+  Bizden Selam Olsun Sofu Canlara — https://tr.wikisource.org/wiki/Bizden_Selam_Olsun_Sofu_Canlara (revision 165681); page tags: Telif bilgisiz
+  Çoktan Beri Yollarını Gözlerim — https://tr.wikisource.org/wiki/%C3%87oktan_Beri_Yollar%C4%B1n%C4%B1_G%C3%B6zlerim (revision 165683); page tags: Telif bilgisiz
+  Enelhak Deyüben Dikildim Dâra — https://tr.wikisource.org/wiki/Enelhak_Dey%C3%BCben_Dikildim_D%C3%A2ra (revision 174069); page tags: KM-Türkiye, Telif bilgisiz
+  Hak İçün Kendini Kurbân Eyleyen — https://tr.wikisource.org/wiki/Hak_%C4%B0%C3%A7%C3%BCn_Kendini_Kurb%C3%A2n_Eyleyen (revision 165692); page tags: KM-Türkiye
+  Hak Muhammed Ali Geldi Dilime — https://tr.wikisource.org/wiki/Hak_Muhammed_Ali_Geldi_Dilime (revision 165693); page tags: KM-Türkiye
+  Kerbelâ Çölü'nden bir Koyun Geldi — https://tr.wikisource.org/wiki/Kerbel%C3%A2_%C3%87%C3%B6l%C3%BC%27nden_bir_Koyun_Geldi (revision 174122); page tags: KM-Türkiye, Telif bilgisiz
+  Kul olayım kalem tutan ellere — https://tr.wikisource.org/wiki/Kul_Olay%C4%B1m_Kalem_Tutan_Ellere (revision 166747); page tags: KM-ÇY
+  Ne kadar bilirsen bilene danış — https://tr.wikisource.org/wiki/Ne_Kadar_Bilirsen_Bilene_Dan%C4%B1%C5%9F (revision 170982); page tags: KM-ÇY
+  Sabahtan Cemalin Seyran Eyledim — https://tr.wikisource.org/wiki/Sabahtan_Cemalin_Seyran_Eyledim (revision 165698); page tags: KM-Türkiye
+  Yedi Yıldır Hasta Düştüm Yatarım — https://tr.wikisource.org/wiki/Yedi_Y%C4%B1ld%C4%B1r_Hasta_D%C3%BC%C5%9Ft%C3%BCm_Yatar%C4%B1m (revision 174120); page tags: KM-Türkiye, Telif bilgisiz
+Bâkî (1526–1600; died 1600, public domain in Türkiye since 1671)
+  Aşk Fenini Üstadı — https://tr.wikisource.org/wiki/A%C5%9Fk_Fenini_%C3%9Cstad%C4%B1 (revision 165890); page tags: Telif bilgisiz
+  Aşk Sultanının Fermanlı Kölesi — https://tr.wikisource.org/wiki/Gazel_(c%C3%A2n%C3%A2_redifli) (revision 165886); page tags: Telif bilgisiz
+  Ayağının Toprağına Yıldızlar Dökülen Sevgili... — https://tr.wikisource.org/wiki/Aya%C4%9F%C4%B1n%C4%B1n_Topra%C4%9F%C4%B1na_Y%C4%B1ld%C4%B1zlar_D%C3%B6k%C3%BClen_Sevgili... (revision 165888); page tags: Telif bilgisiz
+  Câme-hâb ol âfeti aldıkça tenhâ koynuna — https://tr.wikisource.org/wiki/C%C3%A2me-h%C3%A2b_ol_%C3%A2feti_ald%C4%B1k%C3%A7a_tenh%C3%A2_koynuna (revision 165897); page tags: Telif bilgisiz
+  Ezelden şâh-ı aşkın bende-i fermânıyüz cânâ — https://tr.wikisource.org/wiki/Ezelden_%C5%9F%C3%A2h-%C4%B1_a%C5%9Fk%C4%B1n_bende-i_ferm%C3%A2n%C4%B1y%C3%BCz_c%C3%A2n%C3%A2 (revision 165895); page tags: Telif bilgisiz
+  Fermân-ı aşka cân iledir inkıyadımız — https://tr.wikisource.org/wiki/Ferm%C3%A2n-%C4%B1_a%C5%9Fka_c%C3%A2n_iledir_ink%C4%B1yad%C4%B1m%C4%B1z (revision 165896); page tags: Telif bilgisiz
+  Hem Vallahi, Hem Billahi... — https://tr.wikisource.org/wiki/Hem_Vallahi,_Hem_Billahi... (revision 165892); page tags: Telif bilgisiz
+  Hüsn ile Sana Öykünemez Cün Gül-i Rânâ — https://tr.wikisource.org/wiki/H%C3%BCsn_ile_Sana_%C3%96yk%C3%BCnemez_C%C3%BCn_G%C3%BCl-i_R%C3%A2n%C3%A2 (revision 165885); page tags: Telif bilgisiz
+  Lebini âl ile öpmüş ola mı peymâne — https://tr.wikisource.org/wiki/Lebini_%C3%A2l_ile_%C3%B6pm%C3%BC%C5%9F_ola_m%C4%B1_peym%C3%A2ne (revision 165898); page tags: Telif bilgisiz
+  Mevki ve Makam; Çer ve Çöp... — https://tr.wikisource.org/wiki/Mevki_ve_Makam;_%C3%87er_ve_%C3%87%C3%B6p... (revision 165894); page tags: Telif bilgisiz
+  Naz Sana, Niyaz Bize Ey Sevgili!.. — https://tr.wikisource.org/wiki/Naz_Sana,_Niyaz_Bize_Ey_Sevgili!.. (revision 165887); page tags: Telif bilgisiz
+  Yedi İklim Dört Köşe... — https://tr.wikisource.org/wiki/Yedi_%C4%B0klim_D%C3%B6rt_K%C3%B6%C5%9Fe... (revision 165889); page tags: Telif bilgisiz
+Yeminî (16. yüzyıl; no death year on Wikisource, died by 1600: public domain)
+  Bil ki Sultân-ı Velâyettir Emîrülmü’minîn — https://tr.wikisource.org/wiki/Bil_ki_Sult%C3%A2n-%C4%B1_Vel%C3%A2yettir_Em%C3%AEr%C3%BClm%C3%BC%E2%80%99min%C3%AEn (revision 143983)
+  Ey Saçı; Küfr-i Siyâh ü vey Ruh-i Îmanımız — https://tr.wikisource.org/wiki/Ey_Sa%C3%A7%C4%B1;_K%C3%BCfr-i_Siy%C3%A2h_%C3%BC_vey_Ruh-i_%C3%8Eman%C4%B1m%C4%B1z (revision 143985)
+  Gerdiş-i Çerh-i felek seyran-ı aşk — https://tr.wikisource.org/wiki/Gerdi%C5%9F-i_%C3%87erh-i_Felek_Seyr%C3%A2n-%C4%B1_A%C5%9Fk (revision 141934)
+  Her Kim ki Şek Götürse Emîn-i Velayete — https://tr.wikisource.org/wiki/Her_Kim_ki_%C5%9Eek_G%C3%B6t%C3%BCrse_Em%C3%AEn-i_Velayete (revision 143982)
+  Lîmaallah’ın Makamı Vech-i Fazlullah İmiş — https://tr.wikisource.org/wiki/L%C3%AEmaallah%E2%80%99%C4%B1n_Makam%C4%B1_Vech-i_Fazlullah_%C4%B0mi%C5%9F (revision 143984)
+  Nebiler Serveri Çünkim Muhammed Mustâfa Geldi — https://tr.wikisource.org/wiki/Nebiler_Serveri_%C3%87%C3%BCnkim_Muhammed_Must%C3%A2fa_Geldi (revision 143981)
+Nef'î (1572–1635; died 1635, public domain in Türkiye since 1706)
+  Âşıka ta'n etmek olmaz mübtelâdır n'eylesin — https://tr.wikisource.org/wiki/%C3%82%C5%9F%C4%B1ka_ta%27n_etmek_olmaz_m%C3%BCbtel%C3%A2d%C4%B1r_n%27eylesin (revision 145277)
+  Ey dil hele âlemde bir âdem yoğ imiş — https://tr.wikisource.org/wiki/Ey_dil_hele_%C3%A2lemde_bir_%C3%A2dem_yo%C4%9F_imi%C5%9F (revision 145273)
+  Hem kadeh hem bâde hem bir şûh sâkîdir gönül — https://tr.wikisource.org/wiki/Hem_kadeh_hem_b%C3%A2de_hem_bir_%C5%9F%C3%BBh_s%C3%A2k%C3%AEdir_g%C3%B6n%C3%BCl (revision 145272)
+  Siham-ı Kaza'dan — https://tr.wikisource.org/wiki/Sih%C3%A2m-%C4%B1_Kaz%C3%A2 (revision 145271)
+  Tûtî-i mu'cize-gûyem ne desem lâf değil — https://tr.wikisource.org/wiki/T%C3%BBt%C3%AE-i_mu%27cize-g%C3%BByem_ne_desem_l%C3%A2f_de%C4%9Fil (revision 145270)
+  Yazanlar peykerim destimde bir peymâne yazmışlar — https://tr.wikisource.org/wiki/Yazanlar_peykerim_destimde_bir_peym%C3%A2ne_yazm%C4%B1%C5%9Flar (revision 145269)
+Karacaoğlan (1606–1689; died 1689, public domain in Türkiye since 1760)
+  Ağacın Eyisi Özünden Olur — https://tr.wikisource.org/wiki/A%C4%9Fac%C4%B1n_Eyisi_%C3%96z%C3%BCnden_Olur (revision 140672)
+  Ala Gözü Nazlı Dilber — https://tr.wikisource.org/wiki/Ala_G%C3%B6z%C3%BC_Nazl%C4%B1_Dilber (revision 140677)
+  Altın Kafes İdi Benim Durağım — https://tr.wikisource.org/wiki/Alt%C4%B1n_Kafes_%C4%B0di_Benim_Dura%C4%9F%C4%B1m (revision 140679)
+  Aşam Dedim Karlı Dağın Başından — https://tr.wikisource.org/wiki/A%C5%9Fam_Dedim_Karl%C4%B1_Da%C4%9F%C4%B1n_Ba%C5%9F%C4%B1ndan (revision 169254); page tags: KM-TR, KM-Türkiye
+  Bir Adam Hasmını Utandıramaz — https://tr.wikisource.org/wiki/Bir_Adam_Hasm%C4%B1n%C4%B1_Utand%C4%B1ramaz (revision 148645)
+  Bir Yiğit de Bir Güzeli Severse — https://tr.wikisource.org/wiki/Bir_Yi%C4%9Fit_de_Bir_G%C3%BCzeli_Severse (revision 168903)
+  Bülbül Ne Yatarsın Bahar Erişti — https://tr.wikisource.org/wiki/B%C3%BClb%C3%BCl_Ne_Yatars%C4%B1n_Bahar_Eri%C5%9Fti (revision 140690)
+  Cennet Cehennem Yoktur Diyenler — https://tr.wikisource.org/wiki/Cennet_Cehennem_Yoktur_Diyenler (revision 140692); page tags: Telif bilgisiz
+  Çıktım Ücesine Seyran Eyledim — https://tr.wikisource.org/wiki/%C3%87%C4%B1kt%C4%B1m_%C3%9Ccesine_Seyran_Eyledim (revision 144089)
+  Çukurova — https://tr.wikisource.org/wiki/%C3%87ukurova (revision 140695)
+  Dinleyin Bir Güzel Medhedeyim — https://tr.wikisource.org/wiki/Dinleyin_Bir_G%C3%BCzel_Medhedeyim (revision 140696)
+  Ela Gözlüm Ben Bu Elden Gidersem — https://tr.wikisource.org/wiki/Ela_G%C3%B6zl%C3%BCm_Ben_Bu_Elden_Gidersem (revision 173522)
+  Evlerinin Önü Kuyu — https://tr.wikisource.org/wiki/Evlerinin_%C3%96n%C3%BC_Kuyu (revision 139618)
+  Garbi Yeli Garbi Yeli — https://tr.wikisource.org/wiki/Garbi_Yeli_Garbi_Yeli (revision 144083)
+  Gel Gönül Gurbete Gitme — https://tr.wikisource.org/wiki/Gel_G%C3%B6n%C3%BCl_Gurbete_Gitme (revision 142558)
+  Gurbette Ömrüm Geçecek — https://tr.wikisource.org/wiki/Gurbette_%C3%96mr%C3%BCm_Ge%C3%A7ecek (revision 138959)
+  Hey Ağalar Böyle m-Olur — https://tr.wikisource.org/wiki/Hey_A%C4%9Falar_B%C3%B6yle_m-Olur (revision 139498)
+  Yeşil Başlı Gövel Ördek — https://tr.wikisource.org/wiki/Ye%C5%9Fil_Ba%C5%9Fl%C4%B1_G%C3%B6vel_%C3%96rdek (revision 138753)
+Kul Himmet (16. yüzyıl; no death year on Wikisource, died by 1700: public domain)
+  Bizi Bu Sevdaya Salan — https://tr.wikisource.org/wiki/Bizi_Bu_Sevdaya_Salan (revision 152147); page tags: KM-TR, KM-Türkiye
+  Çünkü Yandı Aşk Odu Kül Olmaktır Muradım — https://tr.wikisource.org/wiki/%C3%87%C3%BCnk%C3%BC_Yand%C4%B1_A%C5%9Fk_Odu_K%C3%BCl_Olmakt%C4%B1r_Murad%C4%B1m (revision 145531)
+  Dün Gece Seyrimde Bir Şara Vardım — https://tr.wikisource.org/wiki/D%C3%BCn_Gece_Seyrimde_Bir_%C5%9Eara_Vard%C4%B1m (revision 152238); page tags: KM-TR, KM-Türkiye
+  Dün Gece Seyrim İçinde — https://tr.wikisource.org/wiki/D%C3%BCn_Gece_Seyrim_%C4%B0%C3%A7inde (revision 141248)
+  Gel Gönül Kimsenin Aybına Bakma — https://tr.wikisource.org/wiki/Gel_G%C3%B6n%C3%BCl_Kimsenin_Ayb%C4%B1na_Bakma (revision 156113)
+  Kahpe Felek Sana Nettim Neyledim — https://tr.wikisource.org/wiki/Kahpe_Felek_Sana_Nettim_Neyledim (revision 152587); page tags: KM-TR, KM-Türkiye
+  Kalk Karındaş Yola Gidek — https://tr.wikisource.org/wiki/Kalk_Kar%C4%B1nda%C5%9F_Yola_Gidek (revision 145536)
+  Nefes — https://tr.wikisource.org/wiki/Nefes_(Kul_Himmet) (revision 145250)
+Virânî (16.–17. yüzyıl; no death year on Wikisource, died by 1700: public domain)
+  Biz Urum Abdâlıyız Sultânımızdır Murtezâ — https://tr.wikisource.org/wiki/Biz_Urum_Abd%C3%A2l%C4%B1y%C4%B1z_Sult%C3%A2n%C4%B1m%C4%B1zd%C4%B1r_Murtez%C3%A2 (revision 170624)
+  Felek Benim Şah Baba’mı Neyledin? — https://tr.wikisource.org/wiki/Felek_Benim_%C5%9Eah_Baba%E2%80%99m%C4%B1_Neyledin%3F (revision 144455)
+  Gel dilber ağlatma beni — https://tr.wikisource.org/wiki/Gel_Dilber_A%C4%9Flatma_Beni (revision 141931)
+  Her Dem Dilimde Bu Kelâm — https://tr.wikisource.org/wiki/Her_Dem_Dilimde_Bu_Kel%C3%A2m (revision 144454)
+  İstemem alemde gayrı meyvayı — https://tr.wikisource.org/wiki/%C4%B0stemem_%C3%82lemde_Gayr%C4%B1_Meyvay%C4%B1 (revision 141930)
+  Men Gulâm-ı Hayder’im İlyâ’ya Yoldaş Olmuşam — https://tr.wikisource.org/wiki/Men_Gul%C3%A2m-%C4%B1_Hayder%E2%80%99im_%C4%B0ly%C3%A2%E2%80%99ya_Yolda%C5%9F_Olmu%C5%9Fam (revision 172654)
+Teslim Abdal (17. yüzyıl; no death year on Wikisource, died by 1700: public domain)
+  Bozuk düzen öyle gelme meydana — https://tr.wikisource.org/wiki/Bozuk_D%C3%BCzen_%C3%96yle_Gelme_Meydana (revision 163184)
+  Dört duvar içinde olsa mekânım — https://tr.wikisource.org/wiki/D%C3%B6rt_Duvar_%C4%B0%C3%A7inde_Olsa_Mek%C3%A2n%C4%B1m (revision 163182)
+  Gafil Durma Şaşkın Bir Gün Ölürsün — https://tr.wikisource.org/wiki/Gafil_Durma_%C5%9Ea%C5%9Fk%C4%B1n_Bir_G%C3%BCn_%C3%96l%C3%BCrs%C3%BCn (revision 163158)
+  Mürşide varmağa tâlib olursan — https://tr.wikisource.org/wiki/M%C3%BCr%C5%9Fide_Varma%C4%9Fa_T%C3%A2lib_Olursan (revision 163180)
+  Ol Habibullah’ın Kelâmı İle — https://tr.wikisource.org/wiki/Ol_Habibullah%E2%80%99%C4%B1n_Kel%C3%A2m%C4%B1_%C4%B0le (revision 163175)
+  Süren Erenler Süreği — https://tr.wikisource.org/wiki/S%C3%BCren_Erenler_S%C3%BCre%C4%9Fi (revision 163179)
+Kul Nesîmî (17. yüzyıl; no death year on Wikisource, died by 1700: public domain)
+  Ateşi Aşkına Yaktım Özümü — https://tr.wikisource.org/wiki/Ate%C5%9Fi_A%C5%9Fk%C4%B1na_Yakt%C4%B1m_%C3%96z%C3%BCm%C3%BC (revision 144657)
+  Ben Yitirdim Ben Ararım — https://tr.wikisource.org/wiki/Ben_Yitirdim_Ben_Arar%C4%B1m (revision 141606)
+  Bugün Erenlere Kurban — https://tr.wikisource.org/wiki/Bug%C3%BCn_Erenlere_Kurban (revision 140027)
+  Gel Beni Ağlatma Şahım — https://tr.wikisource.org/wiki/Gel_Beni_A%C4%9Flatma_%C5%9Eah%C4%B1m (revision 144659)
+  Kadir Geceleri Fırsat Sizindir — https://tr.wikisource.org/wiki/Kadir_Geceleri_F%C4%B1rsat_Sizindir (revision 144658)
+  Uykudan Uyanmış Şahin Bakışlım — https://tr.wikisource.org/wiki/Uykudan_Uyanm%C4%B1%C5%9F_%C5%9Eahin_Bak%C4%B1%C5%9Fl%C4%B1m (revision 138440)
+Kul Mustafa (17. yüzyıl; no death year on Wikisource, died by 1700: public domain)
+  Bu aşka pek bağlananın — https://tr.wikisource.org/wiki/Bu_A%C5%9Fka_Pek_Ba%C4%9Flanan%C4%B1n (revision 163103)
+  Dördümüzü Bir Araya Sürdüler — https://tr.wikisource.org/wiki/D%C3%B6rd%C3%BCm%C3%BCz%C3%BC_Bir_Araya_S%C3%BCrd%C3%BCler (revision 163082)
+  Ecelsiz Yiğide Ölüm Yok İmiş — https://tr.wikisource.org/wiki/Ecelsiz_Yi%C4%9Fide_%C3%96l%C3%BCm_Yok_%C4%B0mi%C5%9F (revision 163099)
+  Gönül arzumanım Neşter Abdal'dır — https://tr.wikisource.org/wiki/G%C3%B6n%C3%BCl_Arzuman%C4%B1m_Ne%C5%9Fter_Abdal%27d%C4%B1r (revision 163098)
+  Gönül Hakikatli Yârin Ucundan — https://tr.wikisource.org/wiki/G%C3%B6n%C3%BCl_Hakikatli_Y%C3%A2rin_Ucundan (revision 163077)
+  İş Mehdî'ye Kaldı Nesin Söyleyi — https://tr.wikisource.org/wiki/%C4%B0%C5%9F_Mehd%C3%AE%27ye_Kald%C4%B1_Nesin_S%C3%B6yleyi (revision 163086)
+Nâbî (1642–1718; died 1718, public domain in Türkiye since 1789)
+  Bâğ-ı dehrin hem hazânın hem bahârın görmüşüz — https://tr.wikisource.org/wiki/B%C3%A2%C4%9F-%C4%B1_Dehrin_Hem_Haz%C3%A2n%C4%B1n_Hem_Bah%C3%A2r%C4%B1n_G%C3%B6rm%C3%BC%C5%9F%C3%BCz (revision 173737)
+  Bezm-i safâya sâgar-ı sahbâ gelür gider — https://tr.wikisource.org/wiki/Bezm-i_Saf%C3%A2ya_S%C3%A2gar-%C4%B1_Sahb%C3%A2_Gel%C3%BCr_Gider (revision 163946)
+  Ey nâme sen ol mâh-likaadan mı gelürsün — https://tr.wikisource.org/wiki/Ey_N%C3%A2me_Sen_Ol_M%C3%A2h-likaadan_m%C4%B1_Gel%C3%BCrs%C3%BCn (revision 141016)
+  Gerçi gencîne-i âlemde cevahir bulunur — https://tr.wikisource.org/wiki/Ger%C3%A7i_Genc%C3%AEne-i_%C3%82lemde_Cevahir_Bulunur (revision 141027)
+  Gül gül-şeni terk eyledi sohbet sana kaldı — https://tr.wikisource.org/wiki/G%C3%BCl_G%C3%BCl-%C5%9Feni_Terk_Eyledi_Sohbet_Sana_Kald%C4%B1 (revision 141018)
+  Ne dâde-i mahlûka ne sîm-ü zere minnet — https://tr.wikisource.org/wiki/Ne_D%C3%A2de-i_Mahl%C3%BBka_Ne_S%C3%AEm-%C3%BC_Zere_Minnet (revision 149909)
+  Yâre varsun peyk-i nâlem âh ü zânm söylesün — https://tr.wikisource.org/wiki/Y%C3%A2re_Varsun_Peyk-i_N%C3%A2lem_%C3%82h_%C3%BC_Z%C3%A2nm_S%C3%B6yles%C3%BCn (revision 141021)
+  Zevk-ı gam dilde midir dağda mı tende midir — https://tr.wikisource.org/wiki/Zevk-%C4%B1_Gam_Dilde_midir_Da%C4%9Fda_m%C4%B1_Tende_midir (revision 141028)
+Nedîm (1681–1730; died 1730, public domain in Türkiye since 1801)
+  Al olmuş sana redifli gazel — https://tr.wikisource.org/wiki/Gazel_(%27Olmu%C5%9F_sana%27_redifli) (revision 162854)
+  Bir söz dedi cânân ki kerâmet var içinde — https://tr.wikisource.org/wiki/Gazel_(%27var_i%C3%A7inde%27_redifli) (revision 141005)
+  Esdikçe bâd-ı subh perîşânsın ey gönül — https://tr.wikisource.org/wiki/Gazel_(%27ey_g%C3%B6n%C3%BCl%27_redifli) (revision 145218)
+  Ey kaşı yâ yüzün beri dönmez misin dahi — https://tr.wikisource.org/wiki/Gazel_(%27-misin_dahi%27_redifli) (revision 167254)
+  Hele îd oldu ol gül-gonce handân olduğun gördük — https://tr.wikisource.org/wiki/Hele_%C4%B0d_Oldu_Ol_G%C3%BCl-gonce_Hand%C3%A2n_Oldu%C4%9Fun_G%C3%B6rd%C3%BCk (revision 152400); page tags: KM-ÇY
+  Kaside Der Vasf-ı İstanbul — https://tr.wikisource.org/wiki/Kaside_Der_Vasf-%C4%B1_%C4%B0stanbul (revision 140991)
+  Murâdın anlarız ol gamzenin iz'ânımız vardır — https://tr.wikisource.org/wiki/Gazel_(%27-an%C4%B1m%C4%B1z_vard%C4%B1r%27_redifli) (revision 167253)
+  Serâpâ hüsn ü ânsın dilsitansın nâz-perversin — https://tr.wikisource.org/wiki/Ser%C3%A2p%C3%A2_h%C3%BCsn_%C3%BC_%C3%A2ns%C4%B1n_dilsitans%C4%B1n_n%C3%A2z-perversin (revision 141015)
+  Sevdiğim cânım yolunda hâke yek-sân olduğum — https://tr.wikisource.org/wiki/%C5%9Eark%C4%B1_(Sevdi%C4%9Fim_c%C3%A2n%C4%B1m_yolunda_h%C3%A2ke_yek-s%C3%A2n_oldu%C4%9Fum) (revision 158122)
+  Sinede evvel ne muhrik arzular vâr idi — https://tr.wikisource.org/wiki/Sinede_Evvel_Ne_Muhrik_Arzular_V%C3%A2r_%C4%B0di (revision 167252)
+  Sinemi deldi bugün bir âfeti çâr-pâreli — https://tr.wikisource.org/wiki/Sinemi_deldi_bug%C3%BCn_bir_%C3%A2feti_%C3%A7%C3%A2r-p%C3%A2reli (revision 173226)
+  Tahammül Mülkünü Yıktın Hülâgû Han mısın Kâfir — https://tr.wikisource.org/wiki/Tahamm%C3%BCl_M%C3%BClk%C3%BCn%C3%BC_Y%C4%B1kt%C4%B1n_H%C3%BCl%C3%A2g%C3%BB_Han_m%C4%B1s%C4%B1n_K%C3%A2fir (revision 173824)
+Fıtnat Hanım (ö. 1780; died 1780, public domain in Türkiye since 1851)
+  Beni derdinle yeter zâr etdin — https://tr.wikisource.org/wiki/Beni_derdinle_yeter_z%C3%A2r_etdin (revision 141994)
+  Ey mefhar-ı enbiyâ vü sâhib-i mîrâc — https://tr.wikisource.org/wiki/Ey_mefhar-%C4%B1_enbiy%C3%A2_v%C3%BC_s%C3%A2hib-i_m%C3%AEr%C3%A2c (revision 141996)
+  Neşve-i cam-ı muhabbetle gönül cuş eyler — https://tr.wikisource.org/wiki/Ne%C5%9Fve-i_cam-%C4%B1_muhabbetle_g%C3%B6n%C3%BCl_cu%C5%9F_eyler (revision 141993)
+İbrahim Şinâsî (1826–1871; died 1871, public domain in Türkiye since 1942)
+  Müfredler — https://tr.wikisource.org/wiki/M%C3%BCfredler (revision 152764)
+  Münâcât — https://tr.wikisource.org/wiki/M%C3%BCn%C3%A2c%C3%A2t_(%C4%B0brahim_%C5%9Ein%C3%A2s%C3%AE) (revision 152769)
+Ziya Paşa (1825–1880; died 1880, public domain in Türkiye since 1951)
+  Diyar-ı küfrü gezdim beldeler kâşaneler gördüm — https://tr.wikisource.org/wiki/Diyar-%C4%B1_k%C3%BCfr%C3%BC_gezdim_beldeler_k%C3%A2%C5%9Faneler_g%C3%B6rd%C3%BCm (revision 145210)
+  Ne kaanûna ne cebr ü zûra ne hünkâra tâbidir — https://tr.wikisource.org/wiki/Ne_kaan%C3%BBna_ne_cebr_%C3%BC_z%C3%BBra_ne_h%C3%BCnk%C3%A2ra_t%C3%A2bidir (revision 142393)
+Namık Kemal (1840–1889; died 1889, public domain in Türkiye since 1960)
+  Hırrenâme — https://tr.wikisource.org/wiki/H%C4%B1rren%C3%A2me (revision 152565)
+  Hürriyet Kasidesi — https://tr.wikisource.org/wiki/H%C3%BCrriyet_Kasidesi (revision 173050)
+  Murabba — https://tr.wikisource.org/wiki/Murabba_(Nam%C4%B1k_Kemal) (revision 165526)
+  Vatan Şarkısı — https://tr.wikisource.org/wiki/Vatan_%C5%9Eark%C4%B1s%C4%B1 (revision 147721); page tags: KM-Osmanlı
+  Vaveyla — https://tr.wikisource.org/wiki/Vaveyla (revision 142004)
+Dadaloğlu (19. yüzyıl; no death year on Wikisource, died by 1900: public domain)
+  Cillenler'de Bir Güzele Uğradım — https://tr.wikisource.org/wiki/Cillenler%27de_Bir_G%C3%BCzele_U%C4%9Frad%C4%B1m (revision 143769)
+  Gönülden Gönüle Yol Gider Derler — https://tr.wikisource.org/wiki/G%C3%B6n%C3%BClden_G%C3%B6n%C3%BCle_Yol_Gider_Derler (revision 143767)
+  Ilgıt Ilgıt Seher Yeli Esiyor — https://tr.wikisource.org/wiki/Ilg%C4%B1t_Ilg%C4%B1t_Seher_Yeli_Esiyor (revision 143762)
+  Kalktı Göç Eyledi Avşar İlleri — https://tr.wikisource.org/wiki/Kalkt%C4%B1_G%C3%B6%C3%A7_Eyledi_Av%C5%9Far_%C4%B0lleri (revision 174982)
+  Ölürüz de Kömür Gözlüm Ölürüz — https://tr.wikisource.org/wiki/%C3%96l%C3%BCr%C3%BCz_de_K%C3%B6m%C3%BCr_G%C3%B6zl%C3%BCm_%C3%96l%C3%BCr%C3%BCz (revision 140671); page tags: KM-Türkiye
+  Yalancı Dünyâya Geldim Geleli — https://tr.wikisource.org/wiki/Yalanc%C4%B1_D%C3%BCny%C3%A2ya_Geldim_Geleli (revision 143766)
+  Yükseklerde Şahin Gibi Süzülür — https://tr.wikisource.org/wiki/Y%C3%BCkseklerde_%C5%9Eahin_Gibi_S%C3%BCz%C3%BCl%C3%BCr (revision 143768)
+  Yürü Yiğit Yürü Yol İle Yürü — https://tr.wikisource.org/wiki/Y%C3%BCr%C3%BC_Yi%C4%9Fit_Y%C3%BCr%C3%BC_Yol_%C4%B0le_Y%C3%BCr%C3%BC (revision 143773)
+Erzurumlu Emrah (19. yüzyıl; no death year on Wikisource, died by 1900: public domain)
+  Bir Nazenin Bana Gel Gel Eyledi — https://tr.wikisource.org/wiki/Bir_Nazenin_Bana_Gel_Gel_Eyledi (revision 141415); page tags: KM-Türkiye
+  Dedim Dilber Didelerin Islanmış — https://tr.wikisource.org/wiki/Dedim_Dilber_Didelerin_Islanm%C4%B1%C5%9F (revision 141413); page tags: KM-Türkiye
+  Gene Bahar Oldu Açıldı Güller — https://tr.wikisource.org/wiki/Gene_Bahar_Oldu_A%C3%A7%C4%B1ld%C4%B1_G%C3%BCller (revision 141414); page tags: KM-Türkiye
+  Gönül gurbet ele çıkma — https://tr.wikisource.org/wiki/G%C3%B6n%C3%BCl_Gurbet_Ele_%C3%87%C4%B1kma (revision 141416); page tags: KM-Türkiye
+Tevhide Hanım (1847–1901; died 1901, public domain in Türkiye since 1972)
+  Çeşmime göründü âh bir peri âlicenâb — https://tr.wikisource.org/wiki/%C3%87e%C5%9Fmime_g%C3%B6r%C3%BCnd%C3%BC_%C3%A2h_bir_peri_%C3%A2licen%C3%A2b (revision 142043)
+  Destân-ı Mağnisa — https://tr.wikisource.org/wiki/Dest%C3%A2n-%C4%B1_Ma%C4%9Fnisa (revision 142045)
+  O yâr bana kaşın çatdı — https://tr.wikisource.org/wiki/O_y%C3%A2r_bana_ka%C5%9F%C4%B1n_%C3%A7atd%C4%B1 (revision 142047)
+  Sana ne diyem ne söyleyem âh sana — https://tr.wikisource.org/wiki/Sana_ne_diyem_ne_s%C3%B6yleyem_%C3%A2h_sana (revision 142046)
+  Senin mecburunum hâlâ inanmaz mısın ey şûh — https://tr.wikisource.org/wiki/Senin_mecburunum_h%C3%A2l%C3%A2_inanmaz_m%C4%B1s%C4%B1n_ey_%C5%9F%C3%BBh (revision 142044)
+Ruhsatî (1835–1911; died 1911, public domain in Türkiye since 1982)
+  Ayrılık Badesin Tatlı mı Sandın — https://tr.wikisource.org/wiki/Ayr%C4%B1l%C4%B1k_Badesin_Tatl%C4%B1_m%C4%B1_Sand%C4%B1n (revision 144666)
+  Bir vakte erdi ki bizim günümüz — https://tr.wikisource.org/wiki/Bir_Vakte_Erdi_ki_Bizim_G%C3%BCn%C3%BCm%C3%BCz (revision 138441)
+  Gene Bahar Geldi Bülbül Sesinden — https://tr.wikisource.org/wiki/Gene_Bahar_Geldi_B%C3%BClb%C3%BCl_Sesinden (revision 144664)
+  Nasıl Methetmeyim Huplar Hasını — https://tr.wikisource.org/wiki/Nas%C4%B1l_Methetmeyim_Huplar_Has%C4%B1n%C4%B1 (revision 144665)
+  Perişan Halimi Göre mi Geldin — https://tr.wikisource.org/wiki/Peri%C5%9Fan_Halimi_G%C3%B6re_mi_Geldin (revision 144663)
+  Vardım Nazlı Yarin Ziyaretine — https://tr.wikisource.org/wiki/Vard%C4%B1m_Nazl%C4%B1_Yarin_Ziyaretine (revision 144662)
+Sümmânî (1861–1915; died 1915, public domain in Türkiye since 1986)
+  Ceylan Gözlerine — https://tr.wikisource.org/wiki/Ceylan_G%C3%B6zlerine (revision 171758); page tags: KM-TR, KM-Türkiye
+  Çoktan Beri Terk-i Vatan Olmuşum — https://tr.wikisource.org/wiki/%C3%87oktan_Beri_Terk-i_Vatan_Olmu%C5%9Fum (revision 171759); page tags: KM-TR, KM-Türkiye
+  Ervah-ı Ezelde Levh-i Kalemde — https://tr.wikisource.org/wiki/Ervah-%C4%B1_Ezelde_Levh-i_Kalemde (revision 139187)
+Tevfik Fikret (1867–1915; died 1915, public domain in Türkiye since 1986)
+  Ağustos Böceği İle Karınca — https://tr.wikisource.org/wiki/A%C4%9Fustos_B%C3%B6ce%C4%9Fi_ile_Kar%C4%B1nca (revision 145255)
+  Bana Kimsin Diye Sorma Meleğim — https://tr.wikisource.org/wiki/Bana_Kimsin_Diye_Sorma_Mele%C4%9Fim (revision 157255)
+  Bir Hicrân-ı Muvakkatten Sonra — https://tr.wikisource.org/wiki/Bir_Hicr%C3%A2n-%C4%B1_Muvakkatten_Sonra (revision 145484)
+  Bir İçim Su — https://tr.wikisource.org/wiki/Bir_%C4%B0%C3%A7im_Su (revision 159989)
+  Ey Kız — https://tr.wikisource.org/wiki/Ey_K%C4%B1z (revision 145483)
+  Ferdâ — https://tr.wikisource.org/wiki/Ferd%C3%A2 (revision 145469); page tags: KM-Osmanlı
+  Halûk'un İnancı — https://tr.wikisource.org/wiki/Hal%C3%BBk%27un_%C4%B0nanc%C4%B1 (revision 142009)
+  Kuşlarla — https://tr.wikisource.org/wiki/Ku%C5%9Flarla (revision 145256)
+  Küçük Asker — https://tr.wikisource.org/wiki/K%C3%BC%C3%A7%C3%BCk_Asker (revision 164161)
+  Leyl-i Veda — https://tr.wikisource.org/wiki/Leyl-i_Veda (revision 145488)
+  Öksüz — https://tr.wikisource.org/wiki/%C3%96ks%C3%BCz (revision 142012)
+  Promete — https://tr.wikisource.org/wiki/Promete (revision 142011)
+  Ramazan Sadakası — https://tr.wikisource.org/wiki/Ramazan_Sadakas%C4%B1 (revision 145485)
+  Sancağ-ı Şerif Huzurunda — https://tr.wikisource.org/wiki/Sanca%C4%9F-%C4%B1_%C5%9Eerif_Huzurunda (revision 142010)
+Harâbî (1853–1917; died 1917, public domain in Türkiye since 1988)
+  Bize takdir olmuş kalübeliden — https://tr.wikisource.org/wiki/Bize_Takdir_Olmu%C5%9F_Kal%C3%BCbeliden (revision 141937)
+  Ey zahid sen bizi sanma günahkar — https://tr.wikisource.org/wiki/Ey_Zahid_Sen_Bizi_Sanma_G%C3%BCnahkar (revision 141938)
+  Ey zahid şaraba eyle ihtiram — https://tr.wikisource.org/wiki/Ey_Zahid_%C5%9Earaba_Eyle_%C4%B0htiram (revision 141936)
+  Mecma-ül Bahreyne vardığım zaman — https://tr.wikisource.org/wiki/Mecma-%C3%BCl_Bahreyn%27e_Vard%C4%B1%C4%9F%C4%B1m_Zaman (revision 141939)
+  Ya hü burda olan muhibbana bak — https://tr.wikisource.org/wiki/Ya_H%C3%BC_Burda_Olan_Muhibbana_Bak (revision 141940)
+  Zühd-ü riya ile olan ibadet — https://tr.wikisource.org/wiki/Z%C3%BChd-%C3%BC_Riya_%C4%B0le_Olan_%C4%B0badet (revision 141941)
+Ömer Seyfettin (1884–1920; died 1920, public domain in Türkiye since 1991)
+  Aşk — https://tr.wikisource.org/wiki/A%C5%9Fk_(%C3%96mer_Seyfettin) (revision 145495)
+  Bahar Rüzgârı — https://tr.wikisource.org/wiki/Bahar_R%C3%BCzg%C3%A2r%C4%B1 (revision 145496)
+  Hicrân-ı Müzmin — https://tr.wikisource.org/wiki/Hicr%C3%A2n-%C4%B1_M%C3%BCzmin (revision 145497)
+  Kaşkar — https://tr.wikisource.org/wiki/Ka%C5%9Fkar (revision 162375); page tags: KM-Türkiye
+  Yalnızlık — https://tr.wikisource.org/wiki/Yaln%C4%B1zl%C4%B1k (revision 145492)
+  Yıkık Han — https://tr.wikisource.org/wiki/Y%C4%B1k%C4%B1k_Han (revision 145491)
+Âgâhî (1860–1921; died 1921, public domain in Türkiye since 1992)
+  Dost eline giden sail dur eğlen — https://tr.wikisource.org/wiki/Dost_eline_giden_sail_dur_e%C4%9Flen (revision 166138); page tags: KM-Osmanlı
+  Gam kasavet keder başa derildi — https://tr.wikisource.org/wiki/Gam_kasavet_keder_ba%C5%9Fa_derildi (revision 166254); page tags: KM-Osmanlı
+  Hakkın emri ile cihana geldim — https://tr.wikisource.org/wiki/Hakk%C4%B1n_emri_ile_cihana_geldim (revision 169491); page tags: KM-Osmanlı
+  Hasbi arzuhalim ol nazlı yare — https://tr.wikisource.org/wiki/Hasbi_arzuhalim_ol_nazl%C4%B1_yare (revision 170480); page tags: KM-Osmanlı
+  Seher vakti çaldım yarin kapısını — https://tr.wikisource.org/wiki/Seher_vakti_%C3%A7ald%C4%B1m_yarin_kap%C4%B1s%C4%B1n%C4%B1 (revision 169278); page tags: KM-Osmanlı
+  Sofu Sen Kendini Arif Sanırsın — https://tr.wikisource.org/wiki/Sofu_Sen_Kendini_Arif_San%C4%B1rs%C4%B1n (revision 169899)
+Ziya Gökalp (1876–1924; died 1924, public domain in Türkiye since 1995)
+  Asker Duası — https://tr.wikisource.org/wiki/Asker_Duas%C4%B1 (revision 152028)
+  Medeniyyet — https://tr.wikisource.org/wiki/Medeniyyet (revision 141247)
+  Turan — https://tr.wikisource.org/wiki/Turan (revision 153094); page tags: KM-TR, KM-Türkiye
+  Vatan — https://tr.wikisource.org/wiki/Vatan (revision 141246)
+Sıdkı Baba (1865–1928; died 1928, public domain in Türkiye since 1999)
+  Aşk atına süvar olan aşıklar — https://tr.wikisource.org/wiki/A%C5%9Fk_At%C4%B1na_S%C3%BCvar_Olan_%C3%82%C5%9F%C4%B1klar (revision 140438)
+  Ayrılık hasreti kar etti cana — https://tr.wikisource.org/wiki/Ayr%C4%B1l%C4%B1k_hasreti_kar_etti_cana (revision 145100)
+  Bir selam göndermiş o nazlı yarım — https://tr.wikisource.org/wiki/Bir_selam_g%C3%B6ndermi%C5%9F_o_nazl%C4%B1_yar%C4%B1m (revision 141904)
+  Bir zaman efsane yeldim cihanda — https://tr.wikisource.org/wiki/Bir_zaman_efsane_yeldim_cihanda (revision 140572)
+  Çatılmadan yerin göğün binası — https://tr.wikisource.org/wiki/%C3%87at%C4%B1lmadan_yerin_g%C3%B6%C4%9F%C3%BCn_binas%C4%B1 (revision 141905)
+  Siyah perçemlerin hatem yüzlerin — https://tr.wikisource.org/wiki/Siyah_Per%C3%A7emlerin_Hatem_Y%C3%BCzlerin (revision 153040)
+Kul Hüseyin (19. yüzyıl; no death year on Wikisource, died by 1930: public domain)
+  Abdal Mûsa Sultan Gadaba Geldi — https://tr.wikisource.org/wiki/Abdal_M%C3%BBsa_Sultan_Gadaba_Geldi (revision 144629)
+  Benim Yaralarım Tevir Tevirdir — https://tr.wikisource.org/wiki/Benim_Yaralar%C4%B1m_Tevir_Tevirdir (revision 145508)
+  Devredip Gezerken Dar-ı Fenayı — https://tr.wikisource.org/wiki/Devredip_Gezerken_Dar-%C4%B1_Fenay%C4%B1 (revision 145513)
+  Gel Ey Hâce Bize İlmini Satma — https://tr.wikisource.org/wiki/Gel_Ey_H%C3%A2ce_Bize_%C4%B0lmini_Satma (revision 144631)
+  Hakkın Gevherinden Arşin Yüzünden — https://tr.wikisource.org/wiki/Hakk%C4%B1n_Gevherinden_Ar%C5%9Fin_Y%C3%BCz%C3%BCnden (revision 144632)
+  İçmiş isen Aşk Meyinden — https://tr.wikisource.org/wiki/%C4%B0%C3%A7mi%C5%9F_isen_A%C5%9Fk_Meyinden (revision 145507)
+Ahmed Hâşim (1885–1933; died 1933, public domain in Türkiye since 2004)
+  Batan Ayın Kenarında Satırlar — https://tr.wikisource.org/wiki/Batan_Ay%C4%B1n_Kenar%C4%B1nda_Sat%C4%B1rlar (revision 140712)
+  Gece — https://tr.wikisource.org/wiki/Gece (revision 142005)
+  Gece Yarısı — https://tr.wikisource.org/wiki/Gece_Yar%C4%B1s%C4%B1 (revision 140917)
+  Karanlık — https://tr.wikisource.org/wiki/Karanl%C4%B1k (revision 173772)
+  Mehtabta Leylekler — https://tr.wikisource.org/wiki/Mehtabta_Leylekler (revision 142007)
+  Merdiven — https://tr.wikisource.org/wiki/Merdiven (revision 140702)
+  Mukaddime — https://tr.wikisource.org/wiki/Mukaddime (revision 93183)
+  O — https://tr.wikisource.org/wiki/O (revision 140736)
+  Ölmek — https://tr.wikisource.org/wiki/%C3%96lmek (revision 140721)
+  Seher — https://tr.wikisource.org/wiki/Seher (revision 140916)
+  Sensiz — https://tr.wikisource.org/wiki/Sensiz_(Ahmet_Ha%C5%9Fim) (revision 173203)
+  Sonbahar — https://tr.wikisource.org/wiki/Sonbahar (revision 140715)
+  Şafakta — https://tr.wikisource.org/wiki/%C5%9Eafakta (revision 140710)
+  Yarı Yol — https://tr.wikisource.org/wiki/Yar%C4%B1_Yol (revision 140918)
+Cenab Şahabeddin (1870–1934; died 1934, public domain in Türkiye since 2005)
+  Cûy-ı Hoşrevân — https://tr.wikisource.org/wiki/C%C3%BBy-%C4%B1_Ho%C5%9Frev%C3%A2n (revision 155646)
+  Derviş — https://tr.wikisource.org/wiki/Dervi%C5%9F (revision 162662)
+  Elhan-ı Şita — https://tr.wikisource.org/wiki/Elhan-%C4%B1_%C5%9Eita (revision 156304); page tags: KM-ÇY
+  Firâk — https://tr.wikisource.org/wiki/Fir%C3%A2k (revision 162674)
+  Firkatte — https://tr.wikisource.org/wiki/Firkatte (revision 162673)
+  Gazel (en uyaklı) — https://tr.wikisource.org/wiki/Gazel_(siz_uyakl%C4%B1) (revision 152349)
+  Gazel (sana redifli) — https://tr.wikisource.org/wiki/Gazel_(sana_redifli) (revision 152348)
+  Nısfü'l-Leyl — https://tr.wikisource.org/wiki/N%C4%B1sf%C3%BC%27l-Leyl (revision 162430)
+Celâl Sahir Erozan (1883–1935; died 1935, public domain in Türkiye since 2006)
+  Başımla Gönlüm — https://tr.wikisource.org/wiki/Ba%C5%9F%C4%B1mla_G%C3%B6nl%C3%BCm (revision 141983)
+  Elli İki Yıl — https://tr.wikisource.org/wiki/Elli_%C4%B0ki_Y%C4%B1l (revision 155466)
+  Gönülle Başbaşa — https://tr.wikisource.org/wiki/G%C3%B6n%C3%BClle_Ba%C5%9Fba%C5%9Fa (revision 141981)
+  Hayat — https://tr.wikisource.org/wiki/Hayat (revision 141984)
+  O Geliyor — https://tr.wikisource.org/wiki/O_Geliyor (revision 141985)
+  Sevgisiz Sevgiliye — https://tr.wikisource.org/wiki/Sevgisiz_Sevgiliye (revision 141986)
+Mehmet Âkif Ersoy (1873–1936; died 1936, public domain in Türkiye since 2007)
+  Adamlığın Yolu Nerdense, Bul Da Girmeye Bak — https://tr.wikisource.org/wiki/Adaml%C4%B1%C4%9F%C4%B1n_Yolu_Nerdense,_Bul_Da_Girmeye_Bak (revision 141946)
+  Ah O Din Nerde — https://tr.wikisource.org/wiki/Ah_O_Din_Nerde (revision 141947)
+  Atiyi Karanlık Görerek Azmi Bırakmak — https://tr.wikisource.org/wiki/Atiyi_Karanl%C4%B1k_G%C3%B6rerek_Azmi_B%C4%B1rakmak (revision 141950)
+  Ayrılık Hissi Nasıl Girdi Sizin Beyninize? — https://tr.wikisource.org/wiki/Ayr%C4%B1l%C4%B1k_Hissi_Nas%C4%B1l_Girdi_Sizin_Beyninize%3F (revision 140460)
+  Bir Gece — https://tr.wikisource.org/wiki/Bir_Gece (revision 140388)
+  Birlik — https://tr.wikisource.org/wiki/Birlik (revision 140466)
+  Çocuklara — https://tr.wikisource.org/wiki/%C3%87ocuklara (revision 141951)
+  Durmayalım — https://tr.wikisource.org/wiki/Durmayal%C4%B1m (revision 140470)
+  Ey Yolcu, Uyan! — https://tr.wikisource.org/wiki/Ey_Yolcu,_Uyan! (revision 141955)
+  Hürriyet — https://tr.wikisource.org/wiki/H%C3%BCrriyet (revision 140477)
+  Kosova — https://tr.wikisource.org/wiki/Kosova (revision 140482)
+  Oğlum, Bu Temenni Neye Benzer, Bana Bak — https://tr.wikisource.org/wiki/O%C4%9Flum,_Bu_Temenni_Neye_Benzer,_Bana_Bak (revision 140597)
+  Ordunun Duası — https://tr.wikisource.org/wiki/Ordunun_Duas%C4%B1 (revision 156204); page tags: KM-Türkiye
+  Ressam Haklı — https://tr.wikisource.org/wiki/Ressam_Hakl%C4%B1 (revision 157835)
+  Şehitler Abidesi — https://tr.wikisource.org/wiki/%C5%9Eehitler_Abidesi_%C4%B0%C3%A7in (revision 140605)
+  Tebrik — https://tr.wikisource.org/wiki/Tebrik (revision 140606)
+  Uyan — https://tr.wikisource.org/wiki/Uyan (revision 140608)
+  Ya Rab Bu Uğursuz Gecenin Yok mu Sabahı? — https://tr.wikisource.org/wiki/Ya_Rab_Bu_U%C4%9Fursuz_Gecenin_Yok_Mu_Sabah%C4%B1%3F (revision 171093)
+Leylâ Hanım (1850–1936; died 1936, public domain in Türkiye since 2007)
+  Hayâli ârızın bağı gönülde gülizarımdır — https://tr.wikisource.org/wiki/Hay%C3%A2li_%C3%A2r%C4%B1z%C4%B1n_ba%C4%9F%C4%B1_g%C3%B6n%C3%BClde_g%C3%BClizar%C4%B1md%C4%B1r (revision 142060)
+  Her seherde Kâbei kûyında estikçe nesim — https://tr.wikisource.org/wiki/Her_seherde_K%C3%A2bei_k%C3%BBy%C4%B1nda_estik%C3%A7e_nesim (revision 142059)
+  Yârin âşıkları ile ülfeti pek güçtür güç — https://tr.wikisource.org/wiki/Y%C3%A2rin_%C3%A2%C5%9F%C4%B1klar%C4%B1_ile_%C3%BClfeti_pek_g%C3%BC%C3%A7t%C3%BCr_g%C3%BC%C3%A7 (revision 142058)
+Abdülhak Hâmid Tarhan (1852–1937; died 1937, public domain in Türkiye since 2008)
+  Belde — https://tr.wikisource.org/wiki/Belde (revision 152097)
+  Bir Sefilenin Hasbihalinden — https://tr.wikisource.org/wiki/Bir_Sefilenin_Hasbihalinden (revision 94218)
+  Makber — https://tr.wikisource.org/wiki/Makber (revision 152697)
+  Sahra — https://tr.wikisource.org/wiki/Sahra (revision 94306)
+Ali Ekrem Bolayır (1867–1937; died 1937, public domain in Türkiye since 2008)
+  Elvâh-ı Tabiat'ten — https://tr.wikisource.org/wiki/Elv%C3%A2h-%C4%B1_Tabiat%27ten (revision 165848); page tags: KM-Türkiye
+  Güzelsin — https://tr.wikisource.org/wiki/G%C3%BCzelsin (revision 165849); page tags: KM-Türkiye
+  Saat — https://tr.wikisource.org/wiki/Saat (revision 165852); page tags: KM-Türkiye
+  Sancak — https://tr.wikisource.org/wiki/Sancak (revision 165853); page tags: KM-Türkiye
+  Son Bûse — https://tr.wikisource.org/wiki/Son_B%C3%BBse (revision 165856); page tags: KM-Türkiye
+  Şehîd Oğlum — https://tr.wikisource.org/wiki/%C5%9Eeh%C3%AEd_O%C4%9Flum (revision 165854); page tags: Telif bilgisiz
+Mehmet Emin Yurdakul (1869–1944; died 1944, public domain in Türkiye since 2015)
+  Bize Diyorlar ki — https://tr.wikisource.org/wiki/Bize_Diyorlar_ki (revision 165425); page tags: KM-Türkiye
+  Çekiç Altında — https://tr.wikisource.org/wiki/%C3%87eki%C3%A7_Alt%C4%B1nda (revision 165471); page tags: KM-Türkiye
+  İlk Yara — https://tr.wikisource.org/wiki/%C4%B0lk_Yara (revision 165480); page tags: KM-Türkiye
+  İmtihan — https://tr.wikisource.org/wiki/%C4%B0mtihan (revision 165481); page tags: KM-Türkiye
+  Kibritçi Kız — https://tr.wikisource.org/wiki/Kibrit%C3%A7i_K%C4%B1z (revision 165442); page tags: KM-Türkiye
+  Örs Başında — https://tr.wikisource.org/wiki/%C3%96rs_Ba%C5%9F%C4%B1nda (revision 165477); page tags: KM-Türkiye
+  Sürücü — https://tr.wikisource.org/wiki/S%C3%BCr%C3%BCc%C3%BC (revision 165456); page tags: KM-Türkiye
+  Zanaat — https://tr.wikisource.org/wiki/Zanaat (revision 165468); page tags: KM-Türkiye
+Rüştü Onur (1920–1944; died 1944, public domain in Türkiye since 2015)
+  Hülasa — https://tr.wikisource.org/wiki/H%C3%BClasa (revision 142367)
+  İtiraf — https://tr.wikisource.org/wiki/%C4%B0tiraf (revision 142369)
+  Nostalji — https://tr.wikisource.org/wiki/Nostalji (revision 142368)
+  Şair Leyla Sokağı — https://tr.wikisource.org/wiki/%C5%9Eair_Leyla_Soka%C4%9F%C4%B1 (revision 142366)
+Sabahattin Ali (1907–1948; died 1948, public domain in Türkiye since 2019)
+  Gâr — https://tr.wikisource.org/wiki/G%C3%A2r (revision 144704)
+  Geçmiyor Günler — https://tr.wikisource.org/wiki/Ge%C3%A7miyor_G%C3%BCnler (revision 172499); page tags: KM-Türkiye
+  Gurbet Hapishanesi — https://tr.wikisource.org/wiki/Gurbet_Hapishanesi_(Sabahattin_Ali) (revision 171071)
+  Günümüz — https://tr.wikisource.org/wiki/G%C3%BCn%C3%BCm%C3%BCz_(Sabahattin_Ali) (revision 171073)
+  İstek — https://tr.wikisource.org/wiki/%C4%B0stek_(Sabahattin_Ali) (revision 171072)
+  Nefes — https://tr.wikisource.org/wiki/Nefes_(Sabahattin_Ali) (revision 144703)
+Rıza Tevfik Bölükbaşı (1869–1949; died 1949, public domain in Türkiye since 2020)
+  Uçun Kuşlar Uçun — https://tr.wikisource.org/wiki/U%C3%A7un_Ku%C5%9Flar_U%C3%A7un (revision 153148)
+Orhan Veli Kanık (1914–1950; died 1950, public domain in Türkiye since 2021)
+  Beyaz Maşlahlı Hanım — https://tr.wikisource.org/wiki/Beyaz_Ma%C5%9Flahl%C4%B1_Han%C4%B1m (revision 133865); page tags: KM-Türkiye
+  Bir Roman Kahramanı — https://tr.wikisource.org/wiki/Bir_Roman_Kahraman%C4%B1 (revision 133846); page tags: KM-Türkiye
+  Bir Şehri Bırakmak — https://tr.wikisource.org/wiki/Bir_%C5%9Eehri_B%C4%B1rakmak (revision 133871); page tags: KM-Türkiye
+  Cevap — https://tr.wikisource.org/wiki/Cevap (revision 133836); page tags: KM-Türkiye
+  Eski Karım — https://tr.wikisource.org/wiki/Eski_Kar%C4%B1m (revision 145646); page tags: KM-Türkiye
+  Hoy Lû-Lû — https://tr.wikisource.org/wiki/Hoy_L%C3%BB-L%C3%BB (revision 133901); page tags: KM-Türkiye
+  İnsanlar — https://tr.wikisource.org/wiki/%C4%B0nsanlar (revision 133783); page tags: KM-Türkiye
+  Kapalı Çarşı — https://tr.wikisource.org/wiki/Kapal%C4%B1_%C3%87ar%C5%9F%C4%B1 (revision 133824); page tags: KM-Türkiye
+  Ne Kadar Güzel — https://tr.wikisource.org/wiki/Ne_Kadar_G%C3%BCzel (revision 133794); page tags: KM-Türkiye
+  Rüya — https://tr.wikisource.org/wiki/R%C3%BCya (revision 133781); page tags: KM-Türkiye
+  Sakal — https://tr.wikisource.org/wiki/Sakal (revision 133805); page tags: KM-Türkiye
+  Sicilyalı Balıkçı — https://tr.wikisource.org/wiki/Sicilyal%C4%B1_Bal%C4%B1k%C3%A7%C4%B1 (revision 133885); page tags: KM-Türkiye
+  Şanolu Şiir — https://tr.wikisource.org/wiki/%C5%9Eanolu_%C5%9Eiir (revision 133819); page tags: KM-Türkiye
+  Veda — https://tr.wikisource.org/wiki/Veda (revision 133862); page tags: KM-Türkiye
+Neyzen Tevfik (1880–1953; died 1953, public domain in Türkiye since 2024)
+  Anladın mı? — https://tr.wikisource.org/wiki/Anlad%C4%B1n_M%C4%B1%3F (revision 166130); page tags: KM-Türkiye
+  Felek — https://tr.wikisource.org/wiki/Felek (revision 166140); page tags: KM-Türkiye
+  Kime Sordumsa Seni — https://tr.wikisource.org/wiki/Kime_Sordumsa_Seni (revision 169853); page tags: KM-Türkiye
+  Sahne-i Ömrümden Nefs-i Emmareye Hitabım — https://tr.wikisource.org/wiki/Sahne-i_%C3%96mr%C3%BCmden_Nefs-i_Emmareye_Hitab%C4%B1m (revision 169588); page tags: KM-Türkiye
+  Şahid-i Şevk u Safa — https://tr.wikisource.org/wiki/%C5%9Eahid-i_%C5%9Eevk_u_Safa (revision 166603); page tags: KM-Türkiye
+  Vatanın Tarihi — https://tr.wikisource.org/wiki/Vatan%C4%B1n_Tarihi (revision 167024); page tags: KM-Türkiye

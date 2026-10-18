@@ -608,3 +608,14 @@ Kastor	Castor
 Kutup Yıldızı	Poolster
 Algol	Algol
 Mizar	Mizar
+Şiir Defteri	Gedichtenschrift
+Günün şiiri	Gedicht van de dag
+Şairler	Dichters
+Favoriler	Favorieten
+Bütün şiirlerden biri	Zomaar een gedicht
+%d şair, yüzyıllara göre	%d dichters, per eeuw
+%d şiir yıldızlı	%d gedichten met ster
+%d şiir	%d gedichten
+%d şiir · %d şair · kaynak: Vikikaynak (kamu malı)	%d gedichten · %d dichters · bron: Wikisource (publiek domein)
+Şiirler yüklenemedi.	De gedichten konden niet worden geladen.
+Henüz favori şiir yok.\nBir şiirde ☆ düğmesine dokunun.	Nog geen favoriete gedichten.\nTik bij een gedicht op ☆.

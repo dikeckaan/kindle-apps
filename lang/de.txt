@@ -608,3 +608,14 @@ Kastor	Kastor
 Kutup Yıldızı	Polarstern
 Algol	Algol
 Mizar	Mizar
+Şiir Defteri	Gedichtheft
+Günün şiiri	Gedicht des Tages
+Şairler	Dichter
+Favoriler	Favoriten
+Bütün şiirlerden biri	Irgendein Gedicht
+%d şair, yüzyıllara göre	%d Dichter, nach Jahrhunderten
+%d şiir yıldızlı	%d Gedichte mit Stern
+%d şiir	%d Gedichte
+%d şiir · %d şair · kaynak: Vikikaynak (kamu malı)	%d Gedichte · %d Dichter · Quelle: Wikisource (gemeinfrei)
+Şiirler yüklenemedi.	Die Gedichte konnten nicht geladen werden.
+Henüz favori şiir yok.\nBir şiirde ☆ düğmesine dokunun.	Noch keine Lieblingsgedichte.\nTippen Sie bei einem Gedicht auf ☆.

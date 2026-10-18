@@ -608,3 +608,14 @@ Kastor	Kastor
 Kutup Yıldızı	Polarstjernen
 Algol	Algol
 Mizar	Mizar
+Şiir Defteri	Digtbog
+Günün şiiri	Dagens digt
+Şairler	Digtere
+Favoriler	Favoritter
+Bütün şiirlerden biri	Et hvilket som helst digt
+%d şair, yüzyıllara göre	%d digtere, efter århundrede
+%d şiir yıldızlı	%d stjernemarkerede digte
+%d şiir	%d digte
+%d şiir · %d şair · kaynak: Vikikaynak (kamu malı)	%d digte · %d digtere · kilde: Wikisource (offentligt domæne)
+Şiirler yüklenemedi.	Digtene kunne ikke indlæses.
+Henüz favori şiir yok.\nBir şiirde ☆ düğmesine dokunun.	Ingen yndlingsdigte endnu.\nTryk på ☆ ved et digt.
