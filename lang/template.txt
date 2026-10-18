@@ -1,20 +1,38 @@
 # Translatable texts (Turkish source). Catalog lines: source<TAB>translation; \n and \t escaped.
-# apps/weather/main.c
+# apps/sysinfo/main.c
 %%%d	
+# apps/sysinfo/main.c
+%%%d · şarj oluyor	
 # core/kui/trfmt.c
 %d %s %d, %s	
+# apps/upload/main.c
+%d kez yanlış PIN girildi: yeni PIN üretildi.	
 # apps/news/main.c
 %d/%d · güncellendi %02d:%02d	
 # apps/news/main.c
 %d/%d · çevrimdışı, son veri %02d:%02d	
+# apps/sysinfo/si.c
+%ld dk	
+# apps/sysinfo/si.c
+%ld gün %ld sa	
+# apps/sysinfo/si.c
+%ld sa %ld dk	
 # apps/wordle/main.c
 %s %d/6 tahminde bildin.	
+# apps/upload/main.c
+%s / %s  (%%%d)	
 # core/hub/main.c
 %s beklenmedik şekilde kapandı	
+# apps/sysinfo/main.c
+%s boş / %s	
 # apps/weather/main.c
 %s silinsin mi?	
+# apps/news/main.c
+%s yükleniyor… (%d)	
 # apps/mines/main.c
 %s · %d×%d · %d mayın	
+# apps/news/main.c
+%s · Manşetler · Sayfa %d/%d	
 # apps/mines/main.c
 %s · Süre: %ld:%02ld	
 # apps/weather/main.c
@@ -37,13 +55,23 @@
 5 harf girin	
 # apps/chess/chess_game.c
 50 hamle kuralı — berabere	
+# apps/ebooks/main.c
+70.000'den fazla ücretsiz e-kitap. Arama İngilizce başlık ve yazar adlarıyla en iyi sonucu verir.	
+# apps/ebooks/main.c
+AZW3 Kindle'ın kendi okuyucusunda, EPUB KOReader'da açılır.	
 # apps/currency/main.c
 Altın (serbest piyasa, ₺)	
+# apps/upload/main.c
+Alındı: %s	
+# apps/upload/main.c
+Alınıyor: %s	
 # apps/currency/main.c
 Alış	
+# apps/ebooks/main.c
+Ara	
 # core/kui/trfmt.c
 Aralık	
-# apps/weather/main.c
+# apps/ebooks/main.c
 Aranıyor…	
 # apps/chess/main.c
 At	
@@ -55,6 +83,10 @@ AÇIK
 Aç	
 # apps/weather/wx.c
 Açık	
+# apps/sysinfo/main.c
+Açık (gelen bağlantılar engelli)	
+# apps/sysinfo/main.c
+Açık kalma süresi	
 # apps/firewall/main.c
 Açıldı. Gelen bağlantılar engelleniyor.	
 # core/kui/trfmt.c
@@ -63,14 +95,26 @@ Ağustos
 B	
 # apps/weather/main.c
 Bağlantı kurulamadı. Wi-Fi açık mı?	
+# apps/ebooks/main.c
+Bağlantı yok	
 # apps/currency/main.c
 Bağlantı yok, kurlar alınamadı	
 # apps/weather/main.c
 Bağlantı yok, veri alınamadı	
+# apps/sysinfo/main.c
+Bellek	
 # apps/chess/main.c
 Beyaz	
 # apps/news/news.c
 Bilim	
+# apps/ebooks/main.c
+Biçim:	
+# apps/ebooks/main.c
+Biçim: %s	
+# apps/upload/main.c
+Bu oturumda gelenler (%d)	
+# apps/upload/main.c
+Bu oturumda henüz dosya gelmedi	
 # apps/chess/main.c
 Bu oyun bitirilsin mi?	
 # apps/wordle/main.c
@@ -97,6 +141,10 @@ Cumartesi
 Cumhuriyet altını	
 # apps/weather/wx.c
 D	
+# apps/ebooks/main.c
+Daha fazla	
+# apps/sysinfo/main.c
+Depolama	
 # apps/game2048/main.c
 Devam	
 # apps/chess/main.c
@@ -113,6 +161,8 @@ Dolu, fırtına
 Donan yağmur	
 # apps/weather/wx.c
 Donan çisenti	
+# apps/upload/main.c
+Dosya bekleniyor…	
 # apps/wordle/main.c
 Dâhice!	
 # apps/currency/main.c
@@ -121,6 +171,8 @@ Döviz & Altın
 Dünya	
 # apps/chess/main.c
 Düşünüyor… (%s)	
+# apps/ebooks/main.c
+E-Kitap	
 # core/kui/trfmt.c
 Ekim	
 # apps/news/news.c
@@ -151,6 +203,8 @@ Gazete
 Geri al	
 # apps/currency/fx.c
 Gram altın	
+# apps/ebooks/main.c
+Gutenberg'e ulaşılamadı. Wi-Fi bağlantısını kontrol edip yeniden deneyin.	
 # apps/weather/wx.c
 Gök gürültülü	
 # apps/wordle/main.c
@@ -165,6 +219,8 @@ Güncelleniyor…
 Gündem	
 # apps/firewall/main.c
 Güvenlik Duvarı	
+# apps/sysinfo/main.c
+Güvenlik duvarı	
 # apps/wordle/main.c
 Güzel!	
 # apps/news/main.c
@@ -189,6 +245,8 @@ Hayır
 Haziran	
 # apps/currency/main.c
 Hedef para	
+# apps/ebooks/main.c
+Henüz kitap indirilmedi.	
 # apps/ssh/main.c
 Henüz parola yok	
 # core/hub/main.c
@@ -211,6 +269,8 @@ KD
 Kale	
 # apps/weather/wx.c
 Kapalı	
+# apps/sysinfo/main.c
+Kapalı (gelen bağlantılara açık)	
 # apps/chess/main.c
 Kapat	
 # apps/firewall/main.c
@@ -229,6 +289,12 @@ Kaydedilemedi.
 Kaynak para	
 # apps/news/main.c
 Kaynak: %s	
+# apps/ebooks/main.c
+Kaynak: gutenberg.org/ebooks/%d	
+# apps/news/main.c
+Kaynaklar	
+# apps/news/main.c
+Kaynağa dokunun: haberlerini açar. ☑ / ☐: ön sayfada gösterilsin mi.	
 # apps/mines/main.c
 Kazandın!	
 # apps/wordle/main.c
@@ -239,8 +305,18 @@ Kelime Oyunu
 Kelime listesi bulunamadı. Uygulamayı yeniden kurun.	
 # apps/wordle/main.c
 Kelime: %s	
+# apps/upload/main.c
+Kilidi aç (yeni PIN)	
 # apps/sleep/main.c
 Kindle bu süre dokunulmadan kalınca uyur.\n"Hiç uyuma" pili hızlı tüketir.\nYeniden başlatınca varsayılana dönebilir.	
+# apps/ebooks/main.c
+Kitap	
+# apps/ebooks/main.c
+Kitap ara	
+# apps/ebooks/main.c
+Kitap ara (başlık veya yazar)	
+# apps/ebooks/main.c
+Kitaplığa eklendi:\n%s	
 # apps/chess/levels.c
 Kolay	
 # apps/ssh/main.c
@@ -317,8 +393,14 @@ Pazartesi
 Per	
 # core/kui/trfmt.c
 Perşembe	
+# apps/sysinfo/main.c
+Pil	
+# apps/sysinfo/main.c
+Pil sıcaklığı	
 # apps/chess/main.c
 Piyon hangi taşa dönüşsün?	
+# apps/ebooks/main.c
+Project Gutenberg'deki telifsiz kitaplar	
 # core/kui/trfmt.c
 Pzt	
 # apps/chess/main.c
@@ -331,6 +413,8 @@ Rüzgâr %ld km/s %s
 Rüzgâr —	
 # apps/ssh/main.c
 SSH Sunucusu	
+# apps/sysinfo/main.c
+SSH sunucusu	
 # core/kui/trfmt.c
 Sal	
 # core/kui/trfmt.c
@@ -351,6 +435,8 @@ Seri
 Sil	
 # apps/weather/wx.c
 Sisli	
+# apps/sysinfo/main.c
+Sistem Bilgisi	
 # apps/chess/main.c
 Siyah	
 # apps/game2048/main.c
@@ -361,14 +447,20 @@ Skor: %d
 Solitaire	
 # apps/wordle/main.c
 Son anda!	
+# apps/news/news.c
+Son dakika	
 # apps/weather/main.c
 Sonuç bulunamadı	
-# apps/weather/main.c
+# apps/ebooks/main.c
+Sonuç bulunamadı.\nBaşka bir başlık ya da yazar adı deneyin.	
+# apps/ebooks/main.c
 Sonuçlar	
 # apps/news/news.c
 Spor	
 # apps/sudoku/main.c
 Sudoku	
+# apps/upload/main.c
+Sunucu başlatılamadı	
 # apps/ssh/main.c
 Sunucu başlatılamadı (günlüğe bakın).	
 # apps/wordle/main.c
@@ -393,36 +485,56 @@ Tahtaya bak
 Tahtayı çevir	
 # apps/currency/fx.c
 Tam altın	
-# apps/firewall/main.c
+# apps/ebooks/main.c
 Tamam	
 # apps/solitaire/main.c
 Tamamla	
+# apps/upload/main.c
+Tarayıcıda bu adresi açın:	
 # apps/game2048/main.c
 Tebrikler!	
 # apps/solitaire/main.c
 Tek kart çek	
 # apps/chess/main.c
 Tek oyunculu	
+# apps/news/news.c
+Teknoloji	
 # apps/chess/main.c
 Tekrar dene	
+# apps/upload/main.c
+Telefon ya da bilgisayar aynı Wi-Fi ağında olmalı. Sayfada PIN'i girin, kitapları seçip Gönder'e basın. Uygulamayı kapatınca sunucu durur.	
 # core/kui/trfmt.c
 Temmuz	
 # apps/chess/main.c
 Terfi	
 # apps/currency/main.c
 Tüm kurlar	
+# apps/news/news.c
+Tümü	
+# apps/news/news.c
+Türkiye	
 # apps/chess/levels.c
 Usta	
 # core/hub/main.c
 Uygulamalar	
 # apps/sleep/main.c
 Uyku Ayarı	
-# apps/firewall/main.c
+# apps/ebooks/main.c
 Vazgeç	
 # apps/chess/main.c
 Vezir	
+# apps/upload/main.c
+Wi-Fi ile Yükle	
+# apps/upload/main.c
+Wi-Fi kapalı	
+# apps/upload/main.c
+Wi-Fi'yi açın; adres burada görünecek.	
 # apps/currency/fx.c
 Yarım altın	
+# apps/ebooks/main.c
+Yazar bilinmiyor	
+# apps/sysinfo/main.c
+Yazılım	
 # apps/weather/wx.c
 Yağmurlu	
 # apps/weather/main.c
@@ -433,6 +545,8 @@ Yeni
 Yeni SSH parolası (en az 6)	
 # apps/chess/main.c
 Yeni oyun	
+# apps/ebooks/main.c
+Yeniden dene	
 # apps/currency/main.c
 Yenile	
 # apps/chess/chess_game.c
@@ -447,12 +561,20 @@ Zor
 Zorluk	
 # apps/sudoku/main.c
 Zorluk seçin	
+# apps/sysinfo/main.c
+bağlı değil	
 # core/kui/keyboard.c
 boşluk	
+# apps/sysinfo/main.c
+Çalışmıyor	
+# apps/sysinfo/main.c
+Çalışıyor · port %d	
 # core/kui/trfmt.c
 Çar	
 # core/kui/trfmt.c
 Çarşamba	
+# apps/sysinfo/main.c
+Çekirdek	
 # apps/currency/main.c
 Çevirici	
 # apps/currency/main.c
@@ -465,10 +587,14 @@ boşluk
 Çisenti	
 # apps/chess/levels.c
 Çok Kolay	
+# apps/upload/main.c
+Çok fazla yanlış PIN denendi.\nGüvenlik için yükleme durduruldu.	
 # apps/wordle/main.c
 Çok iyi!	
 # apps/mines/main.c
 Çıkış	
+# apps/news/main.c
+Ön sayfada kaynak yok.\nKaynaklar'dan seçin.	
 # apps/sudoku/main.c
 Önce boş bir hücre seçin.	
 # apps/solitaire/main.c
@@ -479,6 +605,14 @@ boşluk
 İki oyunculu	
 # apps/chess/main.c
 İki oyunculu devam	
+# apps/ebooks/main.c
+İndir	
+# apps/ebooks/main.c
+İndirilemedi.\nWi-Fi bağlantısını kontrol edip yeniden deneyin.	
+# apps/ebooks/main.c
+İndirilenler	
+# apps/ebooks/main.c
+İndiriliyor…\nGutenberg yavaş olabilir, lütfen bekleyin.	
 # apps/sudoku/main.c
 İpucu	
 # apps/wordle/main.c
@@ -517,6 +651,8 @@ boşluk
 Şu an: hiç uyumuyor	
 # core/kui/trfmt.c
 Şubat	
+# apps/ebooks/main.c
+“%s” · %d kitap%s	
 # apps/mines/main.c
 ⚑ Açık	
 # apps/mines/main.c

@@ -129,26 +129,26 @@ static void draw_home(int full)
 {
 	int w = kui_width(), h = kui_height();
 	kui_fill((KuiRect){ 0, 0, w, h }, 255);
-	kui_topbar("E-Kitap", "Ara");
+	kui_topbar(T("E-Kitap"), T("Ara"));
 	int y = KUI_TOPBAR_H + 50;
-	y += draw_wrapped((KuiRect){ 50, y, w - 100, 0 }, "Project Gutenberg'deki telifsiz kitaplar", KUI_FONT_BOLD, 44, 2, KUI_ALIGN_CENTER);
+	y += draw_wrapped((KuiRect){ 50, y, w - 100, 0 }, T("Project Gutenberg'deki telifsiz kitaplar"), KUI_FONT_BOLD, 44, 2, KUI_ALIGN_CENTER);
 	y += 15;
 	draw_wrapped((KuiRect){ 50, y, w - 100, 0 },
-		     "70.000'den fazla ücretsiz e-kitap. Arama İngilizce başlık ve yazar adlarıyla en iyi sonucu verir.", KUI_FONT_REG, 34, 3,
+		     T("70.000'den fazla ücretsiz e-kitap. Arama İngilizce başlık ve yazar adlarıyla en iyi sonucu verir."), KUI_FONT_REG, 34, 3,
 		     KUI_ALIGN_CENTER);
-	home_btns[0] = (KuiButton){ { 120, 450, w - 240, 170 }, "Kitap ara", BTN_SEARCH };
+	home_btns[0] = (KuiButton){ { 120, 450, w - 240, 170 }, T("Kitap ara"), BTN_SEARCH };
 	kui_button(&home_btns[0], 0);
-	kui_text((KuiRect){ 40, 680, w - 80, 70 }, "Biçim:", KUI_FONT_BOLD, 38, KUI_ALIGN_LEFT, 0);
+	kui_text((KuiRect){ 40, 680, w - 80, 70 }, T("Biçim:"), KUI_FONT_BOLD, 38, KUI_ALIGN_LEFT, 0);
 	draw_formats();
-	kui_text((KuiRect){ 40, 880, w - 80, 70 }, "AZW3 Kindle'ın kendi okuyucusunda, EPUB KOReader'da açılır.", KUI_FONT_REG, 28,
+	kui_text((KuiRect){ 40, 880, w - 80, 70 }, T("AZW3 Kindle'ın kendi okuyucusunda, EPUB KOReader'da açılır."), KUI_FONT_REG, 28,
 		 KUI_ALIGN_LEFT, 0);
 	static char hist[HISTORY_KEEP][HLEN];
 	int n = history_load(hist, HISTORY_KEEP);
 	y = 980;
 	kui_fill((KuiRect){ 30, y, w - 60, 3 }, 0);
-	kui_text((KuiRect){ 40, y + 15, w - 80, 70 }, "İndirilenler", KUI_FONT_BOLD, 40, KUI_ALIGN_LEFT, 0);
+	kui_text((KuiRect){ 40, y + 15, w - 80, 70 }, T("İndirilenler"), KUI_FONT_BOLD, 40, KUI_ALIGN_LEFT, 0);
 	y += 95;
-	if (!n) kui_text((KuiRect){ 40, y, w - 80, 60 }, "Henüz kitap indirilmedi.", KUI_FONT_REG, 32, KUI_ALIGN_LEFT, 0);
+	if (!n) kui_text((KuiRect){ 40, y, w - 80, 60 }, T("Henüz kitap indirilmedi."), KUI_FONT_REG, 32, KUI_ALIGN_LEFT, 0);
 	for (int i = 0; i < HISTORY_SHOW && i < n; i++) {
 		const char *s = hist[n - 1 - i];
 		kui_text((KuiRect){ 40, y + i * 66, w - 80, 62 }, s, KUI_FONT_REG, kui_fit_px(s, KUI_FONT_REG, 32, w - 80), KUI_ALIGN_LEFT, 0);
@@ -158,7 +158,7 @@ static void draw_home(int full)
 
 static void message(const char *title, const char *msg)
 {
-	const char *ok[] = { "Tamam" };
+	const char *ok[] = { T("Tamam") };
 	kui_dialog(title, msg, ok, 1, NULL);
 }
 
@@ -211,7 +211,7 @@ static void draw_status_bar(const char *msg)
 	kui_fill(bar, 255);
 	nav[0] = (KuiButton){ { 20, h - 100, 160, 90 }, "◀", NAV_PREV };
 	nav[1] = (KuiButton){ { w - 180, h - 100, 160, 90 }, "▶", NAV_NEXT };
-	nav[2] = (KuiButton){ { 240, h - 100, w - 480, 90 }, "Daha fazla", NAV_MORE };
+	nav[2] = (KuiButton){ { 240, h - 100, w - 480, 90 }, T("Daha fazla"), NAV_MORE };
 	if (page > 0) kui_button(&nav[0], 0);
 	if (page + 1 < pages()) kui_button(&nav[1], 0);
 	char s[64];
@@ -228,20 +228,20 @@ static void draw_results(int full)
 {
 	int w = kui_width(), h = kui_height();
 	kui_fill((KuiRect){ 0, 0, w, h }, 255);
-	kui_topbar("Sonuçlar", "Ara");
+	kui_topbar(T("Sonuçlar"), T("Ara"));
 	char s[200];
-	snprintf(s, sizeof s, "“%s” · %d kitap%s", query, n_books, next_start ? "+" : "");
+	snprintf(s, sizeof s, T("“%s” · %d kitap%s"), query, n_books, next_start ? "+" : "");
 	kui_text((KuiRect){ 30, KUI_TOPBAR_H, w - 60, 80 }, s, KUI_FONT_REG, kui_fit_px(s, KUI_FONT_REG, 34, w - 60), KUI_ALIGN_LEFT, 0);
 	kui_fill((KuiRect){ 20, LIST_Y - 6, w - 40, 3 }, 0);
 	if (!n_books)
-		draw_wrapped((KuiRect){ 60, 520, w - 120, 0 }, "Sonuç bulunamadı.\nBaşka bir başlık ya da yazar adı deneyin.", KUI_FONT_REG, 42, 4,
+		draw_wrapped((KuiRect){ 60, 520, w - 120, 0 }, T("Sonuç bulunamadı.\nBaşka bir başlık ya da yazar adı deneyin."), KUI_FONT_REG, 42, 4,
 			     KUI_ALIGN_CENTER);
 	for (int i = 0; i < PER_PAGE; i++) {
 		int k = page * PER_PAGE + i;
 		if (k >= n_books) break;
 		int y = LIST_Y + i * ROW_H + 12;
 		int th = draw_wrapped((KuiRect){ 30, y, w - 60, 0 }, books[k].title, KUI_FONT_BOLD, 36, 2, KUI_ALIGN_LEFT);
-		const char *a = books[k].author[0] ? books[k].author : "Yazar bilinmiyor";
+		const char *a = books[k].author[0] ? books[k].author : T("Yazar bilinmiyor");
 		kui_text((KuiRect){ 30, y + th + 4, w - 60, 44 }, a, KUI_FONT_REG, kui_fit_px(a, KUI_FONT_REG, 30, w - 60), KUI_ALIGN_LEFT, 0);
 		kui_fill((KuiRect){ 30, LIST_Y + (i + 1) * ROW_H - 2, w - 60, 1 }, 0);
 	}
@@ -256,14 +256,14 @@ static void draw_confirm(const Book *b, const char *status, const KuiButton *bs,
 {
 	int w = kui_width();
 	kui_fill((KuiRect){ 0, 0, w, kui_height() }, 255);
-	kui_topbar("Kitap", NULL);
+	kui_topbar(T("Kitap"), NULL);
 	int y = KUI_TOPBAR_H + 50;
 	y += draw_wrapped((KuiRect){ 50, y, w - 100, 0 }, b->title, KUI_FONT_BOLD, 50, 6, KUI_ALIGN_LEFT) + 20;
 	if (b->author[0]) y += draw_wrapped((KuiRect){ 50, y, w - 100, 0 }, b->author, KUI_FONT_REG, 40, 2, KUI_ALIGN_LEFT) + 30;
 	char s[160];
-	snprintf(s, sizeof s, "Biçim: %s", fmt_label[fmt]);
+	snprintf(s, sizeof s, T("Biçim: %s"), fmt_label[fmt]);
 	kui_text((KuiRect){ 50, y, w - 100, 60 }, s, KUI_FONT_REG, 36, KUI_ALIGN_LEFT, 0);
-	snprintf(s, sizeof s, "Kaynak: gutenberg.org/ebooks/%d", b->id);
+	snprintf(s, sizeof s, T("Kaynak: gutenberg.org/ebooks/%d"), b->id);
 	kui_text((KuiRect){ 50, y + 65, w - 100, 60 }, s, KUI_FONT_REG, 30, KUI_ALIGN_LEFT, 0);
 	for (int i = 0; i < nb; i++) kui_button(&bs[i], 0);
 	if (status) draw_wrapped((KuiRect){ 50, 1100, w - 100, 0 }, status, KUI_FONT_BOLD, 38, 6, KUI_ALIGN_CENTER);
@@ -304,8 +304,8 @@ static void confirm(const Book *b)
 	enum { C_GET = 1, C_CANCEL, C_OK };
 	confirm_book = b;
 	confirm_status = NULL;
-	confirm_btns[0] = (KuiButton){ { 50, 900, bw, 150 }, "İndir", C_GET };
-	confirm_btns[1] = (KuiButton){ { 90 + bw, 900, bw, 150 }, "Vazgeç", C_CANCEL };
+	confirm_btns[0] = (KuiButton){ { 50, 900, bw, 150 }, T("İndir"), C_GET };
+	confirm_btns[1] = (KuiButton){ { 90 + bw, 900, bw, 150 }, T("Vazgeç"), C_CANCEL };
 	confirm_nb = 2;
 	draw_confirm(b, NULL, confirm_btns, confirm_nb, 1);
 	for (;;) {
@@ -317,17 +317,17 @@ static void confirm(const Book *b)
 		int id = kui_buttons_hit(confirm_btns, confirm_nb, e.x, e.y);
 		if (id == C_CANCEL || id == C_OK) return;
 		if (id != C_GET) continue;
-		confirm_status = "İndiriliyor…\nGutenberg yavaş olabilir, lütfen bekleyin.";
+		confirm_status = T("İndiriliyor…\nGutenberg yavaş olabilir, lütfen bekleyin.");
 		confirm_nb = 0;
 		draw_confirm(b, confirm_status, confirm_btns, 0, 0);
 		if (download(b, name, sizeof name) == 0) {
-			snprintf(status, sizeof status, "Kitaplığa eklendi:\n%s", name);
-			confirm_btns[0] = (KuiButton){ { 120, 900, w - 240, 150 }, "Tamam", C_OK };
+			snprintf(status, sizeof status, T("Kitaplığa eklendi:\n%s"), name);
+			confirm_btns[0] = (KuiButton){ { 120, 900, w - 240, 150 }, T("Tamam"), C_OK };
 			confirm_nb = 1;
 		} else {
-			snprintf(status, sizeof status, "İndirilemedi.\nWi-Fi bağlantısını kontrol edip yeniden deneyin.");
-			confirm_btns[0] = (KuiButton){ { 50, 900, bw, 150 }, "Yeniden dene", C_GET };
-			confirm_btns[1] = (KuiButton){ { 90 + bw, 900, bw, 150 }, "Vazgeç", C_CANCEL };
+			snprintf(status, sizeof status, "%s", T("İndirilemedi.\nWi-Fi bağlantısını kontrol edip yeniden deneyin."));
+			confirm_btns[0] = (KuiButton){ { 50, 900, bw, 150 }, T("Yeniden dene"), C_GET };
+			confirm_btns[1] = (KuiButton){ { 90 + bw, 900, bw, 150 }, T("Vazgeç"), C_CANCEL };
 			confirm_nb = 2;
 		}
 		confirm_status = status;
@@ -355,11 +355,11 @@ static int results_loop(void)
 			if (id == NAV_PREV && page > 0) d = -1;
 			else if (id == NAV_NEXT && page + 1 < pages()) d = 1;
 			else if (id == NAV_MORE && page + 1 == pages() && next_start) {
-				draw_status_bar("Yükleniyor…");
+				draw_status_bar(T("Yükleniyor…"));
 				kui_flush(0);
 				int before = n_books;
 				if (fetch_page(next_start) != 0) {
-					draw_status_bar("Bağlantı yok");
+					draw_status_bar(T("Bağlantı yok"));
 					kui_flush(0);
 					continue;
 				}
@@ -390,14 +390,14 @@ static void search(void)
 	for (;;) {
 		char q[sizeof query];
 		snprintf(q, sizeof q, "%s", query);
-		if (!kui_input_text("Kitap ara (başlık veya yazar)", q, sizeof q, 0, 2, NULL)) {
+		if (!kui_input_text(T("Kitap ara (başlık veya yazar)"), q, sizeof q, 0, 2, NULL)) {
 			if (!have) return;
 		} else {
 			snprintf(query, sizeof query, "%s", q);
-			busy_screen("Aranıyor…", query);
+			busy_screen(T("Aranıyor…"), query);
 			n_books = next_start = page = 0;
 			if (fetch_page(1) != 0) {
-				message("Bağlantı yok", "Gutenberg'e ulaşılamadı. Wi-Fi bağlantısını kontrol edip yeniden deneyin.");
+				message(T("Bağlantı yok"), T("Gutenberg'e ulaşılamadı. Wi-Fi bağlantısını kontrol edip yeniden deneyin."));
 				return;
 			}
 			have = 1;

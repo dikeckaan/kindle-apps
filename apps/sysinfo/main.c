@@ -60,68 +60,68 @@ static void gather(void)
 	n_rows = 0;
 
 	int lvl = kui_lipc_get_int(POWERD, "battLevel", -1), chg = kui_lipc_get_int(POWERD, "isCharging", -1);
-	if (lvl >= 0) snprintf(s, sizeof s, "%%%d%s", lvl, chg == 1 ? " · şarj oluyor" : "");
+	if (lvl >= 0) snprintf(s, sizeof s, chg == 1 ? T("%%%d · şarj oluyor") : T("%%%d"), lvl);
 	else s[0] = '\0';
-	row("Pil", s);
+	row(T("Pil"), s);
 	int tf = kui_lipc_get_int(POWERD, "battTemperature", -1000);
 	if (tf > -1000) snprintf(s, sizeof s, "%d °C", si_batt_temp_c(tf));
 	else s[0] = '\0';
-	row("Pil sıcaklığı", s);
+	row(T("Pil sıcaklığı"), s);
 
 	struct statvfs v;
 	if (statvfs(getenv("SYSINFO_DISK") ? getenv("SYSINFO_DISK") : "/mnt/us", &v) == 0) {
 		si_fmt_bytes((long long) v.f_bavail * (long long) v.f_frsize, a, sizeof a);
 		si_fmt_bytes((long long) v.f_blocks * (long long) v.f_frsize, b, sizeof b);
-		snprintf(s, sizeof s, "%s boş / %s", a, b);
+		snprintf(s, sizeof s, T("%s boş / %s"), a, b);
 	} else {
 		s[0] = '\0';
 	}
-	row("Depolama", s);
+	row(T("Depolama"), s);
 
 	long total, avail;
 	if (read_text("/proc/meminfo", buf, sizeof buf) > 0 && si_parse_meminfo(buf, &total, &avail) == 0) {
 		si_fmt_bytes(avail, a, sizeof a);
 		si_fmt_bytes(total, b, sizeof b);
-		snprintf(s, sizeof s, "%s boş / %s", a, b);
+		snprintf(s, sizeof s, T("%s boş / %s"), a, b);
 	} else {
 		s[0] = '\0';
 	}
-	row("Bellek", s);
+	row(T("Bellek"), s);
 
 	wifi_ip(s, sizeof s);
-	row("Wi-Fi IP", s[0] ? s : "bağlı değil");
+	row("Wi-Fi IP", s[0] ? s : T("bağlı değil"));
 
 	if (read_text("/etc/prettyversion.txt", buf, sizeof buf) > 0) si_parse_firmware(buf, s, sizeof s);
 	else s[0] = '\0';
-	row("Yazılım", s);
+	row(T("Yazılım"), s);
 
 	struct utsname u;
 	if (uname(&u) == 0) snprintf(s, sizeof s, "%s %s", u.sysname, u.release);
 	else s[0] = '\0';
-	row("Çekirdek", s);
+	row(T("Çekirdek"), s);
 
 	long up = read_text("/proc/uptime", buf, sizeof buf) > 0 ? si_parse_uptime(buf) : -1;
 	si_fmt_duration(up, s, sizeof s);
-	row("Açık kalma süresi", up >= 0 ? s : "");
+	row(T("Açık kalma süresi"), up >= 0 ? s : "");
 
 	static char ipt[8192];
 	FILE *p = popen("iptables -S INPUT 2>/dev/null", "r");
 	size_t n = p ? fread(ipt, 1, sizeof ipt - 1, p) : 0;
 	int ok = p && pclose(p) == 0 && n > 0;
 	ipt[n] = '\0';
-	row("Güvenlik duvarı", !ok ? "" : fw_is_open_policy(ipt) ? "Kapalı (gelen bağlantılara açık)" : "Açık");
+	row(T("Güvenlik duvarı"), !ok ? "" : fw_is_open_policy(ipt) ? T("Kapalı (gelen bağlantılara açık)") : T("Açık (gelen bağlantılar engelli)"));
 
 	int port = ssh_server_port();
-	if (port > 0) snprintf(s, sizeof s, "Açık · port %d", port);
-	else snprintf(s, sizeof s, "Kapalı");
-	row("SSH sunucusu", s);
+	if (port > 0) snprintf(s, sizeof s, T("Çalışıyor · port %d"), port);
+	else snprintf(s, sizeof s, "%s", T("Çalışmıyor"));
+	row(T("SSH sunucusu"), s);
 }
 
 static void draw(int full)
 {
 	int w = kui_width(), h = kui_height();
 	kui_fill((KuiRect){ 0, 0, w, h }, 255);
-	kui_topbar("Sistem Bilgisi", NULL);
+	kui_topbar(T("Sistem Bilgisi"), NULL);
 	int y = KUI_TOPBAR_H + 20, rh = 95;
 	for (int i = 0; i < n_rows; i++, y += rh) {
 		kui_text((KuiRect){ 40, y, 400, rh }, labels[i], KUI_FONT_REG, 38, KUI_ALIGN_LEFT, 0);
@@ -129,7 +129,7 @@ static void draw(int full)
 			 KUI_ALIGN_RIGHT, 0);
 		kui_fill((KuiRect){ 40, y + rh - 2, w - 80, 1 }, 0xAA);
 	}
-	refresh_btn = (KuiButton){ { (w - 400) / 2, h - 140, 400, 110 }, "Yenile", 1 };
+	refresh_btn = (KuiButton){ { (w - 400) / 2, h - 140, 400, 110 }, T("Yenile"), 1 };
 	kui_button(&refresh_btn, 0);
 	if (full) kui_flush(1);
 	else {

@@ -70,16 +70,16 @@ static void draw_url(void)
 	KuiRect r = r_url;
 	kui_fill(r, 255);
 	if (!srv) {
-		kui_text((KuiRect){ r.x, r.y + 20, r.w, 80 }, "Sunucu başlatılamadı", KUI_FONT_BOLD, 60, KUI_ALIGN_CENTER, 0);
+		kui_text((KuiRect){ r.x, r.y + 20, r.w, 80 }, T("Sunucu başlatılamadı"), KUI_FONT_BOLD, 60, KUI_ALIGN_CENTER, 0);
 		kui_text((KuiRect){ r.x, r.y + 110, r.w, 80 }, fail_msg, KUI_FONT_REG, 34, KUI_ALIGN_CENTER, 0);
 	} else if (!ip[0]) {
-		kui_text((KuiRect){ r.x, r.y + 10, r.w, 100 }, "Wi-Fi kapalı", KUI_FONT_BOLD, 80, KUI_ALIGN_CENTER, 0);
-		kui_text((KuiRect){ r.x, r.y + 120, r.w, 70 }, "Wi-Fi'yi açın; adres burada görünecek.", KUI_FONT_REG, 36,
+		kui_text((KuiRect){ r.x, r.y + 10, r.w, 100 }, T("Wi-Fi kapalı"), KUI_FONT_BOLD, 80, KUI_ALIGN_CENTER, 0);
+		kui_text((KuiRect){ r.x, r.y + 120, r.w, 70 }, T("Wi-Fi'yi açın; adres burada görünecek."), KUI_FONT_REG, 36,
 			 KUI_ALIGN_CENTER, 0);
 	} else {
 		char url[128];
 		snprintf(url, sizeof url, "http://%s:%d", ip, upload_port(srv));
-		kui_text((KuiRect){ r.x, r.y, r.w, 60 }, "Tarayıcıda bu adresi açın:", KUI_FONT_REG, 38, KUI_ALIGN_CENTER, 0);
+		kui_text((KuiRect){ r.x, r.y, r.w, 60 }, T("Tarayıcıda bu adresi açın:"), KUI_FONT_REG, 38, KUI_ALIGN_CENTER, 0);
 		int px = kui_fit_px(url, KUI_FONT_BOLD, 84, r.w);
 		kui_text((KuiRect){ r.x, r.y + 70, r.w, 120 }, url, KUI_FONT_BOLD, px, KUI_ALIGN_CENTER, 0);
 	}
@@ -93,9 +93,9 @@ static void draw_pin(void)
 	KuiRect r = r_pin;
 	kui_fill(r, 255);
 	if (srv && upload_locked(srv)) { /* somebody kept guessing: the server refuses everything now */
-		kui_text((KuiRect){ r.x, r.y, r.w, 130 }, "Çok fazla yanlış PIN denendi.\nGüvenlik için yükleme durduruldu.", KUI_FONT_BOLD, 40,
+		kui_text((KuiRect){ r.x, r.y, r.w, 130 }, T("Çok fazla yanlış PIN denendi.\nGüvenlik için yükleme durduruldu."), KUI_FONT_BOLD, 40,
 			 KUI_ALIGN_CENTER, 0);
-		unlock_btn = (KuiButton){ { r.x + r.w / 2 - 220, r.y + 140, 440, 85 }, "Kilidi aç (yeni PIN)", 1 };
+		unlock_btn = (KuiButton){ { r.x + r.w / 2 - 220, r.y + 140, 440, 85 }, T("Kilidi aç (yeni PIN)"), 1 };
 		kui_button(&unlock_btn, 0);
 	} else if (srv) {
 		const char *p = upload_pin(srv);
@@ -113,8 +113,8 @@ static void draw_help(void)
 {
 	int w = kui_width();
 	kui_text((KuiRect){ 50, KUI_TOPBAR_H + 485, w - 100, 140 },
-		 "Telefon ya da bilgisayar aynı Wi-Fi ağında olmalı. Sayfada PIN'i girin, kitapları seçip Gönder'e basın. "
-		 "Uygulamayı kapatınca sunucu durur.",
+		 T("Telefon ya da bilgisayar aynı Wi-Fi ağında olmalı. Sayfada PIN'i girin, kitapları seçip Gönder'e basın. "
+		   "Uygulamayı kapatınca sunucu durur."),
 		 KUI_FONT_REG, 32, KUI_ALIGN_CENTER, 0);
 	kui_fill((KuiRect){ 30, KUI_TOPBAR_H + 630, w - 60, 3 }, 0);
 }
@@ -126,16 +126,16 @@ static void draw_status(void)
 	long long got = 0, total = 0;
 	char name[160], a[32], b[32], line[200];
 	if (srv && upload_progress(srv, &got, &total, name, sizeof name)) {
-		snprintf(line, sizeof line, "Alınıyor: %s", name[0] ? name : "…");
+		snprintf(line, sizeof line, T("Alınıyor: %s"), name[0] ? name : "…");
 		int px = kui_fit_px(line, KUI_FONT_BOLD, 44, r.w);
 		kui_text((KuiRect){ r.x, r.y + 10, r.w, 60 }, line, KUI_FONT_BOLD, px, KUI_ALIGN_LEFT, 0);
 		httpd_fmt_size(got, a, sizeof a);
 		httpd_fmt_size(total, b, sizeof b);
 		int pct = total > 0 ? (int) (got * 100 / total) : 0;
-		snprintf(line, sizeof line, "%s / %s  (%%%d)", a, b, pct);
+		snprintf(line, sizeof line, T("%s / %s  (%%%d)"), a, b, pct);
 		kui_text((KuiRect){ r.x, r.y + 75, r.w, 60 }, line, KUI_FONT_REG, 40, KUI_ALIGN_LEFT, 0);
 	} else {
-		const char *t = notice[0] ? notice : srv ? "Dosya bekleniyor…" : "";
+		const char *t = notice[0] ? notice : srv ? T("Dosya bekleniyor…") : "";
 		int px = kui_fit_px(t, KUI_FONT_REG, 40, r.w);
 		kui_text((KuiRect){ r.x, r.y + 40, r.w, 70 }, t, KUI_FONT_REG, px, KUI_ALIGN_LEFT, 0);
 	}
@@ -149,7 +149,7 @@ static void draw_list(void)
 	const UploadFile *files = NULL;
 	int n = srv ? upload_files(srv, &files) : 0;
 	char head[64];
-	snprintf(head, sizeof head, n ? "Bu oturumda gelenler (%d)" : "Bu oturumda henüz dosya gelmedi", n);
+	snprintf(head, sizeof head, n ? T("Bu oturumda gelenler (%d)") : T("Bu oturumda henüz dosya gelmedi"), n);
 	kui_text((KuiRect){ r.x, r.y, r.w, 56 }, head, KUI_FONT_BOLD, 40, KUI_ALIGN_LEFT, 0);
 	int row = 66, rows = (r.h - 66) / row;
 	int first = n > rows ? n - rows : 0; /* newest at the bottom */
@@ -169,7 +169,7 @@ static void draw_list(void)
 static void draw_all(void)
 {
 	kui_fill((KuiRect){ 0, 0, kui_width(), kui_height() }, 255);
-	kui_topbar("Wi-Fi ile Yükle", NULL);
+	kui_topbar(T("Wi-Fi ile Yükle"), NULL);
 	draw_url();
 	draw_pin();
 	draw_help();
@@ -209,7 +209,7 @@ static void update(void)
 	}
 	if (srv && upload_pin_generation(srv) != shown_gen) {
 		shown_gen = upload_pin_generation(srv);
-		snprintf(notice, sizeof notice, "%d kez yanlış PIN girildi: yeni PIN üretildi.", UPLOAD_MAX_BAD_PINS);
+		snprintf(notice, sizeof notice, T("%d kez yanlış PIN girildi: yeni PIN üretildi."), UPLOAD_MAX_BAD_PINS);
 		draw_pin();
 		if (!active) draw_status();
 		dirty = 1;
@@ -217,7 +217,7 @@ static void update(void)
 	const UploadFile *files;
 	int n = srv ? upload_files(srv, &files) : 0;
 	if (n != shown_files) {
-		if (n > shown_files) snprintf(notice, sizeof notice, "Alındı: %s", files[n - 1].name);
+		if (n > shown_files) snprintf(notice, sizeof notice, T("Alındı: %s"), files[n - 1].name);
 		shown_files = n;
 		draw_list();
 		if (!active) draw_status(); /* a small file can come and go between two polls */

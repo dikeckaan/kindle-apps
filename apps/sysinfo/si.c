@@ -61,9 +61,9 @@ void si_fmt_bytes(long long b, char *out, int cap)
 void si_fmt_duration(long s, char *out, int cap)
 {
 	if (s < 0) snprintf(out, (size_t) cap, "—");
-	else if (s >= 86400) snprintf(out, (size_t) cap, "%ld gün %ld sa", s / 86400, s % 86400 / 3600);
-	else if (s >= 3600) snprintf(out, (size_t) cap, "%ld sa %ld dk", s / 3600, s % 3600 / 60);
-	else snprintf(out, (size_t) cap, "%ld dk", s / 60);
+	else if (s >= 86400) snprintf(out, (size_t) cap, T("%ld gün %ld sa"), s / 86400, s % 86400 / 3600);
+	else if (s >= 3600) snprintf(out, (size_t) cap, T("%ld sa %ld dk"), s / 3600, s % 3600 / 60);
+	else snprintf(out, (size_t) cap, T("%ld dk"), s / 60);
 }
 
 int si_batt_temp_c(int f)
