@@ -1,0 +1,3 @@
+#!/bin/sh
+@PRE_UNINSTALL@
+rm -rf /mnt/us/kindle-apps/apps/@APPDIR@

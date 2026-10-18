@@ -25,5 +25,20 @@ assert all(isinstance(d,dict) and isinstance(d.get("id"),str) for d in m["depend
     grep -q "\"$id\"" dist/manifest.json 2>/dev/null && ok "repo manifest lists $id" || bad "repo manifest misses $id"
     rm -rf "$t"
 done
+for id in core 2048 chess sleep ssh firewall; do
+    ls dist/packages/kindle-apps-$id/*.kpkg >/dev/null 2>&1 && ok "package kindle-apps-$id built" || bad "package kindle-apps-$id missing"
+done
+has() { tar tzf dist/packages/$1/*.kpkg | grep -qx "$2" && ok "$1 has $2" || bad "$1 lacks $2"; }
+has kindle-apps-chess files/stockfish
+has kindle-apps-chess files/COPYING-stockfish
+has kindle-apps-ssh files/dropbear
+has kindle-apps-ssh files/dropbearkey
+has kindle-apps-ssh files/LICENSE-dropbear
+for k in dist/packages/*/*.kpkg; do
+    t=$(mktemp -d); tar xzf "$k" -C "$t"
+    sh -n "$t/install.sh" && sh -n "$t/uninstall.sh" && ! grep -q "@[A-Z_]*@" "$t/install.sh" "$t/uninstall.sh" \
+        && ok "$k scripts parse, no template markers" || bad "$k install/uninstall script broken"
+    rm -rf "$t"
+done
 python3 -m json.tool dist/manifest.json >/dev/null 2>&1 && ok "dist/manifest.json is JSON" || bad "dist/manifest.json invalid"
 exit $fail

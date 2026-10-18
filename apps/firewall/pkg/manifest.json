@@ -1,0 +1,10 @@
+{
+  "manifest_version": 2,
+  "id": "kindle-apps-firewall",
+  "name": "Güvenlik Duvarı",
+  "author": "Kaan Dikeç",
+  "description": "Kindle güvenlik duvarını açıp kapatın",
+  "version": [2026, 10, 5],
+  "dependencies": [],
+  "supported_platforms": ["kindlehf"]
+}

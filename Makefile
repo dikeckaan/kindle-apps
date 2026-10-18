@@ -85,18 +85,24 @@ clean:
 
 # ---- packaging: stage each package under build/pkg/<id>, then tar it into dist/ ----
 
+# PKGS: each <appdir> under apps/ with a pkg/ dir; PKG_<appdir>_FILES go to files/ (installed next to app.ini)
+PKGS := game2048 chess sleep ssh firewall
+PKG_game2048_FILES := $(OUT)/game2048
+PKG_chess_FILES := $(OUT)/chess $(OUT)/stockfish $(OUT)/COPYING-stockfish
+PKG_sleep_FILES := $(OUT)/sleep
+PKG_ssh_FILES := $(OUT)/ssh $(OUT)/dropbear $(OUT)/dropbearkey $(OUT)/LICENSE-dropbear
+PKG_firewall_FILES := $(OUT)/firewall
+
 dist:
-	@for b in hub game2048; do [ -x $(OUT)/$$b ] || { echo "missing $(OUT)/$$b: run make build first"; exit 1; }; done
+	@for f in $(OUT)/hub $(foreach p,$(PKGS),$(PKG_$(p)_FILES)); do [ -f $$f ] || { echo "missing $$f: run make build first"; exit 1; }; done
 	rm -rf build/pkg dist
-	mkdir -p build/pkg/core/files/bin build/pkg/core/files/fonts build/pkg/2048/files
+	mkdir -p build/pkg/core/files/bin build/pkg/core/files/fonts
 	cp core/pkg/manifest.json core/pkg/install.sh core/pkg/uninstall.sh core/pkg/launch.sh build/pkg/core/
 	cp -R core/pkg/scriptlets build/pkg/core/
 	cp core/kui-run.sh $(OUT)/hub build/pkg/core/files/bin/
 	cp third_party/fonts/DejaVuSans.ttf third_party/fonts/DejaVuSans-Bold.ttf third_party/fonts/DejaVu-LICENSE build/pkg/core/files/fonts/
-	cp apps/game2048/pkg/* build/pkg/2048/
-	cp $(OUT)/game2048 build/pkg/2048/files/
 	./tools/pack.sh build/pkg/core dist
-	./tools/pack.sh build/pkg/2048 dist
+	@set -e; $(foreach p,$(PKGS),./tools/stage-app.sh $(p) build/pkg/$(p) $(PKG_$(p)_FILES); ./tools/pack.sh build/pkg/$(p) dist;)
 	./tools/gen-manifest.sh dist
 	./tests/pkg/test_pack.sh
 
@@ -106,7 +112,7 @@ SSH    := sshpass -p '' ssh -o PubkeyAuthentication=no -p $(PORT) root@$(KINDLE)
 
 # Installs dist packages the way kpm does: unpack into a staging dir and run install.sh there (core first).
 deploy:
-	@for id in kindle-apps-core kindle-apps-2048; do \
+	@for id in kindle-apps-core kindle-apps-2048 kindle-apps-chess kindle-apps-sleep kindle-apps-ssh kindle-apps-firewall; do \
 		k=$$(ls dist/packages/$$id/*.kpkg | tail -1); echo "deploy $$k"; \
 		cat $$k | $(SSH) "S=/mnt/us/kindle-apps-staging/$$id; rm -rf \$$S; mkdir -p \$$S && cd \$$S && tar xzf - && sh ./install.sh && cd / && rm -rf \$$S && echo installed $$id" || exit 1; \
 	done

@@ -4,7 +4,7 @@
   "name": "Uygulamalar (çekirdek)",
   "author": "Kaan Dikeç",
   "description": "Kindle Apps çatısı: Uygulamalar menüsü, güvenli başlatıcı ve fontlar",
-  "version": [2026, 10, 4],
+  "version": [2026, 10, 5],
   "dependencies": [],
   "supported_platforms": ["kindlehf"]
 }
