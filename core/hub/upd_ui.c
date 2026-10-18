@@ -93,6 +93,13 @@ static void draw(void)
 	kui_flush(1);
 }
 
+/* turning a page: only the rows change, without a full-screen flash */
+static void draw_rows(void)
+{
+	for (int i = 0; i < PER_PAGE; i++) draw_row(i, NULL);
+	kui_flush(0);
+}
+
 static void message(const char *msg)
 {
 	int w = kui_width(), h = kui_height();
@@ -189,15 +196,15 @@ int hub_updates(const char *root)
 		if (e.type == KUI_EV_QUIT) break;
 		if (e.type == KUI_EV_WAKE) { draw(); continue; }
 		if (e.type == KUI_EV_SWIPE && pages() > 1) {
-			if (e.dir == KUI_DIR_LEFT && page + 1 < pages()) { page++; draw(); }
-			if (e.dir == KUI_DIR_RIGHT && page > 0) { page--; draw(); }
+			int d = e.dir == KUI_DIR_LEFT ? 1 : e.dir == KUI_DIR_RIGHT ? -1 : 0;
+			if (d && page + d >= 0 && page + d < pages()) { page += d; draw_rows(); }
 			continue;
 		}
 		if (e.type != KUI_EV_TAP) continue;
 		if (kui_topbar_hit(kui_width(), 0, e.x, e.y) == KUI_BTN_EXIT) break;
 		int b = kui_buttons_hit(bottom, 3, e.x, e.y);
-		if (b == 1 && page > 0) { page--; draw(); continue; }
-		if (b == 2 && page + 1 < pages()) { page++; draw(); continue; }
+		if (b == 1 && page > 0) { page--; draw_rows(); continue; }
+		if (b == 2 && page + 1 < pages()) { page++; draw_rows(); continue; }
 		if (b == 3) { /* every installed package with a newer version; the core first (parse order) */
 			int fails = 0;
 			for (int k = 0; k < n_pk; k++) {

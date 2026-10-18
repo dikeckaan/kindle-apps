@@ -36,6 +36,28 @@ static void scan(void)
 	n_apps++;
 }
 
+/* 2 connected, 1 on but not connected, 0 off */
+static int wifi_state(void)
+{
+	char st[32];
+	if (kui_wifi_enabled() == 0) return 0;
+	return kui_lipc_get_str("com.lab126.wifid", "cmState", st, sizeof st) == 0 && !strcmp(st, "CONNECTED") ? 2 : 1;
+}
+
+static int shown_wifi = -1;
+
+/* "Wi-Fi ✓ / ✗ / –" beside the exit button; redrawn (no flash) only when it changes */
+static void draw_wifi(int force)
+{
+	int s = wifi_state();
+	if (s == shown_wifi && !force) return;
+	shown_wifi = s;
+	KuiRect r = { 125, 20, 170, KUI_TOPBAR_H - 40 };
+	kui_fill(r, 255);
+	kui_text(r, s == 2 ? "Wi-Fi ✓" : s == 1 ? "Wi-Fi …" : "Wi-Fi ✗", KUI_FONT_REG, 30, KUI_ALIGN_LEFT, s == 2 ? 0 : 90);
+	kui_mark_dirty(r);
+}
+
 static int pages(void) { return n_apps ? (n_apps + PER_PAGE - 1) / PER_PAGE : 1; }
 
 static KuiRect tile(int i) { return kui_grid_cell(grid, COLS, ROWS, i % COLS, i / COLS, 30); }
@@ -56,11 +78,22 @@ static int fit_name(const char *name, int w)
 	return px;
 }
 
-static void draw(void)
+static int shown_batt = -2;
+
+/* the battery level left of "Dil"; redrawn only when it changes */
+static void draw_battery(int force)
+{
+	int lvl = kui_lipc_get_int("com.lab126.powerd", "battLevel", -1) * 2 + (kui_lipc_get_int("com.lab126.powerd", "isCharging", 0) == 1);
+	if (lvl == shown_batt && !force) return;
+	shown_batt = lvl;
+	kui_battery((KuiRect){ kui_width() - 330, 28, 180, 64 });
+}
+
+/* tiles and page controls only: turning a page redraws just this, with no full-screen flash */
+static void draw_body(void)
 {
 	int w = kui_width(), h = kui_height();
-	kui_fill((KuiRect){ 0, 0, w, h }, 255);
-	kui_topbar(T("Uygulamalar"), T("Dil"));
+	kui_fill((KuiRect){ 0, KUI_TOPBAR_H, w, h - KUI_TOPBAR_H }, 255);
 	grid = (KuiRect){ 20, KUI_TOPBAR_H + 20, w - 40, h - KUI_TOPBAR_H - 200 };
 	for (int i = 0; i < PER_PAGE; i++) {
 		int k = page * PER_PAGE + i;
@@ -80,7 +113,26 @@ static void draw(void)
 		snprintf(s, sizeof s, "%d / %d", page + 1, pages());
 		kui_text((KuiRect){ 300, y, w - 600, 120 }, s, KUI_FONT_REG, 44, KUI_ALIGN_CENTER, 0);
 	}
+	kui_mark_dirty((KuiRect){ 0, KUI_TOPBAR_H, w, h - KUI_TOPBAR_H });
+}
+
+static void draw(void)
+{
+	int w = kui_width(), h = kui_height();
+	kui_fill((KuiRect){ 0, 0, w, h }, 255);
+	kui_topbar(T("Uygulamalar"), T("Dil"));
+	draw_body();
+	draw_wifi(1);
+	draw_battery(1);
 	kui_flush(1);
+}
+
+static void turn_page(int d)
+{
+	if (page + d < 0 || page + d >= pages()) return;
+	page += d;
+	draw_body();
+	kui_flush(0);
 }
 
 /* the 20 languages as a two-column list; the current one is shown pressed */
@@ -150,12 +202,20 @@ int main(void)
 	scan();
 	draw();
 	for (;;) {
-		KuiEvent e = kui_next_event(-1);
+		/* every 5 s while on screen: Wi-Fi and battery; nothing at all behind the screensaver */
+		KuiEvent e = kui_next_event(kui_input_asleep() ? -1 : 5000);
 		if (e.type == KUI_EV_QUIT) break;
+		if (e.type == KUI_EV_NONE) {
+			if (!kui_input_asleep()) {
+				draw_wifi(0);
+				draw_battery(0);
+				kui_flush(0);
+			}
+			continue;
+		}
 		if (e.type == KUI_EV_WAKE) { draw(); continue; }
 		if (e.type == KUI_EV_SWIPE && pages() > 1) {
-			if (e.dir == KUI_DIR_LEFT && page + 1 < pages()) { page++; draw(); }
-			if (e.dir == KUI_DIR_RIGHT && page > 0) { page--; draw(); }
+			turn_page(e.dir == KUI_DIR_LEFT ? 1 : e.dir == KUI_DIR_RIGHT ? -1 : 0);
 			continue;
 		}
 		if (e.type != KUI_EV_TAP) continue;
@@ -168,8 +228,7 @@ int main(void)
 		}
 		if (pages() > 1) {
 			int id = kui_buttons_hit(nav, 2, e.x, e.y);
-			if (id == 1 && page > 0) { page--; draw(); continue; }
-			if (id == 2 && page + 1 < pages()) { page++; draw(); continue; }
+			if (id == 1 || id == 2) { turn_page(id == 1 ? -1 : 1); continue; }
 		}
 		for (int i = 0; i < PER_PAGE; i++) {
 			int k = page * PER_PAGE + i;
