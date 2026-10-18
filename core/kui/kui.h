@@ -50,6 +50,19 @@ typedef struct { int down, x0, y0, x, y; long t0_ms; } KuiGesture;
 /* Feed screen-space samples (down = 1 press/drag, 0 release); events are emitted on release only. */
 KuiEvent kui_gesture_feed(KuiGesture *g, int down, int x, int y, long t_ms);
 
+/* ---- on-screen keyboard (pure layout + hit-test) ---- */
+typedef enum { KUI_KB_TR_LETTERS, KUI_KB_SYMBOLS } KuiKbPage;
+#define KUI_KEY_BACK  (-10)
+#define KUI_KEY_ENTER (-11)
+#define KUI_KEY_SHIFT (-12)
+#define KUI_KEY_PAGE  (-13)
+typedef struct { KuiRect r; int cp; char label[8]; } KuiKey; /* cp: code point, or a KUI_KEY_* special */
+int kui_kb_layout(KuiRect area, KuiKbPage page, int shift, KuiKey *out, int max);
+int kui_kb_hit(const KuiKey *keys, int n, int x, int y); /* key index or -1 */
+
+/* ---- hashing ---- */
+void kui_sha256(const void *data, int len, unsigned char out[32]);
+
 /* ---- storage ---- */
 const char *kui_data_dir(const char *app); /* $KUI_ROOT/data/<app>, created on demand */
 int kui_write_atomic(const char *path, const void *buf, int len); /* 0 = ok */
@@ -81,6 +94,8 @@ void kui_button(const KuiButton *b, int pressed);
 /* Modal dialog drawn over the current screen; returns the chosen index, -1 on ✕/quit.
  * The caller redraws its screen afterwards. */
 int  kui_dialog(const char *title, const char *msg, const char **choices, int n, void (*redraw_bg)(void));
+/* Modal text entry with the Turkish keyboard; secret shows ●. Returns 1 on Tamam (len >= min_len), 0 on ✕. */
+int  kui_input_text(const char *title, char *buf, int cap, int secret, int min_len, void (*redraw_bg)(void));
 /* redraw_bg (may be NULL) repaints the screen behind the dialog after a wake from the screensaver. */
 
 #endif

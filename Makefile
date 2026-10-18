@@ -23,6 +23,8 @@ TEST_test_chess_rules_SRCS := apps/chess/chess_rules.c
 TEST_test_chess_game_SRCS := apps/chess/chess_game.c apps/chess/chess_rules.c
 TEST_test_levels_SRCS := apps/chess/levels.c
 TEST_test_sleep_opts_SRCS := apps/sleep/sleep_opts.c
+TEST_test_sha256_SRCS := core/kui/sha256.c
+TEST_test_keyboard_SRCS := core/kui/keyboard.c core/kui/layout.c core/kui/utf8tr.c
 TEST_test_uci_SRCS := apps/chess/uci.c apps/chess/levels.c
 
 TESTS := $(patsubst tests/host/%.c,%,$(wildcard tests/host/test_*.c))
