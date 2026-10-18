@@ -23,6 +23,17 @@ int  kui_tr_lower(int cp);
 int  kui_tr_fold_circumflex(int cp);
 void kui_tr_upper_str(const char *in, char *out, int outsz);
 
+/* ---- events and gestures ---- */
+typedef enum { KUI_EV_NONE, KUI_EV_TAP, KUI_EV_LONGPRESS, KUI_EV_SWIPE, KUI_EV_WAKE, KUI_EV_QUIT } KuiEvType;
+typedef enum { KUI_DIR_NONE, KUI_DIR_LEFT, KUI_DIR_RIGHT, KUI_DIR_UP, KUI_DIR_DOWN } KuiDir;
+typedef struct { KuiEvType type; int x, y; KuiDir dir; } KuiEvent;
+typedef struct { int down, x0, y0, x, y; long t0_ms; } KuiGesture;
+#define KUI_SWIPE_MIN_PX   80
+#define KUI_LONGPRESS_MS   600
+#define KUI_LONGPRESS_SLOP 40
+/* Feed screen-space samples (down = 1 press/drag, 0 release); events are emitted on release only. */
+KuiEvent kui_gesture_feed(KuiGesture *g, int down, int x, int y, long t_ms);
+
 /* ---- storage ---- */
 const char *kui_data_dir(const char *app); /* $KUI_ROOT/data/<app>, created on demand */
 int kui_write_atomic(const char *path, const void *buf, int len); /* 0 = ok */

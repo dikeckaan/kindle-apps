@@ -16,6 +16,7 @@ TEST_test_refresh_SRCS := core/kui/refresh.c
 TEST_test_layout_SRCS := core/kui/layout.c
 TEST_test_utf8tr_SRCS := core/kui/utf8tr.c
 TEST_test_store_SRCS := core/kui/store.c
+TEST_test_gesture_SRCS := core/kui/gesture.c
 
 TESTS := $(patsubst tests/host/%.c,%,$(wildcard tests/host/test_*.c))
 
