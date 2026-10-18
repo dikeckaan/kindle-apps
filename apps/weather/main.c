@@ -108,7 +108,7 @@ static void draw_status(void)
 static void draw(int full)
 {
 	int w = kui_width(), h = kui_height();
-	char s[128], a[32], b[32];
+	char s[160], a[32], b[32];
 	kui_fill((KuiRect){ 0, 0, w, h }, 255);
 	kui_topbar("Hava Durumu", "Şehirler");
 	const WxCity *c = &cities[cur];

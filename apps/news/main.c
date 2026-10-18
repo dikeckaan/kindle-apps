@@ -210,7 +210,7 @@ static void article(const NewsItem *it)
 			y += lh;
 		}
 		if (n_pages > 1) {
-			char s[16];
+			char s[32];
 			snprintf(s, sizeof s, "%d / %d", pg + 1, n_pages);
 			kui_button(&bnav[0], 0);
 			kui_button(&bnav[1], 0);

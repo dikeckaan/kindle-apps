@@ -17,7 +17,10 @@ Kitaplıkta tek bir **"Uygulamalar"** girişi olur; açınca bütün uygulamalar
 | SSH Sunucusu (parolalı, menüden aç/kapat) | ✅ |
 | Güvenlik Duvarı (aç/kapat) | ✅ |
 | Türkçe Wordle | yakında |
-| Hava durumu (Open-Meteo), Masa saati, Döviz & Altın (TCMB), Gazete (AA / TRT Haber) | yakında |
+| Hava Durumu (Open-Meteo, kayıtlı şehirler, 12 saat + 7 gün) | ✅ |
+| Masa Saati (büyük saat, tarih, hava özeti; açıkken uyumaz) | ✅ |
+| Döviz & Altın (TCMB kurları, altın fiyatları, çevirici) | ✅ |
+| Gazete (Anadolu Ajansı ve TRT Haber manşetleri) | ✅ |
 | Mayın Tarlası, Solitaire, Sudoku | yakında |
 | Sistem bilgisi, Wi-Fi ile dosya yükleme | yakında |
 
@@ -43,6 +46,10 @@ dosyasını indirip USB ile Kindle'ın `documents` klasörüne kopyalayın, kita
 /var/local/kmc/bin/kpm -y install kindle-apps-sleep
 /var/local/kmc/bin/kpm -y install kindle-apps-ssh
 /var/local/kmc/bin/kpm -y install kindle-apps-firewall
+/var/local/kmc/bin/kpm -y install kindle-apps-weather
+/var/local/kmc/bin/kpm -y install kindle-apps-clock
+/var/local/kmc/bin/kpm -y install kindle-apps-currency
+/var/local/kmc/bin/kpm -y install kindle-apps-news
 ```
 
 Ardından kitaplıkta **Uygulamalar**'ı açın.
@@ -56,10 +63,17 @@ root'un okuyabildiği `/var/local/kindle-apps/ssh` içinde tuzlu ve 10 000 tur S
 ## Kaldırma
 
 ```sh
-/var/local/kmc/bin/kpm uninstall kindle-apps-2048 kindle-apps-chess kindle-apps-sleep kindle-apps-ssh kindle-apps-firewall kindle-apps-core
+/var/local/kmc/bin/kpm uninstall kindle-apps-2048 kindle-apps-chess kindle-apps-sleep kindle-apps-ssh kindle-apps-firewall kindle-apps-weather kindle-apps-clock kindle-apps-currency kindle-apps-news kindle-apps-core
 ```
 
 Oyun kayıtları ve ayarlar `/mnt/us/kindle-apps/data/` içinde kalır; tamamen silmek için o klasörü de silin.
+
+### İnternetli uygulamalar
+
+Hava Durumu, Masa Saati, Döviz & Altın ve Gazete Wi-Fi ile veri çeker; bağlantı yoksa son indirilen veriyi
+zamanıyla gösterir. Veri kaynakları: [Open-Meteo](https://open-meteo.com) (CC BY 4.0), TCMB günlük kurları,
+Truncgil Finans (altın), Anadolu Ajansı ve TRT Haber RSS. Gazete yalnızca RSS'te yayımlanan metni ve haberin
+bağlantısını gösterir; görsel indirmez.
 
 ## Sorun giderme
 
@@ -75,6 +89,7 @@ docker build -t kindle-apps-tc tools/docker   # kindlehf araç zinciri
 make test                                      # host birim testleri
 make build dist                                # cihaz ikilileri + paketler
 make deploy KINDLE=192.168.2.90                # SSH ile cihaza kur
+tools/sim/run.sh weather "tap 970 60"          # cihazsız deneme: ekranlar build/sim/out/ altında PNG
 ```
 
 Tasarım: `docs/superpowers/specs/`, planlar: `docs/superpowers/plans/`.

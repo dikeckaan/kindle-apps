@@ -189,7 +189,7 @@ static void all_rates(void)
 		nav[0] = (KuiButton){ { 40, h - 120, 200, 100 }, "◀", 1 };
 		nav[1] = (KuiButton){ { w - 240, h - 120, 200, 100 }, "▶", 2 };
 		if (pages > 1) {
-			char s[16];
+			char s[32];
 			snprintf(s, sizeof s, "%d / %d", page + 1, pages);
 			kui_button(&nav[0], 0);
 			kui_button(&nav[1], 0);
@@ -228,7 +228,7 @@ static const char *pick_currency(const char *title)
 	static char codes[FX_MAX + 1][4];
 	int n = 0;
 	snprintf(codes[n++], 4, "TRY");
-	for (int i = 0; i < n_rates && n < FX_MAX + 1; i++) snprintf(codes[n++], 4, "%s", rates[i].code);
+	for (int i = 0; i < n_rates && n < FX_MAX + 1; i++) memcpy(codes[n++], rates[i].code, 4);
 	for (int full = 1;;) {
 		if (full) {
 			kui_fill((KuiRect){ 0, 0, w, kui_height() }, 255);

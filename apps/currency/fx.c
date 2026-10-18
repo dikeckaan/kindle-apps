@@ -22,14 +22,13 @@ int fx_parse_tcmb(const char *xml, FxRate *out, int max, char date[11])
 	XmlEl root, el;
 	date[0] = '\0';
 	if (!xml_next(xml, end, "Tarih_Date", &root)) return 0;
-	char d[16];
-	if (xml_attr(&root, "Tarih", d, sizeof d)) snprintf(date, 11, "%s", d);
+	if (!xml_attr(&root, "Tarih", date, 11)) date[0] = '\0';
 	int n = 0;
 	for (const char *p = root.inner; n < max && (p = xml_next(p, root.inner_end, "Currency", &el));) {
 		FxRate *r = &out[n];
 		char code[8];
 		if (!xml_attr(&el, "Kod", code, sizeof code) || strlen(code) != 3) continue;
-		snprintf(r->code, sizeof r->code, "%s", code);
+		memcpy(r->code, code, 4); /* 3 letters + NUL, checked above */
 		XmlEl c;
 		r->name[0] = '\0';
 		if (xml_next(el.inner, el.inner_end, "Isim", &c)) xml_text(c.inner, c.inner_end, r->name, sizeof r->name);

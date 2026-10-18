@@ -9,7 +9,9 @@ cp "$SRC/manifest.json" "$SRC/app.ini" tools/pkg/launch.sh "$STAGE/"
 [ -f "$SRC/post-install.sh" ] && cp "$SRC/post-install.sh" "$STAGE/"
 # stop.sh (optional): run before an upgrade replaces the files and before uninstall removes them
 [ -f "$SRC/stop.sh" ] && cp "$SRC/stop.sh" "$STAGE/pre-install.sh"
-sed -e "s|@APPDIR@|$APP|g" -e "s|@NAME@|$NAME|g" tools/pkg/install.sh.in > "$STAGE/install.sh"
+# literal substitution (names may contain sed specials such as '&')
+python3 -c 'import sys;t=open(sys.argv[1]).read();open(sys.argv[2],"w").write(t.replace("@APPDIR@",sys.argv[3]).replace("@NAME@",sys.argv[4]))' \
+    tools/pkg/install.sh.in "$STAGE/install.sh" "$APP" "$NAME"
 PRE=":"
 [ -f "$SRC/stop.sh" ] && PRE=$(cat "$SRC/stop.sh")
 [ -f "$SRC/pre-uninstall.sh" ] && PRE="$PRE

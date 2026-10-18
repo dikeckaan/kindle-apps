@@ -5,6 +5,17 @@
 | FBInk (NiLuJe) | GPL-3.0-or-later | https://github.com/NiLuJe/FBInk (revision in `tools/deps.lock`) | e-ink drawing & refresh |
 | Stockfish 11 | GPL-3.0 (`COPYING-stockfish` in the chess package) | https://github.com/official-stockfish/Stockfish (tag `sf_11`) | chess engine, run as a separate process |
 | Dropbear SSH (DROPBEAR_2026.94) | MIT-style (`LICENSE-dropbear` in the SSH package) | https://github.com/mkj/dropbear | SSH server; patched by `tools/patches/dropbear-apppass.patch` |
+| cJSON 1.7.18 (Dave Gamble) | MIT (`core/vendor/cjson/LICENSE`) | https://github.com/DaveGamble/cJSON | JSON parsing |
+| stb_truetype (Sean Barrett) | public domain / MIT | https://github.com/nothings/stb | host simulator only (`tools/sim`), not shipped |
 | DejaVu Fonts 2.37 | Bitstream Vera / DejaVu license (free, see `DejaVu-LICENSE`) | https://dejavu-fonts.github.io | UI font (Turkish + chess glyphs) |
 
 Because FBInk is linked statically and is GPLv3+, this project is distributed under GPLv3 (see `LICENSE`).
+
+## Data sources (fetched at run time, not bundled)
+
+| Source | Terms | Used by |
+|--------|-------|---------|
+| Open-Meteo forecast + geocoding API | CC BY 4.0, free for non-commercial use; attributed on screen | Hava Durumu, Masa Saati |
+| TCMB `kurlar/today.xml` | public daily indicative rates | Döviz & Altın |
+| Truncgil Finans `today.json` | free public API | Döviz & Altın (gold) |
+| Anadolu Ajansı / TRT Haber RSS | publishers' RSS; only the feed text and the article link are shown | Gazete |
