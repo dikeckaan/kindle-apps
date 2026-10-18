@@ -41,4 +41,6 @@ int upload_pin_generation(const UploadServer *s);
 int upload_busy(const UploadServer *s);
 /* 1 after too many wrong PINs: nothing more is accepted until the app is reopened */
 int upload_locked(const UploadServer *s);
+/* the owner confirmed on the device: clears the lock and the counters, with a fresh PIN */
+void upload_unlock(UploadServer *s);
 #endif

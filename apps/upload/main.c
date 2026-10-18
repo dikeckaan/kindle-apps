@@ -86,13 +86,17 @@ static void draw_url(void)
 	kui_mark_dirty(r);
 }
 
+static KuiButton unlock_btn; /* shown while locked: only the owner, at the device, can resume */
+
 static void draw_pin(void)
 {
 	KuiRect r = r_pin;
 	kui_fill(r, 255);
 	if (srv && upload_locked(srv)) { /* somebody kept guessing: the server refuses everything now */
-		kui_text(r, "Çok fazla yanlış PIN denendi.\nGüvenlik için yükleme 5 dakika durdu;\nsonra yeni PIN ile devam eder.", KUI_FONT_BOLD, 40,
+		kui_text((KuiRect){ r.x, r.y, r.w, 130 }, "Çok fazla yanlış PIN denendi.\nGüvenlik için yükleme durduruldu.", KUI_FONT_BOLD, 40,
 			 KUI_ALIGN_CENTER, 0);
+		unlock_btn = (KuiButton){ { r.x + r.w / 2 - 220, r.y + 140, 440, 85 }, "Kilidi aç (yeni PIN)", 1 };
+		kui_button(&unlock_btn, 0);
 	} else if (srv) {
 		const char *p = upload_pin(srv);
 		char spaced[16];
@@ -275,6 +279,8 @@ int main(void)
 		if (e.type == KUI_EV_WAKE) {
 			if (!ip[0]) wifi_ip(ip, sizeof ip);
 			draw_all();
+		} else if (e.type == KUI_EV_TAP && srv && upload_locked(srv) && kui_buttons_hit(&unlock_btn, 1, e.x, e.y)) {
+			upload_unlock(srv);
 		} else if (e.type == KUI_EV_TAP && kui_topbar_hit(kui_width(), 0, e.x, e.y) == KUI_BTN_EXIT) {
 			break;
 		}

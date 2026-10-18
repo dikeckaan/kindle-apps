@@ -766,6 +766,7 @@ static void test_e2e_abuse(void)
 		if (!strcmp(upload_pin(s), "000000")) req[13] = '1'; /* never guess right by accident */
 		roundtrip(s, req, len);
 		free(req);
+		for (int k = 0; k < 5; k++) upload_poll(s, 2);
 	}
 	T_EQ_INT(upload_locked(s), 1);
 	snprintf(pin, sizeof pin, "%s", upload_pin(s));
@@ -780,6 +781,26 @@ static void test_e2e_abuse(void)
 	T_EQ_INT(upload_locked(s), 0);
 	snprintf(pin, sizeof pin, "%s", upload_pin(s));
 	req = build(NULL, pin, "after.epub", "d", 1, &len);
+	T_EQ_INT(roundtrip(s, req, len), 200);
+	free(req);
+	/* 5. locks get longer, and after four of them only the owner's tap on the device unlocks (bounded guesses) */
+	for (int cycle = 2; cycle <= 4; cycle++) {
+		for (int i = 0; i < 15; i++) {
+			req = build("000000", NULL, "x.epub", "d", 1, &len);
+			if (!strcmp(upload_pin(s), "000000")) req[13] = '1';
+			roundtrip(s, req, len);
+			free(req);
+			for (int k = 0; k < 5; k++) upload_poll(s, 2); /* let the answered connection close (per-address limit) */
+		}
+		T_EQ_INT(upload_locked(s), 1);
+		t0 = now_ms();
+		while (now_ms() - t0 < 300L * (1L << (cycle - 1)) + 100) upload_poll(s, 5);
+		T_EQ_INT(upload_locked(s), cycle == 4); /* locks 2 and 3 expire after their doubled time; the fourth does not */
+	}
+	upload_unlock(s);
+	T_EQ_INT(upload_locked(s), 0);
+	snprintf(pin, sizeof pin, "%s", upload_pin(s));
+	req = build(NULL, pin, "owner.epub", "d", 1, &len);
 	T_EQ_INT(roundtrip(s, req, len), 200);
 	free(req);
 	upload_close(s);
