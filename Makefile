@@ -19,6 +19,7 @@ TEST_test_store_SRCS := core/kui/store.c
 TEST_test_gesture_SRCS := core/kui/gesture.c
 TEST_test_g2048_SRCS := apps/game2048/g2048.c
 TEST_test_appreg_SRCS := core/hub/appreg.c
+TEST_test_chess_rules_SRCS := apps/chess/chess_rules.c
 
 TESTS := $(patsubst tests/host/%.c,%,$(wildcard tests/host/test_*.c))
 
