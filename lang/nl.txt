@@ -467,3 +467,32 @@ Vezir oyun sonu	Dame-eindspel
 Fil oyun sonu	Lopereindspel
 At oyun sonu	Paardeneindspel
 Vezir ve kale oyun sonu	Dame-en-toreneindspel
+az önce	zojuist
+%d dk önce	%d min geleden
+%d sa önce	%d u geleden
+%d gün önce	%d dagen geleden
+24 saat	24 uur
+7 gün	7 dagen
+Kaynak: EMSC	Bron: EMSC
+Kaynak: Boğaziçi Üni. Kandilli Rasathanesi (KRDAE)	Bron: Boğaziçi Üni. Kandilli Rasathanesi (KRDAE)
+Çevrimdışı — son veri %s · %s	Offline — laatste gegevens %s · %s
+Güncellendi %s · %s	Bijgewerkt %s · %s
+derinlik %s km	diepte %s km
+Bu süzgeçle deprem yok.	Geen aardbevingen met dit filter.
+Deprem listesi alınamadı.\nWi-Fi bağlantısını kontrol edip Yenile'ye basın.	De aardbevingenlijst kon niet worden opgehaald.\nControleer de wifi en tik op Vernieuwen.
+son 24 saat	laatste 24 uur
+daha eski	ouder
+%d deprem	%d aardbevingen
+En büyükler	De zwaarste
+Sayfa %d/%d	Pagina %d/%d
+Son Depremler	Recente aardbevingen
+Liste	Lijst
+Harita	Kaart
+Deprem	Aardbeving
+Türkiye saati	Turkse tijd
+Derinlik	Diepte
+%s° K, %s° D	%s° N, %s° O
+Koordinatlar	Coördinaten
+%d km (%s)	%d km (%s)
+Uzaklık	Afstand
+Kaynak	Bron

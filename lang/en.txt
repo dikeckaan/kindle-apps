@@ -467,3 +467,32 @@ Vezir oyun sonu	Queen endgame
 Fil oyun sonu	Bishop endgame
 At oyun sonu	Knight endgame
 Vezir ve kale oyun sonu	Queen and rook endgame
+az önce	just now
+%d dk önce	%d min ago
+%d sa önce	%d h ago
+%d gün önce	%d days ago
+24 saat	24 hours
+7 gün	7 days
+Kaynak: EMSC	Source: EMSC
+Kaynak: Boğaziçi Üni. Kandilli Rasathanesi (KRDAE)	Source: Boğaziçi Univ. Kandilli Observatory (KRDAE)
+Çevrimdışı — son veri %s · %s	Offline — last data %s · %s
+Güncellendi %s · %s	Updated %s · %s
+derinlik %s km	depth %s km
+Bu süzgeçle deprem yok.	No earthquakes with this filter.
+Deprem listesi alınamadı.\nWi-Fi bağlantısını kontrol edip Yenile'ye basın.	Could not get the earthquake list.\nCheck the Wi-Fi connection and tap Refresh.
+son 24 saat	last 24 hours
+daha eski	older
+%d deprem	%d earthquakes
+En büyükler	Largest
+Sayfa %d/%d	Page %d/%d
+Son Depremler	Recent Earthquakes
+Liste	List
+Harita	Map
+Deprem	Earthquake
+Türkiye saati	Türkiye time
+Derinlik	Depth
+%s° K, %s° D	%s° N, %s° E
+Koordinatlar	Coordinates
+%d km (%s)	%d km (%s)
+Uzaklık	Distance
+Kaynak	Source

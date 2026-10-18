@@ -5,8 +5,18 @@
 %%%d · şarj oluyor	
 # core/kui/trfmt.c
 %d %s %d, %s	
+# apps/deprem/main.c
+%d deprem	
+# apps/deprem/deprem.c
+%d dk önce	
+# apps/deprem/deprem.c
+%d gün önce	
 # apps/upload/main.c
 %d kez yanlış PIN girildi: yeni PIN üretildi.	
+# apps/deprem/main.c
+%d km (%s)	
+# apps/deprem/deprem.c
+%d sa önce	
 # apps/upload/main.c
 %d-%d portları dolu ya da %s yok.	
 # apps/news/main.c
@@ -39,6 +49,8 @@
 %s · Manşetler · Sayfa %d/%d	
 # apps/mines/main.c
 %s · Süre: %ld:%02ld	
+# apps/deprem/main.c
+%s° K, %s° D	
 # apps/weather/main.c
 + Ekle	
 # apps/puzzle/puzzle.c
@@ -55,6 +67,8 @@
 2048	
 # apps/game2048/main.c
 2048'e ulaştın.	
+# apps/deprem/main.c
+24 saat	
 # apps/puzzle/puzzle.c
 3 hamlede mat	
 # apps/sleep/sleep_opts.c
@@ -69,6 +83,8 @@
 5+ hamlede mat	
 # apps/chess/chess_game.c
 50 hamle kuralı — berabere	
+# apps/deprem/main.c
+7 gün	
 # apps/ebooks/main.c
 70.000'den fazla ücretsiz e-kitap. Arama İngilizce başlık ve yazar adlarıyla en iyi sonucu verir.	
 # apps/ebooks/main.c
@@ -145,7 +161,7 @@ Bağlantı kurulamadı. Wi-Fi açık mı?
 Bağlantı yok	
 # apps/currency/main.c
 Bağlantı yok, kurlar alınamadı	
-# apps/weather/main.c
+# apps/deprem/main.c
 Bağlantı yok, veri alınamadı	
 # apps/puzzle/main.c
 Başka bulmaca	
@@ -175,6 +191,8 @@ Bu oturumda henüz dosya gelmedi
 Bu oyun bitirilsin mi?	
 # apps/wordle/main.c
 Bu sefer olmadı	
+# apps/deprem/main.c
+Bu süzgeçle deprem yok.	
 # apps/weather/main.c
 Bugün	
 # apps/weather/main.c
@@ -217,6 +235,12 @@ Denetleniyor…
 Depolama	
 # core/hub/upd_ui.c
 Depoya ulaşılamadı.\nWi-Fi bağlantısını kontrol edin.	
+# apps/deprem/main.c
+Deprem	
+# apps/deprem/main.c
+Deprem listesi alınamadı.\nWi-Fi bağlantısını kontrol edip Yenile'ye basın.	
+# apps/deprem/main.c
+Derinlik	
 # apps/game2048/main.c
 Devam	
 # apps/chess/main.c
@@ -263,6 +287,8 @@ Ekim
 Ekonomi	
 # core/kui/widgets.c
 En az %d karakter girin	
+# apps/deprem/main.c
+En büyükler	
 # apps/weather/main.c
 En fazla 10 şehir kaydedilebilir.	
 # apps/game2048/main.c
@@ -313,6 +339,8 @@ Güncel sürüm
 Güncelle	
 # core/hub/main.c
 Güncellemeler	
+# apps/deprem/main.c
+Güncellendi %s · %s	
 # apps/clock/main.c
 Güncellendi %s · Open-Meteo	
 # apps/currency/main.c
@@ -343,6 +371,8 @@ Hafta %d · Gün %d
 Hamlenizi yapın · Seri: %d	
 # apps/wordle/main.c
 Harika!	
+# apps/deprem/main.c
+Harita	
 # core/hub/main.c
 Hata	
 # apps/sudoku/main.c
@@ -415,10 +445,16 @@ Karlı
 Kasım	
 # apps/weather/main.c
 Kaydedilemedi.	
+# apps/deprem/main.c
+Kaynak	
 # apps/currency/main.c
 Kaynak para	
 # apps/news/reader.c
 Kaynak: %s	
+# apps/deprem/main.c
+Kaynak: Boğaziçi Üni. Kandilli Rasathanesi (KRDAE)	
+# apps/deprem/main.c
+Kaynak: EMSC	
 # apps/ebooks/main.c
 Kaynak: gutenberg.org/ebooks/%d	
 # apps/news/main.c
@@ -449,6 +485,8 @@ Kitap ara (başlık veya yazar)
 Kitaplığa eklendi:\n%s	
 # apps/chess/levels.c
 Kolay	
+# apps/deprem/main.c
+Koordinatlar	
 # apps/puzzle/puzzle.c
 Korumasız taş	
 # apps/ssh/main.c
@@ -469,6 +507,8 @@ Kültür
 Küçük terfi	
 # apps/puzzle/puzzle.c
 Kırlangıç matı	
+# apps/deprem/main.c
+Liste	
 # apps/news/news.c
 Manşet	
 # core/kui/trfmt.c
@@ -605,6 +645,8 @@ Satış
 Savunanı alma	
 # apps/puzzle/puzzle.c
 Savunma hamlesi	
+# apps/deprem/main.c
+Sayfa %d/%d	
 # apps/weather/wx.c
 Sağanak	
 # apps/news/news.c
@@ -631,6 +673,8 @@ Skor
 Skor: %d	
 # apps/solitaire/main.c
 Solitaire	
+# apps/deprem/main.c
+Son Depremler	
 # apps/wordle/main.c
 Son anda!	
 # apps/news/news.c
@@ -711,12 +755,14 @@ Terfi
 Tüm kurlar	
 # core/hub/upd_ui.c
 Tüm uygulamalar güncel	
-# apps/news/news.c
+# apps/deprem/main.c
 Tümü	
 # core/hub/upd_ui.c
 Tümünü güncelle	
 # apps/news/news.c
 Türkiye	
+# apps/deprem/main.c
+Türkiye saati	
 # apps/chess/levels.c
 Usta	
 # core/hub/main.c
@@ -725,6 +771,8 @@ Uygulamalar
 Uyku Ayarı	
 # apps/pano/main.c
 Uykuya geçiş: %d dk dokunulmazsa	
+# apps/deprem/main.c
+Uzaklık	
 # apps/ebooks/main.c
 Vazgeç	
 # apps/pano/main.c
@@ -785,14 +833,22 @@ Zorluk
 Zorluk seçin	
 # apps/puzzle/puzzle.c
 Zugzwang	
+# apps/deprem/deprem.c
+az önce	
 # apps/sysinfo/main.c
 bağlı değil	
 # core/kui/keyboard.c
 boşluk	
+# apps/deprem/main.c
+daha eski	
+# apps/deprem/main.c
+derinlik %s km	
 # apps/puzzle/puzzle.c
 f2/f7 saldırısı	
 # apps/news/main.c
 güncellendi %02d:%02d	
+# apps/deprem/main.c
+son 24 saat	
 # apps/sysinfo/main.c
 Çalışmıyor	
 # apps/sysinfo/main.c
@@ -811,6 +867,8 @@ güncellendi %02d:%02d
 Çevirici	
 # apps/currency/main.c
 Çevrimdışı · güncellendi %d %s %02d:%02d	
+# apps/deprem/main.c
+Çevrimdışı — son veri %s · %s	
 # apps/weather/main.c
 Çevrimdışı — son veri %s · Open-Meteo	
 # apps/currency/fx.c

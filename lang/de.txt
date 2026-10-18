@@ -467,3 +467,32 @@ Vezir oyun sonu	Damenendspiel
 Fil oyun sonu	Läuferendspiel
 At oyun sonu	Springerendspiel
 Vezir ve kale oyun sonu	Damen- und Turmendspiel
+az önce	gerade eben
+%d dk önce	vor %d Min.
+%d sa önce	vor %d Std.
+%d gün önce	vor %d Tagen
+24 saat	24 Stunden
+7 gün	7 Tage
+Kaynak: EMSC	Quelle: EMSC
+Kaynak: Boğaziçi Üni. Kandilli Rasathanesi (KRDAE)	Quelle: Boğaziçi Üni. Kandilli Rasathanesi (KRDAE)
+Çevrimdışı — son veri %s · %s	Offline — letzte Daten %s · %s
+Güncellendi %s · %s	Aktualisiert %s · %s
+derinlik %s km	Tiefe %s km
+Bu süzgeçle deprem yok.	Keine Erdbeben mit diesem Filter.
+Deprem listesi alınamadı.\nWi-Fi bağlantısını kontrol edip Yenile'ye basın.	Die Erdbebenliste konnte nicht geladen werden.\nWLAN prüfen und auf Aktualisieren tippen.
+son 24 saat	letzte 24 Stunden
+daha eski	älter
+%d deprem	%d Erdbeben
+En büyükler	Die stärksten
+Sayfa %d/%d	Seite %d/%d
+Son Depremler	Aktuelle Erdbeben
+Liste	Liste
+Harita	Karte
+Deprem	Erdbeben
+Türkiye saati	Türkische Zeit
+Derinlik	Tiefe
+%s° K, %s° D	%s° N, %s° O
+Koordinatlar	Koordinaten
+%d km (%s)	%d km (%s)
+Uzaklık	Entfernung
+Kaynak	Quelle

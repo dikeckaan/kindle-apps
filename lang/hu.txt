@@ -467,3 +467,32 @@ Vezir oyun sonu	Vezérvégjáték
 Fil oyun sonu	Futóvégjáték
 At oyun sonu	Huszárvégjáték
 Vezir ve kale oyun sonu	Vezér-bástya végjáték
+az önce	az imént
+%d dk önce	%d perce
+%d sa önce	%d órája
+%d gün önce	%d napja
+24 saat	24 óra
+7 gün	7 nap
+Kaynak: EMSC	Forrás: EMSC
+Kaynak: Boğaziçi Üni. Kandilli Rasathanesi (KRDAE)	Forrás: Boğaziçi Üni. Kandilli Rasathanesi (KRDAE)
+Çevrimdışı — son veri %s · %s	Offline — utolsó adat %s · %s
+Güncellendi %s · %s	Frissítve %s · %s
+derinlik %s km	mélység %s km
+Bu süzgeçle deprem yok.	Nincs földrengés ezzel a szűrővel.
+Deprem listesi alınamadı.\nWi-Fi bağlantısını kontrol edip Yenile'ye basın.	Nem sikerült lekérni a földrengések listáját.\nEllenőrizze a Wi-Fi-t, és koppintson a Frissítésre.
+son 24 saat	utolsó 24 óra
+daha eski	régebbi
+%d deprem	%d földrengés
+En büyükler	A legerősebbek
+Sayfa %d/%d	%d/%d. oldal
+Son Depremler	Legutóbbi földrengések
+Liste	Lista
+Harita	Térkép
+Deprem	Földrengés
+Türkiye saati	Török idő
+Derinlik	Mélység
+%s° K, %s° D	É. sz. %s°, K. h. %s°
+Koordinatlar	Koordináták
+%d km (%s)	%d km (%s)
+Uzaklık	Távolság
+Kaynak	Forrás

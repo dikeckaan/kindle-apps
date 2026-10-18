@@ -467,3 +467,32 @@ Vezir oyun sonu	Vəzir endşpili
 Fil oyun sonu	Fil endşpili
 At oyun sonu	At endşpili
 Vezir ve kale oyun sonu	Vəzir və top endşpili
+az önce	indicə
+%d dk önce	%d dəq əvvəl
+%d sa önce	%d saat əvvəl
+%d gün önce	%d gün əvvəl
+24 saat	24 saat
+7 gün	7 gün
+Kaynak: EMSC	Mənbə: EMSC
+Kaynak: Boğaziçi Üni. Kandilli Rasathanesi (KRDAE)	Mənbə: Boğaziçi Üni. Kandilli Rasathanesi (KRDAE)
+Çevrimdışı — son veri %s · %s	Oflayn — son məlumat %s · %s
+Güncellendi %s · %s	Yeniləndi %s · %s
+derinlik %s km	dərinlik %s km
+Bu süzgeçle deprem yok.	Bu filtrlə zəlzələ yoxdur.
+Deprem listesi alınamadı.\nWi-Fi bağlantısını kontrol edip Yenile'ye basın.	Zəlzələ siyahısı alınmadı.\nWi-Fi bağlantısını yoxlayıb Yenilə düyməsinə basın.
+son 24 saat	son 24 saat
+daha eski	daha köhnə
+%d deprem	%d zəlzələ
+En büyükler	Ən güclülər
+Sayfa %d/%d	Səhifə %d/%d
+Son Depremler	Son zəlzələlər
+Liste	Siyahı
+Harita	Xəritə
+Deprem	Zəlzələ
+Türkiye saati	Türkiyə vaxtı
+Derinlik	Dərinlik
+%s° K, %s° D	%s° ş.e., %s° ş.u.
+Koordinatlar	Koordinatlar
+%d km (%s)	%d km (%s)
+Uzaklık	Məsafə
+Kaynak	Mənbə

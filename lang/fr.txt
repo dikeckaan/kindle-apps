@@ -467,3 +467,32 @@ Vezir oyun sonu	Finale de dames
 Fil oyun sonu	Finale de fous
 At oyun sonu	Finale de cavaliers
 Vezir ve kale oyun sonu	Finale dame et tour
+az önce	à l'instant
+%d dk önce	il y a %d min
+%d sa önce	il y a %d h
+%d gün önce	il y a %d jours
+24 saat	24 heures
+7 gün	7 jours
+Kaynak: EMSC	Source : EMSC
+Kaynak: Boğaziçi Üni. Kandilli Rasathanesi (KRDAE)	Source : Boğaziçi Üni. Kandilli Rasathanesi (KRDAE)
+Çevrimdışı — son veri %s · %s	Hors ligne — dernières données %s · %s
+Güncellendi %s · %s	Mis à jour %s · %s
+derinlik %s km	profondeur %s km
+Bu süzgeçle deprem yok.	Aucun séisme avec ce filtre.
+Deprem listesi alınamadı.\nWi-Fi bağlantısını kontrol edip Yenile'ye basın.	Impossible d'obtenir la liste des séismes.\nVérifiez le Wi-Fi et touchez Actualiser.
+son 24 saat	dernières 24 heures
+daha eski	plus ancien
+%d deprem	%d séismes
+En büyükler	Les plus forts
+Sayfa %d/%d	Page %d/%d
+Son Depremler	Séismes récents
+Liste	Liste
+Harita	Carte
+Deprem	Séisme
+Türkiye saati	Heure de Turquie
+Derinlik	Profondeur
+%s° K, %s° D	%s° N, %s° E
+Koordinatlar	Coordonnées
+%d km (%s)	%d km (%s)
+Uzaklık	Distance
+Kaynak	Source

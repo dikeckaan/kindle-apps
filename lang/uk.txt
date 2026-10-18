@@ -467,3 +467,32 @@ Vezir oyun sonu	Ферзевий ендшпіль
 Fil oyun sonu	Слоновий ендшпіль
 At oyun sonu	Кінний ендшпіль
 Vezir ve kale oyun sonu	Ендшпіль ферзя і тури
+az önce	щойно
+%d dk önce	%d хв тому
+%d sa önce	%d год тому
+%d gün önce	%d дн. тому
+24 saat	24 години
+7 gün	7 днів
+Kaynak: EMSC	Джерело: EMSC
+Kaynak: Boğaziçi Üni. Kandilli Rasathanesi (KRDAE)	Джерело: Boğaziçi Üni. Kandilli Rasathanesi (KRDAE)
+Çevrimdışı — son veri %s · %s	Офлайн — останні дані %s · %s
+Güncellendi %s · %s	Оновлено %s · %s
+derinlik %s km	глибина %s км
+Bu süzgeçle deprem yok.	Немає землетрусів із цим фільтром.
+Deprem listesi alınamadı.\nWi-Fi bağlantısını kontrol edip Yenile'ye basın.	Не вдалося отримати список землетрусів.\nПеревірте Wi-Fi і натисніть «Оновити».
+son 24 saat	останні 24 години
+daha eski	давніші
+%d deprem	Землетрусів: %d
+En büyükler	Найсильніші
+Sayfa %d/%d	Сторінка %d/%d
+Son Depremler	Останні землетруси
+Liste	Список
+Harita	Мапа
+Deprem	Землетрус
+Türkiye saati	Час Туреччини
+Derinlik	Глибина
+%s° K, %s° D	%s° пн. ш., %s° сх. д.
+Koordinatlar	Координати
+%d km (%s)	%d км (%s)
+Uzaklık	Відстань
+Kaynak	Джерело
