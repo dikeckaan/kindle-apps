@@ -4,7 +4,7 @@
   "name": "Mayın Tarlası",
   "author": "Kaan Dikeç",
   "description": "Klasik mayın tarlası: üç zorluk, bayrak kipi, kaldığın yerden devam",
-  "version": [2026, 10, 11],
+  "version": [2026, 10, 13],
   "dependencies": [],
   "supported_platforms": ["kindlehf"]
 }

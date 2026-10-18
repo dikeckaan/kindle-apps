@@ -27,6 +27,8 @@
 %s beklenmedik şekilde kapandı	
 # apps/sysinfo/main.c
 %s boş / %s	
+# core/hub/upd_ui.c
+%s kuruldu	
 # apps/weather/main.c
 %s silinsin mi?	
 # apps/news/main.c
@@ -105,6 +107,8 @@ Açıldı. Gelen bağlantılar engelleniyor.
 Ağustos	
 # apps/weather/wx.c
 B	
+# core/hub/upd_ui.c
+Bazı güncellemeler kurulamadı	
 # apps/weather/main.c
 Bağlantı kurulamadı. Wi-Fi açık mı?	
 # apps/ebooks/main.c
@@ -155,8 +159,12 @@ Cumhuriyet altını
 D	
 # apps/ebooks/main.c
 Daha fazla	
+# core/hub/upd_ui.c
+Denetleniyor…	
 # apps/sysinfo/main.c
 Depolama	
+# core/hub/upd_ui.c
+Depoya ulaşılamadı.\nWi-Fi bağlantısını kontrol edin.	
 # apps/game2048/main.c
 Devam	
 # apps/chess/main.c
@@ -227,6 +235,12 @@ Gök gürültülü
 Gönder	
 # apps/news/news.c
 Güncel	
+# core/hub/upd_ui.c
+Güncel sürüm	
+# core/hub/upd_ui.c
+Güncelle	
+# core/hub/main.c
+Güncellemeler	
 # apps/weather/main.c
 Güncellendi %s · Open-Meteo	
 # apps/currency/main.c
@@ -277,8 +291,6 @@ Hedef para
 Henüz kitap indirilmedi.	
 # apps/ssh/main.c
 Henüz parola yok	
-# core/hub/main.c
-Henüz uygulama kurulu değil	
 # apps/chess/main.c
 Her hamlede tahtayı çevir	
 # apps/pano/pano.c
@@ -353,8 +365,14 @@ Kitaplığa eklendi:\n%s
 Kolay	
 # apps/ssh/main.c
 Kullanıcı adı: root\nSunucu bu uygulama kapanınca da çalışır.\nKindle uyuyunca Wi-Fi ile birlikte bağlantı kopar.\nYeniden başlatınca kapalı açılır.	
+# core/hub/upd_ui.c
+Kur	
 # apps/pano/main.c
 Kur bilgisi yok	
+# core/hub/upd_ui.c
+Kurulamadı: %s	
+# core/hub/upd_ui.c
+Kuruluyor…	
 # apps/news/news.c
 Kültür	
 # apps/news/news.c
@@ -565,8 +583,12 @@ Temmuz
 Terfi	
 # apps/currency/main.c
 Tüm kurlar	
+# core/hub/upd_ui.c
+Tüm uygulamalar güncel	
 # apps/news/news.c
 Tümü	
+# core/hub/upd_ui.c
+Tümünü güncelle	
 # apps/news/news.c
 Türkiye	
 # apps/chess/levels.c
@@ -683,6 +705,8 @@ boşluk
 İndirilemedi.\nWi-Fi bağlantısını kontrol edip yeniden deneyin.	
 # apps/ebooks/main.c
 İndirilenler	
+# core/hub/upd_ui.c
+İndiriliyor…	
 # apps/ebooks/main.c
 İndiriliyor…\nGutenberg yavaş olabilir, lütfen bekleyin.	
 # apps/sudoku/main.c

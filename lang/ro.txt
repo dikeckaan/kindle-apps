@@ -95,7 +95,6 @@ Hayır	Nu
 Haziran	iunie
 Hedef para	Moneda țintă
 Henüz parola yok	Nicio parolă încă
-Henüz uygulama kurulu değil	Nicio aplicație instalată
 Her hamlede tahtayı çevir	Rotește tabla la fiecare mutare
 Hissedilen %s	Resimțită %s
 Hiç uyuma	Fără repaus
@@ -367,3 +366,16 @@ Uykuya geçiş: %d dk dokunulmazsa	Somn după: %d min fără atingere
 Veri güncelleme: %d saatte bir	Actualizare date: la fiecare %d h
 Pil tasarrufunda Kindle uyur, ekran e-ink sayesinde kalır; saat dakikada bir güncellenir, Wi-Fi yalnızca veri güncellerken açılır. Uyandırmak için güç tuşuna basın ya da ekrana dokunun.	În modul economic Kindle doarme, iar ecranul e-ink rămâne; ceasul se actualizează în fiecare minut, iar Wi-Fi pornește doar la actualizare. Apăsați butonul de pornire sau atingeți ecranul pentru a-l trezi.
 Alındı: %s (KOReader ile açın)	Primit: %s (deschideți în KOReader)
+Güncellemeler	Actualizări
+Güncel sürüm	La zi
+Kur	Instalează
+Güncelle	Actualizează
+Tümünü güncelle	Actualizează tot
+İndiriliyor…	Se descarcă…
+Kuruluyor…	Se instalează…
+%s kuruldu	%s instalată
+Kurulamadı: %s	Nu s-a putut instala: %s
+Denetleniyor…	Se verifică…
+Depoya ulaşılamadı.\nWi-Fi bağlantısını kontrol edin.	Depozitul nu poate fi accesat.\nVerificați conexiunea Wi-Fi.
+Tüm uygulamalar güncel	Toate aplicațiile sunt la zi
+Bazı güncellemeler kurulamadı	Unele actualizări nu s-au instalat

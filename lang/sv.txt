@@ -95,7 +95,6 @@ Hayır	Nej
 Haziran	juni
 Hedef para	Till valuta
 Henüz parola yok	Inget lösenord än
-Henüz uygulama kurulu değil	Inga appar installerade än
 Her hamlede tahtayı çevir	Vänd brädet varje drag
 Hissedilen %s	Känns som %s
 Hiç uyuma	Aldrig
@@ -367,3 +366,16 @@ Uykuya geçiş: %d dk dokunulmazsa	Vila efter: %d min utan beröring
 Veri güncelleme: %d saatte bir	Uppdatera data: var %d:e timme
 Pil tasarrufunda Kindle uyur, ekran e-ink sayesinde kalır; saat dakikada bir güncellenir, Wi-Fi yalnızca veri güncellerken açılır. Uyandırmak için güç tuşuna basın ya da ekrana dokunun.	I batterisparläget sover Kindle och e-ink-bilden ligger kvar; klockan uppdateras varje minut och Wi-Fi är bara på vid uppdatering. Tryck på strömknappen eller rör skärmen för att väcka den.
 Alındı: %s (KOReader ile açın)	Mottaget: %s (öppna i KOReader)
+Güncellemeler	Uppdateringar
+Güncel sürüm	Aktuell
+Kur	Installera
+Güncelle	Uppdatera
+Tümünü güncelle	Uppdatera alla
+İndiriliyor…	Hämtar…
+Kuruluyor…	Installerar…
+%s kuruldu	%s installerad
+Kurulamadı: %s	Kunde inte installera: %s
+Denetleniyor…	Kontrollerar…
+Depoya ulaşılamadı.\nWi-Fi bağlantısını kontrol edin.	Kunde inte nå förrådet.\nKontrollera wifi-anslutningen.
+Tüm uygulamalar güncel	Alla appar är uppdaterade
+Bazı güncellemeler kurulamadı	Vissa uppdateringar kunde inte installeras

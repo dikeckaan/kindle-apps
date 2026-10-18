@@ -632,14 +632,6 @@ static void tick(void)
 	kui_flush(0);
 }
 
-static int secs_to_next_minute(void)
-{
-	struct timeval tv;
-	gettimeofday(&tv, NULL);
-	int s = 60 - (int) (tv.tv_sec % 60);
-	return s < 5 ? s + 60 : s; /* never a pointless few-second sleep */
-}
-
 static int ms_to_next_minute(void)
 {
 	struct timeval tv;
@@ -662,17 +654,27 @@ static void deep_sleep_loop(void)
 			quit_requested = 1;
 			break;
 		}
-		int secs = secs_to_next_minute(), slept = kui_suspend(secs);
-		fprintf(stderr, "deep: asked %d s, slept %d s%s\n", secs, slept, slept >= 0 && kui_woke_early(secs, slept) ? " (woken)" : "");
-		if (slept < 0) { /* could not suspend (a wakeup source is busy): wait awake until the next minute */
-			KuiEvent e = kui_next_event(secs * 1000);
-			if (e.type == KUI_EV_QUIT) {
-				quit_requested = 1;
-				break;
+		struct tm tm;
+		now_local(&tm);
+		if (tm.tm_min == shown_min) { /* this minute is on screen: sleep until just after the next one starts */
+			int secs = (ms_to_next_minute() + 999) / 1000, slept = -1;
+			if (secs > 4) { /* a few seconds are not worth a suspend: wait awake instead */
+				slept = kui_suspend(secs);
+				fprintf(stderr, "deep: asked %d s, slept %d s%s\n", secs, slept,
+					slept >= 0 && kui_woke_early(secs, slept) ? " (woken)" : "");
+				if (slept >= 0 && kui_woke_early(secs, slept)) break; /* the power button or a touch */
 			}
-			if (e.type == KUI_EV_TAP || e.type == KUI_EV_POWER || e.type == KUI_EV_SWIPE || e.type == KUI_EV_LONGPRESS) break;
-		} else if (kui_woke_early(secs, slept)) {
-			break; /* the power button or a touch: back to normal */
+			/* suspend failed, or the RTC (whole seconds) woke us a moment before the minute: wait awake for it */
+			now_local(&tm);
+			if (tm.tm_min == shown_min) {
+				KuiEvent e = kui_next_event(ms_to_next_minute());
+				if (e.type == KUI_EV_QUIT) {
+					quit_requested = 1;
+					break;
+				}
+				if (e.type == KUI_EV_TAP || e.type == KUI_EV_POWER || e.type == KUI_EV_SWIPE || e.type == KUI_EV_LONGPRESS) break;
+				if (e.type != KUI_EV_NONE) continue; /* anything else: re-check the time */
+			}
 		}
 		tick();
 		kui_wait_refresh();

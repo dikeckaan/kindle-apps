@@ -95,7 +95,6 @@ Hayır	Nee
 Haziran	juni
 Hedef para	Doelvaluta
 Henüz parola yok	Nog geen wachtwoord
-Henüz uygulama kurulu değil	Nog geen apps geïnstalleerd
 Her hamlede tahtayı çevir	Bord elke zet draaien
 Hissedilen %s	Voelt als %s
 Hiç uyuma	Nooit slapen
@@ -367,3 +366,16 @@ Uykuya geçiş: %d dk dokunulmazsa	Slapen na: %d min zonder aanraking
 Veri güncelleme: %d saatte bir	Gegevens bijwerken: elke %d u
 Pil tasarrufunda Kindle uyur, ekran e-ink sayesinde kalır; saat dakikada bir güncellenir, Wi-Fi yalnızca veri güncellerken açılır. Uyandırmak için güç tuşuna basın ya da ekrana dokunun.	Bij batterijbesparing slaapt de Kindle en blijft het e-inkscherm staan; de klok wordt elke minuut bijgewerkt en wifi staat alleen aan tijdens het bijwerken. Druk op de aan-uitknop of raak het scherm aan om te wekken.
 Alındı: %s (KOReader ile açın)	Ontvangen: %s (openen met KOReader)
+Güncellemeler	Updates
+Güncel sürüm	Bijgewerkt
+Kur	Installeren
+Güncelle	Bijwerken
+Tümünü güncelle	Alles bijwerken
+İndiriliyor…	Downloaden…
+Kuruluyor…	Installeren…
+%s kuruldu	%s geïnstalleerd
+Kurulamadı: %s	Installeren mislukt: %s
+Denetleniyor…	Controleren…
+Depoya ulaşılamadı.\nWi-Fi bağlantısını kontrol edin.	Repository niet bereikbaar.\nControleer de wifiverbinding.
+Tüm uygulamalar güncel	Alle apps zijn bijgewerkt
+Bazı güncellemeler kurulamadı	Sommige updates zijn niet geïnstalleerd

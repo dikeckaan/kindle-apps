@@ -46,6 +46,7 @@ TEST_test_sudoku_SRCS := apps/sudoku/sudoku.c
 TEST_test_klondike_SRCS := apps/solitaire/klondike.c
 TEST_test_sysinfo_SRCS := apps/sysinfo/si.c core/kui/trfmt.c core/kui/i18n.c core/kui/store.c core/kui/utf8tr.c
 TEST_test_opds_SRCS := apps/ebooks/opds.c core/net/http.c core/kui/utf8tr.c core/net/xml.c
+TEST_test_updates_SRCS := core/hub/updates.c core/vendor/cjson/cJSON.c
 TEST_test_httpd_SRCS := apps/upload/httpd.c apps/upload/server.c apps/ssh/sshsrv.c
 
 TESTS := $(patsubst tests/host/%.c,%,$(wildcard tests/host/test_*.c))
@@ -88,7 +89,7 @@ APP_ssh_SRCS := apps/ssh/main.c apps/ssh/sshcfg.c apps/ssh/sshsrv.c
 APP_firewall_SRCS := apps/firewall/main.c apps/firewall/fw.c apps/ssh/sshsrv.c
 APP_sleep_SRCS := apps/sleep/main.c apps/sleep/sleep_opts.c
 APP_chess_SRCS := apps/chess/main.c apps/chess/chess_game.c apps/chess/chess_rules.c apps/chess/levels.c apps/chess/uci.c
-APP_hub_SRCS := core/hub/main.c core/hub/appreg.c
+APP_hub_SRCS := core/hub/main.c core/hub/appreg.c core/hub/updates.c core/hub/upd_ui.c $(NET_SRCS)
 APP_game2048_SRCS := apps/game2048/main.c apps/game2048/g2048.c
 APP_mines_SRCS := apps/mines/main.c apps/mines/mines.c
 APP_sudoku_SRCS := apps/sudoku/main.c apps/sudoku/sudoku.c

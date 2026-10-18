@@ -95,7 +95,6 @@ Hayır	Ei
 Haziran	kesäkuuta
 Hedef para	Kohdevaluutta
 Henüz parola yok	Ei vielä salasanaa
-Henüz uygulama kurulu değil	Ei vielä asennettuja sovelluksia
 Her hamlede tahtayı çevir	Käännä lauta joka siirrolla
 Hissedilen %s	Tuntuu kuin %s
 Hiç uyuma	Ei koskaan
@@ -367,3 +366,16 @@ Uykuya geçiş: %d dk dokunulmazsa	Lepoon: %d min koskematta
 Veri güncelleme: %d saatte bir	Tietojen päivitys: %d h välein
 Pil tasarrufunda Kindle uyur, ekran e-ink sayesinde kalır; saat dakikada bir güncellenir, Wi-Fi yalnızca veri güncellerken açılır. Uyandırmak için güç tuşuna basın ya da ekrana dokunun.	Virransäästössä Kindle nukkuu ja e-ink-kuva säilyy; kello päivittyy minuutin välein ja Wi-Fi on päällä vain päivityksen ajan. Herätä painamalla virtapainiketta tai koskettamalla näyttöä.
 Alındı: %s (KOReader ile açın)	Vastaanotettu: %s (avaa KOReaderilla)
+Güncellemeler	Päivitykset
+Güncel sürüm	Ajan tasalla
+Kur	Asenna
+Güncelle	Päivitä
+Tümünü güncelle	Päivitä kaikki
+İndiriliyor…	Ladataan…
+Kuruluyor…	Asennetaan…
+%s kuruldu	%s asennettu
+Kurulamadı: %s	Asennus epäonnistui: %s
+Denetleniyor…	Tarkistetaan…
+Depoya ulaşılamadı.\nWi-Fi bağlantısını kontrol edin.	Pakettivarastoon ei saada yhteyttä.\nTarkista Wi-Fi-yhteys.
+Tüm uygulamalar güncel	Kaikki sovellukset ovat ajan tasalla
+Bazı güncellemeler kurulamadı	Joitakin päivityksiä ei voitu asentaa

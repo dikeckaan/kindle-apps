@@ -95,7 +95,6 @@ Hayır	Ne
 Haziran	června
 Hedef para	Cílová měna
 Henüz parola yok	Zatím bez hesla
-Henüz uygulama kurulu değil	Zatím žádné aplikace
 Her hamlede tahtayı çevir	Otáčet šachovnici po každém tahu
 Hissedilen %s	Pocitově %s
 Hiç uyuma	Neuspávat
@@ -367,3 +366,16 @@ Uykuya geçiş: %d dk dokunulmazsa	Uspat po: %d min bez dotyku
 Veri güncelleme: %d saatte bir	Aktualizace dat: každé %d h
 Pil tasarrufunda Kindle uyur, ekran e-ink sayesinde kalır; saat dakikada bir güncellenir, Wi-Fi yalnızca veri güncellerken açılır. Uyandırmak için güç tuşuna basın ya da ekrana dokunun.	Při úspoře baterie Kindle spí a obraz e-ink zůstává; hodiny se aktualizují každou minutu a Wi-Fi je zapnuté jen při aktualizaci. Probudíte ho tlačítkem napájení nebo dotykem obrazovky.
 Alındı: %s (KOReader ile açın)	Přijato: %s (otevřete v KOReaderu)
+Güncellemeler	Aktualizace
+Güncel sürüm	Aktuální
+Kur	Instalovat
+Güncelle	Aktualizovat
+Tümünü güncelle	Aktualizovat vše
+İndiriliyor…	Stahování…
+Kuruluyor…	Instalace…
+%s kuruldu	Nainstalováno: %s
+Kurulamadı: %s	Instalace se nezdařila: %s
+Denetleniyor…	Kontrola…
+Depoya ulaşılamadı.\nWi-Fi bağlantısını kontrol edin.	Repozitář není dostupný.\nZkontrolujte připojení Wi-Fi.
+Tüm uygulamalar güncel	Všechny aplikace jsou aktuální
+Bazı güncellemeler kurulamadı	Některé aktualizace se nepodařilo nainstalovat

@@ -95,7 +95,6 @@ Hayır	Nem
 Haziran	június
 Hedef para	Célvaluta
 Henüz parola yok	Még nincs jelszó
-Henüz uygulama kurulu değil	Még nincs telepített alkalmazás
 Her hamlede tahtayı çevir	Tábla forgatása minden lépésnél
 Hissedilen %s	Hőérzet: %s
 Hiç uyuma	Soha
@@ -367,3 +366,16 @@ Uykuya geçiş: %d dk dokunulmazsa	Alvás ennyi tétlenség után: %d perc
 Veri güncelleme: %d saatte bir	Adatfrissítés: %d óránként
 Pil tasarrufunda Kindle uyur, ekran e-ink sayesinde kalır; saat dakikada bir güncellenir, Wi-Fi yalnızca veri güncellerken açılır. Uyandırmak için güç tuşuna basın ya da ekrana dokunun.	Energiatakarékos módban a Kindle alszik, az e-ink kép megmarad; az óra percenként frissül, a Wi-Fi csak frissítéskor van bekapcsolva. Ébresztéshez nyomja meg a bekapcsológombot vagy érintse meg a képernyőt.
 Alındı: %s (KOReader ile açın)	Megérkezett: %s (KOReaderrel nyissa meg)
+Güncellemeler	Frissítések
+Güncel sürüm	Naprakész
+Kur	Telepítés
+Güncelle	Frissítés
+Tümünü güncelle	Összes frissítése
+İndiriliyor…	Letöltés…
+Kuruluyor…	Telepítés…
+%s kuruldu	%s telepítve
+Kurulamadı: %s	Nem sikerült telepíteni: %s
+Denetleniyor…	Ellenőrzés…
+Depoya ulaşılamadı.\nWi-Fi bağlantısını kontrol edin.	A tároló nem érhető el.\nEllenőrizze a Wi-Fi-kapcsolatot.
+Tüm uygulamalar güncel	Minden alkalmazás naprakész
+Bazı güncellemeler kurulamadı	Néhány frissítést nem sikerült telepíteni

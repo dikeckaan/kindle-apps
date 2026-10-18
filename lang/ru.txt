@@ -95,7 +95,6 @@ Hayır	Нет
 Haziran	июня
 Hedef para	Валюта назначения
 Henüz parola yok	Пароль ещё не задан
-Henüz uygulama kurulu değil	Приложения ещё не установлены
 Her hamlede tahtayı çevir	Поворачивать после каждого хода
 Hissedilen %s	Ощущается %s
 Hiç uyuma	Никогда
@@ -367,3 +366,16 @@ Uykuya geçiş: %d dk dokunulmazsa	Сон через: %d мин без каса�
 Veri güncelleme: %d saatte bir	Обновление данных: раз в %d ч
 Pil tasarrufunda Kindle uyur, ekran e-ink sayesinde kalır; saat dakikada bir güncellenir, Wi-Fi yalnızca veri güncellerken açılır. Uyandırmak için güç tuşuna basın ya da ekrana dokunun.	В режиме экономии Kindle спит, а изображение e-ink остаётся; часы обновляются каждую минуту, Wi-Fi включается только для обновления. Чтобы разбудить, нажмите кнопку питания или коснитесь экрана.
 Alındı: %s (KOReader ile açın)	Получено: %s (откройте в KOReader)
+Güncellemeler	Обновления
+Güncel sürüm	Актуально
+Kur	Установить
+Güncelle	Обновить
+Tümünü güncelle	Обновить все
+İndiriliyor…	Загрузка…
+Kuruluyor…	Установка…
+%s kuruldu	Установлено: %s
+Kurulamadı: %s	Не удалось установить: %s
+Denetleniyor…	Проверка…
+Depoya ulaşılamadı.\nWi-Fi bağlantısını kontrol edin.	Репозиторий недоступен.\nПроверьте подключение Wi-Fi.
+Tüm uygulamalar güncel	Все приложения обновлены
+Bazı güncellemeler kurulamadı	Некоторые обновления не установлены

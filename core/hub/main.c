@@ -10,6 +10,7 @@
 #include <unistd.h>
 #include "appreg.h"
 #include "kui.h"
+#include "upd_ui.h"
 
 #define COLS 3
 #define ROWS 3
@@ -25,6 +26,14 @@ static const char *root(void)
 {
 	const char *r = getenv("KUI_ROOT");
 	return r && *r ? r : "/mnt/us/kindle-apps";
+}
+
+/* installed apps plus the built-in "Güncellemeler" tile at the end (exec empty) */
+static void scan(void)
+{
+	n_apps = hub_scan_apps(root(), apps, MAX_APPS - 1);
+	apps[n_apps] = (HubApp){ "updates", N_("Güncellemeler"), "", 1 << 30 };
+	n_apps++;
 }
 
 static int pages(void) { return n_apps ? (n_apps + PER_PAGE - 1) / PER_PAGE : 1; }
@@ -53,10 +62,6 @@ static void draw(void)
 	kui_fill((KuiRect){ 0, 0, w, h }, 255);
 	kui_topbar(T("Uygulamalar"), T("Dil"));
 	grid = (KuiRect){ 20, KUI_TOPBAR_H + 20, w - 40, h - KUI_TOPBAR_H - 200 };
-	if (!n_apps) {
-		kui_text((KuiRect){ 40, h / 2 - 100, w - 80, 200 }, T("Henüz uygulama kurulu değil"), KUI_FONT_REG, 48,
-			 KUI_ALIGN_CENTER, 0);
-	}
 	for (int i = 0; i < PER_PAGE; i++) {
 		int k = page * PER_PAGE + i;
 		if (k >= n_apps) break;
@@ -142,7 +147,7 @@ static int run_app(const HubApp *a)
 int main(void)
 {
 	if (kui_init("hub") != 0) return 1;
-	n_apps = hub_scan_apps(root(), apps, MAX_APPS);
+	scan();
 	draw();
 	for (;;) {
 		KuiEvent e = kui_next_event(-1);
@@ -175,8 +180,21 @@ int main(void)
 			kui_text_on((KuiRect){ r.x + 10, r.y, r.w - 20, r.h }, name, KUI_FONT_BOLD, fit_name(name, r.w - 20), KUI_ALIGN_CENTER, 255, 0);
 			kui_mark_dirty(r);
 			kui_flush(0);
+			if (!apps[k].exec[0]) { /* Güncellemeler */
+				if (hub_updates(root())) { /* the hub itself was replaced: start the new one */
+					char self[320];
+					snprintf(self, sizeof self, "%s/bin/hub", root());
+					kui_quit();
+					execl(self, self, (char *) NULL);
+					return 1; /* kui-run.sh restores the Kindle UI */
+				}
+				scan();
+				if (page >= pages()) page = pages() - 1;
+				draw();
+				break;
+			}
 			int st = run_app(&apps[k]);
-			n_apps = hub_scan_apps(root(), apps, MAX_APPS);
+			scan();
 			if (page >= pages()) page = pages() - 1;
 			draw();
 			if (st != 0 && !(WIFSIGNALED(st) && WTERMSIG(st) == SIGTERM)) {

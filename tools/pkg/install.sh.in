@@ -5,10 +5,17 @@
 set -e
 DEST=/mnt/us/kindle-apps/apps/@APPDIR@
 [ -f ./pre-install.sh ] && sh ./pre-install.sh
+# copy beside, then rename: a running binary (the hub updating itself) keeps its old file
+put() { for f in "$1"/*; do cp -f "$f" "$2/.${f##*/}.new" && mv -f "$2/.${f##*/}.new" "$2/${f##*/}"; done; }
 mkdir -p "$DEST"
-cp -f ./files/* ./app.ini "$DEST/"
+put ./files "$DEST"
+cp -f ./app.ini "$DEST/"
 for f in ./files/*; do chmod +x "$DEST/${f##*/}" 2>/dev/null || true; done
 [ -f ./post-install.sh ] && sh ./post-install.sh
 rm -rf ./files
+# record the installed version for Uygulamalar → Güncellemeler (from this package's manifest.json)
+V=$(tr -d ' \n' < ./manifest.json | sed -n 's/.*"version":\[\([0-9,]*\)\].*/\1/p' | tr , .)
+ID=$(tr -d ' \n' < ./manifest.json | sed -n 's/.*"id":"\([a-z0-9-]*\)".*/\1/p')
+if [ -n "$V" ] && [ -n "$ID" ]; then mkdir -p /mnt/us/kindle-apps/versions && echo "$V" > "/mnt/us/kindle-apps/versions/$ID"; fi
 [ -x /mnt/us/kindle-apps/bin/hub ] || echo "UYARI: önce kindle-apps-core paketini kurun (kpm install kindle-apps-core)"
 exit 0

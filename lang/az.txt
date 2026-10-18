@@ -95,7 +95,6 @@ Hayır	Xeyr
 Haziran	iyun
 Hedef para	Hədəf valyuta
 Henüz parola yok	Hələ parol yoxdur
-Henüz uygulama kurulu değil	Hələ tətbiq quraşdırılmayıb
 Her hamlede tahtayı çevir	Hər gedişdə taxtanı çevir
 Hissedilen %s	Hiss olunan %s
 Hiç uyuma	Heç yatma
@@ -367,3 +366,16 @@ Uykuya geçiş: %d dk dokunulmazsa	Yuxuya keçid: %d dəq toxunulmasa
 Veri güncelleme: %d saatte bir	Məlumat yeniləmə: hər %d saatdan bir
 Pil tasarrufunda Kindle uyur, ekran e-ink sayesinde kalır; saat dakikada bir güncellenir, Wi-Fi yalnızca veri güncellerken açılır. Uyandırmak için güç tuşuna basın ya da ekrana dokunun.	Qənaət rejimində Kindle yatır, e-ink ekranı olduğu kimi qalır; saat hər dəqiqə yenilənir, Wi-Fi yalnız məlumat yenilənəndə açılır. Oyatmaq üçün güc düyməsinə basın və ya ekrana toxunun.
 Alındı: %s (KOReader ile açın)	Alındı: %s (KOReader ilə açın)
+Güncellemeler	Yeniləmələr
+Güncel sürüm	Aktualdır
+Kur	Quraşdır
+Güncelle	Yenilə
+Tümünü güncelle	Hamısını yenilə
+İndiriliyor…	Endirilir…
+Kuruluyor…	Quraşdırılır…
+%s kuruldu	%s quraşdırıldı
+Kurulamadı: %s	Quraşdırmaq olmadı: %s
+Denetleniyor…	Yoxlanılır…
+Depoya ulaşılamadı.\nWi-Fi bağlantısını kontrol edin.	Depoya qoşulmaq olmadı.\nWi-Fi bağlantısını yoxlayın.
+Tüm uygulamalar güncel	Bütün tətbiqlər aktualdır
+Bazı güncellemeler kurulamadı	Bəzi yeniləmələr quraşdırılmadı

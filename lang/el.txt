@@ -95,7 +95,6 @@ Hayır	Όχι
 Haziran	Ιουνίου
 Hedef para	Νόμισμα-στόχος
 Henüz parola yok	Δεν έχει οριστεί κωδικός
-Henüz uygulama kurulu değil	Δεν υπάρχουν εγκατεστημένες εφαρμογές
 Her hamlede tahtayı çevir	Περιστροφή σε κάθε κίνηση
 Hissedilen %s	Αίσθηση %s
 Hiç uyuma	Ποτέ
@@ -367,3 +366,16 @@ Uykuya geçiş: %d dk dokunulmazsa	Ύπνος μετά από: %d λεπ. αδρ
 Veri güncelleme: %d saatte bir	Ενημέρωση δεδομένων: κάθε %d ώρ.
 Pil tasarrufunda Kindle uyur, ekran e-ink sayesinde kalır; saat dakikada bir güncellenir, Wi-Fi yalnızca veri güncellerken açılır. Uyandırmak için güç tuşuna basın ya da ekrana dokunun.	Στην εξοικονόμηση το Kindle κοιμάται και η οθόνη e-ink παραμένει· το ρολόι ενημερώνεται κάθε λεπτό και το Wi-Fi ανάβει μόνο κατά την ενημέρωση. Πατήστε το κουμπί λειτουργίας ή αγγίξτε την οθόνη για αφύπνιση.
 Alındı: %s (KOReader ile açın)	Ελήφθη: %s (άνοιγμα με KOReader)
+Güncellemeler	Ενημερώσεις
+Güncel sürüm	Ενημερωμένη
+Kur	Εγκατάσταση
+Güncelle	Ενημέρωση
+Tümünü güncelle	Ενημέρωση όλων
+İndiriliyor…	Λήψη…
+Kuruluyor…	Εγκατάσταση…
+%s kuruldu	Εγκαταστάθηκε: %s
+Kurulamadı: %s	Αποτυχία εγκατάστασης: %s
+Denetleniyor…	Έλεγχος…
+Depoya ulaşılamadı.\nWi-Fi bağlantısını kontrol edin.	Το αποθετήριο δεν είναι προσβάσιμο.\nΕλέγξτε τη σύνδεση Wi-Fi.
+Tüm uygulamalar güncel	Όλες οι εφαρμογές είναι ενημερωμένες
+Bazı güncellemeler kurulamadı	Ορισμένες ενημερώσεις δεν εγκαταστάθηκαν

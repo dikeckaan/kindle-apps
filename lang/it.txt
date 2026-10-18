@@ -95,7 +95,6 @@ Hayır	No
 Haziran	giugno
 Hedef para	Valuta di arrivo
 Henüz parola yok	Nessuna password impostata
-Henüz uygulama kurulu değil	Nessuna app installata
 Her hamlede tahtayı çevir	Ruota la scacchiera a ogni mossa
 Hissedilen %s	Percepita %s
 Hiç uyuma	Mai sospendere
@@ -367,3 +366,16 @@ Uykuya geçiş: %d dk dokunulmazsa	Sospendi dopo: %d min senza tocchi
 Veri güncelleme: %d saatte bir	Aggiorna dati: ogni %d h
 Pil tasarrufunda Kindle uyur, ekran e-ink sayesinde kalır; saat dakikada bir güncellenir, Wi-Fi yalnızca veri güncellerken açılır. Uyandırmak için güç tuşuna basın ya da ekrana dokunun.	Con il risparmio il Kindle dorme e lo schermo e-ink resta visibile; l'orologio si aggiorna ogni minuto e il Wi-Fi è attivo solo durante gli aggiornamenti. Premi il tasto di accensione o tocca lo schermo per riattivarlo.
 Alındı: %s (KOReader ile açın)	Ricevuto: %s (apri con KOReader)
+Güncellemeler	Aggiornamenti
+Güncel sürüm	Aggiornata
+Kur	Installa
+Güncelle	Aggiorna
+Tümünü güncelle	Aggiorna tutto
+İndiriliyor…	Download…
+Kuruluyor…	Installazione…
+%s kuruldu	%s installata
+Kurulamadı: %s	Installazione non riuscita: %s
+Denetleniyor…	Verifica…
+Depoya ulaşılamadı.\nWi-Fi bağlantısını kontrol edin.	Repository non raggiungibile.\nControlla la connessione Wi-Fi.
+Tüm uygulamalar güncel	Tutte le app sono aggiornate
+Bazı güncellemeler kurulamadı	Alcuni aggiornamenti non sono stati installati
