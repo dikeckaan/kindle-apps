@@ -8,6 +8,16 @@ int     kui_rect_contains(KuiRect r, int px, int py);
 KuiRect kui_rect_union(KuiRect a, KuiRect b); /* an empty rect (w == 0) is ignored */
 KuiRect kui_grid_cell(KuiRect area, int cols, int rows, int col, int row, int gap);
 
+/* ---- widgets: geometry and hit-testing (pure); drawing lives in widgets.c ---- */
+#define KUI_TOPBAR_H 120
+#define KUI_BTN_EXIT (-1)
+#define KUI_BTN_MENU (-2)
+typedef struct { KuiRect r; const char *label; int id; } KuiButton;
+KuiRect kui_topbar_exit_rect(void);            /* top-left ✕ */
+KuiRect kui_topbar_menu_rect(int screen_w);    /* top-right button */
+int kui_topbar_hit(int screen_w, int has_menu, int x, int y); /* KUI_BTN_EXIT, KUI_BTN_MENU or 0 */
+int kui_buttons_hit(const KuiButton *bs, int n, int x, int y); /* id or 0 */
+
 /* ---- refresh policy ---- */
 typedef enum { KUI_UPD_PARTIAL, KUI_UPD_FULL } KuiUpdKind;
 typedef struct { int every; int count; } KuiRefreshPolicy; /* every == 0: never auto full */
@@ -57,5 +67,10 @@ void kui_mark_dirty(KuiRect r);
 void kui_flush(int screen_changed); /* the only place that refreshes the panel */
 void kui_set_refresh_every(int n);
 KuiEvent kui_next_event(int timeout_ms); /* KUI_EV_NONE on timeout */
+void kui_topbar(const char *title, const char *right_label); /* right_label may be NULL */
+void kui_button(const KuiButton *b, int pressed);
+/* Modal dialog drawn over the current screen; returns the chosen index, -1 on ✕/quit.
+ * The caller redraws its screen afterwards. */
+int  kui_dialog(const char *title, const char *msg, const char **choices, int n);
 
 #endif

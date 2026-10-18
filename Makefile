@@ -42,8 +42,8 @@ $(FBINK_A):
 	$(MAKE) -C third_party/FBInk staticlib KINDLE=1 CROSS_TC=$(CROSS_TC)
 
 # APPS: each entry <name> builds $(OUT)/<name> from APP_<name>_SRCS + kui + FBInk
-APPS := kuidemo
-APP_kuidemo_SRCS := apps/kuidemo/main.c
+APPS := game2048
+APP_game2048_SRCS := apps/game2048/main.c apps/game2048/g2048.c
 
 $(OUT)/%: $$(APP_$$*_SRCS) $(FBINK_A) $(KUI_SRCS) $(wildcard core/kui/*.h)
 	@mkdir -p $(dir $@)
