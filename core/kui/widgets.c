@@ -156,3 +156,27 @@ int kui_input_text(const char *title, char *buf, int cap, int secret, int min_le
 		kui_flush(0);
 	}
 }
+
+int kui_battery(KuiRect r)
+{
+	int lvl = kui_lipc_get_int("com.lab126.powerd", "battLevel", -1);
+	if (lvl < 0 || lvl > 100) return -1;
+	int chg = kui_lipc_get_int("com.lab126.powerd", "isCharging", 0) == 1;
+	kui_fill(r, 255);
+	/* gauge: body, tip, fill proportional to the level */
+	int bh = r.h * 5 / 10, bw = bh * 5 / 2, by = r.y + (r.h - bh) / 2;
+	KuiRect b = { r.x, by, bw, bh };
+	kui_frame(b, 3, 0);
+	kui_fill((KuiRect){ b.x + b.w, b.y + bh / 4, bh / 5, bh / 2 }, 0);
+	kui_fill((KuiRect){ b.x + 6, b.y + 6, (b.w - 12) * lvl / 100, b.h - 12 }, chg ? 0x55 : 0x99);
+	char s[24];
+	snprintf(s, sizeof s, T("%%%d"), lvl);
+	int tx = b.x + b.w + bh / 5 + 12;
+	kui_text((KuiRect){ tx, r.y, r.x + r.w - tx, r.h }, s, KUI_FONT_BOLD, r.h * 2 / 5, KUI_ALIGN_LEFT, 0);
+	if (chg) { /* charging: a bolt after the percentage */
+		int sw = kui_text_width(s, KUI_FONT_BOLD, r.h * 2 / 5);
+		kui_text((KuiRect){ tx + sw + 6, r.y, r.h, r.h }, "⚡", KUI_FONT_BOLD, r.h / 2, KUI_ALIGN_LEFT, 0);
+	}
+	kui_mark_dirty(r);
+	return lvl;
+}

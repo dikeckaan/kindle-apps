@@ -223,16 +223,7 @@ static void draw_header(void)
 	KuiRect r = { 0, 0, w, 90 };
 	kui_fill(r, 255);
 	kui_text((KuiRect){ 0, 0, 120, 90 }, "✕", KUI_FONT_BOLD, 56, KUI_ALIGN_CENTER, 0);
-	int batt = kui_lipc_get_int("com.lab126.powerd", "battLevel", -1);
-	if (batt >= 0) { /* a small battery gauge */
-		KuiRect b = { w / 2 - 50, 30, 90, 36 };
-		kui_frame(b, 3, 0);
-		kui_fill((KuiRect){ b.x + b.w, b.y + 10, 8, 16 }, 0);
-		kui_fill((KuiRect){ b.x + 6, b.y + 6, (b.w - 12) * batt / 100, b.h - 12 }, 0x77);
-		char s[16];
-		snprintf(s, sizeof s, T("%%%d"), batt);
-		kui_text((KuiRect){ b.x + b.w + 20, 0, 140, 90 }, s, KUI_FONT_BOLD, 32, KUI_ALIGN_LEFT, 0);
-	}
+	kui_battery((KuiRect){ w / 2 - 110, 5, 260, 80 });
 	const char *lbl = T("Ayarlar");
 	r_settings = (KuiRect){ w - 260, 0, 260, 90 };
 	kui_text((KuiRect){ r_settings.x, 0, r_settings.w - 30, 90 }, lbl, KUI_FONT_REG, kui_fit_px(lbl, KUI_FONT_REG, 38, 220), KUI_ALIGN_RIGHT, 0);

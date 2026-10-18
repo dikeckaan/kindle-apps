@@ -72,6 +72,8 @@ static int update_weather(void)
 	return ok;
 }
 
+static KuiRect battery_rect(void) { return (KuiRect){ kui_width() - 300, 20, 280, 80 }; }
+
 static KuiRect time_rect(void) { return (KuiRect){ 0, 150, kui_width(), 430 }; }
 
 static void draw_time(const struct tm *tm)
@@ -90,6 +92,7 @@ static void draw_all(const struct tm *tm)
 	char s[128], a[32], b[32];
 	kui_fill((KuiRect){ 0, 0, w, h }, 255);
 	kui_text(kui_topbar_exit_rect(), "✕", KUI_FONT_BOLD, 64, KUI_ALIGN_CENTER, 0);
+	kui_battery(battery_rect());
 	draw_time(tm);
 	kui_tr_date(tm, s, sizeof s);
 	kui_text((KuiRect){ 20, 590, w - 40, 100 }, s, KUI_FONT_REG, kui_fit_px(s, KUI_FONT_REG, 64, w - 60), KUI_ALIGN_CENTER, 0);
@@ -148,6 +151,7 @@ static void tick(void)
 	}
 	if (tm.tm_min != shown_min) {
 		draw_time(&tm);
+		kui_battery(battery_rect()); /* level and charging state, in place */
 		kui_flush(0);
 		shown_min = tm.tm_min;
 	}

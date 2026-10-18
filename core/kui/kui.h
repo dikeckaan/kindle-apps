@@ -129,6 +129,8 @@ int  kui_input_asleep(void); /* 1 while the screensaver is up: do not draw (KUI_
 void kui_topbar(const char *title, const char *right_label); /* right_label may be NULL */
 int  kui_fit_px(const char *text, KuiFont f, int px, int max_w); /* largest size <= px whose single line fits max_w */
 void kui_button(const KuiButton *b, int pressed);
+/* battery gauge with percentage and ⚡ while charging (powerd); returns the level, -1 if unknown (nothing drawn) */
+int  kui_battery(KuiRect r);
 /* Modal dialog drawn over the current screen; returns the chosen index, -1 on ✕/quit.
  * The caller redraws its screen afterwards. */
 int  kui_dialog(const char *title, const char *msg, const char **choices, int n, void (*redraw_bg)(void));
