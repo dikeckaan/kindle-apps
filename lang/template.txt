@@ -25,6 +25,14 @@
 %d sa %d dk	
 # apps/deprem/deprem.c
 %d sa önce	
+# apps/siir/main.c
+%d şair, yüzyıllara göre	
+# apps/siir/main.c
+%d şiir	
+# apps/siir/main.c
+%d şiir yıldızlı	
+# apps/siir/main.c
+%d şiir · %d şair · kaynak: Vikikaynak (kamu malı)	
 # apps/upload/main.c
 %d-%d portları dolu ya da %s yok.	
 # apps/news/main.c
@@ -301,6 +309,8 @@ Bulmacayı çözdünüz.
 Bütün kartlar açık. Oyun tamamlansın mı?	
 # apps/solitaire/main.c
 Bütün kartları yerleştirdin.	
+# apps/siir/main.c
+Bütün şiirlerden biri	
 # apps/sky/skydata.c
 Büyükayı	
 # apps/sky/skydata.c
@@ -437,6 +447,8 @@ Eylül
 Ezici üstünlük	
 # apps/puzzle/puzzle.c
 Eşitlik	
+# apps/siir/main.c
+Favoriler	
 # apps/puzzle/puzzle.c
 Fedâ	
 # apps/chess/main.c
@@ -497,6 +509,8 @@ Gündüz · Güneş bugün batmıyor
 Güneş	
 # apps/puzzle/main.c
 Günün bulmacası	
+# apps/siir/main.c
+Günün şiiri	
 # apps/firewall/main.c
 Güvenlik Duvarı	
 # apps/sysinfo/main.c
@@ -545,6 +559,8 @@ Hayır
 Haziran	
 # apps/currency/main.c
 Hedef para	
+# apps/siir/main.c
+Henüz favori şiir yok.\nBir şiirde ☆ düğmesine dokunun.	
 # apps/ebooks/main.c
 Henüz kitap indirilmedi.	
 # apps/odak/main.c
@@ -1367,6 +1383,8 @@ yarım gün
 Şah mat — Siyah kazandı	
 # apps/chess/main.c
 Şah! Sıra: %s	
+# apps/siir/main.c
+Şairler	
 # core/kui/powerui.c
 Şarj oluyor	
 # apps/odak/main.c
@@ -1385,6 +1403,10 @@ yarım gün
 Şiddetli sağanak	
 # apps/weather/wx.c
 Şiddetli yağmur	
+# apps/siir/main.c
+Şiir Defteri	
+# apps/siir/main.c
+Şiirler yüklenemedi.	
 # apps/sky/main.c
 Şimdi	
 # apps/puzzle/puzzle.c

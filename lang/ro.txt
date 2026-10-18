@@ -721,3 +721,14 @@ Notlar %d–%d / %d · kaydırın	Note %d–%d / %d · glisați
 Düzenle	Editează
 Notu düzenle	Editează nota
 Yeni not	Notă nouă
+Şiir Defteri	Caiet de poezii
+Günün şiiri	Poezia zilei
+Şairler	Poeți
+Favoriler	Favorite
+Bütün şiirlerden biri	O poezie oarecare
+%d şair, yüzyıllara göre	%d poeți, pe secole
+%d şiir yıldızlı	%d poezii cu stea
+%d şiir	%d poezii
+%d şiir · %d şair · kaynak: Vikikaynak (kamu malı)	%d poezii · %d poeți · sursa: Wikisource (domeniu public)
+Şiirler yüklenemedi.	Poeziile nu au putut fi încărcate.
+Henüz favori şiir yok.\nBir şiirde ☆ düğmesine dokunun.	Încă nu aveți poezii favorite.\nAtingeți ☆ la o poezie.

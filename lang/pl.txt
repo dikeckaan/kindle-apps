@@ -721,3 +721,14 @@ Notlar %d–%d / %d · kaydırın	Notatki %d–%d / %d · przesuń
 Düzenle	Edytuj
 Notu düzenle	Edytuj notatkę
 Yeni not	Nowa notatka
+Şiir Defteri	Zeszyt wierszy
+Günün şiiri	Wiersz dnia
+Şairler	Poeci
+Favoriler	Ulubione
+Bütün şiirlerden biri	Dowolny wiersz
+%d şair, yüzyıllara göre	Poeci: %d, według stuleci
+%d şiir yıldızlı	Wiersze z gwiazdką: %d
+%d şiir	Wiersze: %d
+%d şiir · %d şair · kaynak: Vikikaynak (kamu malı)	Wiersze: %d · poeci: %d · źródło: Wikiźródła (domena publiczna)
+Şiirler yüklenemedi.	Nie udało się wczytać wierszy.
+Henüz favori şiir yok.\nBir şiirde ☆ düğmesine dokunun.	Nie ma jeszcze ulubionych wierszy.\nDotknij ☆ przy wierszu.

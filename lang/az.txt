@@ -721,3 +721,14 @@ Notlar %d–%d / %d · kaydırın	Qeydlər %d–%d / %d · sürüşdürün
 Düzenle	Redaktə et
 Notu düzenle	Qeydi redaktə et
 Yeni not	Yeni qeyd
+Şiir Defteri	Şeir dəftəri
+Günün şiiri	Günün şeiri
+Şairler	Şairlər
+Favoriler	Seçilmişlər
+Bütün şiirlerden biri	İstənilən bir şeir
+%d şair, yüzyıllara göre	%d şair, əsrlərə görə
+%d şiir yıldızlı	%d ulduzlu şeir
+%d şiir	%d şeir
+%d şiir · %d şair · kaynak: Vikikaynak (kamu malı)	%d şeir · %d şair · mənbə: Vikimənbə (ictimai mülkiyyət)
+Şiirler yüklenemedi.	Şeirləri yükləmək mümkün olmadı.
+Henüz favori şiir yok.\nBir şiirde ☆ düğmesine dokunun.	Hələ seçilmiş şeir yoxdur.\nŞeirdə ☆ düyməsinə toxunun.

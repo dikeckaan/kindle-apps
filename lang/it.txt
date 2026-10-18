@@ -721,3 +721,14 @@ Notlar %d–%d / %d · kaydırın	Note %d–%d / %d · scorri
 Düzenle	Modifica
 Notu düzenle	Modifica nota
 Yeni not	Nuova nota
+Şiir Defteri	Quaderno di poesie
+Günün şiiri	Poesia del giorno
+Şairler	Poeti
+Favoriler	Preferiti
+Bütün şiirlerden biri	Una poesia qualsiasi
+%d şair, yüzyıllara göre	%d poeti, per secolo
+%d şiir yıldızlı	%d poesie con stella
+%d şiir	%d poesie
+%d şiir · %d şair · kaynak: Vikikaynak (kamu malı)	%d poesie · %d poeti · fonte: Wikisource (pubblico dominio)
+Şiirler yüklenemedi.	Impossibile caricare le poesie.
+Henüz favori şiir yok.\nBir şiirde ☆ düğmesine dokunun.	Ancora nessuna poesia preferita.\nTocca ☆ su una poesia.

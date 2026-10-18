@@ -721,3 +721,14 @@ Notlar %d–%d / %d · kaydırın	Notater %d–%d / %d · sveip
 Düzenle	Rediger
 Notu düzenle	Rediger notat
 Yeni not	Nytt notat
+Şiir Defteri	Diktbok
+Günün şiiri	Dagens dikt
+Şairler	Diktere
+Favoriler	Favoritter
+Bütün şiirlerden biri	Et hvilket som helst dikt
+%d şair, yüzyıllara göre	%d diktere, etter århundre
+%d şiir yıldızlı	%d stjernemerkede dikt
+%d şiir	%d dikt
+%d şiir · %d şair · kaynak: Vikikaynak (kamu malı)	%d dikt · %d diktere · kilde: Wikisource (falt i det fri)
+Şiirler yüklenemedi.	Diktene kunne ikke lastes inn.
+Henüz favori şiir yok.\nBir şiirde ☆ düğmesine dokunun.	Ingen favorittdikt ennå.\nTrykk på ☆ ved et dikt.

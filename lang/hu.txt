@@ -721,3 +721,14 @@ Notlar %d–%d / %d · kaydırın	Jegyzetek %d–%d / %d · húzza
 Düzenle	Szerkesztés
 Notu düzenle	Jegyzet szerkesztése
 Yeni not	Új jegyzet
+Şiir Defteri	Versesfüzet
+Günün şiiri	A nap verse
+Şairler	Költők
+Favoriler	Kedvencek
+Bütün şiirlerden biri	Bármelyik vers
+%d şair, yüzyıllara göre	%d költő, évszázadok szerint
+%d şiir yıldızlı	%d csillagos vers
+%d şiir	%d vers
+%d şiir · %d şair · kaynak: Vikikaynak (kamu malı)	%d vers · %d költő · forrás: Wikiforrás (közkincs)
+Şiirler yüklenemedi.	A verseket nem sikerült betölteni.
+Henüz favori şiir yok.\nBir şiirde ☆ düğmesine dokunun.	Még nincs kedvenc vers.\nKoppintson egy versnél a ☆ gombra.

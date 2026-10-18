@@ -721,3 +721,14 @@ Notlar %d–%d / %d · kaydırın	Poznámky %d–%d / %d · přejeďte
 Düzenle	Upravit
 Notu düzenle	Upravit poznámku
 Yeni not	Nová poznámka
+Şiir Defteri	Sešit básní
+Günün şiiri	Báseň dne
+Şairler	Básníci
+Favoriler	Oblíbené
+Bütün şiirlerden biri	Libovolná báseň
+%d şair, yüzyıllara göre	Básníci: %d, podle století
+%d şiir yıldızlı	Básně s hvězdičkou: %d
+%d şiir	Básně: %d
+%d şiir · %d şair · kaynak: Vikikaynak (kamu malı)	Básně: %d · básníci: %d · zdroj: Wikizdroje (volné dílo)
+Şiirler yüklenemedi.	Básně se nepodařilo načíst.
+Henüz favori şiir yok.\nBir şiirde ☆ düğmesine dokunun.	Zatím žádné oblíbené básně.\nKlepněte u básně na ☆.

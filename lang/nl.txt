@@ -721,3 +721,14 @@ Notlar %d–%d / %d · kaydırın	Notities %d–%d / %d · veeg
 Düzenle	Bewerken
 Notu düzenle	Notitie bewerken
 Yeni not	Nieuwe notitie
+Şiir Defteri	Gedichtenschrift
+Günün şiiri	Gedicht van de dag
+Şairler	Dichters
+Favoriler	Favorieten
+Bütün şiirlerden biri	Zomaar een gedicht
+%d şair, yüzyıllara göre	%d dichters, per eeuw
+%d şiir yıldızlı	%d gedichten met ster
+%d şiir	%d gedichten
+%d şiir · %d şair · kaynak: Vikikaynak (kamu malı)	%d gedichten · %d dichters · bron: Wikisource (publiek domein)
+Şiirler yüklenemedi.	De gedichten konden niet worden geladen.
+Henüz favori şiir yok.\nBir şiirde ☆ düğmesine dokunun.	Nog geen favoriete gedichten.\nTik bij een gedicht op ☆.
