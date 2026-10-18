@@ -1,0 +1,10 @@
+{
+  "manifest_version": 2,
+  "id": "kindle-apps-weather",
+  "name": "Hava Durumu",
+  "author": "Kaan Dikeç",
+  "description": "Open-Meteo ile kayıtlı şehirlerin hava durumu ve 7 günlük tahmin",
+  "version": [2026, 10, 6],
+  "dependencies": [],
+  "supported_platforms": ["kindlehf"]
+}
