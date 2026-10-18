@@ -61,6 +61,44 @@ static void unescape(char *s)
 	*o = '\0';
 }
 
+/* the printf conversions of s in order, exactly as written ("%%" ignored: it takes no argument) */
+static void conv_sig(const char *s, char *out, size_t cap)
+{
+	size_t o = 0;
+	out[0] = '\0';
+	for (; *s; s++) {
+		if (*s != '%') continue;
+		if (s[1] == '%') {
+			s++;
+			continue;
+		}
+		const char *e = s + 1;
+		while (*e && strchr("-+ #0123456789.*hlLqjzt", *e)) e++;
+		size_t n = (size_t) (e - s) + (*e ? 1 : 0);
+		if (o + n + 2 >= cap) {
+			out[0] = '\x01'; /* too many to compare: never equal to a real signature */
+			out[1] = '\0';
+			return;
+		}
+		memcpy(out + o, s, n);
+		o += n;
+		out[o++] = '|';
+		out[o] = '\0';
+		if (!*e) return;
+		s = e;
+	}
+}
+
+/* a translation is used only with the same conversions as its source: catalogs are on user-writable storage,
+ * and a changed format ("%s%n", reordering) would be undefined behaviour in snprintf */
+static int same_conversions(const char *src, const char *dst)
+{
+	char a[256], b[256];
+	conv_sig(src, a, sizeof a);
+	conv_sig(dst, b, sizeof b);
+	return strcmp(a, b) == 0;
+}
+
 static const char *cat_get(const Catalog *c, const char *src)
 {
 	if (!c->n) return NULL;
@@ -112,6 +150,7 @@ static void cat_load(Catalog *c, const char *code)
 		unescape(line);
 		unescape(tab + 1);
 		if (cat_get(c, line)) continue; /* first definition wins */
+		if (!same_conversions(line, tab + 1)) continue;
 		unsigned i = hash(line) & (c->cap - 1);
 		while (c->slot[i]) i = (i + 1) & (c->cap - 1);
 		c->src[c->n] = line;

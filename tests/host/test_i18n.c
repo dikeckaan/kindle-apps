@@ -83,6 +83,20 @@ static void test_numbers_follow_language(void)
 	T_EQ_STR(s, "6.632,39");
 }
 
+static void test_format_mismatch_is_rejected(void)
+{
+	/* catalogs live on user-writable storage: a translation must never change the printf conversions */
+	setup();
+	write_file(ROOT "/lang/de.txt", "%d puan\t%s%s%n Punkte\n%s ve %d\t%d und %s\nYüzde %%%d\t%d %% Prozent\n%d oyun\t%d Spiele\n"
+					"Ad: %s\tName: %.20s %ls\n");
+	kui_i18n_set("de");
+	T_EQ_STR(T("%d puan"), "%d puan");      /* extra conversions and %n: refused */
+	T_EQ_STR(T("%s ve %d"), "%s ve %d");    /* reordered: refused */
+	T_EQ_STR(T("Yüzde %%%d"), "%d %% Prozent"); /* %% may move */
+	T_EQ_STR(T("%d oyun"), "%d Spiele");
+	T_EQ_STR(T("Ad: %s"), "Ad: %s");        /* different conversion */
+}
+
 static void test_language_list(void)
 {
 	int n;
@@ -102,6 +116,7 @@ int main(void)
 	T_RUN(test_missing_catalog_falls_back);
 	T_RUN(test_saved_language);
 	T_RUN(test_numbers_follow_language);
+	T_RUN(test_format_mismatch_is_rejected);
 	T_RUN(test_language_list);
 	return T_DONE();
 }
