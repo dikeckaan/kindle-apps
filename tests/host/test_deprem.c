@@ -88,6 +88,14 @@ static void test_kandilli_garbage(void)
 	T_EQ_STR(q[0].place, "Sofular-Şehitkamil (Gaziantep)");
 	n = dq_parse_kandilli(big, 60, q, DQ_MAX); /* truncated mid-line */
 	T_EQ_INT(n, 0);
+	/* the feed is plain HTTP: impossible values (a tampered or broken page) are dropped */
+	const char *bad = "2026.10.19 00:48:45  99.2102   29.0945       10.4      2.0  -.-  -.-   X\n"
+			  "2026.10.19 00:48:45  39.2102  529.0945       10.4      2.0  -.-  -.-   X\n"
+			  "2026.10.19 00:48:45  39.2102   29.0945     9999.0      2.0  -.-  -.-   X\n"
+			  "2026.10.19 00:48:45  39.2102   29.0945       10.4     99.0  -.-  -.-   X\n";
+	T_EQ_INT(dq_parse_kandilli(bad, (int) strlen(bad), q, DQ_MAX), 0);
+	const char *ej = "{\"features\":[{\"properties\":{\"time\":\"2026-10-19T00:00:00\",\"lat\":38,\"lon\":27,\"mag\":42,\"depth\":5}}]}";
+	T_EQ_INT(dq_parse_emsc(ej, (int) strlen(ej), q, DQ_MAX), 0);
 }
 
 static void test_emsc(void)

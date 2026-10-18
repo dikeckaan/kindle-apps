@@ -179,6 +179,13 @@ static int cmp_newest(const void *a, const void *b)
 	return ta < tb ? 1 : ta > tb ? -1 : 0;
 }
 
+/* both feeds come over plain HTTP (Kandilli has no HTTPS): accept only physically possible values */
+static int sane(double lat, double lon, double depth, double mag)
+{
+	return isfinite(lat) && isfinite(lon) && isfinite(depth) && isfinite(mag) && lat >= -90 && lat <= 90 && lon >= -180 &&
+	       lon <= 180 && depth >= -10 && depth <= 800 && mag >= -2 && mag <= 10;
+}
+
 /* one complete line (without \r\n) of the table; 1 if it is an earthquake */
 static int kandilli_line(const char *line, Quake *q)
 {
@@ -192,7 +199,7 @@ static int kandilli_line(const char *line, Quake *q)
 	int ok[3];
 	for (int i = 0; i < 3; i++) ok[i] = mag_tok(m[i], &v[i]); /* MD, ML, Mw */
 	int pick = ok[2] && v[2] >= 5 ? 2 : ok[1] ? 1 : ok[2] ? 2 : ok[0] ? 0 : -1;
-	if (pick < 0) return 0;
+	if (pick < 0 || !sane(lat, lon, dep, v[pick])) return 0;
 	static const char *const names[3] = { "MD", "ML", "Mw" };
 	q->t = utc_time(y, mo, d, h, mi, s) - DQ_TR_OFFSET;
 	q->lat = lat;
@@ -258,7 +265,7 @@ int dq_parse_emsc(const char *body, int len, Quake *out, int max)
 		const cJSON *p = cJSON_GetObjectItemCaseSensitive(f, "properties");
 		int y, mo, d, h, mi, s;
 		double lat = num(p, "lat", NAN), lon = num(p, "lon", NAN), mag = num(p, "mag", NAN);
-		if (sscanf(str(p, "time"), "%4d-%2d-%2dT%2d:%2d:%2d", &y, &mo, &d, &h, &mi, &s) != 6 || isnan(lat) || isnan(lon) || isnan(mag)) continue;
+		if (sscanf(str(p, "time"), "%4d-%2d-%2dT%2d:%2d:%2d", &y, &mo, &d, &h, &mi, &s) != 6 || !sane(lat, lon, fabs(num(p, "depth", 0)), mag)) continue;
 		Quake *q = &out[n++];
 		q->t = utc_time(y, mo, d, h, mi, s);
 		q->lat = lat;

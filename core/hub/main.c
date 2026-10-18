@@ -127,10 +127,11 @@ static void draw(void)
 	kui_flush(1);
 }
 
+/* pages wrap around: past the last page comes the first, and back */
 static void turn_page(int d)
 {
-	if (page + d < 0 || page + d >= pages()) return;
-	page += d;
+	if (!d || pages() < 2) return;
+	page = (page + d + pages()) % pages();
 	draw_body();
 	kui_flush(0);
 }
