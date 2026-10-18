@@ -5,6 +5,7 @@
 #include <signal.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include <sys/wait.h>
 #include <unistd.h>
 #include "appreg.h"
@@ -30,14 +31,30 @@ static int pages(void) { return n_apps ? (n_apps + PER_PAGE - 1) / PER_PAGE : 1;
 
 static KuiRect tile(int i) { return kui_grid_cell(grid, COLS, ROWS, i % COLS, i / COLS, 30); }
 
+/* app names wrap onto two lines inside a tile; shrink only when the longest word does not fit */
+static int fit_name(const char *name, int w)
+{
+	int px = 52;
+	char word[64];
+	for (const char *p = name; *p;) {
+		while (*p == ' ') p++;
+		int n = (int) strcspn(p, " ");
+		if (!n) break;
+		snprintf(word, sizeof word, "%.*s", n, p);
+		px = kui_fit_px(word, KUI_FONT_BOLD, px, w);
+		p += n;
+	}
+	return px;
+}
+
 static void draw(void)
 {
 	int w = kui_width(), h = kui_height();
 	kui_fill((KuiRect){ 0, 0, w, h }, 255);
-	kui_topbar("Uygulamalar", NULL);
+	kui_topbar(T("Uygulamalar"), T("Dil"));
 	grid = (KuiRect){ 20, KUI_TOPBAR_H + 20, w - 40, h - KUI_TOPBAR_H - 200 };
 	if (!n_apps) {
-		kui_text((KuiRect){ 40, h / 2 - 100, w - 80, 200 }, "Henüz uygulama kurulu değil", KUI_FONT_REG, 48,
+		kui_text((KuiRect){ 40, h / 2 - 100, w - 80, 200 }, T("Henüz uygulama kurulu değil"), KUI_FONT_REG, 48,
 			 KUI_ALIGN_CENTER, 0);
 	}
 	for (int i = 0; i < PER_PAGE; i++) {
@@ -45,7 +62,8 @@ static void draw(void)
 		if (k >= n_apps) break;
 		KuiRect r = tile(i);
 		kui_frame(r, 4, 0);
-		kui_text((KuiRect){ r.x + 10, r.y, r.w - 20, r.h }, apps[k].name, KUI_FONT_BOLD, 52, KUI_ALIGN_CENTER, 0);
+		const char *name = T(apps[k].name);
+		kui_text((KuiRect){ r.x + 10, r.y, r.w - 20, r.h }, name, KUI_FONT_BOLD, fit_name(name, r.w - 20), KUI_ALIGN_CENTER, 0);
 	}
 	if (pages() > 1) {
 		int y = h - 150;
@@ -58,6 +76,38 @@ static void draw(void)
 		kui_text((KuiRect){ 300, y, w - 600, 120 }, s, KUI_FONT_REG, 44, KUI_ALIGN_CENTER, 0);
 	}
 	kui_flush(1);
+}
+
+/* the 20 languages as a two-column list; the current one is shown pressed */
+static void choose_language(void)
+{
+	int n, w = kui_width();
+	const KuiLang *l = kui_languages(&n);
+	KuiButton b[32];
+	int bw = (w - 3 * 40) / 2, bh = 100, rows = (n + 1) / 2;
+	for (int full = 1;;) {
+		if (full) {
+			kui_fill((KuiRect){ 0, 0, w, kui_height() }, 255);
+			kui_topbar(T("Dil"), NULL);
+			for (int i = 0; i < n; i++) {
+				b[i] = (KuiButton){ { 40 + (i / rows) * (bw + 40), KUI_TOPBAR_H + 30 + (i % rows) * (bh + 18), bw, bh }, l[i].name, i + 1 };
+				kui_button(&b[i], !strcmp(l[i].code, kui_lang()));
+			}
+			kui_flush(1);
+			full = 0;
+		}
+		KuiEvent e = kui_next_event(-1);
+		if (e.type == KUI_EV_QUIT) return;
+		if (e.type == KUI_EV_WAKE) { full = 1; continue; }
+		if (e.type != KUI_EV_TAP) continue;
+		if (kui_topbar_hit(w, 0, e.x, e.y) == KUI_BTN_EXIT) return;
+		int id = kui_buttons_hit(b, n, e.x, e.y);
+		if (id) {
+			kui_i18n_save(l[id - 1].code);
+			kui_i18n_set(l[id - 1].code);
+			return;
+		}
+	}
 }
 
 /* Runs an app with the screen and input handed over to it; returns its wait status. */
@@ -104,7 +154,13 @@ int main(void)
 			continue;
 		}
 		if (e.type != KUI_EV_TAP) continue;
-		if (kui_topbar_hit(kui_width(), 0, e.x, e.y) == KUI_BTN_EXIT) break;
+		int hit = kui_topbar_hit(kui_width(), 1, e.x, e.y);
+		if (hit == KUI_BTN_EXIT) break;
+		if (hit == KUI_BTN_MENU) {
+			choose_language();
+			draw();
+			continue;
+		}
 		if (pages() > 1) {
 			int id = kui_buttons_hit(nav, 2, e.x, e.y);
 			if (id == 1 && page > 0) { page--; draw(); continue; }
@@ -115,7 +171,8 @@ int main(void)
 			if (k >= n_apps || !kui_rect_contains(tile(i), e.x, e.y)) continue;
 			KuiRect r = tile(i); /* tap feedback before the app takes over the screen */
 			kui_fill(r, 0);
-			kui_text_on((KuiRect){ r.x + 10, r.y, r.w - 20, r.h }, apps[k].name, KUI_FONT_BOLD, 52, KUI_ALIGN_CENTER, 255, 0);
+			const char *name = T(apps[k].name);
+			kui_text_on((KuiRect){ r.x + 10, r.y, r.w - 20, r.h }, name, KUI_FONT_BOLD, fit_name(name, r.w - 20), KUI_ALIGN_CENTER, 255, 0);
 			kui_mark_dirty(r);
 			kui_flush(0);
 			int st = run_app(&apps[k]);
@@ -124,9 +181,9 @@ int main(void)
 			draw();
 			if (st != 0 && !(WIFSIGNALED(st) && WTERMSIG(st) == SIGTERM)) {
 				char msg[96];
-				snprintf(msg, sizeof msg, "%s beklenmedik şekilde kapandı", apps[k].name);
-				const char *ok[] = { "Tamam" };
-				kui_dialog("Hata", msg, ok, 1, draw);
+				snprintf(msg, sizeof msg, T("%s beklenmedik şekilde kapandı"), T(apps[k].name));
+				const char *ok[] = { T("Tamam") };
+				kui_dialog(T("Hata"), msg, ok, 1, draw);
 				draw();
 			}
 			break;

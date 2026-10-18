@@ -1,0 +1,93 @@
+# Translatable texts (Turkish source). Catalog lines: source<TAB>translation; \n and \t escaped.
+# core/kui/trfmt.c
+%d %s %d, %s	
+# core/hub/main.c
+%s beklenmedik şekilde kapandı	
+# apps/game2048/pkg/app.ini
+2048	
+# core/kui/trfmt.c
+Aralık	
+# core/kui/trfmt.c
+Ağustos	
+# core/kui/trfmt.c
+Cmt	
+# core/kui/trfmt.c
+Cum	
+# core/kui/trfmt.c
+Cuma	
+# core/kui/trfmt.c
+Cumartesi	
+# core/hub/main.c
+Dil	
+# apps/currency/pkg/app.ini
+Döviz & Altın	
+# core/kui/trfmt.c
+Ekim	
+# core/kui/trfmt.c
+Eylül	
+# apps/news/pkg/app.ini
+Gazete	
+# apps/firewall/pkg/app.ini
+Güvenlik Duvarı	
+# core/hub/main.c
+Hata	
+# apps/weather/pkg/app.ini
+Hava Durumu	
+# core/kui/trfmt.c
+Haziran	
+# core/hub/main.c
+Henüz uygulama kurulu değil	
+# core/kui/trfmt.c
+Kasım	
+# apps/wordle/pkg/app.ini
+Kelime Oyunu	
+# core/kui/trfmt.c
+Mart	
+# apps/clock/pkg/app.ini
+Masa Saati	
+# apps/mines/pkg/app.ini
+Mayın Tarlası	
+# core/kui/trfmt.c
+Mayıs	
+# core/kui/trfmt.c
+Nisan	
+# core/kui/trfmt.c
+Ocak	
+# core/kui/trfmt.c
+Paz	
+# core/kui/trfmt.c
+Pazar	
+# core/kui/trfmt.c
+Pazartesi	
+# core/kui/trfmt.c
+Per	
+# core/kui/trfmt.c
+Perşembe	
+# core/kui/trfmt.c
+Pzt	
+# apps/ssh/pkg/app.ini
+SSH Sunucusu	
+# core/kui/trfmt.c
+Sal	
+# core/kui/trfmt.c
+Salı	
+# apps/chess/pkg/app.ini
+Satranç	
+# apps/solitaire/pkg/app.ini
+Solitaire	
+# apps/sudoku/pkg/app.ini
+Sudoku	
+# core/hub/main.c
+Tamam	
+# core/kui/trfmt.c
+Temmuz	
+# core/hub/main.c
+Uygulamalar	
+# apps/sleep/pkg/app.ini
+Uyku Ayarı	
+# core/kui/trfmt.c
+Çar	
+# core/kui/trfmt.c
+Çarşamba	
+# core/kui/trfmt.c
+Şubat	

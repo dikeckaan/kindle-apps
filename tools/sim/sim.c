@@ -40,6 +40,7 @@ static unsigned char *slurp(const char *path)
 
 int kui_init(const char *app)
 {
+	kui_i18n_load_saved(); /* language chosen in the Uygulamalar menu */
 	char path[400];
 	const char *root = getenv("KUI_ROOT");
 	if (!root || !*root) root = "build/simroot";

@@ -6,8 +6,8 @@
 #include "kui.h"
 
 static const char *const days[] = { /* N_ */ "Pazar", "Pazartesi", "Salı", "Çarşamba", "Perşembe", "Cuma", "Cumartesi" };
-static const char *const days_short[] = { "Paz", "Pzt", "Sal", "Çar", "Per", "Cum", "Cmt" };
-static const char *const months[] = { "Ocak", "Şubat", "Mart", "Nisan", "Mayıs", "Haziran",
+static const char *const days_short[] = { /* N_ */ "Paz", "Pzt", "Sal", "Çar", "Per", "Cum", "Cmt" };
+static const char *const months[] = { /* N_ */ "Ocak", "Şubat", "Mart", "Nisan", "Mayıs", "Haziran",
 				      "Temmuz", "Ağustos", "Eylül", "Ekim", "Kasım", "Aralık" };
 
 static const char *(*text_hook)(const char *);
@@ -30,7 +30,7 @@ const char *kui_tr_month(int mon0) { return mon0 >= 0 && mon0 < 12 ? tx(months[m
 void kui_tr_date(const struct tm *tm, char *out, int cap)
 {
 	/* "%1$d %2$s %3$d, %4$s" order is the same in every supported language's catalog entry */
-	snprintf(out, (size_t) cap, tx("%d %s %d, %s"), tm->tm_mday, kui_tr_month(tm->tm_mon), tm->tm_year + 1900,
+	snprintf(out, (size_t) cap, tx(N_("%d %s %d, %s")), tm->tm_mday, kui_tr_month(tm->tm_mon), tm->tm_year + 1900,
 		 kui_tr_weekday(tm->tm_wday));
 }
 
