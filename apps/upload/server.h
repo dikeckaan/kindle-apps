@@ -37,4 +37,6 @@ int upload_files(const UploadServer *s, const UploadFile **list);
 int upload_pin_generation(const UploadServer *s);
 /* 1 while any connection is open (the UI polls faster then) */
 int upload_busy(const UploadServer *s);
+/* 1 after too many wrong PINs: nothing more is accepted until the app is reopened */
+int upload_locked(const UploadServer *s);
 #endif

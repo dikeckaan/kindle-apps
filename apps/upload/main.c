@@ -90,7 +90,10 @@ static void draw_pin(void)
 {
 	KuiRect r = r_pin;
 	kui_fill(r, 255);
-	if (srv) {
+	if (srv && upload_locked(srv)) { /* somebody kept guessing: the server refuses everything now */
+		kui_text(r, "Çok fazla yanlış PIN denendi.\nGüvenlik için yükleme durduruldu;\nuygulamayı kapatıp yeniden açın.", KUI_FONT_BOLD, 40,
+			 KUI_ALIGN_CENTER, 0);
+	} else if (srv) {
 		const char *p = upload_pin(srv);
 		char spaced[16];
 		snprintf(spaced, sizeof spaced, "%.3s %.3s", p, p + 3);

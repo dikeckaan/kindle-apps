@@ -20,6 +20,9 @@
 #define RECV_CHUNK 65536
 #define DRAIN_MS 2000
 #define DRAIN_MAX (4LL * 1024 * 1024)
+#define PRE_PIN_MAX 16384 /* body bytes allowed before the PIN is verified */
+#define PER_IP_CONNS 2
+#define MAX_REGENS 3      /* PIN replacements before the server locks */
 #define BODY_SLACK (1024LL * 1024) /* multipart framing on top of a 200 MB file */
 #define MSG_CAP 4096
 #define PATH_CAP 640
@@ -40,6 +43,8 @@ typedef struct {
 	char pin_buf[16];
 	size_t pin_len;
 	int pin_ok, pin_counted, fail_status, stored, refused;
+	unsigned ip;          /* peer IPv4 address */
+	long long pre_pin;    /* body bytes received before the PIN was verified */
 	int out_fd;
 	char part_path[PATH_CAP + 8], final_name[200];
 	long long file_bytes;
@@ -54,8 +59,9 @@ struct UploadServer {
 	int lfd, port;
 	char dir[400];
 	char pin[HTTPD_PIN_LEN + 1];
-	int bad_pins, gen, idle_ms, pause_ms;
+	int bad_pins, gen, idle_ms, pause_ms, locked;
 	long last_wrong;
+	struct { unsigned ip; int wrong; long last; } peer[16]; /* wrong-PIN backoff per address */
 	int active; /* index of the connection uploading, or -1 */
 	long long body_recv, body_total;
 	Conn c[UPLOAD_MAX_CONNS];
@@ -279,17 +285,60 @@ static void respond(Conn *c, int status, const char *msg_html)
 	c->t_last = now_ms();
 }
 
+/* backoff entry for an address (the oldest entry is reused) */
+static int peer_slot(UploadServer *s, unsigned ip)
+{
+	int old = 0;
+	for (int i = 0; i < 16; i++) {
+		if (s->peer[i].ip == ip && (s->peer[i].wrong || s->peer[i].last)) return i;
+		if (s->peer[i].last < s->peer[old].last) old = i;
+	}
+	memset(&s->peer[old], 0, sizeof s->peer[old]);
+	s->peer[old].ip = ip;
+	return old;
+}
+
+/* 1 while this address must wait after wrong PINs: pause, 2×, 4× … up to 64× (the owner's address is unaffected) */
+static int peer_waiting(UploadServer *s, unsigned ip)
+{
+	if (s->pause_ms <= 0) return 0;
+	for (int i = 0; i < 16; i++)
+		if (s->peer[i].ip == ip && s->peer[i].wrong) {
+			int sh = s->peer[i].wrong - 1 < 6 ? s->peer[i].wrong - 1 : 6;
+			return now_ms() - s->peer[i].last < (long) s->pause_ms << sh;
+		}
+	return 0;
+}
+
+/* takes the single upload slot once the PIN is known to be right; 0 if another upload holds it */
+static int claim_slot(Conn *c)
+{
+	UploadServer *s = c->srv;
+	int me = (int) (c - s->c);
+	if (s->active >= 0 && s->active != me) return 0;
+	if (s->active != me) {
+		s->active = me;
+		s->body_recv = c->hh.content_length - c->body_left;
+		s->body_total = c->hh.content_length;
+	}
+	return 1;
+}
+
 static void wrong_pin(Conn *c)
 {
 	UploadServer *s = c->srv;
 	if (c->pin_counted) return;
 	c->pin_counted = 1;
 	s->last_wrong = now_ms();
+	int slot = peer_slot(s, c->ip);
+	s->peer[slot].wrong++;
+	s->peer[slot].last = now_ms();
 	if (++s->bad_pins >= UPLOAD_MAX_BAD_PINS) {
 		char fresh[HTTPD_PIN_LEN + 1];
 		if (new_pin(fresh, s->pin) == 0) memcpy(s->pin, fresh, sizeof fresh);
 		s->bad_pins = 0;
 		s->gen++;
+		if (s->gen >= MAX_REGENS) s->locked = 1; /* someone keeps guessing: stop until the app is reopened */
 	}
 }
 
@@ -322,8 +371,7 @@ static int cb_begin(void *ctx, const char *name, const char *filename, size_t fl
 		}
 		return 0;
 	}
-	if (!c->pin_ok) { /* no file data is ever stored without the PIN */
-		wrong_pin(c);
+	if (!c->pin_ok) { /* no file data is ever stored without the PIN (not a guess: no strike) */
 		c->fail_status = 403;
 		return -1;
 	}
@@ -403,6 +451,10 @@ static int cb_end(void *ctx)
 		given[gl] = '\0';
 		if (c->pin_len < sizeof c->pin_buf && httpd_pin_equal(s->pin, given)) {
 			c->pin_ok = 1;
+			if (!claim_slot(c)) {
+				c->fail_status = 503;
+				return -1;
+			}
 			return 0;
 		}
 		wrong_pin(c);
@@ -467,7 +519,11 @@ static void body_bytes(Conn *c, const char *d, size_t n)
 	UploadServer *s = c->srv;
 	if ((long long) n > c->body_left) n = (size_t) c->body_left;
 	c->body_left -= (long long) n;
-	s->body_recv += (long long) n;
+	if (!c->pin_ok && (c->pre_pin += (long long) n) > PRE_PIN_MAX) { /* the PIN must come first */
+		respond(c, 403, NULL);
+		return;
+	}
+	if (s->active == (int) (c - s->c)) s->body_recv += (long long) n;
 	int rc = mp_feed(&c->mp, d, n, &CALLBACKS, c);
 	if (rc == MP_ABORT) {
 		respond(c, c->fail_status ? c->fail_status : 500, NULL);
@@ -491,8 +547,9 @@ static void head_done(Conn *c, size_t head_len)
 	if (h->chunked || h->content_length < 0) { respond(c, 411, NULL); return; }
 	if (h->content_length > HTTPD_MAX_FILE + BODY_SLACK) { respond(c, 413, NULL); return; }
 	if (!h->multipart) { respond(c, 400, NULL); return; }
+	if (s->locked) { respond(c, 403, NULL); return; }
 	if (s->active >= 0) { respond(c, 503, NULL); return; }
-	if (s->pause_ms > 0 && s->last_wrong && now_ms() - s->last_wrong < s->pause_ms) { respond(c, 429, NULL); return; }
+	if (peer_waiting(s, c->ip)) { respond(c, 429, NULL); return; }
 	char qpin[16];
 	if (httpd_query_param(h->query, "pin", qpin, sizeof qpin)) {
 		if (!httpd_pin_equal(s->pin, qpin)) {
@@ -504,10 +561,8 @@ static void head_done(Conn *c, size_t head_len)
 	struct statvfs vf;
 	if (statvfs(s->dir, &vf) == 0 && (long long) vf.f_bavail * (long long) vf.f_frsize < h->content_length)
 		{ respond(c, 507, NULL); return; }
-	s->active = (int) (c - s->c);
-	s->body_recv = 0;
-	s->body_total = h->content_length;
 	c->body_left = h->content_length;
+	if (c->pin_ok) claim_slot(c); /* PIN in the query: the slot is ours now; otherwise once the PIN part checks out */
 	mp_init(&c->mp, h->boundary);
 	c->state = C_BODY;
 	if (h->expect_continue) {
@@ -560,13 +615,22 @@ static void on_writable(Conn *c)
 static void accept_all(UploadServer *s)
 {
 	for (;;) {
-		int fd = accept(s->lfd, NULL, NULL);
+		struct sockaddr_in peer;
+		socklen_t pl = sizeof peer;
+		int fd = accept(s->lfd, (struct sockaddr *) &peer, &pl);
 		if (fd < 0) return;
 		set_flags(fd);
+		unsigned ip = peer.sin_family == AF_INET ? peer.sin_addr.s_addr : 0;
 		Conn *c = NULL;
-		for (int i = 0; i < UPLOAD_MAX_CONNS && !c; i++)
-			if (s->c[i].state == C_FREE) c = &s->c[i];
-		if (!c) {
+		int same = 0;
+		for (int i = 0; i < UPLOAD_MAX_CONNS; i++) {
+			if (s->c[i].state == C_FREE) {
+				if (!c) c = &s->c[i];
+			} else if (s->c[i].ip == ip && (s->c[i].state == C_HEAD || s->c[i].state == C_BODY)) {
+				same++; /* connections that hold a slot for long; answered ones are on their way out */
+			}
+		}
+		if (!c || same >= PER_IP_CONNS) { /* one address cannot hold every connection */
 			static const char busy[] = "HTTP/1.1 503 Service Unavailable\r\nContent-Length: 0\r\nConnection: close\r\n\r\n";
 			if (send(fd, busy, sizeof busy - 1, 0) < 0) { /* best effort */
 			}
@@ -577,6 +641,7 @@ static void accept_all(UploadServer *s)
 		c->srv = s;
 		c->fd = fd;
 		c->out_fd = -1;
+		c->ip = ip;
 		c->state = C_HEAD;
 		c->t_accept = c->t_last = now_ms();
 	}
@@ -637,3 +702,5 @@ void upload_close(UploadServer *s)
 	if (s->lfd >= 0) close(s->lfd);
 	free(s);
 }
+
+int upload_locked(const UploadServer *s) { return s->locked; }

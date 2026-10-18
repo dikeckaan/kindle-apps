@@ -579,8 +579,8 @@ static void test_e2e(void)
 	free(req);
 	T_EQ_INT(count_files(tmpdir), 0);
 	T_EQ_INT(upload_pin_generation(s), gen);
-	/* two more wrong ones: the PIN is replaced and the old one no longer works */
-	for (int i = 0; i < 2; i++) {
+	/* three more wrong ones (a file sent without any PIN is refused but is not a guess): the PIN is replaced */
+	for (int i = 0; i < 3; i++) {
 		req = build("abcdef", NULL, "a.epub", "x", 1, &len);
 		T_EQ_INT(roundtrip(s, req, len), 403);
 		free(req);
@@ -708,6 +708,71 @@ static void test_e2e(void)
 	rmdir(tmpdir);
 }
 
+/* abuse from someone on the LAN without the PIN must not lock the owner out */
+static void test_e2e_abuse(void)
+{
+	char dir[256];
+	snprintf(dir, sizeof dir, "/tmp/test_httpd_abuse.XXXXXX");
+	T_ASSERT(mkdtemp(dir) != NULL);
+	UploadServer *s = upload_open(dir, 0, 0);
+	T_ASSERT(s != NULL);
+	if (!s) return;
+	upload_set_limits(s, 5000, 0);
+	char pin[8];
+	snprintf(pin, sizeof pin, "%s", upload_pin(s));
+	size_t len;
+
+	/* 1. a PIN-less request trickling its body does not take the upload slot */
+	int holder = connect_to(upload_port(s));
+	const char *slow = "POST /upload HTTP/1.1\r\nHost: k\r\nContent-Type: multipart/form-data; boundary=" BND
+			   "\r\nContent-Length: 200000000\r\n\r\npre";
+	T_ASSERT(send(holder, slow, strlen(slow), 0) > 0);
+	for (int i = 0; i < 20; i++) upload_poll(s, 2);
+	char *req = build(NULL, pin, "ok.epub", "data", 4, &len);
+	T_EQ_INT(roundtrip(s, req, len), 200);
+	free(req);
+
+	/* 2. at most 16 KB may arrive before the PIN is verified */
+	static char big[40000];
+	memset(big, 'x', sizeof big);
+	char head[512];
+	int hl = snprintf(head, sizeof head, "POST /upload HTTP/1.1\r\nHost: k\r\nContent-Type: multipart/form-data; boundary=" BND
+			  "\r\nContent-Length: %zu\r\n\r\n--" BND "\r\nContent-Disposition: form-data; name=\"note\"\r\n\r\n", sizeof big + 200);
+	char *r2 = malloc((size_t) hl + sizeof big);
+	memcpy(r2, head, (size_t) hl);
+	memcpy(r2 + hl, big, sizeof big);
+	T_EQ_INT(roundtrip(s, r2, (size_t) hl + sizeof big), 403);
+	free(r2);
+
+	/* 3. one address cannot take every connection: a third idle one from the same address is refused */
+	int a = connect_to(upload_port(s)), b = connect_to(upload_port(s));
+	for (int i = 0; i < 10; i++) upload_poll(s, 2);
+	const char *get = "GET / HTTP/1.1\r\nHost: k\r\n\r\n";
+	T_EQ_INT(roundtrip(s, get, strlen(get)), 503); /* holder + a + b are open */
+	close(holder);
+	close(a);
+	close(b);
+	for (int i = 0; i < 10; i++) upload_poll(s, 2);
+	T_EQ_INT(roundtrip(s, get, strlen(get)), 200);
+
+	/* 4. after three PIN replacements (15 wrong guesses) the server locks: even the right PIN is refused */
+	for (int i = 0; i < 15; i++) {
+		req = build("000000", NULL, "x.epub", "d", 1, &len);
+		if (!strcmp(upload_pin(s), "000000")) req[13] = '1'; /* never guess right by accident */
+		roundtrip(s, req, len);
+		free(req);
+	}
+	T_EQ_INT(upload_locked(s), 1);
+	snprintf(pin, sizeof pin, "%s", upload_pin(s));
+	req = build(pin, NULL, "late.epub", "d", 1, &len);
+	T_EQ_INT(roundtrip(s, req, len), 403);
+	free(req);
+	upload_close(s);
+	char cmd[300];
+	snprintf(cmd, sizeof cmd, "rm -rf '%s'", dir);
+	T_EQ_INT(system(cmd), 0);
+}
+
 static void test_port_pick(void)
 {
 	/* two servers on the same range get different ports */
@@ -740,6 +805,7 @@ int main(void)
 	T_RUN(test_multipart_splits);
 	T_RUN(test_multipart_errors);
 	T_RUN(test_e2e);
+	T_RUN(test_e2e_abuse);
 	T_RUN(test_port_pick);
 	return T_DONE();
 }
