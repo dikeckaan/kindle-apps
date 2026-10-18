@@ -1,5 +1,5 @@
 # Ukrainian catalog for kindle-apps
-%%%d	%%%d
+%%%d	%d %%
 %d %s %d, %s	%d %s %d, %s
 %d/%d · güncellendi %02d:%02d	%d/%d · оновлено %02d:%02d
 %d/%d · çevrimdışı, son veri %02d:%02d	%d/%d · офлайн, дані від %02d:%02d

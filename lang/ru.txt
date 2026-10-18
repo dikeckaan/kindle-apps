@@ -1,5 +1,5 @@
 # Russian catalog for kindle-apps
-%%%d	%%%d
+%%%d	%d %%
 %d %s %d, %s	%d %s %d, %s
 %d/%d · güncellendi %02d:%02d	%d/%d · обновлено %02d:%02d
 %d/%d · çevrimdışı, son veri %02d:%02d	%d/%d · офлайн, данные от %02d:%02d
