@@ -15,8 +15,8 @@
 #define W 1072
 #define H 1448
 static unsigned char fb[W * H];
-static stbtt_fontinfo fonts[2];
-static unsigned char *font_data[2];
+static stbtt_fontinfo fonts[4];
+static unsigned char *font_data[4];
 static int shot, asleep;
 static const char *script;
 static KuiDirty dirty;
@@ -45,8 +45,8 @@ int kui_init(const char *app)
 	const char *root = getenv("KUI_ROOT");
 	if (!root || !*root) root = "build/simroot";
 	snprintf(app_name, sizeof app_name, "%s", app);
-	const char *names[2] = { "DejaVuSans.ttf", "DejaVuSans-Bold.ttf" };
-	for (int i = 0; i < 2; i++) {
+	const char *names[4] = { "DejaVuSans.ttf", "DejaVuSans-Bold.ttf", "DejaVuSerif.ttf", "DejaVuSerif-Bold.ttf" };
+	for (int i = 0; i < 4; i++) {
 		if (font_data[i]) continue;
 		snprintf(path, sizeof path, "%s/fonts/%s", root, names[i]);
 		font_data[i] = slurp(path);

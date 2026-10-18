@@ -15,6 +15,17 @@ static FBInkState st;
 static KuiRefreshPolicy policy;
 static KuiDirty dirty;
 static WFM_MODE_INDEX_T partial_wfm = WFM_GL16;
+static int has_serif;
+
+static FONT_STYLE_T style_of(KuiFont f)
+{
+	switch (f) {
+	case KUI_FONT_BOLD: return FNT_BOLD;
+	case KUI_FONT_SERIF: return has_serif ? FNT_ITALIC : FNT_REGULAR;
+	case KUI_FONT_SERIF_BOLD: return has_serif ? FNT_BOLD_ITALIC : FNT_BOLD;
+	default: return FNT_REGULAR;
+	}
+}
 
 int kui_width(void) { return (int) st.screen_width; }
 int kui_height(void) { return (int) st.screen_height; }
@@ -48,6 +59,11 @@ int kui_init(const char *app)
 	if (fbink_add_ot_font(path, FNT_REGULAR) < 0) return -1;
 	snprintf(path, sizeof path, "%s/fonts/DejaVuSans-Bold.ttf", root);
 	if (fbink_add_ot_font(path, FNT_BOLD) < 0) return -1;
+	/* newspaper-style serif (FBInk's italic slots hold it); optional: an older core package has no serif files */
+	snprintf(path, sizeof path, "%s/fonts/DejaVuSerif.ttf", root);
+	has_serif = fbink_add_ot_font(path, FNT_ITALIC) >= 0;
+	snprintf(path, sizeof path, "%s/fonts/DejaVuSerif-Bold.ttf", root);
+	has_serif = fbink_add_ot_font(path, FNT_BOLD_ITALIC) >= 0 && has_serif;
 	cfg.no_refresh = true;
 	cfg.is_bgless = true;
 
@@ -98,7 +114,7 @@ static void measure(const char *utf8, KuiFont f, int px, int *w, int *h)
 {
 	FBInkOTConfig ot = { 0 };
 	ot.size_px = (unsigned short) px;
-	ot.style = f == KUI_FONT_BOLD ? FNT_BOLD : FNT_REGULAR;
+	ot.style = style_of(f);
 	ot.compute_only = true;
 	FBInkOTFit fit = { 0 };
 	fbink_print_ot(fb, utf8, &ot, &cfg, &fit);
@@ -123,7 +139,7 @@ static void draw_text(KuiRect box, const char *utf8, KuiFont f, int px, KuiAlign
 	if (a == KUI_ALIGN_RIGHT && w < box.w) left = box.x + box.w - w;
 	FBInkOTConfig ot = { 0 };
 	ot.size_px = (unsigned short) px;
-	ot.style = f == KUI_FONT_BOLD ? FNT_BOLD : FNT_REGULAR;
+	ot.style = style_of(f);
 	ot.margins.top = (short) (box.y + (h < box.h ? (box.h - h) / 2 : 0));
 	ot.margins.left = (short) left;
 	ot.margins.right = (short) (kui_width() - (box.x + box.w));

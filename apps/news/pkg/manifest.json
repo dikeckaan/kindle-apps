@@ -3,7 +3,7 @@
   "id": "kindle-apps-news",
   "name": "Gazete",
   "author": "Kaan Dikeç",
-  "description": "Anadolu Ajansı ve TRT Haber manşetleri",
+  "description": "20 Türk haber kaynağından gazete tadında manşetler: AA, TRT, Hürriyet, Sözcü, NTV, CNN Türk, BBC Türkçe…",
   "version": [2026, 10, 8],
   "dependencies": [],
   "supported_platforms": ["kindlehf"]

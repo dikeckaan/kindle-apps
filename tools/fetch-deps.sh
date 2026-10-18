@@ -19,9 +19,10 @@ git -C "$TP/FBInk" checkout -q "$FBINK_REV"
 git -C "$TP/FBInk" submodule update -q --init --recursive
 
 DEJAVU_VER=2.37
-if [ ! -f "$TP/fonts/DejaVuSans.ttf" ]; then
+if [ ! -f "$TP/fonts/DejaVuSans.ttf" ] || [ ! -f "$TP/fonts/DejaVuSerif.ttf" ]; then
     curl -fsSL "https://github.com/dejavu-fonts/dejavu-fonts/releases/download/version_${DEJAVU_VER%.*}_${DEJAVU_VER#*.}/dejavu-fonts-ttf-${DEJAVU_VER}.tar.bz2" \
-        | tar -xjf - -C "$TP" "dejavu-fonts-ttf-${DEJAVU_VER}/ttf/DejaVuSans.ttf" "dejavu-fonts-ttf-${DEJAVU_VER}/ttf/DejaVuSans-Bold.ttf" "dejavu-fonts-ttf-${DEJAVU_VER}/LICENSE"
+        | tar -xjf - -C "$TP" "dejavu-fonts-ttf-${DEJAVU_VER}/ttf/DejaVuSans.ttf" "dejavu-fonts-ttf-${DEJAVU_VER}/ttf/DejaVuSans-Bold.ttf" \
+           "dejavu-fonts-ttf-${DEJAVU_VER}/ttf/DejaVuSerif.ttf" "dejavu-fonts-ttf-${DEJAVU_VER}/ttf/DejaVuSerif-Bold.ttf" "dejavu-fonts-ttf-${DEJAVU_VER}/LICENSE"
     mv "$TP/dejavu-fonts-ttf-${DEJAVU_VER}/ttf/"*.ttf "$TP/fonts/"
     mv "$TP/dejavu-fonts-ttf-${DEJAVU_VER}/LICENSE" "$TP/fonts/DejaVu-LICENSE"
     rm -rf "$TP/dejavu-fonts-ttf-${DEJAVU_VER}"

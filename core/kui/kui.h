@@ -105,7 +105,7 @@ void kui_lipc_set_int(const char *pub, const char *prop, int v);
 void kui_prevent_sleep(int on);
 
 /* ---- device: screen (FBInk) and input (evdev + lipc) ---- */
-typedef enum { KUI_FONT_REG, KUI_FONT_BOLD } KuiFont;
+typedef enum { KUI_FONT_REG, KUI_FONT_BOLD, KUI_FONT_SERIF, KUI_FONT_SERIF_BOLD } KuiFont; /* serif falls back to sans if missing */
 typedef enum { KUI_ALIGN_LEFT, KUI_ALIGN_CENTER, KUI_ALIGN_RIGHT } KuiAlign;
 #define KUI_ERR_TOUCH_BUSY (-2) /* touchscreen grabbed by another app (KOReader) */
 int  kui_init(const char *app); /* 0 = ok */

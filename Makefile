@@ -141,7 +141,7 @@ dist:
 	cp core/pkg/manifest.json core/pkg/install.sh core/pkg/uninstall.sh core/pkg/launch.sh build/pkg/core/
 	cp -R core/pkg/scriptlets build/pkg/core/
 	cp core/kui-run.sh $(OUT)/hub build/pkg/core/files/bin/
-	cp third_party/fonts/DejaVuSans.ttf third_party/fonts/DejaVuSans-Bold.ttf third_party/fonts/DejaVu-LICENSE build/pkg/core/files/fonts/
+	cp third_party/fonts/DejaVuSans.ttf third_party/fonts/DejaVuSans-Bold.ttf third_party/fonts/DejaVuSerif.ttf third_party/fonts/DejaVuSerif-Bold.ttf third_party/fonts/DejaVu-LICENSE build/pkg/core/files/fonts/
 	./tools/pack.sh build/pkg/core dist
 	@set -e; $(foreach p,$(PKGS),./tools/stage-app.sh $(p) build/pkg/$(p) $(PKG_$(p)_FILES); ./tools/pack.sh build/pkg/$(p) dist;)
 	./tools/gen-manifest.sh dist
