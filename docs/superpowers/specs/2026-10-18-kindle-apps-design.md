@@ -46,6 +46,12 @@ Kullanıcıyla kararlaştırılanlar (kullanıcının kararı):
     `preventScreenSaver` (rw) lipc özellikleriyle. Mevcut değeri gösterir; "Hiç uyuma"da pil
     uyarısı. Yeniden başlatmada kalıcı mı — spike'ta ölçülür, kalıcı değilse ekranda yazılır
     (kalıcı yapmak için rootfs'e yazılmaz).
+11. **Güvenlik Duvarı** (kullanıcının sonradan eklediği): menüde tek uygulama; açınca mevcut durumu söyler ve sorar
+    ("Şu an AÇIK. Kapatılsın mı?" / "Şu an KAPALI. Açılsın mı?"). Yalnız çalışma anında (`iptables`), yeniden
+    başlatmada Kindle varsayılanına döner. Daha önce `documents/`'a konan `firewall_kapat.sh`/`firewall_ac.sh`
+    scriptletlerinin yerini alır (kurulumda silinir).
+12. **SSH Sunucusu** artık Plan 2'de (kullanıcının isteği: "ssh da aynı şekilde bir app içinde olsun"), §6.3'teki
+    tanımla.
 9. **Tek uygulama çatısı — "Uygulamalar"** (kullanıcının kararı: "KOReader gibi bir app içinde
    toplayalım"): kitaplıkta **tek giriş**. Açınca simge ızgaralı ana menü; bir uygulamadan
    çıkınca menüye, menüden çıkınca Kindle'a dönülür. Kindle arayüzü bu süre boyunca duraklatılmış
@@ -274,3 +280,14 @@ Sonuçlar bu belgeye eklenir; bir varsayım çökerse tasarım güncellenip kull
 Kod yapısı ve modül ayrımı; bileşen görünüm detayları ve yerleşim; Stockfish seviye
 eşlemesi (6.3'teki hedeflerle); ikon çizimi; altın veri kaynağı; SSH parola doğrulama
 mekanizması (6.3'teki kısıtlarla); paket adları; test çatısı; CI ayrıntıları.
+
+### Spike sonuçları 2 (2026-10-18, Plan 2)
+
+- **Stockfish 11** `ARCH=armv7 COMP=gcc`, kindlehf araç zinciri. Tam statik (`-static`) ikili cihazda
+  **segfault** veriyor (statik glibc + pthread) → **karar:** glibc dinamik, `-static-libstdc++ -static-libgcc`
+  (yalnız `libc.so.6`'ya bağlı, 803 KB). Seri derleme (`-j` ile LTO aşaması sessizce düşüyor).
+- Cihazda: ~120–140 kN/s, `go movetime 2000` başlangıçta derinlik 15. UCI: `Skill Level` 0–20,
+  `UCI_Elo` 1350–2850 (`UCI_LimitStrength`).
+- **powerd:** `screenSaverTimeout` yazılabilir ve hemen geçerli (1800 → "Remaining 1799.9");
+  `preventScreenSaver 1` → "Remaining Unknown", `prevent_screen_saver:1`. Yeniden başlatmada kalıcılık
+  henüz ölçülmedi (kullanıcı yeniden başlattığında ölçülecek; o zamana kadar ekranda not gösterilir).
