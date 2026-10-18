@@ -329,3 +329,36 @@ Wi-Fi ile Yükle	Uploaden via wifi
 %d kez yanlış PIN girildi: yeni PIN üretildi.	%d keer verkeerde pincode: nieuwe pincode gemaakt.
 Alındı: %s	Ontvangen: %s
 %d-%d portları dolu ya da %s yok.	Poorten %d-%d bezet of %s ontbreekt.
+Hava durumu	Weer
+Son dakika haberleri	Laatste nieuws
+Döviz ve altın	Valuta & goud
+Tarihte bugün	Op deze dag
+Namaz vakitleri	Gebedstijden
+Ay evresi	Maanfase
+Ayarlar	Instellingen
+Hafta %d · Gün %d	Week %d · Dag %d
+Ay: %s, %%%d	Maan: %s, %d%%
+SON DAKİKA · %s	LAATSTE NIEUWS · %s
+Haber alınamadı.	Nieuws niet opgehaald.
+Kur bilgisi yok	Geen koersen
+Tarihte bugün · %d	Op deze dag · %d
+Namaz vakitleri alınamadı	Gebedstijden niet opgehaald
+Sıradaki: %s %s · %d sa %d dk	Volgende: %s %s · %d u %d min
+Haber kaynağı: %s	Nieuwsbron: %s
+Hava durumu ve namaz vakitleri Hava Durumu uygulamasındaki ilk şehre göredir. Namaz vakitleri Diyanet yöntemiyle hesaplanır.	Weer en gebedstijden volgen de eerste stad in de Weer-app. Gebedstijden volgens de Diyanet-methode.
+Haber kaynağı	Nieuwsbron
+İmsak	Fadjr
+Güneş	Zonsopkomst
+Öğle	Dhoehr
+İkindi	Asr
+Akşam	Maghrib
+Yatsı	Isja
+Yeni ay	Nieuwe maan
+Hilal (büyüyen)	Wassende sikkel
+İlk dördün	Eerste kwartier
+Şişkin ay (büyüyen)	Wassende maan
+Dolunay	Volle maan
+Şişkin ay (küçülen)	Afnemende maan
+Son dördün	Laatste kwartier
+Hilal (küçülen)	Afnemende sikkel
+Masa Panosu	Bureaubord

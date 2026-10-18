@@ -329,3 +329,36 @@ Wi-Fi ile Yükle	Envoi par Wi-Fi
 %d kez yanlış PIN girildi: yeni PIN üretildi.	PIN erroné %d fois : nouveau PIN généré.
 Alındı: %s	Reçu : %s
 %d-%d portları dolu ya da %s yok.	Ports %d-%d occupés ou %s introuvable.
+Hava durumu	Météo
+Son dakika haberleri	Flash info
+Döviz ve altın	Devises & or
+Tarihte bugün	Éphéméride
+Namaz vakitleri	Heures de prière
+Ay evresi	Phase de la lune
+Ayarlar	Réglages
+Hafta %d · Gün %d	Sem. %d · Jour %d
+Ay: %s, %%%d	Lune : %s, %d %%
+SON DAKİKA · %s	FLASH INFO · %s
+Haber alınamadı.	Actualités indisponibles.
+Kur bilgisi yok	Aucun taux de change
+Tarihte bugün · %d	Ce jour-là · %d
+Namaz vakitleri alınamadı	Heures de prière indisponibles
+Sıradaki: %s %s · %d sa %d dk	Suivante : %s %s · %d h %d min
+Haber kaynağı: %s	Source des actualités : %s
+Hava durumu ve namaz vakitleri Hava Durumu uygulamasındaki ilk şehre göredir. Namaz vakitleri Diyanet yöntemiyle hesaplanır.	La météo et les heures de prière suivent la première ville de l'app Météo. Heures de prière selon la méthode Diyanet.
+Haber kaynağı	Source des actualités
+İmsak	Fajr
+Güneş	Lever
+Öğle	Dhuhr
+İkindi	Asr
+Akşam	Maghrib
+Yatsı	Icha
+Yeni ay	Nouvelle lune
+Hilal (büyüyen)	Premier croissant
+İlk dördün	Premier quartier
+Şişkin ay (büyüyen)	Gibbeuse croissante
+Dolunay	Pleine lune
+Şişkin ay (küçülen)	Gibbeuse décroissante
+Son dördün	Dernier quartier
+Hilal (küçülen)	Dernier croissant
+Masa Panosu	Tableau de bord

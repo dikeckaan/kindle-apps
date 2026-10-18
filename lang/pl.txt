@@ -329,3 +329,36 @@ Wi-Fi ile Yükle	Wyślij przez Wi-Fi
 %d kez yanlış PIN girildi: yeni PIN üretildi.	Błędny PIN (%d razy): wygenerowano nowy PIN.
 Alındı: %s	Odebrano: %s
 %d-%d portları dolu ya da %s yok.	Porty %d-%d zajęte lub brak %s.
+Hava durumu	Pogoda
+Son dakika haberleri	Pilne wiadomości
+Döviz ve altın	Waluty i złoto
+Tarihte bugün	Tego dnia
+Namaz vakitleri	Godziny modlitw
+Ay evresi	Faza Księżyca
+Ayarlar	Ustawienia
+Hafta %d · Gün %d	Tydz. %d · Dzień %d
+Ay: %s, %%%d	Księżyc: %s, %d %%
+SON DAKİKA · %s	PILNE · %s
+Haber alınamadı.	Nie pobrano wiadomości.
+Kur bilgisi yok	Brak kursów
+Tarihte bugün · %d	Tego dnia · %d
+Namaz vakitleri alınamadı	Nie pobrano godzin modlitw
+Sıradaki: %s %s · %d sa %d dk	Następna: %s %s · %d godz. %d min
+Haber kaynağı: %s	Źródło wiadomości: %s
+Hava durumu ve namaz vakitleri Hava Durumu uygulamasındaki ilk şehre göredir. Namaz vakitleri Diyanet yöntemiyle hesaplanır.	Pogoda i godziny modlitw dotyczą pierwszego miasta w aplikacji Pogoda. Godziny modlitw według metody Diyanet.
+Haber kaynağı	Źródło wiadomości
+İmsak	Fadżr
+Güneş	Wschód
+Öğle	Zuhr
+İkindi	Asr
+Akşam	Maghrib
+Yatsı	Isza
+Yeni ay	Nów
+Hilal (büyüyen)	Przybywający sierp
+İlk dördün	Pierwsza kwadra
+Şişkin ay (büyüyen)	Przybywający garb
+Dolunay	Pełnia
+Şişkin ay (küçülen)	Ubywający garb
+Son dördün	Ostatnia kwadra
+Hilal (küçülen)	Ubywający sierp
+Masa Panosu	Panel

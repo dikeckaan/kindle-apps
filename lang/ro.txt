@@ -329,3 +329,36 @@ Wi-Fi ile Yükle	Încărcare prin Wi-Fi
 %d kez yanlış PIN girildi: yeni PIN üretildi.	PIN greșit de %d ori: s-a generat un PIN nou.
 Alındı: %s	Primit: %s
 %d-%d portları dolu ya da %s yok.	Porturile %d-%d sunt ocupate sau lipsește %s.
+Hava durumu	Vremea
+Son dakika haberleri	Știri de ultimă oră
+Döviz ve altın	Valută și aur
+Tarihte bugün	Azi în istorie
+Namaz vakitleri	Orele de rugăciune
+Ay evresi	Faza lunii
+Ayarlar	Setări
+Hafta %d · Gün %d	Săpt. %d · Ziua %d
+Ay: %s, %%%d	Luna: %s, %d %%
+SON DAKİKA · %s	ULTIMA ORĂ · %s
+Haber alınamadı.	Știrile nu au putut fi obținute.
+Kur bilgisi yok	Fără cursuri valutare
+Tarihte bugün · %d	Azi în istorie · %d
+Namaz vakitleri alınamadı	Orele de rugăciune indisponibile
+Sıradaki: %s %s · %d sa %d dk	Următoarea: %s %s · %d h %d min
+Haber kaynağı: %s	Sursa știrilor: %s
+Hava durumu ve namaz vakitleri Hava Durumu uygulamasındaki ilk şehre göredir. Namaz vakitleri Diyanet yöntemiyle hesaplanır.	Vremea și orele de rugăciune urmează primul oraș din aplicația Vremea. Orele de rugăciune folosesc metoda Diyanet.
+Haber kaynağı	Sursa știrilor
+İmsak	Fajr
+Güneş	Răsărit
+Öğle	Dhuhr
+İkindi	Asr
+Akşam	Maghrib
+Yatsı	Isha
+Yeni ay	Lună nouă
+Hilal (büyüyen)	Semilună crescătoare
+İlk dördün	Primul pătrar
+Şişkin ay (büyüyen)	Gibboasă crescătoare
+Dolunay	Lună plină
+Şişkin ay (küçülen)	Gibboasă descrescătoare
+Son dördün	Ultimul pătrar
+Hilal (küçülen)	Semilună descrescătoare
+Masa Panosu	Panou de birou

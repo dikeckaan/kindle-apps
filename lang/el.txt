@@ -329,3 +329,36 @@ Wi-Fi ile Yükle	Μεταφόρτωση μέσω Wi-Fi
 %d kez yanlış PIN girildi: yeni PIN üretildi.	Λάθος PIN %d φορές: δημιουργήθηκε νέο PIN.
 Alındı: %s	Ελήφθη: %s
 %d-%d portları dolu ya da %s yok.	Οι θύρες %d-%d είναι κατειλημμένες ή λείπει: %s.
+Hava durumu	Καιρός
+Son dakika haberleri	Έκτακτες ειδήσεις
+Döviz ve altın	Συνάλλαγμα & χρυσός
+Tarihte bugün	Σαν σήμερα
+Namaz vakitleri	Ώρες προσευχής
+Ay evresi	Φάση σελήνης
+Ayarlar	Ρυθμίσεις
+Hafta %d · Gün %d	Εβδ. %d · Ημέρα %d
+Ay: %s, %%%d	Σελήνη: %s, %d %%
+SON DAKİKA · %s	ΕΚΤΑΚΤΟ · %s
+Haber alınamadı.	Δεν λήφθηκαν ειδήσεις.
+Kur bilgisi yok	Χωρίς ισοτιμίες
+Tarihte bugün · %d	Σαν σήμερα · %d
+Namaz vakitleri alınamadı	Δεν λήφθηκαν ώρες προσευχής
+Sıradaki: %s %s · %d sa %d dk	Επόμενη: %s %s · %d ώρ. %d λεπ.
+Haber kaynağı: %s	Πηγή ειδήσεων: %s
+Hava durumu ve namaz vakitleri Hava Durumu uygulamasındaki ilk şehre göredir. Namaz vakitleri Diyanet yöntemiyle hesaplanır.	Ο καιρός και οι ώρες προσευχής αφορούν την πρώτη πόλη της εφαρμογής Καιρός. Οι ώρες προσευχής υπολογίζονται με τη μέθοδο Diyanet.
+Haber kaynağı	Πηγή ειδήσεων
+İmsak	Φατζρ
+Güneş	Ανατολή
+Öğle	Ζουχρ
+İkindi	Ασρ
+Akşam	Μαγκρίμπ
+Yatsı	Ίσα
+Yeni ay	Νέα σελήνη
+Hilal (büyüyen)	Αύξων μηνίσκος
+İlk dördün	Πρώτο τέταρτο
+Şişkin ay (büyüyen)	Αύξουσα αμφίκυρτη
+Dolunay	Πανσέληνος
+Şişkin ay (küçülen)	Φθίνουσα αμφίκυρτη
+Son dördün	Τελευταίο τέταρτο
+Hilal (küçülen)	Φθίνων μηνίσκος
+Masa Panosu	Πίνακας γραφείου

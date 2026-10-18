@@ -329,3 +329,36 @@ Wi-Fi ile Yükle	Upload via Wi-Fi
 %d kez yanlış PIN girildi: yeni PIN üretildi.	Forkert PIN %d gange: ny PIN oprettet.
 Alındı: %s	Modtaget: %s
 %d-%d portları dolu ya da %s yok.	Portene %d-%d er optaget, eller %s mangler.
+Hava durumu	Vejret
+Son dakika haberleri	Seneste nyt
+Döviz ve altın	Valuta & guld
+Tarihte bugün	På denne dag
+Namaz vakitleri	Bedetider
+Ay evresi	Månefase
+Ayarlar	Indstillinger
+Hafta %d · Gün %d	Uge %d · Dag %d
+Ay: %s, %%%d	Månen: %s, %d %%
+SON DAKİKA · %s	SENESTE NYT · %s
+Haber alınamadı.	Nyhederne kunne ikke hentes.
+Kur bilgisi yok	Ingen kurser
+Tarihte bugün · %d	På denne dag · %d
+Namaz vakitleri alınamadı	Bedetiderne kunne ikke hentes
+Sıradaki: %s %s · %d sa %d dk	Næste: %s %s · %d t %d min
+Haber kaynağı: %s	Nyhedskilde: %s
+Hava durumu ve namaz vakitleri Hava Durumu uygulamasındaki ilk şehre göredir. Namaz vakitleri Diyanet yöntemiyle hesaplanır.	Vejr og bedetider følger den første by i Vejret-appen. Bedetiderne beregnes efter Diyanet-metoden.
+Haber kaynağı	Nyhedskilde
+İmsak	Fajr
+Güneş	Solopgang
+Öğle	Dhuhr
+İkindi	Asr
+Akşam	Maghrib
+Yatsı	Isha
+Yeni ay	Nymåne
+Hilal (büyüyen)	Tiltagende segl
+İlk dördün	Første kvarter
+Şişkin ay (büyüyen)	Tiltagende måne
+Dolunay	Fuldmåne
+Şişkin ay (küçülen)	Aftagende måne
+Son dördün	Sidste kvarter
+Hilal (küçülen)	Aftagende segl
+Masa Panosu	Bordpanel

@@ -329,3 +329,36 @@ Wi-Fi ile Yükle	Per WLAN hochladen
 %d kez yanlış PIN girildi: yeni PIN üretildi.	%d-mal falsche PIN: neue PIN erzeugt.
 Alındı: %s	Empfangen: %s
 %d-%d portları dolu ya da %s yok.	Ports %d-%d belegt oder %s fehlt.
+Hava durumu	Wetter
+Son dakika haberleri	Eilmeldungen
+Döviz ve altın	Devisen & Gold
+Tarihte bugün	An diesem Tag
+Namaz vakitleri	Gebetszeiten
+Ay evresi	Mondphase
+Ayarlar	Einstellungen
+Hafta %d · Gün %d	KW %d · Tag %d
+Ay: %s, %%%d	Mond: %s, %d %%
+SON DAKİKA · %s	EILMELDUNG · %s
+Haber alınamadı.	Nachrichten nicht abrufbar.
+Kur bilgisi yok	Keine Kurse
+Tarihte bugün · %d	An diesem Tag · %d
+Namaz vakitleri alınamadı	Gebetszeiten nicht abrufbar
+Sıradaki: %s %s · %d sa %d dk	Nächstes: %s %s · %d Std. %d Min.
+Haber kaynağı: %s	Nachrichtenquelle: %s
+Hava durumu ve namaz vakitleri Hava Durumu uygulamasındaki ilk şehre göredir. Namaz vakitleri Diyanet yöntemiyle hesaplanır.	Wetter und Gebetszeiten richten sich nach der ersten Stadt der Wetter-App. Gebetszeiten nach der Diyanet-Methode.
+Haber kaynağı	Nachrichtenquelle
+İmsak	Fadschr
+Güneş	Sonnenaufgang
+Öğle	Dhuhr
+İkindi	Asr
+Akşam	Maghrib
+Yatsı	Ischa
+Yeni ay	Neumond
+Hilal (büyüyen)	Zunehmende Sichel
+İlk dördün	Erstes Viertel
+Şişkin ay (büyüyen)	Zunehmender Mond
+Dolunay	Vollmond
+Şişkin ay (küçülen)	Abnehmender Mond
+Son dördün	Letztes Viertel
+Hilal (küçülen)	Abnehmende Sichel
+Masa Panosu	Tischanzeige

@@ -329,3 +329,36 @@ Wi-Fi ile Yükle	Lähetä Wi-Fillä
 %d kez yanlış PIN girildi: yeni PIN üretildi.	Väärä PIN, kertoja: %d. Uusi PIN luotu.
 Alındı: %s	Vastaanotettu: %s
 %d-%d portları dolu ya da %s yok.	Portit %d-%d ovat varattuja tai puuttuu: %s.
+Hava durumu	Sää
+Son dakika haberleri	Tuoreet uutiset
+Döviz ve altın	Valuutat & kulta
+Tarihte bugün	Tänään historiassa
+Namaz vakitleri	Rukousajat
+Ay evresi	Kuun vaihe
+Ayarlar	Asetukset
+Hafta %d · Gün %d	Vko %d · Päivä %d
+Ay: %s, %%%d	Kuu: %s, %d %%
+SON DAKİKA · %s	TUOREET UUTISET · %s
+Haber alınamadı.	Uutisia ei saatu.
+Kur bilgisi yok	Ei valuuttakursseja
+Tarihte bugün · %d	Tänään historiassa · %d
+Namaz vakitleri alınamadı	Rukousaikoja ei saatu
+Sıradaki: %s %s · %d sa %d dk	Seuraava: %s %s · %d h %d min
+Haber kaynağı: %s	Uutislähde: %s
+Hava durumu ve namaz vakitleri Hava Durumu uygulamasındaki ilk şehre göredir. Namaz vakitleri Diyanet yöntemiyle hesaplanır.	Sää ja rukousajat määräytyvät Sää-sovelluksen ensimmäisen kaupungin mukaan. Rukousajat lasketaan Diyanet-menetelmällä.
+Haber kaynağı	Uutislähde
+İmsak	Fajr
+Güneş	Aur. nousu
+Öğle	Dhuhr
+İkindi	Asr
+Akşam	Maghrib
+Yatsı	Isha
+Yeni ay	Uusikuu
+Hilal (büyüyen)	Kasvava sirppi
+İlk dördün	1. neljännes
+Şişkin ay (büyüyen)	Kasvava kuu
+Dolunay	Täysikuu
+Şişkin ay (küçülen)	Vähenevä kuu
+Son dördün	Viim. neljännes
+Hilal (küçülen)	Vähenevä sirppi
+Masa Panosu	Pöytänäyttö

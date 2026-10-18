@@ -329,3 +329,36 @@ Wi-Fi ile Yükle	Завантаження через Wi-Fi
 %d kez yanlış PIN girildi: yeni PIN üretildi.	Неправильних спроб PIN: %d. Створено новий PIN.
 Alındı: %s	Отримано: %s
 %d-%d portları dolu ya da %s yok.	Порти %d-%d зайняті або немає %s.
+Hava durumu	Погода
+Son dakika haberleri	Термінові новини
+Döviz ve altın	Валюта і золото
+Tarihte bugün	Цього дня
+Namaz vakitleri	Час намазу
+Ay evresi	Фаза Місяця
+Ayarlar	Налаштування
+Hafta %d · Gün %d	Тиж. %d · День %d
+Ay: %s, %%%d	Місяць: %s, %d %%
+SON DAKİKA · %s	ТЕРМІНОВО · %s
+Haber alınamadı.	Не вдалося завантажити новини.
+Kur bilgisi yok	Немає курсів валют
+Tarihte bugün · %d	Цього дня · %d
+Namaz vakitleri alınamadı	Не вдалося отримати час намазу
+Sıradaki: %s %s · %d sa %d dk	Далі: %s %s · %d год %d хв
+Haber kaynağı: %s	Джерело новин: %s
+Hava durumu ve namaz vakitleri Hava Durumu uygulamasındaki ilk şehre göredir. Namaz vakitleri Diyanet yöntemiyle hesaplanır.	Погода й час намазу — за першим містом у застосунку «Погода». Час намазу розраховується за методом Diyanet.
+Haber kaynağı	Джерело новин
+İmsak	Фаджр
+Güneş	Схід
+Öğle	Зухр
+İkindi	Аср
+Akşam	Магриб
+Yatsı	Іша
+Yeni ay	Молодик
+Hilal (büyüyen)	Молодий серп
+İlk dördün	Перша чверть
+Şişkin ay (büyüyen)	Зростаючий Місяць
+Dolunay	Повня
+Şişkin ay (küçülen)	Спадний Місяць
+Son dördün	Остання чверть
+Hilal (küçülen)	Старий серп
+Masa Panosu	Настільна панель

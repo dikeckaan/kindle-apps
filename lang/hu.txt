@@ -329,3 +329,36 @@ Wi-Fi ile Yükle	Feltöltés Wi-Fin
 %d kez yanlış PIN girildi: yeni PIN üretildi.	Hibás PIN-ek száma: %d. Új PIN készült.
 Alındı: %s	Megérkezett: %s
 %d-%d portları dolu ya da %s yok.	A(z) %d-%d portok foglaltak, vagy hiányzik: %s.
+Hava durumu	Időjárás
+Son dakika haberleri	Friss hírek
+Döviz ve altın	Valuta és arany
+Tarihte bugün	Ezen a napon
+Namaz vakitleri	Imaidők
+Ay evresi	Holdfázis
+Ayarlar	Beállítások
+Hafta %d · Gün %d	%d. hét · %d. nap
+Ay: %s, %%%d	Hold: %s, %d%%
+SON DAKİKA · %s	FRISS HÍR · %s
+Haber alınamadı.	A hírek nem tölthetők be.
+Kur bilgisi yok	Nincs árfolyam
+Tarihte bugün · %d	Ezen a napon · %d
+Namaz vakitleri alınamadı	Az imaidők nem tölthetők be
+Sıradaki: %s %s · %d sa %d dk	Következő: %s %s · %d ó %d p
+Haber kaynağı: %s	Hírforrás: %s
+Hava durumu ve namaz vakitleri Hava Durumu uygulamasındaki ilk şehre göredir. Namaz vakitleri Diyanet yöntemiyle hesaplanır.	Az időjárás és az imaidők az Időjárás alkalmazás első városához igazodnak. Az imaidők a Diyanet-módszert követik.
+Haber kaynağı	Hírforrás
+İmsak	Fadzsr
+Güneş	Napkelte
+Öğle	Zuhr
+İkindi	Aszr
+Akşam	Magrib
+Yatsı	Isa
+Yeni ay	Újhold
+Hilal (büyüyen)	Növő sarló
+İlk dördün	Első negyed
+Şişkin ay (büyüyen)	Növő hold
+Dolunay	Telihold
+Şişkin ay (küçülen)	Fogyó hold
+Son dördün	Utolsó negyed
+Hilal (küçülen)	Fogyó sarló
+Masa Panosu	Asztali pult

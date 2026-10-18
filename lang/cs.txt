@@ -329,3 +329,36 @@ Wi-Fi ile Yükle	Nahrát přes Wi-Fi
 %d kez yanlış PIN girildi: yeni PIN üretildi.	Chybný PIN (%d×): vytvořen nový PIN.
 Alındı: %s	Přijato: %s
 %d-%d portları dolu ya da %s yok.	Porty %d-%d jsou obsazené nebo chybí %s.
+Hava durumu	Počasí
+Son dakika haberleri	Nejnovější zprávy
+Döviz ve altın	Měny a zlato
+Tarihte bugün	V tento den
+Namaz vakitleri	Modlitební časy
+Ay evresi	Fáze Měsíce
+Ayarlar	Nastavení
+Hafta %d · Gün %d	Týden %d · Den %d
+Ay: %s, %%%d	Měsíc: %s, %d %%
+SON DAKİKA · %s	AKTUÁLNĚ · %s
+Haber alınamadı.	Zprávy se nepodařilo načíst.
+Kur bilgisi yok	Kurzy nejsou k dispozici
+Tarihte bugün · %d	V tento den · %d
+Namaz vakitleri alınamadı	Modlitební časy se nepodařilo načíst
+Sıradaki: %s %s · %d sa %d dk	Další: %s %s · %d h %d min
+Haber kaynağı: %s	Zdroj zpráv: %s
+Hava durumu ve namaz vakitleri Hava Durumu uygulamasındaki ilk şehre göredir. Namaz vakitleri Diyanet yöntemiyle hesaplanır.	Počasí a modlitební časy se řídí prvním městem v aplikaci Počasí. Modlitební časy podle metody Diyanet.
+Haber kaynağı	Zdroj zpráv
+İmsak	Fadžr
+Güneş	Východ
+Öğle	Zuhr
+İkindi	Asr
+Akşam	Magrib
+Yatsı	Iša
+Yeni ay	Nov
+Hilal (büyüyen)	Dorůstající srpek
+İlk dördün	První čtvrť
+Şişkin ay (büyüyen)	Dorůstající Měsíc
+Dolunay	Úplněk
+Şişkin ay (küçülen)	Couvající Měsíc
+Son dördün	Poslední čtvrť
+Hilal (küçülen)	Couvající srpek
+Masa Panosu	Nástěnka

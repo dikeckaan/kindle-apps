@@ -329,3 +329,36 @@ Wi-Fi ile Yükle	Enviar por Wi-Fi
 %d kez yanlış PIN girildi: yeni PIN üretildi.	PIN errado %d vezes: novo PIN gerado.
 Alındı: %s	Recebido: %s
 %d-%d portları dolu ya da %s yok.	Portas %d-%d ocupadas ou %s não existe.
+Hava durumu	Tempo
+Son dakika haberleri	Última hora
+Döviz ve altın	Câmbio e ouro
+Tarihte bugün	Neste dia
+Namaz vakitleri	Horários de oração
+Ay evresi	Fase da lua
+Ayarlar	Configurações
+Hafta %d · Gün %d	Semana %d · Dia %d
+Ay: %s, %%%d	Lua: %s, %d %%
+SON DAKİKA · %s	ÚLTIMA HORA · %s
+Haber alınamadı.	Não foi possível obter as notícias.
+Kur bilgisi yok	Sem cotações
+Tarihte bugün · %d	Neste dia · %d
+Namaz vakitleri alınamadı	Horários de oração indisponíveis
+Sıradaki: %s %s · %d sa %d dk	Próxima: %s %s · %d h %d min
+Haber kaynağı: %s	Fonte de notícias: %s
+Hava durumu ve namaz vakitleri Hava Durumu uygulamasındaki ilk şehre göredir. Namaz vakitleri Diyanet yöntemiyle hesaplanır.	O tempo e os horários de oração seguem a primeira cidade do app Tempo. Horários pelo método Diyanet.
+Haber kaynağı	Fonte de notícias
+İmsak	Fajr
+Güneş	Nascer do sol
+Öğle	Dhuhr
+İkindi	Asr
+Akşam	Maghrib
+Yatsı	Isha
+Yeni ay	Lua nova
+Hilal (büyüyen)	Lua crescente
+İlk dördün	Quarto crescente
+Şişkin ay (büyüyen)	Gibosa crescente
+Dolunay	Lua cheia
+Şişkin ay (küçülen)	Gibosa minguante
+Son dördün	Quarto minguante
+Hilal (küçülen)	Lua minguante
+Masa Panosu	Painel de mesa

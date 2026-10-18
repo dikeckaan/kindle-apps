@@ -329,3 +329,36 @@ Wi-Fi ile Yükle	Carica via Wi-Fi
 %d kez yanlış PIN girildi: yeni PIN üretildi.	PIN errato %d volte: generato un nuovo PIN.
 Alındı: %s	Ricevuto: %s
 %d-%d portları dolu ya da %s yok.	Porte %d-%d occupate o %s mancante.
+Hava durumu	Meteo
+Son dakika haberleri	Ultim'ora
+Döviz ve altın	Valute e oro
+Tarihte bugün	Accadde oggi
+Namaz vakitleri	Orari di preghiera
+Ay evresi	Fase lunare
+Ayarlar	Impostazioni
+Hafta %d · Gün %d	Sett. %d · Giorno %d
+Ay: %s, %%%d	Luna: %s, %d %%
+SON DAKİKA · %s	ULTIM'ORA · %s
+Haber alınamadı.	Notizie non disponibili.
+Kur bilgisi yok	Nessun cambio disponibile
+Tarihte bugün · %d	Accadde oggi · %d
+Namaz vakitleri alınamadı	Orari di preghiera non disponibili
+Sıradaki: %s %s · %d sa %d dk	Prossima: %s %s · %d h %d min
+Haber kaynağı: %s	Fonte notizie: %s
+Hava durumu ve namaz vakitleri Hava Durumu uygulamasındaki ilk şehre göredir. Namaz vakitleri Diyanet yöntemiyle hesaplanır.	Meteo e orari di preghiera seguono la prima città dell'app Meteo. Orari calcolati con il metodo Diyanet.
+Haber kaynağı	Fonte notizie
+İmsak	Fajr
+Güneş	Sorgere
+Öğle	Dhuhr
+İkindi	Asr
+Akşam	Maghrib
+Yatsı	Isha
+Yeni ay	Luna nuova
+Hilal (büyüyen)	Luna crescente
+İlk dördün	Primo quarto
+Şişkin ay (büyüyen)	Gibbosa crescente
+Dolunay	Luna piena
+Şişkin ay (küçülen)	Gibbosa calante
+Son dördün	Ultimo quarto
+Hilal (küçülen)	Luna calante
+Masa Panosu	Bacheca
