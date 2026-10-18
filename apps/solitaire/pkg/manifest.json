@@ -1,0 +1,10 @@
+{
+  "manifest_version": 2,
+  "id": "kindle-apps-solitaire",
+  "name": "Solitaire",
+  "author": "Kaan Dikeç",
+  "description": "Klondike solitaire: tek veya üç kart çekme, sınırsız geri alma, otomatik tamamlama",
+  "version": [2026, 10, 7],
+  "dependencies": [],
+  "supported_platforms": ["kindlehf"]
+}

@@ -4,7 +4,7 @@
   "name": "Masa Saati",
   "author": "Kaan Dikeç",
   "description": "Büyük saat, tarih ve hava özeti; uyumadan açık kalır",
-  "version": [2026, 10, 6],
+  "version": [2026, 10, 7],
   "dependencies": [],
   "supported_platforms": ["kindlehf"]
 }

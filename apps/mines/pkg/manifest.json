@@ -1,0 +1,10 @@
+{
+  "manifest_version": 2,
+  "id": "kindle-apps-mines",
+  "name": "Mayın Tarlası",
+  "author": "Kaan Dikeç",
+  "description": "Klasik mayın tarlası: üç zorluk, bayrak kipi, kaldığın yerden devam",
+  "version": [2026, 10, 7],
+  "dependencies": [],
+  "supported_platforms": ["kindlehf"]
+}

@@ -36,7 +36,11 @@ TEST_test_wx_SRCS := apps/weather/wx.c core/net/http.c core/vendor/cjson/cJSON.c
 TEST_test_lipc_SRCS := core/kui/lipc.c core/kui/store.c
 TEST_test_fx_SRCS := apps/currency/fx.c core/net/xml.c core/kui/utf8tr.c core/vendor/cjson/cJSON.c
 TEST_test_news_SRCS := apps/news/news.c core/net/xml.c core/kui/utf8tr.c core/kui/trfmt.c
+TEST_test_wordle_SRCS := apps/wordle/wordle.c core/kui/utf8tr.c
 TEST_test_uci_SRCS := apps/chess/uci.c apps/chess/levels.c
+TEST_test_mines_SRCS := apps/mines/mines.c
+TEST_test_sudoku_SRCS := apps/sudoku/sudoku.c
+TEST_test_klondike_SRCS := apps/solitaire/klondike.c
 
 TESTS := $(patsubst tests/host/%.c,%,$(wildcard tests/host/test_*.c))
 
@@ -64,17 +68,21 @@ $(FBINK_A):
 NET_SRCS := core/net/http.c core/net/xml.c core/vendor/cjson/cJSON.c
 
 # APPS: each entry <name> builds $(OUT)/<name> from APP_<name>_SRCS + kui + FBInk
-APPS := hub game2048 chess sleep firewall ssh weather clock currency news
+APPS := hub game2048 chess sleep firewall ssh weather clock currency news wordle mines sudoku solitaire
 APP_weather_SRCS := apps/weather/main.c apps/weather/wx.c apps/weather/wxdraw.c $(NET_SRCS)
 APP_clock_SRCS := apps/clock/main.c apps/weather/wx.c apps/weather/wxdraw.c $(NET_SRCS)
 APP_currency_SRCS := apps/currency/main.c apps/currency/fx.c $(NET_SRCS)
 APP_news_SRCS := apps/news/main.c apps/news/news.c $(NET_SRCS)
+APP_wordle_SRCS := apps/wordle/main.c apps/wordle/wordle.c
 APP_ssh_SRCS := apps/ssh/main.c apps/ssh/sshcfg.c apps/ssh/sshsrv.c
 APP_firewall_SRCS := apps/firewall/main.c apps/firewall/fw.c apps/ssh/sshsrv.c
 APP_sleep_SRCS := apps/sleep/main.c apps/sleep/sleep_opts.c
 APP_chess_SRCS := apps/chess/main.c apps/chess/chess_game.c apps/chess/chess_rules.c apps/chess/levels.c apps/chess/uci.c
 APP_hub_SRCS := core/hub/main.c core/hub/appreg.c
 APP_game2048_SRCS := apps/game2048/main.c apps/game2048/g2048.c
+APP_mines_SRCS := apps/mines/main.c apps/mines/mines.c
+APP_sudoku_SRCS := apps/sudoku/main.c apps/sudoku/sudoku.c
+APP_solitaire_SRCS := apps/solitaire/main.c apps/solitaire/klondike.c
 
 $(OUT)/%: $$(APP_$$*_SRCS) $(FBINK_A) $(KUI_SRCS) $(wildcard core/kui/*.h)
 	@mkdir -p $(dir $@)
@@ -101,7 +109,7 @@ clean:
 # ---- packaging: stage each package under build/pkg/<id>, then tar it into dist/ ----
 
 # PKGS: each <appdir> under apps/ with a pkg/ dir; PKG_<appdir>_FILES go to files/ (installed next to app.ini)
-PKGS := game2048 chess sleep ssh firewall weather clock currency news
+PKGS := game2048 chess sleep ssh firewall weather clock currency news wordle mines sudoku solitaire
 PKG_game2048_FILES := $(OUT)/game2048
 PKG_chess_FILES := $(OUT)/chess $(OUT)/stockfish $(OUT)/COPYING-stockfish
 PKG_sleep_FILES := $(OUT)/sleep
@@ -111,6 +119,10 @@ PKG_weather_FILES := $(OUT)/weather
 PKG_clock_FILES := $(OUT)/clock
 PKG_currency_FILES := $(OUT)/currency
 PKG_news_FILES := $(OUT)/news
+PKG_wordle_FILES := $(OUT)/wordle apps/wordle/words/guesses.txt apps/wordle/words/answers.txt apps/wordle/words/LICENSE
+PKG_mines_FILES := $(OUT)/mines
+PKG_sudoku_FILES := $(OUT)/sudoku
+PKG_solitaire_FILES := $(OUT)/solitaire
 
 dist:
 	@for f in $(OUT)/hub $(foreach p,$(PKGS),$(PKG_$(p)_FILES)); do [ -f $$f ] || { echo "missing $$f: run make build first"; exit 1; }; done
@@ -131,7 +143,7 @@ SSH    := sshpass -p '' ssh -o PubkeyAuthentication=no -p $(PORT) root@$(KINDLE)
 
 # Installs dist packages the way kpm does: unpack into a staging dir and run install.sh there (core first).
 deploy:
-	@for id in kindle-apps-core kindle-apps-2048 kindle-apps-chess kindle-apps-sleep kindle-apps-ssh kindle-apps-firewall kindle-apps-weather kindle-apps-clock kindle-apps-currency kindle-apps-news; do \
+	@for id in kindle-apps-core kindle-apps-2048 kindle-apps-chess kindle-apps-sleep kindle-apps-ssh kindle-apps-firewall kindle-apps-weather kindle-apps-clock kindle-apps-currency kindle-apps-news kindle-apps-wordle kindle-apps-mines kindle-apps-sudoku kindle-apps-solitaire; do \
 		k=$$(ls dist/packages/$$id/*.kpkg | tail -1); echo "deploy $$k"; \
 		cat $$k | $(SSH) "S=/mnt/us/kindle-apps-staging/$$id; rm -rf \$$S; mkdir -p \$$S && cd \$$S && tar xzf - && sh ./install.sh && cd / && rm -rf \$$S && echo installed $$id" || exit 1; \
 	done
