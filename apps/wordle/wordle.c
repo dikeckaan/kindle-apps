@@ -73,8 +73,12 @@ int wl_normalize(const char *in, char out[WL_BYTES])
 		int cp;
 		in += kui_utf8_decode(in, &cp);
 		cp = kui_tr_fold_circumflex(kui_tr_lower(cp));
-		if (++n > WL_LEN) return -1;
-		o += kui_utf8_encode(cp, out + o);
+		if (++n > WL_LEN || cp == 0xFFFD) return -1; /* too long, or not valid UTF-8 */
+		char enc[4];
+		int k = kui_utf8_encode(cp, enc);
+		if (o + k >= WL_BYTES) return -1; /* never write past the output */
+		memcpy(out + o, enc, (size_t) k);
+		o += k;
 	}
 	out[o] = '\0';
 	return n;
@@ -155,12 +159,24 @@ int wl_stats_format(const WlStats *s, char *buf, int cap)
 	return n < cap ? n : -1;
 }
 
+/* chart counts are non-negative and add up to at most the games won */
+static int dist_ok(const WlStats *t)
+{
+	long sum = 0;
+	for (int i = 0; i < WL_TRIES; i++) {
+		if (t->dist[i] < 0) return 0;
+		sum += t->dist[i];
+	}
+	return sum <= t->won;
+}
+
 int wl_stats_parse(const char *buf, WlStats *s)
 {
 	WlStats t;
 	if (sscanf(buf, "v1 %d %d %d %d %d %d %d %d %d %d", &t.played, &t.won, &t.streak, &t.best, &t.dist[0], &t.dist[1], &t.dist[2],
 		   &t.dist[3], &t.dist[4], &t.dist[5]) != 10 ||
-	    t.played < 0 || t.won < 0 || t.won > t.played || t.streak < 0 || t.best < t.streak) {
+	    t.played < 0 || t.played > 1000000 || t.won < 0 || t.won > t.played || t.streak < 0 || t.streak > t.won ||
+	    t.best < t.streak || t.best > t.won || !dist_ok(&t)) {
 		memset(s, 0, sizeof *s);
 		return -1;
 	}

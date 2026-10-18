@@ -85,7 +85,7 @@ int kl_draw(Klondike *k)
 		memset(s->c[KL_WASTE], 0, sizeof s->c[KL_WASTE]); /* unused slots stay zero: states compare with memcmp */
 		return 1;
 	}
-	for (int i = 0; i < k->draw && s->n[KL_STOCK]; i++) {
+	for (int i = 0; i < k->draw && s->n[KL_STOCK] && s->n[KL_WASTE] < KL_MAXPILE; i++) {
 		s->c[KL_WASTE][s->n[KL_WASTE]++] = s->c[KL_STOCK][--s->n[KL_STOCK]];
 		s->c[KL_STOCK][s->n[KL_STOCK]] = 0;
 	}
@@ -101,6 +101,7 @@ int kl_can_move(const Klondike *k, int from, int index, int to)
 	if (from < KL_WASTE || from >= KL_PILES || to < KL_F0 || to >= KL_PILES || from == to) return 0;
 	int n = s->n[from];
 	if (index < 0 || index >= n) return 0;
+	if (s->n[to] + (n - index) > KL_MAXPILE) return 0; /* never write past a pile */
 	if (is_tab(from) ? index < s->down[from - KL_T0] : index != n - 1) return 0;
 	int c = s->c[from][index];
 	if (is_found(to)) {
@@ -262,6 +263,11 @@ static const char *read_state(const char *p, KlState *s)
 		}
 	}
 	if (*p != '\n' || total != 52) return NULL;
+	/* limits every real game keeps (the drawing and move code relies on them): stock and waste share 24 cards,
+	 * column t has at most t face-down cards and at most 13 face-up ones on them */
+	if (s->n[KL_STOCK] + s->n[KL_WASTE] > 24) return NULL;
+	for (int t = 0; t < 7; t++)
+		if (s->down[t] > t || s->n[KL_T0 + t] > s->down[t] + 13) return NULL;
 	for (int f = KL_F0; f < KL_F0 + 4; f++)
 		for (int i = 0; i < s->n[f]; i++)
 			if (kl_rank(s->c[f][i]) != i + 1 || kl_suit(s->c[f][i]) != kl_suit(s->c[f][0])) return NULL;

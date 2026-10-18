@@ -392,8 +392,55 @@ static void test_load_rejects_garbage(void)
 	kl_free(&l);
 }
 
+/* saves of positions no real game can reach (crafted files on /mnt/us) must be refused */
+static void craft(Klondike *k)
+{
+	kl_init(k);
+	k->draw = 1;
+	memset(&k->s, 0, sizeof k->s);
+}
+
+static void test_load_rejects_impossible_positions(void)
+{
+	static char buf[65536];
+	Klondike k, l;
+	/* 24 stock + 24 waste + A-4 of spades: stock and waste can never hold 48 cards together */
+	craft(&k);
+	for (int c = 0; c < 4; c++) k.s.c[KL_F0][k.s.n[KL_F0]++] = (unsigned char) c;
+	for (int c = 4; c < 28; c++) k.s.c[KL_STOCK][k.s.n[KL_STOCK]++] = (unsigned char) c;
+	for (int c = 28; c < 52; c++) k.s.c[KL_WASTE][k.s.n[KL_WASTE]++] = (unsigned char) c;
+	T_ASSERT(kl_save(&k, buf, sizeof buf) > 0);
+	kl_init(&l);
+	T_EQ_INT(kl_load(&l, buf), -1);
+	kl_free(&l);
+	kl_free(&k);
+	/* column 0 with 23 face-down cards under a king: column t never has more than t face-down cards */
+	craft(&k);
+	int col = KL_T0, used = 0;
+	for (int c = 0; c < 52 && k.s.n[col] < 23; c++)
+		if (kl_rank(c) != 13) k.s.c[col][k.s.n[col]++] = (unsigned char) c;
+	k.s.down[0] = 23;
+	k.s.c[col][k.s.n[col]++] = 12; /* K of spades, face up */
+	for (int c = 0; c < 52; c++) {
+		int inpile = 0;
+		for (int i = 0; i < k.s.n[col]; i++) inpile |= k.s.c[col][i] == c;
+		if (inpile) continue;
+		if (k.s.n[KL_STOCK] < 20) k.s.c[KL_STOCK][k.s.n[KL_STOCK]++] = (unsigned char) c;
+		else k.s.c[KL_WASTE][k.s.n[KL_WASTE]++] = (unsigned char) c;
+	}
+	T_ASSERT(kl_save(&k, buf, sizeof buf) > 0);
+	kl_init(&l);
+	T_EQ_INT(kl_load(&l, buf), -1);
+	kl_free(&l);
+	kl_free(&k);
+	(void) used;
+	/* a valid column can still overflow when a run is dropped on it: column 6 with 6 down + K..2 (12 up) is fine,
+	 * but 6 down + 13 up + more is impossible */
+}
+
 int main(void)
 {
+	T_RUN(test_load_rejects_impossible_positions);
 	T_RUN(test_deal);
 	T_RUN(test_tableau_moves);
 	T_RUN(test_foundation_and_waste_moves);

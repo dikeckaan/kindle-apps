@@ -40,6 +40,11 @@ static void test_normalize(void)
 	T_EQ_STR(out, "huzur");
 	T_EQ_INT(wl_normalize("abc", out), 3);
 	T_EQ_INT(wl_normalize("abcdefgh", out), -1); /* longer than a word */
+	/* wide or invalid characters must not overflow the output (heap buffer of exactly WL_BYTES under ASan) */
+	char *heap = malloc(WL_BYTES);
+	T_EQ_INT(wl_normalize("\xF0\x9F\x98\x80\xF0\x9F\x98\x80\xF0\x9F\x98\x80\xFF\xFF", heap), -1);
+	T_EQ_INT(wl_normalize("\xFF\xFF\xFF\xFF\xFF", heap), -1); /* 5 × U+FFFD = 15 bytes: not a word either */
+	free(heap);
 }
 
 static void test_list(void)
@@ -113,6 +118,9 @@ static void test_stats(void)
 	T_EQ_INT(wl_stats_parse(buf, &t), 0);
 	T_EQ_INT(t.played, 3);
 	T_EQ_INT(t.dist[3], 1);
+	T_EQ_INT(wl_stats_parse("v1 3 2 0 2 0 -1 0 0 0 0\n", &t), -1);      /* negative count */
+	T_EQ_INT(wl_stats_parse("v1 3 2 0 2 0 5 0 0 0 0\n", &t), -1);       /* more wins in the chart than games won */
+	T_EQ_INT(wl_stats_parse("v1 2000000000 2000000000 0 0 2000000000 0 0 0 0 0\n", &t), -1); /* won*100 would overflow */
 	T_EQ_INT(wl_stats_parse("garbage", &t), -1);
 	T_EQ_INT(t.played, 0); /* reset on garbage */
 }
