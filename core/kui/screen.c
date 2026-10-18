@@ -7,6 +7,7 @@
 
 int kui_input_open(void);
 void kui_input_close(void);
+int kui_input_asleep(void);
 
 static int fb = -1;
 static FBInkConfig cfg;
@@ -134,6 +135,10 @@ void kui_mark_dirty(KuiRect r) { kui_dirty_add(&dirty, r); }
 void kui_flush(int screen_changed)
 {
 	if (!screen_changed && dirty.n == 0) return;
+	if (kui_input_asleep()) { /* never draw over the screensaver; KUI_EV_WAKE redraws everything */
+		dirty.n = 0;
+		return;
+	}
 	FBInkConfig c = cfg;
 	if (kui_policy_next(&policy, screen_changed) == KUI_UPD_FULL) {
 		c.wfm_mode = WFM_GC16;

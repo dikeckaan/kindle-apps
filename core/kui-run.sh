@@ -59,8 +59,16 @@ usleep 300000 2>/dev/null || sleep 1
 echo "=== $(date) start $APP_ID: $*" >> "$LOG"
 "$@" >> "$LOG" 2>&1 &
 CHILD=$!
-# Forward termination to the app, then fall through to restore().
-trap 'kill -TERM $CHILD 2>/dev/null; wait $CHILD; exit 130' INT TERM HUP
+# Forward termination to the app; if it is wedged, kill it after 5 s so the UI always comes back.
+stop_child() {
+    kill -TERM "$CHILD" 2>/dev/null
+    i=0
+    while kill -0 "$CHILD" 2>/dev/null && [ $i -lt 50 ]; do usleep 100000 2>/dev/null || sleep 1; i=$((i + 1)); done
+    kill -KILL "$CHILD" 2>/dev/null
+    wait "$CHILD" 2>/dev/null
+    exit 130
+}
+trap stop_child INT TERM HUP
 wait $CHILD
 RC=$?
 echo "=== $(date) exit $APP_ID rc=$RC" >> "$LOG"

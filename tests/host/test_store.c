@@ -53,6 +53,22 @@ static void test_cfg_set_then_get(void)
 	T_EQ_INT(kui_cfg_get_int(path, "full_refresh", 25), 25); /* prefix must not match */
 }
 
+static void test_cfg_set_stays_bounded_near_buffer_limit(void)
+{
+	char path[160], big[4100];
+	snprintf(path, sizeof path, "%s/settings_big", kui_data_dir("demo"));
+	int n = 0;
+	for (int i = 0; n < 4088; i++) n += snprintf(big + n, sizeof big - (size_t) n, "k%04d=1\n", i);
+	T_EQ_INT(kui_write_atomic(path, big, n), 0);
+	/* adding a key to an almost-full file must not overflow; it fails cleanly instead */
+	char key[200];
+	memset(key, 'x', 180);
+	key[180] = '\0';
+	int rc = kui_cfg_set_int(path, key, 123456789);
+	T_ASSERT(rc == 0 || rc == -1);
+	T_EQ_INT(kui_cfg_get_int(path, "k0000", -1), 1);
+}
+
 int main(void)
 {
 	if (!mkdtemp(root)) return 2;
@@ -62,5 +78,6 @@ int main(void)
 	T_RUN(test_read_missing_file_returns_minus1);
 	T_RUN(test_cfg_missing_key_returns_default);
 	T_RUN(test_cfg_set_then_get);
+	T_RUN(test_cfg_set_stays_bounded_near_buffer_limit);
 	return T_DONE();
 }

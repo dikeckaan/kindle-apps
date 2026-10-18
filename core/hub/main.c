@@ -1,6 +1,7 @@
 /* "Uygulamalar": the single entry in the Kindle library. Shows installed apps in a grid and runs the
  * chosen one as a child process while the Kindle UI stays paused. */
 #include <errno.h>
+#include <fcntl.h>
 #include <signal.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -68,6 +69,14 @@ static int run_app(const HubApp *a)
 		signal(SIGTERM, SIG_DFL);
 		signal(SIGINT, SIG_DFL);
 		signal(SIGHUP, SIG_DFL);
+		char log[320]; /* each app logs to logs/<id>.log, not into the hub's log */
+		snprintf(log, sizeof log, "%s/logs/%s.log", root(), a->id);
+		int fd = open(log, O_WRONLY | O_CREAT | O_APPEND, 0644);
+		if (fd >= 0) {
+			dup2(fd, 1);
+			dup2(fd, 2);
+			close(fd);
+		}
 		execl(a->exec, a->exec, (char *) NULL);
 		_exit(127);
 	}
@@ -116,7 +125,7 @@ int main(void)
 				char msg[96];
 				snprintf(msg, sizeof msg, "%s beklenmedik şekilde kapandı", apps[k].name);
 				const char *ok[] = { "Tamam" };
-				kui_dialog("Hata", msg, ok, 1);
+				kui_dialog("Hata", msg, ok, 1, draw);
 				draw();
 			}
 			break;

@@ -105,7 +105,7 @@ static int after_move(void)
 	if (!won_shown && g2048_max_tile(&game) >= 2048) {
 		won_shown = 1;
 		const char *ch[] = { "Devam", "Yeni oyun" };
-		int k = kui_dialog("Tebrikler!", "2048'e ulaştın.", ch, 2);
+		int k = kui_dialog("Tebrikler!", "2048'e ulaştın.", ch, 2, draw_all);
 		if (k == 1) new_game();
 		else draw_all();
 	}
@@ -113,7 +113,7 @@ static int after_move(void)
 		char msg[64];
 		snprintf(msg, sizeof msg, "Skor: %d", game.score);
 		const char *ch[] = { "Yeni oyun", "Kapat" };
-		int k = kui_dialog("Oyun bitti", msg, ch, 2);
+		int k = kui_dialog("Oyun bitti", msg, ch, 2, draw_all);
 		if (k == 0) new_game();
 		else return 1;
 	}
@@ -141,6 +141,10 @@ int main(void)
 	}
 	won_shown = g2048_max_tile(&game) >= 2048;
 	draw_all();
+	if (!g2048_can_move(&game) && after_move()) { /* a finished game was saved: offer a new one */
+		kui_quit();
+		return 0;
+	}
 
 	for (int quit = 0; !quit;) {
 		KuiEvent e = kui_next_event(-1);
@@ -153,7 +157,7 @@ int main(void)
 			if (t == KUI_BTN_EXIT) { quit = 1; break; }
 			if (t == KUI_BTN_MENU) {
 				const char *ch[] = { "Evet", "Hayır" };
-				if (kui_dialog("Yeni oyun", "Mevcut oyun silinsin mi?", ch, 2) == 0) new_game();
+				if (kui_dialog("Yeni oyun", "Mevcut oyun silinsin mi?", ch, 2, draw_all) == 0) new_game();
 				else draw_all();
 				break;
 			}

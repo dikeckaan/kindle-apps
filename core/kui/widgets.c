@@ -24,8 +24,9 @@ void kui_button(const KuiButton *b, int pressed)
 	kui_mark_dirty(b->r);
 }
 
-int kui_dialog(const char *title, const char *msg, const char **choices, int n)
+int kui_dialog(const char *title, const char *msg, const char **choices, int n, void (*redraw_bg)(void))
 {
+	int woke = 0;
 	int w = kui_width(), h = kui_height();
 	KuiRect box = { 60, h / 2 - 330, w - 120, 660 };
 	KuiButton bs[4];
@@ -40,11 +41,16 @@ int kui_dialog(const char *title, const char *msg, const char **choices, int n)
 		kui_text((KuiRect){ box.x + 30, box.y + 150, box.w - 60, 300 }, msg, KUI_FONT_REG, 46, KUI_ALIGN_CENTER, 0);
 		for (int i = 0; i < n; i++) kui_button(&bs[i], 0);
 		kui_mark_dirty(box);
-		kui_flush(0);
+		kui_flush(woke); /* after a wake the screensaver covered everything: full refresh */
+		woke = 0;
 		for (;;) {
 			KuiEvent e = kui_next_event(-1);
 			if (e.type == KUI_EV_QUIT) return -1;
-			if (e.type == KUI_EV_WAKE) break; /* redraw the dialog */
+			if (e.type == KUI_EV_WAKE) {
+				if (redraw_bg) redraw_bg();
+				woke = 1;
+				break;
+			}
 			if (e.type != KUI_EV_TAP) continue;
 			if (kui_rect_contains(kui_topbar_exit_rect(), e.x, e.y)) return -1;
 			int id = kui_buttons_hit(bs, n, e.x, e.y);

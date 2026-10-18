@@ -1,4 +1,5 @@
 #include <errno.h>
+#include <stdarg.h>
 #include <fcntl.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -84,6 +85,18 @@ int kui_cfg_get_int(const char *path, const char *key, int def)
 	return end == v ? def : (int) n;
 }
 
+/* appends to out[*o]; returns -1 (and leaves *o unchanged) when it would not fit */
+static int append(char *out, size_t cap, int *o, const char *fmt, ...)
+{
+	va_list ap;
+	va_start(ap, fmt);
+	int n = vsnprintf(out + *o, cap - (size_t) *o, fmt, ap);
+	va_end(ap);
+	if (n < 0 || (size_t) (*o + n) >= cap) return -1;
+	*o += n;
+	return 0;
+}
+
 int kui_cfg_set_int(const char *path, const char *key, int val)
 {
 	char in[4096], out[4200];
@@ -93,15 +106,17 @@ int kui_cfg_set_int(const char *path, const char *key, int val)
 	for (char *line = in; *line;) {
 		char *nl = strchr(line, '\n');
 		int len = nl ? (int) (nl - line) : (int) strlen(line);
+		int rc = 0;
 		if (strncmp(line, key, kl) == 0 && line[kl] == '=') {
-			o += snprintf(out + o, sizeof out - (size_t) o, "%s=%d\n", key, val);
+			rc = append(out, sizeof out, &o, "%s=%d\n", key, val);
 			found = 1;
 		} else if (len > 0) {
-			o += snprintf(out + o, sizeof out - (size_t) o, "%.*s\n", len, line);
+			rc = append(out, sizeof out, &o, "%.*s\n", len, line);
 		}
+		if (rc < 0) return -1;
 		if (!nl) break;
 		line = nl + 1;
 	}
-	if (!found) o += snprintf(out + o, sizeof out - (size_t) o, "%s=%d\n", key, val);
+	if (!found && append(out, sizeof out, &o, "%s=%d\n", key, val) < 0) return -1;
 	return kui_write_atomic(path, out, o);
 }

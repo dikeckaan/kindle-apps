@@ -5,7 +5,7 @@
 #   make deploy KINDLE=ip   install dist packages on a device over SSH
 
 HOST_CC     ?= cc
-HOST_CFLAGS := -std=c11 -Wall -Wextra -Werror -g -D_DARWIN_C_SOURCE -D_DEFAULT_SOURCE -D_POSIX_C_SOURCE=200809L -Icore/kui -Iapps -Icore
+HOST_CFLAGS := -std=c11 -Wall -Wextra -Werror -g -fsanitize=address,undefined -fno-omit-frame-pointer -D_DARWIN_C_SOURCE -D_DEFAULT_SOURCE -D_POSIX_C_SOURCE=200809L -Icore/kui -Iapps -Icore
 DOCKER_IMG  := kindle-apps-tc
 
 .SECONDEXPANSION:

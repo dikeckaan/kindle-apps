@@ -77,6 +77,7 @@ void kui_topbar(const char *title, const char *right_label); /* right_label may 
 void kui_button(const KuiButton *b, int pressed);
 /* Modal dialog drawn over the current screen; returns the chosen index, -1 on ✕/quit.
  * The caller redraws its screen afterwards. */
-int  kui_dialog(const char *title, const char *msg, const char **choices, int n);
+int  kui_dialog(const char *title, const char *msg, const char **choices, int n, void (*redraw_bg)(void));
+/* redraw_bg (may be NULL) repaints the screen behind the dialog after a wake from the screensaver. */
 
 #endif

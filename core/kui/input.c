@@ -17,12 +17,18 @@
 
 int  kui_input_open(void);
 void kui_input_close(void);
+int  kui_input_asleep(void);
+
 
 static int touch_fd = -1, lipc_fd = -1;
 static pid_t lipc_pid = -1;
 static volatile sig_atomic_t quit_requested;
 static KuiGesture gesture;
 static int slot, down, tx, ty, changed;
+static int asleep;          /* between goingToScreenSaver and outOfScreenSaver */
+static long lipc_respawn_ms; /* last helper (re)start, to rate-limit respawns */
+
+int kui_input_asleep(void) { return asleep; }
 
 static void on_signal(int sig)
 {
@@ -78,6 +84,17 @@ static void open_lipc(void)
 	}
 	lipc_fd = pfd[0];
 	fcntl(lipc_fd, F_SETFL, O_NONBLOCK);
+	lipc_respawn_ms = now_ms();
+}
+
+/* the helper exited (e.g. `killall lipc-wait-event`): reap it, and respawn at most every 5 s */
+static void lipc_lost(void)
+{
+	close(lipc_fd);
+	lipc_fd = -1;
+	if (lipc_pid > 0) waitpid(lipc_pid, NULL, WNOHANG);
+	lipc_pid = -1;
+	if (now_ms() - lipc_respawn_ms >= 5000) open_lipc();
 }
 
 int kui_input_open(void)
@@ -92,7 +109,7 @@ int kui_input_open(void)
 	if (touch_fd < 0) return touch_fd;
 	open_lipc();
 	memset(&gesture, 0, sizeof gesture);
-	slot = down = changed = 0;
+	slot = down = changed = asleep = 0;
 	return 0;
 }
 
@@ -128,6 +145,7 @@ static KuiEvent drain_touch(void)
 			else if (ev.code == ABS_MT_POSITION_Y) { ty = ev.value; changed = 1; }
 		} else if (ev.type == EV_SYN && ev.code == SYN_REPORT && changed) {
 			changed = 0;
+			if (asleep) continue; /* screensaver is up: input is not for us */
 			out = kui_gesture_feed(&gesture, down, tx, ty, now_ms());
 			if (out.type != KUI_EV_NONE) return out;
 		}
@@ -144,20 +162,32 @@ KuiEvent kui_next_event(int timeout_ms)
 		struct pollfd pf[2] = { { touch_fd, POLLIN, 0 }, { lipc_fd, POLLIN, 0 } };
 		long left = timeout_ms < 0 ? -1 : deadline - now_ms();
 		if (timeout_ms >= 0 && left <= 0) return none;
+		if (lipc_fd < 0 && (left < 0 || left > 5000)) left = 5000; /* wake up to respawn the helper */
 		int n = poll(pf, lipc_fd >= 0 ? 2 : 1, (int) left);
+		if (n == 0 && timeout_ms < 0) continue;
 		if (n < 0 && errno == EINTR) continue;
 		if (n <= 0) return none;
-		if (lipc_fd >= 0 && (pf[1].revents & POLLIN)) {
+		if (lipc_fd < 0 && lipc_pid < 0 && now_ms() - lipc_respawn_ms >= 5000) open_lipc();
+		if (lipc_fd >= 0 && pf[1].revents) {
 			char buf[256];
-			ssize_t r = read(lipc_fd, buf, sizeof buf - 1);
+			ssize_t r = (pf[1].revents & POLLIN) ? read(lipc_fd, buf, sizeof buf - 1) : 0;
 			if (r > 0) {
 				buf[r] = '\0';
+				if (strstr(buf, "goingToScreenSaver")) {
+					asleep = 1;
+					memset(&gesture, 0, sizeof gesture);
+				}
 				if (strstr(buf, "outOfScreenSaver")) {
+					asleep = 0;
 					memset(&gesture, 0, sizeof gesture);
 					return (KuiEvent){ KUI_EV_WAKE, 0, 0, KUI_DIR_NONE };
 				}
+			} else if (r == 0 || (r < 0 && errno != EAGAIN)) {
+				lipc_lost(); /* POLLHUP/EOF: without this poll() would spin at 100% CPU */
 			}
 		}
+		if (pf[0].revents & (POLLERR | POLLHUP | POLLNVAL))
+			return (KuiEvent){ KUI_EV_QUIT, 0, 0, KUI_DIR_NONE };
 		if (pf[0].revents & POLLIN) {
 			KuiEvent e = drain_touch();
 			if (e.type != KUI_EV_NONE) return e;
