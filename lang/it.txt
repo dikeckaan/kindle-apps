@@ -381,3 +381,89 @@ Tüm uygulamalar güncel	Tutte le app sono aggiornate
 Bazı güncellemeler kurulamadı	Alcuni aggiornamenti non sono stati installati
 güncellendi %02d:%02d	aggiornato %02d:%02d
 çevrimdışı, son veri %02d:%02d	offline, ultimi dati %02d:%02d
+Baştan başla	Ricomincia
+Başka bulmaca	Altro problema
+Sonraki hamle	Mossa successiva
+Çözümü göster	Mostra soluzione
+Satranç Bulmacası	Problema di scacchi
+Günün bulmacası	Problema del giorno
+Siyah oynar	Muove il Nero
+Beyaz oynar	Muove il Bianco
+Puan %d	Punteggio %d
+Bulmaca: lichess.org · çevrimdışı, son veri %s	Problema: lichess.org · offline, ultimi dati %s
+Bulmaca: lichess.org · güncellendi %s	Problema: lichess.org · aggiornato %s
+Bulmaca: lichess.org	Problema: lichess.org
+Daha önce çözüldü · Seri: %d	Già risolto · Serie: %d
+Hamlenizi yapın · Seri: %d	Tocca a te · Serie: %d
+Bulmaca alınamadı	Problema non disponibile
+Wi-Fi bağlantısını kontrol edin.	Controlla la connessione Wi-Fi.
+Çözüm gösterildi	Soluzione mostrata
+Çözüldü (hatalı) · Seri: %d	Risolto (con un errore) · Serie: %d
+Doğru! Çözüldü · Seri: %d	Corretto! Risolto · Serie: %d
+Doğru! Devam edin	Corretto! Continua
+Doğru değil, tekrar dene	Non proprio, riprova
+Doğru!	Corretto!
+Çözüm: %s · bitti	Soluzione: %s · fatto
+Çözüm: %s (%d/%d)	Soluzione: %s (%d/%d)
+Çözüldü	Risolto
+Hatalı çözüldü	Risolto con un errore
+Geçmiş	Cronologia
+Seri: %d · En iyi seri: %d	Serie: %d · Serie migliore: %d
+Çözülen: %d / %d	Risolti: %d / %d
+Henüz çözülen bulmaca yok.	Nessun problema ancora risolto.
+Bulmaca alınamadı.\nWi-Fi bağlantısını kontrol edin.	Problema non disponibile.\nControlla la connessione Wi-Fi.
+İpucu: işaretli taşı oynayın	Suggerimento: muovi il pezzo segnato
+1 hamlede mat	Matto in 1
+2 hamlede mat	Matto in 2
+3 hamlede mat	Matto in 3
+4 hamlede mat	Matto in 4
+5+ hamlede mat	Matto in 5 o più
+Mat	Scacco matto
+Çatal	Forchetta
+Açmaz	Inchiodatura
+Şiş	Infilata
+Fedâ	Sacrificio
+Açılış	Apertura
+Oyun ortası	Mediogioco
+Oyun sonu	Finale
+Açarak saldırı	Attacco di scoperta
+Açarak şah	Scacco di scoperta
+Çifte şah	Scacco doppio
+Korumasız taş	Pezzo in presa
+Kapana kısılan taş	Pezzo intrappolato
+Çekme	Attrazione
+Saptırma	Deviazione
+Araya girme	Interferenza
+Ara hamle	Mossa intermedia
+Yol açma	Sgombero
+Sessiz hamle	Mossa tranquilla
+Savunma hamlesi	Mossa difensiva
+Röntgen saldırısı	Attacco ai raggi X
+Zugzwang	Zugzwang
+Küçük terfi	Sottopromozione
+Rok	Arrocco
+Geçerken alma	Presa en passant
+Son sıra matı	Matto del corridoio
+Boğmaca mat	Matto affogato
+Anastasia matı	Matto di Anastasia
+Arap matı	Matto arabo
+Boden matı	Matto di Boden
+Çifte fil matı	Matto dei due alfieri
+Kırlangıç matı	Matto a coda di rondine
+Kanca matı	Matto ad uncino
+Köşe matı	Matto nell'angolo
+Şah kanadı saldırısı	Attacco sul lato di re
+Vezir kanadı saldırısı	Attacco sul lato di donna
+f2/f7 saldırısı	Attacco a f2 o f7
+Savunanı alma	Cattura il difensore
+Açıkta şah	Re esposto
+İlerlemiş piyon	Pedone avanzato
+Ezici üstünlük	Schiacciante
+Üstünlük	Vantaggio
+Eşitlik	Parità
+Piyon oyun sonu	Finale di pedoni
+Kale oyun sonu	Finale di torri
+Vezir oyun sonu	Finale di donne
+Fil oyun sonu	Finale di alfieri
+At oyun sonu	Finale di cavalli
+Vezir ve kale oyun sonu	Finale di donna e torre

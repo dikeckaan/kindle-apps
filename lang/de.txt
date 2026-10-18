@@ -381,3 +381,89 @@ Tüm uygulamalar güncel	Alle Apps sind aktuell
 Bazı güncellemeler kurulamadı	Einige Updates konnten nicht installiert werden
 güncellendi %02d:%02d	aktualisiert %02d:%02d
 çevrimdışı, son veri %02d:%02d	offline, Stand %02d:%02d
+Baştan başla	Neu beginnen
+Başka bulmaca	Andere Aufgabe
+Sonraki hamle	Nächster Zug
+Çözümü göster	Lösung zeigen
+Satranç Bulmacası	Schachaufgabe
+Günün bulmacası	Aufgabe des Tages
+Siyah oynar	Schwarz am Zug
+Beyaz oynar	Weiß am Zug
+Puan %d	Wertung %d
+Bulmaca: lichess.org · çevrimdışı, son veri %s	Aufgabe: lichess.org · offline, letzte Daten %s
+Bulmaca: lichess.org · güncellendi %s	Aufgabe: lichess.org · aktualisiert %s
+Bulmaca: lichess.org	Aufgabe: lichess.org
+Daha önce çözüldü · Seri: %d	Bereits gelöst · Serie: %d
+Hamlenizi yapın · Seri: %d	Du bist am Zug · Serie: %d
+Bulmaca alınamadı	Aufgabe nicht abrufbar
+Wi-Fi bağlantısını kontrol edin.	WLAN-Verbindung prüfen.
+Çözüm gösterildi	Lösung gezeigt
+Çözüldü (hatalı) · Seri: %d	Gelöst (mit Fehler) · Serie: %d
+Doğru! Çözüldü · Seri: %d	Richtig! Gelöst · Serie: %d
+Doğru! Devam edin	Richtig! Weiter so
+Doğru değil, tekrar dene	Nicht ganz, versuch es nochmal
+Doğru!	Richtig!
+Çözüm: %s · bitti	Lösung: %s · fertig
+Çözüm: %s (%d/%d)	Lösung: %s (%d/%d)
+Çözüldü	Gelöst
+Hatalı çözüldü	Mit Fehler gelöst
+Geçmiş	Verlauf
+Seri: %d · En iyi seri: %d	Serie: %d · Beste Serie: %d
+Çözülen: %d / %d	Gelöst: %d / %d
+Henüz çözülen bulmaca yok.	Noch keine Aufgaben gelöst.
+Bulmaca alınamadı.\nWi-Fi bağlantısını kontrol edin.	Aufgabe nicht abrufbar.\nWLAN-Verbindung prüfen.
+İpucu: işaretli taşı oynayın	Tipp: markierte Figur ziehen
+1 hamlede mat	Matt in 1
+2 hamlede mat	Matt in 2
+3 hamlede mat	Matt in 3
+4 hamlede mat	Matt in 4
+5+ hamlede mat	Matt in 5 oder mehr
+Mat	Schachmatt
+Çatal	Gabel
+Açmaz	Fesselung
+Şiş	Spieß
+Fedâ	Opfer
+Açılış	Eröffnung
+Oyun ortası	Mittelspiel
+Oyun sonu	Endspiel
+Açarak saldırı	Abzugsangriff
+Açarak şah	Abzugsschach
+Çifte şah	Doppelschach
+Korumasız taş	Hängende Figur
+Kapana kısılan taş	Gefangene Figur
+Çekme	Hinlenkung
+Saptırma	Ablenkung
+Araya girme	Unterbrechung
+Ara hamle	Zwischenzug
+Yol açma	Räumung
+Sessiz hamle	Stiller Zug
+Savunma hamlesi	Verteidigungszug
+Röntgen saldırısı	Röntgenangriff
+Zugzwang	Zugzwang
+Küçük terfi	Unterverwandlung
+Rok	Rochade
+Geçerken alma	En passant
+Son sıra matı	Grundreihenmatt
+Boğmaca mat	Ersticktes Matt
+Anastasia matı	Anastasias Matt
+Arap matı	Arabisches Matt
+Boden matı	Bodens Matt
+Çifte fil matı	Läuferpaarmatt
+Kırlangıç matı	Schwalbenschwanzmatt
+Kanca matı	Hakenmatt
+Köşe matı	Eckmatt
+Şah kanadı saldırısı	Königsflügelangriff
+Vezir kanadı saldırısı	Damenflügelangriff
+f2/f7 saldırısı	Angriff auf f2 oder f7
+Savunanı alma	Verteidiger schlagen
+Açıkta şah	Exponierter König
+İlerlemiş piyon	Vorgerückter Bauer
+Ezici üstünlük	Vernichtend
+Üstünlük	Vorteil
+Eşitlik	Ausgleich
+Piyon oyun sonu	Bauernendspiel
+Kale oyun sonu	Turmendspiel
+Vezir oyun sonu	Damenendspiel
+Fil oyun sonu	Läuferendspiel
+At oyun sonu	Springerendspiel
+Vezir ve kale oyun sonu	Damen- und Turmendspiel

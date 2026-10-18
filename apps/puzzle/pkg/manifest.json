@@ -1,0 +1,10 @@
+{
+  "manifest_version": 2,
+  "id": "kindle-apps-puzzle",
+  "name": "Satranç Bulmacası",
+  "author": "Kaan Dikeç",
+  "description": "Lichess'in günün satranç bulmacası ve daha fazlası; çevrimdışı çalışır, seri takibi",
+  "version": [2026, 10, 15],
+  "dependencies": [],
+  "supported_platforms": ["kindlehf"]
+}

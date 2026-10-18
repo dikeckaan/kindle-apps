@@ -381,3 +381,89 @@ Tüm uygulamalar güncel	Bütün tətbiqlər aktualdır
 Bazı güncellemeler kurulamadı	Bəzi yeniləmələr quraşdırılmadı
 güncellendi %02d:%02d	yeniləndi %02d:%02d
 çevrimdışı, son veri %02d:%02d	oflayn, son məlumat %02d:%02d
+Baştan başla	Yenidən başla
+Başka bulmaca	Başqa tapmaca
+Sonraki hamle	Növbəti gediş
+Çözümü göster	Həlli göstər
+Satranç Bulmacası	Şahmat tapmacası
+Günün bulmacası	Günün tapmacası
+Siyah oynar	Qaralar oynayır
+Beyaz oynar	Ağlar oynayır
+Puan %d	Reytinq %d
+Bulmaca: lichess.org · çevrimdışı, son veri %s	Tapmaca: lichess.org · oflayn, son məlumat %s
+Bulmaca: lichess.org · güncellendi %s	Tapmaca: lichess.org · yeniləndi %s
+Bulmaca: lichess.org	Tapmaca: lichess.org
+Daha önce çözüldü · Seri: %d	Əvvəl həll edilib · Seriya: %d
+Hamlenizi yapın · Seri: %d	Sizin gedişiniz · Seriya: %d
+Bulmaca alınamadı	Tapmaca alınmadı
+Wi-Fi bağlantısını kontrol edin.	Wi-Fi bağlantısını yoxlayın.
+Çözüm gösterildi	Həll göstərildi
+Çözüldü (hatalı) · Seri: %d	Həll edildi (səhvlə) · Seriya: %d
+Doğru! Çözüldü · Seri: %d	Düzdür! Həll edildi · Seriya: %d
+Doğru! Devam edin	Düzdür! Davam edin
+Doğru değil, tekrar dene	Tam deyil, yenidən cəhd edin
+Doğru!	Düzdür!
+Çözüm: %s · bitti	Həll: %s · bitdi
+Çözüm: %s (%d/%d)	Həll: %s (%d/%d)
+Çözüldü	Həll edildi
+Hatalı çözüldü	Səhvlə həll edildi
+Geçmiş	Tarixçə
+Seri: %d · En iyi seri: %d	Seriya: %d · Ən yaxşı seriya: %d
+Çözülen: %d / %d	Həll edilən: %d / %d
+Henüz çözülen bulmaca yok.	Hələ həll edilmiş tapmaca yoxdur.
+Bulmaca alınamadı.\nWi-Fi bağlantısını kontrol edin.	Tapmaca alınmadı.\nWi-Fi bağlantısını yoxlayın.
+İpucu: işaretli taşı oynayın	İpucu: işarələnmiş fiquru oynayın
+1 hamlede mat	1 gedişdə mat
+2 hamlede mat	2 gedişdə mat
+3 hamlede mat	3 gedişdə mat
+4 hamlede mat	4 gedişdə mat
+5+ hamlede mat	5+ gedişdə mat
+Mat	Mat
+Çatal	Çəngəl
+Açmaz	Bağlama
+Şiş	Şiş
+Fedâ	Qurban
+Açılış	Debüt
+Oyun ortası	Mittelşpil
+Oyun sonu	Endşpil
+Açarak saldırı	Açılan hücum
+Açarak şah	Açılan şah
+Çifte şah	İkiqat şah
+Korumasız taş	Müdafiəsiz fiqur
+Kapana kısılan taş	Tələyə düşmüş fiqur
+Çekme	Cəlbetmə
+Saptırma	Yayındırma
+Araya girme	Kəsmə
+Ara hamle	Ara gediş
+Yol açma	Xəttin boşaldılması
+Sessiz hamle	Sakit gediş
+Savunma hamlesi	Müdafiə gedişi
+Röntgen saldırısı	Rentgen hücumu
+Zugzwang	Suqsvanq
+Küçük terfi	Zəif çevrilmə
+Rok	Qala
+Geçerken alma	Keçəndə alma
+Son sıra matı	Son xətt matı
+Boğmaca mat	Boğucu mat
+Anastasia matı	Anastasiya matı
+Arap matı	Ərəb matı
+Boden matı	Boden matı
+Çifte fil matı	İki fil matı
+Kırlangıç matı	Qaranquş quyruğu matı
+Kanca matı	Qarmaq matı
+Köşe matı	Künc matı
+Şah kanadı saldırısı	Şah cinahında hücum
+Vezir kanadı saldırısı	Vəzir cinahında hücum
+f2/f7 saldırısı	f2 və ya f7-yə hücum
+Savunanı alma	Müdafiəçini vurmaq
+Açıkta şah	Açıq qalmış şah
+İlerlemiş piyon	İrəliləmiş piyada
+Ezici üstünlük	Əzici üstünlük
+Üstünlük	Üstünlük
+Eşitlik	Bərabərlik
+Piyon oyun sonu	Piyada endşpili
+Kale oyun sonu	Top endşpili
+Vezir oyun sonu	Vəzir endşpili
+Fil oyun sonu	Fil endşpili
+At oyun sonu	At endşpili
+Vezir ve kale oyun sonu	Vəzir və top endşpili

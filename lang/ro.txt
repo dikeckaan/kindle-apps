@@ -381,3 +381,89 @@ Tüm uygulamalar güncel	Toate aplicațiile sunt la zi
 Bazı güncellemeler kurulamadı	Unele actualizări nu s-au instalat
 güncellendi %02d:%02d	actualizat %02d:%02d
 çevrimdışı, son veri %02d:%02d	offline, ultimele date %02d:%02d
+Baştan başla	De la început
+Başka bulmaca	Altă problemă
+Sonraki hamle	Mutarea următoare
+Çözümü göster	Arată soluția
+Satranç Bulmacası	Problemă de șah
+Günün bulmacası	Problema zilei
+Siyah oynar	Negrul la mutare
+Beyaz oynar	Albul la mutare
+Puan %d	Rating %d
+Bulmaca: lichess.org · çevrimdışı, son veri %s	Problemă: lichess.org · offline, date din %s
+Bulmaca: lichess.org · güncellendi %s	Problemă: lichess.org · actualizat %s
+Bulmaca: lichess.org	Problemă: lichess.org
+Daha önce çözüldü · Seri: %d	Rezolvată anterior · Serie: %d
+Hamlenizi yapın · Seri: %d	Mutarea dvs. · Serie: %d
+Bulmaca alınamadı	Problema nu a putut fi obținută
+Wi-Fi bağlantısını kontrol edin.	Verificați conexiunea Wi-Fi.
+Çözüm gösterildi	Soluția a fost afișată
+Çözüldü (hatalı) · Seri: %d	Rezolvată (cu o greșeală) · Serie: %d
+Doğru! Çözüldü · Seri: %d	Corect! Rezolvată · Serie: %d
+Doğru! Devam edin	Corect! Continuați
+Doğru değil, tekrar dene	Nu chiar, încercați din nou
+Doğru!	Corect!
+Çözüm: %s · bitti	Soluție: %s · gata
+Çözüm: %s (%d/%d)	Soluție: %s (%d/%d)
+Çözüldü	Rezolvată
+Hatalı çözüldü	Rezolvată cu greșeală
+Geçmiş	Istoric
+Seri: %d · En iyi seri: %d	Serie: %d · Cea mai bună serie: %d
+Çözülen: %d / %d	Rezolvate: %d / %d
+Henüz çözülen bulmaca yok.	Nicio problemă rezolvată încă.
+Bulmaca alınamadı.\nWi-Fi bağlantısını kontrol edin.	Problema nu a putut fi obținută.\nVerificați conexiunea Wi-Fi.
+İpucu: işaretli taşı oynayın	Indiciu: mutați piesa marcată
+1 hamlede mat	Mat într-o mutare
+2 hamlede mat	Mat în 2 mutări
+3 hamlede mat	Mat în 3 mutări
+4 hamlede mat	Mat în 4 mutări
+5+ hamlede mat	Mat în 5+ mutări
+Mat	Mat
+Çatal	Furculiță
+Açmaz	Țintuire
+Şiş	Frigăruie
+Fedâ	Sacrificiu
+Açılış	Deschidere
+Oyun ortası	Joc de mijloc
+Oyun sonu	Final
+Açarak saldırı	Atac descoperit
+Açarak şah	Șah descoperit
+Çifte şah	Șah dublu
+Korumasız taş	Piesă neprotejată
+Kapana kısılan taş	Piesă prinsă
+Çekme	Atragere
+Saptırma	Deviere
+Araya girme	Interferență
+Ara hamle	Intermezzo
+Yol açma	Eliberare
+Sessiz hamle	Mutare liniștită
+Savunma hamlesi	Mutare defensivă
+Röntgen saldırısı	Atac cu raze X
+Zugzwang	Zugzwang
+Küçük terfi	Subpromovare
+Rok	Rocadă
+Geçerken alma	En passant
+Son sıra matı	Mat pe ultima linie
+Boğmaca mat	Mat înăbușit
+Anastasia matı	Matul Anastasiei
+Arap matı	Mat arab
+Boden matı	Matul lui Boden
+Çifte fil matı	Mat cu doi nebuni
+Kırlangıç matı	Mat coadă de rândunică
+Kanca matı	Mat cârlig
+Köşe matı	Mat în colț
+Şah kanadı saldırısı	Atac pe flancul regelui
+Vezir kanadı saldırısı	Atac pe flancul damei
+f2/f7 saldırısı	Atac pe f2 sau f7
+Savunanı alma	Capturarea apărătorului
+Açıkta şah	Rege expus
+İlerlemiş piyon	Pion avansat
+Ezici üstünlük	Avantaj zdrobitor
+Üstünlük	Avantaj
+Eşitlik	Egalitate
+Piyon oyun sonu	Final de pioni
+Kale oyun sonu	Final de turnuri
+Vezir oyun sonu	Final de damă
+Fil oyun sonu	Final de nebuni
+At oyun sonu	Final de cai
+Vezir ve kale oyun sonu	Final de damă și turn

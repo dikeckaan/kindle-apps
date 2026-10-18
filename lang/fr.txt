@@ -381,3 +381,89 @@ Tüm uygulamalar güncel	Toutes les applis sont à jour
 Bazı güncellemeler kurulamadı	Certaines mises à jour ont échoué
 güncellendi %02d:%02d	mis à jour %02d:%02d
 çevrimdışı, son veri %02d:%02d	hors ligne, données de %02d:%02d
+Baştan başla	Recommencer
+Başka bulmaca	Autre problème
+Sonraki hamle	Coup suivant
+Çözümü göster	Voir la solution
+Satranç Bulmacası	Problème d'échecs
+Günün bulmacası	Problème du jour
+Siyah oynar	Les Noirs jouent
+Beyaz oynar	Les Blancs jouent
+Puan %d	Classement %d
+Bulmaca: lichess.org · çevrimdışı, son veri %s	Problème : lichess.org · hors ligne, dernières données %s
+Bulmaca: lichess.org · güncellendi %s	Problème : lichess.org · mis à jour %s
+Bulmaca: lichess.org	Problème : lichess.org
+Daha önce çözüldü · Seri: %d	Déjà résolu · Série : %d
+Hamlenizi yapın · Seri: %d	À vous de jouer · Série : %d
+Bulmaca alınamadı	Problème indisponible
+Wi-Fi bağlantısını kontrol edin.	Vérifiez la connexion Wi-Fi.
+Çözüm gösterildi	Solution affichée
+Çözüldü (hatalı) · Seri: %d	Résolu (avec une erreur) · Série : %d
+Doğru! Çözüldü · Seri: %d	Correct ! Résolu · Série : %d
+Doğru! Devam edin	Correct ! Continuez
+Doğru değil, tekrar dene	Pas tout à fait, réessayez
+Doğru!	Correct !
+Çözüm: %s · bitti	Solution : %s · terminé
+Çözüm: %s (%d/%d)	Solution : %s (%d/%d)
+Çözüldü	Résolu
+Hatalı çözüldü	Résolu avec une erreur
+Geçmiş	Historique
+Seri: %d · En iyi seri: %d	Série : %d · Meilleure série : %d
+Çözülen: %d / %d	Résolus : %d / %d
+Henüz çözülen bulmaca yok.	Aucun problème résolu pour l'instant.
+Bulmaca alınamadı.\nWi-Fi bağlantısını kontrol edin.	Problème indisponible.\nVérifiez la connexion Wi-Fi.
+İpucu: işaretli taşı oynayın	Indice : jouez la pièce marquée
+1 hamlede mat	Mat en 1
+2 hamlede mat	Mat en 2
+3 hamlede mat	Mat en 3
+4 hamlede mat	Mat en 4
+5+ hamlede mat	Mat en 5 ou plus
+Mat	Échec et mat
+Çatal	Fourchette
+Açmaz	Clouage
+Şiş	Enfilade
+Fedâ	Sacrifice
+Açılış	Ouverture
+Oyun ortası	Milieu de partie
+Oyun sonu	Finale
+Açarak saldırı	Attaque à la découverte
+Açarak şah	Échec à la découverte
+Çifte şah	Échec double
+Korumasız taş	Pièce en prise
+Kapana kısılan taş	Pièce piégée
+Çekme	Attraction
+Saptırma	Déviation
+Araya girme	Interception
+Ara hamle	Coup intermédiaire
+Yol açma	Dégagement
+Sessiz hamle	Coup tranquille
+Savunma hamlesi	Coup défensif
+Röntgen saldırısı	Attaque rayons X
+Zugzwang	Zugzwang
+Küçük terfi	Sous-promotion
+Rok	Roque
+Geçerken alma	Prise en passant
+Son sıra matı	Mat du couloir
+Boğmaca mat	Mat étouffé
+Anastasia matı	Mat d'Anastasia
+Arap matı	Mat arabe
+Boden matı	Mat de Boden
+Çifte fil matı	Mat des deux fous
+Kırlangıç matı	Mat en queue d'aronde
+Kanca matı	Mat du crochet
+Köşe matı	Mat du coin
+Şah kanadı saldırısı	Attaque à l'aile roi
+Vezir kanadı saldırısı	Attaque à l'aile dame
+f2/f7 saldırısı	Attaque sur f2 ou f7
+Savunanı alma	Capturer le défenseur
+Açıkta şah	Roi exposé
+İlerlemiş piyon	Pion avancé
+Ezici üstünlük	Écrasant
+Üstünlük	Avantage
+Eşitlik	Égalité
+Piyon oyun sonu	Finale de pions
+Kale oyun sonu	Finale de tours
+Vezir oyun sonu	Finale de dames
+Fil oyun sonu	Finale de fous
+At oyun sonu	Finale de cavaliers
+Vezir ve kale oyun sonu	Finale dame et tour

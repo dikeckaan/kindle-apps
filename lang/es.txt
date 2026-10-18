@@ -381,3 +381,89 @@ Tüm uygulamalar güncel	Todas las apps están al día
 Bazı güncellemeler kurulamadı	Algunas actualizaciones no se instalaron
 güncellendi %02d:%02d	actualizado %02d:%02d
 çevrimdışı, son veri %02d:%02d	sin conexión, datos de las %02d:%02d
+Baştan başla	Empezar de nuevo
+Başka bulmaca	Otro problema
+Sonraki hamle	Siguiente jugada
+Çözümü göster	Ver solución
+Satranç Bulmacası	Problema de ajedrez
+Günün bulmacası	Problema del día
+Siyah oynar	Juegan negras
+Beyaz oynar	Juegan blancas
+Puan %d	Puntuación %d
+Bulmaca: lichess.org · çevrimdışı, son veri %s	Problema: lichess.org · sin conexión, últimos datos %s
+Bulmaca: lichess.org · güncellendi %s	Problema: lichess.org · actualizado %s
+Bulmaca: lichess.org	Problema: lichess.org
+Daha önce çözüldü · Seri: %d	Ya resuelto · Racha: %d
+Hamlenizi yapın · Seri: %d	Tu jugada · Racha: %d
+Bulmaca alınamadı	No se pudo obtener el problema
+Wi-Fi bağlantısını kontrol edin.	Comprueba la conexión Wi-Fi.
+Çözüm gösterildi	Solución mostrada
+Çözüldü (hatalı) · Seri: %d	Resuelto (con un error) · Racha: %d
+Doğru! Çözüldü · Seri: %d	¡Correcto! Resuelto · Racha: %d
+Doğru! Devam edin	¡Correcto! Sigue así
+Doğru değil, tekrar dene	No exactamente, inténtalo de nuevo
+Doğru!	¡Correcto!
+Çözüm: %s · bitti	Solución: %s · hecho
+Çözüm: %s (%d/%d)	Solución: %s (%d/%d)
+Çözüldü	Resuelto
+Hatalı çözüldü	Resuelto con un error
+Geçmiş	Historial
+Seri: %d · En iyi seri: %d	Racha: %d · Mejor racha: %d
+Çözülen: %d / %d	Resueltos: %d / %d
+Henüz çözülen bulmaca yok.	Aún no hay problemas resueltos.
+Bulmaca alınamadı.\nWi-Fi bağlantısını kontrol edin.	No se pudo obtener el problema.\nComprueba la conexión Wi-Fi.
+İpucu: işaretli taşı oynayın	Pista: mueve la pieza marcada
+1 hamlede mat	Mate en 1
+2 hamlede mat	Mate en 2
+3 hamlede mat	Mate en 3
+4 hamlede mat	Mate en 4
+5+ hamlede mat	Mate en 5 o más
+Mat	Jaque mate
+Çatal	Ataque doble
+Açmaz	Clavada
+Şiş	Pincho
+Fedâ	Sacrificio
+Açılış	Apertura
+Oyun ortası	Medio juego
+Oyun sonu	Final
+Açarak saldırı	Ataque a la descubierta
+Açarak şah	Jaque a la descubierta
+Çifte şah	Jaque doble
+Korumasız taş	Pieza colgada
+Kapana kısılan taş	Pieza atrapada
+Çekme	Atracción
+Saptırma	Desviación
+Araya girme	Interferencia
+Ara hamle	Jugada intermedia
+Yol açma	Despeje
+Sessiz hamle	Jugada tranquila
+Savunma hamlesi	Jugada defensiva
+Röntgen saldırısı	Ataque de rayos X
+Zugzwang	Zugzwang
+Küçük terfi	Subpromoción
+Rok	Enroque
+Geçerken alma	Captura al paso
+Son sıra matı	Mate del pasillo
+Boğmaca mat	Mate de la coz
+Anastasia matı	Mate de Anastasia
+Arap matı	Mate árabe
+Boden matı	Mate de Boden
+Çifte fil matı	Mate de los dos alfiles
+Kırlangıç matı	Mate de la cola de golondrina
+Kanca matı	Mate del gancho
+Köşe matı	Mate de la esquina
+Şah kanadı saldırısı	Ataque en el flanco de rey
+Vezir kanadı saldırısı	Ataque en el flanco de dama
+f2/f7 saldırısı	Ataque a f2 o f7
+Savunanı alma	Capturar al defensor
+Açıkta şah	Rey expuesto
+İlerlemiş piyon	Peón avanzado
+Ezici üstünlük	Aplastante
+Üstünlük	Ventaja
+Eşitlik	Igualdad
+Piyon oyun sonu	Final de peones
+Kale oyun sonu	Final de torres
+Vezir oyun sonu	Final de damas
+Fil oyun sonu	Final de alfiles
+At oyun sonu	Final de caballos
+Vezir ve kale oyun sonu	Final de dama y torre

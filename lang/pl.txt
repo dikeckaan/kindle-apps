@@ -381,3 +381,89 @@ Tüm uygulamalar güncel	Wszystkie aplikacje są aktualne
 Bazı güncellemeler kurulamadı	Nie udało się zainstalować niektórych aktualizacji
 güncellendi %02d:%02d	aktualizacja %02d:%02d
 çevrimdışı, son veri %02d:%02d	offline, ostatnie dane %02d:%02d
+Baştan başla	Zacznij od nowa
+Başka bulmaca	Inne zadanie
+Sonraki hamle	Następny ruch
+Çözümü göster	Pokaż rozwiązanie
+Satranç Bulmacası	Zadanie szachowe
+Günün bulmacası	Zadanie dnia
+Siyah oynar	Ruch czarnych
+Beyaz oynar	Ruch białych
+Puan %d	Ranking %d
+Bulmaca: lichess.org · çevrimdışı, son veri %s	Zadanie: lichess.org · offline, ostatnie dane %s
+Bulmaca: lichess.org · güncellendi %s	Zadanie: lichess.org · zaktualizowano %s
+Bulmaca: lichess.org	Zadanie: lichess.org
+Daha önce çözüldü · Seri: %d	Rozwiązane wcześniej · Seria: %d
+Hamlenizi yapın · Seri: %d	Twój ruch · Seria: %d
+Bulmaca alınamadı	Nie udało się pobrać zadania
+Wi-Fi bağlantısını kontrol edin.	Sprawdź połączenie Wi-Fi.
+Çözüm gösterildi	Pokazano rozwiązanie
+Çözüldü (hatalı) · Seri: %d	Rozwiązane (z błędem) · Seria: %d
+Doğru! Çözüldü · Seri: %d	Dobrze! Rozwiązane · Seria: %d
+Doğru! Devam edin	Dobrze! Graj dalej
+Doğru değil, tekrar dene	Nie do końca, spróbuj ponownie
+Doğru!	Dobrze!
+Çözüm: %s · bitti	Rozwiązanie: %s · koniec
+Çözüm: %s (%d/%d)	Rozwiązanie: %s (%d/%d)
+Çözüldü	Rozwiązane
+Hatalı çözüldü	Rozwiązane z błędem
+Geçmiş	Historia
+Seri: %d · En iyi seri: %d	Seria: %d · Najlepsza seria: %d
+Çözülen: %d / %d	Rozwiązane: %d / %d
+Henüz çözülen bulmaca yok.	Brak rozwiązanych zadań.
+Bulmaca alınamadı.\nWi-Fi bağlantısını kontrol edin.	Nie udało się pobrać zadania.\nSprawdź połączenie Wi-Fi.
+İpucu: işaretli taşı oynayın	Podpowiedź: ruszaj oznaczoną bierką
+1 hamlede mat	Mat w 1 ruchu
+2 hamlede mat	Mat w 2 ruchach
+3 hamlede mat	Mat w 3 ruchach
+4 hamlede mat	Mat w 4 ruchach
+5+ hamlede mat	Mat w 5+ ruchach
+Mat	Mat
+Çatal	Widełki
+Açmaz	Związanie
+Şiş	Szpila
+Fedâ	Poświęcenie
+Açılış	Debiut
+Oyun ortası	Gra środkowa
+Oyun sonu	Końcówka
+Açarak saldırı	Atak z odsłony
+Açarak şah	Szach z odsłony
+Çifte şah	Podwójny szach
+Korumasız taş	Wisząca bierka
+Kapana kısılan taş	Uwięziona bierka
+Çekme	Przyciąganie
+Saptırma	Odciąganie
+Araya girme	Przesłonięcie
+Ara hamle	Ruch pośredni
+Yol açma	Oczyszczenie linii
+Sessiz hamle	Cichy ruch
+Savunma hamlesi	Ruch obronny
+Röntgen saldırısı	Atak rentgenowski
+Zugzwang	Zugzwang
+Küçük terfi	Słabsza promocja
+Rok	Roszada
+Geçerken alma	Bicie w przelocie
+Son sıra matı	Mat na ostatniej linii
+Boğmaca mat	Mat zduszony
+Anastasia matı	Mat Anastazji
+Arap matı	Mat arabski
+Boden matı	Mat Bodena
+Çifte fil matı	Mat dwoma gońcami
+Kırlangıç matı	Mat jaskółczy ogon
+Kanca matı	Mat hakiem
+Köşe matı	Mat w narożniku
+Şah kanadı saldırısı	Atak na skrzydle królewskim
+Vezir kanadı saldırısı	Atak na skrzydle hetmańskim
+f2/f7 saldırısı	Atak na f2 lub f7
+Savunanı alma	Zbicie obrońcy
+Açıkta şah	Odsłonięty król
+İlerlemiş piyon	Zaawansowany pion
+Ezici üstünlük	Miażdżąca przewaga
+Üstünlük	Przewaga
+Eşitlik	Równowaga
+Piyon oyun sonu	Końcówka pionowa
+Kale oyun sonu	Końcówka wieżowa
+Vezir oyun sonu	Końcówka hetmańska
+Fil oyun sonu	Końcówka gońcowa
+At oyun sonu	Końcówka skoczkowa
+Vezir ve kale oyun sonu	Końcówka hetman i wieża

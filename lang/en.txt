@@ -381,3 +381,89 @@ Tüm uygulamalar güncel	All apps are up to date
 Bazı güncellemeler kurulamadı	Some updates could not be installed
 güncellendi %02d:%02d	updated %02d:%02d
 çevrimdışı, son veri %02d:%02d	offline, last data %02d:%02d
+Baştan başla	Start over
+Başka bulmaca	Another puzzle
+Sonraki hamle	Next move
+Çözümü göster	Show solution
+Satranç Bulmacası	Chess Puzzle
+Günün bulmacası	Puzzle of the day
+Siyah oynar	Black to play
+Beyaz oynar	White to play
+Puan %d	Rating %d
+Bulmaca: lichess.org · çevrimdışı, son veri %s	Puzzle: lichess.org · offline, last data %s
+Bulmaca: lichess.org · güncellendi %s	Puzzle: lichess.org · updated %s
+Bulmaca: lichess.org	Puzzle: lichess.org
+Daha önce çözüldü · Seri: %d	Solved before · Streak: %d
+Hamlenizi yapın · Seri: %d	Your move · Streak: %d
+Bulmaca alınamadı	Could not get the puzzle
+Wi-Fi bağlantısını kontrol edin.	Check the Wi-Fi connection.
+Çözüm gösterildi	Solution shown
+Çözüldü (hatalı) · Seri: %d	Solved (with a mistake) · Streak: %d
+Doğru! Çözüldü · Seri: %d	Correct! Solved · Streak: %d
+Doğru! Devam edin	Correct! Keep going
+Doğru değil, tekrar dene	Not quite, try again
+Doğru!	Correct!
+Çözüm: %s · bitti	Solution: %s · done
+Çözüm: %s (%d/%d)	Solution: %s (%d/%d)
+Çözüldü	Solved
+Hatalı çözüldü	Solved with a mistake
+Geçmiş	History
+Seri: %d · En iyi seri: %d	Streak: %d · Best streak: %d
+Çözülen: %d / %d	Solved: %d / %d
+Henüz çözülen bulmaca yok.	No puzzles solved yet.
+Bulmaca alınamadı.\nWi-Fi bağlantısını kontrol edin.	Could not get the puzzle.\nCheck the Wi-Fi connection.
+İpucu: işaretli taşı oynayın	Hint: move the marked piece
+1 hamlede mat	Mate in 1
+2 hamlede mat	Mate in 2
+3 hamlede mat	Mate in 3
+4 hamlede mat	Mate in 4
+5+ hamlede mat	Mate in 5 or more
+Mat	Checkmate
+Çatal	Fork
+Açmaz	Pin
+Şiş	Skewer
+Fedâ	Sacrifice
+Açılış	Opening
+Oyun ortası	Middlegame
+Oyun sonu	Endgame
+Açarak saldırı	Discovered attack
+Açarak şah	Discovered check
+Çifte şah	Double check
+Korumasız taş	Hanging piece
+Kapana kısılan taş	Trapped piece
+Çekme	Attraction
+Saptırma	Deflection
+Araya girme	Interference
+Ara hamle	Intermezzo
+Yol açma	Clearance
+Sessiz hamle	Quiet move
+Savunma hamlesi	Defensive move
+Röntgen saldırısı	X-ray attack
+Zugzwang	Zugzwang
+Küçük terfi	Underpromotion
+Rok	Castling
+Geçerken alma	En passant
+Son sıra matı	Back rank mate
+Boğmaca mat	Smothered mate
+Anastasia matı	Anastasia's mate
+Arap matı	Arabian mate
+Boden matı	Boden's mate
+Çifte fil matı	Double bishop mate
+Kırlangıç matı	Dovetail mate
+Kanca matı	Hook mate
+Köşe matı	Corner mate
+Şah kanadı saldırısı	Kingside attack
+Vezir kanadı saldırısı	Queenside attack
+f2/f7 saldırısı	Attacking f2 or f7
+Savunanı alma	Capture the defender
+Açıkta şah	Exposed king
+İlerlemiş piyon	Advanced pawn
+Ezici üstünlük	Crushing
+Üstünlük	Advantage
+Eşitlik	Equality
+Piyon oyun sonu	Pawn endgame
+Kale oyun sonu	Rook endgame
+Vezir oyun sonu	Queen endgame
+Fil oyun sonu	Bishop endgame
+At oyun sonu	Knight endgame
+Vezir ve kale oyun sonu	Queen and rook endgame

@@ -381,3 +381,89 @@ Tüm uygulamalar güncel	Όλες οι εφαρμογές είναι ενημε�
 Bazı güncellemeler kurulamadı	Ορισμένες ενημερώσεις δεν εγκαταστάθηκαν
 güncellendi %02d:%02d	ενημέρωση %02d:%02d
 çevrimdışı, son veri %02d:%02d	εκτός σύνδεσης, τελευταία %02d:%02d
+Baştan başla	Από την αρχή
+Başka bulmaca	Άλλος γρίφος
+Sonraki hamle	Επόμενη κίνηση
+Çözümü göster	Δείξε λύση
+Satranç Bulmacası	Γρίφος σκακιού
+Günün bulmacası	Γρίφος της ημέρας
+Siyah oynar	Παίζουν τα μαύρα
+Beyaz oynar	Παίζουν τα λευκά
+Puan %d	Βαθμολογία %d
+Bulmaca: lichess.org · çevrimdışı, son veri %s	Γρίφος: lichess.org · εκτός σύνδεσης, τελευταία δεδομένα %s
+Bulmaca: lichess.org · güncellendi %s	Γρίφος: lichess.org · ενημερώθηκε %s
+Bulmaca: lichess.org	Γρίφος: lichess.org
+Daha önce çözüldü · Seri: %d	Λύθηκε ήδη · Σερί: %d
+Hamlenizi yapın · Seri: %d	Σειρά σας · Σερί: %d
+Bulmaca alınamadı	Αποτυχία λήψης γρίφου
+Wi-Fi bağlantısını kontrol edin.	Ελέγξτε τη σύνδεση Wi-Fi.
+Çözüm gösterildi	Η λύση εμφανίστηκε
+Çözüldü (hatalı) · Seri: %d	Λύθηκε (με λάθος) · Σερί: %d
+Doğru! Çözüldü · Seri: %d	Σωστά! Λύθηκε · Σερί: %d
+Doğru! Devam edin	Σωστά! Συνεχίστε
+Doğru değil, tekrar dene	Όχι ακριβώς, ξαναδοκιμάστε
+Doğru!	Σωστά!
+Çözüm: %s · bitti	Λύση: %s · τέλος
+Çözüm: %s (%d/%d)	Λύση: %s (%d/%d)
+Çözüldü	Λύθηκε
+Hatalı çözüldü	Λύθηκε με λάθος
+Geçmiş	Ιστορικό
+Seri: %d · En iyi seri: %d	Σερί: %d · Καλύτερο σερί: %d
+Çözülen: %d / %d	Λυμένοι: %d / %d
+Henüz çözülen bulmaca yok.	Δεν έχει λυθεί κανένας γρίφος ακόμα.
+Bulmaca alınamadı.\nWi-Fi bağlantısını kontrol edin.	Αποτυχία λήψης γρίφου.\nΕλέγξτε τη σύνδεση Wi-Fi.
+İpucu: işaretli taşı oynayın	Υπόδειξη: κινήστε το σημειωμένο κομμάτι
+1 hamlede mat	Ματ σε 1
+2 hamlede mat	Ματ σε 2
+3 hamlede mat	Ματ σε 3
+4 hamlede mat	Ματ σε 4
+5+ hamlede mat	Ματ σε 5 ή περισσότερες
+Mat	Ματ
+Çatal	Πιρούνι
+Açmaz	Κάρφωμα
+Şiş	Σούβλα
+Fedâ	Θυσία
+Açılış	Άνοιγμα
+Oyun ortası	Μέσο παιχνίδι
+Oyun sonu	Φινάλε
+Açarak saldırı	Αποκαλυπτόμενη επίθεση
+Açarak şah	Αποκαλυπτόμενο σαχ
+Çifte şah	Διπλό σαχ
+Korumasız taş	Ακάλυπτο κομμάτι
+Kapana kısılan taş	Παγιδευμένο κομμάτι
+Çekme	Προσέλκυση
+Saptırma	Εκτροπή
+Araya girme	Παρεμβολή
+Ara hamle	Ενδιάμεση κίνηση
+Yol açma	Εκκαθάριση
+Sessiz hamle	Ήσυχη κίνηση
+Savunma hamlesi	Αμυντική κίνηση
+Röntgen saldırısı	Επίθεση ακτίνων Χ
+Zugzwang	Τσούγκτσβανγκ
+Küçük terfi	Υποπροαγωγή
+Rok	Ροκέ
+Geçerken alma	Αν πασάν
+Son sıra matı	Ματ στην τελευταία γραμμή
+Boğmaca mat	Πνιγμένο ματ
+Anastasia matı	Ματ της Αναστασίας
+Arap matı	Αραβικό ματ
+Boden matı	Ματ του Μπόντεν
+Çifte fil matı	Ματ με δύο αξιωματικούς
+Kırlangıç matı	Ματ χελιδονοουράς
+Kanca matı	Ματ αγκίστρι
+Köşe matı	Γωνιακό ματ
+Şah kanadı saldırısı	Επίθεση στην πτέρυγα του βασιλιά
+Vezir kanadı saldırısı	Επίθεση στην πτέρυγα της βασίλισσας
+f2/f7 saldırısı	Επίθεση στο f2 ή f7
+Savunanı alma	Αιχμαλώτιση του αμυνόμενου
+Açıkta şah	Εκτεθειμένος βασιλιάς
+İlerlemiş piyon	Προωθημένο πιόνι
+Ezici üstünlük	Συντριπτικό
+Üstünlük	Πλεονέκτημα
+Eşitlik	Ισότητα
+Piyon oyun sonu	Φινάλε πιονιών
+Kale oyun sonu	Φινάλε πύργων
+Vezir oyun sonu	Φινάλε βασίλισσας
+Fil oyun sonu	Φινάλε αξιωματικών
+At oyun sonu	Φινάλε ίππων
+Vezir ve kale oyun sonu	Φινάλε βασίλισσας και πύργου
