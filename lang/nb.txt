@@ -260,3 +260,71 @@ boşluk	mellomrom
 Şubat	februar
 ⚑ Açık	⚑ På
 ⚑ Kapalı	⚑ Av
+E-Kitap	E-bøker
+Ara	Søk
+Project Gutenberg'deki telifsiz kitaplar	Opphavsrettsfrie bøker fra Project Gutenberg
+70.000'den fazla ücretsiz e-kitap. Arama İngilizce başlık ve yazar adlarıyla en iyi sonucu verir.	Over 70 000 gratis e-bøker. Søket fungerer best med engelske titler og forfatternavn.
+Kitap ara	Søk etter bok
+Biçim:	Format:
+AZW3 Kindle'ın kendi okuyucusunda, EPUB KOReader'da açılır.	AZW3 åpnes i Kindles egen leser, EPUB i KOReader.
+İndirilenler	Nedlastinger
+Henüz kitap indirilmedi.	Ingen bøker lastet ned ennå.
+Daha fazla	Flere
+“%s” · %d kitap%s	«%s» · %d bøker%s
+Sonuç bulunamadı.\nBaşka bir başlık ya da yazar adı deneyin.	Ingen treff.\nPrøv en annen tittel eller forfatter.
+Yazar bilinmiyor	Ukjent forfatter
+Kitap	Bok
+Biçim: %s	Format: %s
+Kaynak: gutenberg.org/ebooks/%d	Kilde: gutenberg.org/ebooks/%d
+İndir	Last ned
+İndiriliyor…\nGutenberg yavaş olabilir, lütfen bekleyin.	Laster ned…\nGutenberg kan være treg, vent litt.
+Kitaplığa eklendi:\n%s	Lagt til i biblioteket:\n%s
+İndirilemedi.\nWi-Fi bağlantısını kontrol edip yeniden deneyin.	Nedlastingen mislyktes.\nSjekk Wi-Fi og prøv igjen.
+Yeniden dene	Prøv igjen
+Bağlantı yok	Ingen tilkobling
+Kitap ara (başlık veya yazar)	Søk etter bok (tittel eller forfatter)
+Gutenberg'e ulaşılamadı. Wi-Fi bağlantısını kontrol edip yeniden deneyin.	Fikk ikke kontakt med Gutenberg. Sjekk Wi-Fi og prøv igjen.
+Kaynaklar	Kilder
+Kaynağa dokunun: haberlerini açar. ☑ / ☐: ön sayfada gösterilsin mi.	Trykk på en kilde for nyhetene. ☑ / ☐: vis på forsiden.
+%s yükleniyor… (%d)	Laster %s… (%d)
+%s · Manşetler · Sayfa %d/%d	%s · Overskrifter · Side %d/%d
+Ön sayfada kaynak yok.\nKaynaklar'dan seçin.	Ingen kilder på forsiden.\nVelg under Kilder.
+Teknoloji	Teknologi
+Türkiye	Tyrkia
+Tümü	Alle
+Son dakika	Siste nytt
+%%%d · şarj oluyor	%d %% · lader
+Pil	Batteri
+Pil sıcaklığı	Batteritemperatur
+%s boş / %s	%s ledig av %s
+Depolama	Lagring
+Bellek	Minne
+bağlı değil	ikke tilkoblet
+Yazılım	Programvare
+Çekirdek	Kjerne
+Açık kalma süresi	Oppetid
+Güvenlik duvarı	Brannmur
+Kapalı (gelen bağlantılara açık)	Av (åpen for innkommende)
+Açık (gelen bağlantılar engelli)	På (innkommende blokkert)
+Çalışıyor · port %d	Kjører · port %d
+Çalışmıyor	Kjører ikke
+SSH sunucusu	SSH-server
+Sistem Bilgisi	Systeminfo
+%ld gün %ld sa	%ld d %ld t
+%ld sa %ld dk	%ld t %ld min
+%ld dk	%ld min
+Sunucu başlatılamadı	Kunne ikke starte serveren
+Wi-Fi kapalı	Wi-Fi er av
+Wi-Fi'yi açın; adres burada görünecek.	Slå på Wi-Fi; adressen vises her.
+Tarayıcıda bu adresi açın:	Åpne denne adressen i nettleseren:
+Çok fazla yanlış PIN denendi.\nGüvenlik için yükleme durduruldu.	For mange feil PIN-forsøk.\nOpplastingen er stoppet av sikkerhetshensyn.
+Kilidi aç (yeni PIN)	Lås opp (ny PIN)
+Telefon ya da bilgisayar aynı Wi-Fi ağında olmalı. Sayfada PIN'i girin, kitapları seçip Gönder'e basın. Uygulamayı kapatınca sunucu durur.	Telefonen eller datamaskinen må være på samme Wi-Fi-nett. Skriv inn PIN-koden på siden, velg bøker og trykk Send. Serveren stopper når appen lukkes.
+Alınıyor: %s	Mottar: %s
+%s / %s  (%%%d)	%s / %s  (%d %%)
+Dosya bekleniyor…	Venter på filer…
+Bu oturumda gelenler (%d)	Mottatt i denne økten (%d)
+Bu oturumda henüz dosya gelmedi	Ingen filer mottatt i denne økten
+Wi-Fi ile Yükle	Last opp via Wi-Fi
+%d kez yanlış PIN girildi: yeni PIN üretildi.	Feil PIN %d ganger: ny PIN laget.
+Alındı: %s	Mottatt: %s

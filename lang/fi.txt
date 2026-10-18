@@ -260,3 +260,71 @@ boşluk	välilyönti
 Şubat	helmikuuta
 ⚑ Açık	⚑ Päällä
 ⚑ Kapalı	⚑ Pois
+E-Kitap	E-kirjat
+Ara	Haku
+Project Gutenberg'deki telifsiz kitaplar	Tekijänoikeusvapaita kirjoja Project Gutenbergista
+70.000'den fazla ücretsiz e-kitap. Arama İngilizce başlık ve yazar adlarıyla en iyi sonucu verir.	Yli 70 000 ilmaista e-kirjaa. Haku toimii parhaiten englanninkielisillä nimillä ja kirjailijoilla.
+Kitap ara	Hae kirjaa
+Biçim:	Muoto:
+AZW3 Kindle'ın kendi okuyucusunda, EPUB KOReader'da açılır.	AZW3 avautuu Kindlen omassa lukijassa, EPUB KOReaderissa.
+İndirilenler	Lataukset
+Henüz kitap indirilmedi.	Ei vielä ladattuja kirjoja.
+Daha fazla	Lisää
+“%s” · %d kitap%s	”%s” · kirjoja: %d%s
+Sonuç bulunamadı.\nBaşka bir başlık ya da yazar adı deneyin.	Ei tuloksia.\nKokeile toista nimeä tai kirjailijaa.
+Yazar bilinmiyor	Tuntematon kirjailija
+Kitap	Kirja
+Biçim: %s	Muoto: %s
+Kaynak: gutenberg.org/ebooks/%d	Lähde: gutenberg.org/ebooks/%d
+İndir	Lataa
+İndiriliyor…\nGutenberg yavaş olabilir, lütfen bekleyin.	Ladataan…\nGutenberg voi olla hidas, odota hetki.
+Kitaplığa eklendi:\n%s	Lisätty kirjastoon:\n%s
+İndirilemedi.\nWi-Fi bağlantısını kontrol edip yeniden deneyin.	Lataus epäonnistui.\nTarkista Wi-Fi ja yritä uudelleen.
+Yeniden dene	Yritä uudelleen
+Bağlantı yok	Ei yhteyttä
+Kitap ara (başlık veya yazar)	Hae kirjaa (nimi tai kirjailija)
+Gutenberg'e ulaşılamadı. Wi-Fi bağlantısını kontrol edip yeniden deneyin.	Gutenbergiin ei saatu yhteyttä. Tarkista Wi-Fi ja yritä uudelleen.
+Kaynaklar	Lähteet
+Kaynağa dokunun: haberlerini açar. ☑ / ☐: ön sayfada gösterilsin mi.	Napauta lähdettä nähdäksesi sen uutiset. ☑ / ☐: näytetäänkö etusivulla.
+%s yükleniyor… (%d)	Ladataan: %s… (%d)
+%s · Manşetler · Sayfa %d/%d	%s · Otsikot · Sivu %d/%d
+Ön sayfada kaynak yok.\nKaynaklar'dan seçin.	Etusivulla ei ole lähteitä.\nValitse ne Lähteet-sivulla.
+Teknoloji	Teknologia
+Türkiye	Turkki
+Tümü	Kaikki
+Son dakika	Tuoreimmat
+%%%d · şarj oluyor	%d %% · latautuu
+Pil	Akku
+Pil sıcaklığı	Akun lämpötila
+%s boş / %s	Vapaana %s / %s
+Depolama	Tallennustila
+Bellek	Muisti
+bağlı değil	ei yhdistetty
+Yazılım	Ohjelmisto
+Çekirdek	Ydin
+Açık kalma süresi	Käynnissäoloaika
+Güvenlik duvarı	Palomuuri
+Kapalı (gelen bağlantılara açık)	Pois (saapuvat sallittu)
+Açık (gelen bağlantılar engelli)	Päällä (saapuvat estetty)
+Çalışıyor · port %d	Käynnissä · portti %d
+Çalışmıyor	Ei käynnissä
+SSH sunucusu	SSH-palvelin
+Sistem Bilgisi	Järjestelmätiedot
+%ld gün %ld sa	%ld pv %ld h
+%ld sa %ld dk	%ld h %ld min
+%ld dk	%ld min
+Sunucu başlatılamadı	Palvelinta ei voitu käynnistää
+Wi-Fi kapalı	Wi-Fi on pois päältä
+Wi-Fi'yi açın; adres burada görünecek.	Kytke Wi-Fi päälle; osoite näkyy tässä.
+Tarayıcıda bu adresi açın:	Avaa tämä osoite selaimessa:
+Çok fazla yanlış PIN denendi.\nGüvenlik için yükleme durduruldu.	Liikaa vääriä PIN-koodeja.\nLähetys pysäytettiin turvallisuussyistä.
+Kilidi aç (yeni PIN)	Avaa lukitus (uusi PIN)
+Telefon ya da bilgisayar aynı Wi-Fi ağında olmalı. Sayfada PIN'i girin, kitapları seçip Gönder'e basın. Uygulamayı kapatınca sunucu durur.	Puhelimen tai tietokoneen on oltava samassa Wi-Fi-verkossa. Syötä PIN sivulla, valitse kirjat ja paina Lähetä. Palvelin pysähtyy, kun sovellus suljetaan.
+Alınıyor: %s	Vastaanotetaan: %s
+%s / %s  (%%%d)	%s / %s  (%d %%)
+Dosya bekleniyor…	Odotetaan tiedostoja…
+Bu oturumda gelenler (%d)	Tässä istunnossa saapuneet (%d)
+Bu oturumda henüz dosya gelmedi	Tässä istunnossa ei ole vielä saapunut tiedostoja
+Wi-Fi ile Yükle	Lähetä Wi-Fillä
+%d kez yanlış PIN girildi: yeni PIN üretildi.	Väärä PIN, kertoja: %d. Uusi PIN luotu.
+Alındı: %s	Vastaanotettu: %s

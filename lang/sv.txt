@@ -260,3 +260,71 @@ boşluk	mellanslag
 Şubat	februari
 ⚑ Açık	⚑ På
 ⚑ Kapalı	⚑ Av
+E-Kitap	E-böcker
+Ara	Sök
+Project Gutenberg'deki telifsiz kitaplar	Upphovsrättsfria böcker från Project Gutenberg
+70.000'den fazla ücretsiz e-kitap. Arama İngilizce başlık ve yazar adlarıyla en iyi sonucu verir.	Över 70 000 gratis e-böcker. Sökningen fungerar bäst med engelska titlar och författarnamn.
+Kitap ara	Sök bok
+Biçim:	Format:
+AZW3 Kindle'ın kendi okuyucusunda, EPUB KOReader'da açılır.	AZW3 öppnas i Kindles egen läsare, EPUB i KOReader.
+İndirilenler	Nedladdningar
+Henüz kitap indirilmedi.	Inga böcker nedladdade än.
+Daha fazla	Fler
+“%s” · %d kitap%s	”%s” · %d böcker%s
+Sonuç bulunamadı.\nBaşka bir başlık ya da yazar adı deneyin.	Inga träffar.\nPröva en annan titel eller författare.
+Yazar bilinmiyor	Okänd författare
+Kitap	Bok
+Biçim: %s	Format: %s
+Kaynak: gutenberg.org/ebooks/%d	Källa: gutenberg.org/ebooks/%d
+İndir	Ladda ner
+İndiriliyor…\nGutenberg yavaş olabilir, lütfen bekleyin.	Laddar ner…\nGutenberg kan vara långsam, vänta.
+Kitaplığa eklendi:\n%s	Tillagd i biblioteket:\n%s
+İndirilemedi.\nWi-Fi bağlantısını kontrol edip yeniden deneyin.	Nedladdningen misslyckades.\nKontrollera Wi-Fi och försök igen.
+Yeniden dene	Försök igen
+Bağlantı yok	Ingen anslutning
+Kitap ara (başlık veya yazar)	Sök bok (titel eller författare)
+Gutenberg'e ulaşılamadı. Wi-Fi bağlantısını kontrol edip yeniden deneyin.	Gutenberg kunde inte nås. Kontrollera Wi-Fi och försök igen.
+Kaynaklar	Källor
+Kaynağa dokunun: haberlerini açar. ☑ / ☐: ön sayfada gösterilsin mi.	Tryck på en källa för dess nyheter. ☑ / ☐: visa på förstasidan.
+%s yükleniyor… (%d)	Laddar %s… (%d)
+%s · Manşetler · Sayfa %d/%d	%s · Rubriker · Sida %d/%d
+Ön sayfada kaynak yok.\nKaynaklar'dan seçin.	Inga källor på förstasidan.\nVälj under Källor.
+Teknoloji	Teknik
+Türkiye	Turkiet
+Tümü	Alla
+Son dakika	Senaste nytt
+%%%d · şarj oluyor	%d %% · laddas
+Pil	Batteri
+Pil sıcaklığı	Batteritemperatur
+%s boş / %s	%s ledigt av %s
+Depolama	Lagring
+Bellek	Minne
+bağlı değil	inte ansluten
+Yazılım	Programvara
+Çekirdek	Kärna
+Açık kalma süresi	Drifttid
+Güvenlik duvarı	Brandvägg
+Kapalı (gelen bağlantılara açık)	Av (öppen för inkommande)
+Açık (gelen bağlantılar engelli)	På (inkommande blockeras)
+Çalışıyor · port %d	Körs · port %d
+Çalışmıyor	Körs inte
+SSH sunucusu	SSH-server
+Sistem Bilgisi	Systeminfo
+%ld gün %ld sa	%ld d %ld h
+%ld sa %ld dk	%ld h %ld min
+%ld dk	%ld min
+Sunucu başlatılamadı	Servern kunde inte startas
+Wi-Fi kapalı	Wi-Fi är av
+Wi-Fi'yi açın; adres burada görünecek.	Slå på Wi-Fi; adressen visas här.
+Tarayıcıda bu adresi açın:	Öppna den här adressen i webbläsaren:
+Çok fazla yanlış PIN denendi.\nGüvenlik için yükleme durduruldu.	För många fel PIN.\nUppladdningen stoppades av säkerhetsskäl.
+Kilidi aç (yeni PIN)	Lås upp (ny PIN)
+Telefon ya da bilgisayar aynı Wi-Fi ağında olmalı. Sayfada PIN'i girin, kitapları seçip Gönder'e basın. Uygulamayı kapatınca sunucu durur.	Telefonen eller datorn måste vara på samma Wi-Fi-nät. Ange PIN på sidan, välj böcker och tryck på Skicka. Servern stoppas när appen stängs.
+Alınıyor: %s	Tar emot: %s
+%s / %s  (%%%d)	%s / %s  (%d %%)
+Dosya bekleniyor…	Väntar på filer…
+Bu oturumda gelenler (%d)	Mottagna denna session (%d)
+Bu oturumda henüz dosya gelmedi	Inga filer mottagna denna session
+Wi-Fi ile Yükle	Ladda upp via Wi-Fi
+%d kez yanlış PIN girildi: yeni PIN üretildi.	Fel PIN %d gånger: ny PIN skapad.
+Alındı: %s	Mottagen: %s

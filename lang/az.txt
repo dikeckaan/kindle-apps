@@ -260,3 +260,71 @@ boşluk	boşluq
 Şubat	fevral
 ⚑ Açık	⚑ Açıq
 ⚑ Kapalı	⚑ Bağlı
+E-Kitap	E-kitab
+Ara	Axtar
+Project Gutenberg'deki telifsiz kitaplar	Project Gutenberg-dəki müəllif hüququ bitmiş kitablar
+70.000'den fazla ücretsiz e-kitap. Arama İngilizce başlık ve yazar adlarıyla en iyi sonucu verir.	70 000-dən çox pulsuz e-kitab. Axtarış ingiliscə ad və müəllif adları ilə daha yaxşı işləyir.
+Kitap ara	Kitab axtar
+Biçim:	Format:
+AZW3 Kindle'ın kendi okuyucusunda, EPUB KOReader'da açılır.	AZW3 Kindle-ın öz oxuyucusunda, EPUB isə KOReader-də açılır.
+İndirilenler	Endirilənlər
+Henüz kitap indirilmedi.	Hələ kitab endirilməyib.
+Daha fazla	Daha çox
+“%s” · %d kitap%s	“%s” · %d kitab%s
+Sonuç bulunamadı.\nBaşka bir başlık ya da yazar adı deneyin.	Nəticə tapılmadı.\nBaşqa ad və ya müəllif yoxlayın.
+Yazar bilinmiyor	Müəllif məlum deyil
+Kitap	Kitab
+Biçim: %s	Format: %s
+Kaynak: gutenberg.org/ebooks/%d	Mənbə: gutenberg.org/ebooks/%d
+İndir	Endir
+İndiriliyor…\nGutenberg yavaş olabilir, lütfen bekleyin.	Endirilir…\nGutenberg yavaş ola bilər, gözləyin.
+Kitaplığa eklendi:\n%s	Kitabxanaya əlavə edildi:\n%s
+İndirilemedi.\nWi-Fi bağlantısını kontrol edip yeniden deneyin.	Endirilmədi.\nWi-Fi bağlantısını yoxlayıb yenidən cəhd edin.
+Yeniden dene	Yenidən cəhd et
+Bağlantı yok	Bağlantı yoxdur
+Kitap ara (başlık veya yazar)	Kitab axtar (ad və ya müəllif)
+Gutenberg'e ulaşılamadı. Wi-Fi bağlantısını kontrol edip yeniden deneyin.	Gutenberg-ə qoşulmaq olmadı. Wi-Fi bağlantısını yoxlayıb yenidən cəhd edin.
+Kaynaklar	Mənbələr
+Kaynağa dokunun: haberlerini açar. ☑ / ☐: ön sayfada gösterilsin mi.	Mənbəyə toxunun: xəbərlərini açır. ☑ / ☐: ön səhifədə göstərilsin?
+%s yükleniyor… (%d)	%s yüklənir… (%d)
+%s · Manşetler · Sayfa %d/%d	%s · Manşetlər · Səhifə %d/%d
+Ön sayfada kaynak yok.\nKaynaklar'dan seçin.	Ön səhifədə mənbə yoxdur.\nMənbələr bölməsindən seçin.
+Teknoloji	Texnologiya
+Türkiye	Türkiyə
+Tümü	Hamısı
+Son dakika	Son dəqiqə
+%%%d · şarj oluyor	%%%d · şarj olunur
+Pil	Batareya
+Pil sıcaklığı	Batareya temperaturu
+%s boş / %s	%s boş / %s
+Depolama	Yaddaş
+Bellek	Operativ yaddaş
+bağlı değil	qoşulmayıb
+Yazılım	Proqram təminatı
+Çekirdek	Nüvə
+Açık kalma süresi	İş müddəti
+Güvenlik duvarı	Təhlükəsizlik divarı
+Kapalı (gelen bağlantılara açık)	Bağlı (gələn bağlantılara açıq)
+Açık (gelen bağlantılar engelli)	Açıq (gələn bağlantılar bloklanır)
+Çalışıyor · port %d	İşləyir · port %d
+Çalışmıyor	İşləmir
+SSH sunucusu	SSH serveri
+Sistem Bilgisi	Sistem məlumatı
+%ld gün %ld sa	%ld gün %ld saat
+%ld sa %ld dk	%ld saat %ld dəq
+%ld dk	%ld dəq
+Sunucu başlatılamadı	Server başladılmadı
+Wi-Fi kapalı	Wi-Fi bağlıdır
+Wi-Fi'yi açın; adres burada görünecek.	Wi-Fi-ı açın; ünvan burada görünəcək.
+Tarayıcıda bu adresi açın:	Brauzerdə bu ünvanı açın:
+Çok fazla yanlış PIN denendi.\nGüvenlik için yükleme durduruldu.	Çox sayda yanlış PIN daxil edildi.\nTəhlükəsizlik üçün yükləmə dayandırıldı.
+Kilidi aç (yeni PIN)	Kilidi aç (yeni PIN)
+Telefon ya da bilgisayar aynı Wi-Fi ağında olmalı. Sayfada PIN'i girin, kitapları seçip Gönder'e basın. Uygulamayı kapatınca sunucu durur.	Telefon və ya kompüter eyni Wi-Fi şəbəkəsində olmalıdır. Səhifədə PIN-i daxil edin, kitabları seçib Göndər düyməsinə basın. Tətbiq bağlananda server dayanır.
+Alınıyor: %s	Qəbul edilir: %s
+%s / %s  (%%%d)	%s / %s  (%%%d)
+Dosya bekleniyor…	Fayl gözlənilir…
+Bu oturumda gelenler (%d)	Bu seansda gələnlər (%d)
+Bu oturumda henüz dosya gelmedi	Bu seansda hələ fayl gəlməyib
+Wi-Fi ile Yükle	Wi-Fi ilə yüklə
+%d kez yanlış PIN girildi: yeni PIN üretildi.	%d dəfə yanlış PIN daxil edildi: yeni PIN yaradıldı.
+Alındı: %s	Qəbul edildi: %s

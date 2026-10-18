@@ -260,3 +260,71 @@ boşluk	κενό
 Şubat	Φεβρουαρίου
 ⚑ Açık	⚑ Ναι
 ⚑ Kapalı	⚑ Όχι
+E-Kitap	E-βιβλία
+Ara	Αναζήτηση
+Project Gutenberg'deki telifsiz kitaplar	Ελεύθερα βιβλία από το Project Gutenberg
+70.000'den fazla ücretsiz e-kitap. Arama İngilizce başlık ve yazar adlarıyla en iyi sonucu verir.	Πάνω από 70.000 δωρεάν e-βιβλία. Η αναζήτηση δουλεύει καλύτερα με αγγλικούς τίτλους και ονόματα συγγραφέων.
+Kitap ara	Αναζήτηση βιβλίου
+Biçim:	Μορφή:
+AZW3 Kindle'ın kendi okuyucusunda, EPUB KOReader'da açılır.	Το AZW3 ανοίγει στον αναγνώστη του Kindle, το EPUB στο KOReader.
+İndirilenler	Λήψεις
+Henüz kitap indirilmedi.	Δεν έχουν ληφθεί βιβλία ακόμη.
+Daha fazla	Περισσότερα
+“%s” · %d kitap%s	«%s» · βιβλία: %d%s
+Sonuç bulunamadı.\nBaşka bir başlık ya da yazar adı deneyin.	Κανένα αποτέλεσμα.\nΔοκιμάστε άλλο τίτλο ή συγγραφέα.
+Yazar bilinmiyor	Άγνωστος συγγραφέας
+Kitap	Βιβλίο
+Biçim: %s	Μορφή: %s
+Kaynak: gutenberg.org/ebooks/%d	Πηγή: gutenberg.org/ebooks/%d
+İndir	Λήψη
+İndiriliyor…\nGutenberg yavaş olabilir, lütfen bekleyin.	Λήψη…\nΤο Gutenberg μπορεί να είναι αργό, περιμένετε.
+Kitaplığa eklendi:\n%s	Προστέθηκε στη βιβλιοθήκη:\n%s
+İndirilemedi.\nWi-Fi bağlantısını kontrol edip yeniden deneyin.	Η λήψη απέτυχε.\nΕλέγξτε το Wi-Fi και δοκιμάστε ξανά.
+Yeniden dene	Δοκιμή ξανά
+Bağlantı yok	Χωρίς σύνδεση
+Kitap ara (başlık veya yazar)	Αναζήτηση βιβλίου (τίτλος ή συγγραφέας)
+Gutenberg'e ulaşılamadı. Wi-Fi bağlantısını kontrol edip yeniden deneyin.	Το Gutenberg δεν είναι προσβάσιμο. Ελέγξτε το Wi-Fi και δοκιμάστε ξανά.
+Kaynaklar	Πηγές
+Kaynağa dokunun: haberlerini açar. ☑ / ☐: ön sayfada gösterilsin mi.	Πατήστε μια πηγή για τις ειδήσεις της. ☑ / ☐: εμφάνιση στην πρώτη σελίδα.
+%s yükleniyor… (%d)	Φόρτωση %s… (%d)
+%s · Manşetler · Sayfa %d/%d	%s · Πρωτοσέλιδα · Σελίδα %d/%d
+Ön sayfada kaynak yok.\nKaynaklar'dan seçin.	Καμία πηγή στην πρώτη σελίδα.\nΕπιλέξτε από τις Πηγές.
+Teknoloji	Τεχνολογία
+Türkiye	Τουρκία
+Tümü	Όλα
+Son dakika	Έκτακτα
+%%%d · şarj oluyor	%d %% · φορτίζει
+Pil	Μπαταρία
+Pil sıcaklığı	Θερμοκρασία μπαταρίας
+%s boş / %s	%s ελεύθερα / %s
+Depolama	Αποθήκευση
+Bellek	Μνήμη
+bağlı değil	μη συνδεδεμένο
+Yazılım	Λογισμικό
+Çekirdek	Πυρήνας
+Açık kalma süresi	Χρόνος λειτουργίας
+Güvenlik duvarı	Τείχος προστασίας
+Kapalı (gelen bağlantılara açık)	Ανενεργό (ανοιχτό σε εισερχόμενες)
+Açık (gelen bağlantılar engelli)	Ενεργό (εισερχόμενες αποκλείονται)
+Çalışıyor · port %d	Εκτελείται · θύρα %d
+Çalışmıyor	Δεν εκτελείται
+SSH sunucusu	Διακομιστής SSH
+Sistem Bilgisi	Πληροφορίες συστήματος
+%ld gün %ld sa	%ld ημ. %ld ώρ.
+%ld sa %ld dk	%ld ώρ. %ld λεπ.
+%ld dk	%ld λεπ.
+Sunucu başlatılamadı	Ο διακομιστής δεν ξεκίνησε
+Wi-Fi kapalı	Το Wi-Fi είναι κλειστό
+Wi-Fi'yi açın; adres burada görünecek.	Ανοίξτε το Wi-Fi· η διεύθυνση θα εμφανιστεί εδώ.
+Tarayıcıda bu adresi açın:	Ανοίξτε αυτή τη διεύθυνση στον browser:
+Çok fazla yanlış PIN denendi.\nGüvenlik için yükleme durduruldu.	Πάρα πολλά λάθος PIN.\nΗ μεταφόρτωση σταμάτησε για ασφάλεια.
+Kilidi aç (yeni PIN)	Ξεκλείδωμα (νέο PIN)
+Telefon ya da bilgisayar aynı Wi-Fi ağında olmalı. Sayfada PIN'i girin, kitapları seçip Gönder'e basın. Uygulamayı kapatınca sunucu durur.	Το τηλέφωνο ή ο υπολογιστής πρέπει να είναι στο ίδιο δίκτυο Wi-Fi. Εισαγάγετε το PIN στη σελίδα, επιλέξτε βιβλία και πατήστε Αποστολή. Ο διακομιστής σταματά όταν κλείσει η εφαρμογή.
+Alınıyor: %s	Λήψη: %s
+%s / %s  (%%%d)	%s / %s  (%d %%)
+Dosya bekleniyor…	Αναμονή για αρχεία…
+Bu oturumda gelenler (%d)	Ελήφθησαν σε αυτή τη συνεδρία (%d)
+Bu oturumda henüz dosya gelmedi	Δεν έχουν ληφθεί αρχεία σε αυτή τη συνεδρία
+Wi-Fi ile Yükle	Μεταφόρτωση μέσω Wi-Fi
+%d kez yanlış PIN girildi: yeni PIN üretildi.	Λάθος PIN %d φορές: δημιουργήθηκε νέο PIN.
+Alındı: %s	Ελήφθη: %s

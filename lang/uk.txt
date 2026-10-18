@@ -260,3 +260,71 @@ boşluk	пробіл
 Şubat	лютого
 ⚑ Açık	⚑ Увімк
 ⚑ Kapalı	⚑ Вимк
+E-Kitap	Е-книги
+Ara	Пошук
+Project Gutenberg'deki telifsiz kitaplar	Вільні книги з Project Gutenberg
+70.000'den fazla ücretsiz e-kitap. Arama İngilizce başlık ve yazar adlarıyla en iyi sonucu verir.	Понад 70 000 безкоштовних електронних книг. Пошук найкраще працює за англійськими назвами та іменами авторів.
+Kitap ara	Знайти книгу
+Biçim:	Формат:
+AZW3 Kindle'ın kendi okuyucusunda, EPUB KOReader'da açılır.	AZW3 відкривається в читалці Kindle, EPUB — у KOReader.
+İndirilenler	Завантаження
+Henüz kitap indirilmedi.	Завантажених книг ще немає.
+Daha fazla	Ще
+“%s” · %d kitap%s	«%s» · книг: %d%s
+Sonuç bulunamadı.\nBaşka bir başlık ya da yazar adı deneyin.	Нічого не знайдено.\nСпробуйте іншу назву або автора.
+Yazar bilinmiyor	Автор невідомий
+Kitap	Книга
+Biçim: %s	Формат: %s
+Kaynak: gutenberg.org/ebooks/%d	Джерело: gutenberg.org/ebooks/%d
+İndir	Завантажити
+İndiriliyor…\nGutenberg yavaş olabilir, lütfen bekleyin.	Завантаження…\nGutenberg буває повільним, зачекайте.
+Kitaplığa eklendi:\n%s	Додано до бібліотеки:\n%s
+İndirilemedi.\nWi-Fi bağlantısını kontrol edip yeniden deneyin.	Не вдалося завантажити.\nПеревірте Wi-Fi і спробуйте ще раз.
+Yeniden dene	Повторити
+Bağlantı yok	Немає зв'язку
+Kitap ara (başlık veya yazar)	Знайти книгу (назва або автор)
+Gutenberg'e ulaşılamadı. Wi-Fi bağlantısını kontrol edip yeniden deneyin.	Gutenberg недоступний. Перевірте Wi-Fi і спробуйте ще раз.
+Kaynaklar	Джерела
+Kaynağa dokunun: haberlerini açar. ☑ / ☐: ön sayfada gösterilsin mi.	Торкніться джерела, щоб відкрити його новини. ☑ / ☐: показувати на головній.
+%s yükleniyor… (%d)	Завантаження: %s… (%d)
+%s · Manşetler · Sayfa %d/%d	%s · Головне · Стор. %d/%d
+Ön sayfada kaynak yok.\nKaynaklar'dan seçin.	На головній немає джерел.\nВиберіть їх у розділі «Джерела».
+Teknoloji	Технології
+Türkiye	Туреччина
+Tümü	Усі
+Son dakika	Терміново
+%%%d · şarj oluyor	%d %% · заряджається
+Pil	Батарея
+Pil sıcaklığı	Температура батареї
+%s boş / %s	Вільно %s із %s
+Depolama	Сховище
+Bellek	Пам'ять
+bağlı değil	не підключено
+Yazılım	ПЗ
+Çekirdek	Ядро
+Açık kalma süresi	Час роботи
+Güvenlik duvarı	Брандмауер
+Kapalı (gelen bağlantılara açık)	Вимк (вхідні дозволені)
+Açık (gelen bağlantılar engelli)	Увімк (вхідні блокуються)
+Çalışıyor · port %d	Працює · порт %d
+Çalışmıyor	Не працює
+SSH sunucusu	SSH-сервер
+Sistem Bilgisi	Про систему
+%ld gün %ld sa	%ld д %ld год
+%ld sa %ld dk	%ld год %ld хв
+%ld dk	%ld хв
+Sunucu başlatılamadı	Не вдалося запустити сервер
+Wi-Fi kapalı	Wi-Fi вимкнено
+Wi-Fi'yi açın; adres burada görünecek.	Увімкніть Wi-Fi; адреса з'явиться тут.
+Tarayıcıda bu adresi açın:	Відкрийте цю адресу в браузері:
+Çok fazla yanlış PIN denendi.\nGüvenlik için yükleme durduruldu.	Забагато неправильних PIN.\nЗавантаження зупинено з міркувань безпеки.
+Kilidi aç (yeni PIN)	Розблокувати (новий PIN)
+Telefon ya da bilgisayar aynı Wi-Fi ağında olmalı. Sayfada PIN'i girin, kitapları seçip Gönder'e basın. Uygulamayı kapatınca sunucu durur.	Телефон або комп'ютер має бути в тій самій мережі Wi-Fi. Введіть PIN на сторінці, виберіть книги й натисніть «Надіслати». Сервер зупиниться, коли закриєте застосунок.
+Alınıyor: %s	Отримання: %s
+%s / %s  (%%%d)	%s / %s  (%d %%)
+Dosya bekleniyor…	Очікування файлів…
+Bu oturumda gelenler (%d)	Отримано за сеанс (%d)
+Bu oturumda henüz dosya gelmedi	За цей сеанс файлів ще немає
+Wi-Fi ile Yükle	Завантаження через Wi-Fi
+%d kez yanlış PIN girildi: yeni PIN üretildi.	Неправильних спроб PIN: %d. Створено новий PIN.
+Alındı: %s	Отримано: %s

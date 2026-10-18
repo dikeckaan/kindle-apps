@@ -260,3 +260,71 @@ boşluk	szóköz
 Şubat	február
 ⚑ Açık	⚑ Be
 ⚑ Kapalı	⚑ Ki
+E-Kitap	E-könyv
+Ara	Keresés
+Project Gutenberg'deki telifsiz kitaplar	Jogdíjmentes könyvek a Project Gutenbergen
+70.000'den fazla ücretsiz e-kitap. Arama İngilizce başlık ve yazar adlarıyla en iyi sonucu verir.	Több mint 70 000 ingyenes e-könyv. A keresés angol címmel és szerzőnévvel működik a legjobban.
+Kitap ara	Könyv keresése
+Biçim:	Formátum:
+AZW3 Kindle'ın kendi okuyucusunda, EPUB KOReader'da açılır.	Az AZW3 a Kindle saját olvasójában, az EPUB a KOReaderben nyílik meg.
+İndirilenler	Letöltések
+Henüz kitap indirilmedi.	Még nincs letöltött könyv.
+Daha fazla	Továbbiak
+“%s” · %d kitap%s	„%s” · könyvek: %d%s
+Sonuç bulunamadı.\nBaşka bir başlık ya da yazar adı deneyin.	Nincs találat.\nPróbálj más címet vagy szerzőt.
+Yazar bilinmiyor	Ismeretlen szerző
+Kitap	Könyv
+Biçim: %s	Formátum: %s
+Kaynak: gutenberg.org/ebooks/%d	Forrás: gutenberg.org/ebooks/%d
+İndir	Letöltés
+İndiriliyor…\nGutenberg yavaş olabilir, lütfen bekleyin.	Letöltés…\nA Gutenberg lassú lehet, kérlek, várj.
+Kitaplığa eklendi:\n%s	Hozzáadva a könyvtárhoz:\n%s
+İndirilemedi.\nWi-Fi bağlantısını kontrol edip yeniden deneyin.	A letöltés nem sikerült.\nEllenőrizd a Wi-Fi-t, és próbáld újra.
+Yeniden dene	Újra
+Bağlantı yok	Nincs kapcsolat
+Kitap ara (başlık veya yazar)	Könyv keresése (cím vagy szerző)
+Gutenberg'e ulaşılamadı. Wi-Fi bağlantısını kontrol edip yeniden deneyin.	A Gutenberg nem érhető el. Ellenőrizd a Wi-Fi-t, és próbáld újra.
+Kaynaklar	Források
+Kaynağa dokunun: haberlerini açar. ☑ / ☐: ön sayfada gösterilsin mi.	Koppints egy forrásra a híreihez. ☑ / ☐: megjelenjen-e a címlapon.
+%s yükleniyor… (%d)	Betöltés: %s… (%d)
+%s · Manşetler · Sayfa %d/%d	%s · Címlap · Oldal: %d/%d
+Ön sayfada kaynak yok.\nKaynaklar'dan seçin.	Nincs forrás a címlapon.\nVálassz a Források között.
+Teknoloji	Technológia
+Türkiye	Törökország
+Tümü	Összes
+Son dakika	Friss hírek
+%%%d · şarj oluyor	%d%% · töltődik
+Pil	Akkumulátor
+Pil sıcaklığı	Akku hőmérséklete
+%s boş / %s	Szabad: %s / %s
+Depolama	Tárhely
+Bellek	Memória
+bağlı değil	nincs csatlakoztatva
+Yazılım	Szoftver
+Çekirdek	Kernel
+Açık kalma süresi	Üzemidő
+Güvenlik duvarı	Tűzfal
+Kapalı (gelen bağlantılara açık)	Ki (bejövő kapcsolatok engedve)
+Açık (gelen bağlantılar engelli)	Be (bejövő kapcsolatok tiltva)
+Çalışıyor · port %d	Fut · port: %d
+Çalışmıyor	Nem fut
+SSH sunucusu	SSH-szerver
+Sistem Bilgisi	Rendszerinfó
+%ld gün %ld sa	%ld nap %ld ó
+%ld sa %ld dk	%ld ó %ld p
+%ld dk	%ld p
+Sunucu başlatılamadı	A szerver nem indult el
+Wi-Fi kapalı	A Wi-Fi ki van kapcsolva
+Wi-Fi'yi açın; adres burada görünecek.	Kapcsold be a Wi-Fi-t; a cím itt jelenik meg.
+Tarayıcıda bu adresi açın:	Nyisd meg ezt a címet a böngészőben:
+Çok fazla yanlış PIN denendi.\nGüvenlik için yükleme durduruldu.	Túl sok hibás PIN.\nA feltöltés biztonsági okból leállt.
+Kilidi aç (yeni PIN)	Feloldás (új PIN)
+Telefon ya da bilgisayar aynı Wi-Fi ağında olmalı. Sayfada PIN'i girin, kitapları seçip Gönder'e basın. Uygulamayı kapatınca sunucu durur.	A telefon vagy a számítógép ugyanazon a Wi-Fi-hálózaton legyen. Írd be a PIN-t az oldalon, válaszd ki a könyveket, és nyomd meg a Küldés gombot. Az alkalmazás bezárásakor a szerver leáll.
+Alınıyor: %s	Fogadás: %s
+%s / %s  (%%%d)	%s / %s  (%d%%)
+Dosya bekleniyor…	Várakozás fájlra…
+Bu oturumda gelenler (%d)	Ebben a munkamenetben érkezett: %d
+Bu oturumda henüz dosya gelmedi	Ebben a munkamenetben még nem érkezett fájl
+Wi-Fi ile Yükle	Feltöltés Wi-Fin
+%d kez yanlış PIN girildi: yeni PIN üretildi.	Hibás PIN-ek száma: %d. Új PIN készült.
+Alındı: %s	Megérkezett: %s
