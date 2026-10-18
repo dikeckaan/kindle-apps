@@ -8,6 +8,10 @@
  * NUL-terminated *body (caller frees); on any failure (curl error, HTTP error, timeout, > NET_MAX_BODY)
  * returns -1 with *body = NULL. Never blocks longer than timeout_s + 2 seconds. */
 int  net_get(const char *url, char **body, int *len, int timeout_s);
+/* Downloads url into path: curl writes "<path>.part", which is fsync'd and renamed to path on success (0).
+ * On any failure (curl error, HTTP error, timeout, empty or > max_bytes) the .part is removed and -1 returned;
+ * path itself is never touched then. Never blocks longer than timeout_s + 2 seconds. */
+int  net_download(const char *url, const char *path, long max_bytes, int timeout_s);
 void net_urlencode(const char *in, char *out, int cap); /* RFC 3986: unreserved bytes kept, others %XX */
 
 /* ---- XML: elements are found by name; attrs/inner point into the source ---- */

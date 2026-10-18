@@ -25,7 +25,7 @@ assert all(isinstance(d,dict) and isinstance(d.get("id"),str) for d in m["depend
     grep -q "\"$id\"" dist/manifest.json 2>/dev/null && ok "repo manifest lists $id" || bad "repo manifest misses $id"
     rm -rf "$t"
 done
-for id in core 2048 chess sleep ssh firewall weather clock currency news wordle mines sudoku solitaire; do
+for id in core 2048 chess sleep ssh firewall weather clock currency news wordle mines sudoku solitaire sysinfo upload ebooks; do
     ls dist/packages/kindle-apps-$id/*.kpkg >/dev/null 2>&1 && ok "package kindle-apps-$id built" || bad "package kindle-apps-$id missing"
 done
 has() { tar tzf dist/packages/$1/*.kpkg | grep -qx "$2" && ok "$1 has $2" || bad "$1 lacks $2"; }

@@ -4,7 +4,7 @@
   "name": "Solitaire",
   "author": "Kaan Dikeç",
   "description": "Klondike solitaire: tek veya üç kart çekme, sınırsız geri alma, otomatik tamamlama",
-  "version": [2026, 10, 7],
+  "version": [2026, 10, 8],
   "dependencies": [],
   "supported_platforms": ["kindlehf"]
 }

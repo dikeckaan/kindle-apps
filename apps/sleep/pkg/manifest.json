@@ -4,7 +4,7 @@
   "name": "Uyku Ayarı",
   "author": "Kaan Dikeç",
   "description": "Kindle'ın uykuya geçme süresini uzatın veya kapatın",
-  "version": [2026, 10, 7],
+  "version": [2026, 10, 8],
   "dependencies": [],
   "supported_platforms": ["kindlehf"]
 }
