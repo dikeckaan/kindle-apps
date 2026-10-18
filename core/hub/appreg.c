@@ -41,9 +41,10 @@ int hub_scan_apps(const char *root, HubApp *out, int max)
 	struct dirent *de;
 	HubApp all[64];
 	while ((de = readdir(d)) && n < 64) {
-		if (de->d_name[0] == '.' || strlen(de->d_name) >= sizeof all[0].id) continue;
+		size_t idlen = strlen(de->d_name);
+		if (de->d_name[0] == '.' || idlen >= sizeof all[0].id) continue;
 		char path[512], text[2048], exec[200], order[16];
-		snprintf(path, sizeof path, "%s/%s/app.ini", dir, de->d_name);
+		if (snprintf(path, sizeof path, "%s/%s/app.ini", dir, de->d_name) >= (int) sizeof path) continue;
 		FILE *f = fopen(path, "r");
 		if (!f) continue;
 		size_t len = fread(text, 1, sizeof text - 1, f);
@@ -52,9 +53,9 @@ int hub_scan_apps(const char *root, HubApp *out, int max)
 		ini_value(text, "exec", exec, sizeof exec);
 		if (!exec[0] || strchr(exec, '/')) continue; /* exec must name a file inside the app dir */
 		HubApp *a = &all[n];
-		snprintf(a->id, sizeof a->id, "%s", de->d_name);
+		memcpy(a->id, de->d_name, idlen + 1);
 		ini_value(text, "name", a->name, sizeof a->name);
-		if (!a->name[0]) snprintf(a->name, sizeof a->name, "%s", de->d_name);
+		if (!a->name[0]) memcpy(a->name, a->id, idlen + 1); /* id (< 32) always fits name (48) */
 		if (snprintf(a->exec, sizeof a->exec, "%s/%s/%s", dir, de->d_name, exec) >= (int) sizeof a->exec) continue;
 		ini_value(text, "order", order, sizeof order);
 		a->order = order[0] ? atoi(order) : 100;
