@@ -76,7 +76,7 @@ int upd_parse_repo(const char *json, UpdPkg *out, int max)
 		if (!pk->string || !safe_id(pk->string)) continue;
 		UpdPkg p;
 		memset(&p, 0, sizeof p);
-		const cJSON *art, *nm = cJSON_GetObjectItemCaseSensitive(pk, "name");
+		const cJSON *art, *nm = cJSON_GetObjectItemCaseSensitive(pk, "name"), *ds = cJSON_GetObjectItemCaseSensitive(pk, "description");
 		cJSON_ArrayForEach(art, cJSON_GetObjectItemCaseSensitive(pk, "artifacts")) {
 			const cJSON *u = cJSON_GetObjectItemCaseSensitive(art, "url");
 			char v[24];
@@ -90,6 +90,7 @@ int upd_parse_repo(const char *json, UpdPkg *out, int max)
 		if (!p.ver[0]) continue;
 		snprintf(p.id, sizeof p.id, "%s", pk->string);
 		snprintf(p.name, sizeof p.name, "%s", cJSON_IsString(nm) ? nm->valuestring : p.id);
+		if (cJSON_IsString(ds)) snprintf(p.desc, sizeof p.desc, "%s", ds->valuestring);
 		if (!strcmp(p.id, "kindle-apps-core")) { /* the runtime first */
 			memmove(&out[1], &out[0], (size_t) n * sizeof *out);
 			out[0] = p;
@@ -103,7 +104,7 @@ int upd_parse_repo(const char *json, UpdPkg *out, int max)
 }
 
 /* where an installed package's files live (to recognise installs made before versions/ existed) */
-static void installed_path(const char *root, const char *id, char *out, int cap)
+void upd_app_dir(const char *root, const char *id, char *out, int cap)
 {
 	const char *x = strncmp(id, "kindle-apps-", 12) ? id : id + 12;
 	if (!strcmp(x, "core")) snprintf(out, (size_t) cap, "%s/bin/hub", root);
@@ -123,7 +124,7 @@ void upd_read_installed(const char *root, UpdPkg *p, int n)
 			v[strcspn(v, "\r\n")] = '\0';
 		}
 		struct stat st;
-		installed_path(root, p[i].id, path, sizeof path);
+		upd_app_dir(root, p[i].id, path, sizeof path);
 		if (stat(path, &st) != 0) v[0] = '\0';  /* uninstalled (its version file may be left behind) */
 		else if (!v[0]) snprintf(v, sizeof v, "?");
 		snprintf(p[i].installed, sizeof p[i].installed, "%s", v);

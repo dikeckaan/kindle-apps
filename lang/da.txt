@@ -363,11 +363,7 @@ Masa Panosu	Bordpanel
 Pil tasarrufu (derin uyku)	Batterisparetilstand (dyb dvale)
 ☾ uykuda	☾ i dvale
 Uykuya geçiş: %d dk dokunulmazsa	Dvale efter: %d min uden berøring
-Veri güncelleme: %d saatte bir	Opdater data: hver %d. time
-Pil tasarrufunda Kindle uyur, ekran e-ink sayesinde kalır; saat dakikada bir güncellenir, Wi-Fi yalnızca veri güncellerken açılır. Uyandırmak için güç tuşuna basın ya da ekrana dokunun.	I batterisparetilstand sover Kindle, og e-ink-billedet bliver stående; uret opdateres hvert minut, og Wi-Fi er kun tændt under opdatering. Tryk på tænd/sluk-knappen eller rør skærmen for at vække den.
 Alındı: %s (KOReader ile açın)	Modtaget: %s (åbn i KOReader)
-Güncellemeler	Opdateringer
-Güncel sürüm	Opdateret
 Kur	Installér
 Güncelle	Opdatér
 Tümünü güncelle	Opdatér alle
@@ -496,3 +492,36 @@ Koordinatlar	Koordinater
 %d km (%s)	%d km (%s)
 Uzaklık	Afstand
 Kaynak	Kilde
+☾ uykuda · %d dk	☾ i dvale · %d min
+Pil ve ekran…	Batteri og skærm…
+Pil tasarrufunda Kindle uyur, ekran e-ink sayesinde kalır; Wi-Fi yalnızca veri güncellerken açılır. Aralıkları Pil ve ekran'dan ayarlayın. Uyandırmak için güç tuşuna basın ya da ekrana dokunun.	I batterisparetilstand sover Kindle, og e-ink-billedet bliver stående; Wi-Fi er kun tændt under opdatering. Indstil intervallerne under Batteri og skærm. Tryk på tænd/sluk-knappen eller rør skærmen for at vække den.
+Dikeç Store	Dikeç Store
+Kurulu	Installeret
+Güncellenecek	Skal opdateres
+Sırala	Ordn
+%s kaldırıldı	%s afinstalleret
+Kaldırılamadı: %s	Kunne ikke afinstallere: %s
+Depodaki sürüm: %s	Version i butikken: %s
+Kurulu değil	Ikke installeret
+Kurulu sürüm: %s	Installeret version: %s
+Yeniden kur	Geninstallér
+Kaldır	Afinstallér
+Kaldırınca ayarlar ve kayıtlar (data/) korunur.	Ved afinstallation bevares indstillinger og data (data/).
+%s kaldırılsın mı?	Afinstallere %s?
+Menü sırası	Menurækkefølge
+≈ %d gün %d sa	≈ %d d %d t
+≈ %d sa %d dk	≈ %d t %d min
+≈ %d dk	≈ %d min
+Şarj oluyor	Oplader
+Kalan süre: biraz daha kullanım sonra hesaplanır	Resterende tid: beregnes efter lidt mere brug
+Tahmini kalan: %s	Anslået resterende: %s
+Pil ve ekran	Batteri og skærm
+Ön ışık	Frontlys
+Yarım	Halv
+Tam	Fuld
+Uykuda saat: her dakika	Ur i dvale: hvert minut
+Uykuda saat: %d dakikada bir	Ur i dvale: hvert %d. min
+Haber ve döviz: %d saatte bir	Nyheder og valuta: hver %d. time
+Hava durumu: %d saatte bir	Vejret: hver %d. time
+Uykuda ön ışık: kapalı	Frontlys i dvale: slukket
+Uykuda ön ışık: açık	Frontlys i dvale: tændt

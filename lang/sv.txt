@@ -363,11 +363,7 @@ Masa Panosu	Bordspanel
 Pil tasarrufu (derin uyku)	Batterisparläge (djup vila)
 ☾ uykuda	☾ vilar
 Uykuya geçiş: %d dk dokunulmazsa	Vila efter: %d min utan beröring
-Veri güncelleme: %d saatte bir	Uppdatera data: var %d:e timme
-Pil tasarrufunda Kindle uyur, ekran e-ink sayesinde kalır; saat dakikada bir güncellenir, Wi-Fi yalnızca veri güncellerken açılır. Uyandırmak için güç tuşuna basın ya da ekrana dokunun.	I batterisparläget sover Kindle och e-ink-bilden ligger kvar; klockan uppdateras varje minut och Wi-Fi är bara på vid uppdatering. Tryck på strömknappen eller rör skärmen för att väcka den.
 Alındı: %s (KOReader ile açın)	Mottaget: %s (öppna i KOReader)
-Güncellemeler	Uppdateringar
-Güncel sürüm	Aktuell
 Kur	Installera
 Güncelle	Uppdatera
 Tümünü güncelle	Uppdatera alla
@@ -496,3 +492,36 @@ Koordinatlar	Koordinater
 %d km (%s)	%d km (%s)
 Uzaklık	Avstånd
 Kaynak	Källa
+☾ uykuda · %d dk	☾ vilar · %d min
+Pil ve ekran…	Batteri och skärm…
+Pil tasarrufunda Kindle uyur, ekran e-ink sayesinde kalır; Wi-Fi yalnızca veri güncellerken açılır. Aralıkları Pil ve ekran'dan ayarlayın. Uyandırmak için güç tuşuna basın ya da ekrana dokunun.	I batterisparläget sover Kindle och e-ink-bilden ligger kvar; Wi-Fi är bara på vid uppdatering. Ställ in intervallen under Batteri och skärm. Tryck på strömknappen eller rör skärmen för att väcka den.
+Dikeç Store	Dikeç Store
+Kurulu	Installerade
+Güncellenecek	Att uppdatera
+Sırala	Ordna
+%s kaldırıldı	%s avinstallerad
+Kaldırılamadı: %s	Kunde inte avinstallera: %s
+Depodaki sürüm: %s	Version i butiken: %s
+Kurulu değil	Inte installerad
+Kurulu sürüm: %s	Installerad version: %s
+Yeniden kur	Installera om
+Kaldır	Avinstallera
+Kaldırınca ayarlar ve kayıtlar (data/) korunur.	Vid avinstallation sparas inställningar och data (data/).
+%s kaldırılsın mı?	Avinstallera %s?
+Menü sırası	Menyordning
+≈ %d gün %d sa	≈ %d d %d tim
+≈ %d sa %d dk	≈ %d tim %d min
+≈ %d dk	≈ %d min
+Şarj oluyor	Laddar
+Kalan süre: biraz daha kullanım sonra hesaplanır	Återstående tid: beräknas efter lite mer användning
+Tahmini kalan: %s	Beräknat kvar: %s
+Pil ve ekran	Batteri och skärm
+Ön ışık	Framljus
+Yarım	Halv
+Tam	Full
+Uykuda saat: her dakika	Klocka i vila: varje minut
+Uykuda saat: %d dakikada bir	Klocka i vila: var %d:e min
+Haber ve döviz: %d saatte bir	Nyheter och valuta: var %d:e timme
+Hava durumu: %d saatte bir	Väder: var %d:e timme
+Uykuda ön ışık: kapalı	Framljus i vila: av
+Uykuda ön ışık: açık	Framljus i vila: på

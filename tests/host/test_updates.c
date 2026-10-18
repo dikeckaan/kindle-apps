@@ -9,7 +9,7 @@ static const char *REPO =
 	"\"kindle-apps-core\":{\"name\":\"Uygulamalar (çekirdek)\",\"artifacts\":["
 	"{\"url\":\"packages/kindle-apps-core/kindle-apps-core_2026.10.9_kindlehf.kpkg\",\"version\":[2026,10,9],\"supported_platforms\":[\"kindlehf\"]},"
 	"{\"url\":\"packages/kindle-apps-core/kindle-apps-core_2026.10.12_kindlehf.kpkg\",\"version\":[2026,10,12],\"supported_platforms\":[\"kindlehf\"]}]},"
-	"\"kindle-apps-2048\":{\"name\":\"2048\",\"artifacts\":["
+	"\"kindle-apps-2048\":{\"name\":\"2048\",\"description\":\"Klasik 2048\",\"artifacts\":["
 	"{\"url\":\"packages/kindle-apps-2048/kindle-apps-2048_2026.10.11_kindlehf.kpkg\",\"version\":[2026,10,11],\"supported_platforms\":[\"kindlehf\"]}]},"
 	"\"kindle-apps-pano\":{\"name\":\"Masa Panosu\",\"artifacts\":["
 	"{\"url\":\"packages/kindle-apps-pano/kindle-apps-pano_2026.10.12_kindlehf.kpkg\",\"version\":[2026,10,12],\"supported_platforms\":[\"kindlehf\"]}]},"
@@ -44,6 +44,13 @@ static void test_parse_picks_newest_kindlehf_artifact(void)
 	}
 	T_ASSERT(p[0].id[0] && !strcmp(p[0].id, "kindle-apps-core")); /* core first: the runtime goes in before apps */
 	T_ASSERT(find(p, n, "kindle-apps-old") == NULL);
+	UpdPkg *g = find(p, n, "kindle-apps-2048");
+	T_ASSERT(g && !strcmp(g->desc, "Klasik 2048"));
+	char dir[200];
+	upd_app_dir("/r", "kindle-apps-2048", dir, sizeof dir);
+	T_EQ_STR(dir, "/r/apps/game2048");
+	upd_app_dir("/r", "kindle-apps-pano", dir, sizeof dir);
+	T_EQ_STR(dir, "/r/apps/pano");
 	T_ASSERT(find(p, n, "evil;rm") == NULL);
 	T_ASSERT(find(p, n, "kindle-apps-dots") == NULL);
 	T_ASSERT(find(p, n, "kindle-apps-abs") == NULL);

@@ -66,6 +66,32 @@ static void test_scan_missing_root_is_empty(void)
 	T_EQ_INT(hub_scan_apps("/tmp/kui-no-such-root", a, 2), 0);
 }
 
+/* the user's order (Dikeç Store → Sırala) comes first; apps it does not name keep their place after it */
+static void test_user_order(void)
+{
+	HubApp a[8];
+	int n = hub_scan_apps(root, a, 8);
+	char p[256];
+	snprintf(p, sizeof p, "%s/data", root);
+	mkdir(p, 0755);
+	snprintf(p, sizeof p, "%s/data/hub", root);
+	mkdir(p, 0755);
+	snprintf(p, sizeof p, "%s/data/hub/order", root);
+	FILE *f = fopen(p, "w");
+	fputs("wordle\ngone\nchess\n", f);
+	fclose(f);
+	hub_apply_order(root, a, n);
+	T_EQ_STR(a[0].id, "wordle");
+	T_EQ_STR(a[1].id, "chess");
+	T_EQ_STR(a[2].id, "game2048");
+	HubApp b[3] = { a[2], a[0], a[1] };
+	T_EQ_INT(hub_save_order(root, b, 3), 0);
+	n = hub_scan_apps(root, a, 8);
+	hub_apply_order(root, a, n);
+	T_EQ_STR(a[0].id, "game2048");
+	T_EQ_STR(a[1].id, "wordle");
+}
+
 int main(void)
 {
 	if (!mkdtemp(root)) return 2;
@@ -80,5 +106,6 @@ int main(void)
 	T_RUN(test_scan_resolves_exec_relative_to_app_dir);
 	T_RUN(test_scan_caps_at_max);
 	T_RUN(test_scan_missing_root_is_empty);
+	T_RUN(test_user_order);
 	return T_DONE();
 }

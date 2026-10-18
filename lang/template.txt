@@ -38,6 +38,10 @@
 # apps/sysinfo/main.c
 %s boş / %s	
 # core/hub/upd_ui.c
+%s kaldırıldı	
+# core/hub/upd_ui.c
+%s kaldırılsın mı?	
+# core/hub/upd_ui.c
 %s kuruldu	
 # apps/weather/main.c
 %s silinsin mi?	
@@ -231,6 +235,8 @@ Daha fazla
 Daha önce çözüldü · Seri: %d	
 # core/hub/upd_ui.c
 Denetleniyor…	
+# core/hub/upd_ui.c
+Depodaki sürüm: %s	
 # apps/sysinfo/main.c
 Depolama	
 # core/hub/upd_ui.c
@@ -245,6 +251,8 @@ Derinlik
 Devam	
 # apps/chess/main.c
 Devam et	
+# core/hub/main.c
+Dikeç Store	
 # core/hub/main.c
 Dil	
 # apps/mines/main.c
@@ -334,15 +342,13 @@ Gönder
 # apps/news/news.c
 Güncel	
 # core/hub/upd_ui.c
-Güncel sürüm	
-# core/hub/upd_ui.c
 Güncelle	
-# core/hub/main.c
-Güncellemeler	
 # apps/deprem/main.c
 Güncellendi %s · %s	
 # apps/clock/main.c
 Güncellendi %s · Open-Meteo	
+# core/hub/upd_ui.c
+Güncellenecek	
 # apps/currency/main.c
 Güncelleniyor…	
 # apps/news/news.c
@@ -363,6 +369,8 @@ Haber alınamadı.
 Haber kaynağı	
 # apps/pano/main.c
 Haber kaynağı: %s	
+# core/kui/powerui.c
+Haber ve döviz: %d saatte bir	
 # apps/news/main.c
 Haberler alınamadı.\nWi-Fi bağlantısını kontrol edin.	
 # apps/pano/main.c
@@ -389,6 +397,8 @@ Hava durumu
 Hava durumu alınamadı.\nWi-Fi bağlantısını kontrol edip Yenile'ye basın.	
 # apps/clock/main.c
 Hava durumu yok (Wi-Fi kapalı olabilir)	
+# core/kui/powerui.c
+Hava durumu: %d saatte bir	
 # apps/chess/main.c
 Hayır	
 # core/kui/trfmt.c
@@ -419,6 +429,14 @@ KAPALI
 KB	
 # apps/weather/wx.c
 KD	
+# core/kui/powerui.c
+Kalan süre: biraz daha kullanım sonra hesaplanır	
+# core/hub/upd_ui.c
+Kaldır	
+# core/hub/upd_ui.c
+Kaldırılamadı: %s	
+# core/hub/upd_ui.c
+Kaldırınca ayarlar ve kayıtlar (data/) korunur.	
 # apps/chess/main.c
 Kale	
 # apps/puzzle/puzzle.c
@@ -498,6 +516,12 @@ Kur bilgisi yok
 # core/hub/upd_ui.c
 Kurulamadı: %s	
 # core/hub/upd_ui.c
+Kurulu	
+# core/hub/upd_ui.c
+Kurulu değil	
+# core/hub/upd_ui.c
+Kurulu sürüm: %s	
+# core/hub/upd_ui.c
 Kuruluyor…	
 # apps/puzzle/puzzle.c
 Köşe matı	
@@ -529,6 +553,8 @@ Mayına bastın
 Mayıs	
 # apps/chess/main.c
 Menü	
+# core/hub/upd_ui.c
+Menü sırası	
 # apps/game2048/main.c
 Mevcut oyun silinsin mi?	
 # apps/chess/main.c
@@ -598,7 +624,11 @@ Pil sıcaklığı
 # apps/pano/main.c
 Pil tasarrufu (derin uyku)	
 # apps/pano/main.c
-Pil tasarrufunda Kindle uyur, ekran e-ink sayesinde kalır; saat dakikada bir güncellenir, Wi-Fi yalnızca veri güncellerken açılır. Uyandırmak için güç tuşuna basın ya da ekrana dokunun.	
+Pil tasarrufunda Kindle uyur, ekran e-ink sayesinde kalır; Wi-Fi yalnızca veri güncellerken açılır. Aralıkları Pil ve ekran'dan ayarlayın. Uyandırmak için güç tuşuna basın ya da ekrana dokunun.	
+# core/kui/powerui.c
+Pil ve ekran	
+# apps/pano/main.c
+Pil ve ekran…	
 # apps/chess/main.c
 Piyon hangi taşa dönüşsün?	
 # apps/puzzle/puzzle.c
@@ -709,6 +739,8 @@ Süre: %ld:%02ld
 Sıra: %s	
 # apps/pano/main.c
 Sıradaki: %s %s · %d sa %d dk	
+# core/hub/upd_ui.c
+Sırala	
 # apps/currency/main.c
 TCMB döviz kurları	
 # apps/currency/main.c
@@ -717,12 +749,16 @@ TCMB satış kuru ile
 TCMB · güncellendi %d %s %02d:%02d	
 # apps/wordle/main.c
 Tahmin dağılımı	
+# core/kui/powerui.c
+Tahmini kalan: %s	
 # apps/chess/main.c
 Tahta sabit	
 # apps/chess/main.c
 Tahtaya bak	
 # apps/chess/main.c
 Tahtayı çevir	
+# core/kui/powerui.c
+Tam	
 # apps/currency/fx.c
 Tam altın	
 # apps/ebooks/main.c
@@ -769,14 +805,20 @@ Usta
 Uygulamalar	
 # apps/sleep/main.c
 Uyku Ayarı	
-# apps/pano/main.c
+# core/kui/powerui.c
+Uykuda saat: %d dakikada bir	
+# core/kui/powerui.c
+Uykuda saat: her dakika	
+# core/kui/powerui.c
+Uykuda ön ışık: açık	
+# core/kui/powerui.c
+Uykuda ön ışık: kapalı	
+# core/kui/powerui.c
 Uykuya geçiş: %d dk dokunulmazsa	
 # apps/deprem/main.c
 Uzaklık	
 # apps/ebooks/main.c
 Vazgeç	
-# apps/pano/main.c
-Veri güncelleme: %d saatte bir	
 # apps/chess/main.c
 Vezir	
 # apps/puzzle/puzzle.c
@@ -793,6 +835,8 @@ Wi-Fi ile Yükle
 Wi-Fi kapalı	
 # apps/upload/main.c
 Wi-Fi'yi açın; adres burada görünecek.	
+# core/kui/powerui.c
+Yarım	
 # apps/currency/fx.c
 Yarım altın	
 # apps/pano/pano.c
@@ -815,6 +859,8 @@ Yeni ay
 Yeni oyun	
 # apps/ebooks/main.c
 Yeniden dene	
+# core/hub/upd_ui.c
+Yeniden kur	
 # apps/currency/main.c
 Yenile	
 # apps/chess/chess_game.c
@@ -903,6 +949,8 @@ son 24 saat
 Çıkış	
 # apps/news/main.c
 Ön sayfada kaynak yok.\nKaynaklar'dan seçin.	
+# core/kui/powerui.c
+Ön ışık	
 # apps/sudoku/main.c
 Önce boş bir hücre seçin.	
 # apps/pano/pano.c
@@ -955,6 +1003,8 @@ son 24 saat
 Şah mat — Siyah kazandı	
 # apps/chess/main.c
 Şah! Sıra: %s	
+# core/kui/powerui.c
+Şarj oluyor	
 # apps/weather/main.c
 Şehir ara	
 # apps/weather/main.c
@@ -987,8 +1037,16 @@ son 24 saat
 Şubat	
 # apps/ebooks/main.c
 “%s” · %d kitap%s	
+# core/kui/battest.c
+≈ %d dk	
+# core/kui/battest.c
+≈ %d gün %d sa	
+# core/kui/battest.c
+≈ %d sa %d dk	
 # apps/clock/main.c
 ☾ uykuda	
+# apps/clock/main.c
+☾ uykuda · %d dk	
 # apps/mines/main.c
 ⚑ Açık	
 # apps/mines/main.c

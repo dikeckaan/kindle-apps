@@ -13,7 +13,6 @@
 #include "weather/wx.h"
 #include "weather/wxdraw.h"
 
-#define WX_EVERY_S (6 * 3600) /* the forecast changes slowly */
 
 static WxCity city;
 static Wx wx;
@@ -22,7 +21,14 @@ static long wx_time;
 static int shown_min = -1, shown_hour = -1, shown_mday = -1;
 static int deep; /* in the battery saver's sleep loop */
 
-#define IDLE_S 120
+static const char *settings(void)
+{
+	static char p[300];
+	snprintf(p, sizeof p, "%s/settings", kui_data_dir("clock"));
+	return p;
+}
+#define WX_EVERY_S (kui_saver_get(settings(), KUI_SAVER_WX_HOURS) * 3600L)
+#define IDLE_S (kui_saver_get(settings(), KUI_SAVER_IDLE_MIN) * 60L)
 
 static void now_local(struct tm *tm)
 {
@@ -110,7 +116,13 @@ static void draw_all(const struct tm *tm)
 	kui_fill((KuiRect){ 0, 0, w, h }, 255);
 	kui_text(kui_topbar_exit_rect(), "✕", KUI_FONT_BOLD, 64, KUI_ALIGN_CENTER, 0);
 	kui_battery(battery_rect());
-	if (deep) kui_text((KuiRect){ 140, 20, 400, 80 }, T("☾ uykuda"), KUI_FONT_REG, 36, KUI_ALIGN_LEFT, 90);
+	if (deep) {
+		int every = kui_saver_get(settings(), KUI_SAVER_CLOCK_MIN);
+		char z[64];
+		if (every > 1) snprintf(z, sizeof z, T("☾ uykuda · %d dk"), every);
+		else snprintf(z, sizeof z, "%s", T("☾ uykuda"));
+		kui_text((KuiRect){ 140, 20, 400, 80 }, z, KUI_FONT_REG, kui_fit_px(z, KUI_FONT_REG, 36, 400), KUI_ALIGN_LEFT, 90);
+	}
 	draw_time(tm);
 	kui_tr_date(tm, s, sizeof s);
 	kui_text((KuiRect){ 20, 590, w - 40, 100 }, s, KUI_FONT_REG, kui_fit_px(s, KUI_FONT_REG, 64, w - 60), KUI_ALIGN_CENTER, 0);
@@ -210,6 +222,8 @@ static void deep_sleep_loop(void)
 	deep = 1;
 	kui_drain_power_key();
 	if (kui_wifi_enabled() == 1) kui_wifi_enable(0);
+	int light = kui_light_get();
+	if (kui_saver_get(settings(), KUI_SAVER_LIGHT_OFF) && light > 0) kui_light_set(0); /* e-ink keeps the picture in the dark */
 	soft_redraw();
 	kui_wait_refresh();
 	for (;;) {
@@ -217,7 +231,7 @@ static void deep_sleep_loop(void)
 		struct tm tm;
 		now_local(&tm);
 		if (tm.tm_min == shown_min) {
-			int r = kui_sleep_to_next_minute();
+			int r = kui_sleep_until_every(kui_saver_get(settings(), KUI_SAVER_CLOCK_MIN));
 			if (r != KUI_SLEEP_MINUTE) break;
 		}
 		if (charging()) break; /* plugged in: no need to sleep */
@@ -225,6 +239,7 @@ static void deep_sleep_loop(void)
 		kui_wait_refresh();
 	}
 	deep = 0;
+	if (light > 0 && kui_light_get() == 0) kui_light_set(light);
 	fprintf(stderr, "deep: leave (battery %d%%)\n", kui_lipc_get_int("com.lab126.powerd", "battLevel", -1));
 	kui_drain_input(700); /* the touch that woke the Kindle must not press anything (e.g. ✕) */
 	soft_redraw();
@@ -263,6 +278,13 @@ int main(void)
 		}
 		last_input = (long) time(NULL);
 		if (e.type == KUI_EV_TAP && kui_rect_contains(kui_topbar_exit_rect(), e.x, e.y)) break;
+		if (e.type == KUI_EV_TAP && kui_rect_contains(battery_rect(), e.x, e.y)) { /* estimate, light, saver intervals */
+			kui_power_screen(settings(), KUI_PS_SAVER);
+			if (kui_quit_pending()) break;
+			full_redraw();
+			last_input = (long) time(NULL);
+			continue;
+		}
 		if (!kui_input_asleep()) tick();
 	}
 	kui_grab_power_key(0);

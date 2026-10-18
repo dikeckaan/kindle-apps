@@ -363,11 +363,7 @@ Masa Panosu	Nástěnka
 Pil tasarrufu (derin uyku)	Úspora baterie (hluboký spánek)
 ☾ uykuda	☾ spí
 Uykuya geçiş: %d dk dokunulmazsa	Uspat po: %d min bez dotyku
-Veri güncelleme: %d saatte bir	Aktualizace dat: každé %d h
-Pil tasarrufunda Kindle uyur, ekran e-ink sayesinde kalır; saat dakikada bir güncellenir, Wi-Fi yalnızca veri güncellerken açılır. Uyandırmak için güç tuşuna basın ya da ekrana dokunun.	Při úspoře baterie Kindle spí a obraz e-ink zůstává; hodiny se aktualizují každou minutu a Wi-Fi je zapnuté jen při aktualizaci. Probudíte ho tlačítkem napájení nebo dotykem obrazovky.
 Alındı: %s (KOReader ile açın)	Přijato: %s (otevřete v KOReaderu)
-Güncellemeler	Aktualizace
-Güncel sürüm	Aktuální
 Kur	Instalovat
 Güncelle	Aktualizovat
 Tümünü güncelle	Aktualizovat vše
@@ -496,3 +492,36 @@ Koordinatlar	Souřadnice
 %d km (%s)	%d km (%s)
 Uzaklık	Vzdálenost
 Kaynak	Zdroj
+☾ uykuda · %d dk	☾ spí · %d min
+Pil ve ekran…	Baterie a displej…
+Pil tasarrufunda Kindle uyur, ekran e-ink sayesinde kalır; Wi-Fi yalnızca veri güncellerken açılır. Aralıkları Pil ve ekran'dan ayarlayın. Uyandırmak için güç tuşuna basın ya da ekrana dokunun.	Při úspoře baterie Kindle spí a obraz e-ink zůstává; Wi-Fi je zapnuté jen při aktualizaci. Intervaly nastavíte v Baterie a displej. Probudíte ho tlačítkem napájení nebo dotykem obrazovky.
+Dikeç Store	Dikeç Store
+Kurulu	Nainstalované
+Güncellenecek	K aktualizaci
+Sırala	Seřadit
+%s kaldırıldı	%s odinstalována
+Kaldırılamadı: %s	Odinstalace se nezdařila: %s
+Depodaki sürüm: %s	Verze v obchodě: %s
+Kurulu değil	Nenainstalováno
+Kurulu sürüm: %s	Nainstalovaná verze: %s
+Yeniden kur	Přeinstalovat
+Kaldır	Odinstalovat
+Kaldırınca ayarlar ve kayıtlar (data/) korunur.	Při odinstalaci zůstanou nastavení a záznamy (data/).
+%s kaldırılsın mı?	Odinstalovat %s?
+Menü sırası	Pořadí menu
+≈ %d gün %d sa	≈ %d d %d h
+≈ %d sa %d dk	≈ %d h %d min
+≈ %d dk	≈ %d min
+Şarj oluyor	Nabíjí se
+Kalan süre: biraz daha kullanım sonra hesaplanır	Zbývající čas: spočítá se po delším používání
+Tahmini kalan: %s	Odhad zbývá: %s
+Pil ve ekran	Baterie a displej
+Ön ışık	Podsvícení
+Yarım	Polovina
+Tam	Plné
+Uykuda saat: her dakika	Hodiny ve spánku: každou minutu
+Uykuda saat: %d dakikada bir	Hodiny ve spánku: každých %d min
+Haber ve döviz: %d saatte bir	Zprávy a měny: každých %d h
+Hava durumu: %d saatte bir	Počasí: každých %d h
+Uykuda ön ışık: kapalı	Podsvícení ve spánku: vypnuto
+Uykuda ön ışık: açık	Podsvícení ve spánku: zapnuto

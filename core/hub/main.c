@@ -28,11 +28,12 @@ static const char *root(void)
 	return r && *r ? r : "/mnt/us/kindle-apps";
 }
 
-/* installed apps plus the built-in "Güncellemeler" tile at the end (exec empty) */
+/* installed apps plus the built-in "Dikeç Store" tile at the end (exec empty) */
 static void scan(void)
 {
 	n_apps = hub_scan_apps(root(), apps, MAX_APPS - 1);
-	apps[n_apps] = (HubApp){ "updates", N_("Güncellemeler"), "", 1 << 30 };
+	hub_apply_order(root(), apps, n_apps); /* the user's order from Dikeç Store → Sırala */
+	apps[n_apps] = (HubApp){ "store", N_("Dikeç Store"), "", 1 << 30 };
 	n_apps++;
 }
 
@@ -221,6 +222,12 @@ int main(void)
 			continue;
 		}
 		if (e.type != KUI_EV_TAP) continue;
+		if (kui_rect_contains((KuiRect){ kui_width() - 340, 0, 200, KUI_TOPBAR_H }, e.x, e.y)) { /* battery: estimate, front light */
+			kui_power_screen(NULL, 0);
+			if (kui_quit_pending()) break;
+			draw();
+			continue;
+		}
 		int hit = kui_topbar_hit(kui_width(), 1, e.x, e.y);
 		if (hit == KUI_BTN_EXIT) break;
 		if (hit == KUI_BTN_MENU) {
@@ -241,7 +248,7 @@ int main(void)
 			kui_text_on((KuiRect){ r.x + 10, r.y, r.w - 20, r.h }, name, KUI_FONT_BOLD, fit_name(name, r.w - 20), KUI_ALIGN_CENTER, 255, 0);
 			kui_mark_dirty(r);
 			kui_flush(0);
-			if (!apps[k].exec[0]) { /* Güncellemeler */
+			if (!apps[k].exec[0]) { /* Dikeç Store */
 				if (hub_updates(root())) { /* the hub itself was replaced: start the new one */
 					char self[320];
 					snprintf(self, sizeof self, "%s/bin/hub", root());

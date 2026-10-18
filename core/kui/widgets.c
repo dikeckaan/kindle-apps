@@ -1,6 +1,7 @@
 /* Shared widgets: top bar, buttons, modal dialog. */
 #include <stdio.h>
 #include <string.h>
+#include <time.h>
 #include "kui.h"
 
 int kui_fit_px(const char *text, KuiFont f, int px, int max_w)
@@ -162,6 +163,7 @@ int kui_battery(KuiRect r)
 	int lvl = kui_lipc_get_int("com.lab126.powerd", "battLevel", -1);
 	if (lvl < 0 || lvl > 100) return -1;
 	int chg = kui_lipc_get_int("com.lab126.powerd", "isCharging", 0) == 1;
+	kui_batt_log(kui_batt_log_path(), (long) time(NULL), lvl, chg); /* history for the remaining-time estimate */
 	kui_fill(r, 255);
 	/* gauge: body, tip, fill proportional to the level */
 	int bh = r.h * 5 / 10, bw = bh * 5 / 2, by = r.y + (r.h - bh) / 2;

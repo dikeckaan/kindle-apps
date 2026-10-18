@@ -363,11 +363,7 @@ Masa Panosu	Πίνακας γραφείου
 Pil tasarrufu (derin uyku)	Εξοικονόμηση μπαταρίας (βαθύς ύπνος)
 ☾ uykuda	☾ σε ύπνο
 Uykuya geçiş: %d dk dokunulmazsa	Ύπνος μετά από: %d λεπ. αδράνειας
-Veri güncelleme: %d saatte bir	Ενημέρωση δεδομένων: κάθε %d ώρ.
-Pil tasarrufunda Kindle uyur, ekran e-ink sayesinde kalır; saat dakikada bir güncellenir, Wi-Fi yalnızca veri güncellerken açılır. Uyandırmak için güç tuşuna basın ya da ekrana dokunun.	Στην εξοικονόμηση το Kindle κοιμάται και η οθόνη e-ink παραμένει· το ρολόι ενημερώνεται κάθε λεπτό και το Wi-Fi ανάβει μόνο κατά την ενημέρωση. Πατήστε το κουμπί λειτουργίας ή αγγίξτε την οθόνη για αφύπνιση.
 Alındı: %s (KOReader ile açın)	Ελήφθη: %s (άνοιγμα με KOReader)
-Güncellemeler	Ενημερώσεις
-Güncel sürüm	Ενημερωμένη
 Kur	Εγκατάσταση
 Güncelle	Ενημέρωση
 Tümünü güncelle	Ενημέρωση όλων
@@ -496,3 +492,36 @@ Koordinatlar	Συντεταγμένες
 %d km (%s)	%d km (%s)
 Uzaklık	Απόσταση
 Kaynak	Πηγή
+☾ uykuda · %d dk	☾ σε ύπνο · %d λεπ.
+Pil ve ekran…	Μπαταρία και οθόνη…
+Pil tasarrufunda Kindle uyur, ekran e-ink sayesinde kalır; Wi-Fi yalnızca veri güncellerken açılır. Aralıkları Pil ve ekran'dan ayarlayın. Uyandırmak için güç tuşuna basın ya da ekrana dokunun.	Στην εξοικονόμηση το Kindle κοιμάται και η οθόνη e-ink παραμένει· το Wi-Fi ανάβει μόνο κατά την ενημέρωση. Ορίστε τα διαστήματα στο Μπαταρία και οθόνη. Πατήστε το κουμπί λειτουργίας ή αγγίξτε την οθόνη για αφύπνιση.
+Dikeç Store	Dikeç Store
+Kurulu	Εγκατεστημένες
+Güncellenecek	Για ενημέρωση
+Sırala	Σειρά
+%s kaldırıldı	Η %s απεγκαταστάθηκε
+Kaldırılamadı: %s	Αποτυχία απεγκατάστασης: %s
+Depodaki sürüm: %s	Έκδοση στο κατάστημα: %s
+Kurulu değil	Δεν έχει εγκατασταθεί
+Kurulu sürüm: %s	Εγκατεστημένη έκδοση: %s
+Yeniden kur	Επανεγκατάσταση
+Kaldır	Απεγκατάσταση
+Kaldırınca ayarlar ve kayıtlar (data/) korunur.	Με την απεγκατάσταση ρυθμίσεις και δεδομένα (data/) διατηρούνται.
+%s kaldırılsın mı?	Απεγκατάσταση της %s;
+Menü sırası	Σειρά μενού
+≈ %d gün %d sa	≈ %d ημ. %d ώρ.
+≈ %d sa %d dk	≈ %d ώρ. %d λεπ.
+≈ %d dk	≈ %d λεπ.
+Şarj oluyor	Φορτίζει
+Kalan süre: biraz daha kullanım sonra hesaplanır	Υπόλοιπος χρόνος: υπολογίζεται μετά από λίγη ακόμη χρήση
+Tahmini kalan: %s	Εκτιμώμενο υπόλοιπο: %s
+Pil ve ekran	Μπαταρία και οθόνη
+Ön ışık	Μπροστινός φωτισμός
+Yarım	Μισός
+Tam	Πλήρης
+Uykuda saat: her dakika	Ρολόι σε ύπνο: κάθε λεπτό
+Uykuda saat: %d dakikada bir	Ρολόι σε ύπνο: κάθε %d λεπ.
+Haber ve döviz: %d saatte bir	Ειδήσεις και νομίσματα: κάθε %d ώρ.
+Hava durumu: %d saatte bir	Καιρός: κάθε %d ώρ.
+Uykuda ön ışık: kapalı	Φωτισμός σε ύπνο: σβηστός
+Uykuda ön ışık: açık	Φωτισμός σε ύπνο: αναμμένος

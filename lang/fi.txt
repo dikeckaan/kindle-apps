@@ -363,11 +363,7 @@ Masa Panosu	Pöytänäyttö
 Pil tasarrufu (derin uyku)	Virransäästö (syvä lepo)
 ☾ uykuda	☾ levossa
 Uykuya geçiş: %d dk dokunulmazsa	Lepoon: %d min koskematta
-Veri güncelleme: %d saatte bir	Tietojen päivitys: %d h välein
-Pil tasarrufunda Kindle uyur, ekran e-ink sayesinde kalır; saat dakikada bir güncellenir, Wi-Fi yalnızca veri güncellerken açılır. Uyandırmak için güç tuşuna basın ya da ekrana dokunun.	Virransäästössä Kindle nukkuu ja e-ink-kuva säilyy; kello päivittyy minuutin välein ja Wi-Fi on päällä vain päivityksen ajan. Herätä painamalla virtapainiketta tai koskettamalla näyttöä.
 Alındı: %s (KOReader ile açın)	Vastaanotettu: %s (avaa KOReaderilla)
-Güncellemeler	Päivitykset
-Güncel sürüm	Ajan tasalla
 Kur	Asenna
 Güncelle	Päivitä
 Tümünü güncelle	Päivitä kaikki
@@ -496,3 +492,36 @@ Koordinatlar	Koordinaatit
 %d km (%s)	%d km (%s)
 Uzaklık	Etäisyys
 Kaynak	Lähde
+☾ uykuda · %d dk	☾ levossa · %d min
+Pil ve ekran…	Akku ja näyttö…
+Pil tasarrufunda Kindle uyur, ekran e-ink sayesinde kalır; Wi-Fi yalnızca veri güncellerken açılır. Aralıkları Pil ve ekran'dan ayarlayın. Uyandırmak için güç tuşuna basın ya da ekrana dokunun.	Virransäästössä Kindle nukkuu ja e-ink-kuva säilyy; Wi-Fi on päällä vain päivityksen ajan. Aseta välit kohdassa Akku ja näyttö. Herätä painamalla virtapainiketta tai koskettamalla näyttöä.
+Dikeç Store	Dikeç Store
+Kurulu	Asennetut
+Güncellenecek	Päivitettävät
+Sırala	Järjestä
+%s kaldırıldı	%s poistettu
+Kaldırılamadı: %s	Poisto epäonnistui: %s
+Depodaki sürüm: %s	Kaupan versio: %s
+Kurulu değil	Ei asennettu
+Kurulu sürüm: %s	Asennettu versio: %s
+Yeniden kur	Asenna uudelleen
+Kaldır	Poista
+Kaldırınca ayarlar ve kayıtlar (data/) korunur.	Poistettaessa asetukset ja tiedot (data/) säilyvät.
+%s kaldırılsın mı?	Poistetaanko %s?
+Menü sırası	Valikon järjestys
+≈ %d gün %d sa	≈ %d pv %d h
+≈ %d sa %d dk	≈ %d h %d min
+≈ %d dk	≈ %d min
+Şarj oluyor	Latautuu
+Kalan süre: biraz daha kullanım sonra hesaplanır	Jäljellä: lasketaan hieman pidemmän käytön jälkeen
+Tahmini kalan: %s	Arvio jäljellä: %s
+Pil ve ekran	Akku ja näyttö
+Ön ışık	Etuvalo
+Yarım	Puolet
+Tam	Täysi
+Uykuda saat: her dakika	Kello levossa: joka minuutti
+Uykuda saat: %d dakikada bir	Kello levossa: %d min välein
+Haber ve döviz: %d saatte bir	Uutiset ja valuutat: %d h välein
+Hava durumu: %d saatte bir	Sää: %d h välein
+Uykuda ön ışık: kapalı	Etuvalo levossa: pois
+Uykuda ön ışık: açık	Etuvalo levossa: päällä

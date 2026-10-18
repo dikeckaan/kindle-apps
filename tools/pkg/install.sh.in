@@ -10,6 +10,7 @@ put() { for f in "$1"/*; do cp -f "$f" "$2/.${f##*/}.new" && mv -f "$2/.${f##*/}
 mkdir -p "$DEST"
 put ./files "$DEST"
 cp -f ./app.ini "$DEST/"
+[ -f ./uninstall.sh ] && cp -f ./uninstall.sh "$DEST/.uninstall.sh" # for Dikeç Store → Kaldır
 for f in ./files/*; do chmod +x "$DEST/${f##*/}" 2>/dev/null || true; done
 [ -f ./post-install.sh ] && sh ./post-install.sh
 rm -rf ./files

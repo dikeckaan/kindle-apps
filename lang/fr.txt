@@ -363,11 +363,7 @@ Masa Panosu	Tableau de bord
 Pil tasarrufu (derin uyku)	Économie d'énergie (veille profonde)
 ☾ uykuda	☾ en veille
 Uykuya geçiş: %d dk dokunulmazsa	Veille après : %d min sans contact
-Veri güncelleme: %d saatte bir	Mise à jour : toutes les %d h
-Pil tasarrufunda Kindle uyur, ekran e-ink sayesinde kalır; saat dakikada bir güncellenir, Wi-Fi yalnızca veri güncellerken açılır. Uyandırmak için güç tuşuna basın ya da ekrana dokunun.	En économie d'énergie, la Kindle dort et l'écran e-ink reste affiché ; l'horloge se met à jour chaque minute et le Wi-Fi n'est actif que pendant les mises à jour. Appuyez sur le bouton d'alimentation ou touchez l'écran pour la réveiller.
 Alındı: %s (KOReader ile açın)	Reçu : %s (ouvrir avec KOReader)
-Güncellemeler	Mises à jour
-Güncel sürüm	À jour
 Kur	Installer
 Güncelle	Mettre à jour
 Tümünü güncelle	Tout mettre à jour
@@ -496,3 +492,36 @@ Koordinatlar	Coordonnées
 %d km (%s)	%d km (%s)
 Uzaklık	Distance
 Kaynak	Source
+☾ uykuda · %d dk	☾ en veille · %d min
+Pil ve ekran…	Batterie et écran…
+Pil tasarrufunda Kindle uyur, ekran e-ink sayesinde kalır; Wi-Fi yalnızca veri güncellerken açılır. Aralıkları Pil ve ekran'dan ayarlayın. Uyandırmak için güç tuşuna basın ya da ekrana dokunun.	En économie d'énergie, la Kindle dort et l'écran e-ink reste affiché ; le Wi-Fi n'est actif que pendant les mises à jour. Réglez les intervalles dans Batterie et écran. Appuyez sur le bouton d'alimentation ou touchez l'écran pour la réveiller.
+Dikeç Store	Dikeç Store
+Kurulu	Installées
+Güncellenecek	À mettre à jour
+Sırala	Ordonner
+%s kaldırıldı	%s désinstallée
+Kaldırılamadı: %s	Échec de la désinstallation : %s
+Depodaki sürüm: %s	Version du store : %s
+Kurulu değil	Non installée
+Kurulu sürüm: %s	Version installée : %s
+Yeniden kur	Réinstaller
+Kaldır	Désinstaller
+Kaldırınca ayarlar ve kayıtlar (data/) korunur.	La désinstallation conserve réglages et données (data/).
+%s kaldırılsın mı?	Désinstaller %s ?
+Menü sırası	Ordre du menu
+≈ %d gün %d sa	≈ %d j %d h
+≈ %d sa %d dk	≈ %d h %d min
+≈ %d dk	≈ %d min
+Şarj oluyor	En charge
+Kalan süre: biraz daha kullanım sonra hesaplanır	Autonomie : calculée après un peu plus d'utilisation
+Tahmini kalan: %s	Autonomie estimée : %s
+Pil ve ekran	Batterie et écran
+Ön ışık	Éclairage
+Yarım	Moitié
+Tam	Max
+Uykuda saat: her dakika	Horloge en veille : chaque minute
+Uykuda saat: %d dakikada bir	Horloge en veille : toutes les %d min
+Haber ve döviz: %d saatte bir	Actualités et devises : toutes les %d h
+Hava durumu: %d saatte bir	Météo : toutes les %d h
+Uykuda ön ışık: kapalı	Éclairage en veille : éteint
+Uykuda ön ışık: açık	Éclairage en veille : allumé

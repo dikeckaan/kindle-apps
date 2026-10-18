@@ -363,11 +363,7 @@ Masa Panosu	Tischanzeige
 Pil tasarrufu (derin uyku)	Energiesparen (Tiefschlaf)
 ☾ uykuda	☾ schläft
 Uykuya geçiş: %d dk dokunulmazsa	Schlafen nach: %d Min. ohne Berührung
-Veri güncelleme: %d saatte bir	Daten aktualisieren: alle %d Std.
-Pil tasarrufunda Kindle uyur, ekran e-ink sayesinde kalır; saat dakikada bir güncellenir, Wi-Fi yalnızca veri güncellerken açılır. Uyandırmak için güç tuşuna basın ya da ekrana dokunun.	Beim Energiesparen schläft der Kindle, das E-Ink-Bild bleibt; die Uhr wird jede Minute aktualisiert, WLAN ist nur beim Aktualisieren an. Zum Aufwecken Ein-/Aus-Taste drücken oder den Bildschirm berühren.
 Alındı: %s (KOReader ile açın)	Empfangen: %s (mit KOReader öffnen)
-Güncellemeler	Updates
-Güncel sürüm	Aktuell
 Kur	Installieren
 Güncelle	Aktualisieren
 Tümünü güncelle	Alle aktualisieren
@@ -496,3 +492,36 @@ Koordinatlar	Koordinaten
 %d km (%s)	%d km (%s)
 Uzaklık	Entfernung
 Kaynak	Quelle
+☾ uykuda · %d dk	☾ schläft · %d Min.
+Pil ve ekran…	Akku & Bildschirm…
+Pil tasarrufunda Kindle uyur, ekran e-ink sayesinde kalır; Wi-Fi yalnızca veri güncellerken açılır. Aralıkları Pil ve ekran'dan ayarlayın. Uyandırmak için güç tuşuna basın ya da ekrana dokunun.	Beim Energiesparen schläft der Kindle, das E-Ink-Bild bleibt; WLAN ist nur beim Aktualisieren an. Die Intervalle unter Akku & Bildschirm einstellen. Zum Aufwecken Ein-/Aus-Taste drücken oder den Bildschirm berühren.
+Dikeç Store	Dikeç Store
+Kurulu	Installiert
+Güncellenecek	Updates
+Sırala	Ordnen
+%s kaldırıldı	%s deinstalliert
+Kaldırılamadı: %s	Deinstallation fehlgeschlagen: %s
+Depodaki sürüm: %s	Version im Store: %s
+Kurulu değil	Nicht installiert
+Kurulu sürüm: %s	Installierte Version: %s
+Yeniden kur	Neu installieren
+Kaldır	Entfernen
+Kaldırınca ayarlar ve kayıtlar (data/) korunur.	Beim Entfernen bleiben Einstellungen und Daten (data/) erhalten.
+%s kaldırılsın mı?	%s deinstallieren?
+Menü sırası	Menüreihenfolge
+≈ %d gün %d sa	≈ %d T. %d Std.
+≈ %d sa %d dk	≈ %d Std. %d Min.
+≈ %d dk	≈ %d Min.
+Şarj oluyor	Wird geladen
+Kalan süre: biraz daha kullanım sonra hesaplanır	Restzeit: wird nach etwas mehr Nutzung berechnet
+Tahmini kalan: %s	Geschätzt verbleibend: %s
+Pil ve ekran	Akku & Bildschirm
+Ön ışık	Frontlicht
+Yarım	Halb
+Tam	Voll
+Uykuda saat: her dakika	Uhr im Schlaf: jede Minute
+Uykuda saat: %d dakikada bir	Uhr im Schlaf: alle %d Min.
+Haber ve döviz: %d saatte bir	Nachrichten & Devisen: alle %d Std.
+Hava durumu: %d saatte bir	Wetter: alle %d Std.
+Uykuda ön ışık: kapalı	Frontlicht im Schlaf: aus
+Uykuda ön ışık: açık	Frontlicht im Schlaf: an

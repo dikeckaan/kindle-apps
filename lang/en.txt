@@ -363,11 +363,7 @@ Masa Panosu	Desk Dashboard
 Pil tasarrufu (derin uyku)	Battery saver (deep sleep)
 ☾ uykuda	☾ asleep
 Uykuya geçiş: %d dk dokunulmazsa	Sleep after: %d min idle
-Veri güncelleme: %d saatte bir	Update data: every %d h
-Pil tasarrufunda Kindle uyur, ekran e-ink sayesinde kalır; saat dakikada bir güncellenir, Wi-Fi yalnızca veri güncellerken açılır. Uyandırmak için güç tuşuna basın ya da ekrana dokunun.	In battery saver the Kindle sleeps and the e-ink screen stays; the clock updates every minute and Wi-Fi is on only while data updates. Press the power button or touch the screen to wake it.
 Alındı: %s (KOReader ile açın)	Received: %s (open in KOReader)
-Güncellemeler	Updates
-Güncel sürüm	Up to date
 Kur	Install
 Güncelle	Update
 Tümünü güncelle	Update all
@@ -496,3 +492,36 @@ Koordinatlar	Coordinates
 %d km (%s)	%d km (%s)
 Uzaklık	Distance
 Kaynak	Source
+☾ uykuda · %d dk	☾ asleep · %d min
+Pil ve ekran…	Battery & screen…
+Pil tasarrufunda Kindle uyur, ekran e-ink sayesinde kalır; Wi-Fi yalnızca veri güncellerken açılır. Aralıkları Pil ve ekran'dan ayarlayın. Uyandırmak için güç tuşuna basın ya da ekrana dokunun.	In battery saver the Kindle sleeps and the e-ink screen stays; Wi-Fi is on only while data updates. Set the intervals in Battery & screen. Press the power button or touch the screen to wake it.
+Dikeç Store	Dikeç Store
+Kurulu	Installed
+Güncellenecek	Updates
+Sırala	Reorder
+%s kaldırıldı	%s uninstalled
+Kaldırılamadı: %s	Could not uninstall: %s
+Depodaki sürüm: %s	Store version: %s
+Kurulu değil	Not installed
+Kurulu sürüm: %s	Installed version: %s
+Yeniden kur	Reinstall
+Kaldır	Uninstall
+Kaldırınca ayarlar ve kayıtlar (data/) korunur.	Uninstalling keeps settings and records (data/).
+%s kaldırılsın mı?	Uninstall %s?
+Menü sırası	Menu order
+≈ %d gün %d sa	≈ %d d %d h
+≈ %d sa %d dk	≈ %d h %d min
+≈ %d dk	≈ %d min
+Şarj oluyor	Charging
+Kalan süre: biraz daha kullanım sonra hesaplanır	Time left: estimated after a bit more use
+Tahmini kalan: %s	Estimated left: %s
+Pil ve ekran	Battery & screen
+Ön ışık	Front light
+Yarım	Half
+Tam	Full
+Uykuda saat: her dakika	Clock while asleep: every minute
+Uykuda saat: %d dakikada bir	Clock while asleep: every %d min
+Haber ve döviz: %d saatte bir	News & currency: every %d h
+Hava durumu: %d saatte bir	Weather: every %d h
+Uykuda ön ışık: kapalı	Front light while asleep: off
+Uykuda ön ışık: açık	Front light while asleep: on

@@ -363,11 +363,7 @@ Masa Panosu	Panou de birou
 Pil tasarrufu (derin uyku)	Economisire baterie (somn profund)
 ☾ uykuda	☾ doarme
 Uykuya geçiş: %d dk dokunulmazsa	Somn după: %d min fără atingere
-Veri güncelleme: %d saatte bir	Actualizare date: la fiecare %d h
-Pil tasarrufunda Kindle uyur, ekran e-ink sayesinde kalır; saat dakikada bir güncellenir, Wi-Fi yalnızca veri güncellerken açılır. Uyandırmak için güç tuşuna basın ya da ekrana dokunun.	În modul economic Kindle doarme, iar ecranul e-ink rămâne; ceasul se actualizează în fiecare minut, iar Wi-Fi pornește doar la actualizare. Apăsați butonul de pornire sau atingeți ecranul pentru a-l trezi.
 Alındı: %s (KOReader ile açın)	Primit: %s (deschideți în KOReader)
-Güncellemeler	Actualizări
-Güncel sürüm	La zi
 Kur	Instalează
 Güncelle	Actualizează
 Tümünü güncelle	Actualizează tot
@@ -496,3 +492,36 @@ Koordinatlar	Coordonate
 %d km (%s)	%d km (%s)
 Uzaklık	Distanță
 Kaynak	Sursa
+☾ uykuda · %d dk	☾ doarme · %d min
+Pil ve ekran…	Baterie și ecran…
+Pil tasarrufunda Kindle uyur, ekran e-ink sayesinde kalır; Wi-Fi yalnızca veri güncellerken açılır. Aralıkları Pil ve ekran'dan ayarlayın. Uyandırmak için güç tuşuna basın ya da ekrana dokunun.	În modul economic Kindle doarme, iar ecranul e-ink rămâne; Wi-Fi pornește doar la actualizare. Setați intervalele în Baterie și ecran. Apăsați butonul de pornire sau atingeți ecranul pentru a-l trezi.
+Dikeç Store	Dikeç Store
+Kurulu	Instalate
+Güncellenecek	De actualizat
+Sırala	Ordonează
+%s kaldırıldı	%s a fost dezinstalată
+Kaldırılamadı: %s	Nu s-a putut dezinstala: %s
+Depodaki sürüm: %s	Versiunea din magazin: %s
+Kurulu değil	Neinstalată
+Kurulu sürüm: %s	Versiunea instalată: %s
+Yeniden kur	Reinstalează
+Kaldır	Dezinstalează
+Kaldırınca ayarlar ve kayıtlar (data/) korunur.	La dezinstalare, setările și datele (data/) rămân.
+%s kaldırılsın mı?	Dezinstalați %s?
+Menü sırası	Ordinea meniului
+≈ %d gün %d sa	≈ %d z %d h
+≈ %d sa %d dk	≈ %d h %d min
+≈ %d dk	≈ %d min
+Şarj oluyor	Se încarcă
+Kalan süre: biraz daha kullanım sonra hesaplanır	Timp rămas: calculat după mai multă utilizare
+Tahmini kalan: %s	Rămas estimat: %s
+Pil ve ekran	Baterie și ecran
+Ön ışık	Lumină frontală
+Yarım	Jumătate
+Tam	Maximă
+Uykuda saat: her dakika	Ceas în somn: în fiecare minut
+Uykuda saat: %d dakikada bir	Ceas în somn: la fiecare %d min
+Haber ve döviz: %d saatte bir	Știri și valută: la fiecare %d h
+Hava durumu: %d saatte bir	Vremea: la fiecare %d h
+Uykuda ön ışık: kapalı	Lumină în somn: oprită
+Uykuda ön ışık: açık	Lumină în somn: pornită

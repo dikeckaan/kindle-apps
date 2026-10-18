@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <sys/stat.h>
 #include "appreg.h"
 
 static void ini_value(const char *text, const char *key, char *out, size_t cap)
@@ -66,4 +67,43 @@ int hub_scan_apps(const char *root, HubApp *out, int max)
 	if (n > max) n = max;
 	memcpy(out, all, (size_t) n * sizeof all[0]);
 	return n;
+}
+
+static void order_path(const char *root, char *out, size_t cap) { snprintf(out, cap, "%s/data/hub/order", root); }
+
+void hub_apply_order(const char *root, HubApp *a, int n)
+{
+	char path[300], line[64];
+	order_path(root, path, sizeof path);
+	FILE *f = fopen(path, "r");
+	if (!f) return;
+	int placed = 0;
+	while (placed < n && fgets(line, sizeof line, f)) {
+		line[strcspn(line, "\r\n")] = '\0';
+		for (int i = placed; i < n; i++)
+			if (!strcmp(a[i].id, line)) { /* move it up to the next place, keeping the others' order */
+				HubApp t = a[i];
+				memmove(&a[placed + 1], &a[placed], (size_t) (i - placed) * sizeof *a);
+				a[placed++] = t;
+				break;
+			}
+	}
+	fclose(f);
+}
+
+int hub_save_order(const char *root, const HubApp *a, int n)
+{
+	char path[300], tmp[310];
+	snprintf(path, sizeof path, "%s/data", root);
+	mkdir(path, 0755);
+	snprintf(path, sizeof path, "%s/data/hub", root);
+	mkdir(path, 0755);
+	order_path(root, path, sizeof path);
+	snprintf(tmp, sizeof tmp, "%s.tmp", path);
+	FILE *f = fopen(tmp, "w");
+	if (!f) return -1;
+	for (int i = 0; i < n; i++)
+		if (a[i].exec[0]) fprintf(f, "%s\n", a[i].id); /* not the built-in Store tile */
+	if (fclose(f) != 0) return -1;
+	return rename(tmp, path);
 }

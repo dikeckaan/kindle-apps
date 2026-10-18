@@ -363,11 +363,7 @@ Masa Panosu	Stolüstü panel
 Pil tasarrufu (derin uyku)	Batareya qənaəti (dərin yuxu)
 ☾ uykuda	☾ yuxuda
 Uykuya geçiş: %d dk dokunulmazsa	Yuxuya keçid: %d dəq toxunulmasa
-Veri güncelleme: %d saatte bir	Məlumat yeniləmə: hər %d saatdan bir
-Pil tasarrufunda Kindle uyur, ekran e-ink sayesinde kalır; saat dakikada bir güncellenir, Wi-Fi yalnızca veri güncellerken açılır. Uyandırmak için güç tuşuna basın ya da ekrana dokunun.	Qənaət rejimində Kindle yatır, e-ink ekranı olduğu kimi qalır; saat hər dəqiqə yenilənir, Wi-Fi yalnız məlumat yenilənəndə açılır. Oyatmaq üçün güc düyməsinə basın və ya ekrana toxunun.
 Alındı: %s (KOReader ile açın)	Alındı: %s (KOReader ilə açın)
-Güncellemeler	Yeniləmələr
-Güncel sürüm	Aktualdır
 Kur	Quraşdır
 Güncelle	Yenilə
 Tümünü güncelle	Hamısını yenilə
@@ -496,3 +492,36 @@ Koordinatlar	Koordinatlar
 %d km (%s)	%d km (%s)
 Uzaklık	Məsafə
 Kaynak	Mənbə
+☾ uykuda · %d dk	☾ yuxuda · %d dəq
+Pil ve ekran…	Batareya və ekran…
+Pil tasarrufunda Kindle uyur, ekran e-ink sayesinde kalır; Wi-Fi yalnızca veri güncellerken açılır. Aralıkları Pil ve ekran'dan ayarlayın. Uyandırmak için güç tuşuna basın ya da ekrana dokunun.	Qənaət rejimində Kindle yatır, e-ink ekranı olduğu kimi qalır; Wi-Fi yalnız məlumat yenilənəndə açılır. Aralıqları Batareya və ekran bölməsində tənzimləyin. Oyatmaq üçün güc düyməsinə basın və ya ekrana toxunun.
+Dikeç Store	Dikeç Store
+Kurulu	Quraşdırılıb
+Güncellenecek	Yenilənəcək
+Sırala	Sırala
+%s kaldırıldı	%s silindi
+Kaldırılamadı: %s	Silmək olmadı: %s
+Depodaki sürüm: %s	Mağazadakı versiya: %s
+Kurulu değil	Quraşdırılmayıb
+Kurulu sürüm: %s	Quraşdırılmış versiya: %s
+Yeniden kur	Yenidən quraşdır
+Kaldır	Sil
+Kaldırınca ayarlar ve kayıtlar (data/) korunur.	Silinəndə ayarlar və qeydlər (data/) qalır.
+%s kaldırılsın mı?	%s silinsin?
+Menü sırası	Menyu sırası
+≈ %d gün %d sa	≈ %d gün %d saat
+≈ %d sa %d dk	≈ %d saat %d dəq
+≈ %d dk	≈ %d dəq
+Şarj oluyor	Şarj olunur
+Kalan süre: biraz daha kullanım sonra hesaplanır	Qalan vaxt: bir az daha istifadədən sonra hesablanır
+Tahmini kalan: %s	Təxmini qalan: %s
+Pil ve ekran	Batareya və ekran
+Ön ışık	Ön işıq
+Yarım	Yarım
+Tam	Tam
+Uykuda saat: her dakika	Yuxuda saat: hər dəqiqə
+Uykuda saat: %d dakikada bir	Yuxuda saat: hər %d dəqiqədən bir
+Haber ve döviz: %d saatte bir	Xəbər və valyuta: hər %d saatdan bir
+Hava durumu: %d saatte bir	Hava: hər %d saatdan bir
+Uykuda ön ışık: kapalı	Yuxuda ön işıq: bağlı
+Uykuda ön ışık: açık	Yuxuda ön işıq: açıq

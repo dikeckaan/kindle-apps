@@ -147,6 +147,23 @@ int  kui_woke_early(int requested, int slept); /* pure: 1 when something other t
 enum { KUI_SLEEP_MINUTE, KUI_SLEEP_WOKEN, KUI_SLEEP_QUIT };
 int  kui_sleep_to_next_minute(void); /* KUI_SLEEP_WOKEN: a touch or the power button; QUIT: SIGTERM */
 int  kui_ms_to_next_minute(void);    /* until 200 ms after the next minute boundary */
+int  kui_sleep_until_minute(long target_epoch_min); /* same, until that minute (time()/60) begins */
+int  kui_sleep_until_every(int every_min);           /* until the next multiple of every_min minutes */
+
+/* "Pil ve ekran" (powerui.c): the battery saver's settings live in the app's settings file */
+typedef enum { KUI_SAVER_IDLE_MIN, KUI_SAVER_CLOCK_MIN, KUI_SAVER_DATA_HOURS, KUI_SAVER_WX_HOURS, KUI_SAVER_LIGHT_OFF } KuiSaverKey;
+int  kui_saver_get(const char *cfg, KuiSaverKey k); /* a valid choice, or the default */
+enum { KUI_PS_SAVER = 1, KUI_PS_DATA = 2 };         /* show the saver rows / the news & currency row */
+void kui_power_screen(const char *cfg, int flags);  /* cfg NULL: battery and front light only */
+int  kui_light_get(void);                           /* front light 0..kui_light_max(), -1 unknown */
+int  kui_light_max(void);
+void kui_light_set(int v);
+const char *kui_batt_log_path(void);
+/* battery history: one "time level charging" line per change (bounded); the remaining time from the drain since
+ * the charger was last unplugged (at least 2 % and an hour of data), -1 when unknown or charging */
+void kui_batt_log(const char *path, long now, int level, int charging);
+long kui_batt_estimate_s(const char *path, long now, int level);
+void kui_fmt_duration(long s, char *out, int cap); /* "≈ 3 gün 4 sa", "≈ 5 sa 20 dk", "≈ 42 dk" */
 /* drops touches for ms (the tap that woke the device, or the rest of a tap that closed another app) */
 void kui_drain_input(int ms);
 void kui_topbar(const char *title, const char *right_label); /* right_label may be NULL */

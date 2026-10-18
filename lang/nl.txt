@@ -363,11 +363,7 @@ Masa Panosu	Bureaubord
 Pil tasarrufu (derin uyku)	Batterijbesparing (diepe slaap)
 ☾ uykuda	☾ slaapt
 Uykuya geçiş: %d dk dokunulmazsa	Slapen na: %d min zonder aanraking
-Veri güncelleme: %d saatte bir	Gegevens bijwerken: elke %d u
-Pil tasarrufunda Kindle uyur, ekran e-ink sayesinde kalır; saat dakikada bir güncellenir, Wi-Fi yalnızca veri güncellerken açılır. Uyandırmak için güç tuşuna basın ya da ekrana dokunun.	Bij batterijbesparing slaapt de Kindle en blijft het e-inkscherm staan; de klok wordt elke minuut bijgewerkt en wifi staat alleen aan tijdens het bijwerken. Druk op de aan-uitknop of raak het scherm aan om te wekken.
 Alındı: %s (KOReader ile açın)	Ontvangen: %s (openen met KOReader)
-Güncellemeler	Updates
-Güncel sürüm	Bijgewerkt
 Kur	Installeren
 Güncelle	Bijwerken
 Tümünü güncelle	Alles bijwerken
@@ -496,3 +492,36 @@ Koordinatlar	Coördinaten
 %d km (%s)	%d km (%s)
 Uzaklık	Afstand
 Kaynak	Bron
+☾ uykuda · %d dk	☾ slaapt · %d min
+Pil ve ekran…	Batterij en scherm…
+Pil tasarrufunda Kindle uyur, ekran e-ink sayesinde kalır; Wi-Fi yalnızca veri güncellerken açılır. Aralıkları Pil ve ekran'dan ayarlayın. Uyandırmak için güç tuşuna basın ya da ekrana dokunun.	Bij batterijbesparing slaapt de Kindle en blijft het e-inkscherm staan; wifi staat alleen aan tijdens het bijwerken. Stel de intervallen in bij Batterij en scherm. Druk op de aan-uitknop of raak het scherm aan om te wekken.
+Dikeç Store	Dikeç Store
+Kurulu	Geïnstalleerd
+Güncellenecek	Bij te werken
+Sırala	Ordenen
+%s kaldırıldı	%s verwijderd
+Kaldırılamadı: %s	Verwijderen mislukt: %s
+Depodaki sürüm: %s	Versie in store: %s
+Kurulu değil	Niet geïnstalleerd
+Kurulu sürüm: %s	Geïnstalleerde versie: %s
+Yeniden kur	Herinstalleren
+Kaldır	Verwijderen
+Kaldırınca ayarlar ve kayıtlar (data/) korunur.	Bij verwijderen blijven instellingen en gegevens (data/) bewaard.
+%s kaldırılsın mı?	%s verwijderen?
+Menü sırası	Menuvolgorde
+≈ %d gün %d sa	≈ %d d %d u
+≈ %d sa %d dk	≈ %d u %d min
+≈ %d dk	≈ %d min
+Şarj oluyor	Wordt opgeladen
+Kalan süre: biraz daha kullanım sonra hesaplanır	Resterende tijd: berekend na wat meer gebruik
+Tahmini kalan: %s	Geschat resterend: %s
+Pil ve ekran	Batterij en scherm
+Ön ışık	Voorlicht
+Yarım	Half
+Tam	Vol
+Uykuda saat: her dakika	Klok in slaap: elke minuut
+Uykuda saat: %d dakikada bir	Klok in slaap: elke %d min
+Haber ve döviz: %d saatte bir	Nieuws en valuta: elke %d u
+Hava durumu: %d saatte bir	Weer: elke %d u
+Uykuda ön ışık: kapalı	Voorlicht in slaap: uit
+Uykuda ön ışık: açık	Voorlicht in slaap: aan

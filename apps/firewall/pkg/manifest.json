@@ -4,7 +4,7 @@
   "name": "Güvenlik Duvarı",
   "author": "Kaan Dikeç",
   "description": "Kindle güvenlik duvarını açıp kapatın",
-  "version": [2026, 10, 13],
+  "version": [2026, 10, 16],
   "dependencies": [],
   "supported_platforms": ["kindlehf"]
 }

@@ -363,11 +363,7 @@ Masa Panosu	Настольная панель
 Pil tasarrufu (derin uyku)	Экономия батареи (глубокий сон)
 ☾ uykuda	☾ спит
 Uykuya geçiş: %d dk dokunulmazsa	Сон через: %d мин без касаний
-Veri güncelleme: %d saatte bir	Обновление данных: раз в %d ч
-Pil tasarrufunda Kindle uyur, ekran e-ink sayesinde kalır; saat dakikada bir güncellenir, Wi-Fi yalnızca veri güncellerken açılır. Uyandırmak için güç tuşuna basın ya da ekrana dokunun.	В режиме экономии Kindle спит, а изображение e-ink остаётся; часы обновляются каждую минуту, Wi-Fi включается только для обновления. Чтобы разбудить, нажмите кнопку питания или коснитесь экрана.
 Alındı: %s (KOReader ile açın)	Получено: %s (откройте в KOReader)
-Güncellemeler	Обновления
-Güncel sürüm	Актуально
 Kur	Установить
 Güncelle	Обновить
 Tümünü güncelle	Обновить все
@@ -496,3 +492,36 @@ Koordinatlar	Координаты
 %d km (%s)	%d км (%s)
 Uzaklık	Расстояние
 Kaynak	Источник
+☾ uykuda · %d dk	☾ спит · %d мин
+Pil ve ekran…	Батарея и экран…
+Pil tasarrufunda Kindle uyur, ekran e-ink sayesinde kalır; Wi-Fi yalnızca veri güncellerken açılır. Aralıkları Pil ve ekran'dan ayarlayın. Uyandırmak için güç tuşuna basın ya da ekrana dokunun.	В режиме экономии Kindle спит, а изображение e-ink остаётся; Wi-Fi включается только для обновления. Интервалы задаются в разделе «Батарея и экран». Чтобы разбудить, нажмите кнопку питания или коснитесь экрана.
+Dikeç Store	Dikeç Store
+Kurulu	Установлены
+Güncellenecek	К обновлению
+Sırala	Порядок
+%s kaldırıldı	%s удалено
+Kaldırılamadı: %s	Не удалось удалить: %s
+Depodaki sürüm: %s	Версия в магазине: %s
+Kurulu değil	Не установлено
+Kurulu sürüm: %s	Установленная версия: %s
+Yeniden kur	Переустановить
+Kaldır	Удалить
+Kaldırınca ayarlar ve kayıtlar (data/) korunur.	При удалении настройки и записи (data/) сохраняются.
+%s kaldırılsın mı?	Удалить %s?
+Menü sırası	Порядок меню
+≈ %d gün %d sa	≈ %d дн. %d ч
+≈ %d sa %d dk	≈ %d ч %d мин
+≈ %d dk	≈ %d мин
+Şarj oluyor	Заряжается
+Kalan süre: biraz daha kullanım sonra hesaplanır	Остаток: рассчитается после ещё немного использования
+Tahmini kalan: %s	Примерно осталось: %s
+Pil ve ekran	Батарея и экран
+Ön ışık	Подсветка
+Yarım	Половина
+Tam	Полная
+Uykuda saat: her dakika	Часы во сне: каждую минуту
+Uykuda saat: %d dakikada bir	Часы во сне: раз в %d мин
+Haber ve döviz: %d saatte bir	Новости и валюты: раз в %d ч
+Hava durumu: %d saatte bir	Погода: раз в %d ч
+Uykuda ön ışık: kapalı	Подсветка во сне: выкл.
+Uykuda ön ışık: açık	Подсветка во сне: вкл.

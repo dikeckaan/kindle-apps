@@ -46,6 +46,7 @@ TEST_test_sudoku_SRCS := apps/sudoku/sudoku.c
 TEST_test_klondike_SRCS := apps/solitaire/klondike.c
 TEST_test_sysinfo_SRCS := apps/sysinfo/si.c core/kui/trfmt.c core/kui/i18n.c core/kui/store.c core/kui/utf8tr.c
 TEST_test_opds_SRCS := apps/ebooks/opds.c core/net/http.c core/kui/utf8tr.c core/net/xml.c
+TEST_test_battest_SRCS := core/kui/battest.c core/kui/i18n.c core/kui/trfmt.c core/kui/store.c core/kui/utf8tr.c
 TEST_test_updates_SRCS := core/hub/updates.c core/vendor/cjson/cJSON.c
 TEST_test_httpd_SRCS := apps/upload/httpd.c apps/upload/server.c apps/ssh/sshsrv.c
 TEST_test_san_SRCS := apps/puzzle/san.c apps/chess/chess_game.c apps/chess/chess_rules.c

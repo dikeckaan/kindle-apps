@@ -363,11 +363,7 @@ Masa Panosu	Panel de mesa
 Pil tasarrufu (derin uyku)	Ahorro de batería (sueño profundo)
 ☾ uykuda	☾ en reposo
 Uykuya geçiş: %d dk dokunulmazsa	Dormir tras: %d min sin tocar
-Veri güncelleme: %d saatte bir	Actualizar datos: cada %d h
-Pil tasarrufunda Kindle uyur, ekran e-ink sayesinde kalır; saat dakikada bir güncellenir, Wi-Fi yalnızca veri güncellerken açılır. Uyandırmak için güç tuşuna basın ya da ekrana dokunun.	Con el ahorro, el Kindle duerme y la pantalla e-ink se mantiene; el reloj se actualiza cada minuto y el Wi-Fi solo se enciende al actualizar. Pulsa el botón de encendido o toca la pantalla para despertarlo.
 Alındı: %s (KOReader ile açın)	Recibido: %s (abrir con KOReader)
-Güncellemeler	Actualizaciones
-Güncel sürüm	Actualizada
 Kur	Instalar
 Güncelle	Actualizar
 Tümünü güncelle	Actualizar todo
@@ -496,3 +492,36 @@ Koordinatlar	Coordenadas
 %d km (%s)	%d km (%s)
 Uzaklık	Distancia
 Kaynak	Fuente
+☾ uykuda · %d dk	☾ en reposo · %d min
+Pil ve ekran…	Batería y pantalla…
+Pil tasarrufunda Kindle uyur, ekran e-ink sayesinde kalır; Wi-Fi yalnızca veri güncellerken açılır. Aralıkları Pil ve ekran'dan ayarlayın. Uyandırmak için güç tuşuna basın ya da ekrana dokunun.	Con el ahorro, el Kindle duerme y la pantalla e-ink se mantiene; el Wi-Fi solo se enciende al actualizar. Ajusta los intervalos en Batería y pantalla. Pulsa el botón de encendido o toca la pantalla para despertarlo.
+Dikeç Store	Dikeç Store
+Kurulu	Instaladas
+Güncellenecek	Por actualizar
+Sırala	Ordenar
+%s kaldırıldı	%s desinstalada
+Kaldırılamadı: %s	No se pudo desinstalar: %s
+Depodaki sürüm: %s	Versión en la tienda: %s
+Kurulu değil	No instalada
+Kurulu sürüm: %s	Versión instalada: %s
+Yeniden kur	Reinstalar
+Kaldır	Desinstalar
+Kaldırınca ayarlar ve kayıtlar (data/) korunur.	Al desinstalar se conservan ajustes y datos (data/).
+%s kaldırılsın mı?	¿Desinstalar %s?
+Menü sırası	Orden del menú
+≈ %d gün %d sa	≈ %d d %d h
+≈ %d sa %d dk	≈ %d h %d min
+≈ %d dk	≈ %d min
+Şarj oluyor	Cargando
+Kalan süre: biraz daha kullanım sonra hesaplanır	Tiempo restante: se calcula tras un poco más de uso
+Tahmini kalan: %s	Restante estimado: %s
+Pil ve ekran	Batería y pantalla
+Ön ışık	Luz frontal
+Yarım	Media
+Tam	Máxima
+Uykuda saat: her dakika	Reloj en reposo: cada minuto
+Uykuda saat: %d dakikada bir	Reloj en reposo: cada %d min
+Haber ve döviz: %d saatte bir	Noticias y divisas: cada %d h
+Hava durumu: %d saatte bir	El tiempo: cada %d h
+Uykuda ön ışık: kapalı	Luz en reposo: apagada
+Uykuda ön ışık: açık	Luz en reposo: encendida

@@ -13,22 +13,34 @@ int kui_ms_to_next_minute(void)
 
 static int user_event(KuiEvType t) { return t == KUI_EV_TAP || t == KUI_EV_POWER || t == KUI_EV_SWIPE || t == KUI_EV_LONGPRESS; }
 
-int kui_sleep_to_next_minute(void)
+int kui_sleep_until_minute(long target)
 {
-	long minute = (long) (time(NULL) / 60);
-	int secs = (kui_ms_to_next_minute() + 999) / 1000;
+	struct timeval tv;
+	gettimeofday(&tv, NULL);
+	long ms = (target * 60 - (long) tv.tv_sec) * 1000 - tv.tv_usec / 1000 + 200;
+	int secs = (int) ((ms + 999) / 1000);
 	if (secs > 4) { /* a few seconds are not worth a suspend: wait awake instead */
 		int slept = kui_suspend(secs), early = slept >= 0 && kui_woke_early(secs, slept);
 		fprintf(stderr, "deep: asked %d s, slept %d s%s\n", secs, slept, early ? " (woken)" : "");
 		if (early) return KUI_SLEEP_WOKEN; /* the power button or a touch */
 	}
-	/* the suspend failed, or the RTC (whole seconds) woke us a moment before the minute: wait awake for it */
-	while ((long) (time(NULL) / 60) == minute) {
-		KuiEvent e = kui_next_event(kui_ms_to_next_minute());
+	/* the suspend failed, or the RTC (whole seconds) woke us a moment early: wait awake for the minute */
+	while ((long) (time(NULL) / 60) < target) {
+		gettimeofday(&tv, NULL);
+		ms = (target * 60 - (long) tv.tv_sec) * 1000 - tv.tv_usec / 1000 + 200;
+		KuiEvent e = kui_next_event(ms > 60000 ? 60000 : (int) ms);
 		if (e.type == KUI_EV_QUIT) return KUI_SLEEP_QUIT;
 		if (user_event(e.type)) return KUI_SLEEP_WOKEN;
 	}
 	return KUI_SLEEP_MINUTE;
+}
+
+int kui_sleep_to_next_minute(void) { return kui_sleep_until_minute((long) (time(NULL) / 60) + 1); }
+
+int kui_sleep_until_every(int every_min)
+{
+	if (every_min < 1) every_min = 1;
+	return kui_sleep_until_minute(((long) (time(NULL) / 60) / every_min + 1) * every_min);
 }
 
 void kui_drain_input(int ms)

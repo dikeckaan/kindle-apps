@@ -363,11 +363,7 @@ Masa Panosu	Asztali pult
 Pil tasarrufu (derin uyku)	Energiatakarékos mód (mélyalvás)
 ☾ uykuda	☾ alszik
 Uykuya geçiş: %d dk dokunulmazsa	Alvás ennyi tétlenség után: %d perc
-Veri güncelleme: %d saatte bir	Adatfrissítés: %d óránként
-Pil tasarrufunda Kindle uyur, ekran e-ink sayesinde kalır; saat dakikada bir güncellenir, Wi-Fi yalnızca veri güncellerken açılır. Uyandırmak için güç tuşuna basın ya da ekrana dokunun.	Energiatakarékos módban a Kindle alszik, az e-ink kép megmarad; az óra percenként frissül, a Wi-Fi csak frissítéskor van bekapcsolva. Ébresztéshez nyomja meg a bekapcsológombot vagy érintse meg a képernyőt.
 Alındı: %s (KOReader ile açın)	Megérkezett: %s (KOReaderrel nyissa meg)
-Güncellemeler	Frissítések
-Güncel sürüm	Naprakész
 Kur	Telepítés
 Güncelle	Frissítés
 Tümünü güncelle	Összes frissítése
@@ -496,3 +492,36 @@ Koordinatlar	Koordináták
 %d km (%s)	%d km (%s)
 Uzaklık	Távolság
 Kaynak	Forrás
+☾ uykuda · %d dk	☾ alszik · %d perc
+Pil ve ekran…	Akkumulátor és kijelző…
+Pil tasarrufunda Kindle uyur, ekran e-ink sayesinde kalır; Wi-Fi yalnızca veri güncellerken açılır. Aralıkları Pil ve ekran'dan ayarlayın. Uyandırmak için güç tuşuna basın ya da ekrana dokunun.	Energiatakarékos módban a Kindle alszik, az e-ink kép megmarad; a Wi-Fi csak frissítéskor van bekapcsolva. Az időközöket az Akkumulátor és kijelző menüben állíthatja. Ébresztéshez nyomja meg a bekapcsológombot vagy érintse meg a képernyőt.
+Dikeç Store	Dikeç Store
+Kurulu	Telepítve
+Güncellenecek	Frissítendő
+Sırala	Rendezés
+%s kaldırıldı	%s eltávolítva
+Kaldırılamadı: %s	Nem sikerült eltávolítani: %s
+Depodaki sürüm: %s	Verzió a boltban: %s
+Kurulu değil	Nincs telepítve
+Kurulu sürüm: %s	Telepített verzió: %s
+Yeniden kur	Újratelepítés
+Kaldır	Eltávolítás
+Kaldırınca ayarlar ve kayıtlar (data/) korunur.	Eltávolításkor a beállítások és adatok (data/) megmaradnak.
+%s kaldırılsın mı?	Eltávolítja: %s?
+Menü sırası	Menüsorrend
+≈ %d gün %d sa	≈ %d nap %d ó
+≈ %d sa %d dk	≈ %d ó %d perc
+≈ %d dk	≈ %d perc
+Şarj oluyor	Töltés
+Kalan süre: biraz daha kullanım sonra hesaplanır	Hátralévő idő: kicsit több használat után számolja
+Tahmini kalan: %s	Becsült hátralévő: %s
+Pil ve ekran	Akkumulátor és kijelző
+Ön ışık	Előtérfény
+Yarım	Fél
+Tam	Teljes
+Uykuda saat: her dakika	Óra alvás közben: percenként
+Uykuda saat: %d dakikada bir	Óra alvás közben: %d percenként
+Haber ve döviz: %d saatte bir	Hírek és árfolyam: %d óránként
+Hava durumu: %d saatte bir	Időjárás: %d óránként
+Uykuda ön ışık: kapalı	Előtérfény alvás közben: ki
+Uykuda ön ışık: açık	Előtérfény alvás közben: be

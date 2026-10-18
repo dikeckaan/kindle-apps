@@ -363,11 +363,7 @@ Masa Panosu	Panel
 Pil tasarrufu (derin uyku)	Oszczędzanie baterii (głęboki sen)
 ☾ uykuda	☾ uśpiony
 Uykuya geçiş: %d dk dokunulmazsa	Uśpij po: %d min bez dotyku
-Veri güncelleme: %d saatte bir	Aktualizacja danych: co %d godz.
-Pil tasarrufunda Kindle uyur, ekran e-ink sayesinde kalır; saat dakikada bir güncellenir, Wi-Fi yalnızca veri güncellerken açılır. Uyandırmak için güç tuşuna basın ya da ekrana dokunun.	W trybie oszczędzania Kindle śpi, a obraz e-ink pozostaje; zegar odświeża się co minutę, a Wi-Fi włącza się tylko na czas aktualizacji. Aby wybudzić, naciśnij przycisk zasilania lub dotknij ekranu.
 Alındı: %s (KOReader ile açın)	Odebrano: %s (otwórz w KOReader)
-Güncellemeler	Aktualizacje
-Güncel sürüm	Aktualna
 Kur	Zainstaluj
 Güncelle	Aktualizuj
 Tümünü güncelle	Aktualizuj wszystko
@@ -496,3 +492,36 @@ Koordinatlar	Współrzędne
 %d km (%s)	%d km (%s)
 Uzaklık	Odległość
 Kaynak	Źródło
+☾ uykuda · %d dk	☾ uśpiony · %d min
+Pil ve ekran…	Bateria i ekran…
+Pil tasarrufunda Kindle uyur, ekran e-ink sayesinde kalır; Wi-Fi yalnızca veri güncellerken açılır. Aralıkları Pil ve ekran'dan ayarlayın. Uyandırmak için güç tuşuna basın ya da ekrana dokunun.	W trybie oszczędzania Kindle śpi, a obraz e-ink pozostaje; Wi-Fi włącza się tylko na czas aktualizacji. Interwały ustawisz w Bateria i ekran. Aby wybudzić, naciśnij przycisk zasilania lub dotknij ekranu.
+Dikeç Store	Dikeç Store
+Kurulu	Zainstalowane
+Güncellenecek	Do aktualizacji
+Sırala	Ułóż
+%s kaldırıldı	Odinstalowano %s
+Kaldırılamadı: %s	Nie udało się odinstalować: %s
+Depodaki sürüm: %s	Wersja w sklepie: %s
+Kurulu değil	Niezainstalowana
+Kurulu sürüm: %s	Wersja zainstalowana: %s
+Yeniden kur	Zainstaluj ponownie
+Kaldır	Odinstaluj
+Kaldırınca ayarlar ve kayıtlar (data/) korunur.	Po odinstalowaniu ustawienia i zapisy (data/) zostają.
+%s kaldırılsın mı?	Odinstalować %s?
+Menü sırası	Kolejność menu
+≈ %d gün %d sa	≈ %d dni %d godz.
+≈ %d sa %d dk	≈ %d godz. %d min
+≈ %d dk	≈ %d min
+Şarj oluyor	Ładowanie
+Kalan süre: biraz daha kullanım sonra hesaplanır	Pozostały czas: obliczony po dłuższym użyciu
+Tahmini kalan: %s	Szacowany czas: %s
+Pil ve ekran	Bateria i ekran
+Ön ışık	Podświetlenie
+Yarım	Połowa
+Tam	Pełne
+Uykuda saat: her dakika	Zegar w uśpieniu: co minutę
+Uykuda saat: %d dakikada bir	Zegar w uśpieniu: co %d min
+Haber ve döviz: %d saatte bir	Wiadomości i waluty: co %d godz.
+Hava durumu: %d saatte bir	Pogoda: co %d godz.
+Uykuda ön ışık: kapalı	Podświetlenie w uśpieniu: wyłączone
+Uykuda ön ışık: açık	Podświetlenie w uśpieniu: włączone
