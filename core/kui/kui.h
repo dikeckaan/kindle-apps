@@ -41,4 +41,21 @@ int kui_read_file(const char *path, char *buf, int cap);          /* bytes read 
 int kui_cfg_get_int(const char *path, const char *key, int def);
 int kui_cfg_set_int(const char *path, const char *key, int val);  /* 0 = ok */
 
+/* ---- device: screen (FBInk) and input (evdev + lipc) ---- */
+typedef enum { KUI_FONT_REG, KUI_FONT_BOLD } KuiFont;
+typedef enum { KUI_ALIGN_LEFT, KUI_ALIGN_CENTER, KUI_ALIGN_RIGHT } KuiAlign;
+#define KUI_ERR_TOUCH_BUSY (-2) /* touchscreen grabbed by another app (KOReader) */
+int  kui_init(const char *app); /* 0 = ok */
+void kui_quit(void);
+int  kui_width(void);
+int  kui_height(void);
+void kui_fill(KuiRect r, unsigned char gray); /* 0 = black, 255 = white; draws into the buffer only */
+void kui_frame(KuiRect r, int thickness, unsigned char gray);
+void kui_text(KuiRect box, const char *utf8, KuiFont f, int px, KuiAlign a, unsigned char fg); /* vertically centred */
+int  kui_text_width(const char *utf8, KuiFont f, int px);
+void kui_mark_dirty(KuiRect r);
+void kui_flush(int screen_changed); /* the only place that refreshes the panel */
+void kui_set_refresh_every(int n);
+KuiEvent kui_next_event(int timeout_ms); /* KUI_EV_NONE on timeout */
+
 #endif

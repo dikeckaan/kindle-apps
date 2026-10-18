@@ -1,0 +1,146 @@
+/* Screen layer: every draw goes to the framebuffer with no_refresh; kui_flush() is the single refresh point. */
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include "fbink.h"
+#include "kui.h"
+
+int kui_input_open(void);
+void kui_input_close(void);
+
+static int fb = -1;
+static FBInkConfig cfg;
+static FBInkState st;
+static KuiRefreshPolicy policy;
+static KuiRect dirty;
+static WFM_MODE_INDEX_T partial_wfm = WFM_GL16;
+
+int kui_width(void) { return (int) st.screen_width; }
+int kui_height(void) { return (int) st.screen_height; }
+
+static void show_message(const char *msg)
+{
+	FBInkOTConfig ot = { 0 };
+	ot.size_px = 40;
+	ot.is_centered = true;
+	ot.margins.top = (short) (kui_height() / 2 - 40);
+	FBInkConfig c = cfg;
+	c.no_refresh = false;
+	c.wfm_mode = WFM_GC16;
+	c.is_flashing = true;
+	fbink_cls(fb, &c, NULL, false);
+	fbink_print_ot(fb, msg, &ot, &c, NULL);
+}
+
+int kui_init(const char *app)
+{
+	char path[300];
+	const char *root = getenv("KUI_ROOT");
+	if (!root || !*root) root = "/mnt/us/kindle-apps";
+	fb = fbink_open();
+	cfg = (FBInkConfig){ 0 };
+	cfg.is_quiet = true;
+	if (fb < 0 || fbink_init(fb, &cfg) < 0) return -1;
+	fbink_get_state(&cfg, &st);
+	snprintf(path, sizeof path, "%s/fonts/DejaVuSans.ttf", root);
+	if (fbink_add_ot_font(path, FNT_REGULAR) < 0) return -1;
+	snprintf(path, sizeof path, "%s/fonts/DejaVuSans-Bold.ttf", root);
+	if (fbink_add_ot_font(path, FNT_BOLD) < 0) return -1;
+	cfg.no_refresh = true;
+	cfg.is_bgless = true;
+
+	const char *w = getenv("KUI_WFM"); /* tuning hook: "DU" forces DU partial updates */
+	partial_wfm = (w && strcmp(w, "DU") == 0) ? WFM_DU : WFM_GL16;
+	snprintf(path, sizeof path, "%s/settings", kui_data_dir(app));
+	kui_policy_init(&policy, kui_cfg_get_int(path, "full_refresh_every", 25));
+	dirty = (KuiRect){ 0, 0, 0, 0 };
+
+	int in = kui_input_open();
+	if (in == KUI_ERR_TOUCH_BUSY) {
+		show_message("Dokunmatik meşgul: önce KOReader'ı kapatın");
+		return KUI_ERR_TOUCH_BUSY;
+	}
+	return in < 0 ? -1 : 0;
+}
+
+void kui_quit(void)
+{
+	kui_input_close();
+	if (fb >= 0) {
+		fbink_free_ot_fonts();
+		fbink_close(fb);
+		fb = -1;
+	}
+}
+
+void kui_set_refresh_every(int n) { kui_policy_init(&policy, n); }
+
+void kui_fill(KuiRect r, unsigned char gray)
+{
+	if (r.w <= 0 || r.h <= 0) return;
+	FBInkRect fr = { (unsigned short) r.x, (unsigned short) r.y, (unsigned short) r.w, (unsigned short) r.h };
+	fbink_fill_rect_gray(fb, &cfg, &fr, false, gray);
+}
+
+void kui_frame(KuiRect r, int t, unsigned char gray)
+{
+	kui_fill((KuiRect){ r.x, r.y, r.w, t }, gray);
+	kui_fill((KuiRect){ r.x, r.y + r.h - t, r.w, t }, gray);
+	kui_fill((KuiRect){ r.x, r.y, t, r.h }, gray);
+	kui_fill((KuiRect){ r.x + r.w - t, r.y, t, r.h }, gray);
+}
+
+static void measure(const char *utf8, KuiFont f, int px, int *w, int *h)
+{
+	FBInkOTConfig ot = { 0 };
+	ot.size_px = (unsigned short) px;
+	ot.style = f == KUI_FONT_BOLD ? FNT_BOLD : FNT_REGULAR;
+	ot.compute_only = true;
+	FBInkOTFit fit = { 0 };
+	fbink_print_ot(fb, utf8, &ot, &cfg, &fit);
+	*w = fit.bbox.width;
+	*h = fit.bbox.height;
+}
+
+int kui_text_width(const char *utf8, KuiFont f, int px)
+{
+	int w, h;
+	measure(utf8, f, px, &w, &h);
+	return w;
+}
+
+void kui_text(KuiRect box, const char *utf8, KuiFont f, int px, KuiAlign a, unsigned char fg)
+{
+	int w, h;
+	measure(utf8, f, px, &w, &h);
+	int left = box.x;
+	if (a == KUI_ALIGN_CENTER && w < box.w) left = box.x + (box.w - w) / 2;
+	if (a == KUI_ALIGN_RIGHT && w < box.w) left = box.x + box.w - w;
+	FBInkOTConfig ot = { 0 };
+	ot.size_px = (unsigned short) px;
+	ot.style = f == KUI_FONT_BOLD ? FNT_BOLD : FNT_REGULAR;
+	ot.margins.top = (short) (box.y + (h < box.h ? (box.h - h) / 2 : 0));
+	ot.margins.left = (short) left;
+	ot.margins.right = (short) (kui_width() - (box.x + box.w));
+	FBInkConfig c = cfg;
+	c.fg_color = (FG_COLOR_INDEX_T) (fg / 0x11);
+	fbink_print_ot(fb, utf8, &ot, &c, NULL);
+}
+
+void kui_mark_dirty(KuiRect r) { dirty = kui_rect_union(dirty, r); }
+
+void kui_flush(int screen_changed)
+{
+	if (!screen_changed && dirty.w <= 0) return;
+	FBInkConfig c = cfg;
+	if (kui_policy_next(&policy, screen_changed) == KUI_UPD_FULL) {
+		c.wfm_mode = WFM_GC16;
+		c.is_flashing = true;
+		fbink_refresh(fb, 0, 0, 0, 0, &c);
+	} else {
+		c.wfm_mode = partial_wfm;
+		c.is_flashing = false;
+		fbink_refresh(fb, (uint32_t) dirty.y, (uint32_t) dirty.x, (uint32_t) dirty.w, (uint32_t) dirty.h, &c);
+	}
+	dirty = (KuiRect){ 0, 0, 0, 0 };
+}
