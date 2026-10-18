@@ -46,20 +46,32 @@ int kui_suspend(int seconds)
 	if (seconds <= 0) return -1;
 	const char *alarm = path_env("KUI_RTC_ALARM", "/sys/class/rtc/rtc0/wakealarm");
 	const char *state = path_env("KUI_POWER_STATE", "/sys/power/state");
-	char rel[24];
-	snprintf(rel, sizeof rel, "+%d", seconds);
-	if (write_str(alarm, "0") != 0 || write_str(alarm, rel) != 0) return -1;
-	sync(); /* nothing half-written on flash while asleep */
 	struct timespec t0, t1;
 	clock_gettime(CLOCK_REALTIME, &t0);
-	/* blocks until the device wakes; fails at once when a wakeup source is active (e.g. Wi-Fi still on) */
-	int rc = write_str(state, "mem");
-	clock_gettime(CLOCK_REALTIME, &t1);
-	write_str(alarm, "0");
-	if (rc != 0) {
-		fprintf(stderr, "suspend failed: %s\n", strerror(errno));
-		return -1;
+	sync(); /* nothing half-written on flash while asleep */
+	/* the e-ink controller holds a wakelock for a few seconds after a refresh (hwtcon_wakelock): the kernel
+	 * refuses with EBUSY meanwhile, so try again each second while there is time left */
+	for (;;) {
+		clock_gettime(CLOCK_REALTIME, &t1);
+		int left = seconds - (int) (t1.tv_sec - t0.tv_sec);
+		if (left <= 2) {
+			fprintf(stderr, "suspend failed: still busy\n");
+			return -1;
+		}
+		char rel[24];
+		snprintf(rel, sizeof rel, "+%d", left);
+		if (write_str(alarm, "0") != 0 || write_str(alarm, rel) != 0) return -1;
+		/* blocks until the device wakes */
+		int rc = write_str(state, "mem"), e = errno;
+		write_str(alarm, "0");
+		if (rc == 0) break;
+		if (e != EBUSY || seconds - left >= 12) {
+			fprintf(stderr, "suspend failed: %s\n", strerror(e));
+			return -1;
+		}
+		sleep(1);
 	}
+	clock_gettime(CLOCK_REALTIME, &t1);
 	return (int) (t1.tv_sec - t0.tv_sec);
 }
 
