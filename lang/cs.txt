@@ -525,3 +525,86 @@ Haber ve döviz: %d saatte bir	Zprávy a měny: každých %d h
 Hava durumu: %d saatte bir	Počasí: každých %d h
 Uykuda ön ışık: kapalı	Podsvícení ve spánku: vypnuto
 Uykuda ön ışık: açık	Podsvícení ve spánku: zapnuto
+☉ Güneş	☉ Slunce
+☾ Ay	☾ Měsíc
+☿ Merkür	☿ Merkur
+♀ Venüs	♀ Venuše
+♂ Mars	♂ Mars
+♃ Jüpiter	♃ Jupiter
+♄ Satürn	♄ Saturn
+−1 gün	−1 den
+−1 sa	−1 h
+Şimdi	Teď
++1 sa	+1 h
++1 gün	+1 den
+Parlaklık (kadir)	Jasnost (magnituda)
+Ayrıntı için bir yıldıza ya da gezegene dokunun	Klepněte na hvězdu nebo planetu pro podrobnosti
+Gündüz · Güneş batınca yıldızlar görünür (gün batımı %s)	Den · hvězdy se objeví po západu Slunce (západ %s)
+Gündüz · Güneş bugün batmıyor	Den · Slunce dnes nezapadá
+Gece · Güneş bugün doğmuyor	Noc · Slunce dnes nevychází
+Gece · gün batımı %s, gün doğumu %s	Noc · západ Slunce %s, východ %s
+Ay: %s, %%%d aydınlık · doğuş %s · batış %s	Měsíc: %s, osvětleno %d %% · východ %s · západ %s
+Bu gece görünen gezegenler: %s	Planety viditelné dnes v noci: %s
+Bu gece parlak gezegen görünmüyor	Dnes v noci žádné jasné planety
+Yükseklik %d° · yön %s (%d°)	Výška %d° · směr %s (%d°)
+%s · %%%d aydınlık	%s · osvětleno %d %%
+Yıldız	Hvězda
+Gezegen · parlaklık %s kadir	Planeta · jasnost %s mag
+Doğuş %s · batış %s	Východ %s · západ %s
+Uzaklık %s AB (Güneş–Dünya = 1)	Vzdálenost %s au (Slunce–Země = 1)
+Yıldız · %s · %s	Hvězda · %s · %s
+Yıldız · %s	Hvězda · %s
+Parlaklık %s kadir	Jasnost %s mag
+Takımyıldız · %s	Souhvězdí · %s
+En parlak yıldızı: %s	Nejjasnější hvězda: %s
+Gökyüzü	Hvězdná obloha
+Andromeda	Andromeda
+Kova	Vodnář
+Kartal	Orel
+Koç	Beran
+Arabacı	Vozka
+Çoban	Pastýř
+Yengeç	Rak
+Büyükköpek	Velký pes
+Küçükköpek	Malý pes
+Oğlak	Kozoroh
+Kraliçe	Kasiopeja
+Kral	Cefeus
+Kuğu	Labuť
+Ejderha	Drak
+İkizler	Blíženci
+Herkül	Herkules
+Aslan	Lev
+Terazi	Váhy
+Çalgı	Lyra
+Yılancı	Hadonoš
+Avcı	Orion
+Kanatlı At	Pegas
+Kahraman	Perseus
+Balıklar	Ryby
+Yay	Střelec
+Akrep	Štír
+Boğa	Býk
+Büyükayı	Velká medvědice
+Küçükayı	Malá medvědice
+Başak	Panna
+Sirius	Sírius
+Süheyl	Canopus
+Arktürüs	Arktur
+Vega	Vega
+Kapella	Capella
+Rigel	Rigel
+Prokyon	Prokyon
+Betelgöz	Betelgeuze
+Altair	Altair
+Aldebaran	Aldebaran
+Antares	Antares
+Spika	Spika
+Polluks	Pollux
+Fomalhaut	Fomalhaut
+Deneb	Deneb
+Regulus	Regulus
+Kastor	Kastor
+Kutup Yıldızı	Polárka
+Algol	Algol
+Mizar	Mizar

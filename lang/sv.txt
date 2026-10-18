@@ -525,3 +525,86 @@ Haber ve döviz: %d saatte bir	Nyheter och valuta: var %d:e timme
 Hava durumu: %d saatte bir	Väder: var %d:e timme
 Uykuda ön ışık: kapalı	Framljus i vila: av
 Uykuda ön ışık: açık	Framljus i vila: på
+☉ Güneş	☉ Solen
+☾ Ay	☾ Månen
+☿ Merkür	☿ Merkurius
+♀ Venüs	♀ Venus
+♂ Mars	♂ Mars
+♃ Jüpiter	♃ Jupiter
+♄ Satürn	♄ Saturnus
+−1 gün	−1 dag
+−1 sa	−1 h
+Şimdi	Nu
++1 sa	+1 h
++1 gün	+1 dag
+Parlaklık (kadir)	Ljusstyrka (magnitud)
+Ayrıntı için bir yıldıza ya da gezegene dokunun	Tryck på en stjärna eller planet för detaljer
+Gündüz · Güneş batınca yıldızlar görünür (gün batımı %s)	Dag · stjärnorna syns efter solnedgången (solnedgång %s)
+Gündüz · Güneş bugün batmıyor	Dag · solen går inte ner i dag
+Gece · Güneş bugün doğmuyor	Natt · solen går inte upp i dag
+Gece · gün batımı %s, gün doğumu %s	Natt · solnedgång %s, soluppgång %s
+Ay: %s, %%%d aydınlık · doğuş %s · batış %s	Månen: %s, %d %% belyst · upp %s · ner %s
+Bu gece görünen gezegenler: %s	Planeter synliga i natt: %s
+Bu gece parlak gezegen görünmüyor	Inga ljusa planeter i natt
+Yükseklik %d° · yön %s (%d°)	Höjd %d° · riktning %s (%d°)
+%s · %%%d aydınlık	%s · %d %% belyst
+Yıldız	Stjärna
+Gezegen · parlaklık %s kadir	Planet · magnitud %s
+Doğuş %s · batış %s	Upp %s · ner %s
+Uzaklık %s AB (Güneş–Dünya = 1)	Avstånd %s AE (solen–jorden = 1)
+Yıldız · %s · %s	Stjärna · %s · %s
+Yıldız · %s	Stjärna · %s
+Parlaklık %s kadir	Magnitud %s
+Takımyıldız · %s	Stjärnbild · %s
+En parlak yıldızı: %s	Ljusaste stjärna: %s
+Gökyüzü	Stjärnhimlen
+Andromeda	Andromeda
+Kova	Vattumannen
+Kartal	Örnen
+Koç	Väduren
+Arabacı	Kusken
+Çoban	Björnvaktaren
+Yengeç	Kräftan
+Büyükköpek	Stora hunden
+Küçükköpek	Lilla hunden
+Oğlak	Stenbocken
+Kraliçe	Cassiopeja
+Kral	Kefeus
+Kuğu	Svanen
+Ejderha	Draken
+İkizler	Tvillingarna
+Herkül	Herkules
+Aslan	Lejonet
+Terazi	Vågen
+Çalgı	Lyran
+Yılancı	Ormbäraren
+Avcı	Orion
+Kanatlı At	Pegasus
+Kahraman	Perseus
+Balıklar	Fiskarna
+Yay	Skytten
+Akrep	Skorpionen
+Boğa	Oxen
+Büyükayı	Stora björnen
+Küçükayı	Lilla björnen
+Başak	Jungfrun
+Sirius	Sirius
+Süheyl	Canopus
+Arktürüs	Arcturus
+Vega	Vega
+Kapella	Capella
+Rigel	Rigel
+Prokyon	Procyon
+Betelgöz	Betelgeuse
+Altair	Altair
+Aldebaran	Aldebaran
+Antares	Antares
+Spika	Spica
+Polluks	Pollux
+Fomalhaut	Fomalhaut
+Deneb	Deneb
+Regulus	Regulus
+Kastor	Kastor
+Kutup Yıldızı	Polstjärnan
+Algol	Algol
+Mizar	Mizar

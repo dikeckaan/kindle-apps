@@ -525,3 +525,86 @@ Haber ve döviz: %d saatte bir	Nieuws en valuta: elke %d u
 Hava durumu: %d saatte bir	Weer: elke %d u
 Uykuda ön ışık: kapalı	Voorlicht in slaap: uit
 Uykuda ön ışık: açık	Voorlicht in slaap: aan
+☉ Güneş	☉ Zon
+☾ Ay	☾ Maan
+☿ Merkür	☿ Mercurius
+♀ Venüs	♀ Venus
+♂ Mars	♂ Mars
+♃ Jüpiter	♃ Jupiter
+♄ Satürn	♄ Saturnus
+−1 gün	−1 dag
+−1 sa	−1 u
+Şimdi	Nu
++1 sa	+1 u
++1 gün	+1 dag
+Parlaklık (kadir)	Helderheid (magnitude)
+Ayrıntı için bir yıldıza ya da gezegene dokunun	Tik op een ster of planeet voor details
+Gündüz · Güneş batınca yıldızlar görünür (gün batımı %s)	Dag · sterren verschijnen na zonsondergang (zonsondergang %s)
+Gündüz · Güneş bugün batmıyor	Dag · de zon gaat vandaag niet onder
+Gece · Güneş bugün doğmuyor	Nacht · de zon komt vandaag niet op
+Gece · gün batımı %s, gün doğumu %s	Nacht · zonsondergang %s, zonsopkomst %s
+Ay: %s, %%%d aydınlık · doğuş %s · batış %s	Maan: %s, %d%% verlicht · op %s · onder %s
+Bu gece görünen gezegenler: %s	Vannacht zichtbare planeten: %s
+Bu gece parlak gezegen görünmüyor	Vannacht geen heldere planeten
+Yükseklik %d° · yön %s (%d°)	Hoogte %d° · richting %s (%d°)
+%s · %%%d aydınlık	%s · %d%% verlicht
+Yıldız	Ster
+Gezegen · parlaklık %s kadir	Planeet · magnitude %s
+Doğuş %s · batış %s	Op %s · onder %s
+Uzaklık %s AB (Güneş–Dünya = 1)	Afstand %s AE (zon–aarde = 1)
+Yıldız · %s · %s	Ster · %s · %s
+Yıldız · %s	Ster · %s
+Parlaklık %s kadir	Magnitude %s
+Takımyıldız · %s	Sterrenbeeld · %s
+En parlak yıldızı: %s	Helderste ster: %s
+Gökyüzü	Sterrenhemel
+Andromeda	Andromeda
+Kova	Waterman
+Kartal	Arend
+Koç	Ram
+Arabacı	Voerman
+Çoban	Ossenhoeder
+Yengeç	Kreeft
+Büyükköpek	Grote Hond
+Küçükköpek	Kleine Hond
+Oğlak	Steenbok
+Kraliçe	Cassiopeia
+Kral	Cepheus
+Kuğu	Zwaan
+Ejderha	Draak
+İkizler	Tweelingen
+Herkül	Hercules
+Aslan	Leeuw
+Terazi	Weegschaal
+Çalgı	Lier
+Yılancı	Slangendrager
+Avcı	Orion
+Kanatlı At	Pegasus
+Kahraman	Perseus
+Balıklar	Vissen
+Yay	Boogschutter
+Akrep	Schorpioen
+Boğa	Stier
+Büyükayı	Grote Beer
+Küçükayı	Kleine Beer
+Başak	Maagd
+Sirius	Sirius
+Süheyl	Canopus
+Arktürüs	Arcturus
+Vega	Wega
+Kapella	Capella
+Rigel	Rigel
+Prokyon	Procyon
+Betelgöz	Betelgeuze
+Altair	Altair
+Aldebaran	Aldebaran
+Antares	Antares
+Spika	Spica
+Polluks	Pollux
+Fomalhaut	Fomalhaut
+Deneb	Deneb
+Regulus	Regulus
+Kastor	Castor
+Kutup Yıldızı	Poolster
+Algol	Algol
+Mizar	Mizar

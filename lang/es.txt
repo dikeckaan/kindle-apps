@@ -525,3 +525,86 @@ Haber ve döviz: %d saatte bir	Noticias y divisas: cada %d h
 Hava durumu: %d saatte bir	El tiempo: cada %d h
 Uykuda ön ışık: kapalı	Luz en reposo: apagada
 Uykuda ön ışık: açık	Luz en reposo: encendida
+☉ Güneş	☉ Sol
+☾ Ay	☾ Luna
+☿ Merkür	☿ Mercurio
+♀ Venüs	♀ Venus
+♂ Mars	♂ Marte
+♃ Jüpiter	♃ Júpiter
+♄ Satürn	♄ Saturno
+−1 gün	−1 día
+−1 sa	−1 h
+Şimdi	Ahora
++1 sa	+1 h
++1 gün	+1 día
+Parlaklık (kadir)	Brillo (magnitud)
+Ayrıntı için bir yıldıza ya da gezegene dokunun	Toca una estrella o un planeta para ver detalles
+Gündüz · Güneş batınca yıldızlar görünür (gün batımı %s)	Día · las estrellas aparecen tras la puesta de sol (puesta %s)
+Gündüz · Güneş bugün batmıyor	Día · el Sol no se pone hoy
+Gece · Güneş bugün doğmuyor	Noche · el Sol no sale hoy
+Gece · gün batımı %s, gün doğumu %s	Noche · puesta de sol %s, salida %s
+Ay: %s, %%%d aydınlık · doğuş %s · batış %s	Luna: %s, %d %% iluminada · sale %s · se pone %s
+Bu gece görünen gezegenler: %s	Planetas visibles esta noche: %s
+Bu gece parlak gezegen görünmüyor	Esta noche no hay planetas brillantes
+Yükseklik %d° · yön %s (%d°)	Altura %d° · dirección %s (%d°)
+%s · %%%d aydınlık	%s · %d %% iluminada
+Yıldız	Estrella
+Gezegen · parlaklık %s kadir	Planeta · magnitud %s
+Doğuş %s · batış %s	Sale %s · se pone %s
+Uzaklık %s AB (Güneş–Dünya = 1)	Distancia %s UA (Sol–Tierra = 1)
+Yıldız · %s · %s	Estrella · %s · %s
+Yıldız · %s	Estrella · %s
+Parlaklık %s kadir	Magnitud %s
+Takımyıldız · %s	Constelación · %s
+En parlak yıldızı: %s	Estrella más brillante: %s
+Gökyüzü	Cielo nocturno
+Andromeda	Andrómeda
+Kova	Acuario
+Kartal	Águila
+Koç	Aries
+Arabacı	Auriga
+Çoban	Boyero
+Yengeç	Cáncer
+Büyükköpek	Can Mayor
+Küçükköpek	Can Menor
+Oğlak	Capricornio
+Kraliçe	Casiopea
+Kral	Cefeo
+Kuğu	Cisne
+Ejderha	Dragón
+İkizler	Géminis
+Herkül	Hércules
+Aslan	Leo
+Terazi	Libra
+Çalgı	Lira
+Yılancı	Ofiuco
+Avcı	Orión
+Kanatlı At	Pegaso
+Kahraman	Perseo
+Balıklar	Piscis
+Yay	Sagitario
+Akrep	Escorpio
+Boğa	Tauro
+Büyükayı	Osa Mayor
+Küçükayı	Osa Menor
+Başak	Virgo
+Sirius	Sirio
+Süheyl	Canopo
+Arktürüs	Arturo
+Vega	Vega
+Kapella	Capella
+Rigel	Rigel
+Prokyon	Proción
+Betelgöz	Betelgeuse
+Altair	Altair
+Aldebaran	Aldebarán
+Antares	Antares
+Spika	Espiga
+Polluks	Pólux
+Fomalhaut	Fomalhaut
+Deneb	Deneb
+Regulus	Régulo
+Kastor	Cástor
+Kutup Yıldızı	Estrella Polar
+Algol	Algol
+Mizar	Mizar

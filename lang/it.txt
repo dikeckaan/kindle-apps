@@ -525,3 +525,86 @@ Haber ve döviz: %d saatte bir	Notizie e valute: ogni %d h
 Hava durumu: %d saatte bir	Meteo: ogni %d h
 Uykuda ön ışık: kapalı	Luce a riposo: spenta
 Uykuda ön ışık: açık	Luce a riposo: accesa
+☉ Güneş	☉ Sole
+☾ Ay	☾ Luna
+☿ Merkür	☿ Mercurio
+♀ Venüs	♀ Venere
+♂ Mars	♂ Marte
+♃ Jüpiter	♃ Giove
+♄ Satürn	♄ Saturno
+−1 gün	−1 giorno
+−1 sa	−1 h
+Şimdi	Ora
++1 sa	+1 h
++1 gün	+1 giorno
+Parlaklık (kadir)	Luminosità (magnitudine)
+Ayrıntı için bir yıldıza ya da gezegene dokunun	Tocca una stella o un pianeta per i dettagli
+Gündüz · Güneş batınca yıldızlar görünür (gün batımı %s)	Giorno · le stelle appaiono dopo il tramonto (tramonto %s)
+Gündüz · Güneş bugün batmıyor	Giorno · oggi il Sole non tramonta
+Gece · Güneş bugün doğmuyor	Notte · oggi il Sole non sorge
+Gece · gün batımı %s, gün doğumu %s	Notte · tramonto %s, alba %s
+Ay: %s, %%%d aydınlık · doğuş %s · batış %s	Luna: %s, illuminata al %d%% · sorge %s · tramonta %s
+Bu gece görünen gezegenler: %s	Pianeti visibili stanotte: %s
+Bu gece parlak gezegen görünmüyor	Nessun pianeta luminoso stanotte
+Yükseklik %d° · yön %s (%d°)	Altezza %d° · direzione %s (%d°)
+%s · %%%d aydınlık	%s · illuminata al %d%%
+Yıldız	Stella
+Gezegen · parlaklık %s kadir	Pianeta · magnitudine %s
+Doğuş %s · batış %s	Sorge %s · tramonta %s
+Uzaklık %s AB (Güneş–Dünya = 1)	Distanza %s UA (Sole–Terra = 1)
+Yıldız · %s · %s	Stella · %s · %s
+Yıldız · %s	Stella · %s
+Parlaklık %s kadir	Magnitudine %s
+Takımyıldız · %s	Costellazione · %s
+En parlak yıldızı: %s	Stella più luminosa: %s
+Gökyüzü	Cielo stellato
+Andromeda	Andromeda
+Kova	Acquario
+Kartal	Aquila
+Koç	Ariete
+Arabacı	Auriga
+Çoban	Boote
+Yengeç	Cancro
+Büyükköpek	Cane Maggiore
+Küçükköpek	Cane Minore
+Oğlak	Capricorno
+Kraliçe	Cassiopea
+Kral	Cefeo
+Kuğu	Cigno
+Ejderha	Dragone
+İkizler	Gemelli
+Herkül	Ercole
+Aslan	Leone
+Terazi	Bilancia
+Çalgı	Lira
+Yılancı	Ofiuco
+Avcı	Orione
+Kanatlı At	Pegaso
+Kahraman	Perseo
+Balıklar	Pesci
+Yay	Sagittario
+Akrep	Scorpione
+Boğa	Toro
+Büyükayı	Orsa Maggiore
+Küçükayı	Orsa Minore
+Başak	Vergine
+Sirius	Sirio
+Süheyl	Canopo
+Arktürüs	Arturo
+Vega	Vega
+Kapella	Capella
+Rigel	Rigel
+Prokyon	Procione
+Betelgöz	Betelgeuse
+Altair	Altair
+Aldebaran	Aldebaran
+Antares	Antares
+Spika	Spica
+Polluks	Polluce
+Fomalhaut	Fomalhaut
+Deneb	Deneb
+Regulus	Regolo
+Kastor	Castore
+Kutup Yıldızı	Stella Polare
+Algol	Algol
+Mizar	Mizar

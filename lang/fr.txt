@@ -525,3 +525,86 @@ Haber ve döviz: %d saatte bir	Actualités et devises : toutes les %d h
 Hava durumu: %d saatte bir	Météo : toutes les %d h
 Uykuda ön ışık: kapalı	Éclairage en veille : éteint
 Uykuda ön ışık: açık	Éclairage en veille : allumé
+☉ Güneş	☉ Soleil
+☾ Ay	☾ Lune
+☿ Merkür	☿ Mercure
+♀ Venüs	♀ Vénus
+♂ Mars	♂ Mars
+♃ Jüpiter	♃ Jupiter
+♄ Satürn	♄ Saturne
+−1 gün	−1 jour
+−1 sa	−1 h
+Şimdi	Maintenant
++1 sa	+1 h
++1 gün	+1 jour
+Parlaklık (kadir)	Éclat (magnitude)
+Ayrıntı için bir yıldıza ya da gezegene dokunun	Touchez une étoile ou une planète pour les détails
+Gündüz · Güneş batınca yıldızlar görünür (gün batımı %s)	Jour · les étoiles apparaissent après le coucher du soleil (%s)
+Gündüz · Güneş bugün batmıyor	Jour · le Soleil ne se couche pas aujourd’hui
+Gece · Güneş bugün doğmuyor	Nuit · le Soleil ne se lève pas aujourd’hui
+Gece · gün batımı %s, gün doğumu %s	Nuit · coucher du soleil %s, lever %s
+Ay: %s, %%%d aydınlık · doğuş %s · batış %s	Lune : %s, éclairée à %d %% · lever %s · coucher %s
+Bu gece görünen gezegenler: %s	Planètes visibles cette nuit : %s
+Bu gece parlak gezegen görünmüyor	Aucune planète brillante cette nuit
+Yükseklik %d° · yön %s (%d°)	Hauteur %d° · direction %s (%d°)
+%s · %%%d aydınlık	%s · éclairée à %d %%
+Yıldız	Étoile
+Gezegen · parlaklık %s kadir	Planète · magnitude %s
+Doğuş %s · batış %s	Lever %s · coucher %s
+Uzaklık %s AB (Güneş–Dünya = 1)	Distance %s ua (Soleil–Terre = 1)
+Yıldız · %s · %s	Étoile · %s · %s
+Yıldız · %s	Étoile · %s
+Parlaklık %s kadir	Magnitude %s
+Takımyıldız · %s	Constellation · %s
+En parlak yıldızı: %s	Étoile la plus brillante : %s
+Gökyüzü	Ciel étoilé
+Andromeda	Andromède
+Kova	Verseau
+Kartal	Aigle
+Koç	Bélier
+Arabacı	Cocher
+Çoban	Bouvier
+Yengeç	Cancer
+Büyükköpek	Grand Chien
+Küçükköpek	Petit Chien
+Oğlak	Capricorne
+Kraliçe	Cassiopée
+Kral	Céphée
+Kuğu	Cygne
+Ejderha	Dragon
+İkizler	Gémeaux
+Herkül	Hercule
+Aslan	Lion
+Terazi	Balance
+Çalgı	Lyre
+Yılancı	Ophiuchus
+Avcı	Orion
+Kanatlı At	Pégase
+Kahraman	Persée
+Balıklar	Poissons
+Yay	Sagittaire
+Akrep	Scorpion
+Boğa	Taureau
+Büyükayı	Grande Ourse
+Küçükayı	Petite Ourse
+Başak	Vierge
+Sirius	Sirius
+Süheyl	Canopus
+Arktürüs	Arcturus
+Vega	Véga
+Kapella	Capella
+Rigel	Rigel
+Prokyon	Procyon
+Betelgöz	Bételgeuse
+Altair	Altaïr
+Aldebaran	Aldébaran
+Antares	Antarès
+Spika	Spica
+Polluks	Pollux
+Fomalhaut	Fomalhaut
+Deneb	Deneb
+Regulus	Régulus
+Kastor	Castor
+Kutup Yıldızı	Étoile polaire
+Algol	Algol
+Mizar	Mizar

@@ -20,6 +20,7 @@ Kitaplıkta tek bir **"Uygulamalar"** girişi olur; açınca bütün uygulamalar
 | Hava Durumu (Open-Meteo, kayıtlı şehirler, 12 saat + 7 gün) | ✅ |
 | Masa Saati (büyük saat, tarih, hava özeti; açıkken uyumaz) | ✅ |
 | Masa Panosu (saat, hava, seçilen kaynaktan son dakika, döviz/altın, tarihte bugün, namaz vakitleri, ay evresi, pil) | ✅ |
+| Gökyüzü (çevrimdışı canlı yıldız haritası: yıldızlar, takımyıldızlar, gezegenler, Ay evresi, gün doğumu/batımı) | ✅ |
 | Döviz & Altın (TCMB kurları, altın fiyatları, çevirici) | ✅ |
 | Gazete (20 kaynaktan gazete tadında ön sayfa: AA, TRT, Hürriyet, Sözcü, NTV, CNN Türk, BBC Türkçe, Cumhuriyet, Milliyet, Sabah, Habertürk, DW, Euronews…) | ✅ |
 | Mayın Tarlası (3 zorluk, bayrak kipi) | ✅ |

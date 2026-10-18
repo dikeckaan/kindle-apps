@@ -525,3 +525,86 @@ Haber ve döviz: %d saatte bir	Ειδήσεις και νομίσματα: κά�
 Hava durumu: %d saatte bir	Καιρός: κάθε %d ώρ.
 Uykuda ön ışık: kapalı	Φωτισμός σε ύπνο: σβηστός
 Uykuda ön ışık: açık	Φωτισμός σε ύπνο: αναμμένος
+☉ Güneş	☉ Ήλιος
+☾ Ay	☾ Σελήνη
+☿ Merkür	☿ Ερμής
+♀ Venüs	♀ Αφροδίτη
+♂ Mars	♂ Άρης
+♃ Jüpiter	♃ Δίας
+♄ Satürn	♄ Κρόνος
+−1 gün	−1 ημέρα
+−1 sa	−1 ώρα
+Şimdi	Τώρα
++1 sa	+1 ώρα
++1 gün	+1 ημέρα
+Parlaklık (kadir)	Λαμπρότητα (μέγεθος)
+Ayrıntı için bir yıldıza ya da gezegene dokunun	Αγγίξτε ένα αστέρι ή πλανήτη για λεπτομέρειες
+Gündüz · Güneş batınca yıldızlar görünür (gün batımı %s)	Ημέρα · τα αστέρια φαίνονται μετά τη δύση (δύση ηλίου %s)
+Gündüz · Güneş bugün batmıyor	Ημέρα · ο Ήλιος δεν δύει σήμερα
+Gece · Güneş bugün doğmuyor	Νύχτα · ο Ήλιος δεν ανατέλλει σήμερα
+Gece · gün batımı %s, gün doğumu %s	Νύχτα · δύση ηλίου %s, ανατολή %s
+Ay: %s, %%%d aydınlık · doğuş %s · batış %s	Σελήνη: %s, φωτισμένη %d%% · ανατολή %s · δύση %s
+Bu gece görünen gezegenler: %s	Ορατοί πλανήτες απόψε: %s
+Bu gece parlak gezegen görünmüyor	Κανένας λαμπρός πλανήτης απόψε
+Yükseklik %d° · yön %s (%d°)	Ύψος %d° · κατεύθυνση %s (%d°)
+%s · %%%d aydınlık	%s · φωτισμένη %d%%
+Yıldız	Αστέρας
+Gezegen · parlaklık %s kadir	Πλανήτης · μέγεθος %s
+Doğuş %s · batış %s	Ανατολή %s · δύση %s
+Uzaklık %s AB (Güneş–Dünya = 1)	Απόσταση %s AU (Ήλιος–Γη = 1)
+Yıldız · %s · %s	Αστέρας · %s · %s
+Yıldız · %s	Αστέρας · %s
+Parlaklık %s kadir	Μέγεθος %s
+Takımyıldız · %s	Αστερισμός · %s
+En parlak yıldızı: %s	Λαμπρότερος αστέρας: %s
+Gökyüzü	Έναστρος ουρανός
+Andromeda	Ανδρομέδα
+Kova	Υδροχόος
+Kartal	Αετός
+Koç	Κριός
+Arabacı	Ηνίοχος
+Çoban	Βοώτης
+Yengeç	Καρκίνος
+Büyükköpek	Μέγας Κύων
+Küçükköpek	Μικρός Κύων
+Oğlak	Αιγόκερως
+Kraliçe	Κασσιόπη
+Kral	Κηφέας
+Kuğu	Κύκνος
+Ejderha	Δράκων
+İkizler	Δίδυμοι
+Herkül	Ηρακλής
+Aslan	Λέων
+Terazi	Ζυγός
+Çalgı	Λύρα
+Yılancı	Οφιούχος
+Avcı	Ωρίων
+Kanatlı At	Πήγασος
+Kahraman	Περσέας
+Balıklar	Ιχθείς
+Yay	Τοξότης
+Akrep	Σκορπιός
+Boğa	Ταύρος
+Büyükayı	Μεγάλη Άρκτος
+Küçükayı	Μικρή Άρκτος
+Başak	Παρθένος
+Sirius	Σείριος
+Süheyl	Κάνωπος
+Arktürüs	Αρκτούρος
+Vega	Βέγας
+Kapella	Αίγα
+Rigel	Ρίγκελ
+Prokyon	Προκύων
+Betelgöz	Μπετελγκέζ
+Altair	Αλτάιρ
+Aldebaran	Αλδεβαράν
+Antares	Αντάρης
+Spika	Στάχυς
+Polluks	Πολυδεύκης
+Fomalhaut	Φομαλχώτ
+Deneb	Ντενέμπ
+Regulus	Βασιλίσκος
+Kastor	Κάστωρ
+Kutup Yıldızı	Πολικός Αστέρας
+Algol	Αλγκόλ
+Mizar	Μιζάρ

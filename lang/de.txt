@@ -525,3 +525,86 @@ Haber ve döviz: %d saatte bir	Nachrichten & Devisen: alle %d Std.
 Hava durumu: %d saatte bir	Wetter: alle %d Std.
 Uykuda ön ışık: kapalı	Frontlicht im Schlaf: aus
 Uykuda ön ışık: açık	Frontlicht im Schlaf: an
+☉ Güneş	☉ Sonne
+☾ Ay	☾ Mond
+☿ Merkür	☿ Merkur
+♀ Venüs	♀ Venus
+♂ Mars	♂ Mars
+♃ Jüpiter	♃ Jupiter
+♄ Satürn	♄ Saturn
+−1 gün	−1 Tag
+−1 sa	−1 Std.
+Şimdi	Jetzt
++1 sa	+1 Std.
++1 gün	+1 Tag
+Parlaklık (kadir)	Helligkeit (Größenklasse)
+Ayrıntı için bir yıldıza ya da gezegene dokunun	Für Details auf einen Stern oder Planeten tippen
+Gündüz · Güneş batınca yıldızlar görünür (gün batımı %s)	Tag · Sterne erscheinen nach Sonnenuntergang (Sonnenuntergang %s)
+Gündüz · Güneş bugün batmıyor	Tag · Die Sonne geht heute nicht unter
+Gece · Güneş bugün doğmuyor	Nacht · Die Sonne geht heute nicht auf
+Gece · gün batımı %s, gün doğumu %s	Nacht · Sonnenuntergang %s, Sonnenaufgang %s
+Ay: %s, %%%d aydınlık · doğuş %s · batış %s	Mond: %s, %d %% beleuchtet · Aufgang %s · Untergang %s
+Bu gece görünen gezegenler: %s	Heute Nacht sichtbare Planeten: %s
+Bu gece parlak gezegen görünmüyor	Heute Nacht keine hellen Planeten
+Yükseklik %d° · yön %s (%d°)	Höhe %d° · Richtung %s (%d°)
+%s · %%%d aydınlık	%s · %d %% beleuchtet
+Yıldız	Stern
+Gezegen · parlaklık %s kadir	Planet · Helligkeit %s mag
+Doğuş %s · batış %s	Aufgang %s · Untergang %s
+Uzaklık %s AB (Güneş–Dünya = 1)	Entfernung %s AE (Sonne–Erde = 1)
+Yıldız · %s · %s	Stern · %s · %s
+Yıldız · %s	Stern · %s
+Parlaklık %s kadir	Helligkeit %s mag
+Takımyıldız · %s	Sternbild · %s
+En parlak yıldızı: %s	Hellster Stern: %s
+Gökyüzü	Sternenhimmel
+Andromeda	Andromeda
+Kova	Wassermann
+Kartal	Adler
+Koç	Widder
+Arabacı	Fuhrmann
+Çoban	Bärenhüter
+Yengeç	Krebs
+Büyükköpek	Großer Hund
+Küçükköpek	Kleiner Hund
+Oğlak	Steinbock
+Kraliçe	Kassiopeia
+Kral	Kepheus
+Kuğu	Schwan
+Ejderha	Drache
+İkizler	Zwillinge
+Herkül	Herkules
+Aslan	Löwe
+Terazi	Waage
+Çalgı	Leier
+Yılancı	Schlangenträger
+Avcı	Orion
+Kanatlı At	Pegasus
+Kahraman	Perseus
+Balıklar	Fische
+Yay	Schütze
+Akrep	Skorpion
+Boğa	Stier
+Büyükayı	Großer Bär
+Küçükayı	Kleiner Bär
+Başak	Jungfrau
+Sirius	Sirius
+Süheyl	Canopus
+Arktürüs	Arktur
+Vega	Wega
+Kapella	Kapella
+Rigel	Rigel
+Prokyon	Prokyon
+Betelgöz	Beteigeuze
+Altair	Atair
+Aldebaran	Aldebaran
+Antares	Antares
+Spika	Spica
+Polluks	Pollux
+Fomalhaut	Fomalhaut
+Deneb	Deneb
+Regulus	Regulus
+Kastor	Kastor
+Kutup Yıldızı	Polarstern
+Algol	Algol
+Mizar	Mizar

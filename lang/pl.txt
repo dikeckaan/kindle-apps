@@ -525,3 +525,86 @@ Haber ve döviz: %d saatte bir	Wiadomości i waluty: co %d godz.
 Hava durumu: %d saatte bir	Pogoda: co %d godz.
 Uykuda ön ışık: kapalı	Podświetlenie w uśpieniu: wyłączone
 Uykuda ön ışık: açık	Podświetlenie w uśpieniu: włączone
+☉ Güneş	☉ Słońce
+☾ Ay	☾ Księżyc
+☿ Merkür	☿ Merkury
+♀ Venüs	♀ Wenus
+♂ Mars	♂ Mars
+♃ Jüpiter	♃ Jowisz
+♄ Satürn	♄ Saturn
+−1 gün	−1 dzień
+−1 sa	−1 godz.
+Şimdi	Teraz
++1 sa	+1 godz.
++1 gün	+1 dzień
+Parlaklık (kadir)	Jasność (wielkość gwiazdowa)
+Ayrıntı için bir yıldıza ya da gezegene dokunun	Dotknij gwiazdy lub planety, aby zobaczyć szczegóły
+Gündüz · Güneş batınca yıldızlar görünür (gün batımı %s)	Dzień · gwiazdy pojawią się po zachodzie słońca (zachód %s)
+Gündüz · Güneş bugün batmıyor	Dzień · Słońce dziś nie zachodzi
+Gece · Güneş bugün doğmuyor	Noc · Słońce dziś nie wschodzi
+Gece · gün batımı %s, gün doğumu %s	Noc · zachód słońca %s, wschód %s
+Ay: %s, %%%d aydınlık · doğuş %s · batış %s	Księżyc: %s, oświetlony w %d%% · wschód %s · zachód %s
+Bu gece görünen gezegenler: %s	Planety widoczne tej nocy: %s
+Bu gece parlak gezegen görünmüyor	Tej nocy brak jasnych planet
+Yükseklik %d° · yön %s (%d°)	Wysokość %d° · kierunek %s (%d°)
+%s · %%%d aydınlık	%s · oświetlony w %d%%
+Yıldız	Gwiazda
+Gezegen · parlaklık %s kadir	Planeta · jasność %s mag
+Doğuş %s · batış %s	Wschód %s · zachód %s
+Uzaklık %s AB (Güneş–Dünya = 1)	Odległość %s j.a. (Słońce–Ziemia = 1)
+Yıldız · %s · %s	Gwiazda · %s · %s
+Yıldız · %s	Gwiazda · %s
+Parlaklık %s kadir	Jasność %s mag
+Takımyıldız · %s	Gwiazdozbiór · %s
+En parlak yıldızı: %s	Najjaśniejsza gwiazda: %s
+Gökyüzü	Mapa nieba
+Andromeda	Andromeda
+Kova	Wodnik
+Kartal	Orzeł
+Koç	Baran
+Arabacı	Woźnica
+Çoban	Wolarz
+Yengeç	Rak
+Büyükköpek	Wielki Pies
+Küçükköpek	Mały Pies
+Oğlak	Koziorożec
+Kraliçe	Kasjopeja
+Kral	Cefeusz
+Kuğu	Łabędź
+Ejderha	Smok
+İkizler	Bliźnięta
+Herkül	Herkules
+Aslan	Lew
+Terazi	Waga
+Çalgı	Lutnia
+Yılancı	Wężownik
+Avcı	Orion
+Kanatlı At	Pegaz
+Kahraman	Perseusz
+Balıklar	Ryby
+Yay	Strzelec
+Akrep	Skorpion
+Boğa	Byk
+Büyükayı	Wielka Niedźwiedzica
+Küçükayı	Mała Niedźwiedzica
+Başak	Panna
+Sirius	Syriusz
+Süheyl	Kanopus
+Arktürüs	Arktur
+Vega	Wega
+Kapella	Kapella
+Rigel	Rigel
+Prokyon	Procjon
+Betelgöz	Betelgeza
+Altair	Altair
+Aldebaran	Aldebaran
+Antares	Antares
+Spika	Spika
+Polluks	Polluks
+Fomalhaut	Fomalhaut
+Deneb	Deneb
+Regulus	Regulus
+Kastor	Kastor
+Kutup Yıldızı	Gwiazda Polarna
+Algol	Algol
+Mizar	Mizar

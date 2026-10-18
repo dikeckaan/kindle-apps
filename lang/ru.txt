@@ -525,3 +525,86 @@ Haber ve döviz: %d saatte bir	Новости и валюты: раз в %d ч
 Hava durumu: %d saatte bir	Погода: раз в %d ч
 Uykuda ön ışık: kapalı	Подсветка во сне: выкл.
 Uykuda ön ışık: açık	Подсветка во сне: вкл.
+☉ Güneş	☉ Солнце
+☾ Ay	☾ Луна
+☿ Merkür	☿ Меркурий
+♀ Venüs	♀ Венера
+♂ Mars	♂ Марс
+♃ Jüpiter	♃ Юпитер
+♄ Satürn	♄ Сатурн
+−1 gün	−1 день
+−1 sa	−1 ч
+Şimdi	Сейчас
++1 sa	+1 ч
++1 gün	+1 день
+Parlaklık (kadir)	Блеск (звёздная величина)
+Ayrıntı için bir yıldıza ya da gezegene dokunun	Коснитесь звезды или планеты, чтобы узнать подробности
+Gündüz · Güneş batınca yıldızlar görünür (gün batımı %s)	День · звёзды появятся после заката (закат %s)
+Gündüz · Güneş bugün batmıyor	День · Солнце сегодня не заходит
+Gece · Güneş bugün doğmuyor	Ночь · Солнце сегодня не восходит
+Gece · gün batımı %s, gün doğumu %s	Ночь · закат %s, восход %s
+Ay: %s, %%%d aydınlık · doğuş %s · batış %s	Луна: %s, освещено %d%% · восход %s · заход %s
+Bu gece görünen gezegenler: %s	Планеты, видимые этой ночью: %s
+Bu gece parlak gezegen görünmüyor	Этой ночью ярких планет не видно
+Yükseklik %d° · yön %s (%d°)	Высота %d° · направление %s (%d°)
+%s · %%%d aydınlık	%s · освещено %d%%
+Yıldız	Звезда
+Gezegen · parlaklık %s kadir	Планета · блеск %s зв. вел.
+Doğuş %s · batış %s	Восход %s · заход %s
+Uzaklık %s AB (Güneş–Dünya = 1)	Расстояние %s а. е. (Солнце–Земля = 1)
+Yıldız · %s · %s	Звезда · %s · %s
+Yıldız · %s	Звезда · %s
+Parlaklık %s kadir	Блеск %s зв. вел.
+Takımyıldız · %s	Созвездие · %s
+En parlak yıldızı: %s	Ярчайшая звезда: %s
+Gökyüzü	Звёздное небо
+Andromeda	Андромеда
+Kova	Водолей
+Kartal	Орёл
+Koç	Овен
+Arabacı	Возничий
+Çoban	Волопас
+Yengeç	Рак
+Büyükköpek	Большой Пёс
+Küçükköpek	Малый Пёс
+Oğlak	Козерог
+Kraliçe	Кассиопея
+Kral	Цефей
+Kuğu	Лебедь
+Ejderha	Дракон
+İkizler	Близнецы
+Herkül	Геркулес
+Aslan	Лев
+Terazi	Весы
+Çalgı	Лира
+Yılancı	Змееносец
+Avcı	Орион
+Kanatlı At	Пегас
+Kahraman	Персей
+Balıklar	Рыбы
+Yay	Стрелец
+Akrep	Скорпион
+Boğa	Телец
+Büyükayı	Большая Медведица
+Küçükayı	Малая Медведица
+Başak	Дева
+Sirius	Сириус
+Süheyl	Канопус
+Arktürüs	Арктур
+Vega	Вега
+Kapella	Капелла
+Rigel	Ригель
+Prokyon	Процион
+Betelgöz	Бетельгейзе
+Altair	Альтаир
+Aldebaran	Альдебаран
+Antares	Антарес
+Spika	Спика
+Polluks	Поллукс
+Fomalhaut	Фомальгаут
+Deneb	Денеб
+Regulus	Регул
+Kastor	Кастор
+Kutup Yıldızı	Полярная звезда
+Algol	Алголь
+Mizar	Мицар

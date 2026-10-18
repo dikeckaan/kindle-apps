@@ -525,3 +525,86 @@ Haber ve döviz: %d saatte bir	Hírek és árfolyam: %d óránként
 Hava durumu: %d saatte bir	Időjárás: %d óránként
 Uykuda ön ışık: kapalı	Előtérfény alvás közben: ki
 Uykuda ön ışık: açık	Előtérfény alvás közben: be
+☉ Güneş	☉ Nap
+☾ Ay	☾ Hold
+☿ Merkür	☿ Merkúr
+♀ Venüs	♀ Vénusz
+♂ Mars	♂ Mars
+♃ Jüpiter	♃ Jupiter
+♄ Satürn	♄ Szaturnusz
+−1 gün	−1 nap
+−1 sa	−1 óra
+Şimdi	Most
++1 sa	+1 óra
++1 gün	+1 nap
+Parlaklık (kadir)	Fényesség (magnitúdó)
+Ayrıntı için bir yıldıza ya da gezegene dokunun	Koppintson egy csillagra vagy bolygóra a részletekért
+Gündüz · Güneş batınca yıldızlar görünür (gün batımı %s)	Nappal · a csillagok napnyugta után látszanak (napnyugta %s)
+Gündüz · Güneş bugün batmıyor	Nappal · a Nap ma nem nyugszik le
+Gece · Güneş bugün doğmuyor	Éjszaka · a Nap ma nem kel fel
+Gece · gün batımı %s, gün doğumu %s	Éjszaka · napnyugta %s, napkelte %s
+Ay: %s, %%%d aydınlık · doğuş %s · batış %s	Hold: %s, %d%%-ban megvilágított · kel %s · nyugszik %s
+Bu gece görünen gezegenler: %s	Ma éjjel látható bolygók: %s
+Bu gece parlak gezegen görünmüyor	Ma éjjel nem látható fényes bolygó
+Yükseklik %d° · yön %s (%d°)	Magasság %d° · irány %s (%d°)
+%s · %%%d aydınlık	%s · %d%%-ban megvilágított
+Yıldız	Csillag
+Gezegen · parlaklık %s kadir	Bolygó · fényesség %s magnitúdó
+Doğuş %s · batış %s	Kel %s · nyugszik %s
+Uzaklık %s AB (Güneş–Dünya = 1)	Távolság %s CSE (Nap–Föld = 1)
+Yıldız · %s · %s	Csillag · %s · %s
+Yıldız · %s	Csillag · %s
+Parlaklık %s kadir	Fényesség %s magnitúdó
+Takımyıldız · %s	Csillagkép · %s
+En parlak yıldızı: %s	Legfényesebb csillaga: %s
+Gökyüzü	Csillagos ég
+Andromeda	Androméda
+Kova	Vízöntő
+Kartal	Sas
+Koç	Kos
+Arabacı	Szekeres
+Çoban	Ökörhajcsár
+Yengeç	Rák
+Büyükköpek	Nagy Kutya
+Küçükköpek	Kis Kutya
+Oğlak	Bak
+Kraliçe	Kassziopeia
+Kral	Cepheus
+Kuğu	Hattyú
+Ejderha	Sárkány
+İkizler	Ikrek
+Herkül	Herkules
+Aslan	Oroszlán
+Terazi	Mérleg
+Çalgı	Lant
+Yılancı	Kígyótartó
+Avcı	Orion
+Kanatlı At	Pegazus
+Kahraman	Perseus
+Balıklar	Halak
+Yay	Nyilas
+Akrep	Skorpió
+Boğa	Bika
+Büyükayı	Nagy Medve
+Küçükayı	Kis Medve
+Başak	Szűz
+Sirius	Szíriusz
+Süheyl	Canopus
+Arktürüs	Arcturus
+Vega	Vega
+Kapella	Capella
+Rigel	Rigel
+Prokyon	Procyon
+Betelgöz	Betelgeuze
+Altair	Altair
+Aldebaran	Aldebaran
+Antares	Antares
+Spika	Spica
+Polluks	Pollux
+Fomalhaut	Fomalhaut
+Deneb	Deneb
+Regulus	Regulus
+Kastor	Castor
+Kutup Yıldızı	Sarkcsillag
+Algol	Algol
+Mizar	Mizar
