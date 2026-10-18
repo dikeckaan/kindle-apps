@@ -1,4 +1,6 @@
 #include <stdlib.h>
+#include <sys/stat.h>
+#include <unistd.h>
 #include <time.h>
 #include "net/net.h"
 #include "t.h"
@@ -82,6 +84,76 @@ static void test_urlencode(void)
 	T_EQ_STR(out, "%C5%9F");
 }
 
+#define DL "build/host/dl_book.azw3"
+#define DL_PART "build/host/dl_book.azw3.part"
+
+static int exists(const char *p)
+{
+	struct stat st;
+	return stat(p, &st) == 0;
+}
+
+static void read_args(char *args, int cap)
+{
+	FILE *f = fopen(ARGS, "r");
+	size_t n = f ? fread(args, 1, (size_t) cap - 1, f) : 0;
+	if (f) fclose(f);
+	args[n] = '\0';
+}
+
+static void test_download_renames_on_success(void)
+{
+	use_fake("ok");
+	unlink(DL);
+	unlink(DL_PART);
+	T_EQ_INT(net_download("https://www.gutenberg.org/ebooks/46.kf8.images", DL, 1000, 30), 0);
+	T_ASSERT(!exists(DL_PART));
+	char buf[64] = "";
+	FILE *f = fopen(DL, "r");
+	size_t n = f ? fread(buf, 1, sizeof buf - 1, f) : 0;
+	if (f) fclose(f);
+	buf[n] = '\0';
+	T_EQ_STR(buf, "hello body");
+	char args[2048];
+	read_args(args, sizeof args);
+	T_ASSERT(strstr(args, "\n-o\n" DL_PART "\n") != NULL);
+	T_ASSERT(strstr(args, "--max-filesize\n1000\n") != NULL);
+	T_ASSERT(strstr(args, "--max-time\n30\n") != NULL);
+	T_ASSERT(strstr(args, "\nhttps://www.gutenberg.org/ebooks/46.kf8.images\n") != NULL);
+	unlink(DL);
+}
+
+static void test_download_failure_leaves_nothing(void)
+{
+	use_fake("fail");
+	unlink(DL);
+	T_EQ_INT(net_download("https://example.com/missing", DL, 1000, 30), -1);
+	T_ASSERT(!exists(DL_PART));
+	T_ASSERT(!exists(DL));
+	use_fake("empty"); /* an empty body is not a book */
+	T_EQ_INT(net_download("https://example.com/empty", DL, 1000, 30), -1);
+	T_ASSERT(!exists(DL_PART));
+	T_ASSERT(!exists(DL));
+	use_fake("ok"); /* larger than allowed even if curl let it through */
+	T_EQ_INT(net_download("https://example.com/a", DL, 5, 30), -1);
+	T_ASSERT(!exists(DL_PART));
+	T_ASSERT(!exists(DL));
+	setenv("NET_CURL", "/nonexistent/curl", 1);
+	T_EQ_INT(net_download("https://example.com/a", DL, 1000, 30), -1);
+	T_ASSERT(!exists(DL));
+}
+
+static void test_download_timeout(void)
+{
+	use_fake("hang");
+	unlink(DL);
+	time_t t0 = time(NULL);
+	T_EQ_INT(net_download("https://example.com/slow", DL, 1000, 1), -1);
+	T_ASSERT(time(NULL) - t0 <= 4);
+	T_ASSERT(!exists(DL_PART));
+	T_ASSERT(!exists(DL));
+}
+
 int main(void)
 {
 	T_RUN(test_get_returns_body);
@@ -90,5 +162,8 @@ int main(void)
 	T_RUN(test_get_too_big);
 	T_RUN(test_get_missing_curl);
 	T_RUN(test_urlencode);
+	T_RUN(test_download_renames_on_success);
+	T_RUN(test_download_failure_leaves_nothing);
+	T_RUN(test_download_timeout);
 	return T_DONE();
 }

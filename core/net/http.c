@@ -7,6 +7,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <sys/stat.h>
 #include <sys/wait.h>
 #include <time.h>
 #include <unistd.h>
@@ -19,12 +20,17 @@ static long now_ms(void)
 	return ts.tv_sec * 1000L + ts.tv_nsec / 1000000L;
 }
 
+static const char *curl_path(void)
+{
+	const char *curl = getenv("NET_CURL");
+	return curl && *curl ? curl : "/usr/bin/curl";
+}
+
 int net_get(const char *url, char **body, int *len, int timeout_s)
 {
 	*body = NULL;
 	*len = 0;
-	const char *curl = getenv("NET_CURL");
-	if (!curl || !*curl) curl = "/usr/bin/curl";
+	const char *curl = curl_path();
 	char tmax[16];
 	snprintf(tmax, sizeof tmax, "%d", timeout_s);
 	int fds[2];
@@ -86,6 +92,70 @@ int net_get(const char *url, char **body, int *len, int timeout_s)
 	buf[n] = '\0';
 	*body = buf;
 	*len = n;
+	return 0;
+}
+
+int net_download(const char *url, const char *path, long max_bytes, int timeout_s)
+{
+	const char *curl = curl_path();
+	char tmax[16], fmax[24], part[1024];
+	snprintf(tmax, sizeof tmax, "%d", timeout_s);
+	snprintf(fmax, sizeof fmax, "%ld", max_bytes);
+	if (snprintf(part, sizeof part, "%s.part", path) >= (int) sizeof part) return -1;
+	pid_t pid = fork();
+	if (pid < 0) return -1;
+	if (pid == 0) {
+		int dn = open("/dev/null", O_RDWR);
+		if (dn >= 0) {
+			dup2(dn, 0);
+			dup2(dn, 1);
+			dup2(dn, 2);
+		}
+		execl(curl, curl, "-fsSL", "--max-time", tmax, "--max-filesize", fmax, "--connect-timeout", "10", "--proto",
+		      "=http,https", "--proto-redir", "=http,https", "-A", "Mozilla/5.0 (Kindle; kindle-apps)", "-o", part, url,
+		      (char *) NULL);
+		_exit(127);
+	}
+	/* curl's own --max-time normally ends it; the deadline is the backstop for a stuck child */
+	long deadline = now_ms() + (timeout_s + 2) * 1000L;
+	int status = 0, done = 0;
+	for (;;) {
+		pid_t r = waitpid(pid, &status, WNOHANG);
+		if (r == pid) { done = 1; break; }
+		if (r < 0 && errno != EINTR) break;
+		if (now_ms() >= deadline) break;
+		struct timespec ts = { 0, 50 * 1000000L };
+		nanosleep(&ts, NULL);
+	}
+	if (!done) {
+		kill(pid, SIGKILL);
+		while (waitpid(pid, &status, 0) < 0 && errno == EINTR) {}
+	}
+	struct stat st;
+	int ok = done && WIFEXITED(status) && WEXITSTATUS(status) == 0 && stat(part, &st) == 0 && S_ISREG(st.st_mode) &&
+		 st.st_size > 0 && (long long) st.st_size <= (long long) max_bytes;
+	if (ok) {
+		int fd = open(part, O_RDONLY);
+		ok = fd >= 0 && fsync(fd) == 0;
+		if (fd >= 0) close(fd);
+	}
+	if (ok && rename(part, path) != 0) ok = 0;
+	if (!ok) {
+		unlink(part);
+		return -1;
+	}
+	/* make the rename durable too (best effort) */
+	char dir[1024];
+	snprintf(dir, sizeof dir, "%s", path);
+	char *slash = strrchr(dir, '/');
+	if (slash) {
+		slash[slash == dir ? 1 : 0] = '\0';
+		int dfd = open(dir, O_RDONLY);
+		if (dfd >= 0) {
+			fsync(dfd);
+			close(dfd);
+		}
+	}
 	return 0;
 }
 
