@@ -62,3 +62,33 @@ clean:
 	rm -rf build dist
 
 .PHONY: test cross build clean
+
+# ---- packaging: stage each package under build/pkg/<id>, then tar it into dist/ ----
+
+dist:
+	@for b in hub game2048; do [ -x $(OUT)/$$b ] || { echo "missing $(OUT)/$$b: run make build first"; exit 1; }; done
+	rm -rf build/pkg dist
+	mkdir -p build/pkg/core/files/bin build/pkg/core/files/fonts build/pkg/2048/files
+	cp core/pkg/manifest.json core/pkg/install.sh core/pkg/uninstall.sh core/pkg/launch.sh build/pkg/core/
+	cp -R core/pkg/scriptlets build/pkg/core/
+	cp core/kui-run.sh $(OUT)/hub build/pkg/core/files/bin/
+	cp third_party/fonts/DejaVuSans.ttf third_party/fonts/DejaVuSans-Bold.ttf third_party/fonts/DejaVu-LICENSE build/pkg/core/files/fonts/
+	cp apps/game2048/pkg/* build/pkg/2048/
+	cp $(OUT)/game2048 build/pkg/2048/files/
+	./tools/pack.sh build/pkg/core dist
+	./tools/pack.sh build/pkg/2048 dist
+	./tools/gen-manifest.sh dist
+	./tests/pkg/test_pack.sh
+
+KINDLE ?= 192.168.2.90
+PORT   ?= 22
+SSH    := sshpass -p '' ssh -o PubkeyAuthentication=no -p $(PORT) root@$(KINDLE)
+
+# Installs dist packages the way kpm does: unpack into a staging dir and run install.sh there (core first).
+deploy:
+	@for id in kindle-apps-core kindle-apps-2048; do \
+		k=$$(ls dist/packages/$$id/*.kpkg | tail -1); echo "deploy $$k"; \
+		cat $$k | $(SSH) "S=/mnt/us/kindle-apps-staging/$$id; rm -rf \$$S; mkdir -p \$$S && cd \$$S && tar xzf - && sh ./install.sh && cd / && rm -rf \$$S && echo installed $$id" || exit 1; \
+	done
+
+.PHONY: dist deploy

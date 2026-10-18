@@ -8,7 +8,7 @@ void kui_topbar(const char *title, const char *right_label)
 	kui_fill(bar, 255);
 	kui_fill((KuiRect){ 0, KUI_TOPBAR_H - 4, w, 4 }, 0);
 	kui_text(kui_topbar_exit_rect(), "✕", KUI_FONT_BOLD, 64, KUI_ALIGN_CENTER, 0);
-	kui_text((KuiRect){ KUI_TOPBAR_H, 0, w - 2 * 200, KUI_TOPBAR_H - 4 }, title, KUI_FONT_BOLD, 52, KUI_ALIGN_CENTER, 0);
+	kui_text((KuiRect){ 200, 0, w - 2 * 200, KUI_TOPBAR_H - 4 }, title, KUI_FONT_BOLD, 52, KUI_ALIGN_CENTER, 0);
 	if (right_label) {
 		KuiRect m = kui_topbar_menu_rect(w);
 		kui_text((KuiRect){ m.x, m.y, m.w - 24, m.h - 4 }, right_label, KUI_FONT_REG, 44, KUI_ALIGN_RIGHT, 0);
