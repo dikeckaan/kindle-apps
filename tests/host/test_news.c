@@ -16,7 +16,9 @@ static char *slurp(const char *path, int *len)
 static void test_aa(void)
 {
 	NewsItem it[NEWS_MAX];
-	int len, n = news_parse_rss(slurp("tests/host/fixtures/aa.xml", &len), len, it, NEWS_MAX);
+	int len;
+	const char *xml = slurp("tests/host/fixtures/aa.xml", &len); /* len is set by slurp: read it afterwards */
+	int n = news_parse_rss(xml, len, it, NEWS_MAX);
 	T_EQ_INT(n, 30);
 	T_EQ_STR(it[0].title, "Türk Yıldızları, Kayseri'de gösteri uçuşu yaptı");
 	T_EQ_STR(it[0].link, "https://www.aa.com.tr/tr/gundem/turk-yildizlari-kayseride-gosteri-ucusu-yapti/4092689");
@@ -28,7 +30,9 @@ static void test_aa(void)
 static void test_trt_content_without_images(void)
 {
 	NewsItem it[NEWS_MAX];
-	int len, n = news_parse_rss(slurp("tests/host/fixtures/trt.xml", &len), len, it, NEWS_MAX);
+	int len;
+	const char *xml = slurp("tests/host/fixtures/trt.xml", &len);
+	int n = news_parse_rss(xml, len, it, NEWS_MAX);
 	T_EQ_INT(n, 4);
 	T_EQ_STR(it[0].title, "Cumhurbaşkanı Erdoğan'dan Nuri Pakdil için anma mesajı");
 	T_ASSERT(strstr(it[0].text, "<") == NULL);
