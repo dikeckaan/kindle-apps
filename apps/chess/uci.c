@@ -71,7 +71,9 @@ int uci_start(Uci *u, const char *path)
 	memset(u, 0, sizeof *u);
 	u->pid = -1;
 	signal(SIGPIPE, SIG_IGN); /* writing to a dead engine must fail, not kill us */
-	if (access(path, X_OK) != 0 || pipe(in) < 0) return -1;
+	/* no access(X_OK) pre-check: Kindle's /mnt/us (fuse) reports EACCES although exec works;
+	 * a missing/unrunnable engine is detected when the child exits before "uciok". */
+	if (pipe(in) < 0) return -1;
 	if (pipe(out) < 0) {
 		close(in[0]);
 		close(in[1]);

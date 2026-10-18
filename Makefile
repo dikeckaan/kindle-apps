@@ -47,7 +47,8 @@ $(FBINK_A):
 	$(MAKE) -C third_party/FBInk staticlib KINDLE=1 CROSS_TC=$(CROSS_TC)
 
 # APPS: each entry <name> builds $(OUT)/<name> from APP_<name>_SRCS + kui + FBInk
-APPS := hub game2048
+APPS := hub game2048 chess
+APP_chess_SRCS := apps/chess/main.c apps/chess/chess_game.c apps/chess/chess_rules.c apps/chess/levels.c apps/chess/uci.c
 APP_hub_SRCS := core/hub/main.c core/hub/appreg.c
 APP_game2048_SRCS := apps/game2048/main.c apps/game2048/g2048.c
 
@@ -56,7 +57,10 @@ $(OUT)/%: $$(APP_$$*_SRCS) $(FBINK_A) $(KUI_SRCS) $(wildcard core/kui/*.h)
 	$(CROSS_CC) $(CROSS_CFLAGS) -o $@ $(APP_$*_SRCS) $(KUI_SRCS) $(FBINK_A) -lm
 	$(CROSS_TC)-strip $@
 
-cross: $(FBINK_A) $(addprefix $(OUT)/,$(APPS))
+cross: $(FBINK_A) $(addprefix $(OUT)/,$(APPS)) $(OUT)/stockfish
+
+$(OUT)/stockfish: tools/build-stockfish.sh
+	./tools/build-stockfish.sh
 
 build:
 	[ -d third_party/FBInk ] || ./tools/fetch-deps.sh
