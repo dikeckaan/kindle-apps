@@ -112,6 +112,7 @@ void kui_mark_dirty(KuiRect r);
 void kui_flush(int screen_changed); /* the only place that refreshes the panel */
 void kui_set_refresh_every(int n);
 KuiEvent kui_next_event(int timeout_ms); /* KUI_EV_NONE on timeout */
+int  kui_input_asleep(void); /* 1 while the screensaver is up: do not draw (KUI_EV_WAKE follows) */
 void kui_topbar(const char *title, const char *right_label); /* right_label may be NULL */
 int  kui_fit_px(const char *text, KuiFont f, int px, int max_w); /* largest size <= px whose single line fits max_w */
 void kui_button(const KuiButton *b, int pressed);

@@ -170,7 +170,10 @@ int main(void)
 	for (;;) {
 		KuiEvent e = kui_next_event(ms_to_next_minute());
 		if (e.type == KUI_EV_QUIT) break;
-		if (e.type == KUI_EV_NONE) { tick(); continue; }
+		if (e.type == KUI_EV_NONE) {
+			if (!kui_input_asleep()) tick(); /* nothing is drawn or fetched behind the screensaver */
+			continue;
+		}
 		if (e.type == KUI_EV_WAKE) { full_redraw(); continue; }
 		if (e.type == KUI_EV_TAP && kui_rect_contains(kui_topbar_exit_rect(), e.x, e.y)) break;
 	}

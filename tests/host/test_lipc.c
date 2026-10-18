@@ -14,6 +14,7 @@ static void setup(int prevent)
 	setenv("KUI_LIPC_DIR", "build/host/lipcbin", 1);
 	setenv("FAKE_LIPC_DB", DB, 1);
 	setenv("KUI_STATE_DIR", STATE, 1);
+	setenv("KUI_BOOT_ID", "boot-a", 1);
 	FILE *f = fopen(DB "/com.lab126.powerd.preventScreenSaver", "w");
 	fprintf(f, "%d\n", prevent);
 	fclose(f);
@@ -63,8 +64,47 @@ static void test_release_without_prevent_is_a_no_op(void)
 	T_EQ_INT(kui_lipc_get_int("com.lab126.powerd", "preventScreenSaver", -1), 1);
 }
 
+static int prevent(void) { return kui_lipc_get_int("com.lab126.powerd", "preventScreenSaver", -1); }
+
+static void test_file_from_an_earlier_boot_is_ignored(void)
+{
+	setup(0);
+	kui_prevent_sleep(1);               /* clock running when the battery died: file says 0 */
+	setenv("KUI_BOOT_ID", "boot-b", 1); /* next boot */
+	kui_lipc_set_int("com.lab126.powerd", "preventScreenSaver", 1); /* user picks "Hiç uyuma" */
+	kui_prevent_sleep(0);               /* hub cleanup after the sleep app */
+	T_EQ_INT(prevent(), 1);
+	T_ASSERT(access(STATE "/prevent_ss.restore", F_OK) != 0); /* stale file removed */
+	kui_prevent_sleep(1);               /* a new clock session saves the current value, not the stale one */
+	kui_prevent_sleep(0);
+	T_EQ_INT(prevent(), 1);
+}
+
+static void test_unwritable_state_dir_does_not_keep_awake(void)
+{
+	setup(0);
+	setenv("KUI_STATE_DIR", "/nonexistent/dir/state", 1);
+	kui_prevent_sleep(1);
+	T_EQ_INT(prevent(), 0); /* could not save a way back: do not change anything */
+	kui_prevent_sleep(0);
+	T_EQ_INT(prevent(), 0);
+}
+
+static void test_failed_read_changes_nothing(void)
+{
+	setup(1);
+	unlink(DB "/com.lab126.powerd.preventScreenSaver"); /* lipc-get-prop fails */
+	kui_prevent_sleep(1);
+	T_ASSERT(access(STATE "/prevent_ss.restore", F_OK) != 0);
+	kui_prevent_sleep(0);
+	T_EQ_INT(prevent(), -1); /* never written */
+}
+
 int main(void)
 {
+	T_RUN(test_file_from_an_earlier_boot_is_ignored);
+	T_RUN(test_unwritable_state_dir_does_not_keep_awake);
+	T_RUN(test_failed_read_changes_nothing);
 	T_RUN(test_release_without_prevent_is_a_no_op);
 	T_RUN(test_get_set);
 	T_RUN(test_prevent_sleep_restores_previous_value);

@@ -40,9 +40,13 @@ restore() {
     RESTORED=1
     killall -CONT volumd 2>/dev/null
     # an app kept the Kindle awake (kui_prevent_sleep) and did not undo it: put the saved value back
+    # (only a file from this boot: "<0|1> <boot_id>")
     R=/var/local/kindle-apps/prevent_ss.restore
     if [ -f "$R" ]; then
-        case "$(head -c 1 "$R")" in 0|1) lipc-set-prop com.lab126.powerd preventScreenSaver "$(head -c 1 "$R")" 2>/dev/null ;; esac
+        read -r v id < "$R"
+        if [ "$id" = "$(cat /proc/sys/kernel/random/boot_id 2>/dev/null)" ]; then
+            case "$v" in 0|1) lipc-set-prop com.lab126.powerd preventScreenSaver "$v" 2>/dev/null ;; esac
+        fi
         rm -f "$R"
     fi
     # The normal Kindle UI always runs the status bar: bring it back even if something else had
