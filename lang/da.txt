@@ -379,3 +379,32 @@ Denetleniyor…	Kontrollerer…
 Depoya ulaşılamadı.\nWi-Fi bağlantısını kontrol edin.	Kunne ikke nå pakkearkivet.\nTjek wifi-forbindelsen.
 Tüm uygulamalar güncel	Alle apps er opdaterede
 Bazı güncellemeler kurulamadı	Nogle opdateringer kunne ikke installeres
+az önce	lige nu
+%d dk önce	for %d min. siden
+%d sa önce	for %d t. siden
+%d gün önce	for %d dage siden
+24 saat	24 timer
+7 gün	7 dage
+Kaynak: EMSC	Kilde: EMSC
+Kaynak: Boğaziçi Üni. Kandilli Rasathanesi (KRDAE)	Kilde: Boğaziçi Üni. Kandilli Rasathanesi (KRDAE)
+Çevrimdışı — son veri %s · %s	Offline — seneste data %s · %s
+Güncellendi %s · %s	Opdateret %s · %s
+derinlik %s km	dybde %s km
+Bu süzgeçle deprem yok.	Ingen jordskælv med dette filter.
+Deprem listesi alınamadı.\nWi-Fi bağlantısını kontrol edip Yenile'ye basın.	Kunne ikke hente listen over jordskælv.\nTjek wi-fi og tryk på Opdater.
+son 24 saat	seneste 24 timer
+daha eski	ældre
+%d deprem	%d jordskælv
+En büyükler	Største
+Sayfa %d/%d	Side %d/%d
+Son Depremler	Seneste jordskælv
+Liste	Liste
+Harita	Kort
+Deprem	Jordskælv
+Türkiye saati	Tyrkisk tid
+Derinlik	Dybde
+%s° K, %s° D	%s° N, %s° Ø
+Koordinatlar	Koordinater
+%d km (%s)	%d km (%s)
+Uzaklık	Afstand
+Kaynak	Kilde

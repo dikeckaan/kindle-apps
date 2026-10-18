@@ -379,3 +379,32 @@ Denetleniyor…	A verificar…
 Depoya ulaşılamadı.\nWi-Fi bağlantısını kontrol edin.	Não foi possível aceder ao repositório.\nVerifique a ligação Wi-Fi.
 Tüm uygulamalar güncel	Todas as apps estão atualizadas
 Bazı güncellemeler kurulamadı	Algumas atualizações não foram instaladas
+az önce	agora mesmo
+%d dk önce	há %d min
+%d sa önce	há %d h
+%d gün önce	há %d dias
+24 saat	24 horas
+7 gün	7 dias
+Kaynak: EMSC	Fonte: EMSC
+Kaynak: Boğaziçi Üni. Kandilli Rasathanesi (KRDAE)	Fonte: Boğaziçi Üni. Kandilli Rasathanesi (KRDAE)
+Çevrimdışı — son veri %s · %s	Offline — últimos dados %s · %s
+Güncellendi %s · %s	Atualizado %s · %s
+derinlik %s km	profundidade %s km
+Bu süzgeçle deprem yok.	Nenhum sismo com este filtro.
+Deprem listesi alınamadı.\nWi-Fi bağlantısını kontrol edip Yenile'ye basın.	Não foi possível obter a lista de sismos.\nVerifique o Wi-Fi e toque em Atualizar.
+son 24 saat	últimas 24 horas
+daha eski	mais antigos
+%d deprem	%d sismos
+En büyükler	Os mais fortes
+Sayfa %d/%d	Página %d/%d
+Son Depremler	Sismos recentes
+Liste	Lista
+Harita	Mapa
+Deprem	Sismo
+Türkiye saati	Hora da Turquia
+Derinlik	Profundidade
+%s° K, %s° D	%s° N, %s° E
+Koordinatlar	Coordenadas
+%d km (%s)	%d km (%s)
+Uzaklık	Distância
+Kaynak	Fonte

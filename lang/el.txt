@@ -379,3 +379,32 @@ Denetleniyor…	Έλεγχος…
 Depoya ulaşılamadı.\nWi-Fi bağlantısını kontrol edin.	Το αποθετήριο δεν είναι προσβάσιμο.\nΕλέγξτε τη σύνδεση Wi-Fi.
 Tüm uygulamalar güncel	Όλες οι εφαρμογές είναι ενημερωμένες
 Bazı güncellemeler kurulamadı	Ορισμένες ενημερώσεις δεν εγκαταστάθηκαν
+az önce	μόλις τώρα
+%d dk önce	πριν από %d λεπ.
+%d sa önce	πριν από %d ώρ.
+%d gün önce	πριν από %d ημέρες
+24 saat	24 ώρες
+7 gün	7 ημέρες
+Kaynak: EMSC	Πηγή: EMSC
+Kaynak: Boğaziçi Üni. Kandilli Rasathanesi (KRDAE)	Πηγή: Boğaziçi Üni. Kandilli Rasathanesi (KRDAE)
+Çevrimdışı — son veri %s · %s	Εκτός σύνδεσης — τελευταία δεδομένα %s · %s
+Güncellendi %s · %s	Ενημερώθηκε %s · %s
+derinlik %s km	βάθος %s km
+Bu süzgeçle deprem yok.	Δεν υπάρχουν σεισμοί με αυτό το φίλτρο.
+Deprem listesi alınamadı.\nWi-Fi bağlantısını kontrol edip Yenile'ye basın.	Δεν ήταν δυνατή η λήψη της λίστας σεισμών.\nΕλέγξτε το Wi-Fi και πατήστε Ανανέωση.
+son 24 saat	τελευταίες 24 ώρες
+daha eski	παλαιότεροι
+%d deprem	%d σεισμοί
+En büyükler	Οι ισχυρότεροι
+Sayfa %d/%d	Σελίδα %d/%d
+Son Depremler	Πρόσφατοι σεισμοί
+Liste	Λίστα
+Harita	Χάρτης
+Deprem	Σεισμός
+Türkiye saati	Ώρα Τουρκίας
+Derinlik	Βάθος
+%s° K, %s° D	%s° Β, %s° Α
+Koordinatlar	Συντεταγμένες
+%d km (%s)	%d km (%s)
+Uzaklık	Απόσταση
+Kaynak	Πηγή

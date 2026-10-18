@@ -379,3 +379,32 @@ Denetleniyor…	Wird geprüft…
 Depoya ulaşılamadı.\nWi-Fi bağlantısını kontrol edin.	Paketquelle nicht erreichbar.\nWLAN-Verbindung prüfen.
 Tüm uygulamalar güncel	Alle Apps sind aktuell
 Bazı güncellemeler kurulamadı	Einige Updates konnten nicht installiert werden
+az önce	gerade eben
+%d dk önce	vor %d Min.
+%d sa önce	vor %d Std.
+%d gün önce	vor %d Tagen
+24 saat	24 Stunden
+7 gün	7 Tage
+Kaynak: EMSC	Quelle: EMSC
+Kaynak: Boğaziçi Üni. Kandilli Rasathanesi (KRDAE)	Quelle: Boğaziçi Üni. Kandilli Rasathanesi (KRDAE)
+Çevrimdışı — son veri %s · %s	Offline — letzte Daten %s · %s
+Güncellendi %s · %s	Aktualisiert %s · %s
+derinlik %s km	Tiefe %s km
+Bu süzgeçle deprem yok.	Keine Erdbeben mit diesem Filter.
+Deprem listesi alınamadı.\nWi-Fi bağlantısını kontrol edip Yenile'ye basın.	Die Erdbebenliste konnte nicht geladen werden.\nWLAN prüfen und auf Aktualisieren tippen.
+son 24 saat	letzte 24 Stunden
+daha eski	älter
+%d deprem	%d Erdbeben
+En büyükler	Die stärksten
+Sayfa %d/%d	Seite %d/%d
+Son Depremler	Aktuelle Erdbeben
+Liste	Liste
+Harita	Karte
+Deprem	Erdbeben
+Türkiye saati	Türkische Zeit
+Derinlik	Tiefe
+%s° K, %s° D	%s° N, %s° O
+Koordinatlar	Koordinaten
+%d km (%s)	%d km (%s)
+Uzaklık	Entfernung
+Kaynak	Quelle

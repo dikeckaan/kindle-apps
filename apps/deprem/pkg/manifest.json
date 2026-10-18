@@ -1,0 +1,10 @@
+{
+  "manifest_version": 2,
+  "id": "kindle-apps-deprem",
+  "name": "Son Depremler",
+  "author": "Kaan Dikeç",
+  "description": "Türkiye ve yakın çevresindeki son depremler: harita, liste ve ayrıntılar (Kandilli Rasathanesi, EMSC)",
+  "version": [2026, 10, 15],
+  "dependencies": [],
+  "supported_platforms": ["kindlehf"]
+}

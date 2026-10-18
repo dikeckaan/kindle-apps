@@ -379,3 +379,32 @@ Denetleniyor…	Tarkistetaan…
 Depoya ulaşılamadı.\nWi-Fi bağlantısını kontrol edin.	Pakettivarastoon ei saada yhteyttä.\nTarkista Wi-Fi-yhteys.
 Tüm uygulamalar güncel	Kaikki sovellukset ovat ajan tasalla
 Bazı güncellemeler kurulamadı	Joitakin päivityksiä ei voitu asentaa
+az önce	juuri nyt
+%d dk önce	%d min sitten
+%d sa önce	%d t sitten
+%d gün önce	%d päivää sitten
+24 saat	24 tuntia
+7 gün	7 päivää
+Kaynak: EMSC	Lähde: EMSC
+Kaynak: Boğaziçi Üni. Kandilli Rasathanesi (KRDAE)	Lähde: Boğaziçi Üni. Kandilli Rasathanesi (KRDAE)
+Çevrimdışı — son veri %s · %s	Offline — viimeisin tieto %s · %s
+Güncellendi %s · %s	Päivitetty %s · %s
+derinlik %s km	syvyys %s km
+Bu süzgeçle deprem yok.	Ei maanjäristyksiä tällä suodattimella.
+Deprem listesi alınamadı.\nWi-Fi bağlantısını kontrol edip Yenile'ye basın.	Maanjäristysluetteloa ei saatu.\nTarkista Wi-Fi-yhteys ja napauta Päivitä.
+son 24 saat	viimeiset 24 tuntia
+daha eski	vanhemmat
+%d deprem	%d maanjäristystä
+En büyükler	Voimakkaimmat
+Sayfa %d/%d	Sivu %d/%d
+Son Depremler	Viimeisimmät maanjäristykset
+Liste	Luettelo
+Harita	Kartta
+Deprem	Maanjäristys
+Türkiye saati	Turkin aika
+Derinlik	Syvyys
+%s° K, %s° D	%s° N, %s° E
+Koordinatlar	Koordinaatit
+%d km (%s)	%d km (%s)
+Uzaklık	Etäisyys
+Kaynak	Lähde
