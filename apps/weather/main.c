@@ -43,6 +43,11 @@ static int load_cache(void)
 	struct stat st;
 	cache_path(&cities[cur], path, sizeof path);
 	have_wx = kui_read_file(path, buf, sizeof buf) > 0 && wx_parse(buf, &wx) == 0;
+	if (have_wx) { /* a cached forecast: start at the current hour */
+		char iso[17];
+		wx_local_iso(&wx, iso);
+		wx_advance(&wx, iso);
+	}
 	fetched = have_wx && stat(path, &st) == 0 ? (long) st.st_mtime : 0;
 	return have_wx;
 }
@@ -175,7 +180,7 @@ static void draw(int full)
 		/* 12-hour strip */
 		if (wx.n_hours) {
 			int cw = (w - 40) / 12;
-			for (int i = 0; i < wx.n_hours; i++) {
+			for (int i = 0; i < wx.n_hours && i < 12; i++) {
 				int x = 20 + i * cw;
 				snprintf(s, sizeof s, "%.2s", wx.hour[i].hh);
 				kui_text((KuiRect){ x, y + 10, cw, 45 }, s, KUI_FONT_REG, 30, KUI_ALIGN_CENTER, 0);

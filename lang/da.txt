@@ -379,3 +379,5 @@ Denetleniyor…	Kontrollerer…
 Depoya ulaşılamadı.\nWi-Fi bağlantısını kontrol edin.	Kunne ikke nå pakkearkivet.\nTjek wifi-forbindelsen.
 Tüm uygulamalar güncel	Alle apps er opdaterede
 Bazı güncellemeler kurulamadı	Nogle opdateringer kunne ikke installeres
+güncellendi %02d:%02d	opdateret %02d:%02d
+çevrimdışı, son veri %02d:%02d	offline, seneste data %02d:%02d

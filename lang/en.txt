@@ -379,3 +379,5 @@ Denetleniyor…	Checking…
 Depoya ulaşılamadı.\nWi-Fi bağlantısını kontrol edin.	Could not reach the repository.\nCheck the Wi-Fi connection.
 Tüm uygulamalar güncel	All apps are up to date
 Bazı güncellemeler kurulamadı	Some updates could not be installed
+güncellendi %02d:%02d	updated %02d:%02d
+çevrimdışı, son veri %02d:%02d	offline, last data %02d:%02d

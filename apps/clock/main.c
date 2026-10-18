@@ -1,5 +1,7 @@
 /* Masa Saati: big clock, Turkish date and the first saved city's weather. Only the clock digits are
- * refreshed each minute (no flash); the whole screen is refreshed once an hour. Keeps the Kindle awake. */
+ * refreshed each minute (no flash); the whole screen is refreshed once an hour.
+ * Battery saver: after IDLE_S without a touch (or at once with the power button) the Kindle suspends between
+ * minutes; Wi-Fi is on only while the forecast is fetched (every 6 h). On the charger it stays awake. */
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -18,6 +20,9 @@ static Wx wx;
 static int have_wx;
 static long wx_time;
 static int shown_min = -1, shown_hour = -1, shown_mday = -1;
+static int deep; /* in the battery saver's sleep loop */
+
+#define IDLE_S 120
 
 static void now_local(struct tm *tm)
 {
@@ -60,7 +65,14 @@ static int update_weather(void)
 	int len = 0;
 	static Wx fresh;
 	wx_forecast_url(&city, url, sizeof url);
+	int was_on = kui_wifi_enabled() == 1;
+	if (!was_on) { /* the saver keeps Wi-Fi off: on just for this fetch */
+		kui_wifi_enable(1);
+		kui_wifi_wait(45);
+	}
 	int ok = net_get(url, &body, &len, 20) == 0 && wx_parse(body, &fresh) == 0;
+	kui_wifi_enable(0);
+	fprintf(stderr, "weather: %s\n", ok ? "updated" : "failed");
 	if (ok) {
 		cache_path(path, sizeof path);
 		kui_write_atomic(path, body, len);
@@ -88,11 +100,17 @@ static void draw_time(const struct tm *tm)
 
 static void draw_all(const struct tm *tm)
 {
+	if (have_wx) { /* up to 6 h old: "now" is the current hour's forecast */
+		char iso[17];
+		wx_local_iso(&wx, iso);
+		wx_advance(&wx, iso);
+	}
 	int w = kui_width(), h = kui_height();
 	char s[128], a[32], b[32];
 	kui_fill((KuiRect){ 0, 0, w, h }, 255);
 	kui_text(kui_topbar_exit_rect(), "✕", KUI_FONT_BOLD, 64, KUI_ALIGN_CENTER, 0);
 	kui_battery(battery_rect());
+	if (deep) kui_text((KuiRect){ 140, 20, 400, 80 }, T("☾ uykuda"), KUI_FONT_REG, 36, KUI_ALIGN_LEFT, 90);
 	draw_time(tm);
 	kui_tr_date(tm, s, sizeof s);
 	kui_text((KuiRect){ 20, 590, w - 40, 100 }, s, KUI_FONT_REG, kui_fit_px(s, KUI_FONT_REG, 64, w - 60), KUI_ALIGN_CENTER, 0);
@@ -106,6 +124,19 @@ static void draw_all(const struct tm *tm)
 	kui_text((KuiRect){ 330, 750, 380, 170 }, s, KUI_FONT_BOLD, 140, KUI_ALIGN_LEFT, 0);
 	const char *cond = T(wx_code_text(wx.code));
 	kui_text((KuiRect){ 330, 920, w - 360, 70 }, cond, KUI_FONT_REG, kui_fit_px(cond, KUI_FONT_REG, 46, w - 360), KUI_ALIGN_LEFT, 0);
+	if (wx_time) { /* when the forecast was fetched */
+		struct tm ft;
+		time_t t = (time_t) wx_time;
+		localtime_r(&t, &ft);
+		if (ft.tm_gmtoff == 0 && !getenv("TZ") && wx.utc_offset) { /* no zone on the device: the city's */
+			t += wx.utc_offset;
+			gmtime_r(&t, &ft);
+		}
+		char ts[16];
+		snprintf(ts, sizeof ts, "%02d:%02d", ft.tm_hour, ft.tm_min);
+		snprintf(s, sizeof s, T("Güncellendi %s · Open-Meteo"), ts);
+		kui_text((KuiRect){ 60, 1385, w - 120, 50 }, s, KUI_FONT_REG, 28, KUI_ALIGN_CENTER, 90);
+	}
 	kui_text((KuiRect){ 700, 760, w - 740, 70 }, city.name, KUI_FONT_BOLD, kui_fit_px(city.name, KUI_FONT_BOLD, 44, w - 740), KUI_ALIGN_RIGHT, 0);
 	if (wx.n_days) {
 		wx_fmt_temp(wx.day[0].tmax, a, sizeof a);
@@ -126,6 +157,18 @@ static void draw_all(const struct tm *tm)
 		snprintf(s, sizeof s, "%s / %s", a, b);
 		kui_text((KuiRect){ x, 1300, cw, 70 }, s, KUI_FONT_REG, 42, KUI_ALIGN_CENTER, 0);
 	}
+}
+
+/* the same screen without a flash (entering/leaving the saver only changes the header) */
+static void soft_redraw(void)
+{
+	struct tm tm;
+	now_local(&tm);
+	draw_all(&tm);
+	kui_flush(0);
+	shown_min = tm.tm_min;
+	shown_hour = tm.tm_hour;
+	shown_mday = tm.tm_mday;
 }
 
 static void full_redraw(void)
@@ -155,14 +198,36 @@ static void tick(void)
 		kui_flush(0);
 		shown_min = tm.tm_min;
 	}
-	if (tm.tm_min % 30 == 0 && update_weather()) full_redraw();
+	if (tm.tm_min % 30 == 0 && update_weather()) full_redraw(); /* only when 6 h old */
 }
 
-static int ms_to_next_minute(void)
+static int charging(void) { return kui_lipc_get_int("com.lab126.powerd", "isCharging", 0) == 1; }
+
+/* suspend between minutes until a touch, the power button or the charger */
+static void deep_sleep_loop(void)
 {
-	struct timeval tv;
-	gettimeofday(&tv, NULL);
-	return (int) (60000 - (tv.tv_sec % 60) * 1000 - tv.tv_usec / 1000) + 200;
+	fprintf(stderr, "deep: enter (battery %d%%)\n", kui_lipc_get_int("com.lab126.powerd", "battLevel", -1));
+	deep = 1;
+	kui_drain_power_key();
+	if (kui_wifi_enabled() == 1) kui_wifi_enable(0);
+	soft_redraw();
+	kui_wait_refresh();
+	for (;;) {
+		if (kui_quit_pending()) break;
+		struct tm tm;
+		now_local(&tm);
+		if (tm.tm_min == shown_min) {
+			int r = kui_sleep_to_next_minute();
+			if (r != KUI_SLEEP_MINUTE) break;
+		}
+		if (charging()) break; /* plugged in: no need to sleep */
+		tick();
+		kui_wait_refresh();
+	}
+	deep = 0;
+	fprintf(stderr, "deep: leave (battery %d%%)\n", kui_lipc_get_int("com.lab126.powerd", "battLevel", -1));
+	kui_drain_input(700); /* the touch that woke the Kindle must not press anything (e.g. ✕) */
+	soft_redraw();
 }
 
 int main(void)
@@ -170,20 +235,39 @@ int main(void)
 	if (kui_init("clock") != 0) return 1;
 	kui_set_refresh_every(0); /* full refreshes are scheduled hourly by tick() */
 	kui_prevent_sleep(1);
+	int wifi_was = kui_wifi_enabled();
+	fprintf(stderr, "power key grab: %d\n", kui_grab_power_key(1)); /* the power button sleeps/wakes the clock */
 	load_weather();
 	full_redraw();
 	if (update_weather()) full_redraw();
+	kui_wifi_enable(0); /* off until the next forecast */
+	long last_input = (long) time(NULL);
 	for (;;) {
-		KuiEvent e = kui_next_event(ms_to_next_minute());
+		if (kui_quit_pending()) break;
+		if (time(NULL) - last_input >= IDLE_S && !kui_input_asleep() && !charging()) {
+			deep_sleep_loop();
+			last_input = (long) time(NULL);
+			continue;
+		}
+		KuiEvent e = kui_next_event(kui_ms_to_next_minute());
 		if (e.type == KUI_EV_QUIT) break;
 		if (e.type == KUI_EV_NONE) {
 			if (!kui_input_asleep()) tick(); /* nothing is drawn or fetched behind the screensaver */
 			continue;
 		}
 		if (e.type == KUI_EV_WAKE) { full_redraw(); continue; }
+		if (e.type == KUI_EV_POWER) {
+			if (!charging()) deep_sleep_loop();
+			last_input = (long) time(NULL);
+			continue;
+		}
+		last_input = (long) time(NULL);
 		if (e.type == KUI_EV_TAP && kui_rect_contains(kui_topbar_exit_rect(), e.x, e.y)) break;
+		if (!kui_input_asleep()) tick();
 	}
+	kui_grab_power_key(0);
 	kui_prevent_sleep(0);
+	if (wifi_was == 1 && kui_wifi_enabled() == 0) kui_wifi_enable(1); /* leave Wi-Fi as we found it */
 	kui_quit();
 	return 0;
 }

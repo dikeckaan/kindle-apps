@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <time.h>
 #include "vendor/cjson/cJSON.h"
 #include "kui.h"
 #include "net/net.h"
@@ -77,7 +78,8 @@ int wx_parse(const char *json, Wx *w)
 	w->is_day = inum(cur, "is_day");
 	const cJSON *h = cJSON_GetObjectItemCaseSensitive(root, "hourly");
 	int nh = cJSON_GetArraySize(cJSON_GetObjectItemCaseSensitive(h, "time"));
-	for (int i = 0; i < nh && w->n_hours < 12; i++, w->n_hours++) {
+	for (int i = 0; i < nh && w->n_hours < 24; i++, w->n_hours++) {
+		snprintf(w->hour[i].iso, sizeof w->hour[i].iso, "%s", arr_str(h, "time", i));
 		hhmm(arr_str(h, "time", i), w->hour[i].hh);
 		w->hour[i].t = arr_num(h, "temperature_2m", i);
 		w->hour[i].code = arr_int(h, "weather_code", i);
@@ -106,7 +108,7 @@ void wx_forecast_url(const WxCity *c, char *out, int cap)
 		 "&current=temperature_2m,apparent_temperature,relative_humidity_2m,weather_code,wind_speed_10m,wind_direction_10m,is_day"
 		 "&hourly=temperature_2m,weather_code,precipitation_probability"
 		 "&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max,sunrise,sunset"
-		 "&timezone=auto&forecast_days=7&forecast_hours=12",
+		 "&timezone=auto&forecast_days=7&forecast_hours=24",
 		 c->lat, c->lon);
 }
 
@@ -271,4 +273,33 @@ int wx_cities_save(const char *path, const WxCity *c, int n)
 void wx_cache_name(const WxCity *c, char *out, int cap)
 {
 	snprintf(out, (size_t) cap, "c_%.4f_%.4f.json", c->lat, c->lon);
+}
+
+void wx_advance(Wx *w, const char *now_iso)
+{
+	int k = 0;
+	while (k < w->n_hours && w->hour[k].iso[0] && strncmp(w->hour[k].iso, now_iso, 13) < 0) k++; /* by the hour */
+	if (k > 0 && k < w->n_hours) {
+		memmove(&w->hour[0], &w->hour[k], (size_t) (w->n_hours - k) * sizeof w->hour[0]);
+		w->n_hours -= k;
+		w->temp = w->hour[0].t;
+		w->code = w->hour[0].code;
+		w->feels = w->wind = NAN;
+		w->hum = w->wind_dir = -1;
+		snprintf(w->now, sizeof w->now, "%s", w->hour[0].hh);
+	}
+	int d = 0;
+	while (d < w->n_days - 1 && strncmp(w->day[d].date, now_iso, 10) < 0) d++;
+	if (d > 0) {
+		memmove(&w->day[0], &w->day[d], (size_t) (w->n_days - d) * sizeof w->day[0]);
+		w->n_days -= d;
+	}
+}
+
+void wx_local_iso(const Wx *w, char out[17])
+{
+	time_t t = time(NULL) + w->utc_offset;
+	struct tm tm;
+	gmtime_r(&t, &tm);
+	strftime(out, 17, "%Y-%m-%dT%H:%M", &tm);
 }

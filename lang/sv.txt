@@ -379,3 +379,5 @@ Denetleniyor…	Kontrollerar…
 Depoya ulaşılamadı.\nWi-Fi bağlantısını kontrol edin.	Kunde inte nå förrådet.\nKontrollera wifi-anslutningen.
 Tüm uygulamalar güncel	Alla appar är uppdaterade
 Bazı güncellemeler kurulamadı	Vissa uppdateringar kunde inte installeras
+güncellendi %02d:%02d	uppdaterad %02d:%02d
+çevrimdışı, son veri %02d:%02d	offline, senaste data %02d:%02d

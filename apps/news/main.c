@@ -184,9 +184,9 @@ static void source_view(int s)
 		}
 		if (n) {
 			char st[160];
-			time_t t = (time_t) when;
+			time_t t = (time_t) when + news_local_off(); /* the device may have no zone set */
 			struct tm tm;
-			localtime_r(&t, &tm);
+			gmtime_r(&t, &tm);
 			snprintf(st, sizeof st, offline ? T("%d/%d · çevrimdışı, son veri %02d:%02d") : T("%d/%d · güncellendi %02d:%02d"), page + 1, pages,
 				 tm.tm_hour, tm.tm_min);
 			kui_text((KuiRect){ 190, h - 100, w - 380, 90 }, st, KUI_FONT_REG, kui_fit_px(st, KUI_FONT_REG, 30, w - 390), KUI_ALIGN_CENTER, 0);
@@ -297,10 +297,12 @@ static void sources_screen(void)
 /* ---- front page ---- */
 
 static int front_src[MAX_SRC], n_front_src; /* list index → source */
+static long front_when; /* newest fetch among the front page's feeds */
 
 static void build_front(int fetch_old)
 {
 	n_front_src = 0;
+	front_when = 0;
 	for (int s = 0; s < n_src && n_front_src < MAX_SRC; s++) {
 		if (!enabled(s)) continue;
 		int l = n_front_src++;
@@ -319,6 +321,7 @@ static void build_front(int fetch_old)
 				offline = 1;
 			}
 		}
+		if (counts[l] && when > front_when) front_when = when;
 	}
 	for (int l = n_front_src; l < MAX_SRC; l++) { /* sources turned off since the last build */
 		news_free(lists[l], counts[l]);
@@ -363,6 +366,15 @@ static void draw_front(int full)
 	localtime_r(&now, &tm);
 	kui_tr_date(&tm, date, sizeof date);
 	snprintf(s, sizeof s, T("%s · Manşetler · Sayfa %d/%d"), date, fpage + 1, front_pages());
+	if (front_when) { /* when the newest feed was fetched */
+		struct tm ft;
+		time_t t = (time_t) front_when + news_local_off(); /* as the source pages show it */
+		gmtime_r(&t, &ft);
+		char u[64];
+		snprintf(u, sizeof u, offline ? T("çevrimdışı, son veri %02d:%02d") : T("güncellendi %02d:%02d"), ft.tm_hour, ft.tm_min);
+		size_t n = strlen(s);
+		snprintf(s + n, sizeof s - n, " · %s", u);
+	}
 	kui_text((KuiRect){ 20, KUI_TOPBAR_H + 132, w - 40, 50 }, s, KUI_FONT_SERIF, kui_fit_px(s, KUI_FONT_SERIF, 30, w - 60), KUI_ALIGN_CENTER, 0);
 	kui_fill((KuiRect){ 20, KUI_TOPBAR_H + 185, w - 40, 6 }, 0);
 	kui_fill((KuiRect){ 20, KUI_TOPBAR_H + 195, w - 40, 1 }, 0);

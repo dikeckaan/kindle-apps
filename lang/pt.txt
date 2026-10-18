@@ -379,3 +379,5 @@ Denetleniyor…	A verificar…
 Depoya ulaşılamadı.\nWi-Fi bağlantısını kontrol edin.	Não foi possível aceder ao repositório.\nVerifique a ligação Wi-Fi.
 Tüm uygulamalar güncel	Todas as apps estão atualizadas
 Bazı güncellemeler kurulamadı	Algumas atualizações não foram instaladas
+güncellendi %02d:%02d	atualizado %02d:%02d
+çevrimdışı, son veri %02d:%02d	offline, últimos dados %02d:%02d

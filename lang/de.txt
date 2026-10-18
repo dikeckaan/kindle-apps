@@ -379,3 +379,5 @@ Denetleniyor…	Wird geprüft…
 Depoya ulaşılamadı.\nWi-Fi bağlantısını kontrol edin.	Paketquelle nicht erreichbar.\nWLAN-Verbindung prüfen.
 Tüm uygulamalar güncel	Alle Apps sind aktuell
 Bazı güncellemeler kurulamadı	Einige Updates konnten nicht installiert werden
+güncellendi %02d:%02d	aktualisiert %02d:%02d
+çevrimdışı, son veri %02d:%02d	offline, Stand %02d:%02d

@@ -379,3 +379,5 @@ Denetleniyor…	Vérification…
 Depoya ulaşılamadı.\nWi-Fi bağlantısını kontrol edin.	Dépôt injoignable.\nVérifiez la connexion Wi-Fi.
 Tüm uygulamalar güncel	Toutes les applis sont à jour
 Bazı güncellemeler kurulamadı	Certaines mises à jour ont échoué
+güncellendi %02d:%02d	mis à jour %02d:%02d
+çevrimdışı, son veri %02d:%02d	hors ligne, données de %02d:%02d

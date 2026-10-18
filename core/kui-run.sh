@@ -10,6 +10,16 @@ if [ "$(id -u)" != "0" ]; then
     exec /var/local/kmc/bin/su -c "/bin/sh '$0' '$APP_ID' $*"
 fi
 
+# Run from RAM copies: an update replaces files on /mnt/us (fuse), which does not keep a replaced file alive for
+# a shell still reading this script or for the hub binary still running.
+case "$0" in
+    /tmp/kui-run.*) ;;
+    *) S=/tmp/kui-run.$$.sh; cp -f "$0" "$S" 2>/dev/null && exec /bin/sh "$S" "$APP_ID" "$@" ;;
+esac
+if [ "$APP_ID" = hub ] && [ -f "$1" ]; then
+    cp -f "$1" /tmp/kui-hub.new && chmod +x /tmp/kui-hub.new && mv -f /tmp/kui-hub.new /tmp/kui-hub && { shift; set -- /tmp/kui-hub "$@"; }
+fi
+
 export KUI_ROOT="${KUI_ROOT:-/mnt/us/kindle-apps}"
 FBINK=/var/local/kmc/bin/fbink
 LOG_DIR="$KUI_ROOT/logs"
@@ -22,6 +32,7 @@ if ! mkdir "$LOCK" 2>/dev/null; then
     owner=$(cat "$LOCK/pid" 2>/dev/null)
     if [ -n "$owner" ] && kill -0 "$owner" 2>/dev/null; then
         echo "kui-run: already running (pid $owner)" >&2
+        case "$0" in /tmp/kui-run.*) rm -f "$0" ;; esac
         exit 3
     fi
     rm -rf "$LOCK" && mkdir "$LOCK" || exit 3
@@ -59,6 +70,7 @@ restore() {
     lipc-set-prop com.lab126.pillow disableEnablePillow enable 2>/dev/null
     lipc-set-prop com.lab126.appmgrd start app://com.lab126.booklet.home 2>/dev/null
     rm -rf "$LOCK"
+    case "$0" in /tmp/kui-run.*) rm -f "$0" ;; esac
 }
 trap restore EXIT
 trap 'exit 130' INT TERM HUP

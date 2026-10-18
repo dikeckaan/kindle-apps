@@ -193,6 +193,7 @@ static int run_app(const HubApp *a)
 	}
 	kui_prevent_sleep(0); /* an app that kept the Kindle awake (Masa Saati) may have crashed */
 	if (kui_init("hub") != 0) exit(1);
+	kui_drain_input(600); /* the end of the tap that closed the app must not hit the menu (its ✕ is in the same corner) */
 	return pid > 0 ? status : -1;
 }
 
@@ -244,7 +245,11 @@ int main(void)
 					char self[320];
 					snprintf(self, sizeof self, "%s/bin/hub", root());
 					kui_quit();
-					execl(self, self, (char *) NULL);
+					/* run the new hub from a RAM copy (as kui-run.sh does): /mnt/us (fuse) does not keep a
+					 * replaced file alive for the process still running it */
+					execl("/bin/sh", "sh", "-c",
+					      "cp -f \"$1\" /tmp/kui-hub.new && chmod +x /tmp/kui-hub.new && mv -f /tmp/kui-hub.new /tmp/kui-hub && "
+					      "exec /tmp/kui-hub; exec \"$1\"", "sh", self, (char *) NULL);
 					return 1; /* kui-run.sh restores the Kindle UI */
 				}
 				scan();

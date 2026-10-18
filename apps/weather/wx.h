@@ -13,12 +13,16 @@ typedef struct {
 	double temp, feels, wind;  /* NAN when missing */
 	int hum, wind_dir, code, is_day; /* -1 when missing */
 	int n_hours;
-	struct { char hh[6]; double t; int code, pop; } hour[12];
+	struct { char iso[17], hh[6]; double t; int code, pop; } hour[24]; /* iso: "YYYY-MM-DDTHH:MM" local */
 	int n_days;
 	struct { char date[11]; int wday, code; double tmax, tmin; int pop; char sunrise[6], sunset[6]; } day[7];
 } Wx;
 
 int  wx_parse(const char *json, Wx *out); /* 0 = ok (current block present), -1 = unusable */
+/* an older forecast seen at local time now_iso ("YYYY-MM-DDTHH:MM"): drops past hours and days; when hours were
+ * dropped, the current hour's forecast becomes "now" (temperature, code; feels/humidity/wind unknown) */
+void wx_advance(Wx *w, const char *now_iso);
+void wx_local_iso(const Wx *w, char out[17]); /* the city's local time now, from utc_offset */
 void wx_forecast_url(const WxCity *c, char *out, int cap);
 void wx_geocode_url(const char *query, const char *lang, char *out, int cap); /* lang: "tr", "de", … */
 /* up to max results ranked for `query`: exact name, then capitals/district centres, then population */

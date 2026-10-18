@@ -379,3 +379,5 @@ Denetleniyor…	Έλεγχος…
 Depoya ulaşılamadı.\nWi-Fi bağlantısını kontrol edin.	Το αποθετήριο δεν είναι προσβάσιμο.\nΕλέγξτε τη σύνδεση Wi-Fi.
 Tüm uygulamalar güncel	Όλες οι εφαρμογές είναι ενημερωμένες
 Bazı güncellemeler kurulamadı	Ορισμένες ενημερώσεις δεν εγκαταστάθηκαν
+güncellendi %02d:%02d	ενημέρωση %02d:%02d
+çevrimdışı, son veri %02d:%02d	εκτός σύνδεσης, τελευταία %02d:%02d

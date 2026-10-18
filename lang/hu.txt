@@ -379,3 +379,5 @@ Denetleniyor…	Ellenőrzés…
 Depoya ulaşılamadı.\nWi-Fi bağlantısını kontrol edin.	A tároló nem érhető el.\nEllenőrizze a Wi-Fi-kapcsolatot.
 Tüm uygulamalar güncel	Minden alkalmazás naprakész
 Bazı güncellemeler kurulamadı	Néhány frissítést nem sikerült telepíteni
+güncellendi %02d:%02d	frissítve %02d:%02d
+çevrimdışı, son veri %02d:%02d	offline, utolsó adat %02d:%02d

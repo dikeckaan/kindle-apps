@@ -379,3 +379,5 @@ Denetleniyor…	Kontrola…
 Depoya ulaşılamadı.\nWi-Fi bağlantısını kontrol edin.	Repozitář není dostupný.\nZkontrolujte připojení Wi-Fi.
 Tüm uygulamalar güncel	Všechny aplikace jsou aktuální
 Bazı güncellemeler kurulamadı	Některé aktualizace se nepodařilo nainstalovat
+güncellendi %02d:%02d	aktualizováno %02d:%02d
+çevrimdışı, son veri %02d:%02d	offline, poslední data %02d:%02d

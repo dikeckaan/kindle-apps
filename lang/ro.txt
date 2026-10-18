@@ -379,3 +379,5 @@ Denetleniyor…	Se verifică…
 Depoya ulaşılamadı.\nWi-Fi bağlantısını kontrol edin.	Depozitul nu poate fi accesat.\nVerificați conexiunea Wi-Fi.
 Tüm uygulamalar güncel	Toate aplicațiile sunt la zi
 Bazı güncellemeler kurulamadı	Unele actualizări nu s-au instalat
+güncellendi %02d:%02d	actualizat %02d:%02d
+çevrimdışı, son veri %02d:%02d	offline, ultimele date %02d:%02d

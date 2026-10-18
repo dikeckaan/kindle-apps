@@ -379,3 +379,5 @@ Denetleniyor…	Yoxlanılır…
 Depoya ulaşılamadı.\nWi-Fi bağlantısını kontrol edin.	Depoya qoşulmaq olmadı.\nWi-Fi bağlantısını yoxlayın.
 Tüm uygulamalar güncel	Bütün tətbiqlər aktualdır
 Bazı güncellemeler kurulamadı	Bəzi yeniləmələr quraşdırılmadı
+güncellendi %02d:%02d	yeniləndi %02d:%02d
+çevrimdışı, son veri %02d:%02d	oflayn, son məlumat %02d:%02d

@@ -379,3 +379,5 @@ Denetleniyor…	Перевірка…
 Depoya ulaşılamadı.\nWi-Fi bağlantısını kontrol edin.	Репозиторій недоступний.\nПеревірте з'єднання Wi-Fi.
 Tüm uygulamalar güncel	Усі застосунки оновлено
 Bazı güncellemeler kurulamadı	Деякі оновлення не встановлено
+güncellendi %02d:%02d	оновлено %02d:%02d
+çevrimdışı, son veri %02d:%02d	офлайн, дані від %02d:%02d

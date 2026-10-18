@@ -143,6 +143,12 @@ int  kui_wifi_wait(int timeout_s);     /* 1 once the Wi-Fi reports CONNECTED */
  * Wi-Fi must be off (its wakeup source blocks suspend). Returns the seconds actually asleep, -1 if suspend failed. */
 int  kui_suspend(int seconds);
 int  kui_woke_early(int requested, int slept); /* pure: 1 when something other than the alarm woke the device */
+/* battery saver: suspend (or, failing that, wait awake) until just after the next minute starts */
+enum { KUI_SLEEP_MINUTE, KUI_SLEEP_WOKEN, KUI_SLEEP_QUIT };
+int  kui_sleep_to_next_minute(void); /* KUI_SLEEP_WOKEN: a touch or the power button; QUIT: SIGTERM */
+int  kui_ms_to_next_minute(void);    /* until 200 ms after the next minute boundary */
+/* drops touches for ms (the tap that woke the device, or the rest of a tap that closed another app) */
+void kui_drain_input(int ms);
 void kui_topbar(const char *title, const char *right_label); /* right_label may be NULL */
 int  kui_fit_px(const char *text, KuiFont f, int px, int max_w); /* largest size <= px whose single line fits max_w */
 void kui_button(const KuiButton *b, int pressed);

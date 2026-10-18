@@ -29,6 +29,7 @@ static void test_parse_forecast(void)
 	T_EQ_INT(w.utc_offset, 10800);
 	T_EQ_STR(w.now, "16:30");
 	T_EQ_INT(w.n_hours, 12);
+	T_EQ_INT((int) strlen(w.hour[0].iso), 16); /* "YYYY-MM-DDTHH:MM": the date is kept for wx_advance */
 	T_EQ_STR(w.hour[0].hh, "16:00");
 	T_EQ_INT(w.hour[0].pop, 33);
 	T_EQ_INT(w.hour[2].code, 3);
@@ -153,8 +154,40 @@ static void test_cache_name_follows_coordinates(void)
 	T_EQ_STR(s, "c_39.9200_-32.8500.json");
 }
 
+/* a forecast up to 6 h old: past hours and days are dropped and "now" comes from the current hour */
+static void test_advance_drops_the_past(void)
+{
+	Wx w;
+	memset(&w, 0, sizeof w);
+	w.temp = 20;
+	w.code = 0;
+	w.n_hours = 4;
+	const char *iso[] = { "2026-10-18T23:00", "2026-10-19T00:00", "2026-10-19T01:00", "2026-10-19T02:00" };
+	for (int i = 0; i < 4; i++) {
+		snprintf(w.hour[i].iso, sizeof w.hour[i].iso, "%s", iso[i]);
+		snprintf(w.hour[i].hh, sizeof w.hour[i].hh, "%s", iso[i] + 11);
+		w.hour[i].t = 10 + i;
+		w.hour[i].code = 3;
+	}
+	w.n_days = 2;
+	snprintf(w.day[0].date, sizeof w.day[0].date, "2026-10-18");
+	snprintf(w.day[1].date, sizeof w.day[1].date, "2026-10-19");
+	w.day[1].tmax = 15;
+	wx_advance(&w, "2026-10-19T01:05");
+	T_EQ_INT(w.n_hours, 2); /* 01:00 (the current hour) and 02:00 */
+	T_EQ_STR(w.hour[0].hh, "01:00");
+	T_ASSERT(w.temp == 12); /* the current hour's forecast, not the 23:00 reading */
+	T_EQ_INT(w.code, 3);
+	T_EQ_INT(w.n_days, 1);
+	T_EQ_STR(w.day[0].date, "2026-10-19");
+	T_ASSERT(w.day[0].tmax == 15);
+	wx_advance(&w, "2026-10-19T01:30"); /* nothing more to drop: unchanged */
+	T_EQ_INT(w.n_hours, 2);
+}
+
 int main(void)
 {
+	T_RUN(test_advance_drops_the_past);
 	T_RUN(test_cache_name_follows_coordinates);
 	T_RUN(test_parse_forecast);
 	T_RUN(test_parse_partial_and_broken);

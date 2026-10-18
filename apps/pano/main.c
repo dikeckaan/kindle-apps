@@ -30,6 +30,20 @@ static const int idle_choices[] = { 1, 2, 5, 10 }, data_choices[] = { 1, 2, 3, 6
 static WxCity city;
 static Wx wx;
 static int have_wx;
+static long wx_time, news_time; /* when the forecast / the news feed was fetched */
+
+/* "HH:MM" of a timestamp, in the device's local time */
+static void fmt_hm(long t, char out[8])
+{
+	time_t tt = (time_t) t;
+	struct tm tm;
+	localtime_r(&tt, &tm);
+	if (tm.tm_gmtoff == 0 && !getenv("TZ") && have_wx && wx.utc_offset) { /* no zone on the device: the city's */
+		tt += wx.utc_offset;
+		gmtime_r(&tt, &tm);
+	}
+	snprintf(out, 8, "%02d:%02d", tm.tm_hour % 24, tm.tm_min % 60);
+}
 static NewsItem news[NEWS_MAX];
 static int n_news, news_first, news_shown = 3;
 static FxRate rates[FX_MAX];
@@ -148,6 +162,12 @@ static void load_weather(int fetch)
 	city = cs[0];
 	wx_cache_name(&city, name, sizeof name);
 	have_wx = read_cache("weather", name, buf, sizeof buf, &mt) > 0 && wx_parse(buf, &wx) == 0;
+	if (have_wx) { /* up to 6 h old: start at the current hour */
+		char iso[17];
+		wx_local_iso(&wx, iso);
+		wx_advance(&wx, iso);
+		wx_time = mt;
+	}
 	/* the forecast changes slowly: every 6 hours is enough, whatever the news interval is */
 	if (fetch && (!have_wx || time(NULL) - mt > WX_EVERY_S) && time(NULL) - t_wx > 30 * 60) {
 		char url[700];
@@ -169,6 +189,7 @@ static void load_news(int fetch)
 	int len = read_cache("news", name, buf, sizeof buf, &mt);
 	news_free(news, n_news);
 	n_news = len > 0 ? news_parse_rss(buf, len, news, NEWS_MAX) : 0;
+	news_time = n_news ? mt : 0;
 	if (fetch && (!n_news || time(NULL) - mt > max_age(10 * 60)) && time(NULL) - t_news > 10 * 60) {
 		t_news = (long) time(NULL);
 		if (fetch_to(s->sec[0].url, "news", name, valid_news)) load_news(0);
@@ -302,6 +323,12 @@ static int draw_weather(int y)
 		snprintf(s, sizeof s, "%s", city.name);
 	}
 	kui_text((KuiRect){ 190, y + 160, 330, 40 }, s, KUI_FONT_REG, kui_fit_px(s, KUI_FONT_REG, 26, 330), KUI_ALIGN_LEFT, 0);
+	if (wx_time) { /* when the forecast was fetched (every 6 h) */
+		char hm[8];
+		fmt_hm(wx_time, hm);
+		snprintf(s, sizeof s, T("Güncellendi %s · Open-Meteo"), hm);
+		kui_text((KuiRect){ 530, y + 190, w - 560, 34 }, s, KUI_FONT_REG, 22, KUI_ALIGN_RIGHT, 90);
+	}
 	/* the next hours, every second hour */
 	int x0 = 530, cw = (w - 30 - x0) / 4;
 	for (int k = 0; k < 4; k++) {
@@ -314,7 +341,7 @@ static int draw_weather(int y)
 		wx_fmt_temp(wx.hour[i].t, s, sizeof s);
 		kui_text((KuiRect){ x, y + 140, cw, 45 }, s, KUI_FONT_BOLD, 32, KUI_ALIGN_CENTER, 0);
 	}
-	return 210;
+	return wx_time ? 230 : 210;
 }
 
 static void draw_news(void)
@@ -326,6 +353,13 @@ static void draw_news(void)
 	char head[160], up[96];
 	kui_tr_upper_str(s->name, up, sizeof up);
 	snprintf(head, sizeof head, T("SON DAKİKA · %s"), up);
+	if (news_time) { /* when the feed was fetched */
+		char hm[8], u[64];
+		fmt_hm(news_time, hm);
+		snprintf(u, sizeof u, T("güncellendi %02d:%02d"), atoi(hm), atoi(hm + 3));
+		size_t n = strlen(head);
+		snprintf(head + n, sizeof head - n, " · %s", u);
+	}
 	kui_text((KuiRect){ 30, r.y, w - 60, 44 }, head, KUI_FONT_BOLD, kui_fit_px(head, KUI_FONT_BOLD, 28, w - 60), KUI_ALIGN_LEFT, 0);
 	if (!n_news) {
 		kui_text((KuiRect){ 30, r.y + 60, w - 60, 60 }, T("Haber alınamadı."), KUI_FONT_SERIF, 32, KUI_ALIGN_LEFT, 0);
@@ -632,12 +666,8 @@ static void tick(void)
 	kui_flush(0);
 }
 
-static int ms_to_next_minute(void)
-{
-	struct timeval tv;
-	gettimeofday(&tv, NULL);
-	return (int) (60000 - (tv.tv_sec % 60) * 1000 - tv.tv_usec / 1000) + 200;
-}
+
+static int charging(void) { return kui_lipc_get_int("com.lab126.powerd", "isCharging", 0) == 1; }
 
 /* Battery saver: suspend until the next minute, update the clock, repeat — until the power button or a touch
  * wakes the Kindle early. The e-ink keeps the picture while the CPU, Wi-Fi and touch are off. */
@@ -656,32 +686,21 @@ static void deep_sleep_loop(void)
 		}
 		struct tm tm;
 		now_local(&tm);
-		if (tm.tm_min == shown_min) { /* this minute is on screen: sleep until just after the next one starts */
-			int secs = (ms_to_next_minute() + 999) / 1000, slept = -1;
-			if (secs > 4) { /* a few seconds are not worth a suspend: wait awake instead */
-				slept = kui_suspend(secs);
-				fprintf(stderr, "deep: asked %d s, slept %d s%s\n", secs, slept,
-					slept >= 0 && kui_woke_early(secs, slept) ? " (woken)" : "");
-				if (slept >= 0 && kui_woke_early(secs, slept)) break; /* the power button or a touch */
+		if (tm.tm_min == shown_min) { /* this minute is on screen: sleep until the next one starts */
+			int r = kui_sleep_to_next_minute();
+			if (r == KUI_SLEEP_QUIT) {
+				quit_requested = 1;
+				break;
 			}
-			/* suspend failed, or the RTC (whole seconds) woke us a moment before the minute: wait awake for it */
-			now_local(&tm);
-			if (tm.tm_min == shown_min) {
-				KuiEvent e = kui_next_event(ms_to_next_minute());
-				if (e.type == KUI_EV_QUIT) {
-					quit_requested = 1;
-					break;
-				}
-				if (e.type == KUI_EV_TAP || e.type == KUI_EV_POWER || e.type == KUI_EV_SWIPE || e.type == KUI_EV_LONGPRESS) break;
-				if (e.type != KUI_EV_NONE) continue; /* anything else: re-check the time */
-			}
+			if (r == KUI_SLEEP_WOKEN) break;
 		}
+		if (charging()) break; /* plugged in: no need to sleep */
 		tick();
 		kui_wait_refresh();
 	}
 	deep = 0;
 	fprintf(stderr, "deep: leave (battery %d%%)\n", kui_lipc_get_int("com.lab126.powerd", "battLevel", -1));
-	kui_drain_power_key();
+	kui_drain_input(700); /* the touch that woke the Kindle must not press anything (e.g. ✕) */
 	last_input = (long) time(NULL);
 	draw_all(0);
 }
@@ -709,11 +728,11 @@ int main(void)
 	last_input = (long) time(NULL);
 	for (;;) {
 		if (quit_requested) break;
-		if (opt(OPT_SAVER) && time(NULL) - last_input >= idle_min() * 60L && !kui_input_asleep()) {
+		if (opt(OPT_SAVER) && time(NULL) - last_input >= idle_min() * 60L && !kui_input_asleep() && !charging()) {
 			deep_sleep_loop();
 			continue;
 		}
-		KuiEvent e = kui_next_event(ms_to_next_minute());
+		KuiEvent e = kui_next_event(kui_ms_to_next_minute());
 		if (e.type == KUI_EV_QUIT) break;
 		if (e.type == KUI_EV_NONE) {
 			if (!kui_input_asleep()) tick();
@@ -724,7 +743,8 @@ int main(void)
 			continue;
 		}
 		if (e.type == KUI_EV_POWER) { /* power button while awake: go to sleep now */
-			if (opt(OPT_SAVER)) deep_sleep_loop();
+			if (opt(OPT_SAVER) && !charging()) deep_sleep_loop(); /* on the charger there is no need to sleep */
+			last_input = (long) time(NULL);
 			continue;
 		}
 		last_input = (long) time(NULL);

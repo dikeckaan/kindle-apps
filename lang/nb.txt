@@ -379,3 +379,5 @@ Denetleniyor…	Sjekker…
 Depoya ulaşılamadı.\nWi-Fi bağlantısını kontrol edin.	Fikk ikke kontakt med pakkebrønnen.\nSjekk wifi-tilkoblingen.
 Tüm uygulamalar güncel	Alle apper er oppdatert
 Bazı güncellemeler kurulamadı	Noen oppdateringer kunne ikke installeres
+güncellendi %02d:%02d	oppdatert %02d:%02d
+çevrimdışı, son veri %02d:%02d	frakoblet, siste data %02d:%02d

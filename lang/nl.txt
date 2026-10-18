@@ -379,3 +379,5 @@ Denetleniyor…	Controleren…
 Depoya ulaşılamadı.\nWi-Fi bağlantısını kontrol edin.	Repository niet bereikbaar.\nControleer de wifiverbinding.
 Tüm uygulamalar güncel	Alle apps zijn bijgewerkt
 Bazı güncellemeler kurulamadı	Sommige updates zijn niet geïnstalleerd
+güncellendi %02d:%02d	bijgewerkt %02d:%02d
+çevrimdışı, son veri %02d:%02d	offline, gegevens van %02d:%02d

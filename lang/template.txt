@@ -241,7 +241,7 @@ Güncel sürüm
 Güncelle	
 # core/hub/main.c
 Güncellemeler	
-# apps/weather/main.c
+# apps/clock/main.c
 Güncellendi %s · Open-Meteo	
 # apps/currency/main.c
 Güncelleniyor…	
@@ -651,6 +651,8 @@ Zorluk seçin
 bağlı değil	
 # core/kui/keyboard.c
 boşluk	
+# apps/news/main.c
+güncellendi %02d:%02d	
 # apps/sysinfo/main.c
 Çalışmıyor	
 # apps/sysinfo/main.c
@@ -689,6 +691,8 @@ boşluk
 Üç kart çek	
 # apps/chess/chess_game.c
 Üçlü tekrar — berabere	
+# apps/news/main.c
+çevrimdışı, son veri %02d:%02d	
 # apps/chess/main.c
 İki oyunculu	
 # apps/chess/main.c
@@ -753,7 +757,7 @@ boşluk
 Şubat	
 # apps/ebooks/main.c
 “%s” · %d kitap%s	
-# apps/pano/main.c
+# apps/clock/main.c
 ☾ uykuda	
 # apps/mines/main.c
 ⚑ Açık	
