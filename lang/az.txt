@@ -379,3 +379,86 @@ Denetleniyor…	Yoxlanılır…
 Depoya ulaşılamadı.\nWi-Fi bağlantısını kontrol edin.	Depoya qoşulmaq olmadı.\nWi-Fi bağlantısını yoxlayın.
 Tüm uygulamalar güncel	Bütün tətbiqlər aktualdır
 Bazı güncellemeler kurulamadı	Bəzi yeniləmələr quraşdırılmadı
+☉ Güneş	☉ Günəş
+☾ Ay	☾ Ay
+☿ Merkür	☿ Merkuri
+♀ Venüs	♀ Venera
+♂ Mars	♂ Mars
+♃ Jüpiter	♃ Yupiter
+♄ Satürn	♄ Saturn
+−1 gün	−1 gün
+−1 sa	−1 saat
+Şimdi	İndi
++1 sa	+1 saat
++1 gün	+1 gün
+Parlaklık (kadir)	Parlaqlıq (ulduz ölçüsü)
+Ayrıntı için bir yıldıza ya da gezegene dokunun	Ətraflı məlumat üçün ulduza və ya planetə toxunun
+Gündüz · Güneş batınca yıldızlar görünür (gün batımı %s)	Gündüz · ulduzlar gün batandan sonra görünür (gün batımı %s)
+Gündüz · Güneş bugün batmıyor	Gündüz · Günəş bu gün batmır
+Gece · Güneş bugün doğmuyor	Gecə · Günəş bu gün doğmur
+Gece · gün batımı %s, gün doğumu %s	Gecə · gün batımı %s, gün çıxımı %s
+Ay: %s, %%%d aydınlık · doğuş %s · batış %s	Ay: %s, %d%% işıqlı · doğuş %s · batış %s
+Bu gece görünen gezegenler: %s	Bu gecə görünən planetlər: %s
+Bu gece parlak gezegen görünmüyor	Bu gecə parlaq planet görünmür
+Yükseklik %d° · yön %s (%d°)	Hündürlük %d° · istiqamət %s (%d°)
+%s · %%%d aydınlık	%s · %d%% işıqlı
+Yıldız	Ulduz
+Gezegen · parlaklık %s kadir	Planet · parlaqlıq %s
+Doğuş %s · batış %s	Doğuş %s · batış %s
+Uzaklık %s AB (Güneş–Dünya = 1)	Məsafə %s AV (Günəş–Yer = 1)
+Yıldız · %s · %s	Ulduz · %s · %s
+Yıldız · %s	Ulduz · %s
+Parlaklık %s kadir	Parlaqlıq %s
+Takımyıldız · %s	Bürc · %s
+En parlak yıldızı: %s	Ən parlaq ulduzu: %s
+Gökyüzü	Ulduzlu səma
+Andromeda	Andromeda
+Kova	Dolça
+Kartal	Qartal
+Koç	Qoç
+Arabacı	Arabaçı
+Çoban	Çoban
+Yengeç	Xərçəng
+Büyükköpek	Böyük İt
+Küçükköpek	Kiçik İt
+Oğlak	Oğlaq
+Kraliçe	Kassiopeya
+Kral	Sefey
+Kuğu	Qu
+Ejderha	Əjdaha
+İkizler	Əkizlər
+Herkül	Herkules
+Aslan	Şir
+Terazi	Tərəzi
+Çalgı	Lira
+Yılancı	İlandaşıyan
+Avcı	Orion
+Kanatlı At	Peqas
+Kahraman	Persey
+Balıklar	Balıqlar
+Yay	Oxatan
+Akrep	Əqrəb
+Boğa	Buğa
+Büyükayı	Böyük Ayı
+Küçükayı	Kiçik Ayı
+Başak	Qız
+Sirius	Sirius
+Süheyl	Kanopus
+Arktürüs	Arktur
+Vega	Veqa
+Kapella	Kapella
+Rigel	Rigel
+Prokyon	Prosion
+Betelgöz	Betelgeyze
+Altair	Altair
+Aldebaran	Aldebaran
+Antares	Antares
+Spika	Spika
+Polluks	Polluks
+Fomalhaut	Fomalhaut
+Deneb	Deneb
+Regulus	Requlus
+Kastor	Kastor
+Kutup Yıldızı	Qütb ulduzu
+Algol	Algol
+Mizar	Mizar

@@ -1,0 +1,10 @@
+{
+  "manifest_version": 2,
+  "id": "kindle-apps-sky",
+  "name": "Gökyüzü",
+  "author": "Kaan Dikeç",
+  "description": "Çevrimdışı canlı gökyüzü haritası: yıldızlar, takımyıldızlar, gezegenler, Ay evresi, gün doğumu ve batımı",
+  "version": [2026, 10, 15],
+  "dependencies": [],
+  "supported_platforms": ["kindlehf"]
+}

@@ -33,6 +33,8 @@
 %s silinsin mi?	
 # apps/news/main.c
 %s yükleniyor… (%d)	
+# apps/sky/main.c
+%s · %%%d aydınlık	
 # apps/mines/main.c
 %s · %d×%d · %d mayın	
 # apps/news/main.c
@@ -41,6 +43,10 @@
 %s · Süre: %ld:%02ld	
 # apps/weather/main.c
 + Ekle	
+# apps/sky/main.c
++1 gün	
+# apps/sky/main.c
++1 sa	
 # apps/sleep/sleep_opts.c
 1 saat	
 # apps/sleep/sleep_opts.c
@@ -63,8 +69,16 @@
 70.000'den fazla ücretsiz e-kitap. Arama İngilizce başlık ve yazar adlarıyla en iyi sonucu verir.	
 # apps/ebooks/main.c
 AZW3 Kindle'ın kendi okuyucusunda, EPUB KOReader'da açılır.	
+# apps/sky/skydata.c
+Akrep	
 # apps/pano/pano.c
 Akşam	
+# apps/sky/skydata.c
+Aldebaran	
+# apps/sky/skydata.c
+Algol	
+# apps/sky/skydata.c
+Altair	
 # apps/currency/main.c
 Altın (serbest piyasa, ₺)	
 # apps/upload/main.c
@@ -75,20 +89,36 @@ Alındı: %s (KOReader ile açın)
 Alınıyor: %s	
 # apps/currency/main.c
 Alış	
+# apps/sky/skydata.c
+Andromeda	
+# apps/sky/skydata.c
+Antares	
 # apps/ebooks/main.c
 Ara	
+# apps/sky/skydata.c
+Arabacı	
 # core/kui/trfmt.c
 Aralık	
 # apps/ebooks/main.c
 Aranıyor…	
+# apps/sky/skydata.c
+Arktürüs	
+# apps/sky/skydata.c
+Aslan	
 # apps/chess/main.c
 At	
+# apps/sky/skydata.c
+Avcı	
 # apps/pano/main.c
 Ay evresi	
 # apps/pano/main.c
 Ay: %s, %%%d	
+# apps/sky/main.c
+Ay: %s, %%%d aydınlık · doğuş %s · batış %s	
 # apps/pano/main.c
 Ayarlar	
+# apps/sky/main.c
+Ayrıntı için bir yıldıza ya da gezegene dokunun	
 # apps/weather/wx.c
 Az bulutlu	
 # apps/ssh/main.c
@@ -107,6 +137,8 @@ Açıldı. Gelen bağlantılar engelleniyor.
 Ağustos	
 # apps/weather/wx.c
 B	
+# apps/sky/skydata.c
+Balıklar	
 # core/hub/upd_ui.c
 Bazı güncellemeler kurulamadı	
 # apps/weather/main.c
@@ -117,8 +149,12 @@ Bağlantı yok
 Bağlantı yok, kurlar alınamadı	
 # apps/weather/main.c
 Bağlantı yok, veri alınamadı	
+# apps/sky/skydata.c
+Başak	
 # apps/sysinfo/main.c
 Bellek	
+# apps/sky/skydata.c
+Betelgöz	
 # apps/chess/main.c
 Beyaz	
 # apps/news/news.c
@@ -127,6 +163,12 @@ Bilim
 Biçim:	
 # apps/ebooks/main.c
 Biçim: %s	
+# apps/sky/skydata.c
+Boğa	
+# apps/sky/main.c
+Bu gece görünen gezegenler: %s	
+# apps/sky/main.c
+Bu gece parlak gezegen görünmüyor	
 # apps/upload/main.c
 Bu oturumda gelenler (%d)	
 # apps/upload/main.c
@@ -145,6 +187,10 @@ Bulmacayı çözdünüz.
 Bütün kartlar açık. Oyun tamamlansın mı?	
 # apps/solitaire/main.c
 Bütün kartları yerleştirdin.	
+# apps/sky/skydata.c
+Büyükayı	
+# apps/sky/skydata.c
+Büyükköpek	
 # core/kui/trfmt.c
 Cmt	
 # core/kui/trfmt.c
@@ -159,6 +205,8 @@ Cumhuriyet altını
 D	
 # apps/ebooks/main.c
 Daha fazla	
+# apps/sky/skydata.c
+Deneb	
 # core/hub/upd_ui.c
 Denetleniyor…	
 # apps/sysinfo/main.c
@@ -185,6 +233,8 @@ Donan yağmur
 Donan çisenti	
 # apps/upload/main.c
 Dosya bekleniyor…	
+# apps/sky/main.c
+Doğuş %s · batış %s	
 # apps/wordle/main.c
 Dâhice!	
 # apps/currency/main.c
@@ -197,6 +247,8 @@ Dünya
 Düşünüyor… (%s)	
 # apps/ebooks/main.c
 E-Kitap	
+# apps/sky/skydata.c
+Ejderha	
 # core/kui/trfmt.c
 Ekim	
 # apps/news/news.c
@@ -209,12 +261,16 @@ En fazla 10 şehir kaydedilebilir.
 En iyi	
 # apps/wordle/main.c
 En iyi seri	
+# apps/sky/main.c
+En parlak yıldızı: %s	
 # apps/chess/main.c
 Evet	
 # core/kui/trfmt.c
 Eylül	
 # apps/chess/main.c
 Fil	
+# apps/sky/skydata.c
+Fomalhaut	
 # apps/weather/wx.c
 G	
 # apps/weather/wx.c
@@ -223,14 +279,22 @@ GB
 GD	
 # apps/news/main.c
 Gazete	
+# apps/sky/main.c
+Gece · Güneş bugün doğmuyor	
+# apps/sky/main.c
+Gece · gün batımı %s, gün doğumu %s	
 # apps/chess/main.c
 Geri al	
+# apps/sky/main.c
+Gezegen · parlaklık %s kadir	
 # apps/currency/fx.c
 Gram altın	
 # apps/ebooks/main.c
 Gutenberg'e ulaşılamadı. Wi-Fi bağlantısını kontrol edip yeniden deneyin.	
 # apps/weather/wx.c
 Gök gürültülü	
+# apps/sky/main.c
+Gökyüzü	
 # apps/wordle/main.c
 Gönder	
 # apps/news/news.c
@@ -247,6 +311,10 @@ Güncellendi %s · Open-Meteo
 Güncelleniyor…	
 # apps/news/news.c
 Gündem	
+# apps/sky/main.c
+Gündüz · Güneş batınca yıldızlar görünür (gün batımı %s)	
+# apps/sky/main.c
+Gündüz · Güneş bugün batmıyor	
 # apps/pano/pano.c
 Güneş	
 # apps/firewall/main.c
@@ -293,6 +361,8 @@ Henüz kitap indirilmedi.
 Henüz parola yok	
 # apps/chess/main.c
 Her hamlede tahtayı çevir	
+# apps/sky/skydata.c
+Herkül	
 # apps/pano/pano.c
 Hilal (büyüyen)	
 # apps/pano/pano.c
@@ -309,8 +379,12 @@ KAPALI
 KB	
 # apps/weather/wx.c
 KD	
+# apps/sky/skydata.c
+Kahraman	
 # apps/chess/main.c
 Kale	
+# apps/sky/skydata.c
+Kanatlı At	
 # apps/weather/wx.c
 Kapalı	
 # apps/sysinfo/main.c
@@ -319,12 +393,18 @@ Kapalı (gelen bağlantılara açık)
 Kapat	
 # apps/firewall/main.c
 Kapatıldı. Kindle yeniden başlayınca tekrar açılır.	
+# apps/sky/skydata.c
+Kapella	
 # apps/weather/wx.c
 Kar sağanağı	
 # apps/weather/wx.c
 Kar taneleri	
 # apps/weather/wx.c
 Karlı	
+# apps/sky/skydata.c
+Kartal	
+# apps/sky/skydata.c
+Kastor	
 # core/kui/trfmt.c
 Kasım	
 # apps/weather/main.c
@@ -363,6 +443,14 @@ Kitap ara (başlık veya yazar)
 Kitaplığa eklendi:\n%s	
 # apps/chess/levels.c
 Kolay	
+# apps/sky/skydata.c
+Kova	
+# apps/sky/skydata.c
+Koç	
+# apps/sky/skydata.c
+Kral	
+# apps/sky/skydata.c
+Kraliçe	
 # apps/ssh/main.c
 Kullanıcı adı: root\nSunucu bu uygulama kapanınca da çalışır.\nKindle uyuyunca Wi-Fi ile birlikte bağlantı kopar.\nYeniden başlatınca kapalı açılır.	
 # core/hub/upd_ui.c
@@ -373,8 +461,16 @@ Kur bilgisi yok
 Kurulamadı: %s	
 # core/hub/upd_ui.c
 Kuruluyor…	
+# apps/sky/skydata.c
+Kutup Yıldızı	
+# apps/sky/skydata.c
+Kuğu	
 # apps/news/news.c
 Kültür	
+# apps/sky/skydata.c
+Küçükayı	
+# apps/sky/skydata.c
+Küçükköpek	
 # apps/news/news.c
 Manşet	
 # core/kui/trfmt.c
@@ -395,6 +491,8 @@ Mayıs
 Menü	
 # apps/game2048/main.c
 Mevcut oyun silinsin mi?	
+# apps/sky/skydata.c
+Mizar	
 # apps/chess/main.c
 Motor yanıt vermedi	
 # apps/wordle/main.c
@@ -423,6 +521,12 @@ Otomatik tamamla
 Oynanan	
 # apps/chess/main.c
 Oyun bitti	
+# apps/sky/skydata.c
+Oğlak	
+# apps/sky/main.c
+Parlaklık %s kadir	
+# apps/sky/main.c
+Parlaklık (kadir)	
 # apps/ssh/main.c
 Parola	
 # apps/ssh/main.c
@@ -461,14 +565,22 @@ Pil tasarrufu (derin uyku)
 Pil tasarrufunda Kindle uyur, ekran e-ink sayesinde kalır; saat dakikada bir güncellenir, Wi-Fi yalnızca veri güncellerken açılır. Uyandırmak için güç tuşuna basın ya da ekrana dokunun.	
 # apps/chess/main.c
 Piyon hangi taşa dönüşsün?	
+# apps/sky/skydata.c
+Polluks	
 # apps/ebooks/main.c
 Project Gutenberg'deki telifsiz kitaplar	
+# apps/sky/skydata.c
+Prokyon	
 # core/kui/trfmt.c
 Pzt	
 # apps/chess/main.c
 Rastgele	
+# apps/sky/skydata.c
+Regulus	
 # apps/chess/main.c
 Renginiz	
+# apps/sky/skydata.c
+Rigel	
 # apps/weather/main.c
 Rüzgâr %ld km/s %s	
 # apps/weather/main.c
@@ -497,6 +609,8 @@ Sağlık
 Seri	
 # apps/sudoku/main.c
 Sil	
+# apps/sky/skydata.c
+Sirius	
 # apps/weather/wx.c
 Sisli	
 # apps/sysinfo/main.c
@@ -523,6 +637,8 @@ Sonuç bulunamadı
 Sonuç bulunamadı.\nBaşka bir başlık ya da yazar adı deneyin.	
 # apps/ebooks/main.c
 Sonuçlar	
+# apps/sky/skydata.c
+Spika	
 # apps/news/news.c
 Spor	
 # apps/sudoku/main.c
@@ -533,6 +649,8 @@ Sunucu başlatılamadı
 Sunucu başlatılamadı (günlüğe bakın).	
 # apps/wordle/main.c
 Sözlükte yok (yalnızca kök kelimeler)	
+# apps/sky/skydata.c
+Süheyl	
 # apps/mines/main.c
 Süre: %ld:%02ld	
 # apps/chess/main.c
@@ -553,6 +671,8 @@ Tahta sabit
 Tahtaya bak	
 # apps/chess/main.c
 Tahtayı çevir	
+# apps/sky/main.c
+Takımyıldız · %s	
 # apps/currency/fx.c
 Tam altın	
 # apps/ebooks/main.c
@@ -579,6 +699,8 @@ Tekrar dene
 Telefon ya da bilgisayar aynı Wi-Fi ağında olmalı. Sayfada PIN'i girin, kitapları seçip Gönder'e basın. Uygulamayı kapatınca sunucu durur.	
 # core/kui/trfmt.c
 Temmuz	
+# apps/sky/skydata.c
+Terazi	
 # apps/chess/main.c
 Terfi	
 # apps/currency/main.c
@@ -599,8 +721,12 @@ Uygulamalar
 Uyku Ayarı	
 # apps/pano/main.c
 Uykuya geçiş: %d dk dokunulmazsa	
+# apps/sky/main.c
+Uzaklık %s AB (Güneş–Dünya = 1)	
 # apps/ebooks/main.c
 Vazgeç	
+# apps/sky/skydata.c
+Vega	
 # apps/pano/main.c
 Veri güncelleme: %d saatte bir	
 # apps/chess/main.c
@@ -615,6 +741,8 @@ Wi-Fi'yi açın; adres burada görünecek.
 Yarım altın	
 # apps/pano/pano.c
 Yatsı	
+# apps/sky/skydata.c
+Yay	
 # apps/ebooks/main.c
 Yazar bilinmiyor	
 # apps/sysinfo/main.c
@@ -623,6 +751,8 @@ Yazılım
 Yağmurlu	
 # apps/weather/main.c
 Yağış %s	
+# apps/sky/skydata.c
+Yengeç	
 # apps/game2048/main.c
 Yeni	
 # apps/ssh/main.c
@@ -641,6 +771,16 @@ Yetersiz taş — berabere
 Yoğun kar	
 # apps/currency/main.c
 Yükleniyor…	
+# apps/sky/main.c
+Yükseklik %d° · yön %s (%d°)	
+# apps/sky/skydata.c
+Yılancı	
+# apps/sky/main.c
+Yıldız	
+# apps/sky/main.c
+Yıldız · %s	
+# apps/sky/main.c
+Yıldız · %s · %s	
 # apps/chess/levels.c
 Zor	
 # apps/chess/main.c
@@ -651,6 +791,8 @@ Zorluk seçin
 bağlı değil	
 # core/kui/keyboard.c
 boşluk	
+# apps/sky/skydata.c
+Çalgı	
 # apps/sysinfo/main.c
 Çalışmıyor	
 # apps/sysinfo/main.c
@@ -671,6 +813,8 @@ boşluk
 Çeyrek altın	
 # apps/weather/wx.c
 Çisenti	
+# apps/sky/skydata.c
+Çoban	
 # apps/chess/levels.c
 Çok Kolay	
 # apps/upload/main.c
@@ -695,6 +839,8 @@ boşluk
 İki oyunculu devam	
 # apps/pano/pano.c
 İkindi	
+# apps/sky/skydata.c
+İkizler	
 # apps/pano/pano.c
 İlk dördün	
 # apps/pano/pano.c
@@ -735,6 +881,8 @@ boşluk
 Şiddetli sağanak	
 # apps/weather/wx.c
 Şiddetli yağmur	
+# apps/sky/main.c
+Şimdi	
 # apps/pano/pano.c
 Şişkin ay (büyüyen)	
 # apps/pano/pano.c
@@ -753,8 +901,26 @@ boşluk
 Şubat	
 # apps/ebooks/main.c
 “%s” · %d kitap%s	
+# apps/sky/main.c
+−1 gün	
+# apps/sky/main.c
+−1 sa	
+# apps/sky/main.c
+☉ Güneş	
+# apps/sky/main.c
+☾ Ay	
 # apps/pano/main.c
 ☾ uykuda	
+# apps/sky/main.c
+☿ Merkür	
+# apps/sky/main.c
+♀ Venüs	
+# apps/sky/main.c
+♂ Mars	
+# apps/sky/main.c
+♃ Jüpiter	
+# apps/sky/main.c
+♄ Satürn	
 # apps/mines/main.c
 ⚑ Açık	
 # apps/mines/main.c

@@ -379,3 +379,86 @@ Denetleniyor…	A verificar…
 Depoya ulaşılamadı.\nWi-Fi bağlantısını kontrol edin.	Não foi possível aceder ao repositório.\nVerifique a ligação Wi-Fi.
 Tüm uygulamalar güncel	Todas as apps estão atualizadas
 Bazı güncellemeler kurulamadı	Algumas atualizações não foram instaladas
+☉ Güneş	☉ Sol
+☾ Ay	☾ Lua
+☿ Merkür	☿ Mercúrio
+♀ Venüs	♀ Vênus
+♂ Mars	♂ Marte
+♃ Jüpiter	♃ Júpiter
+♄ Satürn	♄ Saturno
+−1 gün	−1 dia
+−1 sa	−1 h
+Şimdi	Agora
++1 sa	+1 h
++1 gün	+1 dia
+Parlaklık (kadir)	Brilho (magnitude)
+Ayrıntı için bir yıldıza ya da gezegene dokunun	Toque em uma estrela ou planeta para ver detalhes
+Gündüz · Güneş batınca yıldızlar görünür (gün batımı %s)	Dia · as estrelas aparecem após o pôr do sol (pôr do sol %s)
+Gündüz · Güneş bugün batmıyor	Dia · o Sol não se põe hoje
+Gece · Güneş bugün doğmuyor	Noite · o Sol não nasce hoje
+Gece · gün batımı %s, gün doğumu %s	Noite · pôr do sol %s, nascer do sol %s
+Ay: %s, %%%d aydınlık · doğuş %s · batış %s	Lua: %s, %d%% iluminada · nasce %s · se põe %s
+Bu gece görünen gezegenler: %s	Planetas visíveis esta noite: %s
+Bu gece parlak gezegen görünmüyor	Nenhum planeta brilhante esta noite
+Yükseklik %d° · yön %s (%d°)	Altura %d° · direção %s (%d°)
+%s · %%%d aydınlık	%s · %d%% iluminada
+Yıldız	Estrela
+Gezegen · parlaklık %s kadir	Planeta · magnitude %s
+Doğuş %s · batış %s	Nasce %s · se põe %s
+Uzaklık %s AB (Güneş–Dünya = 1)	Distância %s UA (Sol–Terra = 1)
+Yıldız · %s · %s	Estrela · %s · %s
+Yıldız · %s	Estrela · %s
+Parlaklık %s kadir	Magnitude %s
+Takımyıldız · %s	Constelação · %s
+En parlak yıldızı: %s	Estrela mais brilhante: %s
+Gökyüzü	Céu noturno
+Andromeda	Andrômeda
+Kova	Aquário
+Kartal	Águia
+Koç	Áries
+Arabacı	Cocheiro
+Çoban	Boieiro
+Yengeç	Câncer
+Büyükköpek	Cão Maior
+Küçükköpek	Cão Menor
+Oğlak	Capricórnio
+Kraliçe	Cassiopeia
+Kral	Cefeu
+Kuğu	Cisne
+Ejderha	Dragão
+İkizler	Gêmeos
+Herkül	Hércules
+Aslan	Leão
+Terazi	Libra
+Çalgı	Lira
+Yılancı	Ofiúco
+Avcı	Órion
+Kanatlı At	Pégaso
+Kahraman	Perseu
+Balıklar	Peixes
+Yay	Sagitário
+Akrep	Escorpião
+Boğa	Touro
+Büyükayı	Ursa Maior
+Küçükayı	Ursa Menor
+Başak	Virgem
+Sirius	Sírius
+Süheyl	Canopus
+Arktürüs	Arcturus
+Vega	Vega
+Kapella	Capela
+Rigel	Rigel
+Prokyon	Prócion
+Betelgöz	Betelgeuse
+Altair	Altair
+Aldebaran	Aldebarã
+Antares	Antares
+Spika	Espiga
+Polluks	Pólux
+Fomalhaut	Fomalhaut
+Deneb	Deneb
+Regulus	Régulo
+Kastor	Castor
+Kutup Yıldızı	Estrela Polar
+Algol	Algol
+Mizar	Mizar

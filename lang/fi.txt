@@ -379,3 +379,86 @@ Denetleniyor…	Tarkistetaan…
 Depoya ulaşılamadı.\nWi-Fi bağlantısını kontrol edin.	Pakettivarastoon ei saada yhteyttä.\nTarkista Wi-Fi-yhteys.
 Tüm uygulamalar güncel	Kaikki sovellukset ovat ajan tasalla
 Bazı güncellemeler kurulamadı	Joitakin päivityksiä ei voitu asentaa
+☉ Güneş	☉ Aurinko
+☾ Ay	☾ Kuu
+☿ Merkür	☿ Merkurius
+♀ Venüs	♀ Venus
+♂ Mars	♂ Mars
+♃ Jüpiter	♃ Jupiter
+♄ Satürn	♄ Saturnus
+−1 gün	−1 pv
+−1 sa	−1 h
+Şimdi	Nyt
++1 sa	+1 h
++1 gün	+1 pv
+Parlaklık (kadir)	Kirkkaus (magnitudi)
+Ayrıntı için bir yıldıza ya da gezegene dokunun	Napauta tähteä tai planeettaa nähdäksesi tiedot
+Gündüz · Güneş batınca yıldızlar görünür (gün batımı %s)	Päivä · tähdet näkyvät auringonlaskun jälkeen (auringonlasku %s)
+Gündüz · Güneş bugün batmıyor	Päivä · aurinko ei laske tänään
+Gece · Güneş bugün doğmuyor	Yö · aurinko ei nouse tänään
+Gece · gün batımı %s, gün doğumu %s	Yö · auringonlasku %s, auringonnousu %s
+Ay: %s, %%%d aydınlık · doğuş %s · batış %s	Kuu: %s, %d %% valaistu · nousee %s · laskee %s
+Bu gece görünen gezegenler: %s	Tänä yönä näkyvät planeetat: %s
+Bu gece parlak gezegen görünmüyor	Tänä yönä ei kirkkaita planeettoja
+Yükseklik %d° · yön %s (%d°)	Korkeus %d° · suunta %s (%d°)
+%s · %%%d aydınlık	%s · %d %% valaistu
+Yıldız	Tähti
+Gezegen · parlaklık %s kadir	Planeetta · kirkkaus %s magnitudia
+Doğuş %s · batış %s	Nousee %s · laskee %s
+Uzaklık %s AB (Güneş–Dünya = 1)	Etäisyys %s au (Aurinko–Maa = 1)
+Yıldız · %s · %s	Tähti · %s · %s
+Yıldız · %s	Tähti · %s
+Parlaklık %s kadir	Kirkkaus %s magnitudia
+Takımyıldız · %s	Tähdistö · %s
+En parlak yıldızı: %s	Kirkkain tähti: %s
+Gökyüzü	Tähtitaivas
+Andromeda	Andromeda
+Kova	Vesimies
+Kartal	Kotka
+Koç	Oinas
+Arabacı	Ajomies
+Çoban	Karhunvartija
+Yengeç	Krapu
+Büyükköpek	Iso koira
+Küçükköpek	Pieni koira
+Oğlak	Kauris
+Kraliçe	Kassiopeia
+Kral	Kefeus
+Kuğu	Joutsen
+Ejderha	Lohikäärme
+İkizler	Kaksoset
+Herkül	Herkules
+Aslan	Leijona
+Terazi	Vaaka
+Çalgı	Lyyra
+Yılancı	Käärmeenkantaja
+Avcı	Orion
+Kanatlı At	Pegasos
+Kahraman	Perseus
+Balıklar	Kalat
+Yay	Jousimies
+Akrep	Skorpioni
+Boğa	Härkä
+Büyükayı	Iso karhu
+Küçükayı	Pieni karhu
+Başak	Neitsyt
+Sirius	Sirius
+Süheyl	Canopus
+Arktürüs	Arcturus
+Vega	Vega
+Kapella	Capella
+Rigel	Rigel
+Prokyon	Procyon
+Betelgöz	Betelgeuze
+Altair	Altair
+Aldebaran	Aldebaran
+Antares	Antares
+Spika	Spica
+Polluks	Pollux
+Fomalhaut	Fomalhaut
+Deneb	Deneb
+Regulus	Regulus
+Kastor	Kastor
+Kutup Yıldızı	Pohjantähti
+Algol	Algol
+Mizar	Mizar

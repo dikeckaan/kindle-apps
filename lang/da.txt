@@ -379,3 +379,86 @@ Denetleniyor…	Kontrollerer…
 Depoya ulaşılamadı.\nWi-Fi bağlantısını kontrol edin.	Kunne ikke nå pakkearkivet.\nTjek wifi-forbindelsen.
 Tüm uygulamalar güncel	Alle apps er opdaterede
 Bazı güncellemeler kurulamadı	Nogle opdateringer kunne ikke installeres
+☉ Güneş	☉ Solen
+☾ Ay	☾ Månen
+☿ Merkür	☿ Merkur
+♀ Venüs	♀ Venus
+♂ Mars	♂ Mars
+♃ Jüpiter	♃ Jupiter
+♄ Satürn	♄ Saturn
+−1 gün	−1 dag
+−1 sa	−1 t
+Şimdi	Nu
++1 sa	+1 t
++1 gün	+1 dag
+Parlaklık (kadir)	Lysstyrke (størrelsesklasse)
+Ayrıntı için bir yıldıza ya da gezegene dokunun	Tryk på en stjerne eller planet for detaljer
+Gündüz · Güneş batınca yıldızlar görünür (gün batımı %s)	Dag · stjernerne ses efter solnedgang (solnedgang %s)
+Gündüz · Güneş bugün batmıyor	Dag · solen går ikke ned i dag
+Gece · Güneş bugün doğmuyor	Nat · solen står ikke op i dag
+Gece · gün batımı %s, gün doğumu %s	Nat · solnedgang %s, solopgang %s
+Ay: %s, %%%d aydınlık · doğuş %s · batış %s	Månen: %s, %d %% oplyst · op %s · ned %s
+Bu gece görünen gezegenler: %s	Planeter synlige i nat: %s
+Bu gece parlak gezegen görünmüyor	Ingen klare planeter i nat
+Yükseklik %d° · yön %s (%d°)	Højde %d° · retning %s (%d°)
+%s · %%%d aydınlık	%s · %d %% oplyst
+Yıldız	Stjerne
+Gezegen · parlaklık %s kadir	Planet · lysstyrke %s
+Doğuş %s · batış %s	Op %s · ned %s
+Uzaklık %s AB (Güneş–Dünya = 1)	Afstand %s AE (Sol–Jord = 1)
+Yıldız · %s · %s	Stjerne · %s · %s
+Yıldız · %s	Stjerne · %s
+Parlaklık %s kadir	Lysstyrke %s
+Takımyıldız · %s	Stjernebillede · %s
+En parlak yıldızı: %s	Klareste stjerne: %s
+Gökyüzü	Stjernehimlen
+Andromeda	Andromeda
+Kova	Vandmanden
+Kartal	Ørnen
+Koç	Vædderen
+Arabacı	Kusken
+Çoban	Bjørnevogteren
+Yengeç	Krebsen
+Büyükköpek	Store Hund
+Küçükköpek	Lille Hund
+Oğlak	Stenbukken
+Kraliçe	Cassiopeia
+Kral	Kefeus
+Kuğu	Svanen
+Ejderha	Dragen
+İkizler	Tvillingerne
+Herkül	Herkules
+Aslan	Løven
+Terazi	Vægten
+Çalgı	Lyren
+Yılancı	Slangebæreren
+Avcı	Orion
+Kanatlı At	Pegasus
+Kahraman	Perseus
+Balıklar	Fiskene
+Yay	Skytten
+Akrep	Skorpionen
+Boğa	Tyren
+Büyükayı	Store Bjørn
+Küçükayı	Lille Bjørn
+Başak	Jomfruen
+Sirius	Sirius
+Süheyl	Canopus
+Arktürüs	Arcturus
+Vega	Vega
+Kapella	Capella
+Rigel	Rigel
+Prokyon	Procyon
+Betelgöz	Betelgeuse
+Altair	Altair
+Aldebaran	Aldebaran
+Antares	Antares
+Spika	Spica
+Polluks	Pollux
+Fomalhaut	Fomalhaut
+Deneb	Deneb
+Regulus	Regulus
+Kastor	Kastor
+Kutup Yıldızı	Polarstjernen
+Algol	Algol
+Mizar	Mizar

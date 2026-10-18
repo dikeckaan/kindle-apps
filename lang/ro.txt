@@ -379,3 +379,86 @@ Denetleniyor…	Se verifică…
 Depoya ulaşılamadı.\nWi-Fi bağlantısını kontrol edin.	Depozitul nu poate fi accesat.\nVerificați conexiunea Wi-Fi.
 Tüm uygulamalar güncel	Toate aplicațiile sunt la zi
 Bazı güncellemeler kurulamadı	Unele actualizări nu s-au instalat
+☉ Güneş	☉ Soarele
+☾ Ay	☾ Luna
+☿ Merkür	☿ Mercur
+♀ Venüs	♀ Venus
+♂ Mars	♂ Marte
+♃ Jüpiter	♃ Jupiter
+♄ Satürn	♄ Saturn
+−1 gün	−1 zi
+−1 sa	−1 h
+Şimdi	Acum
++1 sa	+1 h
++1 gün	+1 zi
+Parlaklık (kadir)	Strălucire (magnitudine)
+Ayrıntı için bir yıldıza ya da gezegene dokunun	Atingeți o stea sau o planetă pentru detalii
+Gündüz · Güneş batınca yıldızlar görünür (gün batımı %s)	Zi · stelele apar după apus (apus %s)
+Gündüz · Güneş bugün batmıyor	Zi · Soarele nu apune astăzi
+Gece · Güneş bugün doğmuyor	Noapte · Soarele nu răsare astăzi
+Gece · gün batımı %s, gün doğumu %s	Noapte · apus %s, răsărit %s
+Ay: %s, %%%d aydınlık · doğuş %s · batış %s	Luna: %s, %d%% luminată · răsare %s · apune %s
+Bu gece görünen gezegenler: %s	Planete vizibile în noaptea aceasta: %s
+Bu gece parlak gezegen görünmüyor	Nicio planetă strălucitoare în noaptea aceasta
+Yükseklik %d° · yön %s (%d°)	Înălțime %d° · direcție %s (%d°)
+%s · %%%d aydınlık	%s · %d%% luminată
+Yıldız	Stea
+Gezegen · parlaklık %s kadir	Planetă · magnitudine %s
+Doğuş %s · batış %s	Răsare %s · apune %s
+Uzaklık %s AB (Güneş–Dünya = 1)	Distanță %s UA (Soare–Pământ = 1)
+Yıldız · %s · %s	Stea · %s · %s
+Yıldız · %s	Stea · %s
+Parlaklık %s kadir	Magnitudine %s
+Takımyıldız · %s	Constelație · %s
+En parlak yıldızı: %s	Cea mai strălucitoare stea: %s
+Gökyüzü	Cerul înstelat
+Andromeda	Andromeda
+Kova	Vărsătorul
+Kartal	Vulturul
+Koç	Berbecul
+Arabacı	Vizitiul
+Çoban	Boarul
+Yengeç	Racul
+Büyükköpek	Câinele Mare
+Küçükköpek	Câinele Mic
+Oğlak	Capricornul
+Kraliçe	Cassiopeia
+Kral	Cefeu
+Kuğu	Lebăda
+Ejderha	Dragonul
+İkizler	Gemenii
+Herkül	Hercule
+Aslan	Leul
+Terazi	Balanța
+Çalgı	Lira
+Yılancı	Ofiucus
+Avcı	Orion
+Kanatlı At	Pegas
+Kahraman	Perseu
+Balıklar	Peștii
+Yay	Săgetătorul
+Akrep	Scorpionul
+Boğa	Taurul
+Büyükayı	Ursa Mare
+Küçükayı	Ursa Mică
+Başak	Fecioara
+Sirius	Sirius
+Süheyl	Canopus
+Arktürüs	Arcturus
+Vega	Vega
+Kapella	Capella
+Rigel	Rigel
+Prokyon	Procyon
+Betelgöz	Betelgeuse
+Altair	Altair
+Aldebaran	Aldebaran
+Antares	Antares
+Spika	Spica
+Polluks	Pollux
+Fomalhaut	Fomalhaut
+Deneb	Deneb
+Regulus	Regulus
+Kastor	Castor
+Kutup Yıldızı	Steaua Polară
+Algol	Algol
+Mizar	Mizar

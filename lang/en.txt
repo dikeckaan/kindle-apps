@@ -379,3 +379,86 @@ Denetleniyor…	Checking…
 Depoya ulaşılamadı.\nWi-Fi bağlantısını kontrol edin.	Could not reach the repository.\nCheck the Wi-Fi connection.
 Tüm uygulamalar güncel	All apps are up to date
 Bazı güncellemeler kurulamadı	Some updates could not be installed
+☉ Güneş	☉ Sun
+☾ Ay	☾ Moon
+☿ Merkür	☿ Mercury
+♀ Venüs	♀ Venus
+♂ Mars	♂ Mars
+♃ Jüpiter	♃ Jupiter
+♄ Satürn	♄ Saturn
+−1 gün	−1 day
+−1 sa	−1 h
+Şimdi	Now
++1 sa	+1 h
++1 gün	+1 day
+Parlaklık (kadir)	Brightness (magnitude)
+Ayrıntı için bir yıldıza ya da gezegene dokunun	Tap a star or planet for details
+Gündüz · Güneş batınca yıldızlar görünür (gün batımı %s)	Daytime · stars appear after sunset (sunset %s)
+Gündüz · Güneş bugün batmıyor	Daytime · the Sun does not set today
+Gece · Güneş bugün doğmuyor	Night · the Sun does not rise today
+Gece · gün batımı %s, gün doğumu %s	Night · sunset %s, sunrise %s
+Ay: %s, %%%d aydınlık · doğuş %s · batış %s	Moon: %s, %d%% lit · rises %s · sets %s
+Bu gece görünen gezegenler: %s	Planets visible tonight: %s
+Bu gece parlak gezegen görünmüyor	No bright planets tonight
+Yükseklik %d° · yön %s (%d°)	Altitude %d° · direction %s (%d°)
+%s · %%%d aydınlık	%s · %d%% lit
+Yıldız	Star
+Gezegen · parlaklık %s kadir	Planet · magnitude %s
+Doğuş %s · batış %s	Rises %s · sets %s
+Uzaklık %s AB (Güneş–Dünya = 1)	Distance %s AU (Sun–Earth = 1)
+Yıldız · %s · %s	Star · %s · %s
+Yıldız · %s	Star · %s
+Parlaklık %s kadir	Magnitude %s
+Takımyıldız · %s	Constellation · %s
+En parlak yıldızı: %s	Brightest star: %s
+Gökyüzü	Night Sky
+Andromeda	Andromeda
+Kova	Aquarius
+Kartal	Aquila
+Koç	Aries
+Arabacı	Auriga
+Çoban	Boötes
+Yengeç	Cancer
+Büyükköpek	Canis Major
+Küçükköpek	Canis Minor
+Oğlak	Capricornus
+Kraliçe	Cassiopeia
+Kral	Cepheus
+Kuğu	Cygnus
+Ejderha	Draco
+İkizler	Gemini
+Herkül	Hercules
+Aslan	Leo
+Terazi	Libra
+Çalgı	Lyra
+Yılancı	Ophiuchus
+Avcı	Orion
+Kanatlı At	Pegasus
+Kahraman	Perseus
+Balıklar	Pisces
+Yay	Sagittarius
+Akrep	Scorpius
+Boğa	Taurus
+Büyükayı	Ursa Major
+Küçükayı	Ursa Minor
+Başak	Virgo
+Sirius	Sirius
+Süheyl	Canopus
+Arktürüs	Arcturus
+Vega	Vega
+Kapella	Capella
+Rigel	Rigel
+Prokyon	Procyon
+Betelgöz	Betelgeuse
+Altair	Altair
+Aldebaran	Aldebaran
+Antares	Antares
+Spika	Spica
+Polluks	Pollux
+Fomalhaut	Fomalhaut
+Deneb	Deneb
+Regulus	Regulus
+Kastor	Castor
+Kutup Yıldızı	Polaris
+Algol	Algol
+Mizar	Mizar
