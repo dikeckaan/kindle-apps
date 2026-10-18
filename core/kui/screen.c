@@ -125,9 +125,9 @@ void kui_text(KuiRect box, const char *utf8, KuiFont f, int px, KuiAlign a, unsi
 	ot.margins.top = (short) (box.y + (h < box.h ? (box.h - h) / 2 : 0));
 	ot.margins.left = (short) left;
 	ot.margins.right = (short) (kui_width() - (box.x + box.w));
-	FBInkConfig c = cfg;
-	c.fg_color = (FG_COLOR_INDEX_T) (fg / 0x11);
-	fbink_print_ot(fb, utf8, &ot, &c, NULL);
+	/* FBInk applies fg_color only at init/pen update, so set the pen for every call */
+	fbink_set_fg_pen_gray(fg, false, true);
+	fbink_print_ot(fb, utf8, &ot, &cfg, NULL);
 }
 
 void kui_mark_dirty(KuiRect r) { kui_dirty_add(&dirty, r); }
