@@ -228,6 +228,28 @@ Tasarımın dayandığı üç varsayım ilk iş cihazda doğrulanır (atılabili
 3. Arayüzü duraklat/geri getir dizisi FW 5.19.2'de sorunsuz (çökme senaryosu dahil).
 Sonuçlar bu belgeye eklenir; bir varsayım çökerse tasarım güncellenip kullanıcıya bildirilir.
 
+### Spike sonuçları (2026-10-18)
+
+- **FBInk** master `886f25f` (`tools/deps.lock`), statik `libfbink.a`, `KINDLE=1`, tam özellik
+  (OpenType dahil). Tanıma: "Kindle Basic 4 (2AP → 0x957, Cava on Bellatrix)", `is_mtk=1`,
+  fb `hwtcon_v2`, 1072×1448 Y8, rota 3, 300 dpi. Türkçe + satranç glifleri DejaVu Sans ile doğru.
+- **Dalga formları:** `WFM_DU, A2, GL16, AUTO, REAGL` hepsi `fbink_refresh` ret=0 döndü.
+  Kullanıcı flaş gözlemi alınamadı → **karar (benim):** siyah-beyaz bölgesel = `WFM_DU`,
+  gri içerikli bölgesel = `WFM_GL16`, ikisi de `is_flashing=false`; tam yenileme =
+  `WFM_GC16` + `is_flashing=true`. 2048 cihaz testinde gözle doğrulanacak.
+- **Dokunmatik:** `/dev/input/event1` adı `pt_mt`, çoklu dokunma protokol B
+  (`ABS_MT_TRACKING_ID`, `ABS_MT_POSITION_X/Y`), aralık X 0..1071, Y 0..1447 = **ekran
+  koordinatıyla birebir** (döndürme/takas yok; FBInk `touch_swap/mirror` = 0).
+  Koordinatlar `SYN_REPORT`'ta okunmalı (TRACKING_ID önce gelir). `EVIOCGRAB` çalışıyor —
+  **ancak KOReader açıksa aygıtı o tutar (GRAB=-1)**; kui başlarken GRAB başarısızsa
+  kullanıcıya "KOReader'ı kapatın" mesajı göstermeli.
+- **Güç tuşu:** `/dev/input/event0` `bd71828-pwrkey` (KEY_POWER) — uyku powerd'de kalır,
+  biz yalnız lipc olaylarını dinleriz.
+- **Duraklat/geri getir:** pillow disable + `SIGSTOP awesome` + `stop statusbar` +
+  `SIGSTOP volumd` ve tersi FW 5.19.2'de sorunsuz; çıkışta ana ekran geri geldi.
+- **Aygıt erişimi notu:** KOReader kapalıyken SSH yalnızca geçici bağımsız dropbear
+  (port 2222, RAM'de) üzerinden.
+
 ## 9. Builder'a bırakılanlar
 
 Kod yapısı ve modül ayrımı; bileşen görünüm detayları ve yerleşim; Stockfish seviye
