@@ -45,7 +45,20 @@ typedef struct { int off, len; } KuiLine;
  * gives an empty line, a word wider than the line is split between code points. Returns the line count (<= max). */
 int kui_wrap(const char *text, int width, int (*measure)(const char *s, int n, void *ctx), void *ctx, KuiLine *out, int max);
 
-/* ---- Turkish dates and numbers ---- */
+/* ---- translations (Turkish is the source language) ---- */
+const char *kui_t(const char *src);   /* translated text, or src */
+#define T(s) kui_t(s)                 /* user-visible text */
+#define N_(s) (s)                     /* marks text in static tables; translate where it is shown with T() */
+typedef struct { const char *code, *name; } KuiLang;
+const KuiLang *kui_languages(int *n); /* the 20 supported languages, Turkish first */
+const char *kui_lang(void);           /* current code, e.g. "tr" */
+void kui_i18n_set(const char *code);  /* unknown code → "tr" */
+void kui_i18n_load_saved(void);       /* $KUI_ROOT/data/lang (kui_init calls it) */
+int  kui_i18n_save(const char *code); /* 0 = ok */
+
+/* ---- dates and numbers (names and separators follow the language) ---- */
+void kui_set_num_format(const char *decimal_mark, const char *thousands_sep);
+void kui_set_text_hook(const char *(*translate)(const char *)); /* used for day/month names; NULL = Turkish */
 struct tm;
 const char *kui_tr_weekday(int wday);       /* 0 = "Pazar"; "" when out of range */
 const char *kui_tr_weekday_short(int wday); /* "Paz", "Pzt", … */

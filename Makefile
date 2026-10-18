@@ -37,6 +37,7 @@ TEST_test_lipc_SRCS := core/kui/lipc.c core/kui/store.c
 TEST_test_fx_SRCS := apps/currency/fx.c core/net/xml.c core/kui/utf8tr.c core/vendor/cjson/cJSON.c
 TEST_test_news_SRCS := apps/news/news.c core/net/xml.c core/kui/utf8tr.c core/kui/trfmt.c
 TEST_test_wordle_SRCS := apps/wordle/wordle.c core/kui/utf8tr.c
+TEST_test_i18n_SRCS := core/kui/i18n.c core/kui/trfmt.c core/kui/store.c core/kui/utf8tr.c
 TEST_test_uci_SRCS := apps/chess/uci.c apps/chess/levels.c
 TEST_test_mines_SRCS := apps/mines/mines.c
 TEST_test_sudoku_SRCS := apps/sudoku/sudoku.c
