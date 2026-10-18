@@ -11,7 +11,7 @@
 #include "weather/wx.h"
 #include "weather/wxdraw.h"
 
-#define WX_EVERY_S (30 * 60)
+#define WX_EVERY_S (6 * 3600) /* the forecast changes slowly */
 
 static WxCity city;
 static Wx wx;

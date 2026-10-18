@@ -69,6 +69,7 @@ static int choice(const char *key, const int *c, int n, int def)
 static int idle_min(void) { return choice("idle_min", idle_choices, 4, 2); }
 static int data_hours(void) { return choice("data_hours", data_choices, 4, 1); }
 /* how old data may get: the saver's interval, otherwise the usual 10 / 30 / 60 minutes */
+#define WX_EVERY_S (6 * 3600L)
 static int fetch_all_now;
 static long max_age(long normal_s) { return fetch_all_now ? 0 : opt(OPT_SAVER) ? data_hours() * 3600L : normal_s; }
 
@@ -147,7 +148,8 @@ static void load_weather(int fetch)
 	city = cs[0];
 	wx_cache_name(&city, name, sizeof name);
 	have_wx = read_cache("weather", name, buf, sizeof buf, &mt) > 0 && wx_parse(buf, &wx) == 0;
-	if (fetch && (!have_wx || time(NULL) - mt > max_age(30 * 60)) && time(NULL) - t_wx > 30 * 60) {
+	/* the forecast changes slowly: every 6 hours is enough, whatever the news interval is */
+	if (fetch && (!have_wx || time(NULL) - mt > WX_EVERY_S) && time(NULL) - t_wx > 30 * 60) {
 		char url[700];
 		t_wx = (long) time(NULL);
 		wx_forecast_url(&city, url, sizeof url);
