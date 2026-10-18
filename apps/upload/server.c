@@ -22,7 +22,8 @@
 #define DRAIN_MAX (4LL * 1024 * 1024)
 #define PRE_PIN_MAX 16384 /* body bytes allowed before the PIN is verified */
 #define PER_IP_CONNS 3
-#define LOCK_MS (5 * 60 * 1000L) /* lock after repeated guessing, then a fresh PIN */
+#define LOCK_MS (5 * 60 * 1000L) /* first lock after repeated guessing; each further one lasts twice as long */
+#define MAX_LOCKS 4              /* the last lock only ends with the owner's tap on the device */
 #define MAX_REGENS 3      /* PIN replacements before the server locks */
 #define BODY_SLACK (1024LL * 1024) /* multipart framing on top of a 200 MB file */
 #define MSG_CAP 4096
@@ -60,7 +61,7 @@ struct UploadServer {
 	int lfd, port;
 	char dir[400];
 	char pin[HTTPD_PIN_LEN + 1];
-	int bad_pins, gen, idle_ms, pause_ms, locked;
+	int bad_pins, gen, idle_ms, pause_ms, locked, locks; /* locks: how many times it has locked */
 	long last_wrong, locked_at, lock_ms;
 	struct { unsigned ip; int wrong; long last; } peer[16]; /* wrong-PIN backoff per address */
 	int active; /* index of the connection uploading, or -1 */
@@ -290,7 +291,7 @@ static void respond(Conn *c, int status, const char *msg_html)
 /* the lock after repeated guessing expires: the owner is never locked out for good */
 static int is_locked(UploadServer *s)
 {
-	if (s->locked && now_ms() - s->locked_at >= s->lock_ms) s->locked = 0;
+	if (s->locked && s->locks < MAX_LOCKS && now_ms() - s->locked_at >= s->lock_ms << (s->locks - 1)) s->locked = 0;
 	return s->locked;
 }
 
@@ -349,6 +350,7 @@ static void wrong_pin(Conn *c)
 		s->gen++;
 		if (s->gen % MAX_REGENS == 0) { /* someone keeps guessing: refuse everything for a while */
 			s->locked = 1;
+			s->locks++;
 			s->locked_at = now_ms();
 		}
 	}
@@ -723,3 +725,12 @@ void upload_close(UploadServer *s)
 int upload_locked(const UploadServer *s) { return is_locked((UploadServer *) s); }
 
 void upload_set_lock_ms(UploadServer *s, long ms) { s->lock_ms = ms; }
+
+void upload_unlock(UploadServer *s)
+{
+	char fresh[HTTPD_PIN_LEN + 1];
+	if (new_pin(fresh, s->pin) == 0) memcpy(s->pin, fresh, sizeof fresh);
+	s->locked = s->locks = s->bad_pins = 0;
+	s->gen++;
+	memset(s->peer, 0, sizeof s->peer);
+}
