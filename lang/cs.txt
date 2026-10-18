@@ -1,0 +1,262 @@
+# Czech catalog for kindle-apps
+%%%d	%d %%
+%d %s %d, %s	%d. %s %d, %s
+%d/%d · güncellendi %02d:%02d	%d/%d · aktualizováno %02d:%02d
+%d/%d · çevrimdışı, son veri %02d:%02d	%d/%d · offline, poslední data %02d:%02d
+%s %d/6 tahminde bildin.	%s Uhodnuto, pokusy: %d/6.
+%s beklenmedik şekilde kapandı	%s: neočekávané ukončení
+%s silinsin mi?	Smazat %s?
+%s · %d×%d · %d mayın	%s · %d×%d · min: %d
+%s · Süre: %ld:%02ld	%s · Čas: %ld:%02ld
++ Ekle	+ Přidat
+1 saat	1 hodina
+10 dakika	10 minut
+2 saat	2 hodiny
+2048	2048
+2048'e ulaştın.	Dosáhli jste 2048.
+30 dakika	30 minut
+5 dakika	5 minut
+5 harf girin	Zadejte 5 písmen
+50 hamle kuralı — berabere	Pravidlo 50 tahů — remíza
+Altın (serbest piyasa, ₺)	Zlato (volný trh, ₺)
+Alış	Nákup
+Aralık	prosince
+Aranıyor…	Hledání…
+At	Jezdec
+Az bulutlu	Skoro jasno
+AÇIK	ZAPNUTO
+Aç	Zapnout
+Açık	Jasno
+Açıldı. Gelen bağlantılar engelleniyor.	Zapnuto. Příchozí spojení jsou blokována.
+Ağustos	srpna
+B	Z
+Bağlantı kurulamadı. Wi-Fi açık mı?	Nelze se připojit. Je Wi-Fi zapnuté?
+Bağlantı yok, kurlar alınamadı	Bez připojení, kurzy nenačteny
+Bağlantı yok, veri alınamadı	Bez připojení, data nenačtena
+Beyaz	Bílý
+Bilim	Věda
+Bu oyun bitirilsin mi?	Ukončit tuto partii?
+Bu sefer olmadı	Tentokrát to nevyšlo
+Bugün	Dnes
+Bugün  en yüksek %s · en düşük %s · ☼ %s – %s	Dnes  max. %s · min. %s · ☼ %s – %s
+Bulmacayı çözdünüz.	Sudoku je vyřešené.
+Bütün kartlar açık. Oyun tamamlansın mı?	Všechny karty jsou odkryté. Dokončit hru?
+Bütün kartları yerleştirdin.	Všechny karty jsou vyskládané.
+Cmt	So
+Cum	Pá
+Cuma	pátek
+Cumartesi	sobota
+Cumhuriyet altını	Mince Cumhuriyet
+D	V
+Devam	Pokračovat
+Devam et	Pokračovat
+Dil	Jazyk
+Dokun: aç	Dotyk: odkrýt
+Dokun: bayrak	Dotyk: vlajka
+Dolu, fırtına	Bouřka s krupobitím
+Donan yağmur	Mrznoucí déšť
+Donan çisenti	Mrznoucí mrholení
+Dâhice!	Geniální!
+Döviz & Altın	Měny a zlato
+Dünya	Svět
+Düşünüyor… (%s)	Přemýšlí… (%s)
+Ekim	října
+Ekonomi	Ekonomika
+En az %d karakter girin	Minimální počet znaků: %d
+En fazla 10 şehir kaydedilebilir.	Lze uložit nejvýše 10 měst.
+En iyi	Rekord
+En iyi seri	Nejlepší série
+Evet	Ano
+Eylül	září
+Fil	Střelec
+G	J
+GB	JZ
+GD	JV
+Gazete	Zprávy
+Geri al	Zpět
+Gram altın	Gram zlata
+Gök gürültülü	Bouřka
+Gönder	Odeslat
+Güncel	Aktuality
+Güncellendi %s · Open-Meteo	Aktualizováno %s · Open-Meteo
+Güncelleniyor…	Aktualizace…
+Gündem	Témata dne
+Güvenlik Duvarı	Firewall
+Güzel!	Pěkně!
+Haberler alınamadı.\nWi-Fi bağlantısını kontrol edin.	Zprávy se nepodařilo načíst.\nZkontrolujte připojení Wi-Fi.
+Harika!	Skvělé!
+Hata	Chyba
+Hataları göster: Açık	Ukázat chyby: Ano
+Hataları göster: Kapalı	Ukázat chyby: Ne
+Hava Durumu	Počasí
+Hava durumu alınamadı.\nWi-Fi bağlantısını kontrol edip Yenile'ye basın.	Počasí se nepodařilo načíst.\nZkontrolujte Wi-Fi a stiskněte Obnovit.
+Hava durumu yok (Wi-Fi kapalı olabilir)	Počasí není k dispozici (Wi-Fi vypnuté?)
+Hayır	Ne
+Haziran	června
+Hedef para	Cílová měna
+Henüz parola yok	Zatím bez hesla
+Henüz uygulama kurulu değil	Zatím žádné aplikace
+Her hamlede tahtayı çevir	Otáčet šachovnici po každém tahu
+Hissedilen %s	Pocitově %s
+Hiç uyuma	Neuspávat
+K	S
+KAPALI	VYPNUTO
+KB	SZ
+KD	SV
+Kale	Věž
+Kapalı	Zataženo
+Kapat	Zavřít
+Kapatıldı. Kindle yeniden başlayınca tekrar açılır.	Vypnuto. Po restartu Kindlu se znovu zapne.
+Kar sağanağı	Sněhové přeháňky
+Kar taneleri	Sněhová zrna
+Karlı	Sněžení
+Kasım	listopadu
+Kaydedilemedi.	Nelze uložit.
+Kaynak para	Zdrojová měna
+Kaynak: %s	Zdroj: %s
+Kazandın!	Vyhráno!
+Kazanma %	Výhry %
+Kelime Oyunu	Slovní hra
+Kelime listesi bulunamadı. Uygulamayı yeniden kurun.	Seznam slov nenalezen. Přeinstalujte aplikaci.
+Kelime: %s	Slovo: %s
+Kindle bu süre dokunulmadan kalınca uyur.\n"Hiç uyuma" pili hızlı tüketir.\nYeniden başlatınca varsayılana dönebilir.	Kindle usne po této době bez dotyku.\n„Neuspávat“ rychle vybíjí baterii.\nPo restartu se může vrátit výchozí hodnota.
+Kolay	Lehký
+Kullanıcı adı: root\nSunucu bu uygulama kapanınca da çalışır.\nKindle uyuyunca Wi-Fi ile birlikte bağlantı kopar.\nYeniden başlatınca kapalı açılır.	Uživatel: root\nServer běží i po zavření aplikace.\nKdyž Kindle usne, spojení se přeruší spolu s Wi-Fi.\nPo restartu je server vypnutý.
+Kültür	Kultura
+Manşet	Titulky
+Mart	března
+Masa Saati	Hodiny
+Mayın Tarlası	Hledání min
+Mayın: %d	Miny: %d
+Mayına bastın	Šlápli jste na minu
+Mayıs	května
+Menü	Menu
+Mevcut oyun silinsin mi?	Smazat rozehranou hru?
+Motor yanıt vermedi	Motor neodpovídá
+Muhteşem!	Úžasné!
+Nem %s	Vlhkost %s
+Nisan	dubna
+Not: Açık	Poznámky: Ano
+Not: Kapalı	Poznámky: Ne
+Ocak	ledna
+Ons (USD)	Unce (USD)
+Orta	Střední
+Otomatik tamamla	Automaticky dokončit
+Oynanan	Odehráno
+Oyun bitti	Konec hry
+Parola	Heslo
+Parola belirlenmiş	Heslo nastaveno
+Parola kaydedildi.	Heslo uloženo.
+Parola kaydedilemedi.	Heslo se nepodařilo uložit.
+Parolalar aynı değil, tekrar deneyin.	Hesla se neshodují, zkuste to znovu.
+Parolayı değiştir	Změnit heslo
+Parolayı tekrar girin	Zadejte heslo znovu
+Parçalı bulutlu	Polojasno
+Pat — berabere	Pat — remíza
+Paz	Ne
+Pazar	neděle
+Pazartesi	pondělí
+Per	Čt
+Perşembe	čtvrtek
+Piyon hangi taşa dönüşsün?	Na jakou figuru proměnit pěšce?
+Pzt	Po
+Rastgele	Náhodně
+Renginiz	Vaše barva
+Rüzgâr %ld km/s %s	Vítr %ld km/h %s
+Rüzgâr —	Vítr —
+SSH Sunucusu	SSH server
+Sal	Út
+Salı	úterý
+Satranç	Šachy
+Satranç motoru çalışmadı.	Šachový motor se nespustil.
+Satış	Prodej
+Sağanak	Přeháňky
+Sağlık	Zdraví
+Seri	Série
+Sil	Smazat
+Sisli	Mlha
+Siyah	Černý
+Skor	Skóre
+Skor: %d	Skóre: %d
+Solitaire	Solitaire
+Son anda!	Na poslední chvíli!
+Sonuç bulunamadı	Žádné výsledky
+Sonuçlar	Výsledky
+Spor	Sport
+Sudoku	Sudoku
+Sunucu başlatılamadı (günlüğe bakın).	Server se nepodařilo spustit (viz protokol).
+Sözlükte yok (yalnızca kök kelimeler)	Není v tureckém slovníku (jen kořeny slov)
+Süre: %ld:%02ld	Čas: %ld:%02ld
+Sıra: %s	Na tahu: %s
+TCMB döviz kurları	Kurzy měn TCMB
+TCMB satış kuru ile	Podle prodejního kurzu TCMB
+TCMB · güncellendi %d %s %02d:%02d	TCMB · aktualizováno %d. %s %02d:%02d
+Tahmin dağılımı	Rozložení pokusů
+Tahta sabit	Pevná šachovnice
+Tahtaya bak	Zobrazit šachovnici
+Tahtayı çevir	Otočit šachovnici
+Tam altın	Celá mince
+Tamam	OK
+Tamamla	Dokončit
+Tebrikler!	Gratulujeme!
+Tek kart çek	Brát 1 kartu
+Tek oyunculu	Jeden hráč
+Tekrar dene	Zkusit znovu
+Temmuz	července
+Terfi	Proměna
+Tüm kurlar	Všechny kurzy
+Usta	Mistr
+Uygulamalar	Aplikace
+Uyku Ayarı	Uspávání
+Vazgeç	Zrušit
+Vezir	Dáma
+Yarım altın	Půl mince
+Yağmurlu	Déšť
+Yağış %s	Srážky %s
+Yeni	Nová
+Yeni SSH parolası (en az 6)	Nové heslo SSH (min. 6)
+Yeni oyun	Nová hra
+Yenile	Obnovit
+Yetersiz taş — berabere	Nedostatek materiálu — remíza
+Yoğun kar	Husté sněžení
+Yükleniyor…	Načítání…
+Zor	Těžký
+Zorluk	Obtížnost
+Zorluk seçin	Vyberte obtížnost
+boşluk	mezera
+Çar	St
+Çarşamba	středa
+Çevirici	Převodník
+Çevrimdışı · güncellendi %d %s %02d:%02d	Offline · aktualizováno %d. %s %02d:%02d
+Çevrimdışı — son veri %s · Open-Meteo	Offline — poslední data %s · Open-Meteo
+Çeyrek altın	Čtvrt mince
+Çisenti	Mrholení
+Çok Kolay	Velmi lehký
+Çok iyi!	Velmi dobře!
+Çıkış	Konec
+Önce boş bir hücre seçin.	Nejprve vyberte prázdné pole.
+Üç kart çek	Brát 3 karty
+Üçlü tekrar — berabere	Trojí opakování — remíza
+İki oyunculu	Dva hráči
+İki oyunculu devam	Pokračovat (2 hráči)
+İpucu	Nápověda
+İstatistik	Statistiky
+İyi	Dobrý
+İşlem başarısız oldu.	Operace selhala.
+Şah mat — Beyaz kazandı	Mat — vyhrává bílý
+Şah mat — Siyah kazandı	Mat — vyhrává černý
+Şah! Sıra: %s	Šach! Na tahu: %s
+Şehir ara	Hledat město
+Şehir veya ilçe ara	Hledat město nebo obec
+Şehirler	Města
+Şehri sil	Smazat město
+Şiddetli sağanak	Silné přeháňky
+Şiddetli yağmur	Silný déšť
+Şu an AÇIK: gelen bağlantılar engelleniyor.\nKapatılsın mı?	Nyní ZAPNUTO: příchozí spojení jsou blokována.\nVypnout?
+Şu an KAPALI: gelen bağlantılara izin veriliyor.\nAçılsın mı?	Nyní VYPNUTO: příchozí spojení jsou povolena.\nZapnout?
+Şu an: %d dakika	Nyní: %d min
+Şu an: %d saat	Nyní: %d h
+Şu an: hiç uyumuyor	Nyní: bez uspávání
+Şubat	února
+⚑ Açık	⚑ Zap.
+⚑ Kapalı	⚑ Vyp.

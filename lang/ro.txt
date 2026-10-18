@@ -1,0 +1,262 @@
+# Romanian catalog for kindle-apps
+%%%d	%d %%
+%d %s %d, %s	%d %s %d, %s
+%d/%d · güncellendi %02d:%02d	%d/%d · actualizat %02d:%02d
+%d/%d · çevrimdışı, son veri %02d:%02d	%d/%d · offline, ultimele date %02d:%02d
+%s %d/6 tahminde bildin.	%s Ai ghicit din %d/6 încercări.
+%s beklenmedik şekilde kapandı	%s s-a închis neașteptat
+%s silinsin mi?	Ștergi %s?
+%s · %d×%d · %d mayın	%s · %d×%d · %d mine
+%s · Süre: %ld:%02ld	%s · Timp: %ld:%02ld
++ Ekle	+ Adaugă
+1 saat	1 oră
+10 dakika	10 minute
+2 saat	2 ore
+2048	2048
+2048'e ulaştın.	Ai ajuns la 2048.
+30 dakika	30 de minute
+5 dakika	5 minute
+5 harf girin	Introdu 5 litere
+50 hamle kuralı — berabere	Regula celor 50 de mutări — remiză
+Altın (serbest piyasa, ₺)	Aur (piață liberă, ₺)
+Alış	Cumpărare
+Aralık	decembrie
+Aranıyor…	Se caută…
+At	Cal
+Az bulutlu	Puțin noros
+AÇIK	PORNIT
+Aç	Pornește
+Açık	Senin
+Açıldı. Gelen bağlantılar engelleniyor.	Pornit. Conexiunile de intrare sunt blocate.
+Ağustos	august
+B	V
+Bağlantı kurulamadı. Wi-Fi açık mı?	Conexiune eșuată. Wi-Fi-ul e pornit?
+Bağlantı yok, kurlar alınamadı	Fără conexiune, cursurile nu au fost primite
+Bağlantı yok, veri alınamadı	Fără conexiune, datele nu au fost primite
+Beyaz	Alb
+Bilim	Știință
+Bu oyun bitirilsin mi?	Închei această partidă?
+Bu sefer olmadı	De data asta nu
+Bugün	Azi
+Bugün  en yüksek %s · en düşük %s · ☼ %s – %s	Azi  max. %s · min. %s · ☼ %s – %s
+Bulmacayı çözdünüz.	Ai rezolvat sudoku-ul.
+Bütün kartlar açık. Oyun tamamlansın mı?	Toate cărțile sunt întoarse. Finalizezi jocul?
+Bütün kartları yerleştirdin.	Ai așezat toate cărțile.
+Cmt	Sâm
+Cum	Vin
+Cuma	vineri
+Cumartesi	sâmbătă
+Cumhuriyet altını	Monedă Cumhuriyet
+D	E
+Devam	Continuă
+Devam et	Continuă
+Dil	Limbă
+Dokun: aç	Atinge: deschide
+Dokun: bayrak	Atinge: steag
+Dolu, fırtına	Furtună cu grindină
+Donan yağmur	Ploaie înghețată
+Donan çisenti	Burniță înghețată
+Dâhice!	Genial!
+Döviz & Altın	Valută și aur
+Dünya	Lume
+Düşünüyor… (%s)	Se gândește… (%s)
+Ekim	octombrie
+Ekonomi	Economie
+En az %d karakter girin	Introdu cel puțin %d caractere
+En fazla 10 şehir kaydedilebilir.	Poți salva cel mult 10 orașe.
+En iyi	Record
+En iyi seri	Cea mai bună serie
+Evet	Da
+Eylül	septembrie
+Fil	Nebun
+G	S
+GB	SV
+GD	SE
+Gazete	Știri
+Geri al	Anulează
+Gram altın	Gram de aur
+Gök gürültülü	Furtună
+Gönder	Trimite
+Güncel	Actualitate
+Güncellendi %s · Open-Meteo	Actualizat %s · Open-Meteo
+Güncelleniyor…	Se actualizează…
+Gündem	Pe agendă
+Güvenlik Duvarı	Firewall
+Güzel!	Bine!
+Haberler alınamadı.\nWi-Fi bağlantısını kontrol edin.	Știrile nu au putut fi obținute.\nVerifică conexiunea Wi-Fi.
+Harika!	Minunat!
+Hata	Eroare
+Hataları göster: Açık	Arată erorile: Da
+Hataları göster: Kapalı	Arată erorile: Nu
+Hava Durumu	Vremea
+Hava durumu alınamadı.\nWi-Fi bağlantısını kontrol edip Yenile'ye basın.	Vremea nu a putut fi obținută.\nVerifică Wi-Fi-ul și apasă Actualizează.
+Hava durumu yok (Wi-Fi kapalı olabilir)	Vremea indisponibilă (Wi-Fi oprit?)
+Hayır	Nu
+Haziran	iunie
+Hedef para	Moneda țintă
+Henüz parola yok	Nicio parolă încă
+Henüz uygulama kurulu değil	Nicio aplicație instalată
+Her hamlede tahtayı çevir	Rotește tabla la fiecare mutare
+Hissedilen %s	Resimțită %s
+Hiç uyuma	Fără repaus
+K	N
+KAPALI	OPRIT
+KB	NV
+KD	NE
+Kale	Turn
+Kapalı	Înnorat
+Kapat	Închide
+Kapatıldı. Kindle yeniden başlayınca tekrar açılır.	Oprit. Repornește la restartarea Kindle-ului.
+Kar sağanağı	Averse de ninsoare
+Kar taneleri	Grăunțe de zăpadă
+Karlı	Ninsoare
+Kasım	noiembrie
+Kaydedilemedi.	Nu s-a putut salva.
+Kaynak para	Moneda sursă
+Kaynak: %s	Sursa: %s
+Kazandın!	Ai câștigat!
+Kazanma %	Câștigate %
+Kelime Oyunu	Joc de cuvinte
+Kelime listesi bulunamadı. Uygulamayı yeniden kurun.	Lista de cuvinte lipsește. Reinstalează aplicația.
+Kelime: %s	Cuvântul: %s
+Kindle bu süre dokunulmadan kalınca uyur.\n"Hiç uyuma" pili hızlı tüketir.\nYeniden başlatınca varsayılana dönebilir.	Kindle-ul intră în repaus după acest timp fără atingere.\n„Fără repaus” consumă bateria repede.\nLa repornire poate reveni la valoarea implicită.
+Kolay	Ușor
+Kullanıcı adı: root\nSunucu bu uygulama kapanınca da çalışır.\nKindle uyuyunca Wi-Fi ile birlikte bağlantı kopar.\nYeniden başlatınca kapalı açılır.	Utilizator: root\nServerul rulează și după închiderea aplicației.\nCând Kindle-ul intră în repaus, conexiunea cade odată cu Wi-Fi.\nDupă repornire, serverul este oprit.
+Kültür	Cultură
+Manşet	Titluri
+Mart	martie
+Masa Saati	Ceas
+Mayın Tarlası	Câmp minat
+Mayın: %d	Mine: %d
+Mayına bastın	Ai călcat pe o mină
+Mayıs	mai
+Menü	Meniu
+Mevcut oyun silinsin mi?	Ștergi jocul curent?
+Motor yanıt vermedi	Motorul nu răspunde
+Muhteşem!	Superb!
+Nem %s	Umiditate %s
+Nisan	aprilie
+Not: Açık	Notițe: Da
+Not: Kapalı	Notițe: Nu
+Ocak	ianuarie
+Ons (USD)	Uncie (USD)
+Orta	Mediu
+Otomatik tamamla	Completare automată
+Oynanan	Jucate
+Oyun bitti	Joc terminat
+Parola	Parolă
+Parola belirlenmiş	Parolă setată
+Parola kaydedildi.	Parola a fost salvată.
+Parola kaydedilemedi.	Parola nu a putut fi salvată.
+Parolalar aynı değil, tekrar deneyin.	Parolele nu coincid, încearcă din nou.
+Parolayı değiştir	Schimbă parola
+Parolayı tekrar girin	Reintrodu parola
+Parçalı bulutlu	Parțial noros
+Pat — berabere	Pat — remiză
+Paz	Dum
+Pazar	duminică
+Pazartesi	luni
+Per	Joi
+Perşembe	joi
+Piyon hangi taşa dönüşsün?	În ce piesă se transformă pionul?
+Pzt	Lun
+Rastgele	Aleatoriu
+Renginiz	Culoarea ta
+Rüzgâr %ld km/s %s	Vânt %ld km/h %s
+Rüzgâr —	Vânt —
+SSH Sunucusu	Server SSH
+Sal	Mar
+Salı	marți
+Satranç	Șah
+Satranç motoru çalışmadı.	Motorul de șah nu a pornit.
+Satış	Vânzare
+Sağanak	Averse
+Sağlık	Sănătate
+Seri	Serie
+Sil	Șterge
+Sisli	Ceață
+Siyah	Negru
+Skor	Scor
+Skor: %d	Scor: %d
+Solitaire	Solitaire
+Son anda!	În ultima clipă!
+Sonuç bulunamadı	Niciun rezultat
+Sonuçlar	Rezultate
+Spor	Sport
+Sudoku	Sudoku
+Sunucu başlatılamadı (günlüğe bakın).	Serverul nu a pornit (vezi jurnalul).
+Sözlükte yok (yalnızca kök kelimeler)	Nu e în dicționarul turc (doar rădăcini)
+Süre: %ld:%02ld	Timp: %ld:%02ld
+Sıra: %s	La mutare: %s
+TCMB döviz kurları	Cursuri valutare TCMB
+TCMB satış kuru ile	La cursul de vânzare TCMB
+TCMB · güncellendi %d %s %02d:%02d	TCMB · actualizat %d %s %02d:%02d
+Tahmin dağılımı	Distribuția încercărilor
+Tahta sabit	Tablă fixă
+Tahtaya bak	Vezi tabla
+Tahtayı çevir	Rotește tabla
+Tam altın	Monedă întreagă
+Tamam	OK
+Tamamla	Finalizează
+Tebrikler!	Felicitări!
+Tek kart çek	Trage 1 carte
+Tek oyunculu	Un jucător
+Tekrar dene	Reîncearcă
+Temmuz	iulie
+Terfi	Promovare
+Tüm kurlar	Toate cursurile
+Usta	Maestru
+Uygulamalar	Aplicații
+Uyku Ayarı	Repaus
+Vazgeç	Renunță
+Vezir	Damă
+Yarım altın	Jumătate de monedă
+Yağmurlu	Ploaie
+Yağış %s	Precipitații %s
+Yeni	Nou
+Yeni SSH parolası (en az 6)	Parolă SSH nouă (min. 6)
+Yeni oyun	Joc nou
+Yenile	Actualizează
+Yetersiz taş — berabere	Material insuficient — remiză
+Yoğun kar	Ninsoare abundentă
+Yükleniyor…	Se încarcă…
+Zor	Greu
+Zorluk	Dificultate
+Zorluk seçin	Alege dificultatea
+boşluk	spațiu
+Çar	Mie
+Çarşamba	miercuri
+Çevirici	Convertor
+Çevrimdışı · güncellendi %d %s %02d:%02d	Offline · actualizat %d %s %02d:%02d
+Çevrimdışı — son veri %s · Open-Meteo	Offline — ultimele date %s · Open-Meteo
+Çeyrek altın	Sfert de monedă
+Çisenti	Burniță
+Çok Kolay	Foarte ușor
+Çok iyi!	Foarte bine!
+Çıkış	Ieșire
+Önce boş bir hücre seçin.	Mai întâi alege o căsuță goală.
+Üç kart çek	Trage 3 cărți
+Üçlü tekrar — berabere	Tripla repetiție — remiză
+İki oyunculu	Doi jucători
+İki oyunculu devam	Continuă (2 jucători)
+İpucu	Indiciu
+İstatistik	Statistici
+İyi	Bun
+İşlem başarısız oldu.	Operațiunea a eșuat.
+Şah mat — Beyaz kazandı	Șah mat — câștigă albul
+Şah mat — Siyah kazandı	Șah mat — câștigă negrul
+Şah! Sıra: %s	Șah! La mutare: %s
+Şehir ara	Caută oraș
+Şehir veya ilçe ara	Caută oraș sau comună
+Şehirler	Orașe
+Şehri sil	Șterge orașul
+Şiddetli sağanak	Averse puternice
+Şiddetli yağmur	Ploaie puternică
+Şu an AÇIK: gelen bağlantılar engelleniyor.\nKapatılsın mı?	Acum PORNIT: conexiunile de intrare sunt blocate.\nÎl oprești?
+Şu an KAPALI: gelen bağlantılara izin veriliyor.\nAçılsın mı?	Acum OPRIT: conexiunile de intrare sunt permise.\nÎl pornești?
+Şu an: %d dakika	Acum: %d min
+Şu an: %d saat	Acum: %d h
+Şu an: hiç uyumuyor	Acum: fără repaus
+Şubat	februarie
+⚑ Açık	⚑ Pornit
+⚑ Kapalı	⚑ Oprit

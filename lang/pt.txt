@@ -1,0 +1,262 @@
+# Portuguese catalog for kindle-apps
+%%%d	%d %%
+%d %s %d, %s	%d de %s de %d, %s
+%d/%d · güncellendi %02d:%02d	%d/%d · atualizado %02d:%02d
+%d/%d · çevrimdışı, son veri %02d:%02d	%d/%d · offline, últimos dados %02d:%02d
+%s %d/6 tahminde bildin.	%s Acertou em %d/6 tentativas.
+%s beklenmedik şekilde kapandı	%s fechou inesperadamente
+%s silinsin mi?	Remover %s?
+%s · %d×%d · %d mayın	%s · %d×%d · %d minas
+%s · Süre: %ld:%02ld	%s · Tempo: %ld:%02ld
++ Ekle	+ Adicionar
+1 saat	1 hora
+10 dakika	10 minutos
+2 saat	2 horas
+2048	2048
+2048'e ulaştın.	Chegou a 2048.
+30 dakika	30 minutos
+5 dakika	5 minutos
+5 harf girin	Insira 5 letras
+50 hamle kuralı — berabere	Regra dos 50 lances — empate
+Altın (serbest piyasa, ₺)	Ouro (mercado livre, ₺)
+Alış	Compra
+Aralık	dezembro
+Aranıyor…	Pesquisando…
+At	Cavalo
+Az bulutlu	Pouco nublado
+AÇIK	LIGADO
+Aç	Ligar
+Açık	Céu limpo
+Açıldı. Gelen bağlantılar engelleniyor.	Ligado. As conexões de entrada estão bloqueadas.
+Ağustos	agosto
+B	O
+Bağlantı kurulamadı. Wi-Fi açık mı?	Sem conexão. O Wi-Fi está ligado?
+Bağlantı yok, kurlar alınamadı	Sem conexão, cotações não recebidas
+Bağlantı yok, veri alınamadı	Sem conexão, dados não recebidos
+Beyaz	Brancas
+Bilim	Ciência
+Bu oyun bitirilsin mi?	Terminar esta partida?
+Bu sefer olmadı	Não foi desta vez
+Bugün	Hoje
+Bugün  en yüksek %s · en düşük %s · ☼ %s – %s	Hoje  máx. %s · mín. %s · ☼ %s – %s
+Bulmacayı çözdünüz.	Sudoku resolvido.
+Bütün kartlar açık. Oyun tamamlansın mı?	Todas as cartas estão abertas. Completar o jogo?
+Bütün kartları yerleştirdin.	Todas as cartas foram colocadas.
+Cmt	Sáb
+Cum	Sex
+Cuma	sexta-feira
+Cumartesi	sábado
+Cumhuriyet altını	Moeda Cumhuriyet
+D	L
+Devam	Continuar
+Devam et	Continuar
+Dil	Idioma
+Dokun: aç	Toque: abrir
+Dokun: bayrak	Toque: bandeira
+Dolu, fırtına	Trovoada com granizo
+Donan yağmur	Chuva congelante
+Donan çisenti	Chuvisco congelante
+Dâhice!	Genial!
+Döviz & Altın	Câmbio e ouro
+Dünya	Mundo
+Düşünüyor… (%s)	Pensando… (%s)
+Ekim	outubro
+Ekonomi	Economia
+En az %d karakter girin	Digite pelo menos %d caracteres
+En fazla 10 şehir kaydedilebilir.	É possível salvar até 10 cidades.
+En iyi	Recorde
+En iyi seri	Melhor sequência
+Evet	Sim
+Eylül	setembro
+Fil	Bispo
+G	S
+GB	SO
+GD	SE
+Gazete	Notícias
+Geri al	Desfazer
+Gram altın	Grama de ouro
+Gök gürültülü	Trovoada
+Gönder	Enviar
+Güncel	Atualidades
+Güncellendi %s · Open-Meteo	Atualizado %s · Open-Meteo
+Güncelleniyor…	Atualizando…
+Gündem	Em pauta
+Güvenlik Duvarı	Firewall
+Güzel!	Boa!
+Haberler alınamadı.\nWi-Fi bağlantısını kontrol edin.	Não foi possível obter as notícias.\nVerifique a conexão Wi-Fi.
+Harika!	Ótimo!
+Hata	Erro
+Hataları göster: Açık	Mostrar erros: Sim
+Hataları göster: Kapalı	Mostrar erros: Não
+Hava Durumu	Tempo
+Hava durumu alınamadı.\nWi-Fi bağlantısını kontrol edip Yenile'ye basın.	Previsão indisponível.\nVerifique o Wi-Fi e toque em Atualizar.
+Hava durumu yok (Wi-Fi kapalı olabilir)	Sem previsão (Wi-Fi desligado?)
+Hayır	Não
+Haziran	junho
+Hedef para	Moeda de destino
+Henüz parola yok	Ainda sem senha
+Henüz uygulama kurulu değil	Nenhum app instalado
+Her hamlede tahtayı çevir	Girar o tabuleiro a cada lance
+Hissedilen %s	Sensação %s
+Hiç uyuma	Nunca suspender
+K	N
+KAPALI	DESLIGADO
+KB	NO
+KD	NE
+Kale	Torre
+Kapalı	Nublado
+Kapat	Fechar
+Kapatıldı. Kindle yeniden başlayınca tekrar açılır.	Desligado. Volta a ligar ao reiniciar o Kindle.
+Kar sağanağı	Pancadas de neve
+Kar taneleri	Grãos de neve
+Karlı	Neve
+Kasım	novembro
+Kaydedilemedi.	Não foi possível salvar.
+Kaynak para	Moeda de origem
+Kaynak: %s	Fonte: %s
+Kazandın!	Vitória!
+Kazanma %	Vitórias %
+Kelime Oyunu	Jogo de palavras
+Kelime listesi bulunamadı. Uygulamayı yeniden kurun.	Lista de palavras não encontrada. Reinstale o app.
+Kelime: %s	Palavra: %s
+Kindle bu süre dokunulmadan kalınca uyur.\n"Hiç uyuma" pili hızlı tüketir.\nYeniden başlatınca varsayılana dönebilir.	O Kindle suspende após este tempo sem toques.\n"Nunca suspender" gasta a bateria rápido.\nAo reiniciar, pode voltar ao padrão.
+Kolay	Fácil
+Kullanıcı adı: root\nSunucu bu uygulama kapanınca da çalışır.\nKindle uyuyunca Wi-Fi ile birlikte bağlantı kopar.\nYeniden başlatınca kapalı açılır.	Usuário: root\nO servidor continua ativo após fechar o app.\nQuando o Kindle suspende, a conexão cai junto com o Wi-Fi.\nApós reiniciar, fica desligado.
+Kültür	Cultura
+Manşet	Manchetes
+Mart	março
+Masa Saati	Relógio
+Mayın Tarlası	Campo minado
+Mayın: %d	Minas: %d
+Mayına bastın	Pisou numa mina
+Mayıs	maio
+Menü	Menu
+Mevcut oyun silinsin mi?	Apagar o jogo atual?
+Motor yanıt vermedi	O motor não respondeu
+Muhteşem!	Magnífico!
+Nem %s	Umidade %s
+Nisan	abril
+Not: Açık	Notas: Sim
+Not: Kapalı	Notas: Não
+Ocak	janeiro
+Ons (USD)	Onça (USD)
+Orta	Médio
+Otomatik tamamla	Completar automaticamente
+Oynanan	Jogos
+Oyun bitti	Fim de jogo
+Parola	Senha
+Parola belirlenmiş	Senha definida
+Parola kaydedildi.	Senha salva.
+Parola kaydedilemedi.	Não foi possível salvar a senha.
+Parolalar aynı değil, tekrar deneyin.	As senhas não coincidem, tente novamente.
+Parolayı değiştir	Alterar senha
+Parolayı tekrar girin	Digite a senha novamente
+Parçalı bulutlu	Parcialmente nublado
+Pat — berabere	Afogamento — empate
+Paz	Dom
+Pazar	domingo
+Pazartesi	segunda-feira
+Per	Qui
+Perşembe	quinta-feira
+Piyon hangi taşa dönüşsün?	Promover o peão a qual peça?
+Pzt	Seg
+Rastgele	Aleatório
+Renginiz	Sua cor
+Rüzgâr %ld km/s %s	Vento %ld km/h %s
+Rüzgâr —	Vento —
+SSH Sunucusu	Servidor SSH
+Sal	Ter
+Salı	terça-feira
+Satranç	Xadrez
+Satranç motoru çalışmadı.	O motor de xadrez não iniciou.
+Satış	Venda
+Sağanak	Pancadas de chuva
+Sağlık	Saúde
+Seri	Sequência
+Sil	Apagar
+Sisli	Nevoeiro
+Siyah	Pretas
+Skor	Pontos
+Skor: %d	Pontos: %d
+Solitaire	Paciência
+Son anda!	Por um triz!
+Sonuç bulunamadı	Nenhum resultado
+Sonuçlar	Resultados
+Spor	Esportes
+Sudoku	Sudoku
+Sunucu başlatılamadı (günlüğe bakın).	Não foi possível iniciar o servidor (veja o log).
+Sözlükte yok (yalnızca kök kelimeler)	Não está no dicionário turco (só raízes)
+Süre: %ld:%02ld	Tempo: %ld:%02ld
+Sıra: %s	Vez: %s
+TCMB döviz kurları	Câmbio do TCMB
+TCMB satış kuru ile	Pela cotação de venda do TCMB
+TCMB · güncellendi %d %s %02d:%02d	TCMB · atualizado %d %s %02d:%02d
+Tahmin dağılımı	Distribuição de tentativas
+Tahta sabit	Tabuleiro fixo
+Tahtaya bak	Ver tabuleiro
+Tahtayı çevir	Girar tabuleiro
+Tam altın	Moeda inteira
+Tamam	OK
+Tamamla	Completar
+Tebrikler!	Parabéns!
+Tek kart çek	Virar 1 carta
+Tek oyunculu	Um jogador
+Tekrar dene	Tentar novamente
+Temmuz	julho
+Terfi	Promoção
+Tüm kurlar	Todas as cotações
+Usta	Mestre
+Uygulamalar	Apps
+Uyku Ayarı	Suspensão
+Vazgeç	Cancelar
+Vezir	Dama
+Yarım altın	Meia moeda
+Yağmurlu	Chuva
+Yağış %s	Precipitação %s
+Yeni	Novo
+Yeni SSH parolası (en az 6)	Nova senha SSH (mín. 6)
+Yeni oyun	Novo jogo
+Yenile	Atualizar
+Yetersiz taş — berabere	Material insuficiente — empate
+Yoğun kar	Neve forte
+Yükleniyor…	Carregando…
+Zor	Difícil
+Zorluk	Dificuldade
+Zorluk seçin	Escolha a dificuldade
+boşluk	espaço
+Çar	Qua
+Çarşamba	quarta-feira
+Çevirici	Conversor
+Çevrimdışı · güncellendi %d %s %02d:%02d	Offline · atualizado %d %s %02d:%02d
+Çevrimdışı — son veri %s · Open-Meteo	Offline — últimos dados %s · Open-Meteo
+Çeyrek altın	Quarto de moeda
+Çisenti	Chuvisco
+Çok Kolay	Muito fácil
+Çok iyi!	Muito bem!
+Çıkış	Sair
+Önce boş bir hücre seçin.	Primeiro selecione uma célula vazia.
+Üç kart çek	Virar 3 cartas
+Üçlü tekrar — berabere	Tripla repetição — empate
+İki oyunculu	Dois jogadores
+İki oyunculu devam	Continuar (2 jogadores)
+İpucu	Dica
+İstatistik	Estatísticas
+İyi	Bom
+İşlem başarısız oldu.	A operação falhou.
+Şah mat — Beyaz kazandı	Xeque-mate — Brancas vencem
+Şah mat — Siyah kazandı	Xeque-mate — Pretas vencem
+Şah! Sıra: %s	Xeque! Vez: %s
+Şehir ara	Buscar cidade
+Şehir veya ilçe ara	Buscar cidade ou município
+Şehirler	Cidades
+Şehri sil	Remover cidade
+Şiddetli sağanak	Pancadas fortes
+Şiddetli yağmur	Chuva forte
+Şu an AÇIK: gelen bağlantılar engelleniyor.\nKapatılsın mı?	Agora LIGADO: conexões de entrada bloqueadas.\nDesligar?
+Şu an KAPALI: gelen bağlantılara izin veriliyor.\nAçılsın mı?	Agora DESLIGADO: conexões de entrada permitidas.\nLigar?
+Şu an: %d dakika	Atual: %d min
+Şu an: %d saat	Atual: %d h
+Şu an: hiç uyumuyor	Atual: nunca suspende
+Şubat	fevereiro
+⚑ Açık	⚑ Ligado
+⚑ Kapalı	⚑ Desligado

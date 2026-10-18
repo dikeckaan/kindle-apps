@@ -1,0 +1,262 @@
+# Polish catalog for kindle-apps
+%%%d	%d %%
+%d %s %d, %s	%d %s %d, %s
+%d/%d · güncellendi %02d:%02d	%d/%d · aktualizacja %02d:%02d
+%d/%d · çevrimdışı, son veri %02d:%02d	%d/%d · offline, ostatnie dane %02d:%02d
+%s %d/6 tahminde bildin.	%s Odgadnięte w próbie %d/6.
+%s beklenmedik şekilde kapandı	%s: nieoczekiwane zamknięcie
+%s silinsin mi?	Usunąć %s?
+%s · %d×%d · %d mayın	%s · %d×%d · min: %d
+%s · Süre: %ld:%02ld	%s · Czas: %ld:%02ld
++ Ekle	+ Dodaj
+1 saat	1 godzina
+10 dakika	10 minut
+2 saat	2 godziny
+2048	2048
+2048'e ulaştın.	Osiągnięto 2048.
+30 dakika	30 minut
+5 dakika	5 minut
+5 harf girin	Wpisz 5 liter
+50 hamle kuralı — berabere	Zasada 50 ruchów — remis
+Altın (serbest piyasa, ₺)	Złoto (wolny rynek, ₺)
+Alış	Kupno
+Aralık	grudnia
+Aranıyor…	Wyszukiwanie…
+At	Skoczek
+Az bulutlu	Małe zachmurzenie
+AÇIK	WŁĄCZONY
+Aç	Włącz
+Açık	Bezchmurnie
+Açıldı. Gelen bağlantılar engelleniyor.	Włączono. Połączenia przychodzące są blokowane.
+Ağustos	sierpnia
+B	Z
+Bağlantı kurulamadı. Wi-Fi açık mı?	Brak połączenia. Czy Wi-Fi jest włączone?
+Bağlantı yok, kurlar alınamadı	Brak połączenia, nie pobrano kursów
+Bağlantı yok, veri alınamadı	Brak połączenia, nie pobrano danych
+Beyaz	Białe
+Bilim	Nauka
+Bu oyun bitirilsin mi?	Zakończyć tę partię?
+Bu sefer olmadı	Tym razem nie wyszło
+Bugün	Dziś
+Bugün  en yüksek %s · en düşük %s · ☼ %s – %s	Dziś  maks. %s · min. %s · ☼ %s – %s
+Bulmacayı çözdünüz.	Łamigłówka rozwiązana.
+Bütün kartlar açık. Oyun tamamlansın mı?	Wszystkie karty odkryte. Dokończyć grę?
+Bütün kartları yerleştirdin.	Wszystkie karty ułożone.
+Cmt	Sob
+Cum	Pt
+Cuma	piątek
+Cumartesi	sobota
+Cumhuriyet altını	Moneta Cumhuriyet
+D	W
+Devam	Kontynuuj
+Devam et	Kontynuuj
+Dil	Język
+Dokun: aç	Dotyk: odkryj
+Dokun: bayrak	Dotyk: flaga
+Dolu, fırtına	Burza z gradem
+Donan yağmur	Marznący deszcz
+Donan çisenti	Marznąca mżawka
+Dâhice!	Genialnie!
+Döviz & Altın	Waluty i złoto
+Dünya	Świat
+Düşünüyor… (%s)	Myśli… (%s)
+Ekim	października
+Ekonomi	Gospodarka
+En az %d karakter girin	Minimalna liczba znaków: %d
+En fazla 10 şehir kaydedilebilir.	Można zapisać maks. 10 miast.
+En iyi	Rekord
+En iyi seri	Najlepsza seria
+Evet	Tak
+Eylül	września
+Fil	Goniec
+G	Pd
+GB	PdZ
+GD	PdW
+Gazete	Wiadomości
+Geri al	Cofnij
+Gram altın	Gram złota
+Gök gürültülü	Burza
+Gönder	Wyślij
+Güncel	Bieżące
+Güncellendi %s · Open-Meteo	Zaktualizowano %s · Open-Meteo
+Güncelleniyor…	Aktualizacja…
+Gündem	Na czasie
+Güvenlik Duvarı	Zapora
+Güzel!	Nieźle!
+Haberler alınamadı.\nWi-Fi bağlantısını kontrol edin.	Nie pobrano wiadomości.\nSprawdź połączenie Wi-Fi.
+Harika!	Świetnie!
+Hata	Błąd
+Hataları göster: Açık	Pokaż błędy: Tak
+Hataları göster: Kapalı	Pokaż błędy: Nie
+Hava Durumu	Pogoda
+Hava durumu alınamadı.\nWi-Fi bağlantısını kontrol edip Yenile'ye basın.	Nie pobrano pogody.\nSprawdź Wi-Fi i naciśnij Odśwież.
+Hava durumu yok (Wi-Fi kapalı olabilir)	Brak pogody (Wi-Fi wyłączone?)
+Hayır	Nie
+Haziran	czerwca
+Hedef para	Waluta docelowa
+Henüz parola yok	Brak hasła
+Henüz uygulama kurulu değil	Brak zainstalowanych aplikacji
+Her hamlede tahtayı çevir	Obracaj szachownicę po każdym ruchu
+Hissedilen %s	Odczuwalna %s
+Hiç uyuma	Nie usypiaj
+K	Pn
+KAPALI	WYŁĄCZONY
+KB	PnZ
+KD	PnW
+Kale	Wieża
+Kapalı	Pochmurno
+Kapat	Zamknij
+Kapatıldı. Kindle yeniden başlayınca tekrar açılır.	Wyłączono. Włączy się ponownie po restarcie Kindle.
+Kar sağanağı	Przelotny śnieg
+Kar taneleri	Ziarnisty śnieg
+Karlı	Śnieg
+Kasım	listopada
+Kaydedilemedi.	Nie udało się zapisać.
+Kaynak para	Waluta źródłowa
+Kaynak: %s	Źródło: %s
+Kazandın!	Wygrana!
+Kazanma %	Wygrane %
+Kelime Oyunu	Gra w słowa
+Kelime listesi bulunamadı. Uygulamayı yeniden kurun.	Nie znaleziono listy słów. Zainstaluj aplikację ponownie.
+Kelime: %s	Słowo: %s
+Kindle bu süre dokunulmadan kalınca uyur.\n"Hiç uyuma" pili hızlı tüketir.\nYeniden başlatınca varsayılana dönebilir.	Kindle zasypia po tym czasie bez dotyku.\n„Nie usypiaj” szybko zużywa baterię.\nPo restarcie może wrócić ustawienie domyślne.
+Kolay	Łatwy
+Kullanıcı adı: root\nSunucu bu uygulama kapanınca da çalışır.\nKindle uyuyunca Wi-Fi ile birlikte bağlantı kopar.\nYeniden başlatınca kapalı açılır.	Użytkownik: root\nSerwer działa także po zamknięciu aplikacji.\nGdy Kindle zaśnie, połączenie zrywa się razem z Wi-Fi.\nPo restarcie serwer jest wyłączony.
+Kültür	Kultura
+Manşet	Nagłówki
+Mart	marca
+Masa Saati	Zegar
+Mayın Tarlası	Saper
+Mayın: %d	Miny: %d
+Mayına bastın	Trafiono na minę
+Mayıs	maja
+Menü	Menu
+Mevcut oyun silinsin mi?	Usunąć bieżącą grę?
+Motor yanıt vermedi	Silnik nie odpowiada
+Muhteşem!	Wspaniale!
+Nem %s	Wilgotność %s
+Nisan	kwietnia
+Not: Açık	Notatki: Tak
+Not: Kapalı	Notatki: Nie
+Ocak	stycznia
+Ons (USD)	Uncja (USD)
+Orta	Średni
+Otomatik tamamla	Dokończ automatycznie
+Oynanan	Rozegrane
+Oyun bitti	Koniec gry
+Parola	Hasło
+Parola belirlenmiş	Hasło ustawione
+Parola kaydedildi.	Hasło zapisane.
+Parola kaydedilemedi.	Nie udało się zapisać hasła.
+Parolalar aynı değil, tekrar deneyin.	Hasła się różnią, spróbuj ponownie.
+Parolayı değiştir	Zmień hasło
+Parolayı tekrar girin	Wpisz hasło ponownie
+Parçalı bulutlu	Częściowe zachmurzenie
+Pat — berabere	Pat — remis
+Paz	Nd
+Pazar	niedziela
+Pazartesi	poniedziałek
+Per	Czw
+Perşembe	czwartek
+Piyon hangi taşa dönüşsün?	Na jaką figurę promować pionka?
+Pzt	Pon
+Rastgele	Losowo
+Renginiz	Twój kolor
+Rüzgâr %ld km/s %s	Wiatr %ld km/h %s
+Rüzgâr —	Wiatr —
+SSH Sunucusu	Serwer SSH
+Sal	Wt
+Salı	wtorek
+Satranç	Szachy
+Satranç motoru çalışmadı.	Silnik szachowy nie uruchomił się.
+Satış	Sprzedaż
+Sağanak	Przelotne opady
+Sağlık	Zdrowie
+Seri	Seria
+Sil	Usuń
+Sisli	Mgła
+Siyah	Czarne
+Skor	Wynik
+Skor: %d	Wynik: %d
+Solitaire	Pasjans
+Son anda!	W ostatniej chwili!
+Sonuç bulunamadı	Brak wyników
+Sonuçlar	Wyniki
+Spor	Sport
+Sudoku	Sudoku
+Sunucu başlatılamadı (günlüğe bakın).	Nie udało się uruchomić serwera (zobacz log).
+Sözlükte yok (yalnızca kök kelimeler)	Brak w słowniku tureckim (tylko rdzenie)
+Süre: %ld:%02ld	Czas: %ld:%02ld
+Sıra: %s	Ruch: %s
+TCMB döviz kurları	Kursy walut TCMB
+TCMB satış kuru ile	Po kursie sprzedaży TCMB
+TCMB · güncellendi %d %s %02d:%02d	TCMB · aktualizacja %d %s %02d:%02d
+Tahmin dağılımı	Rozkład prób
+Tahta sabit	Szachownica stała
+Tahtaya bak	Pokaż szachownicę
+Tahtayı çevir	Obróć szachownicę
+Tam altın	Cała moneta
+Tamam	OK
+Tamamla	Dokończ
+Tebrikler!	Gratulacje!
+Tek kart çek	Dobieraj 1 kartę
+Tek oyunculu	Jeden gracz
+Tekrar dene	Spróbuj ponownie
+Temmuz	lipca
+Terfi	Promocja
+Tüm kurlar	Wszystkie kursy
+Usta	Mistrz
+Uygulamalar	Aplikacje
+Uyku Ayarı	Usypianie
+Vazgeç	Anuluj
+Vezir	Hetman
+Yarım altın	Pół monety
+Yağmurlu	Deszcz
+Yağış %s	Opady %s
+Yeni	Nowa
+Yeni SSH parolası (en az 6)	Nowe hasło SSH (min. 6)
+Yeni oyun	Nowa gra
+Yenile	Odśwież
+Yetersiz taş — berabere	Za mało materiału — remis
+Yoğun kar	Intensywny śnieg
+Yükleniyor…	Ładowanie…
+Zor	Trudny
+Zorluk	Poziom
+Zorluk seçin	Wybierz poziom
+boşluk	spacja
+Çar	Śr
+Çarşamba	środa
+Çevirici	Przelicznik
+Çevrimdışı · güncellendi %d %s %02d:%02d	Offline · aktualizacja %d %s %02d:%02d
+Çevrimdışı — son veri %s · Open-Meteo	Offline — ostatnie dane %s · Open-Meteo
+Çeyrek altın	Ćwierć monety
+Çisenti	Mżawka
+Çok Kolay	Bardzo łatwy
+Çok iyi!	Bardzo dobrze!
+Çıkış	Wyjdź
+Önce boş bir hücre seçin.	Najpierw wybierz pustą komórkę.
+Üç kart çek	Dobieraj 3 karty
+Üçlü tekrar — berabere	Trzykrotne powtórzenie — remis
+İki oyunculu	Dwóch graczy
+İki oyunculu devam	Kontynuuj (2 graczy)
+İpucu	Podpowiedź
+İstatistik	Statystyki
+İyi	Dobry
+İşlem başarısız oldu.	Operacja nie powiodła się.
+Şah mat — Beyaz kazandı	Mat — wygrywają białe
+Şah mat — Siyah kazandı	Mat — wygrywają czarne
+Şah! Sıra: %s	Szach! Ruch: %s
+Şehir ara	Szukaj miasta
+Şehir veya ilçe ara	Szukaj miasta lub gminy
+Şehirler	Miasta
+Şehri sil	Usuń miasto
+Şiddetli sağanak	Silne ulewy
+Şiddetli yağmur	Ulewny deszcz
+Şu an AÇIK: gelen bağlantılar engelleniyor.\nKapatılsın mı?	Teraz WŁĄCZONA: połączenia przychodzące blokowane.\nWyłączyć?
+Şu an KAPALI: gelen bağlantılara izin veriliyor.\nAçılsın mı?	Teraz WYŁĄCZONA: połączenia przychodzące dozwolone.\nWłączyć?
+Şu an: %d dakika	Teraz: %d min
+Şu an: %d saat	Teraz: %d godz.
+Şu an: hiç uyumuyor	Teraz: bez usypiania
+Şubat	lutego
+⚑ Açık	⚑ Wł.
+⚑ Kapalı	⚑ Wył.
