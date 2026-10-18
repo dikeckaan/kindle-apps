@@ -7,6 +7,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <sys/stat.h>
 #include <sys/wait.h>
 #include <time.h>
 #include <unistd.h>
@@ -19,12 +20,21 @@ static long now_ms(void)
 	return ts.tv_sec * 1000L + ts.tv_nsec / 1000000L;
 }
 
+static const char *curl_path(void)
+{
+	const char *curl = getenv("NET_CURL");
+	return curl && *curl ? curl : "/usr/bin/curl";
+}
+
+/* only web URLs: anything else (an option-like "-o…", file://) never reaches curl's argv */
+static int url_ok(const char *url) { return !strncmp(url, "https://", 8) || !strncmp(url, "http://", 7); }
+
 int net_get(const char *url, char **body, int *len, int timeout_s)
 {
 	*body = NULL;
 	*len = 0;
-	const char *curl = getenv("NET_CURL");
-	if (!curl || !*curl) curl = "/usr/bin/curl";
+	if (!url_ok(url)) return -1;
+	const char *curl = curl_path();
 	char tmax[16];
 	snprintf(tmax, sizeof tmax, "%d", timeout_s);
 	int fds[2];
@@ -86,6 +96,89 @@ int net_get(const char *url, char **body, int *len, int timeout_s)
 	buf[n] = '\0';
 	*body = buf;
 	*len = n;
+	return 0;
+}
+
+int net_download(const char *url, const char *path, long max_bytes, int timeout_s)
+{
+	if (!url_ok(url) || max_bytes <= 0) return -1;
+	const char *curl = curl_path();
+	char tmax[16], part[1024];
+	snprintf(tmax, sizeof tmax, "%d", timeout_s);
+	if (snprintf(part, sizeof part, "%s.part", path) >= (int) sizeof part) return -1;
+	int out = open(part, O_WRONLY | O_CREAT | O_TRUNC | O_NOFOLLOW, 0644);
+	if (out < 0) return -1;
+	int fds[2];
+	if (pipe(fds) != 0) {
+		close(out);
+		unlink(part);
+		return -1;
+	}
+	pid_t pid = fork();
+	if (pid < 0) {
+		close(fds[0]);
+		close(fds[1]);
+		close(out);
+		unlink(part);
+		return -1;
+	}
+	if (pid == 0) {
+		dup2(fds[1], 1);
+		int dn = open("/dev/null", O_RDWR);
+		if (dn >= 0) {
+			dup2(dn, 0);
+			dup2(dn, 2);
+		}
+		close(fds[0]);
+		close(fds[1]);
+		close(out);
+		execl(curl, curl, "-fsSL", "--max-time", tmax, "--connect-timeout", "10", "--proto", "=http,https", "--proto-redir",
+		      "=http,https", "-A", "Mozilla/5.0 (Kindle; kindle-apps)", url, (char *) NULL);
+		_exit(127);
+	}
+	close(fds[1]);
+	fcntl(fds[0], F_SETFL, O_NONBLOCK);
+	/* the size cap is enforced here, while the body streams: servers without Content-Length defeat --max-filesize */
+	long deadline = now_ms() + (timeout_s + 2) * 1000L, total = 0;
+	int ok = 1;
+	static char buf[65536];
+	for (;;) {
+		long left = deadline - now_ms();
+		if (left <= 0) { ok = 0; break; }
+		struct pollfd pf = { fds[0], POLLIN, 0 };
+		int r = poll(&pf, 1, (int) left);
+		if (r < 0 && errno == EINTR) continue;
+		if (r <= 0) { ok = 0; break; }
+		ssize_t k = read(fds[0], buf, sizeof buf);
+		if (k < 0 && (errno == EAGAIN || errno == EINTR)) continue;
+		if (k < 0) { ok = 0; break; }
+		if (k == 0) break; /* EOF */
+		total += k;
+		if (total > max_bytes || write(out, buf, (size_t) k) != k) { ok = 0; break; }
+	}
+	close(fds[0]);
+	if (!ok) kill(pid, SIGKILL);
+	int status = 0;
+	while (waitpid(pid, &status, 0) < 0 && errno == EINTR) {}
+	ok = ok && WIFEXITED(status) && WEXITSTATUS(status) == 0 && total > 0 && fsync(out) == 0;
+	if (close(out) != 0) ok = 0;
+	if (ok && rename(part, path) != 0) ok = 0;
+	if (!ok) {
+		unlink(part);
+		return -1;
+	}
+	/* make the rename durable too (best effort) */
+	char dir[1024];
+	snprintf(dir, sizeof dir, "%s", path);
+	char *slash = strrchr(dir, '/');
+	if (slash) {
+		slash[slash == dir ? 1 : 0] = '\0';
+		int dfd = open(dir, O_RDONLY);
+		if (dfd >= 0) {
+			fsync(dfd);
+			close(dfd);
+		}
+	}
 	return 0;
 }
 

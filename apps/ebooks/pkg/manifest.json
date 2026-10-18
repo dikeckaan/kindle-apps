@@ -1,0 +1,10 @@
+{
+  "manifest_version": 2,
+  "id": "kindle-apps-ebooks",
+  "name": "E-Kitap",
+  "author": "Kaan Dikeç",
+  "description": "Project Gutenberg'den telifsiz e-kitap arama ve indirme",
+  "version": [2026, 10, 8],
+  "dependencies": [],
+  "supported_platforms": ["kindlehf"]
+}

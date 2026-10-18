@@ -4,7 +4,7 @@
   "name": "Satranç",
   "author": "Kaan Dikeç",
   "description": "Stockfish'e karşı 6 seviye veya iki kişilik satranç",
-  "version": [2026, 10, 7],
+  "version": [2026, 10, 8],
   "dependencies": [],
   "supported_platforms": ["kindlehf"]
 }

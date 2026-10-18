@@ -24,7 +24,9 @@ Kitaplıkta tek bir **"Uygulamalar"** girişi olur; açınca bütün uygulamalar
 | Mayın Tarlası (3 zorluk, bayrak kipi) | ✅ |
 | Sudoku (3 zorluk, tek çözümlü, not kipi, ipucu) | ✅ |
 | Solitaire (Klondike, 1 / 3 kart çekme, geri al) | ✅ |
-| Sistem bilgisi, Wi-Fi ile dosya yükleme | yakında |
+| Sistem Bilgisi (pil, depolama, bellek, Wi-Fi, sürüm, güvenlik) | ✅ |
+| Wi-Fi ile Yükle (tarayıcıdan PIN'li kitap gönderme) | ✅ |
+| E-Kitap (Project Gutenberg'den telifsiz kitap arama ve indirme, AZW3/EPUB) | ✅ |
 
 ## Gereksinimler
 
@@ -56,6 +58,9 @@ dosyasını indirip USB ile Kindle'ın `documents` klasörüne kopyalayın, kita
 /var/local/kmc/bin/kpm -y install kindle-apps-mines
 /var/local/kmc/bin/kpm -y install kindle-apps-sudoku
 /var/local/kmc/bin/kpm -y install kindle-apps-solitaire
+/var/local/kmc/bin/kpm -y install kindle-apps-sysinfo
+/var/local/kmc/bin/kpm -y install kindle-apps-upload
+/var/local/kmc/bin/kpm -y install kindle-apps-ebooks
 ```
 
 Ardından kitaplıkta **Uygulamalar**'ı açın.
@@ -69,7 +74,7 @@ root'un okuyabildiği `/var/local/kindle-apps/ssh` içinde tuzlu ve 10 000 tur S
 ## Kaldırma
 
 ```sh
-/var/local/kmc/bin/kpm uninstall kindle-apps-2048 kindle-apps-chess kindle-apps-sleep kindle-apps-ssh kindle-apps-firewall kindle-apps-weather kindle-apps-clock kindle-apps-currency kindle-apps-news kindle-apps-wordle kindle-apps-mines kindle-apps-sudoku kindle-apps-solitaire kindle-apps-core
+/var/local/kmc/bin/kpm uninstall kindle-apps-2048 kindle-apps-chess kindle-apps-sleep kindle-apps-ssh kindle-apps-firewall kindle-apps-weather kindle-apps-clock kindle-apps-currency kindle-apps-news kindle-apps-wordle kindle-apps-mines kindle-apps-sudoku kindle-apps-solitaire kindle-apps-sysinfo kindle-apps-upload kindle-apps-ebooks kindle-apps-core
 ```
 
 Oyun kayıtları ve ayarlar `/mnt/us/kindle-apps/data/` içinde kalır; tamamen silmek için o klasörü de silin.
@@ -80,6 +85,12 @@ Hava Durumu, Masa Saati, Döviz & Altın ve Gazete Wi-Fi ile veri çeker; bağla
 zamanıyla gösterir. Veri kaynakları: [Open-Meteo](https://open-meteo.com) (CC BY 4.0), TCMB günlük kurları,
 Truncgil Finans (altın), Anadolu Ajansı ve TRT Haber RSS. Gazete yalnızca RSS'te yayımlanan metni ve haberin
 bağlantısını gösterir; görsel indirmez.
+
+### Wi-Fi ile Yükle
+
+Uygulamayı açınca ekranda `http://<ip>:8080` adresi ve 6 haneli bir PIN görünür. Aynı Wi-Fi'daki telefon ya da bilgisayarın
+tarayıcısında bu adresi açın, PIN'i girip kitapları seçin; dosyalar `documents` klasörüne gelir. Sunucu yalnızca uygulama
+açıkken çalışır; çok sayıda yanlış PIN denemesinde kendini kilitler.
 
 ## Sorun giderme
 
