@@ -34,7 +34,8 @@ dosyasını indirip USB ile Kindle'ın `documents` klasörüne kopyalayın, kita
 ```sh
 /var/local/kmc/bin/kpm add-repo https://dikeckaan.github.io/kindle-apps/manifest.json
 /var/local/kmc/bin/kpm update
-/var/local/kmc/bin/kpm -y install kindle-apps-core kindle-apps-2048
+/var/local/kmc/bin/kpm -y install kindle-apps-core   # önce çekirdek
+/var/local/kmc/bin/kpm -y install kindle-apps-2048   # sonra uygulamalar, birer birer
 ```
 
 Ardından kitaplıkta **Uygulamalar**'ı açın.

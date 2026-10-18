@@ -9,6 +9,7 @@ $(python3 -c 'import json,sys;m=json.load(open(sys.argv[1]));print(m["id"], ".".
 EOF2
 if [ -n "$(find "$STAGE" -type l)" ]; then echo "pack: symlinks are not allowed on /mnt/us" >&2; exit 1; fi
 mkdir -p "$DIST/packages/$ID"
-OUT="$DIST/packages/$ID/${ID}_${VER}_kindlehf.kpkg"
-COPYFILE_DISABLE=1 tar czf "$OUT" -C "$STAGE" .
+OUT="$(cd "$DIST" && pwd)/packages/$ID/${ID}_${VER}_kindlehf.kpkg"
+# Entries are stored without a "./" prefix (kpm looks up "manifest.json" literally); plain ustar, no macOS xattrs.
+(cd "$STAGE" && COPYFILE_DISABLE=1 tar --format=ustar -czf "$OUT.tmp" $(ls -A)) && mv "$OUT.tmp" "$OUT"
 echo "$OUT"

@@ -11,7 +11,8 @@ for pid in sorted(os.listdir(os.path.join(dist, "packages"))):
         if not f.endswith(".kpkg"):
             continue
         with tarfile.open(os.path.join(d, f)) as t:
-            m = json.load(t.extractfile("./manifest.json"))
+            name = next(n for n in t.getnames() if n.lstrip("./") == "manifest.json")
+            m = json.load(t.extractfile(name))
         p = pkgs.setdefault(m["id"], {"name": m["name"], "author": m["author"],
                                       "description": m["description"], "artifacts": []})
         p["artifacts"].append({"url": f"packages/{pid}/{f}", "version": m["version"],

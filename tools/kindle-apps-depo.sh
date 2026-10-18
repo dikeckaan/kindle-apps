@@ -13,7 +13,12 @@ say "Kindle Apps deposu ekleniyor..."
     /var/local/kmc/bin/su -c "$KPM add-repo https://dikeckaan.github.io/kindle-apps/manifest.json"
 /var/local/kmc/bin/su -c "$KPM update" >/dev/null 2>&1
 say "Uygulamalar kuruluyor..."
-if /var/local/kmc/bin/su -c "$KPM -y install kindle-apps-core kindle-apps-2048"; then
+# One package per kpm call, core first: kpm 0.2.2 aborts when it has to resolve dependencies itself.
+ok=1
+for p in kindle-apps-core kindle-apps-2048; do
+    /var/local/kmc/bin/su -c "$KPM -y install $p" || ok=0
+done
+if [ "$ok" = 1 ]; then
     say "Kuruldu: kitaplıkta 'Uygulamalar'ı açın"
 else
     say "Kurulum başarısız: Wi-Fi bağlantısını kontrol edin"
