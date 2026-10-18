@@ -21,8 +21,19 @@ static void test_established_only_is_not_listening(void)
 	T_EQ_INT(tcp_port_listening("", 22), 0);
 }
 
+static void test_exe_match_accepts_replaced_binary(void)
+{
+	T_EQ_INT(ssh_exe_matches(SSH_BIN), 1);
+	T_EQ_INT(ssh_exe_matches(SSH_BIN " (deleted)"), 1); /* binary replaced by a package upgrade while running */
+	T_EQ_INT(ssh_exe_matches(SSH_BIN "x"), 0);
+	T_EQ_INT(ssh_exe_matches("/usr/sbin/dropbear"), 0);
+	T_EQ_INT(ssh_exe_matches(SSH_BIN " (deleted)x"), 0);
+	T_EQ_INT(ssh_exe_matches(""), 0);
+}
+
 int main(void)
 {
+	T_RUN(test_exe_match_accepts_replaced_binary);
 	T_RUN(test_listening_port_found);
 	T_RUN(test_established_only_is_not_listening);
 	return T_DONE();

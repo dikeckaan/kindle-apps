@@ -34,6 +34,12 @@ has kindle-apps-chess files/COPYING-stockfish
 has kindle-apps-ssh files/dropbear
 has kindle-apps-ssh files/dropbearkey
 has kindle-apps-ssh files/LICENSE-dropbear
+t=$(mktemp -d); tar xzf dist/packages/kindle-apps-ssh/*.kpkg -C "$t"
+# an upgrade must stop the running server (and its sessions) before the binary is replaced
+awk '/pre-install.sh/{s=NR} /cp -f/{c=NR} END{exit !(s && c && s < c)}' "$t/install.sh" \
+    && grep -q "(deleted)" "$t/pre-install.sh" && grep -q "(deleted)" "$t/uninstall.sh" \
+    && ok "ssh package stops every dropbear process before install and on uninstall" || bad "ssh package does not stop the server before replacing it"
+rm -rf "$t"
 for k in dist/packages/*/*.kpkg; do
     t=$(mktemp -d); tar xzf "$k" -C "$t"
     sh -n "$t/install.sh" && sh -n "$t/uninstall.sh" && ! grep -q "@[A-Z_]*@" "$t/install.sh" "$t/uninstall.sh" \

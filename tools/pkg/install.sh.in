@@ -4,6 +4,7 @@
 # so warn here when the core package is missing.
 set -e
 DEST=/mnt/us/kindle-apps/apps/@APPDIR@
+[ -f ./pre-install.sh ] && sh ./pre-install.sh
 mkdir -p "$DEST"
 cp -f ./files/* ./app.ini "$DEST/"
 for f in ./files/*; do chmod +x "$DEST/${f##*/}" 2>/dev/null || true; done

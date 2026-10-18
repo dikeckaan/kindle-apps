@@ -129,15 +129,13 @@ static int start_server(void)
 
 static void stop_server(void)
 {
-	int port = ssh_server_port(), pid = ssh_server_pid();
-	if (pid > 0) kill(pid, SIGTERM);
-	for (int i = 0; i < 20 && ssh_server_pid() > 0; i++) usleep(100000);
+	int port = ssh_server_port();
+	if (ssh_stop_all() != 0) fprintf(stderr, "dropbear did not stop\n");
 	if (port > 0) {
 		char cmd[128];
 		snprintf(cmd, sizeof cmd, "while iptables -D INPUT -p tcp --dport %d -j ACCEPT 2>/dev/null; do :; done", port);
 		run(cmd);
 	}
-	unlink(SSH_PIDFILE);
 }
 
 static void describe(void)
