@@ -7,14 +7,22 @@
 %d %s %d, %s	
 # apps/deprem/main.c
 %d deprem	
+# apps/odak/main.c
+%d dk	
 # apps/deprem/deprem.c
 %d dk önce	
+# apps/odak/main.c
+%d gün	
 # apps/deprem/deprem.c
 %d gün önce	
 # apps/upload/main.c
 %d kez yanlış PIN girildi: yeni PIN üretildi.	
 # apps/deprem/main.c
 %d km (%s)	
+# apps/odak/main.c
+%d sa	
+# apps/odak/main.c
+%d sa %d dk	
 # apps/deprem/deprem.c
 %d sa önce	
 # apps/upload/main.c
@@ -55,14 +63,22 @@
 %s · Manşetler · Sayfa %d/%d	
 # apps/mines/main.c
 %s · Süre: %ld:%02ld	
+# apps/odak/main.c
+%s · Tur %d	
+# apps/odak/main.c
+%s · Tur %d · Bitiş %s	
 # apps/deprem/main.c
 %s° K, %s° D	
 # apps/weather/main.c
 + Ekle	
+# apps/odak/main.c
++ Yeni	
 # apps/sky/main.c
 +1 gün	
 # apps/sky/main.c
 +1 sa	
+# apps/odak/main.c
++5 dk	
 # apps/puzzle/puzzle.c
 1 hamlede mat	
 # apps/sleep/sleep_opts.c
@@ -203,6 +219,8 @@ Bağlantı yok, veri alınamadı
 Başak	
 # apps/puzzle/main.c
 Başka bulmaca	
+# apps/odak/main.c
+Başla	
 # apps/puzzle/main.c
 Baştan başla	
 # apps/sysinfo/main.c
@@ -215,6 +233,8 @@ Beyaz
 Beyaz oynar	
 # apps/news/news.c
 Bilim	
+# apps/odak/main.c
+Bitir	
 # apps/ebooks/main.c
 Biçim:	
 # apps/ebooks/main.c
@@ -229,6 +249,8 @@ Boğmaca mat
 Bu gece görünen gezegenler: %s	
 # apps/sky/main.c
 Bu gece parlak gezegen görünmüyor	
+# apps/odak/main.c
+Bu hafta	
 # apps/upload/main.c
 Bu oturumda gelenler (%d)	
 # apps/upload/main.c
@@ -239,10 +261,14 @@ Bu oyun bitirilsin mi?
 Bu sefer olmadı	
 # apps/deprem/main.c
 Bu süzgeçle deprem yok.	
-# apps/weather/main.c
+# apps/odak/main.c
 Bugün	
 # apps/weather/main.c
 Bugün  en yüksek %s · en düşük %s · ☼ %s – %s	
+# apps/odak/main.c
+Bugün %d oturum	
+# apps/odak/main.c
+Bugün %s · %d oturum · Seri %d gün	
 # apps/puzzle/main.c
 Bulmaca alınamadı	
 # apps/puzzle/main.c
@@ -275,6 +301,8 @@ Cumartesi
 Cumhuriyet altını	
 # apps/weather/wx.c
 D	
+# apps/odak/main.c
+DURAKLATILDI	
 # apps/ebooks/main.c
 Daha fazla	
 # apps/puzzle/main.c
@@ -295,6 +323,8 @@ Deprem
 Deprem listesi alınamadı.\nWi-Fi bağlantısını kontrol edip Yenile'ye basın.	
 # apps/deprem/main.c
 Derinlik	
+# apps/odak/odak.c
+Ders	
 # apps/game2048/main.c
 Devam	
 # apps/chess/main.c
@@ -307,6 +337,8 @@ Dil
 Dokun: aç	
 # apps/mines/main.c
 Dokun: bayrak	
+# apps/odak/main.c
+Dokunun: Duraklat · +5 dk · Bitir	
 # apps/weather/wx.c
 Dolu, fırtına	
 # apps/pano/pano.c
@@ -327,6 +359,8 @@ Doğru! Devam edin
 Doğru! Çözüldü · Seri: %d	
 # apps/sky/main.c
 Doğuş %s · batış %s	
+# apps/odak/main.c
+Duraklat	
 # apps/wordle/main.c
 Dâhice!	
 # apps/currency/main.c
@@ -357,6 +391,14 @@ En iyi
 En iyi seri	
 # apps/sky/main.c
 En parlak yıldızı: %s	
+# apps/odak/main.c
+Etiket (silmek için basılı tutun)	
+# apps/odak/main.c
+Etiket silinsin mi?	
+# apps/odak/main.c
+Etiketler · toplam %s	
+# apps/odak/main.c
+Etiketsiz	
 # apps/chess/main.c
 Evet	
 # core/kui/trfmt.c
@@ -475,6 +517,8 @@ Haziran
 Hedef para	
 # apps/ebooks/main.c
 Henüz kitap indirilmedi.	
+# apps/odak/main.c
+Henüz oturum yok	
 # apps/ssh/main.c
 Henüz parola yok	
 # apps/puzzle/main.c
@@ -489,6 +533,8 @@ Hilal (büyüyen)
 Hilal (küçülen)	
 # apps/weather/main.c
 Hissedilen %s	
+# apps/odak/main.c
+Hiç mola yok: oturum tamam.	
 # apps/sleep/sleep_opts.c
 Hiç uyuma	
 # apps/weather/wx.c
@@ -569,6 +615,8 @@ Kelime Oyunu
 Kelime listesi bulunamadı. Uygulamayı yeniden kurun.	
 # apps/wordle/main.c
 Kelime: %s	
+# apps/odak/main.c
+Kendiliğinden başladı. Zamanlayıcı için dokunun.	
 # apps/upload/main.c
 Kilidi aç (yeni PIN)	
 # apps/sleep/main.c
@@ -629,6 +677,8 @@ Küçükköpek
 Kırlangıç matı	
 # apps/deprem/main.c
 Liste	
+# apps/odak/main.c
+MOLA	
 # apps/news/news.c
 Manşet	
 # core/kui/trfmt.c
@@ -655,6 +705,14 @@ Menü sırası
 Mevcut oyun silinsin mi?	
 # apps/sky/skydata.c
 Mizar	
+# apps/odak/main.c
+Mola %d dk	
+# apps/odak/main.c
+Mola bitti.	
+# apps/odak/main.c
+Mola zamanı	
+# apps/odak/main.c
+Mola: %s	
 # apps/chess/main.c
 Motor yanıt vermedi	
 # apps/wordle/main.c
@@ -671,14 +729,30 @@ Nisan
 Not: Açık	
 # apps/sudoku/main.c
 Not: Kapalı	
+# apps/odak/main.c
+ODAK	
 # core/kui/trfmt.c
 Ocak	
+# apps/odak/main.c
+Odak	
+# apps/odak/main.c
+Odak %d dk	
+# apps/odak/main.c
+Odak zamanı	
+# apps/odak/main.c
+Odak: %s	
+# apps/odak/main.c
+Odakta ön ışığı kapat	
+# apps/odak/odak.c
+Okuma	
 # apps/currency/fx.c
 Ons (USD)	
 # apps/chess/levels.c
 Orta	
 # apps/solitaire/main.c
 Otomatik tamamla	
+# apps/odak/main.c
+Oturum bitti	
 # apps/wordle/main.c
 Oynanan	
 # apps/chess/main.c
@@ -739,6 +813,8 @@ Piyon hangi taşa dönüşsün?
 Piyon oyun sonu	
 # apps/sky/skydata.c
 Polluks	
+# apps/odak/main.c
+Pomodoro · 25 / 5 dk (4. mola 15)	
 # apps/ebooks/main.c
 Project Gutenberg'deki telifsiz kitaplar	
 # apps/sky/skydata.c
@@ -793,13 +869,13 @@ Sayfa %d/%d
 Sağanak	
 # apps/news/news.c
 Sağlık	
-# apps/wordle/main.c
+# apps/odak/main.c
 Seri	
 # apps/puzzle/main.c
 Seri: %d · En iyi seri: %d	
 # apps/puzzle/puzzle.c
 Sessiz hamle	
-# apps/sudoku/main.c
+# apps/odak/main.c
 Sil	
 # apps/sky/skydata.c
 Sirius	
@@ -817,6 +893,8 @@ Skor
 Skor: %d	
 # apps/solitaire/main.c
 Solitaire	
+# apps/odak/main.c
+Son 7 gün	
 # apps/deprem/main.c
 Son Depremler	
 # apps/wordle/main.c
@@ -829,6 +907,8 @@ Son dakika haberleri
 Son dördün	
 # apps/puzzle/puzzle.c
 Son sıra matı	
+# apps/odak/main.c
+Sonraki aşama kendiliğinden başlasın	
 # apps/puzzle/main.c
 Sonraki hamle	
 # apps/weather/main.c
@@ -851,6 +931,8 @@ Sunucu başlatılamadı (günlüğe bakın).
 Sözlükte yok (yalnızca kök kelimeler)	
 # apps/sky/skydata.c
 Süheyl	
+# apps/odak/main.c
+Süre	
 # apps/mines/main.c
 Süre: %ld:%02ld	
 # apps/chess/main.c
@@ -885,6 +967,8 @@ Tam altın
 Tamam	
 # apps/solitaire/main.c
 Tamamla	
+# apps/odak/main.c
+Tamamlanan odak: %s · %s	
 # apps/upload/main.c
 Tarayıcıda bu adresi açın:	
 # apps/pano/main.c
@@ -921,6 +1005,8 @@ Tümünü güncelle
 Türkiye	
 # apps/deprem/main.c
 Türkiye saati	
+# apps/odak/main.c
+UZUN MOLA	
 # apps/chess/levels.c
 Usta	
 # core/hub/main.c
@@ -941,6 +1027,10 @@ Uykuya geçiş: %d dk dokunulmazsa
 Uzaklık	
 # apps/sky/main.c
 Uzaklık %s AB (Güneş–Dünya = 1)	
+# apps/odak/main.c
+Uzun mola: %s	
+# apps/odak/main.c
+Uzun · 50 / 10 dk	
 # apps/ebooks/main.c
 Vazgeç	
 # apps/sky/skydata.c
@@ -971,6 +1061,8 @@ Yatsı
 Yay	
 # apps/ebooks/main.c
 Yazar bilinmiyor	
+# apps/odak/odak.c
+Yazı	
 # apps/sysinfo/main.c
 Yazılım	
 # apps/weather/wx.c
@@ -985,6 +1077,8 @@ Yeni
 Yeni SSH parolası (en az 6)	
 # apps/pano/pano.c
 Yeni ay	
+# apps/odak/main.c
+Yeni etiket	
 # apps/chess/main.c
 Yeni oyun	
 # apps/ebooks/main.c
@@ -1029,6 +1123,8 @@ boşluk
 daha eski	
 # apps/deprem/main.c
 derinlik %s km	
+# apps/odak/main.c
+dk	
 # apps/puzzle/puzzle.c
 f2/f7 saldırısı	
 # apps/news/main.c
@@ -1097,6 +1193,8 @@ son 24 saat
 Ön ışık	
 # apps/sudoku/main.c
 Önce boş bir hücre seçin.	
+# apps/odak/main.c
+Özel · %d / %d dk	
 # apps/pano/pano.c
 Öğle	
 # apps/puzzle/puzzle.c
@@ -1135,10 +1233,12 @@ son 24 saat
 İpucu	
 # apps/puzzle/main.c
 İpucu: işaretli taşı oynayın	
-# apps/wordle/main.c
+# apps/odak/main.c
 İstatistik	
 # apps/chess/levels.c
 İyi	
+# apps/odak/odak.c
+İş	
 # apps/firewall/main.c
 İşlem başarısız oldu.	
 # apps/puzzle/puzzle.c
@@ -1151,6 +1251,8 @@ son 24 saat
 Şah! Sıra: %s	
 # core/kui/powerui.c
 Şarj oluyor	
+# apps/odak/main.c
+Şarjda: uyanık kalıyor	
 # apps/weather/main.c
 Şehir ara	
 # apps/weather/main.c
@@ -1199,6 +1301,8 @@ son 24 saat
 ☉ Güneş	
 # apps/sky/main.c
 ☾ Ay	
+# apps/odak/main.c
+☾ Kindle dakikalar arasında uyuyor	
 # apps/clock/main.c
 ☾ uykuda	
 # apps/clock/main.c

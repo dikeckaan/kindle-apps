@@ -608,3 +608,55 @@ Kastor	Kastor
 Kutup Yıldızı	Qütb ulduzu
 Algol	Algol
 Mizar	Mizar
+%d dk	%d dəq
+%d gün	%d gün
+%d sa	%d saat
+%d sa %d dk	%d saat %d dəq
+%s · Tur %d	%s · Tur %d
+%s · Tur %d · Bitiş %s	%s · Tur %d · Bitmə %s
++ Yeni	+ Yeni
++5 dk	+5 dəq
+Başla	Başla
+Bitir	Bitir
+Bu hafta	Bu həftə
+Bugün %d oturum	Bu gün %d seans
+Bugün %s · %d oturum · Seri %d gün	Bu gün %s · %d seans · Seriya %d gün
+DURAKLATILDI	DAYANDIRILDI
+Ders	Dərs
+Dokunun: Duraklat · +5 dk · Bitir	Toxunun: Dayandır · +5 dəq · Bitir
+Duraklat	Dayandır
+Etiket (silmek için basılı tutun)	Etiket (silmək üçün basılı saxlayın)
+Etiket silinsin mi?	Bu etiket silinsin?
+Etiketler · toplam %s	Etiketlər · cəmi %s
+Etiketsiz	Etiketsiz
+Henüz oturum yok	Hələ seans yoxdur
+Hiç mola yok: oturum tamam.	Fasilə yoxdur: seans tamamlandı.
+Kendiliğinden başladı. Zamanlayıcı için dokunun.	Özü başladı. Taymer üçün toxunun.
+MOLA	FASİLƏ
+Mola %d dk	Fasilə %d dəq
+Mola bitti.	Fasilə bitdi.
+Mola zamanı	Fasilə vaxtı
+Mola: %s	Fasilə: %s
+ODAK	DİQQƏT
+Odak	Diqqət
+Odak %d dk	Diqqət %d dəq
+Odak zamanı	Diqqət vaxtı
+Odak: %s	Diqqət: %s
+Odakta ön ışığı kapat	Diqqət zamanı işığı söndür
+Okuma	Oxu
+Oturum bitti	Seans bitdi
+Pomodoro · 25 / 5 dk (4. mola 15)	Pomodoro · 25 / 5 dəq (4-cü fasilə 15)
+Son 7 gün	Son 7 gün
+Sonraki aşama kendiliğinden başlasın	Növbəti mərhələ özü başlasın
+Süre	Müddət
+Tamamlanan odak: %s · %s	Tamamlanan diqqət: %s · %s
+UZUN MOLA	UZUN FASİLƏ
+Uzun mola: %s	Uzun fasilə: %s
+Uzun · 50 / 10 dk	Uzun · 50 / 10 dəq
+Yazı	Yazı
+Yeni etiket	Yeni etiket
+dk	dəq
+Özel · %d / %d dk	Xüsusi · %d / %d dəq
+İş	İş
+Şarjda: uyanık kalıyor	Şarjda: oyaq qalır
+☾ Kindle dakikalar arasında uyuyor	☾ Kindle dəqiqələr arasında yatır

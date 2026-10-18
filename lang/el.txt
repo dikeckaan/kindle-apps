@@ -608,3 +608,55 @@ Kastor	Κάστωρ
 Kutup Yıldızı	Πολικός Αστέρας
 Algol	Αλγκόλ
 Mizar	Μιζάρ
+%d dk	%d λεπ.
+%d gün	%d ημέρες
+%d sa	%d ώρ.
+%d sa %d dk	%d ώρ. %d λεπ.
+%s · Tur %d	%s · Γύρος %d
+%s · Tur %d · Bitiş %s	%s · Γύρος %d · Λήξη %s
++ Yeni	+ Νέα
++5 dk	+5 λεπ.
+Başla	Έναρξη
+Bitir	Τέλος
+Bu hafta	Αυτή την εβδομάδα
+Bugün %d oturum	Σήμερα: %d συνεδρίες
+Bugün %s · %d oturum · Seri %d gün	Σήμερα %s · %d συνεδρίες · Σερί %d ημέρες
+DURAKLATILDI	ΣΕ ΠΑΥΣΗ
+Ders	Μελέτη
+Dokunun: Duraklat · +5 dk · Bitir	Πατήστε: Παύση · +5 λεπ. · Τέλος
+Duraklat	Παύση
+Etiket (silmek için basılı tutun)	Ετικέτα (κρατήστε πατημένο για διαγραφή)
+Etiket silinsin mi?	Διαγραφή αυτής της ετικέτας;
+Etiketler · toplam %s	Ετικέτες · σύνολο %s
+Etiketsiz	Χωρίς ετικέτα
+Henüz oturum yok	Καμία συνεδρία ακόμα
+Hiç mola yok: oturum tamam.	Χωρίς διάλειμμα: η συνεδρία ολοκληρώθηκε.
+Kendiliğinden başladı. Zamanlayıcı için dokunun.	Ξεκίνησε αυτόματα. Πατήστε για το χρονόμετρο.
+MOLA	ΔΙΑΛΕΙΜΜΑ
+Mola %d dk	Διάλειμμα %d λεπ.
+Mola bitti.	Το διάλειμμα τελείωσε.
+Mola zamanı	Ώρα για διάλειμμα
+Mola: %s	Διάλειμμα: %s
+ODAK	ΣΥΓΚΕΝΤΡΩΣΗ
+Odak	Συγκέντρωση
+Odak %d dk	Συγκέντρωση %d λεπ.
+Odak zamanı	Ώρα για συγκέντρωση
+Odak: %s	Συγκέντρωση: %s
+Odakta ön ışığı kapat	Σβήσιμο φωτός κατά τη συγκέντρωση
+Okuma	Ανάγνωση
+Oturum bitti	Η συνεδρία τελείωσε
+Pomodoro · 25 / 5 dk (4. mola 15)	Pomodoro · 25 / 5 λεπ. (4ο διάλειμμα 15)
+Son 7 gün	Τελευταίες 7 ημέρες
+Sonraki aşama kendiliğinden başlasın	Αυτόματη έναρξη της επόμενης φάσης
+Süre	Διάρκεια
+Tamamlanan odak: %s · %s	Ολοκληρωμένη συγκέντρωση: %s · %s
+UZUN MOLA	ΜΕΓΑΛΟ ΔΙΑΛΕΙΜΜΑ
+Uzun mola: %s	Μεγάλο διάλειμμα: %s
+Uzun · 50 / 10 dk	Μεγάλο · 50 / 10 λεπ.
+Yazı	Γραφή
+Yeni etiket	Νέα ετικέτα
+dk	λεπ.
+Özel · %d / %d dk	Προσαρμογή · %d / %d λεπ.
+İş	Εργασία
+Şarjda: uyanık kalıyor	Φόρτιση: μένει ξύπνιο
+☾ Kindle dakikalar arasında uyuyor	☾ Το Kindle κοιμάται ανάμεσα στα λεπτά

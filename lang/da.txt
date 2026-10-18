@@ -608,3 +608,55 @@ Kastor	Kastor
 Kutup Yıldızı	Polarstjernen
 Algol	Algol
 Mizar	Mizar
+%d dk	%d min
+%d gün	%d dage
+%d sa	%d t
+%d sa %d dk	%d t %d min
+%s · Tur %d	%s · Runde %d
+%s · Tur %d · Bitiş %s	%s · Runde %d · Slut %s
++ Yeni	+ Ny
++5 dk	+5 min
+Başla	Start
+Bitir	Afslut
+Bu hafta	Denne uge
+Bugün %d oturum	I dag: %d sessioner
+Bugün %s · %d oturum · Seri %d gün	I dag %s · %d sessioner · Stime %d dage
+DURAKLATILDI	STANDSET
+Ders	Studier
+Dokunun: Duraklat · +5 dk · Bitir	Tryk: Stands · +5 min · Afslut
+Duraklat	Stands
+Etiket (silmek için basılı tutun)	Etiket (hold for at slette)
+Etiket silinsin mi?	Slet denne etiket?
+Etiketler · toplam %s	Etiketter · i alt %s
+Etiketsiz	Uden etiket
+Henüz oturum yok	Ingen sessioner endnu
+Hiç mola yok: oturum tamam.	Ingen pause: sessionen er færdig.
+Kendiliğinden başladı. Zamanlayıcı için dokunun.	Startede af sig selv. Tryk for timeren.
+MOLA	PAUSE
+Mola %d dk	Pause %d min
+Mola bitti.	Pausen er slut.
+Mola zamanı	Tid til pause
+Mola: %s	Pause: %s
+ODAK	FOKUS
+Odak	Fokus
+Odak %d dk	Fokus %d min
+Odak zamanı	Tid til fokus
+Odak: %s	Fokus: %s
+Odakta ön ışığı kapat	Sluk lyset under fokus
+Okuma	Læsning
+Oturum bitti	Sessionen er slut
+Pomodoro · 25 / 5 dk (4. mola 15)	Pomodoro · 25 / 5 min (4. pause 15)
+Son 7 gün	Sidste 7 dage
+Sonraki aşama kendiliğinden başlasın	Start næste fase automatisk
+Süre	Varighed
+Tamamlanan odak: %s · %s	Fokus fuldført: %s · %s
+UZUN MOLA	LANG PAUSE
+Uzun mola: %s	Lang pause: %s
+Uzun · 50 / 10 dk	Lang · 50 / 10 min
+Yazı	Skrivning
+Yeni etiket	Ny etiket
+dk	min
+Özel · %d / %d dk	Egen · %d / %d min
+İş	Arbejde
+Şarjda: uyanık kalıyor	Oplader: forbliver vågen
+☾ Kindle dakikalar arasında uyuyor	☾ Kindle sover mellem minutterne

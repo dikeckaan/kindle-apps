@@ -608,3 +608,55 @@ Kastor	Kastor
 Kutup Yıldızı	Polárka
 Algol	Algol
 Mizar	Mizar
+%d dk	%d min
+%d gün	%d dní
+%d sa	%d h
+%d sa %d dk	%d h %d min
+%s · Tur %d	%s · Kolo %d
+%s · Tur %d · Bitiş %s	%s · Kolo %d · Konec %s
++ Yeni	+ Nový
++5 dk	+5 min
+Başla	Start
+Bitir	Ukončit
+Bu hafta	Tento týden
+Bugün %d oturum	Dnes relací: %d
+Bugün %s · %d oturum · Seri %d gün	Dnes %s · relací: %d · Série dní: %d
+DURAKLATILDI	POZASTAVENO
+Ders	Studium
+Dokunun: Duraklat · +5 dk · Bitir	Klepněte: Pozastavit · +5 min · Ukončit
+Duraklat	Pozastavit
+Etiket (silmek için basılı tutun)	Štítek (podržením smažete)
+Etiket silinsin mi?	Smazat tento štítek?
+Etiketler · toplam %s	Štítky · celkem %s
+Etiketsiz	Bez štítku
+Henüz oturum yok	Zatím žádné relace
+Hiç mola yok: oturum tamam.	Bez přestávky: relace hotová.
+Kendiliğinden başladı. Zamanlayıcı için dokunun.	Spuštěno automaticky. Klepněte pro časovač.
+MOLA	PŘESTÁVKA
+Mola %d dk	Přestávka %d min
+Mola bitti.	Přestávka skončila.
+Mola zamanı	Čas na přestávku
+Mola: %s	Přestávka: %s
+ODAK	SOUSTŘEDĚNÍ
+Odak	Soustředění
+Odak %d dk	Soustředění %d min
+Odak zamanı	Čas se soustředit
+Odak: %s	Soustředění: %s
+Odakta ön ışığı kapat	Při soustředění vypnout osvětlení
+Okuma	Čtení
+Oturum bitti	Relace skončila
+Pomodoro · 25 / 5 dk (4. mola 15)	Pomodoro · 25 / 5 min (4. přestávka 15)
+Son 7 gün	Posledních 7 dní
+Sonraki aşama kendiliğinden başlasın	Další fázi spustit automaticky
+Süre	Délka
+Tamamlanan odak: %s · %s	Dokončené soustředění: %s · %s
+UZUN MOLA	DLOUHÁ PŘESTÁVKA
+Uzun mola: %s	Dlouhá přestávka: %s
+Uzun · 50 / 10 dk	Dlouhý · 50 / 10 min
+Yazı	Psaní
+Yeni etiket	Nový štítek
+dk	min
+Özel · %d / %d dk	Vlastní · %d / %d min
+İş	Práce
+Şarjda: uyanık kalıyor	Nabíjí se: zůstává vzhůru
+☾ Kindle dakikalar arasında uyuyor	☾ Kindle mezi minutami spí

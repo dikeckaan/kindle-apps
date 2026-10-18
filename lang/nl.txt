@@ -608,3 +608,55 @@ Kastor	Castor
 Kutup Yıldızı	Poolster
 Algol	Algol
 Mizar	Mizar
+%d dk	%d min
+%d gün	%d dagen
+%d sa	%d u
+%d sa %d dk	%d u %d min
+%s · Tur %d	%s · Ronde %d
+%s · Tur %d · Bitiş %s	%s · Ronde %d · Einde %s
++ Yeni	+ Nieuw
++5 dk	+5 min
+Başla	Start
+Bitir	Stoppen
+Bu hafta	Deze week
+Bugün %d oturum	Vandaag: %d sessies
+Bugün %s · %d oturum · Seri %d gün	Vandaag %s · %d sessies · Reeks %d dagen
+DURAKLATILDI	GEPAUZEERD
+Ders	Studie
+Dokunun: Duraklat · +5 dk · Bitir	Tik: Pauzeren · +5 min · Stoppen
+Duraklat	Pauzeren
+Etiket (silmek için basılı tutun)	Label (vasthouden om te wissen)
+Etiket silinsin mi?	Dit label wissen?
+Etiketler · toplam %s	Labels · totaal %s
+Etiketsiz	Zonder label
+Henüz oturum yok	Nog geen sessies
+Hiç mola yok: oturum tamam.	Geen pauze: sessie klaar.
+Kendiliğinden başladı. Zamanlayıcı için dokunun.	Vanzelf gestart. Tik voor de timer.
+MOLA	PAUZE
+Mola %d dk	Pauze %d min
+Mola bitti.	Pauze voorbij.
+Mola zamanı	Tijd voor pauze
+Mola: %s	Pauze: %s
+ODAK	FOCUS
+Odak	Focus
+Odak %d dk	Focus %d min
+Odak zamanı	Tijd om te focussen
+Odak: %s	Focus: %s
+Odakta ön ışığı kapat	Voorlicht uit tijdens focus
+Okuma	Lezen
+Oturum bitti	Sessie voorbij
+Pomodoro · 25 / 5 dk (4. mola 15)	Pomodoro · 25 / 5 min (4e pauze 15)
+Son 7 gün	Laatste 7 dagen
+Sonraki aşama kendiliğinden başlasın	Volgende fase vanzelf starten
+Süre	Duur
+Tamamlanan odak: %s · %s	Focus voltooid: %s · %s
+UZUN MOLA	LANGE PAUZE
+Uzun mola: %s	Lange pauze: %s
+Uzun · 50 / 10 dk	Lang · 50 / 10 min
+Yazı	Schrijven
+Yeni etiket	Nieuw label
+dk	min
+Özel · %d / %d dk	Eigen · %d / %d min
+İş	Werk
+Şarjda: uyanık kalıyor	Aan de lader: blijft wakker
+☾ Kindle dakikalar arasında uyuyor	☾ Kindle slaapt tussen de minuten

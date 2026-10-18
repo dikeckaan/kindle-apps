@@ -608,3 +608,55 @@ Kastor	Castore
 Kutup Yıldızı	Stella Polare
 Algol	Algol
 Mizar	Mizar
+%d dk	%d min
+%d gün	%d giorni
+%d sa	%d h
+%d sa %d dk	%d h %d min
+%s · Tur %d	%s · Turno %d
+%s · Tur %d · Bitiş %s	%s · Turno %d · Fine %s
++ Yeni	+ Nuova
++5 dk	+5 min
+Başla	Inizia
+Bitir	Termina
+Bu hafta	Questa settimana
+Bugün %d oturum	Oggi: %d sessioni
+Bugün %s · %d oturum · Seri %d gün	Oggi %s · %d sessioni · Serie %d giorni
+DURAKLATILDI	SOSPESO
+Ders	Studio
+Dokunun: Duraklat · +5 dk · Bitir	Tocca: Sospendi · +5 min · Termina
+Duraklat	Sospendi
+Etiket (silmek için basılı tutun)	Etichetta (tieni premuto per eliminare)
+Etiket silinsin mi?	Eliminare questa etichetta?
+Etiketler · toplam %s	Etichette · totale %s
+Etiketsiz	Senza etichetta
+Henüz oturum yok	Ancora nessuna sessione
+Hiç mola yok: oturum tamam.	Nessuna pausa: sessione completata.
+Kendiliğinden başladı. Zamanlayıcı için dokunun.	Avviata da sola. Tocca per il timer.
+MOLA	PAUSA
+Mola %d dk	Pausa %d min
+Mola bitti.	Pausa finita.
+Mola zamanı	Tempo di pausa
+Mola: %s	Pausa: %s
+ODAK	CONCENTRAZIONE
+Odak	Concentrazione
+Odak %d dk	Concentrazione %d min
+Odak zamanı	Tempo di concentrarsi
+Odak: %s	Concentrazione: %s
+Odakta ön ışığı kapat	Luce spenta durante la concentrazione
+Okuma	Lettura
+Oturum bitti	Sessione finita
+Pomodoro · 25 / 5 dk (4. mola 15)	Pomodoro · 25 / 5 min (4ª pausa 15)
+Son 7 gün	Ultimi 7 giorni
+Sonraki aşama kendiliğinden başlasın	Avvia da sola la fase successiva
+Süre	Durata
+Tamamlanan odak: %s · %s	Concentrazione completata: %s · %s
+UZUN MOLA	PAUSA LUNGA
+Uzun mola: %s	Pausa lunga: %s
+Uzun · 50 / 10 dk	Lungo · 50 / 10 min
+Yazı	Scrittura
+Yeni etiket	Nuova etichetta
+dk	min
+Özel · %d / %d dk	Personale · %d / %d min
+İş	Lavoro
+Şarjda: uyanık kalıyor	In carica: resta sveglio
+☾ Kindle dakikalar arasında uyuyor	☾ Il Kindle dorme tra un minuto e l'altro

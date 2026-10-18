@@ -608,3 +608,55 @@ Kastor	Cástor
 Kutup Yıldızı	Estrella Polar
 Algol	Algol
 Mizar	Mizar
+%d dk	%d min
+%d gün	%d días
+%d sa	%d h
+%d sa %d dk	%d h %d min
+%s · Tur %d	%s · Ronda %d
+%s · Tur %d · Bitiş %s	%s · Ronda %d · Termina %s
++ Yeni	+ Nueva
++5 dk	+5 min
+Başla	Empezar
+Bitir	Terminar
+Bu hafta	Esta semana
+Bugün %d oturum	Hoy: %d sesiones
+Bugün %s · %d oturum · Seri %d gün	Hoy %s · %d sesiones · Racha %d días
+DURAKLATILDI	EN PAUSA
+Ders	Estudio
+Dokunun: Duraklat · +5 dk · Bitir	Toca: Pausar · +5 min · Terminar
+Duraklat	Pausar
+Etiket (silmek için basılı tutun)	Etiqueta (mantén pulsado para borrar)
+Etiket silinsin mi?	¿Borrar esta etiqueta?
+Etiketler · toplam %s	Etiquetas · total %s
+Etiketsiz	Sin etiqueta
+Henüz oturum yok	Aún no hay sesiones
+Hiç mola yok: oturum tamam.	Sin descanso: sesión completa.
+Kendiliğinden başladı. Zamanlayıcı için dokunun.	Empezó solo. Toca para ver el temporizador.
+MOLA	DESCANSO
+Mola %d dk	Descanso %d min
+Mola bitti.	Descanso terminado.
+Mola zamanı	Hora de descansar
+Mola: %s	Descanso: %s
+ODAK	ENFOQUE
+Odak	Enfoque
+Odak %d dk	Enfoque %d min
+Odak zamanı	Hora de concentrarse
+Odak: %s	Enfoque: %s
+Odakta ön ışığı kapat	Apagar la luz al concentrarse
+Okuma	Lectura
+Oturum bitti	Sesión terminada
+Pomodoro · 25 / 5 dk (4. mola 15)	Pomodoro · 25 / 5 min (4.º descanso 15)
+Son 7 gün	Últimos 7 días
+Sonraki aşama kendiliğinden başlasın	Empezar la siguiente fase solo
+Süre	Duración
+Tamamlanan odak: %s · %s	Enfoque completado: %s · %s
+UZUN MOLA	DESCANSO LARGO
+Uzun mola: %s	Descanso largo: %s
+Uzun · 50 / 10 dk	Largo · 50 / 10 min
+Yazı	Escritura
+Yeni etiket	Nueva etiqueta
+dk	min
+Özel · %d / %d dk	Personal · %d / %d min
+İş	Trabajo
+Şarjda: uyanık kalıyor	Cargando: sigue despierto
+☾ Kindle dakikalar arasında uyuyor	☾ El Kindle duerme entre minutos

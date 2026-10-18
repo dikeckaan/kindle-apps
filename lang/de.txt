@@ -608,3 +608,55 @@ Kastor	Kastor
 Kutup Yıldızı	Polarstern
 Algol	Algol
 Mizar	Mizar
+%d dk	%d Min.
+%d gün	%d Tage
+%d sa	%d Std.
+%d sa %d dk	%d Std. %d Min.
+%s · Tur %d	%s · Runde %d
+%s · Tur %d · Bitiş %s	%s · Runde %d · Ende %s
++ Yeni	+ Neu
++5 dk	+5 Min.
+Başla	Start
+Bitir	Beenden
+Bu hafta	Diese Woche
+Bugün %d oturum	Heute %d Sitzungen
+Bugün %s · %d oturum · Seri %d gün	Heute %s · %d Sitzungen · Serie %d Tage
+DURAKLATILDI	ANGEHALTEN
+Ders	Lernen
+Dokunun: Duraklat · +5 dk · Bitir	Tippen: Anhalten · +5 Min. · Beenden
+Duraklat	Anhalten
+Etiket (silmek için basılı tutun)	Etikett (zum Löschen halten)
+Etiket silinsin mi?	Dieses Etikett löschen?
+Etiketler · toplam %s	Etiketten · gesamt %s
+Etiketsiz	Ohne Etikett
+Henüz oturum yok	Noch keine Sitzungen
+Hiç mola yok: oturum tamam.	Keine Pause: Sitzung fertig.
+Kendiliğinden başladı. Zamanlayıcı için dokunun.	Automatisch gestartet. Für den Timer tippen.
+MOLA	PAUSE
+Mola %d dk	Pause %d Min.
+Mola bitti.	Pause vorbei.
+Mola zamanı	Zeit für eine Pause
+Mola: %s	Pause: %s
+ODAK	FOKUS
+Odak	Fokus
+Odak %d dk	Fokus %d Min.
+Odak zamanı	Zeit zum Fokussieren
+Odak: %s	Fokus: %s
+Odakta ön ışığı kapat	Frontlicht beim Fokussieren aus
+Okuma	Lesen
+Oturum bitti	Sitzung beendet
+Pomodoro · 25 / 5 dk (4. mola 15)	Pomodoro · 25 / 5 Min. (4. Pause 15)
+Son 7 gün	Letzte 7 Tage
+Sonraki aşama kendiliğinden başlasın	Nächste Phase automatisch starten
+Süre	Dauer
+Tamamlanan odak: %s · %s	Fokus geschafft: %s · %s
+UZUN MOLA	LANGE PAUSE
+Uzun mola: %s	Lange Pause: %s
+Uzun · 50 / 10 dk	Lang · 50 / 10 Min.
+Yazı	Schreiben
+Yeni etiket	Neues Etikett
+dk	Min.
+Özel · %d / %d dk	Eigene · %d / %d Min.
+İş	Arbeit
+Şarjda: uyanık kalıyor	Am Ladegerät: bleibt wach
+☾ Kindle dakikalar arasında uyuyor	☾ Kindle schläft zwischen den Minuten

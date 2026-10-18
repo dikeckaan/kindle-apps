@@ -608,3 +608,55 @@ Kastor	Castor
 Kutup Yıldızı	Sarkcsillag
 Algol	Algol
 Mizar	Mizar
+%d dk	%d perc
+%d gün	%d nap
+%d sa	%d ó
+%d sa %d dk	%d ó %d perc
+%s · Tur %d	%s · %d. kör
+%s · Tur %d · Bitiş %s	%s · %d. kör · Vége %s
++ Yeni	+ Új
++5 dk	+5 perc
+Başla	Indítás
+Bitir	Befejezés
+Bu hafta	Ezen a héten
+Bugün %d oturum	Ma %d munkamenet
+Bugün %s · %d oturum · Seri %d gün	Ma %s · %d munkamenet · Sorozat %d nap
+DURAKLATILDI	SZÜNETELTETVE
+Ders	Tanulás
+Dokunun: Duraklat · +5 dk · Bitir	Koppintson: Szüneteltetés · +5 perc · Befejezés
+Duraklat	Szüneteltetés
+Etiket (silmek için basılı tutun)	Címke (törléshez tartsa lenyomva)
+Etiket silinsin mi?	Törli ezt a címkét?
+Etiketler · toplam %s	Címkék · összesen %s
+Etiketsiz	Címke nélkül
+Henüz oturum yok	Még nincs munkamenet
+Hiç mola yok: oturum tamam.	Nincs szünet: a munkamenet kész.
+Kendiliğinden başladı. Zamanlayıcı için dokunun.	Magától elindult. Koppintson az időzítőhöz.
+MOLA	SZÜNET
+Mola %d dk	Szünet %d perc
+Mola bitti.	Vége a szünetnek.
+Mola zamanı	Szünet ideje
+Mola: %s	Szünet: %s
+ODAK	FÓKUSZ
+Odak	Fókusz
+Odak %d dk	Fókusz %d perc
+Odak zamanı	Fókusz ideje
+Odak: %s	Fókusz: %s
+Odakta ön ışığı kapat	Fókusz alatt a világítás kikapcsol
+Okuma	Olvasás
+Oturum bitti	Munkamenet vége
+Pomodoro · 25 / 5 dk (4. mola 15)	Pomodoro · 25 / 5 perc (4. szünet 15)
+Son 7 gün	Utolsó 7 nap
+Sonraki aşama kendiliğinden başlasın	A következő szakasz magától induljon
+Süre	Időtartam
+Tamamlanan odak: %s · %s	Kész fókusz: %s · %s
+UZUN MOLA	HOSSZÚ SZÜNET
+Uzun mola: %s	Hosszú szünet: %s
+Uzun · 50 / 10 dk	Hosszú · 50 / 10 perc
+Yazı	Írás
+Yeni etiket	Új címke
+dk	perc
+Özel · %d / %d dk	Egyéni · %d / %d perc
+İş	Munka
+Şarjda: uyanık kalıyor	Töltőn: ébren marad
+☾ Kindle dakikalar arasında uyuyor	☾ A Kindle a percek között alszik

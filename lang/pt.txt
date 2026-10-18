@@ -608,3 +608,55 @@ Kastor	Castor
 Kutup Yıldızı	Estrela Polar
 Algol	Algol
 Mizar	Mizar
+%d dk	%d min
+%d gün	%d dias
+%d sa	%d h
+%d sa %d dk	%d h %d min
+%s · Tur %d	%s · Rodada %d
+%s · Tur %d · Bitiş %s	%s · Rodada %d · Termina %s
++ Yeni	+ Nova
++5 dk	+5 min
+Başla	Iniciar
+Bitir	Terminar
+Bu hafta	Esta semana
+Bugün %d oturum	Hoje: %d sessões
+Bugün %s · %d oturum · Seri %d gün	Hoje %s · %d sessões · Sequência %d dias
+DURAKLATILDI	PAUSADO
+Ders	Estudo
+Dokunun: Duraklat · +5 dk · Bitir	Toque: Pausar · +5 min · Terminar
+Duraklat	Pausar
+Etiket (silmek için basılı tutun)	Etiqueta (mantenha premido para apagar)
+Etiket silinsin mi?	Apagar esta etiqueta?
+Etiketler · toplam %s	Etiquetas · total %s
+Etiketsiz	Sem etiqueta
+Henüz oturum yok	Ainda sem sessões
+Hiç mola yok: oturum tamam.	Sem intervalo: sessão concluída.
+Kendiliğinden başladı. Zamanlayıcı için dokunun.	Começou sozinho. Toque para ver o temporizador.
+MOLA	INTERVALO
+Mola %d dk	Intervalo %d min
+Mola bitti.	Intervalo terminado.
+Mola zamanı	Hora do intervalo
+Mola: %s	Intervalo: %s
+ODAK	FOCO
+Odak	Foco
+Odak %d dk	Foco %d min
+Odak zamanı	Hora de focar
+Odak: %s	Foco: %s
+Odakta ön ışığı kapat	Desligar a luz durante o foco
+Okuma	Leitura
+Oturum bitti	Sessão terminada
+Pomodoro · 25 / 5 dk (4. mola 15)	Pomodoro · 25 / 5 min (4.º intervalo 15)
+Son 7 gün	Últimos 7 dias
+Sonraki aşama kendiliğinden başlasın	Iniciar a fase seguinte sozinho
+Süre	Duração
+Tamamlanan odak: %s · %s	Foco concluído: %s · %s
+UZUN MOLA	INTERVALO LONGO
+Uzun mola: %s	Intervalo longo: %s
+Uzun · 50 / 10 dk	Longo · 50 / 10 min
+Yazı	Escrita
+Yeni etiket	Nova etiqueta
+dk	min
+Özel · %d / %d dk	Personalizado · %d / %d min
+İş	Trabalho
+Şarjda: uyanık kalıyor	A carregar: fica acordado
+☾ Kindle dakikalar arasında uyuyor	☾ O Kindle dorme entre os minutos

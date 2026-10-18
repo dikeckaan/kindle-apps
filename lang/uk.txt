@@ -608,3 +608,55 @@ Kastor	Кастор
 Kutup Yıldızı	Полярна зоря
 Algol	Алголь
 Mizar	Міцар
+%d dk	%d хв
+%d gün	%d дн.
+%d sa	%d год
+%d sa %d dk	%d год %d хв
+%s · Tur %d	%s · Раунд %d
+%s · Tur %d · Bitiş %s	%s · Раунд %d · Кінець о %s
++ Yeni	+ Нова
++5 dk	+5 хв
+Başla	Старт
+Bitir	Завершити
+Bu hafta	Цей тиждень
+Bugün %d oturum	Сьогодні сесій: %d
+Bugün %s · %d oturum · Seri %d gün	Сьогодні %s · сесій: %d · Серія днів: %d
+DURAKLATILDI	ПАУЗА
+Ders	Навчання
+Dokunun: Duraklat · +5 dk · Bitir	Торкніться: Пауза · +5 хв · Завершити
+Duraklat	Пауза
+Etiket (silmek için basılı tutun)	Мітка (утримуйте, щоб видалити)
+Etiket silinsin mi?	Видалити цю мітку?
+Etiketler · toplam %s	Мітки · усього %s
+Etiketsiz	Без мітки
+Henüz oturum yok	Сесій ще немає
+Hiç mola yok: oturum tamam.	Без перерви: сесію завершено.
+Kendiliğinden başladı. Zamanlayıcı için dokunun.	Запущено автоматично. Торкніться, щоб відкрити таймер.
+MOLA	ПЕРЕРВА
+Mola %d dk	Перерва %d хв
+Mola bitti.	Перерву завершено.
+Mola zamanı	Час перерви
+Mola: %s	Перерва: %s
+ODAK	ФОКУС
+Odak	Фокус
+Odak %d dk	Фокус %d хв
+Odak zamanı	Час зосередитися
+Odak: %s	Фокус: %s
+Odakta ön ışığı kapat	Вимикати підсвітку під час фокусу
+Okuma	Читання
+Oturum bitti	Сесію завершено
+Pomodoro · 25 / 5 dk (4. mola 15)	Помодоро · 25 / 5 хв (4-та перерва 15)
+Son 7 gün	Останні 7 днів
+Sonraki aşama kendiliğinden başlasın	Починати наступну фазу автоматично
+Süre	Тривалість
+Tamamlanan odak: %s · %s	Фокус завершено: %s · %s
+UZUN MOLA	ДОВГА ПЕРЕРВА
+Uzun mola: %s	Довга перерва: %s
+Uzun · 50 / 10 dk	Довгий · 50 / 10 хв
+Yazı	Письмо
+Yeni etiket	Нова мітка
+dk	хв
+Özel · %d / %d dk	Свій · %d / %d хв
+İş	Робота
+Şarjda: uyanık kalıyor	На зарядці: не засинає
+☾ Kindle dakikalar arasında uyuyor	☾ Kindle спить між хвилинами

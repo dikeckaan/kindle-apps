@@ -608,3 +608,55 @@ Kastor	Kastor
 Kutup Yıldızı	Pohjantähti
 Algol	Algol
 Mizar	Mizar
+%d dk	%d min
+%d gün	%d päivää
+%d sa	%d h
+%d sa %d dk	%d h %d min
+%s · Tur %d	%s · Kierros %d
+%s · Tur %d · Bitiş %s	%s · Kierros %d · Päättyy %s
++ Yeni	+ Uusi
++5 dk	+5 min
+Başla	Aloita
+Bitir	Lopeta
+Bu hafta	Tämä viikko
+Bugün %d oturum	Tänään %d istuntoa
+Bugün %s · %d oturum · Seri %d gün	Tänään %s · %d istuntoa · Putki %d päivää
+DURAKLATILDI	KESKEYTETTY
+Ders	Opiskelu
+Dokunun: Duraklat · +5 dk · Bitir	Napauta: Keskeytä · +5 min · Lopeta
+Duraklat	Keskeytä
+Etiket (silmek için basılı tutun)	Tunniste (poista pitämällä painettuna)
+Etiket silinsin mi?	Poistetaanko tämä tunniste?
+Etiketler · toplam %s	Tunnisteet · yhteensä %s
+Etiketsiz	Ei tunnistetta
+Henüz oturum yok	Ei vielä istuntoja
+Hiç mola yok: oturum tamam.	Ei taukoa: istunto valmis.
+Kendiliğinden başladı. Zamanlayıcı için dokunun.	Alkoi itsestään. Napauta nähdäksesi ajastimen.
+MOLA	TAUKO
+Mola %d dk	Tauko %d min
+Mola bitti.	Tauko päättyi.
+Mola zamanı	Tauon aika
+Mola: %s	Tauko: %s
+ODAK	KESKITTYMINEN
+Odak	Keskittyminen
+Odak %d dk	Fokus %d min
+Odak zamanı	Keskittymisen aika
+Odak: %s	Keskittyminen: %s
+Odakta ön ışığı kapat	Valo pois keskittymisen ajaksi
+Okuma	Lukeminen
+Oturum bitti	Istunto päättyi
+Pomodoro · 25 / 5 dk (4. mola 15)	Pomodoro · 25 / 5 min (4. tauko 15)
+Son 7 gün	Viimeiset 7 päivää
+Sonraki aşama kendiliğinden başlasın	Seuraava vaihe alkaa itsestään
+Süre	Kesto
+Tamamlanan odak: %s · %s	Keskittyminen valmis: %s · %s
+UZUN MOLA	PITKÄ TAUKO
+Uzun mola: %s	Pitkä tauko: %s
+Uzun · 50 / 10 dk	Pitkä · 50 / 10 min
+Yazı	Kirjoittaminen
+Yeni etiket	Uusi tunniste
+dk	min
+Özel · %d / %d dk	Oma · %d / %d min
+İş	Työ
+Şarjda: uyanık kalıyor	Latautuu: pysyy hereillä
+☾ Kindle dakikalar arasında uyuyor	☾ Kindle nukkuu minuuttien välillä

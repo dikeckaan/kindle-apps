@@ -608,3 +608,55 @@ Kastor	Castor
 Kutup Yıldızı	Polaris
 Algol	Algol
 Mizar	Mizar
+%d dk	%d min
+%d gün	%d days
+%d sa	%d h
+%d sa %d dk	%d h %d min
+%s · Tur %d	%s · Round %d
+%s · Tur %d · Bitiş %s	%s · Round %d · Ends %s
++ Yeni	+ New
++5 dk	+5 min
+Başla	Start
+Bitir	Finish
+Bu hafta	This week
+Bugün %d oturum	Today: %d sessions
+Bugün %s · %d oturum · Seri %d gün	Today %s · %d sessions · Streak %d days
+DURAKLATILDI	PAUSED
+Ders	Study
+Dokunun: Duraklat · +5 dk · Bitir	Tap: Pause · +5 min · Finish
+Duraklat	Pause
+Etiket (silmek için basılı tutun)	Label (hold to delete)
+Etiket silinsin mi?	Delete this label?
+Etiketler · toplam %s	Labels · total %s
+Etiketsiz	No label
+Henüz oturum yok	No sessions yet
+Hiç mola yok: oturum tamam.	No break: session complete.
+Kendiliğinden başladı. Zamanlayıcı için dokunun.	Started automatically. Tap for the timer.
+MOLA	BREAK
+Mola %d dk	Break %d min
+Mola bitti.	Break over.
+Mola zamanı	Time for a break
+Mola: %s	Break: %s
+ODAK	FOCUS
+Odak	Focus
+Odak %d dk	Focus %d min
+Odak zamanı	Time to focus
+Odak: %s	Focus: %s
+Odakta ön ışığı kapat	Front light off while focusing
+Okuma	Reading
+Oturum bitti	Session over
+Pomodoro · 25 / 5 dk (4. mola 15)	Pomodoro · 25 / 5 min (4th break 15)
+Son 7 gün	Last 7 days
+Sonraki aşama kendiliğinden başlasın	Start the next phase automatically
+Süre	Duration
+Tamamlanan odak: %s · %s	Focus completed: %s · %s
+UZUN MOLA	LONG BREAK
+Uzun mola: %s	Long break: %s
+Uzun · 50 / 10 dk	Long · 50 / 10 min
+Yazı	Writing
+Yeni etiket	New label
+dk	min
+Özel · %d / %d dk	Custom · %d / %d min
+İş	Work
+Şarjda: uyanık kalıyor	Charging: staying awake
+☾ Kindle dakikalar arasında uyuyor	☾ Kindle sleeps between minutes

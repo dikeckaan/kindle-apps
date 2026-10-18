@@ -608,3 +608,55 @@ Kastor	Castor
 Kutup Yıldızı	Steaua Polară
 Algol	Algol
 Mizar	Mizar
+%d dk	%d min
+%d gün	%d zile
+%d sa	%d h
+%d sa %d dk	%d h %d min
+%s · Tur %d	%s · Runda %d
+%s · Tur %d · Bitiş %s	%s · Runda %d · Se termină la %s
++ Yeni	+ Nouă
++5 dk	+5 min
+Başla	Pornește
+Bitir	Termină
+Bu hafta	Săptămâna aceasta
+Bugün %d oturum	Azi: %d sesiuni
+Bugün %s · %d oturum · Seri %d gün	Azi %s · %d sesiuni · Serie %d zile
+DURAKLATILDI	OPRIT
+Ders	Studiu
+Dokunun: Duraklat · +5 dk · Bitir	Atingeți: Oprește · +5 min · Termină
+Duraklat	Oprește
+Etiket (silmek için basılı tutun)	Etichetă (țineți apăsat pentru ștergere)
+Etiket silinsin mi?	Ștergeți această etichetă?
+Etiketler · toplam %s	Etichete · total %s
+Etiketsiz	Fără etichetă
+Henüz oturum yok	Încă nicio sesiune
+Hiç mola yok: oturum tamam.	Fără pauză: sesiune încheiată.
+Kendiliğinden başladı. Zamanlayıcı için dokunun.	A pornit singur. Atingeți pentru cronometru.
+MOLA	PAUZĂ
+Mola %d dk	Pauză %d min
+Mola bitti.	Pauza s-a terminat.
+Mola zamanı	E timpul pentru pauză
+Mola: %s	Pauză: %s
+ODAK	CONCENTRARE
+Odak	Concentrare
+Odak %d dk	Concentrare %d min
+Odak zamanı	E timpul pentru concentrare
+Odak: %s	Concentrare: %s
+Odakta ön ışığı kapat	Lumina stinsă în timpul concentrării
+Okuma	Lectură
+Oturum bitti	Sesiune încheiată
+Pomodoro · 25 / 5 dk (4. mola 15)	Pomodoro · 25 / 5 min (a 4-a pauză 15)
+Son 7 gün	Ultimele 7 zile
+Sonraki aşama kendiliğinden başlasın	Faza următoare pornește singură
+Süre	Durată
+Tamamlanan odak: %s · %s	Concentrare încheiată: %s · %s
+UZUN MOLA	PAUZĂ LUNGĂ
+Uzun mola: %s	Pauză lungă: %s
+Uzun · 50 / 10 dk	Lung · 50 / 10 min
+Yazı	Scris
+Yeni etiket	Etichetă nouă
+dk	min
+Özel · %d / %d dk	Personalizat · %d / %d min
+İş	Muncă
+Şarjda: uyanık kalıyor	La încărcare: rămâne treaz
+☾ Kindle dakikalar arasında uyuyor	☾ Kindle doarme între minute
