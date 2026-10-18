@@ -9,7 +9,7 @@
 | Zemberek-NLP lexicon (commit 037202c) | Apache-2.0 | https://github.com/ahmetaa/zemberek-nlp | Kelime Oyunu guess list (`apps/wordle/words/guesses.txt`) |
 | FrequencyWords tr_50k (commit 525f9b5) | CC BY-SA 4.0 | https://github.com/hermitdave/FrequencyWords | Kelime Oyunu answer list (`answers.txt`, CC BY-SA 4.0) |
 | stb_truetype (Sean Barrett) | public domain / MIT | https://github.com/nothings/stb | host simulator only (`tools/sim`), not shipped |
-| DejaVu Fonts 2.37 | Bitstream Vera / DejaVu license (free, see `DejaVu-LICENSE`) | https://dejavu-fonts.github.io | UI font (Turkish + chess glyphs) |
+| DejaVu Fonts 2.37 | Bitstream Vera / DejaVu license (free, see `DejaVu-LICENSE`) | https://dejavu-fonts.github.io | UI fonts (Sans for the UI, Serif for Gazete; Turkish, Greek, Cyrillic and chess glyphs) |
 
 Because FBInk is linked statically and is GPLv3+, this project is distributed under GPLv3 (see `LICENSE`).
 
@@ -20,4 +20,4 @@ Because FBInk is linked statically and is GPLv3+, this project is distributed un
 | Open-Meteo forecast + geocoding API | CC BY 4.0, free for non-commercial use; attributed on screen | Hava Durumu, Masa Saati |
 | TCMB `kurlar/today.xml` | public daily indicative rates | Döviz & Altın |
 | Truncgil Finans `today.json` | free public API | Döviz & Altın (gold) |
-| Anadolu Ajansı / TRT Haber RSS | publishers' RSS; only the feed text and the article link are shown | Gazete |
+| Turkish news RSS/Atom feeds (AA, TRT Haber, Hürriyet, Sözcü, NTV, CNN Türk, BBC Türkçe, Cumhuriyet, Milliyet, Sabah, Habertürk, DW Türkçe, Euronews, Yeni Şafak, BirGün, Karar, Star, Akşam, Dünya, Bloomberg HT) | publishers' public feeds; only the feed text and the article link are shown, no images | Gazete |

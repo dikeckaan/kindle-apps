@@ -29,6 +29,9 @@ for id in core 2048 chess sleep ssh firewall weather clock currency news wordle 
     ls dist/packages/kindle-apps-$id/*.kpkg >/dev/null 2>&1 && ok "package kindle-apps-$id built" || bad "package kindle-apps-$id missing"
 done
 has() { tar tzf dist/packages/$1/*.kpkg | grep -qx "$2" && ok "$1 has $2" || bad "$1 lacks $2"; }
+for l in en de fr es it pt nl pl cs ro hu sv nb da fi el ru uk az; do has kindle-apps-core files/lang/$l.txt; done
+has kindle-apps-core files/fonts/DejaVuSerif.ttf
+has kindle-apps-core files/fonts/DejaVuSerif-Bold.ttf
 has kindle-apps-chess files/stockfish
 has kindle-apps-chess files/COPYING-stockfish
 has kindle-apps-ssh files/dropbear

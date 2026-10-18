@@ -137,7 +137,8 @@ PKG_ebooks_FILES := $(OUT)/ebooks
 dist:
 	@for f in $(OUT)/hub $(foreach p,$(PKGS),$(PKG_$(p)_FILES)); do [ -f $$f ] || { echo "missing $$f: run make build first"; exit 1; }; done
 	rm -rf build/pkg dist
-	mkdir -p build/pkg/core/files/bin build/pkg/core/files/fonts
+	mkdir -p build/pkg/core/files/bin build/pkg/core/files/fonts build/pkg/core/files/lang
+	cp lang/??.txt build/pkg/core/files/lang/
 	cp core/pkg/manifest.json core/pkg/install.sh core/pkg/uninstall.sh core/pkg/launch.sh build/pkg/core/
 	cp -R core/pkg/scriptlets build/pkg/core/
 	cp core/kui-run.sh $(OUT)/hub build/pkg/core/files/bin/

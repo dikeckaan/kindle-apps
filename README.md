@@ -20,7 +20,7 @@ Kitaplıkta tek bir **"Uygulamalar"** girişi olur; açınca bütün uygulamalar
 | Hava Durumu (Open-Meteo, kayıtlı şehirler, 12 saat + 7 gün) | ✅ |
 | Masa Saati (büyük saat, tarih, hava özeti; açıkken uyumaz) | ✅ |
 | Döviz & Altın (TCMB kurları, altın fiyatları, çevirici) | ✅ |
-| Gazete (Anadolu Ajansı ve TRT Haber manşetleri) | ✅ |
+| Gazete (20 kaynaktan gazete tadında ön sayfa: AA, TRT, Hürriyet, Sözcü, NTV, CNN Türk, BBC Türkçe, Cumhuriyet, Milliyet, Sabah, Habertürk, DW, Euronews…) | ✅ |
 | Mayın Tarlası (3 zorluk, bayrak kipi) | ✅ |
 | Sudoku (3 zorluk, tek çözümlü, not kipi, ipucu) | ✅ |
 | Solitaire (Klondike, 1 / 3 kart çekme, geri al) | ✅ |
@@ -79,11 +79,18 @@ root'un okuyabildiği `/var/local/kindle-apps/ssh` içinde tuzlu ve 10 000 tur S
 
 Oyun kayıtları ve ayarlar `/mnt/us/kindle-apps/data/` içinde kalır; tamamen silmek için o klasörü de silin.
 
+### Dil
+
+Uygulamalar menüsünde sağ üstteki **Dil** düğmesiyle 20 dilden biri seçilir: Türkçe, English, Deutsch, Français,
+Español, Italiano, Português, Nederlands, Polski, Čeština, Română, Magyar, Svenska, Norsk bokmål, Dansk, Suomi,
+Ελληνικά, Русский, Українська, Azərbaycanca. Kelime Oyunu Türkçe kelimelerle oynanır; Gazete ve Döviz Türk kaynaklarını
+kullanır. Çeviriler `lang/<kod>.txt` dosyalarındadır; `tools/i18n/extract.py --check` eksikleri gösterir.
+
 ### İnternetli uygulamalar
 
 Hava Durumu, Masa Saati, Döviz & Altın ve Gazete Wi-Fi ile veri çeker; bağlantı yoksa son indirilen veriyi
 zamanıyla gösterir. Veri kaynakları: [Open-Meteo](https://open-meteo.com) (CC BY 4.0), TCMB günlük kurları,
-Truncgil Finans (altın), Anadolu Ajansı ve TRT Haber RSS. Gazete yalnızca RSS'te yayımlanan metni ve haberin
+Truncgil Finans (altın) ve haber kuruluşlarının herkese açık RSS/Atom akışları. Gazete yalnızca RSS'te yayımlanan metni ve haberin
 bağlantısını gösterir; görsel indirmez.
 
 ### Wi-Fi ile Yükle

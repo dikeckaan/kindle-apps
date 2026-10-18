@@ -22,6 +22,8 @@ jobs:
         run: ./tools/fetch-deps.sh
       - name: Host unit tests
         run: make test
+      - name: Translation catalogs
+        run: python3 tools/i18n/extract.py --check
       - name: Build toolchain image
         run: docker build -t kindle-apps-tc tools/docker
       - name: Cross build
