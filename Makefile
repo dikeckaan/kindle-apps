@@ -38,6 +38,7 @@ TEST_test_fx_SRCS := apps/currency/fx.c core/net/xml.c core/kui/utf8tr.c core/ve
 TEST_test_news_SRCS := apps/news/news.c core/net/xml.c core/kui/utf8tr.c core/kui/trfmt.c
 TEST_test_wordle_SRCS := apps/wordle/wordle.c core/kui/utf8tr.c
 TEST_test_uci_SRCS := apps/chess/uci.c apps/chess/levels.c
+TEST_test_mines_SRCS := apps/mines/mines.c
 
 TESTS := $(patsubst tests/host/%.c,%,$(wildcard tests/host/test_*.c))
 
@@ -65,7 +66,7 @@ $(FBINK_A):
 NET_SRCS := core/net/http.c core/net/xml.c core/vendor/cjson/cJSON.c
 
 # APPS: each entry <name> builds $(OUT)/<name> from APP_<name>_SRCS + kui + FBInk
-APPS := hub game2048 chess sleep firewall ssh weather clock currency news wordle
+APPS := hub game2048 chess sleep firewall ssh weather clock currency news wordle mines
 APP_weather_SRCS := apps/weather/main.c apps/weather/wx.c apps/weather/wxdraw.c $(NET_SRCS)
 APP_clock_SRCS := apps/clock/main.c apps/weather/wx.c apps/weather/wxdraw.c $(NET_SRCS)
 APP_currency_SRCS := apps/currency/main.c apps/currency/fx.c $(NET_SRCS)
@@ -77,6 +78,7 @@ APP_sleep_SRCS := apps/sleep/main.c apps/sleep/sleep_opts.c
 APP_chess_SRCS := apps/chess/main.c apps/chess/chess_game.c apps/chess/chess_rules.c apps/chess/levels.c apps/chess/uci.c
 APP_hub_SRCS := core/hub/main.c core/hub/appreg.c
 APP_game2048_SRCS := apps/game2048/main.c apps/game2048/g2048.c
+APP_mines_SRCS := apps/mines/main.c apps/mines/mines.c
 
 $(OUT)/%: $$(APP_$$*_SRCS) $(FBINK_A) $(KUI_SRCS) $(wildcard core/kui/*.h)
 	@mkdir -p $(dir $@)
