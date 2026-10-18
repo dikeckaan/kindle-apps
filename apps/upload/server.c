@@ -21,7 +21,8 @@
 #define DRAIN_MS 2000
 #define DRAIN_MAX (4LL * 1024 * 1024)
 #define PRE_PIN_MAX 16384 /* body bytes allowed before the PIN is verified */
-#define PER_IP_CONNS 2
+#define PER_IP_CONNS 3
+#define LOCK_MS (5 * 60 * 1000L) /* lock after repeated guessing, then a fresh PIN */
 #define MAX_REGENS 3      /* PIN replacements before the server locks */
 #define BODY_SLACK (1024LL * 1024) /* multipart framing on top of a 200 MB file */
 #define MSG_CAP 4096
@@ -32,7 +33,7 @@ enum { C_FREE, C_HEAD, C_BODY, C_WRITE, C_DRAIN };
 typedef struct {
 	UploadServer *srv;
 	int fd, state;
-	long t_accept, t_last;
+	long t_accept, t_last, t_drain; /* t_drain: when draining started (absolute limit) */
 	char head[HTTPD_MAX_HEAD];
 	size_t hlen;
 	HttpHead hh;
@@ -60,7 +61,7 @@ struct UploadServer {
 	char dir[400];
 	char pin[HTTPD_PIN_LEN + 1];
 	int bad_pins, gen, idle_ms, pause_ms, locked;
-	long last_wrong;
+	long last_wrong, locked_at, lock_ms;
 	struct { unsigned ip; int wrong; long last; } peer[16]; /* wrong-PIN backoff per address */
 	int active; /* index of the connection uploading, or -1 */
 	long long body_recv, body_total;
@@ -143,6 +144,7 @@ UploadServer *upload_open(const char *dir, int port_lo, int port_hi)
 	s->active = -1;
 	s->idle_ms = 30000;
 	s->pause_ms = 1000;
+	s->lock_ms = LOCK_MS;
 	for (int i = 0; i < UPLOAD_MAX_CONNS; i++) s->c[i].fd = s->c[i].out_fd = -1;
 	if (new_pin(s->pin, NULL) != 0) {
 		free(s);
@@ -285,6 +287,13 @@ static void respond(Conn *c, int status, const char *msg_html)
 	c->t_last = now_ms();
 }
 
+/* the lock after repeated guessing expires: the owner is never locked out for good */
+static int is_locked(UploadServer *s)
+{
+	if (s->locked && now_ms() - s->locked_at >= s->lock_ms) s->locked = 0;
+	return s->locked;
+}
+
 /* backoff entry for an address (the oldest entry is reused) */
 static int peer_slot(UploadServer *s, unsigned ip)
 {
@@ -338,7 +347,10 @@ static void wrong_pin(Conn *c)
 		if (new_pin(fresh, s->pin) == 0) memcpy(s->pin, fresh, sizeof fresh);
 		s->bad_pins = 0;
 		s->gen++;
-		if (s->gen >= MAX_REGENS) s->locked = 1; /* someone keeps guessing: stop until the app is reopened */
+		if (s->gen % MAX_REGENS == 0) { /* someone keeps guessing: refuse everything for a while */
+			s->locked = 1;
+			s->locked_at = now_ms();
+		}
 	}
 }
 
@@ -445,6 +457,10 @@ static int cb_end(void *ctx)
 	if (c->in_pin) {
 		c->in_pin = 0;
 		if (c->pin_ok) return 0;
+		if (is_locked(s) || peer_waiting(s, c->ip)) { /* checked again: a form-field PIN arrives later than the head */
+			c->fail_status = s->locked ? 403 : 429;
+			return -1;
+		}
 		char given[sizeof c->pin_buf + 1];
 		size_t gl = c->pin_len < sizeof c->pin_buf ? c->pin_len : 0;
 		memcpy(given, c->pin_buf, gl);
@@ -547,7 +563,7 @@ static void head_done(Conn *c, size_t head_len)
 	if (h->chunked || h->content_length < 0) { respond(c, 411, NULL); return; }
 	if (h->content_length > HTTPD_MAX_FILE + BODY_SLACK) { respond(c, 413, NULL); return; }
 	if (!h->multipart) { respond(c, 400, NULL); return; }
-	if (s->locked) { respond(c, 403, NULL); return; }
+	if (is_locked(s)) { respond(c, 403, NULL); return; }
 	if (s->active >= 0) { respond(c, 503, NULL); return; }
 	if (peer_waiting(s, c->ip)) { respond(c, 429, NULL); return; }
 	char qpin[16];
@@ -609,6 +625,7 @@ static void on_writable(Conn *c)
 		/* half-close and read what the client still sends, so it sees the response instead of a reset */
 		shutdown(c->fd, SHUT_WR);
 		c->state = C_DRAIN;
+		c->t_drain = now_ms();
 	}
 }
 
@@ -626,8 +643,8 @@ static void accept_all(UploadServer *s)
 		for (int i = 0; i < UPLOAD_MAX_CONNS; i++) {
 			if (s->c[i].state == C_FREE) {
 				if (!c) c = &s->c[i];
-			} else if (s->c[i].ip == ip && (s->c[i].state == C_HEAD || s->c[i].state == C_BODY)) {
-				same++; /* connections that hold a slot for long; answered ones are on their way out */
+			} else if (s->c[i].ip == ip) {
+				same++;
 			}
 		}
 		if (!c || same >= PER_IP_CONNS) { /* one address cannot hold every connection */
@@ -654,7 +671,7 @@ static void check_timeouts(UploadServer *s)
 		Conn *c = &s->c[i];
 		if (c->state == C_FREE) continue;
 		if (c->state == C_HEAD && t - c->t_accept > s->idle_ms) conn_close(c); /* the whole head within the limit */
-		else if (c->state == C_DRAIN && t - c->t_last > (s->idle_ms < DRAIN_MS ? s->idle_ms : DRAIN_MS)) conn_close(c);
+		else if (c->state == C_DRAIN && t - c->t_drain > (s->idle_ms < DRAIN_MS ? s->idle_ms : DRAIN_MS)) conn_close(c);
 		else if (t - c->t_last > s->idle_ms) conn_close(c);
 	}
 }
@@ -703,4 +720,6 @@ void upload_close(UploadServer *s)
 	free(s);
 }
 
-int upload_locked(const UploadServer *s) { return s->locked; }
+int upload_locked(const UploadServer *s) { return is_locked((UploadServer *) s); }
+
+void upload_set_lock_ms(UploadServer *s, long ms) { s->lock_ms = ms; }

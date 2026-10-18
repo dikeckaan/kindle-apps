@@ -744,18 +744,23 @@ static void test_e2e_abuse(void)
 	T_EQ_INT(roundtrip(s, r2, (size_t) hl + sizeof big), 403);
 	free(r2);
 
-	/* 3. one address cannot take every connection: a third idle one from the same address is refused */
+	/* 3. one address cannot take every connection: a fourth one from the same address is refused */
 	int a = connect_to(upload_port(s)), b = connect_to(upload_port(s));
 	for (int i = 0; i < 10; i++) upload_poll(s, 2);
+	int extra = connect_to(upload_port(s));
+	for (int i = 0; i < 10; i++) upload_poll(s, 2);
 	const char *get = "GET / HTTP/1.1\r\nHost: k\r\n\r\n";
-	T_EQ_INT(roundtrip(s, get, strlen(get)), 503); /* holder + a + b are open */
+	T_EQ_INT(roundtrip(s, get, strlen(get)), 503); /* holder + a + b are open; extra was refused at accept */
+	close(extra);
 	close(holder);
 	close(a);
 	close(b);
 	for (int i = 0; i < 10; i++) upload_poll(s, 2);
 	T_EQ_INT(roundtrip(s, get, strlen(get)), 200);
 
-	/* 4. after three PIN replacements (15 wrong guesses) the server locks: even the right PIN is refused */
+	/* 4. after three PIN replacements (15 wrong guesses) the server locks for a while: even the right PIN is refused,
+	 * also when it arrives as a form field; the lock expires (no permanent lock-out of the owner) */
+	upload_set_lock_ms(s, 300);
 	for (int i = 0; i < 15; i++) {
 		req = build("000000", NULL, "x.epub", "d", 1, &len);
 		if (!strcmp(upload_pin(s), "000000")) req[13] = '1'; /* never guess right by accident */
@@ -766,6 +771,16 @@ static void test_e2e_abuse(void)
 	snprintf(pin, sizeof pin, "%s", upload_pin(s));
 	req = build(pin, NULL, "late.epub", "d", 1, &len);
 	T_EQ_INT(roundtrip(s, req, len), 403);
+	free(req);
+	req = build(NULL, pin, "late.epub", "d", 1, &len);
+	T_EQ_INT(roundtrip(s, req, len), 403);
+	free(req);
+	long t0 = now_ms();
+	while (now_ms() - t0 < 400) upload_poll(s, 5);
+	T_EQ_INT(upload_locked(s), 0);
+	snprintf(pin, sizeof pin, "%s", upload_pin(s));
+	req = build(NULL, pin, "after.epub", "d", 1, &len);
+	T_EQ_INT(roundtrip(s, req, len), 200);
 	free(req);
 	upload_close(s);
 	char cmd[300];

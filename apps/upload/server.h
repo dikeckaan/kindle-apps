@@ -24,6 +24,8 @@ int upload_port(const UploadServer *s);
 const char *upload_pin(const UploadServer *s);
 /* test hooks: connection idle timeout (default 30 s) and the pause after a wrong PIN (default 1 s) */
 void upload_set_limits(UploadServer *s, int idle_ms, int wrong_pin_pause_ms);
+/* test hook: how long the lock after repeated wrong PINs lasts (default 5 min) */
+void upload_set_lock_ms(UploadServer *s, long ms);
 
 /* Does at most budget_ms of work (waits on the sockets for the rest of it); 0 = one non-blocking pass. */
 void upload_poll(UploadServer *s, int budget_ms);

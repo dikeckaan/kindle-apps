@@ -91,7 +91,7 @@ static void draw_pin(void)
 	KuiRect r = r_pin;
 	kui_fill(r, 255);
 	if (srv && upload_locked(srv)) { /* somebody kept guessing: the server refuses everything now */
-		kui_text(r, "Çok fazla yanlış PIN denendi.\nGüvenlik için yükleme durduruldu;\nuygulamayı kapatıp yeniden açın.", KUI_FONT_BOLD, 40,
+		kui_text(r, "Çok fazla yanlış PIN denendi.\nGüvenlik için yükleme 5 dakika durdu;\nsonra yeni PIN ile devam eder.", KUI_FONT_BOLD, 40,
 			 KUI_ALIGN_CENTER, 0);
 	} else if (srv) {
 		const char *p = upload_pin(srv);
@@ -196,6 +196,12 @@ static void update(void)
 			draw_url();
 			dirty = 1;
 		}
+	}
+	static int shown_locked;
+	if (srv && upload_locked(srv) != shown_locked) { /* the temporary lock started or ended */
+		shown_locked = upload_locked(srv);
+		draw_pin();
+		dirty = 1;
 	}
 	if (srv && upload_pin_generation(srv) != shown_gen) {
 		shown_gen = upload_pin_generation(srv);
