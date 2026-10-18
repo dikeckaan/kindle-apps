@@ -32,6 +32,7 @@ TEST_test_http_SRCS := core/net/http.c
 TEST_test_xml_SRCS := core/net/xml.c core/kui/utf8tr.c
 TEST_test_wrap_SRCS := core/kui/wrap.c core/kui/utf8tr.c
 TEST_test_trfmt_SRCS := core/kui/trfmt.c
+TEST_test_wx_SRCS := apps/weather/wx.c core/net/http.c core/vendor/cjson/cJSON.c core/kui/store.c core/kui/trfmt.c core/kui/utf8tr.c
 TEST_test_uci_SRCS := apps/chess/uci.c apps/chess/levels.c
 
 TESTS := $(patsubst tests/host/%.c,%,$(wildcard tests/host/test_*.c))
@@ -60,7 +61,8 @@ $(FBINK_A):
 NET_SRCS := core/net/http.c core/net/xml.c core/vendor/cjson/cJSON.c
 
 # APPS: each entry <name> builds $(OUT)/<name> from APP_<name>_SRCS + kui + FBInk
-APPS := hub game2048 chess sleep firewall ssh
+APPS := hub game2048 chess sleep firewall ssh weather
+APP_weather_SRCS := apps/weather/main.c apps/weather/wx.c apps/weather/wxdraw.c $(NET_SRCS)
 APP_ssh_SRCS := apps/ssh/main.c apps/ssh/sshcfg.c apps/ssh/sshsrv.c
 APP_firewall_SRCS := apps/firewall/main.c apps/firewall/fw.c apps/ssh/sshsrv.c
 APP_sleep_SRCS := apps/sleep/main.c apps/sleep/sleep_opts.c
@@ -125,3 +127,11 @@ deploy:
 	done
 
 .PHONY: dist deploy
+
+# ---- host simulator: build/sim/<app> renders PNGs (tools/sim/sim.c); run with tools/sim/run.sh ----
+SIM_KUI_SRCS := $(filter-out core/kui/screen.c core/kui/input.c,$(KUI_SRCS)) tools/sim/sim.c
+build/sim/%: $$(APP_$$*_SRCS) $(SIM_KUI_SRCS) $(wildcard core/kui/*.h) $(wildcard apps/*/*.h)
+	@mkdir -p $(dir $@) build/simroot/fonts
+	cp -n third_party/fonts/*.ttf build/simroot/fonts/ 2>/dev/null || true
+	$(HOST_CC) -std=c11 -g -O1 -fsanitize=address,undefined -D_DARWIN_C_SOURCE -D_DEFAULT_SOURCE -D_POSIX_C_SOURCE=200809L \
+		-Icore/kui -Iapps -Icore -Itools/sim -o $@ $(APP_$*_SRCS) $(SIM_KUI_SRCS) -lz -lm

@@ -114,6 +114,7 @@ int kui_text_width(const char *utf8, KuiFont f, int px)
 
 static void draw_text(KuiRect box, const char *utf8, KuiFont f, int px, KuiAlign a, unsigned char fg, int bg)
 {
+	if (!utf8 || !*utf8) return;
 	int w, h;
 	measure(utf8, f, px, &w, &h);
 	int left = box.x;

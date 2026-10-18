@@ -3,6 +3,12 @@
 #include <string.h>
 #include "kui.h"
 
+int kui_fit_px(const char *text, KuiFont f, int px, int max_w)
+{
+	while (px > 20 && kui_text_width(text, f, px) > max_w) px -= 2;
+	return px;
+}
+
 void kui_topbar(const char *title, const char *right_label)
 {
 	int w = kui_width();
@@ -10,10 +16,10 @@ void kui_topbar(const char *title, const char *right_label)
 	kui_fill(bar, 255);
 	kui_fill((KuiRect){ 0, KUI_TOPBAR_H - 4, w, 4 }, 0);
 	kui_text(kui_topbar_exit_rect(), "✕", KUI_FONT_BOLD, 64, KUI_ALIGN_CENTER, 0);
-	kui_text((KuiRect){ 200, 0, w - 2 * 200, KUI_TOPBAR_H - 4 }, title, KUI_FONT_BOLD, 52, KUI_ALIGN_CENTER, 0);
+	kui_text((KuiRect){ 200, 0, w - 2 * 200, KUI_TOPBAR_H - 4 }, title, KUI_FONT_BOLD, kui_fit_px(title, KUI_FONT_BOLD, 52, w - 400), KUI_ALIGN_CENTER, 0);
 	if (right_label) {
 		KuiRect m = kui_topbar_menu_rect(w);
-		kui_text((KuiRect){ m.x, m.y, m.w - 24, m.h - 4 }, right_label, KUI_FONT_REG, 44, KUI_ALIGN_RIGHT, 0);
+		kui_text((KuiRect){ m.x, m.y, m.w - 24, m.h - 4 }, right_label, KUI_FONT_REG, kui_fit_px(right_label, KUI_FONT_REG, 44, m.w - 24), KUI_ALIGN_RIGHT, 0);
 	}
 	kui_mark_dirty(bar);
 }
@@ -22,7 +28,8 @@ void kui_button(const KuiButton *b, int pressed)
 {
 	kui_fill(b->r, pressed ? 0 : 255);
 	kui_frame(b->r, 4, 0);
-	kui_text_on(b->r, b->label, KUI_FONT_BOLD, b->r.h > 140 ? 52 : 40, KUI_ALIGN_CENTER, pressed ? 255 : 0, pressed ? 0 : 255);
+	int px = kui_fit_px(b->label, KUI_FONT_BOLD, b->r.h > 140 ? 52 : 40, b->r.w - 24);
+	kui_text_on(b->r, b->label, KUI_FONT_BOLD, px, KUI_ALIGN_CENTER, pressed ? 255 : 0, pressed ? 0 : 255);
 	kui_mark_dirty(b->r);
 }
 
@@ -90,7 +97,8 @@ static void draw_keys(const KuiKey *keys, int n, KuiRect area)
 	kui_fill(area, 255);
 	for (int i = 0; i < n; i++) {
 		kui_frame(keys[i].r, 3, 0);
-		kui_text(keys[i].r, keys[i].label, KUI_FONT_BOLD, keys[i].r.w > 200 ? 40 : 48, KUI_ALIGN_CENTER, 0);
+		int px = kui_fit_px(keys[i].label, KUI_FONT_BOLD, keys[i].r.w > 200 ? 40 : 48, keys[i].r.w - 16);
+		kui_text(keys[i].r, keys[i].label, KUI_FONT_BOLD, px, KUI_ALIGN_CENTER, 0);
 	}
 	kui_mark_dirty(area);
 }

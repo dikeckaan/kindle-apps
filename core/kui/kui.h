@@ -106,6 +106,7 @@ void kui_flush(int screen_changed); /* the only place that refreshes the panel *
 void kui_set_refresh_every(int n);
 KuiEvent kui_next_event(int timeout_ms); /* KUI_EV_NONE on timeout */
 void kui_topbar(const char *title, const char *right_label); /* right_label may be NULL */
+int  kui_fit_px(const char *text, KuiFont f, int px, int max_w); /* largest size <= px whose single line fits max_w */
 void kui_button(const KuiButton *b, int pressed);
 /* Modal dialog drawn over the current screen; returns the chosen index, -1 on ✕/quit.
  * The caller redraws its screen afterwards. */
