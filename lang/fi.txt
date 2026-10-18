@@ -1,0 +1,262 @@
+# Finnish catalog for kindle-apps
+%%%d	%%%d
+%d %s %d, %s	%d. %s %d, %s
+%d/%d · güncellendi %02d:%02d	%d/%d · päivitetty %02d:%02d
+%d/%d · çevrimdışı, son veri %02d:%02d	%d/%d · offline, viimeisin tieto %02d:%02d
+%s %d/6 tahminde bildin.	%s Arvasit, arvauksia: %d/6.
+%s beklenmedik şekilde kapandı	%s sulkeutui odottamatta
+%s silinsin mi?	Poistetaanko? %s
+%s · %d×%d · %d mayın	%s · %d×%d · miinoja: %d
+%s · Süre: %ld:%02ld	%s · Aika: %ld:%02ld
++ Ekle	+ Lisää
+1 saat	1 tunti
+10 dakika	10 minuuttia
+2 saat	2 tuntia
+2048	2048
+2048'e ulaştın.	Saavutit 2048:n.
+30 dakika	30 minuuttia
+5 dakika	5 minuuttia
+5 harf girin	Kirjoita 5 kirjainta
+50 hamle kuralı — berabere	50 siirron sääntö — tasapeli
+Altın (serbest piyasa, ₺)	Kulta (vapaa markkina, ₺)
+Alış	Osto
+Aralık	joulukuuta
+Aranıyor…	Haetaan…
+At	Ratsu
+Az bulutlu	Enimmäkseen selkeää
+AÇIK	PÄÄLLÄ
+Aç	Kytke päälle
+Açık	Selkeää
+Açıldı. Gelen bağlantılar engelleniyor.	Päällä. Saapuvat yhteydet estetään.
+Ağustos	elokuuta
+B	L
+Bağlantı kurulamadı. Wi-Fi açık mı?	Ei yhteyttä. Onko Wi-Fi päällä?
+Bağlantı yok, kurlar alınamadı	Ei yhteyttä, kursseja ei saatu
+Bağlantı yok, veri alınamadı	Ei yhteyttä, tietoja ei saatu
+Beyaz	Valkea
+Bilim	Tiede
+Bu oyun bitirilsin mi?	Lopetetaanko tämä peli?
+Bu sefer olmadı	Ei tällä kertaa
+Bugün	Tänään
+Bugün  en yüksek %s · en düşük %s · ☼ %s – %s	Tänään  ylin %s · alin %s · ☼ %s – %s
+Bulmacayı çözdünüz.	Ratkaisit tehtävän.
+Bütün kartlar açık. Oyun tamamlansın mı?	Kaikki kortit ovat auki. Viedäänkö peli loppuun?
+Bütün kartları yerleştirdin.	Sijoitit kaikki kortit.
+Cmt	la
+Cum	pe
+Cuma	perjantai
+Cumartesi	lauantai
+Cumhuriyet altını	Tasavaltakulta
+D	I
+Devam	Jatka
+Devam et	Jatka
+Dil	Kieli
+Dokun: aç	Kosketus: avaa
+Dokun: bayrak	Kosketus: lippu
+Dolu, fırtına	Raekuuro, ukkonen
+Donan yağmur	Jäätävä sade
+Donan çisenti	Jäätävä tihku
+Dâhice!	Nerokasta!
+Döviz & Altın	Valuutat & kulta
+Dünya	Maailma
+Düşünüyor… (%s)	Miettii… (%s)
+Ekim	lokakuuta
+Ekonomi	Talous
+En az %d karakter girin	Vähintään %d merkkiä
+En fazla 10 şehir kaydedilebilir.	Enintään 10 kaupunkia voi tallentaa.
+En iyi	Paras
+En iyi seri	Paras putki
+Evet	Kyllä
+Eylül	syyskuuta
+Fil	Lähetti
+G	E
+GB	LO
+GD	KA
+Gazete	Uutiset
+Geri al	Kumoa
+Gram altın	Grammakulta
+Gök gürültülü	Ukkonen
+Gönder	Lähetä
+Güncel	Tuoreet
+Güncellendi %s · Open-Meteo	Päivitetty %s · Open-Meteo
+Güncelleniyor…	Päivitetään…
+Gündem	Ajankohtaista
+Güvenlik Duvarı	Palomuuri
+Güzel!	Hienoa!
+Haberler alınamadı.\nWi-Fi bağlantısını kontrol edin.	Uutisia ei saatu.\nTarkista Wi-Fi-yhteys.
+Harika!	Mahtavaa!
+Hata	Virhe
+Hataları göster: Açık	Näytä virheet: Päällä
+Hataları göster: Kapalı	Näytä virheet: Pois
+Hava Durumu	Sää
+Hava durumu alınamadı.\nWi-Fi bağlantısını kontrol edip Yenile'ye basın.	Säätä ei saatu.\nTarkista Wi-Fi ja paina Päivitä.
+Hava durumu yok (Wi-Fi kapalı olabilir)	Ei säätietoja (Wi-Fi voi olla pois)
+Hayır	Ei
+Haziran	kesäkuuta
+Hedef para	Kohdevaluutta
+Henüz parola yok	Ei vielä salasanaa
+Henüz uygulama kurulu değil	Ei vielä asennettuja sovelluksia
+Her hamlede tahtayı çevir	Käännä lauta joka siirrolla
+Hissedilen %s	Tuntuu kuin %s
+Hiç uyuma	Ei koskaan
+K	P
+KAPALI	POIS
+KB	LU
+KD	KO
+Kale	Torni
+Kapalı	Pilvistä
+Kapat	Sulje
+Kapatıldı. Kindle yeniden başlayınca tekrar açılır.	Pois päältä. Kytkeytyy päälle, kun Kindle käynnistyy uudelleen.
+Kar sağanağı	Lumikuuroja
+Kar taneleri	Lumijyväsiä
+Karlı	Lumisadetta
+Kasım	marraskuuta
+Kaydedilemedi.	Tallennus epäonnistui.
+Kaynak para	Lähtövaluutta
+Kaynak: %s	Lähde: %s
+Kazandın!	Voitit!
+Kazanma %	Voitto %
+Kelime Oyunu	Sanapeli
+Kelime listesi bulunamadı. Uygulamayı yeniden kurun.	Sanalistaa ei löytynyt. Asenna sovellus uudelleen.
+Kelime: %s	Sana: %s
+Kindle bu süre dokunulmadan kalınca uyur.\n"Hiç uyuma" pili hızlı tüketir.\nYeniden başlatınca varsayılana dönebilir.	Kindle menee lepoon, kun sitä ei kosketa näin pitkään.\n"Ei koskaan" kuluttaa akkua nopeasti.\nVoi palautua oletukseen uudelleenkäynnistyksessä.
+Kolay	Helppo
+Kullanıcı adı: root\nSunucu bu uygulama kapanınca da çalışır.\nKindle uyuyunca Wi-Fi ile birlikte bağlantı kopar.\nYeniden başlatınca kapalı açılır.	Käyttäjänimi: root\nPalvelin toimii myös sovelluksen sulkemisen jälkeen.\nKun Kindle menee lepoon, yhteys katkeaa Wi-Fin mukana.\nKäynnistyy pois päältä uudelleenkäynnistyksen jälkeen.
+Kültür	Kulttuuri
+Manşet	Pääuutiset
+Mart	maaliskuuta
+Masa Saati	Pöytäkello
+Mayın Tarlası	Miinaharava
+Mayın: %d	Miinat: %d
+Mayına bastın	Astuit miinaan
+Mayıs	toukokuuta
+Menü	Valikko
+Mevcut oyun silinsin mi?	Poistetaanko nykyinen peli?
+Motor yanıt vermedi	Moottori ei vastannut
+Muhteşem!	Upeaa!
+Nem %s	Kosteus %s
+Nisan	huhtikuuta
+Not: Açık	Merkintä: Päällä
+Not: Kapalı	Merkintä: Pois
+Ocak	tammikuuta
+Ons (USD)	Unssi (USD)
+Orta	Keskitaso
+Otomatik tamamla	Täytä automaattisesti
+Oynanan	Pelattu
+Oyun bitti	Peli päättyi
+Parola	Salasana
+Parola belirlenmiş	Salasana asetettu
+Parola kaydedildi.	Salasana tallennettu.
+Parola kaydedilemedi.	Salasanan tallennus epäonnistui.
+Parolalar aynı değil, tekrar deneyin.	Salasanat eivät täsmää, yritä uudelleen.
+Parolayı değiştir	Vaihda salasana
+Parolayı tekrar girin	Anna salasana uudelleen
+Parçalı bulutlu	Puolipilvistä
+Pat — berabere	Patti — tasapeli
+Paz	su
+Pazar	sunnuntai
+Pazartesi	maanantai
+Per	to
+Perşembe	torstai
+Piyon hangi taşa dönüşsün?	Miksi sotilas korotetaan?
+Pzt	ma
+Rastgele	Satunnainen
+Renginiz	Värisi
+Rüzgâr %ld km/s %s	Tuuli %ld km/h %s
+Rüzgâr —	Tuuli —
+SSH Sunucusu	SSH-palvelin
+Sal	ti
+Salı	tiistai
+Satranç	Shakki
+Satranç motoru çalışmadı.	Shakkimoottori ei käynnistynyt.
+Satış	Myynti
+Sağanak	Sadekuuroja
+Sağlık	Terveys
+Seri	Putki
+Sil	Poista
+Sisli	Sumuista
+Siyah	Musta
+Skor	Pisteet
+Skor: %d	Pisteet: %d
+Solitaire	Pasianssi
+Son anda!	Viime hetkellä!
+Sonuç bulunamadı	Ei tuloksia
+Sonuçlar	Tulokset
+Spor	Urheilu
+Sudoku	Sudoku
+Sunucu başlatılamadı (günlüğe bakın).	Palvelin ei käynnistynyt (katso loki).
+Sözlükte yok (yalnızca kök kelimeler)	Ei turkin sanastossa (vain perusmuodot)
+Süre: %ld:%02ld	Aika: %ld:%02ld
+Sıra: %s	Vuoro: %s
+TCMB döviz kurları	TCMB:n valuuttakurssit
+TCMB satış kuru ile	TCMB:n myyntikurssilla
+TCMB · güncellendi %d %s %02d:%02d	TCMB · päivitetty %d. %s %02d:%02d
+Tahmin dağılımı	Arvausten jakauma
+Tahta sabit	Kiinteä lauta
+Tahtaya bak	Näytä lauta
+Tahtayı çevir	Käännä lauta
+Tam altın	Kokonainen kultaraha
+Tamam	OK
+Tamamla	Viimeistele
+Tebrikler!	Onnittelut!
+Tek kart çek	Nosta yksi kortti
+Tek oyunculu	Yksinpeli
+Tekrar dene	Yritä uudelleen
+Temmuz	heinäkuuta
+Terfi	Korotus
+Tüm kurlar	Kaikki kurssit
+Usta	Mestari
+Uygulamalar	Sovellukset
+Uyku Ayarı	Lepotila
+Vazgeç	Peruuta
+Vezir	Kuningatar
+Yarım altın	Puolikas kultaraha
+Yağmurlu	Sadetta
+Yağış %s	Sade %s
+Yeni	Uusi
+Yeni SSH parolası (en az 6)	Uusi SSH-salasana (väh. 6)
+Yeni oyun	Uusi peli
+Yenile	Päivitä
+Yetersiz taş — berabere	Riittämätön materiaali — tasapeli
+Yoğun kar	Runsasta lumisadetta
+Yükleniyor…	Ladataan…
+Zor	Vaikea
+Zorluk	Vaikeus
+Zorluk seçin	Valitse vaikeus
+boşluk	välilyönti
+Çar	ke
+Çarşamba	keskiviikko
+Çevirici	Muunnin
+Çevrimdışı · güncellendi %d %s %02d:%02d	Offline · päivitetty %d. %s %02d:%02d
+Çevrimdışı — son veri %s · Open-Meteo	Offline — viimeisin tieto %s · Open-Meteo
+Çeyrek altın	Neljännes kultaraha
+Çisenti	Tihkusadetta
+Çok Kolay	Tosi helppo
+Çok iyi!	Tosi hyvä!
+Çıkış	Lopeta
+Önce boş bir hücre seçin.	Valitse ensin tyhjä ruutu.
+Üç kart çek	Nosta kolme korttia
+Üçlü tekrar — berabere	Kolminkertainen toisto — tasapeli
+İki oyunculu	Kaksinpeli
+İki oyunculu devam	Jatka kaksinpelinä
+İpucu	Vihje
+İstatistik	Tilastot
+İyi	Hyvä
+İşlem başarısız oldu.	Toiminto epäonnistui.
+Şah mat — Beyaz kazandı	Matti — Valkea voitti
+Şah mat — Siyah kazandı	Matti — Musta voitti
+Şah! Sıra: %s	Shakki! Vuoro: %s
+Şehir ara	Hae kaupunkia
+Şehir veya ilçe ara	Hae kaupunkia tai paikkaa
+Şehirler	Kaupungit
+Şehri sil	Poista kaupunki
+Şiddetli sağanak	Rankkoja kuuroja
+Şiddetli yağmur	Rankkasade
+Şu an AÇIK: gelen bağlantılar engelleniyor.\nKapatılsın mı?	Nyt PÄÄLLÄ: saapuvat yhteydet estetään.\nKytketäänkö pois?
+Şu an KAPALI: gelen bağlantılara izin veriliyor.\nAçılsın mı?	Nyt POIS: saapuvat yhteydet sallitaan.\nKytketäänkö päälle?
+Şu an: %d dakika	Nyt: %d min
+Şu an: %d saat	Nyt: %d h
+Şu an: hiç uyumuyor	Nyt: ei mene lepoon
+Şubat	helmikuuta
+⚑ Açık	⚑ Päällä
+⚑ Kapalı	⚑ Pois

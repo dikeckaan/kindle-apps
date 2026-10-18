@@ -1,0 +1,262 @@
+# Norwegian Bokmål catalog for kindle-apps
+%%%d	%%%d
+%d %s %d, %s	%d. %s %d, %s
+%d/%d · güncellendi %02d:%02d	%d/%d · oppdatert %02d:%02d
+%d/%d · çevrimdışı, son veri %02d:%02d	%d/%d · frakoblet, siste data %02d:%02d
+%s %d/6 tahminde bildin.	%s Du klarte det på %d/6 forsøk.
+%s beklenmedik şekilde kapandı	%s ble avsluttet uventet
+%s silinsin mi?	Slette %s?
+%s · %d×%d · %d mayın	%s · %d×%d · %d miner
+%s · Süre: %ld:%02ld	%s · Tid: %ld:%02ld
++ Ekle	+ Legg til
+1 saat	1 time
+10 dakika	10 minutter
+2 saat	2 timer
+2048	2048
+2048'e ulaştın.	Du nådde 2048.
+30 dakika	30 minutter
+5 dakika	5 minutter
+5 harf girin	Skriv 5 bokstaver
+50 hamle kuralı — berabere	50-trekksregelen — remis
+Altın (serbest piyasa, ₺)	Gull (fritt marked, ₺)
+Alış	Kjøp
+Aralık	desember
+Aranıyor…	Søker…
+At	Springer
+Az bulutlu	Lettskyet
+AÇIK	PÅ
+Aç	Slå på
+Açık	Klarvær
+Açıldı. Gelen bağlantılar engelleniyor.	Slått på. Innkommende tilkoblinger blokkeres.
+Ağustos	august
+B	V
+Bağlantı kurulamadı. Wi-Fi açık mı?	Ingen tilkobling. Er Wi-Fi på?
+Bağlantı yok, kurlar alınamadı	Ingen tilkobling, kursene kunne ikke hentes
+Bağlantı yok, veri alınamadı	Ingen tilkobling, data kunne ikke hentes
+Beyaz	Hvit
+Bilim	Vitenskap
+Bu oyun bitirilsin mi?	Avslutte dette partiet?
+Bu sefer olmadı	Ikke denne gangen
+Bugün	I dag
+Bugün  en yüksek %s · en düşük %s · ☼ %s – %s	I dag  høyest %s · lavest %s · ☼ %s – %s
+Bulmacayı çözdünüz.	Du løste oppgaven.
+Bütün kartlar açık. Oyun tamamlansın mı?	Alle kort er snudd. Fullføre spillet?
+Bütün kartları yerleştirdin.	Du har lagt ut alle kortene.
+Cmt	lør
+Cum	fre
+Cuma	fredag
+Cumartesi	lørdag
+Cumhuriyet altını	Republikk-gull
+D	Ø
+Devam	Fortsett
+Devam et	Fortsett
+Dil	Språk
+Dokun: aç	Trykk: åpne
+Dokun: bayrak	Trykk: flagg
+Dolu, fırtına	Hagl, torden
+Donan yağmur	Underkjølt regn
+Donan çisenti	Underkjølt yr
+Dâhice!	Genialt!
+Döviz & Altın	Valuta og gull
+Dünya	Verden
+Düşünüyor… (%s)	Tenker… (%s)
+Ekim	oktober
+Ekonomi	Økonomi
+En az %d karakter girin	Skriv minst %d tegn
+En fazla 10 şehir kaydedilebilir.	Maks. 10 byer kan lagres.
+En iyi	Beste
+En iyi seri	Beste rekke
+Evet	Ja
+Eylül	september
+Fil	Løper
+G	S
+GB	SV
+GD	SØ
+Gazete	Nyheter
+Geri al	Angre
+Gram altın	Gull per gram
+Gök gürültülü	Torden
+Gönder	Send
+Güncel	Siste
+Güncellendi %s · Open-Meteo	Oppdatert %s · Open-Meteo
+Güncelleniyor…	Oppdaterer…
+Gündem	Aktuelt
+Güvenlik Duvarı	Brannmur
+Güzel!	Fint!
+Haberler alınamadı.\nWi-Fi bağlantısını kontrol edin.	Nyhetene kunne ikke hentes.\nSjekk Wi-Fi-tilkoblingen.
+Harika!	Flott!
+Hata	Feil
+Hataları göster: Açık	Vis feil: På
+Hataları göster: Kapalı	Vis feil: Av
+Hava Durumu	Vær
+Hava durumu alınamadı.\nWi-Fi bağlantısını kontrol edip Yenile'ye basın.	Været kunne ikke hentes.\nSjekk Wi-Fi og trykk på Oppdater.
+Hava durumu yok (Wi-Fi kapalı olabilir)	Ingen værdata (Wi-Fi kan være av)
+Hayır	Nei
+Haziran	juni
+Hedef para	Til valuta
+Henüz parola yok	Ikke noe passord ennå
+Henüz uygulama kurulu değil	Ingen apper installert ennå
+Her hamlede tahtayı çevir	Snu brettet hvert trekk
+Hissedilen %s	Føles som %s
+Hiç uyuma	Aldri
+K	N
+KAPALI	AV
+KB	NV
+KD	NØ
+Kale	Tårn
+Kapalı	Overskyet
+Kapat	Lukk
+Kapatıldı. Kindle yeniden başlayınca tekrar açılır.	Slått av. Slås på igjen når Kindle startes på nytt.
+Kar sağanağı	Snøbyger
+Kar taneleri	Kornsnø
+Karlı	Snø
+Kasım	november
+Kaydedilemedi.	Kunne ikke lagres.
+Kaynak para	Fra valuta
+Kaynak: %s	Kilde: %s
+Kazandın!	Du vant!
+Kazanma %	Seier %
+Kelime Oyunu	Ordspill
+Kelime listesi bulunamadı. Uygulamayı yeniden kurun.	Fant ikke ordlisten. Installer appen på nytt.
+Kelime: %s	Ord: %s
+Kindle bu süre dokunulmadan kalınca uyur.\n"Hiç uyuma" pili hızlı tüketir.\nYeniden başlatınca varsayılana dönebilir.	Kindle sover etter så lang tid uten berøring.\n«Aldri» tapper batteriet raskt.\nKan tilbakestilles ved omstart.
+Kolay	Lett
+Kullanıcı adı: root\nSunucu bu uygulama kapanınca da çalışır.\nKindle uyuyunca Wi-Fi ile birlikte bağlantı kopar.\nYeniden başlatınca kapalı açılır.	Brukernavn: root\nServeren kjører også når appen lukkes.\nNår Kindle sover, brytes tilkoblingen sammen med Wi-Fi.\nStarter avslått etter omstart.
+Kültür	Kultur
+Manşet	Toppsaker
+Mart	mars
+Masa Saati	Bordklokke
+Mayın Tarlası	Minesveiper
+Mayın: %d	Miner: %d
+Mayına bastın	Du gikk på en mine
+Mayıs	mai
+Menü	Meny
+Mevcut oyun silinsin mi?	Slette pågående spill?
+Motor yanıt vermedi	Motoren svarte ikke
+Muhteşem!	Fantastisk!
+Nem %s	Fuktighet %s
+Nisan	april
+Not: Açık	Notat: På
+Not: Kapalı	Notat: Av
+Ocak	januar
+Ons (USD)	Unse (USD)
+Orta	Middels
+Otomatik tamamla	Fullfør automatisk
+Oynanan	Spilt
+Oyun bitti	Spillet er over
+Parola	Passord
+Parola belirlenmiş	Passord er satt
+Parola kaydedildi.	Passordet er lagret.
+Parola kaydedilemedi.	Passordet kunne ikke lagres.
+Parolalar aynı değil, tekrar deneyin.	Passordene er ikke like, prøv igjen.
+Parolayı değiştir	Endre passord
+Parolayı tekrar girin	Skriv passordet på nytt
+Parçalı bulutlu	Delvis skyet
+Pat — berabere	Patt — remis
+Paz	søn
+Pazar	søndag
+Pazartesi	mandag
+Per	tor
+Perşembe	torsdag
+Piyon hangi taşa dönüşsün?	Hvilken brikke skal bonden bli?
+Pzt	man
+Rastgele	Tilfeldig
+Renginiz	Din farge
+Rüzgâr %ld km/s %s	Vind %ld km/t %s
+Rüzgâr —	Vind —
+SSH Sunucusu	SSH-server
+Sal	tir
+Salı	tirsdag
+Satranç	Sjakk
+Satranç motoru çalışmadı.	Sjakkmotoren startet ikke.
+Satış	Salg
+Sağanak	Regnbyger
+Sağlık	Helse
+Seri	Rekke
+Sil	Slett
+Sisli	Tåke
+Siyah	Svart
+Skor	Poeng
+Skor: %d	Poeng: %d
+Solitaire	Kabal
+Son anda!	På hengende håret!
+Sonuç bulunamadı	Ingen treff
+Sonuçlar	Resultater
+Spor	Sport
+Sudoku	Sudoku
+Sunucu başlatılamadı (günlüğe bakın).	Serveren kunne ikke startes (se loggen).
+Sözlükte yok (yalnızca kök kelimeler)	Ikke i den tyrkiske ordlisten (bare grunnord)
+Süre: %ld:%02ld	Tid: %ld:%02ld
+Sıra: %s	Trekk: %s
+TCMB döviz kurları	TCMBs valutakurser
+TCMB satış kuru ile	Etter TCMBs salgskurs
+TCMB · güncellendi %d %s %02d:%02d	TCMB · oppdatert %d. %s %02d:%02d
+Tahmin dağılımı	Fordeling av forsøk
+Tahta sabit	Fast brett
+Tahtaya bak	Vis brettet
+Tahtayı çevir	Snu brettet
+Tam altın	Hel gullmynt
+Tamam	OK
+Tamamla	Fullfør
+Tebrikler!	Gratulerer!
+Tek kart çek	Trekk ett kort
+Tek oyunculu	Én spiller
+Tekrar dene	Prøv igjen
+Temmuz	juli
+Terfi	Forvandling
+Tüm kurlar	Alle kurser
+Usta	Mester
+Uygulamalar	Apper
+Uyku Ayarı	Hvilemodus
+Vazgeç	Avbryt
+Vezir	Dronning
+Yarım altın	Halv gullmynt
+Yağmurlu	Regn
+Yağış %s	Nedbør %s
+Yeni	Nytt
+Yeni SSH parolası (en az 6)	Nytt SSH-passord (minst 6)
+Yeni oyun	Nytt spill
+Yenile	Oppdater
+Yetersiz taş — berabere	Utilstrekkelig materiell — remis
+Yoğun kar	Kraftig snø
+Yükleniyor…	Laster…
+Zor	Vanskelig
+Zorluk	Vanskelighet
+Zorluk seçin	Velg vanskelighet
+boşluk	mellomrom
+Çar	ons
+Çarşamba	onsdag
+Çevirici	Omregner
+Çevrimdışı · güncellendi %d %s %02d:%02d	Frakoblet · oppdatert %d. %s %02d:%02d
+Çevrimdışı — son veri %s · Open-Meteo	Frakoblet — siste data %s · Open-Meteo
+Çeyrek altın	Kvart gullmynt
+Çisenti	Yr
+Çok Kolay	Svært lett
+Çok iyi!	Veldig bra!
+Çıkış	Avslutt
+Önce boş bir hücre seçin.	Velg en tom rute først.
+Üç kart çek	Trekk tre kort
+Üçlü tekrar — berabere	Trekkgjentakelse — remis
+İki oyunculu	To spillere
+İki oyunculu devam	Fortsett med to spillere
+İpucu	Hint
+İstatistik	Statistikk
+İyi	God
+İşlem başarısız oldu.	Handlingen mislyktes.
+Şah mat — Beyaz kazandı	Sjakkmatt — Hvit vant
+Şah mat — Siyah kazandı	Sjakkmatt — Svart vant
+Şah! Sıra: %s	Sjakk! Trekk: %s
+Şehir ara	Søk etter by
+Şehir veya ilçe ara	Søk etter by eller sted
+Şehirler	Byer
+Şehri sil	Slett by
+Şiddetli sağanak	Kraftige byger
+Şiddetli yağmur	Kraftig regn
+Şu an AÇIK: gelen bağlantılar engelleniyor.\nKapatılsın mı?	Nå PÅ: innkommende tilkoblinger blokkeres.\nSlå av?
+Şu an KAPALI: gelen bağlantılara izin veriliyor.\nAçılsın mı?	Nå AV: innkommende tilkoblinger tillates.\nSlå på?
+Şu an: %d dakika	Nå: %d min
+Şu an: %d saat	Nå: %d t
+Şu an: hiç uyumuyor	Nå: sover aldri
+Şubat	februar
+⚑ Açık	⚑ På
+⚑ Kapalı	⚑ Av

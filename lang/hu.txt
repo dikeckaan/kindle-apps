@@ -1,0 +1,262 @@
+# Hungarian catalog for kindle-apps
+%%%d	%%%d
+%d %s %d, %s	%d. %s %d, %s
+%d/%d · güncellendi %02d:%02d	%d/%d · frissítve %02d:%02d
+%d/%d · çevrimdışı, son veri %02d:%02d	%d/%d · offline, utolsó adat %02d:%02d
+%s %d/6 tahminde bildin.	%s Kitaláltad, tippek: %d/6.
+%s beklenmedik şekilde kapandı	%s váratlanul leállt
+%s silinsin mi?	Törlöd ezt: %s?
+%s · %d×%d · %d mayın	%s · %d×%d · akna: %d
+%s · Süre: %ld:%02ld	%s · Idő: %ld:%02ld
++ Ekle	+ Hozzáadás
+1 saat	1 óra
+10 dakika	10 perc
+2 saat	2 óra
+2048	2048
+2048'e ulaştın.	Elérted a 2048-at.
+30 dakika	30 perc
+5 dakika	5 perc
+5 harf girin	Írj be 5 betűt
+50 hamle kuralı — berabere	50 lépéses szabály — döntetlen
+Altın (serbest piyasa, ₺)	Arany (szabadpiac, ₺)
+Alış	Vétel
+Aralık	december
+Aranıyor…	Keresés…
+At	Huszár
+Az bulutlu	Kissé felhős
+AÇIK	BE
+Aç	Bekapcsol
+Açık	Derült
+Açıldı. Gelen bağlantılar engelleniyor.	Bekapcsolva. A bejövő kapcsolatok tiltva.
+Ağustos	augusztus
+B	Ny
+Bağlantı kurulamadı. Wi-Fi açık mı?	Nincs kapcsolat. Be van kapcsolva a Wi-Fi?
+Bağlantı yok, kurlar alınamadı	Nincs kapcsolat, az árfolyamok nem elérhetők
+Bağlantı yok, veri alınamadı	Nincs kapcsolat, nincs adat
+Beyaz	Világos
+Bilim	Tudomány
+Bu oyun bitirilsin mi?	Befejezed ezt a játékot?
+Bu sefer olmadı	Most nem sikerült
+Bugün	Ma
+Bugün  en yüksek %s · en düşük %s · ☼ %s – %s	Ma  max. %s · min. %s · ☼ %s – %s
+Bulmacayı çözdünüz.	Megfejtetted a rejtvényt.
+Bütün kartlar açık. Oyun tamamlansın mı?	Minden lap fel van fordítva. Befejezzük a játékot?
+Bütün kartları yerleştirdin.	Minden lapot leraktál.
+Cmt	Szo
+Cum	P
+Cuma	péntek
+Cumartesi	szombat
+Cumhuriyet altını	Köztársasági arany
+D	K
+Devam	Folytatás
+Devam et	Folytatás
+Dil	Nyelv
+Dokun: aç	Érintés: felfed
+Dokun: bayrak	Érintés: zászló
+Dolu, fırtına	Jégeső, zivatar
+Donan yağmur	Ónos eső
+Donan çisenti	Ónos szitálás
+Dâhice!	Zseniális!
+Döviz & Altın	Valuta és arany
+Dünya	Világ
+Düşünüyor… (%s)	Gondolkodik… (%s)
+Ekim	október
+Ekonomi	Gazdaság
+En az %d karakter girin	Legalább %d karakter kell
+En fazla 10 şehir kaydedilebilir.	Legfeljebb 10 város menthető.
+En iyi	Legjobb
+En iyi seri	Legjobb sorozat
+Evet	Igen
+Eylül	szeptember
+Fil	Futó
+G	D
+GB	DNy
+GD	DK
+Gazete	Hírek
+Geri al	Visszavon
+Gram altın	Gramm arany
+Gök gürültülü	Zivatar
+Gönder	Küldés
+Güncel	Friss
+Güncellendi %s · Open-Meteo	Frissítve %s · Open-Meteo
+Güncelleniyor…	Frissítés…
+Gündem	Belföld
+Güvenlik Duvarı	Tűzfal
+Güzel!	Szép!
+Haberler alınamadı.\nWi-Fi bağlantısını kontrol edin.	A hírek nem tölthetők be.\nEllenőrizd a Wi-Fi-kapcsolatot.
+Harika!	Nagyszerű!
+Hata	Hiba
+Hataları göster: Açık	Hibák mutatása: Be
+Hataları göster: Kapalı	Hibák mutatása: Ki
+Hava Durumu	Időjárás
+Hava durumu alınamadı.\nWi-Fi bağlantısını kontrol edip Yenile'ye basın.	Az időjárás nem tölthető be.\nEllenőrizd a Wi-Fi-t, majd nyomd meg a Frissítés gombot.
+Hava durumu yok (Wi-Fi kapalı olabilir)	Nincs időjárás (talán ki van kapcsolva a Wi-Fi)
+Hayır	Nem
+Haziran	június
+Hedef para	Célvaluta
+Henüz parola yok	Még nincs jelszó
+Henüz uygulama kurulu değil	Még nincs telepített alkalmazás
+Her hamlede tahtayı çevir	Tábla forgatása minden lépésnél
+Hissedilen %s	Hőérzet: %s
+Hiç uyuma	Soha
+K	É
+KAPALI	KI
+KB	ÉNy
+KD	ÉK
+Kale	Bástya
+Kapalı	Borult
+Kapat	Bezár
+Kapatıldı. Kindle yeniden başlayınca tekrar açılır.	Kikapcsolva. A Kindle újraindításakor újra bekapcsol.
+Kar sağanağı	Hózápor
+Kar taneleri	Hószemcsék
+Karlı	Havazás
+Kasım	november
+Kaydedilemedi.	Nem sikerült menteni.
+Kaynak para	Forrásvaluta
+Kaynak: %s	Forrás: %s
+Kazandın!	Nyertél!
+Kazanma %	Győzelem %
+Kelime Oyunu	Szójáték
+Kelime listesi bulunamadı. Uygulamayı yeniden kurun.	A szólista nem található. Telepítsd újra az alkalmazást.
+Kelime: %s	Szó: %s
+Kindle bu süre dokunulmadan kalınca uyur.\n"Hiç uyuma" pili hızlı tüketir.\nYeniden başlatınca varsayılana dönebilir.	A Kindle ennyi tétlen idő után alvó módba vált.\nA „Soha” gyorsan meríti az akkut.\nÚjraindítás után visszaállhat az alapértékre.
+Kolay	Könnyű
+Kullanıcı adı: root\nSunucu bu uygulama kapanınca da çalışır.\nKindle uyuyunca Wi-Fi ile birlikte bağlantı kopar.\nYeniden başlatınca kapalı açılır.	Felhasználónév: root\nA szerver az alkalmazás bezárása után is fut.\nAlvó módban a Wi-Fi-vel együtt a kapcsolat is megszakad.\nÚjraindítás után kikapcsolva indul.
+Kültür	Kultúra
+Manşet	Címlap
+Mart	március
+Masa Saati	Asztali óra
+Mayın Tarlası	Aknakereső
+Mayın: %d	Akna: %d
+Mayına bastın	Aknára léptél
+Mayıs	május
+Menü	Menü
+Mevcut oyun silinsin mi?	Törlöd a jelenlegi játékot?
+Motor yanıt vermedi	A motor nem válaszolt
+Muhteşem!	Csodás!
+Nem %s	Páratartalom: %s
+Nisan	április
+Not: Açık	Jegyzet: Be
+Not: Kapalı	Jegyzet: Ki
+Ocak	január
+Ons (USD)	Uncia (USD)
+Orta	Közepes
+Otomatik tamamla	Automatikus befejezés
+Oynanan	Játszott
+Oyun bitti	Vége a játéknak
+Parola	Jelszó
+Parola belirlenmiş	Jelszó beállítva
+Parola kaydedildi.	Jelszó elmentve.
+Parola kaydedilemedi.	A jelszó mentése nem sikerült.
+Parolalar aynı değil, tekrar deneyin.	A jelszavak nem egyeznek, próbáld újra.
+Parolayı değiştir	Jelszó módosítása
+Parolayı tekrar girin	Írd be újra a jelszót
+Parçalı bulutlu	Részben felhős
+Pat — berabere	Patt — döntetlen
+Paz	V
+Pazar	vasárnap
+Pazartesi	hétfő
+Per	Cs
+Perşembe	csütörtök
+Piyon hangi taşa dönüşsün?	Mivé változzon a gyalog?
+Pzt	H
+Rastgele	Véletlen
+Renginiz	Színed
+Rüzgâr %ld km/s %s	Szél %ld km/h %s
+Rüzgâr —	Szél —
+SSH Sunucusu	SSH-szerver
+Sal	K
+Salı	kedd
+Satranç	Sakk
+Satranç motoru çalışmadı.	A sakkmotor nem indult el.
+Satış	Eladás
+Sağanak	Zápor
+Sağlık	Egészség
+Seri	Sorozat
+Sil	Törlés
+Sisli	Ködös
+Siyah	Sötét
+Skor	Pont
+Skor: %d	Pont: %d
+Solitaire	Pasziánsz
+Son anda!	Az utolsó pillanatban!
+Sonuç bulunamadı	Nincs találat
+Sonuçlar	Találatok
+Spor	Sport
+Sudoku	Sudoku
+Sunucu başlatılamadı (günlüğe bakın).	A szerver nem indult el (lásd a naplót).
+Sözlükte yok (yalnızca kök kelimeler)	Nincs a török szótárban (csak szótövek)
+Süre: %ld:%02ld	Idő: %ld:%02ld
+Sıra: %s	Következik: %s
+TCMB döviz kurları	TCMB árfolyamok
+TCMB satış kuru ile	TCMB eladási árfolyamon
+TCMB · güncellendi %d %s %02d:%02d	TCMB · frissítve %d. %s %02d:%02d
+Tahmin dağılımı	Tippek eloszlása
+Tahta sabit	Rögzített tábla
+Tahtaya bak	Tábla megtekintése
+Tahtayı çevir	Tábla forgatása
+Tam altın	Teljes aranyérme
+Tamam	OK
+Tamamla	Befejezés
+Tebrikler!	Gratulálok!
+Tek kart çek	Egy lap húzása
+Tek oyunculu	Egy játékos
+Tekrar dene	Újra
+Temmuz	július
+Terfi	Gyalogátváltozás
+Tüm kurlar	Összes árfolyam
+Usta	Mester
+Uygulamalar	Alkalmazások
+Uyku Ayarı	Alvó mód
+Vazgeç	Mégse
+Vezir	Vezér
+Yarım altın	Fél aranyérme
+Yağmurlu	Esős
+Yağış %s	Csapadék: %s
+Yeni	Új
+Yeni SSH parolası (en az 6)	Új SSH-jelszó (min. 6)
+Yeni oyun	Új játék
+Yenile	Frissítés
+Yetersiz taş — berabere	Kevés anyag — döntetlen
+Yoğun kar	Erős havazás
+Yükleniyor…	Betöltés…
+Zor	Nehéz
+Zorluk	Nehézség
+Zorluk seçin	Válassz nehézséget
+boşluk	szóköz
+Çar	Sze
+Çarşamba	szerda
+Çevirici	Átváltó
+Çevrimdışı · güncellendi %d %s %02d:%02d	Offline · frissítve %d. %s %02d:%02d
+Çevrimdışı — son veri %s · Open-Meteo	Offline — utolsó adat %s · Open-Meteo
+Çeyrek altın	Negyed aranyérme
+Çisenti	Szitálás
+Çok Kolay	Nagyon könnyű
+Çok iyi!	Nagyon jó!
+Çıkış	Kilépés
+Önce boş bir hücre seçin.	Előbb válassz egy üres mezőt.
+Üç kart çek	Három lap húzása
+Üçlü tekrar — berabere	Háromszori ismétlés — döntetlen
+İki oyunculu	Két játékos
+İki oyunculu devam	Folytatás két játékossal
+İpucu	Tipp
+İstatistik	Statisztika
+İyi	Jó
+İşlem başarısız oldu.	A művelet nem sikerült.
+Şah mat — Beyaz kazandı	Matt — Világos nyert
+Şah mat — Siyah kazandı	Matt — Sötét nyert
+Şah! Sıra: %s	Sakk! Következik: %s
+Şehir ara	Városkeresés
+Şehir veya ilçe ara	Város vagy település keresése
+Şehirler	Városok
+Şehri sil	Város törlése
+Şiddetli sağanak	Heves zápor
+Şiddetli yağmur	Heves eső
+Şu an AÇIK: gelen bağlantılar engelleniyor.\nKapatılsın mı?	Jelenleg BE: a bejövő kapcsolatok tiltva.\nKikapcsolod?
+Şu an KAPALI: gelen bağlantılara izin veriliyor.\nAçılsın mı?	Jelenleg KI: a bejövő kapcsolatok engedélyezve.\nBekapcsolod?
+Şu an: %d dakika	Most: %d perc
+Şu an: %d saat	Most: %d óra
+Şu an: hiç uyumuyor	Most: soha nem alszik
+Şubat	február
+⚑ Açık	⚑ Be
+⚑ Kapalı	⚑ Ki
