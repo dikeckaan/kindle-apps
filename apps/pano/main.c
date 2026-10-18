@@ -569,6 +569,13 @@ static void load_all(int fetch)
 	load_daily(fetch);
 }
 
+/* an enabled section has nothing to show (e.g. a news source just picked, never fetched) */
+static int data_missing(void)
+{
+	return (opt(OPT_WEATHER) && !have_wx) || (opt(OPT_NEWS) && !n_news) || (opt(OPT_FX) && !n_rates && !n_gold) ||
+	       (opt(OPT_HISTORY) && !n_events) || (opt(OPT_PRAYER) && !have_prayer);
+}
+
 static int data_due(void) { return !t_data || time(NULL) - t_data >= data_hours() * 3600L; }
 
 /* battery saver: Wi-Fi is on only for this refresh, then off again; otherwise the usual schedule */
@@ -730,6 +737,7 @@ int main(void)
 			t_otd = t_prayer = 0;      /* options may have been switched on */
 			apply_saver();
 			refresh_data(0);
+			if (data_missing()) refresh_data(1); /* a new source or option with nothing cached: fetch now */
 			draw_all(1);
 			last_input = (long) time(NULL);
 			continue;
