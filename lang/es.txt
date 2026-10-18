@@ -345,7 +345,6 @@ Tarihte bugün · %d	Efemérides · %d
 Namaz vakitleri alınamadı	No se pudieron obtener los horarios
 Sıradaki: %s %s · %d sa %d dk	Próxima: %s %s · %d h %d min
 Haber kaynağı: %s	Fuente de noticias: %s
-Hava durumu ve namaz vakitleri Hava Durumu uygulamasındaki ilk şehre göredir. Namaz vakitleri Diyanet yöntemiyle hesaplanır.	El tiempo y los horarios de oración siguen la primera ciudad de la app El tiempo. Los horarios usan el método Diyanet.
 Haber kaynağı	Fuente de noticias
 İmsak	Fajr
 Güneş	Amanecer
@@ -362,3 +361,9 @@ Dolunay	Luna llena
 Son dördün	Cuarto menguante
 Hilal (küçülen)	Luna menguante
 Masa Panosu	Panel de mesa
+Pil tasarrufu (derin uyku)	Ahorro de batería (sueño profundo)
+☾ uykuda	☾ en reposo
+Uykuya geçiş: %d dk dokunulmazsa	Dormir tras: %d min sin tocar
+Veri güncelleme: %d saatte bir	Actualizar datos: cada %d h
+Pil tasarrufunda Kindle uyur, ekran e-ink sayesinde kalır; saat dakikada bir güncellenir, Wi-Fi yalnızca veri güncellerken açılır. Uyandırmak için güç tuşuna basın ya da ekrana dokunun.	Con el ahorro, el Kindle duerme y la pantalla e-ink se mantiene; el reloj se actualiza cada minuto y el Wi-Fi solo se enciende al actualizar. Pulsa el botón de encendido o toca la pantalla para despertarlo.
+Alındı: %s (KOReader ile açın)	Recibido: %s (abrir con KOReader)

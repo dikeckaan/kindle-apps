@@ -13,15 +13,19 @@
 #include "kui.h"
 #include "net/net.h"
 #include "news/news.h"
+#include "news/reader.h"
 #include "pano.h"
 #include "weather/wx.h"
 #include "weather/wxdraw.h"
 
-enum { OPT_WEATHER, OPT_NEWS, OPT_FX, OPT_HISTORY, OPT_PRAYER, OPT_MOON, N_OPT };
-static const char *const opt_key[N_OPT] = { "weather", "news", "fx", "history", "prayer", "moon" };
+enum { OPT_WEATHER, OPT_NEWS, OPT_FX, OPT_HISTORY, OPT_PRAYER, OPT_MOON, OPT_SAVER, N_OPT };
+static const char *const opt_key[N_OPT] = { "weather", "news", "fx", "history", "prayer", "moon", "saver" };
 static const char *const opt_label[N_OPT] = { /* N_ */ "Hava durumu", "Son dakika haberleri", "Döviz ve altın", "Tarihte bugün",
-					      "Namaz vakitleri", "Ay evresi" };
-static const int opt_default[N_OPT] = { 1, 1, 1, 1, 0, 1 };
+					      "Namaz vakitleri", "Ay evresi", "Pil tasarrufu (derin uyku)" };
+static const int opt_default[N_OPT] = { 1, 1, 1, 1, 0, 1, 1 };
+/* battery saver: after IDLE minutes without a touch the Kindle suspends (screen kept by e-ink, Wi-Fi and touch off),
+ * waking each minute for the clock; data (news, weather, currency) is fetched every DATA hours with Wi-Fi on briefly */
+static const int idle_choices[] = { 1, 2, 5, 10 }, data_choices[] = { 1, 2, 3, 6 };
 
 static WxCity city;
 static Wx wx;
@@ -37,7 +41,10 @@ static int n_events;
 static PanoPrayer prayer;
 static int have_prayer;
 static long t_news, t_wx, t_fx, t_otd, t_prayer; /* last fetch attempts: failures are retried after 30 min at most */
-static int quit_requested;
+static int quit_requested, wifi_was = -1, deep;
+static long last_input, t_data; /* last touch; last data refresh (battery saver) */
+static KuiRect r_head[8];       /* headline areas on screen, for opening a story */
+static int head_idx[8], n_head;
 static int last_day = -1, shown_min = -1, shown_hour = -1;
 static KuiRect r_clock, r_news, r_prayer, r_settings;
 
@@ -51,6 +58,20 @@ static const char *settings(void)
 }
 
 static int opt(int i) { return kui_cfg_get_int(settings(), opt_key[i], opt_default[i]); }
+
+static int choice(const char *key, const int *c, int n, int def)
+{
+	int v = kui_cfg_get_int(settings(), key, def);
+	for (int i = 0; i < n; i++)
+		if (c[i] == v) return v;
+	return def;
+}
+static int idle_min(void) { return choice("idle_min", idle_choices, 4, 2); }
+static int data_hours(void) { return choice("data_hours", data_choices, 4, 1); }
+/* how old data may get: the saver's interval, otherwise the usual 10 / 30 / 60 minutes */
+#define WX_EVERY_S (6 * 3600L)
+static int fetch_all_now;
+static long max_age(long normal_s) { return fetch_all_now ? 0 : opt(OPT_SAVER) ? data_hours() * 3600L : normal_s; }
 
 static int news_source(void)
 {
@@ -127,7 +148,8 @@ static void load_weather(int fetch)
 	city = cs[0];
 	wx_cache_name(&city, name, sizeof name);
 	have_wx = read_cache("weather", name, buf, sizeof buf, &mt) > 0 && wx_parse(buf, &wx) == 0;
-	if (fetch && (!have_wx || time(NULL) - mt > 30 * 60) && time(NULL) - t_wx > 30 * 60) {
+	/* the forecast changes slowly: every 6 hours is enough, whatever the news interval is */
+	if (fetch && (!have_wx || time(NULL) - mt > WX_EVERY_S) && time(NULL) - t_wx > 30 * 60) {
 		char url[700];
 		t_wx = (long) time(NULL);
 		wx_forecast_url(&city, url, sizeof url);
@@ -147,7 +169,7 @@ static void load_news(int fetch)
 	int len = read_cache("news", name, buf, sizeof buf, &mt);
 	news_free(news, n_news);
 	n_news = len > 0 ? news_parse_rss(buf, len, news, NEWS_MAX) : 0;
-	if (fetch && (!n_news || time(NULL) - mt > 10 * 60) && time(NULL) - t_news > 10 * 60) {
+	if (fetch && (!n_news || time(NULL) - mt > max_age(10 * 60)) && time(NULL) - t_news > 10 * 60) {
 		t_news = (long) time(NULL);
 		if (fetch_to(s->sec[0].url, "news", name, valid_news)) load_news(0);
 	}
@@ -160,7 +182,7 @@ static void load_fx(int fetch)
 	long mt;
 	n_rates = read_cache("currency", "tcmb.xml", buf, sizeof buf, &mt) > 0 ? fx_parse_tcmb(buf, rates, FX_MAX, d) : 0;
 	n_gold = read_cache("currency", "gold.json", buf, sizeof buf, NULL) > 0 ? fx_parse_gold(buf, gold, FX_GOLD_MAX) : 0;
-	if (fetch && (!n_rates || time(NULL) - mt > 60 * 60) && time(NULL) - t_fx > 60 * 60) {
+	if (fetch && (!n_rates || time(NULL) - mt > max_age(60 * 60)) && time(NULL) - t_fx > 60 * 60) {
 		t_fx = (long) time(NULL);
 		fetch_to("https://www.tcmb.gov.tr/kurlar/today.xml", "currency", "tcmb.xml", valid_tcmb);
 		fetch_to("https://finans.truncgil.com/today.json", "currency", "gold.json", valid_gold);
@@ -226,6 +248,7 @@ static void draw_header(void)
 	KuiRect r = { 0, 0, w, 90 };
 	kui_fill(r, 255);
 	kui_text((KuiRect){ 0, 0, 120, 90 }, "✕", KUI_FONT_BOLD, 56, KUI_ALIGN_CENTER, 0);
+	if (deep) kui_text((KuiRect){ 120, 0, 280, 90 }, T("☾ uykuda"), KUI_FONT_REG, 30, KUI_ALIGN_LEFT, 0);
 	kui_battery((KuiRect){ w / 2 - 110, 5, 260, 80 });
 	const char *lbl = T("Ayarlar");
 	r_settings = (KuiRect){ w - 260, 0, 260, 90 };
@@ -309,6 +332,7 @@ static void draw_news(void)
 	}
 	/* as many headlines as fit, each up to two lines, packed by their real height */
 	int y = r.y + 50, lh = kui_line_height(KUI_FONT_SERIF_BOLD, 32), shown = 0;
+	n_head = 0;
 	static KuiLine tmp[64];
 	for (int k = 0; k < n_news && k < 8; k++) {
 		const NewsItem *it = &news[(news_first + k) % n_news];
@@ -319,7 +343,12 @@ static void draw_news(void)
 		news_date_local(it->date, (long) time(NULL), local_off(), d, sizeof d);
 		const char *hh = strchr(d, ':') ? strchr(d, ':') - 2 : d; /* only the time */
 		kui_text((KuiRect){ 30, y + 4, 100, 40 }, hh, KUI_FONT_BOLD, 28, KUI_ALIGN_LEFT, 0);
-		y += draw_wrapped((KuiRect){ 130, y, w - 160, 0 }, it->title, KUI_FONT_SERIF_BOLD, 32, 2) + 16;
+		int used = draw_wrapped((KuiRect){ 130, y, w - 160, 0 }, it->title, KUI_FONT_SERIF_BOLD, 32, 2);
+		if (n_head < 8) {
+			r_head[n_head] = (KuiRect){ 0, y - 6, w, used + 16 };
+			head_idx[n_head++] = (news_first + k) % n_news;
+		}
+		y += used + 16;
 		shown++;
 	}
 	news_shown = shown ? shown : 1;
@@ -448,24 +477,33 @@ static void settings_screen(void)
 	for (int full = 1;;) {
 		int ns;
 		const NewsSource *src = news_sources(&ns);
-		KuiRect rows[N_OPT + 1];
+		KuiRect rows[N_OPT + 3];
 		kui_fill((KuiRect){ 0, 0, w, h }, 255);
 		kui_topbar(T("Ayarlar"), NULL);
 		for (int i = 0; i < N_OPT; i++) {
-			rows[i] = (KuiRect){ 40, KUI_TOPBAR_H + 30 + i * 120, w - 80, 105 };
+			rows[i] = (KuiRect){ 40, KUI_TOPBAR_H + 20 + i * 102, w - 80, 92 };
 			kui_frame(rows[i], 2, 0);
 			const char *l = T(opt_label[i]);
 			kui_text((KuiRect){ rows[i].x + 25, rows[i].y, rows[i].w - 140, rows[i].h }, l, KUI_FONT_BOLD, kui_fit_px(l, KUI_FONT_BOLD, 38, rows[i].w - 150),
 				 KUI_ALIGN_LEFT, 0);
 			kui_text((KuiRect){ rows[i].x + rows[i].w - 110, rows[i].y, 100, rows[i].h }, opt(i) ? "☑" : "☐", KUI_FONT_REG, 60, KUI_ALIGN_CENTER, 0);
 		}
-		rows[N_OPT] = (KuiRect){ 40, KUI_TOPBAR_H + 30 + N_OPT * 120 + 30, w - 80, 120 };
-		char s[160];
+		int y2 = KUI_TOPBAR_H + 20 + N_OPT * 102 + 15, bw = (w - 80 - 20) / 2;
+		rows[N_OPT] = (KuiRect){ 40, y2 + 2 * 105, w - 80, 100 };
+		rows[N_OPT + 1] = (KuiRect){ 40, y2, w - 80, 95 };
+		rows[N_OPT + 2] = (KuiRect){ 40, y2 + 105, w - 80, 95 };
+		char s[160], c1[96], c2[96];
 		snprintf(s, sizeof s, T("Haber kaynağı: %s"), src[news_source()].name);
-		KuiButton b = { rows[N_OPT], s, 1 };
+		snprintf(c1, sizeof c1, T("Uykuya geçiş: %d dk dokunulmazsa"), idle_min());
+		snprintf(c2, sizeof c2, T("Veri güncelleme: %d saatte bir"), data_hours());
+		KuiButton b = { rows[N_OPT], s, 1 }, b1 = { rows[N_OPT + 1], c1, 2 }, b2 = { rows[N_OPT + 2], c2, 3 };
+		(void) bw;
 		kui_button(&b, 0);
+		kui_button(&b1, 0);
+		kui_button(&b2, 0);
 		kui_text((KuiRect){ 40, h - 160, w - 80, 140 },
-			 T("Hava durumu ve namaz vakitleri Hava Durumu uygulamasındaki ilk şehre göredir. Namaz vakitleri Diyanet yöntemiyle hesaplanır."),
+			 T("Pil tasarrufunda Kindle uyur, ekran e-ink sayesinde kalır; saat dakikada bir güncellenir, Wi-Fi yalnızca veri güncellerken açılır. "
+			   "Uyandırmak için güç tuşuna basın ya da ekrana dokunun."),
 			 KUI_FONT_REG, 28, KUI_ALIGN_CENTER, 0);
 		if (full) kui_flush(1);
 		else {
@@ -483,6 +521,13 @@ static void settings_screen(void)
 		if (kui_topbar_hit(w, 0, e.x, e.y) == KUI_BTN_EXIT) return;
 		for (int i = 0; i < N_OPT; i++)
 			if (kui_rect_contains(rows[i], e.x, e.y)) kui_cfg_set_int(settings(), opt_key[i], !opt(i));
+		for (int c = 0; c < 2; c++) { /* cycle the saver's two durations */
+			if (!kui_rect_contains(rows[N_OPT + 1 + c], e.x, e.y)) continue;
+			const int *ch = c ? data_choices : idle_choices;
+			int cur = c ? data_hours() : idle_min(), k = 0;
+			while (k < 4 && ch[k] != cur) k++;
+			kui_cfg_set_int(settings(), c ? "data_hours" : "idle_min", ch[(k + 1) % 4]);
+		}
 		if (kui_rect_contains(rows[N_OPT], e.x, e.y)) { /* pick the news source */
 			KuiButton bs[32];
 			int cols = 2, rws = (ns + 1) / 2, cw = (w - 3 * 30) / cols, rh = (h - KUI_TOPBAR_H - 60) / rws;
@@ -524,6 +569,33 @@ static void load_all(int fetch)
 	load_daily(fetch);
 }
 
+static int data_due(void) { return !t_data || time(NULL) - t_data >= data_hours() * 3600L; }
+
+/* battery saver: Wi-Fi is on only for this refresh, then off again; otherwise the usual schedule */
+static void refresh_data(int force)
+{
+	if (!opt(OPT_SAVER)) {
+		load_all(1);
+		return;
+	}
+	if (!force && !data_due()) {
+		load_all(0);
+		return;
+	}
+	int was_on = kui_wifi_enabled() == 1;
+	if (!was_on) kui_wifi_enable(1);
+	int up = kui_wifi_wait(45);
+	fprintf(stderr, "refresh: wifi %s\n", up ? "connected" : "did not connect");
+	if (up) {
+		t_news = t_wx = t_fx = t_otd = t_prayer = 0;
+		fetch_all_now = 1;
+		load_all(1);
+		fetch_all_now = 0;
+	}
+	t_data = (long) time(NULL);
+	kui_wifi_enable(0); /* off until the next refresh */
+}
+
 /* every minute: clock (and the prayer countdown) without flashing; data on its own schedule; full refresh hourly */
 static void tick(void)
 {
@@ -531,19 +603,19 @@ static void tick(void)
 	now_local(&tm);
 	if (tm.tm_mday != last_day) { /* a new day: daily data again */
 		last_day = tm.tm_mday;
-		load_daily(1);
+		refresh_data(1);
 		draw_all(1);
 		return;
 	}
 	if (tm.tm_hour != shown_hour) { /* hourly: a full refresh clears e-ink ghosting */
-		load_all(1);
+		refresh_data(0);
 		draw_all(1);
 		return;
 	}
 	if (tm.tm_min == shown_min) return;
 	shown_min = tm.tm_min;
-	if (tm.tm_min % 10 == 0) { /* news, weather and history change: redraw everything without a flash */
-		load_all(1);
+	if (opt(OPT_SAVER) ? data_due() : tm.tm_min % 10 == 0) { /* new data: redraw everything without a flash */
+		refresh_data(0);
 		draw_all(0);
 		return;
 	}
@@ -553,6 +625,14 @@ static void tick(void)
 	kui_flush(0);
 }
 
+static int secs_to_next_minute(void)
+{
+	struct timeval tv;
+	gettimeofday(&tv, NULL);
+	int s = 60 - (int) (tv.tv_sec % 60);
+	return s < 5 ? s + 60 : s; /* never a pointless few-second sleep */
+}
+
 static int ms_to_next_minute(void)
 {
 	struct timeval tv;
@@ -560,19 +640,70 @@ static int ms_to_next_minute(void)
 	return (int) (60000 - (tv.tv_sec % 60) * 1000 - tv.tv_usec / 1000) + 200;
 }
 
+/* Battery saver: suspend until the next minute, update the clock, repeat — until the power button or a touch
+ * wakes the Kindle early. The e-ink keeps the picture while the CPU, Wi-Fi and touch are off. */
+static void deep_sleep_loop(void)
+{
+	deep = 1;
+	fprintf(stderr, "deep: enter (battery %d%%)\n", kui_lipc_get_int("com.lab126.powerd", "battLevel", -1));
+	kui_drain_power_key();
+	if (kui_wifi_enabled() == 1) kui_wifi_enable(0);
+	draw_all(0);
+	kui_wait_refresh();
+	for (;;) {
+		if (kui_quit_pending()) {
+			quit_requested = 1;
+			break;
+		}
+		int secs = secs_to_next_minute(), slept = kui_suspend(secs);
+		fprintf(stderr, "deep: asked %d s, slept %d s%s\n", secs, slept, slept >= 0 && kui_woke_early(secs, slept) ? " (woken)" : "");
+		if (slept < 0) { /* could not suspend (a wakeup source is busy): wait awake until the next minute */
+			KuiEvent e = kui_next_event(secs * 1000);
+			if (e.type == KUI_EV_QUIT) {
+				quit_requested = 1;
+				break;
+			}
+			if (e.type == KUI_EV_TAP || e.type == KUI_EV_POWER || e.type == KUI_EV_SWIPE || e.type == KUI_EV_LONGPRESS) break;
+		} else if (kui_woke_early(secs, slept)) {
+			break; /* the power button or a touch: back to normal */
+		}
+		tick();
+		kui_wait_refresh();
+	}
+	deep = 0;
+	fprintf(stderr, "deep: leave (battery %d%%)\n", kui_lipc_get_int("com.lab126.powerd", "battLevel", -1));
+	kui_drain_power_key();
+	last_input = (long) time(NULL);
+	draw_all(0);
+}
+
+static void apply_saver(void)
+{
+	if (opt(OPT_SAVER)) fprintf(stderr, "power key grab: %d\n", kui_grab_power_key(1)); /* power button: sleep/wake the dashboard */
+	else kui_grab_power_key(0);
+}
+
 int main(void)
 {
 	if (kui_init("pano") != 0) return 1;
 	kui_set_refresh_every(0); /* full refreshes are scheduled hourly */
 	kui_prevent_sleep(1);
+	wifi_was = kui_wifi_enabled();
+	apply_saver();
 	load_all(0); /* cached first: something to show at once */
 	struct tm tm;
 	now_local(&tm);
 	last_day = tm.tm_mday;
 	draw_all(1);
-	load_all(1);
+	refresh_data(1);
 	draw_all(0);
+	last_input = (long) time(NULL);
 	for (;;) {
+		if (quit_requested) break;
+		if (opt(OPT_SAVER) && time(NULL) - last_input >= idle_min() * 60L && !kui_input_asleep()) {
+			deep_sleep_loop();
+			continue;
+		}
 		KuiEvent e = kui_next_event(ms_to_next_minute());
 		if (e.type == KUI_EV_QUIT) break;
 		if (e.type == KUI_EV_NONE) {
@@ -583,6 +714,11 @@ int main(void)
 			draw_all(1);
 			continue;
 		}
+		if (e.type == KUI_EV_POWER) { /* power button while awake: go to sleep now */
+			if (opt(OPT_SAVER)) deep_sleep_loop();
+			continue;
+		}
+		last_input = (long) time(NULL);
 		if (e.type != KUI_EV_TAP) {
 			if (!kui_input_asleep()) tick(); /* swipes etc. reset the timeout: keep the minute current */
 			continue;
@@ -592,18 +728,34 @@ int main(void)
 			settings_screen();
 			if (quit_requested) break; /* no network waits on the way out */
 			t_otd = t_prayer = 0;      /* options may have been switched on */
-			load_all(1);
+			apply_saver();
+			refresh_data(0);
 			draw_all(1);
+			last_input = (long) time(NULL);
 			continue;
 		}
-		if (r_news.h && kui_rect_contains(r_news, e.x, e.y) && n_news) { /* the next three headlines */
-			news_first = (news_first + news_shown) % n_news;
-			draw_news();
-			kui_flush(0);
+		if (r_news.h && kui_rect_contains(r_news, e.x, e.y) && n_news) {
+			int opened = 0;
+			for (int k = 0; k < n_head; k++)
+				if (kui_rect_contains(r_head[k], e.x, e.y)) { /* a headline: read it */
+					int n;
+					const NewsSource *src = news_sources(&n);
+					news_read(&news[head_idx[k]], src[news_source()].name);
+					draw_all(1);
+					opened = 1;
+					break;
+				}
+			if (!opened) { /* the header or a gap: the next headlines */
+				news_first = (news_first + news_shown) % n_news;
+				draw_news();
+				kui_flush(0);
+			}
+			last_input = (long) time(NULL);
 		}
 		if (!kui_input_asleep()) tick(); /* a tap near the minute boundary must not delay the clock a minute */
 	}
 	kui_prevent_sleep(0);
+	if (wifi_was == 1 && kui_wifi_enabled() == 0) kui_wifi_enable(1); /* leave Wi-Fi as we found it */
 	news_free(news, n_news);
 	kui_quit();
 	return 0;

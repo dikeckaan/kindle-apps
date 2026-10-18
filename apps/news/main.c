@@ -9,6 +9,7 @@
 #include "kui.h"
 #include "net/net.h"
 #include "news.h"
+#include "reader.h"
 
 #define FRESH_S (15 * 60)
 #define MAX_SRC 24
@@ -84,17 +85,6 @@ static int fetch_feed(int s, int sec)
 	return ok;
 }
 
-/* device time zone offset; without a configured zone the news sources' own (Türkiye, UTC+3) */
-static int local_off(void)
-{
-	time_t t = time(NULL);
-	struct tm tm;
-	localtime_r(&t, &tm);
-	return tm.tm_gmtoff || getenv("TZ") ? (int) tm.tm_gmtoff : 3 * 3600;
-}
-
-static void show_date(const char *date, char *out, int cap) { news_date_local(date, (long) time(NULL), local_off(), out, cap); }
-
 /* ---- drawing helpers ---- */
 
 /* draws up to max_lines lines of text wrapped to box.w from box.y; returns the height used */
@@ -128,7 +118,7 @@ static void kicker(KuiRect r, const char *source, const char *date, int px)
 {
 	char up[96], d[32], s[160];
 	kui_tr_upper_str(source, up, sizeof up);
-	show_date(date, d, sizeof d);
+	news_show_date(date, d, sizeof d);
 	if (d[0]) snprintf(s, sizeof s, "%s · %s", up, d);
 	else snprintf(s, sizeof s, "%s", up);
 	kui_text(r, s, KUI_FONT_BOLD, kui_fit_px(s, KUI_FONT_BOLD, px, r.w), KUI_ALIGN_LEFT, 0);
@@ -142,89 +132,6 @@ static void status_line(const char *msg)
 	kui_text(r, msg, KUI_FONT_REG, kui_fit_px(msg, KUI_FONT_REG, 30, r.w), KUI_ALIGN_CENTER, 0);
 	kui_mark_dirty(r);
 	kui_flush(0);
-}
-
-/* ---- article reader ---- */
-
-typedef struct { const char *s; int len; KuiFont f; int px; } RLine;
-
-static void article(const NewsItem *it, const char *source)
-{
-	int w = kui_width(), h = kui_height(), top = KUI_TOPBAR_H + 30, bottom = h - 120, tw = w - 80;
-	static RLine ls[1600];
-	static KuiLine tmp[800];
-	int n = 0;
-	char head[160], d[32], link[320];
-	show_date(it->date, d, sizeof d);
-	if (d[0]) snprintf(head, sizeof head, "%s · %s", source, d);
-	else snprintf(head, sizeof head, "%s", source);
-	snprintf(link, sizeof link, T("Kaynak: %s"), it->link);
-	struct { const char *t; KuiFont f; int px; } parts[] = {
-		{ head, KUI_FONT_BOLD, 28 }, { it->title, KUI_FONT_SERIF_BOLD, 48 }, { "", KUI_FONT_REG, 18 },
-		{ it->text, KUI_FONT_SERIF, 38 }, { "", KUI_FONT_REG, 20 }, { link, KUI_FONT_REG, 26 },
-	};
-	for (size_t p = 0; p < sizeof parts / sizeof parts[0]; p++) {
-		int k = parts[p].t[0] ? kui_wrap_text(parts[p].t, tw, parts[p].f, parts[p].px, tmp, 800) : 1;
-		for (int i = 0; i < k && n < 1600; i++, n++)
-			ls[n] = (RLine){ parts[p].t[0] ? parts[p].t + tmp[i].off : "", parts[p].t[0] ? tmp[i].len : 0, parts[p].f, parts[p].px };
-	}
-	int starts[200], n_pages = 0;
-	for (int i = 0, y = top; i < n; i++) {
-		int lh = kui_line_height(ls[i].f, ls[i].px);
-		if (i == 0 || y + lh > bottom) {
-			if (n_pages == 200) break;
-			starts[n_pages++] = i;
-			y = top;
-		}
-		y += lh;
-	}
-	KuiButton bnav[2] = { { { 20, h - 100, 160, 90 }, "◀", 1 }, { { w - 180, h - 100, 160, 90 }, "▶", 2 } };
-	for (int pg = 0, full = 1;;) {
-		kui_fill((KuiRect){ 0, 0, w, h }, 255);
-		kui_topbar(T("Gazete"), NULL);
-		int end = pg + 1 < n_pages ? starts[pg + 1] : n;
-		for (int i = starts[pg], y = top; i < end; i++) {
-			int lh = kui_line_height(ls[i].f, ls[i].px);
-			if (ls[i].len) {
-				char buf[1024];
-				int len = ls[i].len < (int) sizeof buf - 1 ? ls[i].len : (int) sizeof buf - 1;
-				memcpy(buf, ls[i].s, (size_t) len);
-				buf[len] = '\0';
-				kui_text((KuiRect){ 40, y, tw, lh }, buf, ls[i].f, ls[i].px, KUI_ALIGN_LEFT, 0);
-			}
-			y += lh;
-		}
-		if (pg == 0) kui_fill((KuiRect){ 40, top + kui_line_height(KUI_FONT_BOLD, 28) - 4, tw, 2 }, 0);
-		if (n_pages > 1) {
-			char s[32];
-			snprintf(s, sizeof s, "%d / %d", pg + 1, n_pages);
-			kui_button(&bnav[0], 0);
-			kui_button(&bnav[1], 0);
-			kui_text((KuiRect){ 190, h - 100, w - 380, 90 }, s, KUI_FONT_REG, 34, KUI_ALIGN_CENTER, 0);
-		}
-		if (full) kui_flush(1);
-		else {
-			kui_mark_dirty((KuiRect){ 0, KUI_TOPBAR_H, w, h - KUI_TOPBAR_H });
-			kui_flush(0);
-		}
-		full = 0;
-		for (;;) {
-			KuiEvent e = kui_next_event(-1);
-			if (e.type == KUI_EV_QUIT) return;
-			if (e.type == KUI_EV_WAKE) { full = 1; break; }
-			int dlt = 0;
-			if (e.type == KUI_EV_SWIPE) dlt = e.dir == KUI_DIR_LEFT ? 1 : e.dir == KUI_DIR_RIGHT ? -1 : 0;
-			if (e.type == KUI_EV_TAP) {
-				if (kui_topbar_hit(w, 0, e.x, e.y) == KUI_BTN_EXIT) return;
-				int id = n_pages > 1 ? kui_buttons_hit(bnav, 2, e.x, e.y) : 0;
-				dlt = id == 1 ? -1 : id == 2 ? 1 : 0;
-			}
-			if (dlt && pg + dlt >= 0 && pg + dlt < n_pages) {
-				pg += dlt;
-				break;
-			}
-		}
-	}
 }
 
 /* ---- one source: its sections and headlines ---- */
@@ -265,7 +172,7 @@ static void source_view(int s)
 			int y = y0 + i * row;
 			draw_wrapped((KuiRect){ 30, y + 5, w - 60, 0 }, items[k].title, KUI_FONT_SERIF_BOLD, 36, 2);
 			char d[32];
-			show_date(items[k].date, d, sizeof d);
+			news_show_date(items[k].date, d, sizeof d);
 			kui_text((KuiRect){ 30, y + 98, w - 60, 36 }, d, KUI_FONT_REG, 28, KUI_ALIGN_LEFT, 0);
 			kui_fill((KuiRect){ 30, y + row - 4, w - 60, 1 }, 0);
 		}
@@ -335,7 +242,7 @@ static void source_view(int s)
 		if (e.y >= y0 && e.y < y0 + per * row) {
 			int k = page * per + (e.y - y0) / row;
 			if (k < n) {
-				article(&items[k], src[s].name);
+				news_read(&items[k], src[s].name);
 				full = 1;
 			}
 		}
@@ -419,7 +326,7 @@ static void build_front(int fetch_old)
 	}
 	const NewsItem *ptr[MAX_SRC];
 	for (int l = 0; l < n_front_src; l++) ptr[l] = lists[l];
-	n_front = news_front_page(ptr, counts, n_front_src, PER_SOURCE, (long) time(NULL), local_off(), front, FRONT_MAX);
+	n_front = news_front_page(ptr, counts, n_front_src, PER_SOURCE, (long) time(NULL), news_local_off(), front, FRONT_MAX);
 }
 
 /* story slots of a front page: page 0 has a lead story and six below it, later pages ten */
@@ -544,7 +451,7 @@ int main(void)
 		for (int i = 0; i < ns && first + i < n_front; i++) {
 			if (!kui_rect_contains(r[i], e.x, e.y)) continue;
 			const NewsRef *ref = &front[first + i];
-			article(&lists[ref->src][ref->idx], src[front_src[ref->src]].name);
+			news_read(&lists[ref->src][ref->idx], src[front_src[ref->src]].name);
 			draw_front(1);
 			break;
 		}

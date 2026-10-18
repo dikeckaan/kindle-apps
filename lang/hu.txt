@@ -345,7 +345,6 @@ Tarihte bugün · %d	Ezen a napon · %d
 Namaz vakitleri alınamadı	Az imaidők nem tölthetők be
 Sıradaki: %s %s · %d sa %d dk	Következő: %s %s · %d ó %d p
 Haber kaynağı: %s	Hírforrás: %s
-Hava durumu ve namaz vakitleri Hava Durumu uygulamasındaki ilk şehre göredir. Namaz vakitleri Diyanet yöntemiyle hesaplanır.	Az időjárás és az imaidők az Időjárás alkalmazás első városához igazodnak. Az imaidők a Diyanet-módszert követik.
 Haber kaynağı	Hírforrás
 İmsak	Fadzsr
 Güneş	Napkelte
@@ -362,3 +361,9 @@ Dolunay	Telihold
 Son dördün	Utolsó negyed
 Hilal (küçülen)	Fogyó sarló
 Masa Panosu	Asztali pult
+Pil tasarrufu (derin uyku)	Energiatakarékos mód (mélyalvás)
+☾ uykuda	☾ alszik
+Uykuya geçiş: %d dk dokunulmazsa	Alvás ennyi tétlenség után: %d perc
+Veri güncelleme: %d saatte bir	Adatfrissítés: %d óránként
+Pil tasarrufunda Kindle uyur, ekran e-ink sayesinde kalır; saat dakikada bir güncellenir, Wi-Fi yalnızca veri güncellerken açılır. Uyandırmak için güç tuşuna basın ya da ekrana dokunun.	Energiatakarékos módban a Kindle alszik, az e-ink kép megmarad; az óra percenként frissül, a Wi-Fi csak frissítéskor van bekapcsolva. Ébresztéshez nyomja meg a bekapcsológombot vagy érintse meg a képernyőt.
+Alındı: %s (KOReader ile açın)	Megérkezett: %s (KOReaderrel nyissa meg)

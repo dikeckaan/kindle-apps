@@ -188,6 +188,19 @@ static void test_ext(void)
 		if (httpd_ext_allowed(no[i])) T_FAIL_("%s allowed", no[i]);
 }
 
+static void test_native_ext(void)
+{
+	/* what the Kindle's own library lists; everything else opens in KOReader */
+	T_EQ_INT(httpd_kindle_native("kitap.azw3"), 1);
+	T_EQ_INT(httpd_kindle_native("KITAP.PDF"), 1);
+	T_EQ_INT(httpd_kindle_native("a.mobi"), 1);
+	T_EQ_INT(httpd_kindle_native("a.txt"), 1);
+	T_EQ_INT(httpd_kindle_native("a.kfx"), 1);
+	T_EQ_INT(httpd_kindle_native("quran.epub"), 0);
+	T_EQ_INT(httpd_kindle_native("a.cbz"), 0);
+	T_EQ_INT(httpd_kindle_native("noext"), 0);
+}
+
 static void test_pin(void)
 {
 	T_EQ_INT(httpd_pin_equal("012345", "012345"), 1);
@@ -874,6 +887,7 @@ int main(void)
 	T_RUN(test_route);
 	T_RUN(test_sanitize);
 	T_RUN(test_ext);
+	T_RUN(test_native_ext);
 	T_RUN(test_pin);
 	T_RUN(test_html);
 	T_RUN(test_multipart_splits);

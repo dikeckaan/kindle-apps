@@ -345,7 +345,6 @@ Tarihte bugün · %d	Tego dnia · %d
 Namaz vakitleri alınamadı	Nie pobrano godzin modlitw
 Sıradaki: %s %s · %d sa %d dk	Następna: %s %s · %d godz. %d min
 Haber kaynağı: %s	Źródło wiadomości: %s
-Hava durumu ve namaz vakitleri Hava Durumu uygulamasındaki ilk şehre göredir. Namaz vakitleri Diyanet yöntemiyle hesaplanır.	Pogoda i godziny modlitw dotyczą pierwszego miasta w aplikacji Pogoda. Godziny modlitw według metody Diyanet.
 Haber kaynağı	Źródło wiadomości
 İmsak	Fadżr
 Güneş	Wschód
@@ -362,3 +361,9 @@ Dolunay	Pełnia
 Son dördün	Ostatnia kwadra
 Hilal (küçülen)	Ubywający sierp
 Masa Panosu	Panel
+Pil tasarrufu (derin uyku)	Oszczędzanie baterii (głęboki sen)
+☾ uykuda	☾ uśpiony
+Uykuya geçiş: %d dk dokunulmazsa	Uśpij po: %d min bez dotyku
+Veri güncelleme: %d saatte bir	Aktualizacja danych: co %d godz.
+Pil tasarrufunda Kindle uyur, ekran e-ink sayesinde kalır; saat dakikada bir güncellenir, Wi-Fi yalnızca veri güncellerken açılır. Uyandırmak için güç tuşuna basın ya da ekrana dokunun.	W trybie oszczędzania Kindle śpi, a obraz e-ink pozostaje; zegar odświeża się co minutę, a Wi-Fi włącza się tylko na czas aktualizacji. Aby wybudzić, naciśnij przycisk zasilania lub dotknij ekranu.
+Alındı: %s (KOReader ile açın)	Odebrano: %s (otwórz w KOReader)

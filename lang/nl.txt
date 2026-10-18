@@ -345,7 +345,6 @@ Tarihte bugün · %d	Op deze dag · %d
 Namaz vakitleri alınamadı	Gebedstijden niet opgehaald
 Sıradaki: %s %s · %d sa %d dk	Volgende: %s %s · %d u %d min
 Haber kaynağı: %s	Nieuwsbron: %s
-Hava durumu ve namaz vakitleri Hava Durumu uygulamasındaki ilk şehre göredir. Namaz vakitleri Diyanet yöntemiyle hesaplanır.	Weer en gebedstijden volgen de eerste stad in de Weer-app. Gebedstijden volgens de Diyanet-methode.
 Haber kaynağı	Nieuwsbron
 İmsak	Fadjr
 Güneş	Zonsopkomst
@@ -362,3 +361,9 @@ Dolunay	Volle maan
 Son dördün	Laatste kwartier
 Hilal (küçülen)	Afnemende sikkel
 Masa Panosu	Bureaubord
+Pil tasarrufu (derin uyku)	Batterijbesparing (diepe slaap)
+☾ uykuda	☾ slaapt
+Uykuya geçiş: %d dk dokunulmazsa	Slapen na: %d min zonder aanraking
+Veri güncelleme: %d saatte bir	Gegevens bijwerken: elke %d u
+Pil tasarrufunda Kindle uyur, ekran e-ink sayesinde kalır; saat dakikada bir güncellenir, Wi-Fi yalnızca veri güncellerken açılır. Uyandırmak için güç tuşuna basın ya da ekrana dokunun.	Bij batterijbesparing slaapt de Kindle en blijft het e-inkscherm staan; de klok wordt elke minuut bijgewerkt en wifi staat alleen aan tijdens het bijwerken. Druk op de aan-uitknop of raak het scherm aan om te wekken.
+Alındı: %s (KOReader ile açın)	Ontvangen: %s (openen met KOReader)

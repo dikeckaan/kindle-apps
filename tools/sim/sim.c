@@ -320,3 +320,8 @@ KuiEvent kui_next_event(int timeout_ms)
 		fprintf(stderr, "sim: unknown command %s\n", cmd);
 	}
 }
+
+void kui_wait_refresh(void) {}
+int kui_quit_pending(void) { return 0; }
+int kui_grab_power_key(int on) { (void) on; return -1; }
+void kui_drain_power_key(void) {}

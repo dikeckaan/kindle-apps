@@ -81,4 +81,6 @@ void mp_init(Multipart *m, const char *boundary);
 int mp_feed(Multipart *m, const char *data, size_t n, const MpCallbacks *cb, void *ctx);
 /* 1 once the closing delimiter was seen */
 int mp_done(const Multipart *m);
+/* 1 if the Kindle's own library shows this file type (AZW3, MOBI, KFX, PDF, TXT …); others open in KOReader */
+int httpd_kindle_native(const char *name);
 #endif

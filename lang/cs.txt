@@ -345,7 +345,6 @@ Tarihte bugün · %d	V tento den · %d
 Namaz vakitleri alınamadı	Modlitební časy se nepodařilo načíst
 Sıradaki: %s %s · %d sa %d dk	Další: %s %s · %d h %d min
 Haber kaynağı: %s	Zdroj zpráv: %s
-Hava durumu ve namaz vakitleri Hava Durumu uygulamasındaki ilk şehre göredir. Namaz vakitleri Diyanet yöntemiyle hesaplanır.	Počasí a modlitební časy se řídí prvním městem v aplikaci Počasí. Modlitební časy podle metody Diyanet.
 Haber kaynağı	Zdroj zpráv
 İmsak	Fadžr
 Güneş	Východ
@@ -362,3 +361,9 @@ Dolunay	Úplněk
 Son dördün	Poslední čtvrť
 Hilal (küçülen)	Couvající srpek
 Masa Panosu	Nástěnka
+Pil tasarrufu (derin uyku)	Úspora baterie (hluboký spánek)
+☾ uykuda	☾ spí
+Uykuya geçiş: %d dk dokunulmazsa	Uspat po: %d min bez dotyku
+Veri güncelleme: %d saatte bir	Aktualizace dat: každé %d h
+Pil tasarrufunda Kindle uyur, ekran e-ink sayesinde kalır; saat dakikada bir güncellenir, Wi-Fi yalnızca veri güncellerken açılır. Uyandırmak için güç tuşuna basın ya da ekrana dokunun.	Při úspoře baterie Kindle spí a obraz e-ink zůstává; hodiny se aktualizují každou minutu a Wi-Fi je zapnuté jen při aktualizaci. Probudíte ho tlačítkem napájení nebo dotykem obrazovky.
+Alındı: %s (KOReader ile açın)	Přijato: %s (otevřete v KOReaderu)

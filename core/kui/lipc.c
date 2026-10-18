@@ -39,6 +39,20 @@ int kui_lipc_get_int(const char *pub, const char *prop, int def)
 	return v;
 }
 
+int kui_lipc_get_str(const char *pub, const char *prop, char *out, int cap)
+{
+	char t[300], cmd[512];
+	out[0] = '\0';
+	if (!safe(pub) || !safe(prop)) return -1;
+	tool(t, sizeof t, "lipc-get-prop");
+	snprintf(cmd, sizeof cmd, "'%s' -s %s %s 2>/dev/null", t, pub, prop);
+	FILE *p = popen(cmd, "r");
+	if (!p) return -1;
+	if (!fgets(out, cap, p)) out[0] = '\0';
+	out[strcspn(out, "\r\n")] = '\0';
+	return pclose(p) == 0 && out[0] ? 0 : -1;
+}
+
 void kui_lipc_set_int(const char *pub, const char *prop, int v)
 {
 	char t[300], cmd[512];

@@ -4,7 +4,7 @@
   "name": "Döviz & Altın",
   "author": "Kaan Dikeç",
   "description": "TCMB kurları, altın fiyatları ve çevirici",
-  "version": [2026, 10, 10],
+  "version": [2026, 10, 11],
   "dependencies": [],
   "supported_platforms": ["kindlehf"]
 }

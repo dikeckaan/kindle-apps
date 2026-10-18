@@ -374,7 +374,18 @@ static const char PAGE_FORM[] =
 	"accept=\".epub,.pdf,.mobi,.azw,.azw3,.kfx,.txt,.cbz,.cbr,.djvu,.fb2,.rtf,.doc,.docx,.html,.htm\">"
 	"<button type=\"submit\">Gönder</button></form>"
 	"<p><small>EPUB, PDF, MOBI, AZW3, KFX, TXT, CBZ, CBR, DJVU, FB2, RTF, DOC, DOCX, HTML. "
+	"Kindle'ın kendi kitaplığı AZW3, MOBI, KFX, PDF ve TXT'yi gösterir; EPUB ve diğerleri KOReader ile açılır. "
 	"Dosya başına en fazla 200 MB. Gönderim bitene kadar bu sayfayı kapatmayın.</small></p></body></html>";
+
+int httpd_kindle_native(const char *name)
+{
+	static const char *const native[] = { "azw", "azw3", "kfx", "mobi", "prc", "pdf", "txt" };
+	const char *dot = strrchr(name, '.');
+	if (!dot) return 0;
+	for (size_t i = 0; i < sizeof native / sizeof native[0]; i++)
+		if (!strcasecmp(dot + 1, native[i])) return 1;
+	return 0;
+}
 
 int httpd_page(char *out, size_t cap, const char *msg_html)
 {

@@ -345,7 +345,6 @@ Tarihte bugün · %d	Tänään historiassa · %d
 Namaz vakitleri alınamadı	Rukousaikoja ei saatu
 Sıradaki: %s %s · %d sa %d dk	Seuraava: %s %s · %d h %d min
 Haber kaynağı: %s	Uutislähde: %s
-Hava durumu ve namaz vakitleri Hava Durumu uygulamasındaki ilk şehre göredir. Namaz vakitleri Diyanet yöntemiyle hesaplanır.	Sää ja rukousajat määräytyvät Sää-sovelluksen ensimmäisen kaupungin mukaan. Rukousajat lasketaan Diyanet-menetelmällä.
 Haber kaynağı	Uutislähde
 İmsak	Fajr
 Güneş	Aur. nousu
@@ -362,3 +361,9 @@ Dolunay	Täysikuu
 Son dördün	Viim. neljännes
 Hilal (küçülen)	Vähenevä sirppi
 Masa Panosu	Pöytänäyttö
+Pil tasarrufu (derin uyku)	Virransäästö (syvä lepo)
+☾ uykuda	☾ levossa
+Uykuya geçiş: %d dk dokunulmazsa	Lepoon: %d min koskematta
+Veri güncelleme: %d saatte bir	Tietojen päivitys: %d h välein
+Pil tasarrufunda Kindle uyur, ekran e-ink sayesinde kalır; saat dakikada bir güncellenir, Wi-Fi yalnızca veri güncellerken açılır. Uyandırmak için güç tuşuna basın ya da ekrana dokunun.	Virransäästössä Kindle nukkuu ja e-ink-kuva säilyy; kello päivittyy minuutin välein ja Wi-Fi on päällä vain päivityksen ajan. Herätä painamalla virtapainiketta tai koskettamalla näyttöä.
+Alındı: %s (KOReader ile açın)	Vastaanotettu: %s (avaa KOReaderilla)
