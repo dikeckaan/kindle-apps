@@ -5,9 +5,9 @@
 #include "mines.h"
 
 static const struct { const char *name; int w, h, mines; } levels[MS_LEVELS] = {
-	{ "Kolay", 9, 9, 10 },
-	{ "Orta", 12, 16, 30 },
-	{ "Zor", 14, 20, 50 },
+	{ /* N_ */ "Kolay", 9, 9, 10 },
+	{ /* N_ */ "Orta", 12, 16, 30 },
+	{ /* N_ */ "Zor", 14, 20, 50 },
 };
 
 int ms_level_info(int level, int *w, int *h, int *mines)
@@ -19,6 +19,7 @@ int ms_level_info(int level, int *w, int *h, int *mines)
 	return 0;
 }
 
+/* untranslated (Turkish) name; callers show it with T() */
 const char *ms_level_name(int level) { return level >= 0 && level < MS_LEVELS ? levels[level].name : ""; }
 
 void ms_new(Mines *g, int level, unsigned seed)

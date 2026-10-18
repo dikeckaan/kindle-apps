@@ -11,7 +11,7 @@ static Mines game;
 static char save_path[300], cfg_path[300];
 static int flag_mode;
 static int drawn[MS_MAX_H][MS_MAX_W]; /* last view drawn per cell, -1 = needs drawing */
-static char drawn_status[96];
+static char drawn_status[512];
 static KuiRect board, status_box;
 static int cs; /* cell size in pixels */
 
@@ -61,31 +61,30 @@ static void draw_cell(int r, int c)
 
 static void draw_status(int force)
 {
-	char s[96];
+	char a[160], c[160], s[sizeof drawn_status];
 	long t = ms_seconds(&game);
-	snprintf(s, sizeof s, "Mayın: %d|%s|Süre: %ld:%02ld", ms_mines_left(&game), flag_mode ? "Dokun: bayrak" : "Dokun: aç", t / 60, t % 60);
+	const char *b = flag_mode ? T("Dokun: bayrak") : T("Dokun: aç");
+	snprintf(a, sizeof a, T("Mayın: %d"), ms_mines_left(&game));
+	snprintf(c, sizeof c, T("Süre: %ld:%02ld"), t / 60, t % 60);
+	snprintf(s, sizeof s, "%s|%s|%s", a, b, c); /* only to tell whether the line changed */
 	if (!force && strcmp(s, drawn_status) == 0) return;
 	snprintf(drawn_status, sizeof drawn_status, "%s", s);
-	char *a = s, *b = strchr(a, '|');
-	*b++ = '\0';
-	char *c = strchr(b, '|');
-	*c++ = '\0';
 	kui_fill(status_box, 255);
 	KuiRect left = { status_box.x, status_box.y, status_box.w / 3, status_box.h };
 	KuiRect mid = { status_box.x + status_box.w / 3, status_box.y, status_box.w / 3, status_box.h };
 	KuiRect right = { status_box.x + 2 * status_box.w / 3, status_box.y, status_box.w / 3, status_box.h };
-	kui_text(left, a, KUI_FONT_BOLD, 44, KUI_ALIGN_LEFT, 0);
+	kui_text(left, a, KUI_FONT_BOLD, kui_fit_px(a, KUI_FONT_BOLD, 44, left.w - 8), KUI_ALIGN_LEFT, 0);
 	kui_text(mid, b, KUI_FONT_REG, kui_fit_px(b, KUI_FONT_REG, 40, mid.w - 8), KUI_ALIGN_CENTER, 0);
-	kui_text(right, c, KUI_FONT_BOLD, 44, KUI_ALIGN_RIGHT, 0);
+	kui_text(right, c, KUI_FONT_BOLD, kui_fit_px(c, KUI_FONT_BOLD, 44, right.w - 8), KUI_ALIGN_RIGHT, 0);
 	kui_mark_dirty(status_box);
 }
 
-static const char *flag_label(void) { return flag_mode ? "⚑ Açık" : "⚑ Kapalı"; }
+static const char *flag_label(void) { return flag_mode ? T("⚑ Açık") : T("⚑ Kapalı"); }
 
 static void draw_all(void)
 {
 	kui_fill((KuiRect){ 0, 0, kui_width(), kui_height() }, 255);
-	kui_topbar("Mayın Tarlası", flag_label());
+	kui_topbar(T("Mayın Tarlası"), flag_label());
 	draw_status(1);
 	for (int r = 0; r < game.h; r++)
 		for (int c = 0; c < game.w; c++) draw_cell(r, c);
@@ -156,17 +155,17 @@ static void start_game(void)
 static int setup(int can_resume)
 {
 	const char *labels[4];
-	char names[MS_LEVELS][48];
+	char names[MS_LEVELS][160];
 	int n = 0, resume_idx = -1;
-	if (can_resume) { resume_idx = n; labels[n++] = "Devam et"; }
+	if (can_resume) { resume_idx = n; labels[n++] = T("Devam et"); }
 	int first_level = n;
 	for (int l = 0; l < MS_LEVELS; l++) {
 		int w, h, m;
 		ms_level_info(l, &w, &h, &m);
-		snprintf(names[l], sizeof names[l], "%s · %d×%d · %d mayın", ms_level_name(l), w, h, m);
+		snprintf(names[l], sizeof names[l], T("%s · %d×%d · %d mayın"), T(ms_level_name(l)), w, h, m);
 		labels[n++] = names[l];
 	}
-	int k = choose("Mayın Tarlası", labels, n);
+	int k = choose(T("Mayın Tarlası"), labels, n);
 	if (k < 0) return 0;
 	if (k != resume_idx) {
 		const char *fixed = getenv("MINES_SEED"); /* reproducible boards in the simulator */
@@ -182,11 +181,11 @@ static int setup(int can_resume)
 static int game_over(void)
 {
 	unlink(save_path);
-	char msg[64];
+	char msg[192];
 	long t = ms_seconds(&game);
-	snprintf(msg, sizeof msg, "%s · Süre: %ld:%02ld", ms_level_name(game.level), t / 60, t % 60);
-	const char *ch[] = { "Yeni oyun", "Çıkış" };
-	int k = kui_dialog(game.status == MS_WON ? "Kazandın!" : "Mayına bastın", msg, ch, 2, draw_all);
+	snprintf(msg, sizeof msg, T("%s · Süre: %ld:%02ld"), T(ms_level_name(game.level)), t / 60, t % 60);
+	const char *ch[] = { T("Yeni oyun"), T("Çıkış") };
+	int k = kui_dialog(game.status == MS_WON ? T("Kazandın!") : T("Mayına bastın"), msg, ch, 2, draw_all);
 	if (k != 0) return 1;
 	return !setup(0);
 }
@@ -243,7 +242,7 @@ int main(void)
 			if (t == KUI_BTN_MENU) {
 				flag_mode = !flag_mode;
 				kui_cfg_set_int(cfg_path, "flag_mode", flag_mode);
-				kui_topbar("Mayın Tarlası", flag_label());
+				kui_topbar(T("Mayın Tarlası"), flag_label());
 				draw_status(0);
 				kui_flush(0);
 				break;

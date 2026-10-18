@@ -169,7 +169,7 @@ static void refresh(void)
 static void paint_all(void)
 {
 	kui_fill((KuiRect){ 0, 0, kui_width(), kui_height() }, 255);
-	kui_topbar("Solitaire", "Menü");
+	kui_topbar(T("Solitaire"), T("Menü"));
 	for (int p = 0; p < KL_PILES; p++) draw_pile(p);
 	shown_valid = 1;
 }
@@ -228,11 +228,11 @@ static int setup(int can_resume)
 {
 	const char *start[3];
 	int n = 0, resume_idx = -1;
-	if (can_resume) { resume_idx = n; start[n++] = "Devam et"; }
+	if (can_resume) { resume_idx = n; start[n++] = T("Devam et"); }
 	int one = n;
-	start[n++] = "Tek kart çek";
-	start[n++] = "Üç kart çek";
-	int k = choose("Solitaire", start, n);
+	start[n++] = T("Tek kart çek");
+	start[n++] = T("Üç kart çek");
+	int k = choose(T("Solitaire"), start, n);
 	if (k == -2) return -1;
 	if (k == -1) return 0;
 	if (k != resume_idx) {
@@ -279,8 +279,8 @@ static void redraw_bg(void) { paint_all(); }
 static int finish_won(void) /* 1 to quit */
 {
 	drop_save();
-	const char *ch[] = { "Yeni oyun", "Çıkış" };
-	int k = kui_dialog("Tebrikler!", "Bütün kartları yerleştirdin.", ch, 2, redraw_bg);
+	const char *ch[] = { T("Yeni oyun"), T("Çıkış") };
+	int k = kui_dialog(T("Tebrikler!"), T("Bütün kartları yerleştirdin."), ch, 2, redraw_bg);
 	if (k != 0) return 1;
 	int r = setup(0);
 	if (r <= 0) return 1;
@@ -302,8 +302,8 @@ static int after_change(void)
 	if (!kl_can_autocomplete(&game)) auto_offered = 0;
 	else if (!auto_offered) {
 		auto_offered = 1;
-		const char *ch[] = { "Evet", "Hayır" };
-		int k = kui_dialog("Otomatik tamamla", "Bütün kartlar açık. Oyun tamamlansın mı?", ch, 2, redraw_bg);
+		const char *ch[] = { T("Evet"), T("Hayır") };
+		int k = kui_dialog(T("Otomatik tamamla"), T("Bütün kartlar açık. Oyun tamamlansın mı?"), ch, 2, redraw_bg);
 		draw_all(0);
 		if (k == 0) run_autocomplete();
 	}
@@ -312,9 +312,9 @@ static int after_change(void)
 
 static int menu(void) /* 1 to quit */
 {
-	const char *ch[3] = { "Yeni oyun", "Geri al", "Tamamla" };
+	const char *ch[3] = { T("Yeni oyun"), T("Geri al"), T("Tamamla") };
 	int n = kl_can_autocomplete(&game) ? 3 : 2;
-	int k = kui_dialog("Menü", "", ch, n, redraw_bg);
+	int k = kui_dialog(T("Menü"), "", ch, n, redraw_bg);
 	sel_pile = sel_idx = -1;
 	if (k == 0) {
 		save();

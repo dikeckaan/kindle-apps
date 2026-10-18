@@ -141,7 +141,7 @@ static void message(const char *msg)
 {
 	KuiRect r = { 0, MSG_Y, kui_width(), 60 };
 	kui_fill(r, 255);
-	if (msg && *msg) kui_text(r, msg, KUI_FONT_BOLD, 40, KUI_ALIGN_CENTER, 0);
+	if (msg && *msg) kui_text(r, msg, KUI_FONT_BOLD, kui_fit_px(msg, KUI_FONT_BOLD, 40, r.w - 40), KUI_ALIGN_CENTER, 0);
 	kui_mark_dirty(r);
 }
 
@@ -157,9 +157,9 @@ static void draw_keyboard(void)
 		KuiKey *k = &keys[i];
 		const char *label = k->label;
 		if (k->cp == KUI_KEY_SHIFT || k->cp == KUI_KEY_PAGE) continue; /* not used here */
-		if (k->cp == ' ') label = "Sil";
+		if (k->cp == ' ') label = T("Sil");
 		if (k->cp == KUI_KEY_BACK) label = "⌫";
-		if (k->cp == KUI_KEY_ENTER) label = "Gönder";
+		if (k->cp == KUI_KEY_ENTER) label = T("Gönder");
 		int px = kui_fit_px(label, KUI_FONT_BOLD, 44, k->r.w - 12);
 		int m = key_letter(k->cp) ? (int) wl_kb_get(&kb, kui_tr_lower(k->cp)) : WL_UNKNOWN;
 		if (k->cp > 0 && !key_letter(k->cp)) { /* Q W X are not Turkish letters */
@@ -186,7 +186,7 @@ static void draw_all(void)
 {
 	int w = kui_width();
 	kui_fill((KuiRect){ 0, 0, w, kui_height() }, 255);
-	kui_topbar("Kelime Oyunu", "İstatistik");
+	kui_topbar(T("Kelime Oyunu"), T("İstatistik"));
 	for (int r = 0; r < WL_TRIES; r++) draw_row(r);
 	message("");
 	draw_keyboard();
@@ -199,18 +199,19 @@ static void show_stats(void)
 	for (;;) {
 		char s[96];
 		kui_fill((KuiRect){ 0, 0, w, h }, 255);
-		kui_topbar("İstatistik", NULL);
+		kui_topbar(T("İstatistik"), NULL);
 		int pct = stats.played ? stats.won * 100 / stats.played : 0;
 		const struct { const char *label; int v; } nums[4] = {
-			{ "Oynanan", stats.played }, { "Kazanma %", pct }, { "Seri", stats.streak }, { "En iyi seri", stats.best }
+			{ T("Oynanan"), stats.played }, { T("Kazanma %"), pct }, { T("Seri"), stats.streak }, { T("En iyi seri"), stats.best }
 		};
 		int cw = (w - 80) / 4;
 		for (int i = 0; i < 4; i++) {
 			snprintf(s, sizeof s, "%d", nums[i].v);
 			kui_text((KuiRect){ 40 + i * cw, KUI_TOPBAR_H + 60, cw, 120 }, s, KUI_FONT_BOLD, 90, KUI_ALIGN_CENTER, 0);
-			kui_text((KuiRect){ 40 + i * cw, KUI_TOPBAR_H + 190, cw, 60 }, nums[i].label, KUI_FONT_REG, 34, KUI_ALIGN_CENTER, 0);
+			kui_text((KuiRect){ 40 + i * cw, KUI_TOPBAR_H + 190, cw, 60 }, nums[i].label, KUI_FONT_REG,
+				 kui_fit_px(nums[i].label, KUI_FONT_REG, 34, cw - 8), KUI_ALIGN_CENTER, 0);
 		}
-		kui_text((KuiRect){ 40, KUI_TOPBAR_H + 320, w - 80, 70 }, "Tahmin dağılımı", KUI_FONT_BOLD, 44, KUI_ALIGN_LEFT, 0);
+		kui_text((KuiRect){ 40, KUI_TOPBAR_H + 320, w - 80, 70 }, T("Tahmin dağılımı"), KUI_FONT_BOLD, 44, KUI_ALIGN_LEFT, 0);
 		int mx = 1;
 		for (int i = 0; i < WL_TRIES; i++)
 			if (stats.dist[i] > mx) mx = stats.dist[i];
@@ -237,14 +238,14 @@ static int finish(void)
 {
 	wl_stats_record(&stats, over == 1, game.n);
 	save_all();
-	char msg[128], up[WL_BYTES * 2];
+	char msg[256], up[WL_BYTES * 2];
 	kui_tr_upper_str(game.answer, up, sizeof up);
-	static const char *const praise[] = { "Dâhice!", "Muhteşem!", "Harika!", "Çok iyi!", "Güzel!", "Son anda!" };
-	if (over == 1) snprintf(msg, sizeof msg, "%s %d/6 tahminde bildin.", praise[game.n - 1], game.n);
-	else snprintf(msg, sizeof msg, "Kelime: %s", up);
-	const char *ch[] = { "Yeni oyun", "İstatistik", "Çıkış" };
+	static const char *const praise[] = { N_("Dâhice!"), N_("Muhteşem!"), N_("Harika!"), N_("Çok iyi!"), N_("Güzel!"), N_("Son anda!") };
+	if (over == 1) snprintf(msg, sizeof msg, T("%s %d/6 tahminde bildin."), T(praise[game.n - 1]), game.n);
+	else snprintf(msg, sizeof msg, T("Kelime: %s"), up);
+	const char *ch[] = { T("Yeni oyun"), T("İstatistik"), T("Çıkış") };
 	for (;;) {
-		int k = kui_dialog(over == 1 ? "Tebrikler!" : "Bu sefer olmadı", msg, ch, 3, draw_all);
+		int k = kui_dialog(over == 1 ? T("Tebrikler!") : T("Bu sefer olmadı"), msg, ch, 3, draw_all);
 		if (k == 1) {
 			show_stats();
 			draw_all();
@@ -261,12 +262,12 @@ static void submit(void)
 {
 	char norm[WL_BYTES];
 	if (wl_normalize(typed, norm) != WL_LEN) {
-		message("5 harf girin");
+		message(T("5 harf girin"));
 		kui_flush(0);
 		return;
 	}
 	if (!wl_contains(&guesses, norm)) {
-		message("Sözlükte yok (yalnızca kök kelimeler)");
+		message(T("Sözlükte yok (yalnızca kök kelimeler)"));
 		kui_flush(0);
 		return;
 	}
@@ -289,8 +290,8 @@ int main(void)
 {
 	if (kui_init("wordle") != 0) return 1;
 	if (load_words() != 0) {
-		const char *ok[] = { "Tamam" };
-		kui_dialog("Kelime Oyunu", "Kelime listesi bulunamadı. Uygulamayı yeniden kurun.", ok, 1, NULL);
+		const char *ok[] = { T("Tamam") };
+		kui_dialog(T("Kelime Oyunu"), T("Kelime listesi bulunamadı. Uygulamayı yeniden kurun."), ok, 1, NULL);
 		kui_quit();
 		return 1;
 	}

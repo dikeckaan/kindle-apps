@@ -14,14 +14,14 @@
 enum { BTN_DIGIT = 1, BTN_ERASE = 10, BTN_NOTE, BTN_UNDO }; /* digits 1..9 are ids 1..9 */
 #define NBTN 12
 
-static const char *level_names[SU_LEVELS] = { "Kolay", "Orta", "Zor" };
+static const char *level_names[SU_LEVELS] = { N_("Kolay"), N_("Orta"), N_("Zor") }; /* shown with T() */
 
 static Sudoku game;
 static char save_path[300], cfg_path[300];
 static int sel = -1, note_mode, show_errors, solved;
 static int gx, gy; /* grid origin (outer edge of cell 0) */
 static KuiButton buttons[NBTN];
-static char note_label[24];
+static char note_label[96];
 static long drawn[81]; /* look of each cell as last drawn; -1 = unknown */
 
 static void layout(void)
@@ -34,9 +34,9 @@ static void layout(void)
 	for (int i = 0; i < 9; i++)
 		buttons[i] = (KuiButton){ { gx + i * (dw + gap), pad_y, dw, 142 }, digits[i], BTN_DIGIT + i };
 	int y2 = pad_y + 142 + 18, bw = (GRID - 2 * 20) / 3;
-	buttons[9] = (KuiButton){ { gx, y2, bw, 116 }, "Sil", BTN_ERASE };
+	buttons[9] = (KuiButton){ { gx, y2, bw, 116 }, T("Sil"), BTN_ERASE };
 	buttons[10] = (KuiButton){ { gx + bw + 20, y2, bw, 116 }, note_label, BTN_NOTE };
-	buttons[11] = (KuiButton){ { gx + 2 * (bw + 20), y2, bw, 116 }, "Geri al", BTN_UNDO };
+	buttons[11] = (KuiButton){ { gx + 2 * (bw + 20), y2, bw, 116 }, T("Geri al"), BTN_UNDO };
 }
 
 static int line_w(int k) { return k % 3 == 0 ? THICK : THIN; }
@@ -103,7 +103,7 @@ static void refresh_cells(void)
 
 static void draw_note_button(void)
 {
-	snprintf(note_label, sizeof note_label, "Not: %s", note_mode ? "Açık" : "Kapalı");
+	snprintf(note_label, sizeof note_label, "%s", note_mode ? T("Not: Açık") : T("Not: Kapalı"));
 	kui_button(&buttons[10], note_mode);
 }
 
@@ -120,7 +120,7 @@ static void draw_digit_button(int i)
 static void draw_all(void)
 {
 	kui_fill((KuiRect){ 0, 0, kui_width(), kui_height() }, 255);
-	kui_topbar("Sudoku", "Menü");
+	kui_topbar(T("Sudoku"), T("Menü"));
 	kui_fill((KuiRect){ gx - THICK / 2, gy - THICK / 2, GRID + THICK, GRID + THICK }, 0); /* lines show between cells */
 	for (int i = 0; i < 81; i++) draw_cell(i);
 	for (int i = 0; i < 9; i++) draw_digit_button(i);
@@ -148,7 +148,7 @@ static int choose(const char *title, const char *msg, const char **labels, int n
 		kui_topbar(title, NULL);
 		int top = KUI_TOPBAR_H + 70;
 		if (msg) {
-			kui_text((KuiRect){ 60, top, w - 120, 100 }, msg, KUI_FONT_REG, 44, KUI_ALIGN_CENTER, 0);
+			kui_text((KuiRect){ 60, top, w - 120, 100 }, msg, KUI_FONT_REG, kui_fit_px(msg, KUI_FONT_REG, 44, w - 120), KUI_ALIGN_CENTER, 0);
 			top += 130;
 		}
 		for (int i = 0; i < n; i++) {
@@ -184,7 +184,9 @@ static void start_game(int level)
 /* level picker for a new game; 1 = started, 0 = cancelled, -1 = quit */
 static int pick_level(const char *title)
 {
-	int k = choose(title, "Zorluk seçin", level_names, SU_LEVELS);
+	const char *labels[SU_LEVELS];
+	for (int i = 0; i < SU_LEVELS; i++) labels[i] = T(level_names[i]);
+	int k = choose(title, T("Zorluk seçin"), labels, SU_LEVELS);
 	if (k == -2) return -1;
 	if (k < 0) return 0;
 	start_game(k);
@@ -196,9 +198,9 @@ static int start_screen(int can_resume)
 {
 	const char *labels[4];
 	int n = 0;
-	if (can_resume) labels[n++] = "Devam et";
-	for (int i = 0; i < SU_LEVELS; i++) labels[n++] = level_names[i];
-	int k = choose("Sudoku", can_resume ? NULL : "Zorluk seçin", labels, n);
+	if (can_resume) labels[n++] = T("Devam et");
+	for (int i = 0; i < SU_LEVELS; i++) labels[n++] = T(level_names[i]);
+	int k = choose(T("Sudoku"), can_resume ? NULL : T("Zorluk seçin"), labels, n);
 	if (k < 0) return 0;
 	if (can_resume && k == 0) return 1;
 	start_game(k - can_resume);
@@ -218,11 +220,11 @@ static int on_win(void)
 	remove(save_path);
 	sel = -1;
 	refresh_cells(); /* refreshed together with the dialog */
-	const char *ch[] = { "Yeni oyun", "Çıkış" };
+	const char *ch[] = { T("Yeni oyun"), T("Çıkış") };
 	for (;;) {
-		int k = kui_dialog("Tebrikler!", "Bulmacayı çözdünüz.", ch, 2, redraw_screen);
+		int k = kui_dialog(T("Tebrikler!"), T("Bulmacayı çözdünüz."), ch, 2, redraw_screen);
 		if (k != 0) return 1;
-		int r = pick_level("Yeni oyun");
+		int r = pick_level(T("Yeni oyun"));
 		if (r < 0) return 1;
 		if (r > 0) {
 			redraw_screen();
@@ -236,13 +238,11 @@ static int on_win(void)
 static int menu(void)
 {
 	for (;;) {
-		char err_label[48];
-		snprintf(err_label, sizeof err_label, "Hataları göster: %s", show_errors ? "Açık" : "Kapalı");
-		const char *labels[] = { "Yeni oyun", err_label, "İpucu" };
-		int k = choose("Menü", NULL, labels, 3);
+		const char *labels[] = { T("Yeni oyun"), show_errors ? T("Hataları göster: Açık") : T("Hataları göster: Kapalı"), T("İpucu") };
+		int k = choose(T("Menü"), NULL, labels, 3);
 		if (k == -2) return 1;
 		if (k == 0) {
-			int r = pick_level("Yeni oyun");
+			int r = pick_level(T("Yeni oyun"));
 			if (r < 0) return 1;
 			if (r == 0) continue;
 		} else if (k == 1) {
@@ -251,8 +251,8 @@ static int menu(void)
 			continue;
 		} else if (k == 2) {
 			if (sel < 0 || game.given[sel]) {
-				const char *ok[] = { "Tamam" };
-				if (kui_dialog("İpucu", "Önce boş bir hücre seçin.", ok, 1, NULL) < 0) return 0;
+				const char *ok[] = { T("Tamam") };
+				if (kui_dialog(T("İpucu"), T("Önce boş bir hücre seçin."), ok, 1, NULL) < 0) return 0;
 				redraw_screen();
 				return 0;
 			}
