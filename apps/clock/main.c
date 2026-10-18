@@ -65,7 +65,9 @@ static void load_weather(void)
 /* quietly refreshes the forecast when it is old; keeps the old one on failure */
 static int update_weather(void)
 {
+	kui_battery_max_age(WX_EVERY_S); /* the battery is read together with the forecast */
 	if (have_wx && time(NULL) - wx_time < WX_EVERY_S) return 0;
+	kui_battery_refresh();
 	char url[700], path[400];
 	char *body = NULL;
 	int len = 0;
@@ -205,15 +207,14 @@ static void tick(void)
 		return;
 	}
 	if (tm.tm_min != shown_min) {
-		draw_time(&tm);
-		kui_battery(battery_rect()); /* level and charging state, in place */
+		draw_time(&tm); /* only the digits: the battery is redrawn with the hourly/forecast refreshes */
 		kui_flush(0);
 		shown_min = tm.tm_min;
 	}
 	if (tm.tm_min % 30 == 0 && update_weather()) full_redraw(); /* only when 6 h old */
 }
 
-static int charging(void) { return kui_lipc_get_int("com.lab126.powerd", "isCharging", 0) == 1; }
+static int charging(void) { return kui_battery_charging(); } /* read with the forecast, not every minute */
 
 /* suspend between minutes until a touch, the power button or the charger */
 static void deep_sleep_loop(void)
@@ -240,6 +241,7 @@ static void deep_sleep_loop(void)
 	}
 	deep = 0;
 	if (light > 0 && kui_light_get() == 0) kui_light_set(light);
+	kui_battery_refresh(); /* woken by hand: a fresh level (and the charger) */
 	fprintf(stderr, "deep: leave (battery %d%%)\n", kui_lipc_get_int("com.lab126.powerd", "battLevel", -1));
 	kui_drain_input(700); /* the touch that woke the Kindle must not press anything (e.g. ✕) */
 	soft_redraw();

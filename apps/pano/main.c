@@ -458,7 +458,7 @@ static void draw_all(int full)
 	kui_fill((KuiRect){ 0, 0, w, h }, 255);
 	draw_header();
 	r_clock = (KuiRect){ 0, 90, w, 290 };
-	draw_clock(&tm);
+	draw_clock(&tm); /* the battery waits for the next data refresh */
 	int y = 90 + 295;
 	rule(y);
 	y += 12;
@@ -610,6 +610,9 @@ static int data_due(void) { return !t_data || time(NULL) - t_data >= data_hours(
 /* battery saver: Wi-Fi is on only for this refresh, then off again; otherwise the usual schedule */
 static void refresh_data(int force)
 {
+	/* the battery is read together with the data: with the saver once per data interval */
+	kui_battery_max_age(opt(OPT_SAVER) ? data_hours() * 3600L : 10 * 60L);
+	if (force || !opt(OPT_SAVER) || data_due()) kui_battery_refresh();
 	if (!opt(OPT_SAVER)) {
 		load_all(1);
 		return;
@@ -657,12 +660,11 @@ static void tick(void)
 	}
 	draw_clock(&tm);
 	if (r_prayer.h) draw_prayer();
-	draw_header(); /* battery */
 	kui_flush(0);
 }
 
 
-static int charging(void) { return kui_lipc_get_int("com.lab126.powerd", "isCharging", 0) == 1; }
+static int charging(void) { return kui_battery_charging(); } /* read with the data, not every minute */
 
 /* Battery saver: suspend until the next minute, update the clock, repeat — until the power button or a touch
  * wakes the Kindle early. The e-ink keeps the picture while the CPU, Wi-Fi and touch are off. */
@@ -697,6 +699,7 @@ static void deep_sleep_loop(void)
 	}
 	deep = 0;
 	if (light > 0 && kui_light_get() == 0) kui_light_set(light);
+	kui_battery_refresh(); /* woken by hand: a fresh level (and the charger) */
 	fprintf(stderr, "deep: leave (battery %d%%)\n", kui_lipc_get_int("com.lab126.powerd", "battLevel", -1));
 	kui_drain_input(700); /* the touch that woke the Kindle must not press anything (e.g. ✕) */
 	last_input = (long) time(NULL);

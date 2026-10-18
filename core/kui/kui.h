@@ -162,6 +162,12 @@ const char *kui_batt_log_path(void);
 /* battery history: one "time level charging" line per change (bounded); the remaining time from the drain since
  * the charger was last unplugged (at least 2 % and an hour of data), -1 when unknown or charging */
 void kui_batt_log(const char *path, long now, int level, int charging);
+/* kui_battery() reads the level at most once per max age (default 60 s) and otherwise redraws the last value:
+ * desk apps set it to their data interval so the battery is read together with the data, not every minute */
+void kui_battery_max_age(long seconds);
+void kui_battery_refresh(void);  /* the next kui_battery()/kui_battery_charging() reads again */
+int  kui_battery_charging(void); /* cached like the level */
+int  kui_battery_level(void);    /* cached; -1 unknown */
 long kui_batt_estimate_s(const char *path, long now, int level);
 void kui_fmt_duration(long s, char *out, int cap); /* "≈ 3 gün 4 sa", "≈ 5 sa 20 dk", "≈ 42 dk" */
 /* drops touches for ms (the tap that woke the device, or the rest of a tap that closed another app) */

@@ -84,9 +84,9 @@ static int shown_batt = -2;
 /* the battery level left of "Dil"; redrawn only when it changes */
 static void draw_battery(int force)
 {
-	int lvl = kui_lipc_get_int("com.lab126.powerd", "battLevel", -1) * 2 + (kui_lipc_get_int("com.lab126.powerd", "isCharging", 0) == 1);
-	if (lvl == shown_batt && !force) return;
-	shown_batt = lvl;
+	int v = kui_battery_level() * 2 + kui_battery_charging(); /* cached: read at most every 5 min (main) */
+	if (v == shown_batt && !force) return;                  /* unchanged: no redraw, no refresh */
+	shown_batt = v;
 	kui_battery((KuiRect){ kui_width() - 330, 28, 180, 64 });
 }
 
@@ -202,11 +202,12 @@ static int run_app(const HubApp *a)
 int main(void)
 {
 	if (kui_init("hub") != 0) return 1;
+	kui_battery_max_age(5 * 60);
 	scan();
 	draw();
 	for (;;) {
-		/* every 5 s while on screen: Wi-Fi and battery; nothing at all behind the screensaver */
-		KuiEvent e = kui_next_event(kui_input_asleep() ? -1 : 5000);
+		/* every 30 s while on screen: Wi-Fi (and the battery, read every 5 min); nothing behind the screensaver */
+		KuiEvent e = kui_next_event(kui_input_asleep() ? -1 : 30000);
 		if (e.type == KUI_EV_QUIT) break;
 		if (e.type == KUI_EV_NONE) {
 			if (!kui_input_asleep()) {

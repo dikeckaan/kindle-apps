@@ -158,12 +158,40 @@ int kui_input_text(const char *title, char *buf, int cap, int secret, int min_le
 	}
 }
 
+/* the level is read (two lipc calls) at most once per max age; drawing reuses it */
+static int b_lvl = -1, b_chg;
+static long b_time, b_max_age = 60;
+
+void kui_battery_max_age(long s) { b_max_age = s > 0 ? s : 0; }
+void kui_battery_refresh(void) { b_time = 0; }
+
+static void batt_read(void)
+{
+	long now = (long) time(NULL);
+	if (b_time && b_lvl >= 0 && now - b_time < b_max_age && now >= b_time) return;
+	b_time = now;
+	b_lvl = kui_lipc_get_int("com.lab126.powerd", "battLevel", -1);
+	b_chg = kui_lipc_get_int("com.lab126.powerd", "isCharging", 0) == 1;
+	if (b_lvl >= 0 && b_lvl <= 100) kui_batt_log(kui_batt_log_path(), now, b_lvl, b_chg); /* for the estimate */
+}
+
+int kui_battery_level(void)
+{
+	batt_read();
+	return b_lvl;
+}
+
+int kui_battery_charging(void)
+{
+	batt_read();
+	return b_chg;
+}
+
 int kui_battery(KuiRect r)
 {
-	int lvl = kui_lipc_get_int("com.lab126.powerd", "battLevel", -1);
+	batt_read();
+	int lvl = b_lvl, chg = b_chg;
 	if (lvl < 0 || lvl > 100) return -1;
-	int chg = kui_lipc_get_int("com.lab126.powerd", "isCharging", 0) == 1;
-	kui_batt_log(kui_batt_log_path(), (long) time(NULL), lvl, chg); /* history for the remaining-time estimate */
 	kui_fill(r, 255);
 	/* gauge: body, tip, fill proportional to the level */
 	int bh = r.h * 5 / 10, bw = bh * 5 / 2, by = r.y + (r.h - bh) / 2;

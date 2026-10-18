@@ -7,10 +7,10 @@
 #include <time.h>
 #include "kui.h"
 
-static const int idle_ch[] = { 1, 2, 5, 10, 30 }, clock_ch[] = { 1, 5, 15, 30, 60 }, data_ch[] = { 1, 2, 3, 6, 12, 24 },
+static const int idle_ch[] = { 1, 2, 5, 10, 30, 60 }, clock_ch[] = { 1, 5, 15, 30, 60 }, data_ch[] = { 1, 2, 3, 6, 12, 24 },
 		 wx_ch[] = { 1, 3, 6, 12, 24 }, fl_ch[] = { 0, 1 };
 static const struct { const char *key; const int *ch; int n, def; } saver_keys[] = {
-	[KUI_SAVER_IDLE_MIN] = { "idle_min", idle_ch, 5, 2 },	   [KUI_SAVER_CLOCK_MIN] = { "clock_min", clock_ch, 5, 1 },
+	[KUI_SAVER_IDLE_MIN] = { "idle_min", idle_ch, 6, 2 },	   [KUI_SAVER_CLOCK_MIN] = { "clock_min", clock_ch, 5, 1 },
 	[KUI_SAVER_DATA_HOURS] = { "data_hours", data_ch, 6, 1 }, [KUI_SAVER_WX_HOURS] = { "wx_hours", wx_ch, 5, 6 },
 	[KUI_SAVER_LIGHT_OFF] = { "light_off", fl_ch, 2, 1 },
 };
@@ -63,7 +63,7 @@ static void estimate_text(char *s, int cap)
 		s[0] = '\0';
 		return;
 	}
-	if (kui_lipc_get_int("com.lab126.powerd", "isCharging", 0) == 1) {
+	if (kui_battery_charging()) {
 		snprintf(s, (size_t) cap, "%s", T("Şarj oluyor"));
 		return;
 	}
@@ -94,6 +94,7 @@ void kui_power_screen(const char *cfg, int flags)
 		rows[nrows++] = KUI_SAVER_LIGHT_OFF;
 	}
 	KuiButton b[5 + 5];
+	kui_battery_refresh(); /* asked for: a fresh reading */
 	for (int full = 1, part = 0;;) {
 		if (full || part) {
 			if (full) {
