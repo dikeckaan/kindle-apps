@@ -5,15 +5,21 @@
 #   make deploy KINDLE=ip   install dist packages on a device over SSH
 
 HOST_CC     ?= cc
-HOST_CFLAGS := -std=c11 -Wall -Wextra -Werror -g -D_DEFAULT_SOURCE -D_POSIX_C_SOURCE=200809L -Icore/kui -Iapps
+HOST_CFLAGS := -std=c11 -Wall -Wextra -Werror -g -D_DARWIN_C_SOURCE -D_DEFAULT_SOURCE -D_POSIX_C_SOURCE=200809L -Icore/kui -Iapps
 DOCKER_IMG  := kindle-apps-tc
+
+.SECONDEXPANSION:
 
 # ---- host tests: TEST_<name>_SRCS lists the sources each test links against ----
 TEST_test_smoke_SRCS :=
+TEST_test_refresh_SRCS := core/kui/refresh.c
+TEST_test_layout_SRCS := core/kui/layout.c
+TEST_test_utf8tr_SRCS := core/kui/utf8tr.c
+TEST_test_store_SRCS := core/kui/store.c
 
 TESTS := $(patsubst tests/host/%.c,%,$(wildcard tests/host/test_*.c))
 
-build/host/%: tests/host/%.c tests/host/t.h $(wildcard core/kui/*.h) $(wildcard apps/*/*.h)
+build/host/%: tests/host/%.c tests/host/t.h $(wildcard core/kui/*.h) $(wildcard apps/*/*.h) $$(TEST_$$*_SRCS)
 	@mkdir -p $(dir $@)
 	$(HOST_CC) $(HOST_CFLAGS) -o $@ $< $(TEST_$*_SRCS) -lm
 
@@ -36,7 +42,6 @@ $(FBINK_A):
 # APPS: each entry <name> builds $(OUT)/<name> from APP_<name>_SRCS + kui + FBInk
 APPS :=
 
-.SECONDEXPANSION:
 $(OUT)/%: $$(APP_$$*_SRCS) $(FBINK_A) $(KUI_SRCS) $(wildcard core/kui/*.h)
 	@mkdir -p $(dir $@)
 	$(CROSS_CC) $(CROSS_CFLAGS) -o $@ $(APP_$*_SRCS) $(KUI_SRCS) $(FBINK_A) -lm
