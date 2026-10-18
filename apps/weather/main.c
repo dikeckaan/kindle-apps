@@ -95,7 +95,7 @@ static void draw_status(void)
 		snprintf(s, sizeof s, "%s", status_msg);
 	} else if (have_wx) {
 		local_hhmm(fetched, t, sizeof t);
-		snprintf(s, sizeof s, offline ? "Çevrimdışı — son veri %s" : "Güncellendi %s", t);
+		snprintf(s, sizeof s, offline ? "Çevrimdışı — son veri %s · Open-Meteo" : "Güncellendi %s · Open-Meteo", t);
 	} else {
 		snprintf(s, sizeof s, "%s", offline ? "Bağlantı yok, veri alınamadı" : "");
 	}

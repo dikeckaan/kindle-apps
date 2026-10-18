@@ -1,0 +1,10 @@
+{
+  "manifest_version": 2,
+  "id": "kindle-apps-news",
+  "name": "Gazete",
+  "author": "Kaan Dikeç",
+  "description": "Anadolu Ajansı ve TRT Haber manşetleri",
+  "version": [2026, 10, 6],
+  "dependencies": [],
+  "supported_platforms": ["kindlehf"]
+}

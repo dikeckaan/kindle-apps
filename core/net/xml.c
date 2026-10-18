@@ -152,7 +152,7 @@ int html_to_text(const char *s, const char *e, char *out, int cap)
 {
 	static const char *const blocks[] = { "p", "br", "h1", "h2", "h3", "h4", "h5", "h6", "li", "div", "header", "footer",
 					      "article", "section", "tr", "ul", "ol", "blockquote", "hr", NULL };
-	static const char *const skips[] = { "script", "style", "figure", "noscript", NULL };
+	static const char *const skips[] = { "script", "style", "figure", "noscript", "time", NULL };
 	int o = 0, space = 0, nl = 0;
 	if (cap <= 0) return 0;
 	while (s < e) {
