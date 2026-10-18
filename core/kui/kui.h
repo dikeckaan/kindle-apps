@@ -39,6 +39,20 @@ int  kui_tr_lower(int cp);
 int  kui_tr_fold_circumflex(int cp);
 void kui_tr_upper_str(const char *in, char *out, int outsz);
 
+/* ---- text wrapping: lines are byte ranges of the source text ---- */
+typedef struct { int off, len; } KuiLine;
+/* Greedy wrap to `width` using measure(s, n) (pixel width of n bytes); '\n' forces a break, a blank paragraph
+ * gives an empty line, a word wider than the line is split between code points. Returns the line count (<= max). */
+int kui_wrap(const char *text, int width, int (*measure)(const char *s, int n, void *ctx), void *ctx, KuiLine *out, int max);
+
+/* ---- Turkish dates and numbers ---- */
+struct tm;
+const char *kui_tr_weekday(int wday);       /* 0 = "Pazar"; "" when out of range */
+const char *kui_tr_weekday_short(int wday); /* "Paz", "Pzt", … */
+const char *kui_tr_month(int mon0);         /* 0 = "Ocak" */
+void kui_tr_date(const struct tm *tm, char *out, int cap); /* "18 Ekim 2026, Pazar" */
+void kui_fmt_num(double v, int decimals, char *out, int cap); /* 6632.39 → "6.632,39" */
+
 /* ---- events and gestures ---- */
 typedef enum { KUI_EV_NONE, KUI_EV_TAP, KUI_EV_LONGPRESS, KUI_EV_SWIPE, KUI_EV_WAKE, KUI_EV_QUIT } KuiEvType;
 typedef enum { KUI_DIR_NONE, KUI_DIR_LEFT, KUI_DIR_RIGHT, KUI_DIR_UP, KUI_DIR_DOWN } KuiDir;
@@ -85,6 +99,8 @@ void kui_text(KuiRect box, const char *utf8, KuiFont f, int px, KuiAlign a, unsi
 /* Text on a known solid background (use for light/white text): the glyphs' line box is painted with bg. */
 void kui_text_on(KuiRect box, const char *utf8, KuiFont f, int px, KuiAlign a, unsigned char fg, unsigned char bg);
 int  kui_text_width(const char *utf8, KuiFont f, int px);
+int  kui_wrap_text(const char *text, int width, KuiFont f, int px, KuiLine *out, int max); /* kui_wrap with FBInk metrics */
+int  kui_line_height(KuiFont f, int px); /* pixel advance between wrapped lines */
 void kui_mark_dirty(KuiRect r);
 void kui_flush(int screen_changed); /* the only place that refreshes the panel */
 void kui_set_refresh_every(int n);

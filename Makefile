@@ -28,11 +28,15 @@ TEST_test_fw_SRCS := apps/firewall/fw.c
 TEST_test_sshcfg_SRCS := apps/ssh/sshcfg.c core/kui/sha256.c
 TEST_test_sshsrv_SRCS := apps/ssh/sshsrv.c
 TEST_test_keyboard_SRCS := core/kui/keyboard.c core/kui/layout.c core/kui/utf8tr.c
+TEST_test_http_SRCS := core/net/http.c
+TEST_test_xml_SRCS := core/net/xml.c core/kui/utf8tr.c
+TEST_test_wrap_SRCS := core/kui/wrap.c core/kui/utf8tr.c
+TEST_test_trfmt_SRCS := core/kui/trfmt.c
 TEST_test_uci_SRCS := apps/chess/uci.c apps/chess/levels.c
 
 TESTS := $(patsubst tests/host/%.c,%,$(wildcard tests/host/test_*.c))
 
-build/host/%: tests/host/%.c tests/host/t.h $(wildcard core/kui/*.h) $(wildcard apps/*/*.h) $$(TEST_$$*_SRCS)
+build/host/%: tests/host/%.c tests/host/t.h $(wildcard core/kui/*.h) $(wildcard apps/*/*.h) $(wildcard core/net/*.h) $$(TEST_$$*_SRCS)
 	@mkdir -p $(dir $@)
 	$(HOST_CC) $(HOST_CFLAGS) -o $@ $< $(TEST_$*_SRCS) -lm
 
@@ -51,6 +55,9 @@ OUT := build/kindlehf
 
 $(FBINK_A):
 	$(MAKE) -C third_party/FBInk staticlib KINDLE=1 CROSS_TC=$(CROSS_TC)
+
+# NET_SRCS: linked into apps that fetch data (curl HTTP, XML text, cJSON)
+NET_SRCS := core/net/http.c core/net/xml.c core/vendor/cjson/cJSON.c
 
 # APPS: each entry <name> builds $(OUT)/<name> from APP_<name>_SRCS + kui + FBInk
 APPS := hub game2048 chess sleep firewall ssh

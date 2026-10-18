@@ -175,3 +175,25 @@ void kui_flush(int screen_changed)
 	}
 	dirty.n = 0;
 }
+
+static int fb_measure(const char *s, int n, void *ctx)
+{
+	const int *fp = ctx; /* { font, px } */
+	char buf[1024];
+	if (n >= (int) sizeof buf) n = (int) sizeof buf - 1;
+	memcpy(buf, s, (size_t) n);
+	buf[n] = '\0';
+	return kui_text_width(buf, (KuiFont) fp[0], fp[1]);
+}
+
+int kui_wrap_text(const char *text, int width, KuiFont f, int px, KuiLine *out, int max)
+{
+	int fp[2] = { (int) f, px };
+	return kui_wrap(text, width, fb_measure, fp, out, max);
+}
+
+int kui_line_height(KuiFont f, int px)
+{
+	(void) f;
+	return px * 13 / 10;
+}
