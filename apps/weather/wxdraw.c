@@ -12,6 +12,8 @@ void wx_draw_icon(KuiRect r, WxIcon ic)
 		return;
 	}
 	if ((int) ic < 0 || (int) ic >= (int) (sizeof glyph / sizeof glyph[0])) ic = WX_ICON_CLOUD;
+	/* ☁ and ≡ are low, wide glyphs: draw them larger so all icons look the same size */
+	if (ic == WX_ICON_CLOUD || ic == WX_ICON_FOG) px = px * 5 / 4;
 	kui_text(r, glyph[ic], KUI_FONT_REG, px, KUI_ALIGN_CENTER, 0);
 }
 

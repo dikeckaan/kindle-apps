@@ -84,6 +84,13 @@ int kui_read_file(const char *path, char *buf, int cap);          /* bytes read 
 int kui_cfg_get_int(const char *path, const char *key, int def);
 int kui_cfg_set_int(const char *path, const char *key, int val);  /* 0 = ok */
 
+/* ---- lipc (Kindle system properties) ---- */
+int  kui_lipc_get_int(const char *pub, const char *prop, int def);
+void kui_lipc_set_int(const char *pub, const char *prop, int v);
+/* Keep the Kindle awake while on: the previous preventScreenSaver value is saved to
+ * /var/local/kindle-apps/prevent_ss.restore and put back by kui_prevent_sleep(0) — or by kui-run.sh if the app crashes. */
+void kui_prevent_sleep(int on);
+
 /* ---- device: screen (FBInk) and input (evdev + lipc) ---- */
 typedef enum { KUI_FONT_REG, KUI_FONT_BOLD } KuiFont;
 typedef enum { KUI_ALIGN_LEFT, KUI_ALIGN_CENTER, KUI_ALIGN_RIGHT } KuiAlign;

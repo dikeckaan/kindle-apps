@@ -292,6 +292,8 @@ KuiEvent kui_next_event(int timeout_ms)
 		int k = sscanf(script, "%15s %n", cmd, &used);
 		if (k != 1) return e;
 		script += used;
+		cmd[strcspn(cmd, ";")] = '\0';
+		arg[0] = '\0';
 		if (!strcmp(cmd, "tap") || !strcmp(cmd, "long")) {
 			sscanf(script, "%d %d %n", &x, &y, &used);
 			script += used;
@@ -299,7 +301,7 @@ KuiEvent kui_next_event(int timeout_ms)
 			return (KuiEvent){ cmd[0] == 't' ? KUI_EV_TAP : KUI_EV_LONGPRESS, x, y, KUI_DIR_NONE };
 		}
 		if (!strcmp(cmd, "swipe")) {
-			sscanf(script, "%15s %n", arg, &used);
+			sscanf(script, "%15[a-z] %n", arg, &used);
 			script += used;
 			KuiDir dir = !strcmp(arg, "left") ? KUI_DIR_LEFT : !strcmp(arg, "right") ? KUI_DIR_RIGHT : !strcmp(arg, "up") ? KUI_DIR_UP : KUI_DIR_DOWN;
 			return (KuiEvent){ KUI_EV_SWIPE, 0, 0, dir };

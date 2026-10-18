@@ -84,6 +84,7 @@ static int run_app(const HubApp *a)
 	if (pid > 0) {
 		while (waitpid(pid, &status, 0) < 0 && errno == EINTR) kill(pid, SIGTERM);
 	}
+	kui_prevent_sleep(0); /* an app that kept the Kindle awake (Masa Saati) may have crashed */
 	if (kui_init("hub") != 0) exit(1);
 	return pid > 0 ? status : -1;
 }

@@ -39,6 +39,12 @@ restore() {
     [ "$RESTORED" = 1 ] && return
     RESTORED=1
     killall -CONT volumd 2>/dev/null
+    # an app kept the Kindle awake (kui_prevent_sleep) and did not undo it: put the saved value back
+    R=/var/local/kindle-apps/prevent_ss.restore
+    if [ -f "$R" ]; then
+        case "$(head -c 1 "$R")" in 0|1) lipc-set-prop com.lab126.powerd preventScreenSaver "$(head -c 1 "$R")" 2>/dev/null ;; esac
+        rm -f "$R"
+    fi
     # The normal Kindle UI always runs the status bar: bring it back even if something else had
     # stopped it before we started (otherwise the clock/brightness bar stays missing until a reboot).
     if [ -f /etc/upstart/statusbar.conf ] && ! status statusbar 2>/dev/null | grep -q running; then

@@ -33,6 +33,7 @@ TEST_test_xml_SRCS := core/net/xml.c core/kui/utf8tr.c
 TEST_test_wrap_SRCS := core/kui/wrap.c core/kui/utf8tr.c
 TEST_test_trfmt_SRCS := core/kui/trfmt.c
 TEST_test_wx_SRCS := apps/weather/wx.c core/net/http.c core/vendor/cjson/cJSON.c core/kui/store.c core/kui/trfmt.c core/kui/utf8tr.c
+TEST_test_lipc_SRCS := core/kui/lipc.c core/kui/store.c
 TEST_test_uci_SRCS := apps/chess/uci.c apps/chess/levels.c
 
 TESTS := $(patsubst tests/host/%.c,%,$(wildcard tests/host/test_*.c))
@@ -61,8 +62,9 @@ $(FBINK_A):
 NET_SRCS := core/net/http.c core/net/xml.c core/vendor/cjson/cJSON.c
 
 # APPS: each entry <name> builds $(OUT)/<name> from APP_<name>_SRCS + kui + FBInk
-APPS := hub game2048 chess sleep firewall ssh weather
+APPS := hub game2048 chess sleep firewall ssh weather clock
 APP_weather_SRCS := apps/weather/main.c apps/weather/wx.c apps/weather/wxdraw.c $(NET_SRCS)
+APP_clock_SRCS := apps/clock/main.c apps/weather/wx.c apps/weather/wxdraw.c $(NET_SRCS)
 APP_ssh_SRCS := apps/ssh/main.c apps/ssh/sshcfg.c apps/ssh/sshsrv.c
 APP_firewall_SRCS := apps/firewall/main.c apps/firewall/fw.c apps/ssh/sshsrv.c
 APP_sleep_SRCS := apps/sleep/main.c apps/sleep/sleep_opts.c
