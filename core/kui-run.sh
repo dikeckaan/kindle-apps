@@ -39,7 +39,12 @@ restore() {
     [ "$RESTORED" = 1 ] && return
     RESTORED=1
     killall -CONT volumd 2>/dev/null
-    [ "$PAUSED_STATUSBAR" = 1 ] && start statusbar >/dev/null 2>&1
+    # The normal Kindle UI always runs the status bar: bring it back even if something else had
+    # stopped it before we started (otherwise the clock/brightness bar stays missing until a reboot).
+    if [ -f /etc/upstart/statusbar.conf ] && ! status statusbar 2>/dev/null | grep -q running; then
+        start statusbar >/dev/null 2>&1
+    fi
+    echo "=== $(date) restore $APP_ID (paused_statusbar=$PAUSED_STATUSBAR, now: $(status statusbar 2>/dev/null))" >> "$LOG"
     killall -CONT awesome 2>/dev/null
     lipc-set-prop com.lab126.pillow disableEnablePillow enable 2>/dev/null
     lipc-set-prop com.lab126.appmgrd start app://com.lab126.booklet.home 2>/dev/null

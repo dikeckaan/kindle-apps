@@ -40,6 +40,12 @@ Kullanıcıyla kararlaştırılanlar (kullanıcının kararı):
    çevrimdışı okumak için önbellek. Kaynak seçimi (AA/TRT, ikisi birden) ve metin çıkarımı
    builder'a bırakıldı; telif için yalnızca kaynakların RSS'te verdiği içerik + kaynak bağlantısı
    gösterilir, görsel indirilmez.
+10. **Uyku Ayarı** (kullanıcının sonradan eklediği: "sleep modunu kapatabileceğimiz (uzatabileceğimiz)
+    bir araç"): Kindle'ın ekran koruyucu/uyku süresini seçtirir — 5 dk, 10 dk, 30 dk, 1 saat,
+    2 saat, Hiç uyuma. powerd `screenSaverTimeout` (rw, sn; FW 5.19.2'de varsayılan 600) ve
+    `preventScreenSaver` (rw) lipc özellikleriyle. Mevcut değeri gösterir; "Hiç uyuma"da pil
+    uyarısı. Yeniden başlatmada kalıcı mı — spike'ta ölçülür, kalıcı değilse ekranda yazılır
+    (kalıcı yapmak için rootfs'e yazılmaz).
 9. **Tek uygulama çatısı — "Uygulamalar"** (kullanıcının kararı: "KOReader gibi bir app içinde
    toplayalım"): kitaplıkta **tek giriş**. Açınca simge ızgaralı ana menü; bir uygulamadan
    çıkınca menüye, menüden çıkınca Kindle'a dönülür. Kindle arayüzü bu süre boyunca duraklatılmış
