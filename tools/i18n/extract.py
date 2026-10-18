@@ -112,7 +112,8 @@ def main():
         missing = [k for k in keys if k not in entries]
         extra = [k for k in entries if k not in keys]
         for k, v in entries.items():
-            if k in keys and FMT.findall(k) != FMT.findall(v):
+            # %% takes no argument, so translations may place it anywhere ("%%%d" → "%d %%")
+            if k in keys and [c for c in FMT.findall(k) if c != "%%"] != [c for c in FMT.findall(v) if c != "%%"]:
                 problems.append(f"{code}: format mismatch {k!r} -> {v!r}")
         for p in problems:
             print(p)
