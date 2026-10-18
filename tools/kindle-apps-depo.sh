@@ -15,7 +15,7 @@ say "Kindle Apps deposu ekleniyor..."
 say "Uygulamalar kuruluyor..."
 # One package per kpm call, core first: kpm 0.2.2 aborts when it has to resolve dependencies itself.
 ok=1
-for p in kindle-apps-core kindle-apps-2048 kindle-apps-chess kindle-apps-sleep kindle-apps-ssh kindle-apps-firewall kindle-apps-weather kindle-apps-clock kindle-apps-currency kindle-apps-news; do
+for p in kindle-apps-core kindle-apps-2048 kindle-apps-chess kindle-apps-sleep kindle-apps-ssh kindle-apps-firewall kindle-apps-weather kindle-apps-clock kindle-apps-currency kindle-apps-news kindle-apps-sysinfo kindle-apps-upload kindle-apps-ebooks; do
     /var/local/kmc/bin/su -c "$KPM -y install $p" || ok=0
 done
 if [ "$ok" = 1 ]; then
