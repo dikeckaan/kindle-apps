@@ -57,6 +57,53 @@ static void test_buttons_hit(void)
 	T_EQ_INT(kui_buttons_hit(bs, 2, 250, 50), 0);
 }
 
+static void test_dirty_keeps_separate_rects(void)
+{
+	KuiDirty d = { .n = 0 };
+	kui_dirty_add(&d, (KuiRect){ 0, 0, 10, 10 });
+	kui_dirty_add(&d, (KuiRect){ 100, 100, 10, 10 });
+	T_EQ_INT(d.n, 2);
+}
+
+static void test_dirty_merges_overlapping(void)
+{
+	KuiDirty d = { .n = 0 };
+	kui_dirty_add(&d, (KuiRect){ 0, 0, 10, 10 });
+	kui_dirty_add(&d, (KuiRect){ 5, 5, 10, 10 });
+	T_EQ_INT(d.n, 1);
+	T_EQ_INT(d.r[0].w, 15);
+	kui_dirty_add(&d, (KuiRect){ 20, 0, 5, 5 });
+	kui_dirty_add(&d, (KuiRect){ 0, 0, 30, 30 }); /* swallows both */
+	T_EQ_INT(d.n, 1);
+	T_EQ_INT(d.r[0].w, 30);
+}
+
+static void test_dirty_ignores_empty(void)
+{
+	KuiDirty d = { .n = 0 };
+	kui_dirty_add(&d, (KuiRect){ 0, 0, 0, 10 });
+	T_EQ_INT(d.n, 0);
+}
+
+static void test_dirty_overflow_merges(void)
+{
+	KuiDirty d = { .n = 0 };
+	for (int i = 0; i < 40; i++) kui_dirty_add(&d, (KuiRect){ i * 50, 0, 10, 10 });
+	T_ASSERT(d.n <= KUI_MAX_DIRTY);
+	int x0 = 1 << 30, x1 = 0; /* every added rect stays covered */
+	for (int i = 0; i < d.n; i++) {
+		if (d.r[i].x < x0) x0 = d.r[i].x;
+		if (d.r[i].x + d.r[i].w > x1) x1 = d.r[i].x + d.r[i].w;
+	}
+	T_EQ_INT(x0, 0);
+	T_EQ_INT(x1, 39 * 50 + 10);
+	for (int i = 0; i < 40; i++) {
+		int covered = 0;
+		for (int k = 0; k < d.n; k++) covered |= kui_rect_contains(d.r[k], i * 50, 0);
+		T_ASSERT(covered);
+	}
+}
+
 int main(void)
 {
 	T_RUN(test_grid_cell);
@@ -65,5 +112,9 @@ int main(void)
 	T_RUN(test_contains_edges);
 	T_RUN(test_topbar_hit);
 	T_RUN(test_buttons_hit);
+	T_RUN(test_dirty_keeps_separate_rects);
+	T_RUN(test_dirty_merges_overlapping);
+	T_RUN(test_dirty_ignores_empty);
+	T_RUN(test_dirty_overflow_merges);
 	return T_DONE();
 }

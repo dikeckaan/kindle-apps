@@ -12,7 +12,7 @@ static int fb = -1;
 static FBInkConfig cfg;
 static FBInkState st;
 static KuiRefreshPolicy policy;
-static KuiRect dirty;
+static KuiDirty dirty;
 static WFM_MODE_INDEX_T partial_wfm = WFM_GL16;
 
 int kui_width(void) { return (int) st.screen_width; }
@@ -49,11 +49,13 @@ int kui_init(const char *app)
 	cfg.no_refresh = true;
 	cfg.is_bgless = true;
 
-	const char *w = getenv("KUI_WFM"); /* tuning hook: "DU" forces DU partial updates */
-	partial_wfm = (w && strcmp(w, "DU") == 0) ? WFM_DU : WFM_GL16;
 	snprintf(path, sizeof path, "%s/settings", kui_data_dir(app));
 	kui_policy_init(&policy, kui_cfg_get_int(path, "full_refresh_every", 25));
-	dirty = (KuiRect){ 0, 0, 0, 0 };
+	/* partial_wfm: 0 = GL16 (grays, default), 1 = DU (faster, black/white); KUI_WFM env overrides */
+	const char *w = getenv("KUI_WFM");
+	int du = w ? strcmp(w, "DU") == 0 : kui_cfg_get_int(path, "partial_wfm", 0) == 1;
+	partial_wfm = du ? WFM_DU : WFM_GL16;
+	dirty.n = 0;
 
 	int in = kui_input_open();
 	if (in == KUI_ERR_TOUCH_BUSY) {
@@ -127,11 +129,11 @@ void kui_text(KuiRect box, const char *utf8, KuiFont f, int px, KuiAlign a, unsi
 	fbink_print_ot(fb, utf8, &ot, &c, NULL);
 }
 
-void kui_mark_dirty(KuiRect r) { dirty = kui_rect_union(dirty, r); }
+void kui_mark_dirty(KuiRect r) { kui_dirty_add(&dirty, r); }
 
 void kui_flush(int screen_changed)
 {
-	if (!screen_changed && dirty.w <= 0) return;
+	if (!screen_changed && dirty.n == 0) return;
 	FBInkConfig c = cfg;
 	if (kui_policy_next(&policy, screen_changed) == KUI_UPD_FULL) {
 		c.wfm_mode = WFM_GC16;
@@ -140,7 +142,10 @@ void kui_flush(int screen_changed)
 	} else {
 		c.wfm_mode = partial_wfm;
 		c.is_flashing = false;
-		fbink_refresh(fb, (uint32_t) dirty.y, (uint32_t) dirty.x, (uint32_t) dirty.w, (uint32_t) dirty.h, &c);
+		for (int i = 0; i < dirty.n; i++) {
+			KuiRect r = dirty.r[i];
+			fbink_refresh(fb, (uint32_t) r.y, (uint32_t) r.x, (uint32_t) r.w, (uint32_t) r.h, &c);
+		}
 	}
-	dirty = (KuiRect){ 0, 0, 0, 0 };
+	dirty.n = 0;
 }

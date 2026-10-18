@@ -24,6 +24,12 @@ typedef struct { int every; int count; } KuiRefreshPolicy; /* every == 0: never 
 void       kui_policy_init(KuiRefreshPolicy *p, int every);
 KuiUpdKind kui_policy_next(KuiRefreshPolicy *p, int screen_changed);
 
+/* ---- dirty regions: separate small rects are refreshed separately (unchanged pixels in between are left alone);
+ * when more than KUI_MAX_DIRTY would be needed, overlapping/nearest rects are merged ---- */
+#define KUI_MAX_DIRTY 16
+typedef struct { KuiRect r[KUI_MAX_DIRTY]; int n; } KuiDirty;
+void kui_dirty_add(KuiDirty *d, KuiRect r);
+
 /* ---- UTF-8 and Turkish case rules ---- */
 int  kui_utf8_decode(const char *s, int *cp); /* bytes consumed; invalid → 1 and cp = 0xFFFD */
 int  kui_utf8_encode(int cp, char out[4]);    /* bytes written */

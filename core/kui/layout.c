@@ -44,3 +44,43 @@ int kui_buttons_hit(const KuiButton *bs, int n, int x, int y)
 		if (kui_rect_contains(bs[i].r, x, y)) return bs[i].id;
 	return 0;
 }
+
+static int overlaps(KuiRect a, KuiRect b)
+{
+	return a.x < b.x + b.w && b.x < a.x + a.w && a.y < b.y + b.h && b.y < a.y + a.h;
+}
+
+static long area(KuiRect r) { return (long) r.w * r.h; }
+
+void kui_dirty_add(KuiDirty *d, KuiRect r)
+{
+	if (r.w <= 0 || r.h <= 0) return;
+	/* absorb every rect the new one overlaps, repeating as it grows */
+	for (int merged = 1; merged;) {
+		merged = 0;
+		for (int i = 0; i < d->n; i++) {
+			if (!overlaps(d->r[i], r)) continue;
+			r = kui_rect_union(r, d->r[i]);
+			d->r[i] = d->r[--d->n];
+			merged = 1;
+			break;
+		}
+	}
+	if (d->n < KUI_MAX_DIRTY) {
+		d->r[d->n++] = r;
+		return;
+	}
+	/* full: merge into the rect whose union grows the least */
+	int best = 0;
+	long best_cost = -1;
+	for (int i = 0; i < d->n; i++) {
+		long cost = area(kui_rect_union(d->r[i], r)) - area(d->r[i]);
+		if (best_cost < 0 || cost < best_cost) {
+			best = i;
+			best_cost = cost;
+		}
+	}
+	KuiRect u = kui_rect_union(d->r[best], r);
+	d->r[best] = d->r[--d->n];
+	kui_dirty_add(d, u);
+}
