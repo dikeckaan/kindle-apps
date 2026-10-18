@@ -345,7 +345,6 @@ Tarihte bugün · %d	Σαν σήμερα · %d
 Namaz vakitleri alınamadı	Δεν λήφθηκαν ώρες προσευχής
 Sıradaki: %s %s · %d sa %d dk	Επόμενη: %s %s · %d ώρ. %d λεπ.
 Haber kaynağı: %s	Πηγή ειδήσεων: %s
-Hava durumu ve namaz vakitleri Hava Durumu uygulamasındaki ilk şehre göredir. Namaz vakitleri Diyanet yöntemiyle hesaplanır.	Ο καιρός και οι ώρες προσευχής αφορούν την πρώτη πόλη της εφαρμογής Καιρός. Οι ώρες προσευχής υπολογίζονται με τη μέθοδο Diyanet.
 Haber kaynağı	Πηγή ειδήσεων
 İmsak	Φατζρ
 Güneş	Ανατολή
@@ -362,3 +361,9 @@ Dolunay	Πανσέληνος
 Son dördün	Τελευταίο τέταρτο
 Hilal (küçülen)	Φθίνων μηνίσκος
 Masa Panosu	Πίνακας γραφείου
+Pil tasarrufu (derin uyku)	Εξοικονόμηση μπαταρίας (βαθύς ύπνος)
+☾ uykuda	☾ σε ύπνο
+Uykuya geçiş: %d dk dokunulmazsa	Ύπνος μετά από: %d λεπ. αδράνειας
+Veri güncelleme: %d saatte bir	Ενημέρωση δεδομένων: κάθε %d ώρ.
+Pil tasarrufunda Kindle uyur, ekran e-ink sayesinde kalır; saat dakikada bir güncellenir, Wi-Fi yalnızca veri güncellerken açılır. Uyandırmak için güç tuşuna basın ya da ekrana dokunun.	Στην εξοικονόμηση το Kindle κοιμάται και η οθόνη e-ink παραμένει· το ρολόι ενημερώνεται κάθε λεπτό και το Wi-Fi ανάβει μόνο κατά την ενημέρωση. Πατήστε το κουμπί λειτουργίας ή αγγίξτε την οθόνη για αφύπνιση.
+Alındı: %s (KOReader ile açın)	Ελήφθη: %s (άνοιγμα με KOReader)

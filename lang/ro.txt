@@ -345,7 +345,6 @@ Tarihte bugün · %d	Azi în istorie · %d
 Namaz vakitleri alınamadı	Orele de rugăciune indisponibile
 Sıradaki: %s %s · %d sa %d dk	Următoarea: %s %s · %d h %d min
 Haber kaynağı: %s	Sursa știrilor: %s
-Hava durumu ve namaz vakitleri Hava Durumu uygulamasındaki ilk şehre göredir. Namaz vakitleri Diyanet yöntemiyle hesaplanır.	Vremea și orele de rugăciune urmează primul oraș din aplicația Vremea. Orele de rugăciune folosesc metoda Diyanet.
 Haber kaynağı	Sursa știrilor
 İmsak	Fajr
 Güneş	Răsărit
@@ -362,3 +361,9 @@ Dolunay	Lună plină
 Son dördün	Ultimul pătrar
 Hilal (küçülen)	Semilună descrescătoare
 Masa Panosu	Panou de birou
+Pil tasarrufu (derin uyku)	Economisire baterie (somn profund)
+☾ uykuda	☾ doarme
+Uykuya geçiş: %d dk dokunulmazsa	Somn după: %d min fără atingere
+Veri güncelleme: %d saatte bir	Actualizare date: la fiecare %d h
+Pil tasarrufunda Kindle uyur, ekran e-ink sayesinde kalır; saat dakikada bir güncellenir, Wi-Fi yalnızca veri güncellerken açılır. Uyandırmak için güç tuşuna basın ya da ekrana dokunun.	În modul economic Kindle doarme, iar ecranul e-ink rămâne; ceasul se actualizează în fiecare minut, iar Wi-Fi pornește doar la actualizare. Apăsați butonul de pornire sau atingeți ecranul pentru a-l trezi.
+Alındı: %s (KOReader ile açın)	Primit: %s (deschideți în KOReader)

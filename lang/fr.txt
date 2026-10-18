@@ -345,7 +345,6 @@ Tarihte bugün · %d	Ce jour-là · %d
 Namaz vakitleri alınamadı	Heures de prière indisponibles
 Sıradaki: %s %s · %d sa %d dk	Suivante : %s %s · %d h %d min
 Haber kaynağı: %s	Source des actualités : %s
-Hava durumu ve namaz vakitleri Hava Durumu uygulamasındaki ilk şehre göredir. Namaz vakitleri Diyanet yöntemiyle hesaplanır.	La météo et les heures de prière suivent la première ville de l'app Météo. Heures de prière selon la méthode Diyanet.
 Haber kaynağı	Source des actualités
 İmsak	Fajr
 Güneş	Lever
@@ -362,3 +361,9 @@ Dolunay	Pleine lune
 Son dördün	Dernier quartier
 Hilal (küçülen)	Dernier croissant
 Masa Panosu	Tableau de bord
+Pil tasarrufu (derin uyku)	Économie d'énergie (veille profonde)
+☾ uykuda	☾ en veille
+Uykuya geçiş: %d dk dokunulmazsa	Veille après : %d min sans contact
+Veri güncelleme: %d saatte bir	Mise à jour : toutes les %d h
+Pil tasarrufunda Kindle uyur, ekran e-ink sayesinde kalır; saat dakikada bir güncellenir, Wi-Fi yalnızca veri güncellerken açılır. Uyandırmak için güç tuşuna basın ya da ekrana dokunun.	En économie d'énergie, la Kindle dort et l'écran e-ink reste affiché ; l'horloge se met à jour chaque minute et le Wi-Fi n'est actif que pendant les mises à jour. Appuyez sur le bouton d'alimentation ou touchez l'écran pour la réveiller.
+Alındı: %s (KOReader ile açın)	Reçu : %s (ouvrir avec KOReader)

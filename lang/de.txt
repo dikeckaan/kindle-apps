@@ -345,7 +345,6 @@ Tarihte bugün · %d	An diesem Tag · %d
 Namaz vakitleri alınamadı	Gebetszeiten nicht abrufbar
 Sıradaki: %s %s · %d sa %d dk	Nächstes: %s %s · %d Std. %d Min.
 Haber kaynağı: %s	Nachrichtenquelle: %s
-Hava durumu ve namaz vakitleri Hava Durumu uygulamasındaki ilk şehre göredir. Namaz vakitleri Diyanet yöntemiyle hesaplanır.	Wetter und Gebetszeiten richten sich nach der ersten Stadt der Wetter-App. Gebetszeiten nach der Diyanet-Methode.
 Haber kaynağı	Nachrichtenquelle
 İmsak	Fadschr
 Güneş	Sonnenaufgang
@@ -362,3 +361,9 @@ Dolunay	Vollmond
 Son dördün	Letztes Viertel
 Hilal (küçülen)	Abnehmende Sichel
 Masa Panosu	Tischanzeige
+Pil tasarrufu (derin uyku)	Energiesparen (Tiefschlaf)
+☾ uykuda	☾ schläft
+Uykuya geçiş: %d dk dokunulmazsa	Schlafen nach: %d Min. ohne Berührung
+Veri güncelleme: %d saatte bir	Daten aktualisieren: alle %d Std.
+Pil tasarrufunda Kindle uyur, ekran e-ink sayesinde kalır; saat dakikada bir güncellenir, Wi-Fi yalnızca veri güncellerken açılır. Uyandırmak için güç tuşuna basın ya da ekrana dokunun.	Beim Energiesparen schläft der Kindle, das E-Ink-Bild bleibt; die Uhr wird jede Minute aktualisiert, WLAN ist nur beim Aktualisieren an. Zum Aufwecken Ein-/Aus-Taste drücken oder den Bildschirm berühren.
+Alındı: %s (KOReader ile açın)	Empfangen: %s (mit KOReader öffnen)

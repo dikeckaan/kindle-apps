@@ -20,7 +20,7 @@ void kui_input_close(void);
 int  kui_input_asleep(void);
 
 
-static int touch_fd = -1, lipc_fd = -1;
+static int touch_fd = -1, lipc_fd = -1, power_fd = -1;
 static pid_t lipc_pid = -1;
 static volatile sig_atomic_t quit_requested;
 static KuiGesture gesture;
@@ -29,6 +29,56 @@ static int asleep;          /* between goingToScreenSaver and outOfScreenSaver *
 static long lipc_respawn_ms; /* last helper (re)start, to rate-limit respawns */
 
 int kui_input_asleep(void) { return asleep; }
+int kui_quit_pending(void) { return quit_requested != 0; }
+
+/* the input device that reports KEY_POWER (on the Kindle Basic: bd71828-pwrkey), not the touchscreen */
+static int open_power(void)
+{
+	for (int i = 0; i < 16; i++) {
+		char p[32];
+		snprintf(p, sizeof p, "/dev/input/event%d", i);
+		int fd = open(p, O_RDONLY | O_NONBLOCK | O_CLOEXEC);
+		if (fd < 0) continue;
+		unsigned long keyb[(KEY_MAX + BITS_LONG) / BITS_LONG] = { 0 };
+		ioctl(fd, EVIOCGBIT(EV_KEY, sizeof keyb), keyb);
+		if (fd != touch_fd && TESTBIT(KEY_POWER, keyb)) return fd;
+		close(fd);
+	}
+	return -1;
+}
+
+int kui_grab_power_key(int on)
+{
+	if (!on) {
+		if (power_fd >= 0) {
+			ioctl(power_fd, EVIOCGRAB, 0);
+			close(power_fd);
+			power_fd = -1;
+		}
+		return 0;
+	}
+	if (power_fd >= 0) return 0;
+	power_fd = open_power();
+	if (power_fd < 0) return -1;
+	if (ioctl(power_fd, EVIOCGRAB, 1) < 0) {
+		close(power_fd);
+		power_fd = -1;
+		return -1;
+	}
+	return 0;
+}
+
+/* 1 if a power-button press was read */
+static int read_power(void)
+{
+	struct input_event ev;
+	int pressed = 0;
+	while (power_fd >= 0 && read(power_fd, &ev, sizeof ev) == (ssize_t) sizeof ev)
+		if (ev.type == EV_KEY && ev.code == KEY_POWER && ev.value == 1) pressed = 1;
+	return pressed;
+}
+
+void kui_drain_power_key(void) { read_power(); }
 
 static void on_signal(int sig)
 {
@@ -115,6 +165,7 @@ int kui_input_open(void)
 
 void kui_input_close(void)
 {
+	kui_grab_power_key(0);
 	if (touch_fd >= 0) {
 		ioctl(touch_fd, EVIOCGRAB, 0);
 		close(touch_fd);
@@ -159,11 +210,11 @@ KuiEvent kui_next_event(int timeout_ms)
 	long deadline = now_ms() + timeout_ms;
 	for (;;) {
 		if (quit_requested) return (KuiEvent){ KUI_EV_QUIT, 0, 0, KUI_DIR_NONE };
-		struct pollfd pf[2] = { { touch_fd, POLLIN, 0 }, { lipc_fd, POLLIN, 0 } };
+		struct pollfd pf[3] = { { touch_fd, POLLIN, 0 }, { lipc_fd, POLLIN, 0 }, { power_fd, POLLIN, 0 } };
 		long left = timeout_ms < 0 ? -1 : deadline - now_ms();
 		if (timeout_ms >= 0 && left <= 0) return none;
 		if (lipc_fd < 0 && (left < 0 || left > 5000)) left = 5000; /* wake up to respawn the helper */
-		int n = poll(pf, lipc_fd >= 0 ? 2 : 1, (int) left);
+		int n = poll(pf, 3, (int) left); /* negative fds are ignored by poll */
 		if (n == 0 && timeout_ms < 0) continue;
 		if (n < 0 && errno == EINTR) continue;
 		if (n <= 0) return none;
@@ -186,6 +237,8 @@ KuiEvent kui_next_event(int timeout_ms)
 				lipc_lost(); /* POLLHUP/EOF: without this poll() would spin at 100% CPU */
 			}
 		}
+		if (power_fd >= 0 && (pf[2].revents & POLLIN) && read_power())
+			return (KuiEvent){ KUI_EV_POWER, 0, 0, KUI_DIR_NONE };
 		if (pf[0].revents & (POLLERR | POLLHUP | POLLNVAL))
 			return (KuiEvent){ KUI_EV_QUIT, 0, 0, KUI_DIR_NONE };
 		if (pf[0].revents & POLLIN) {

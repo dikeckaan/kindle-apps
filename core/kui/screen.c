@@ -215,3 +215,8 @@ int kui_line_height(KuiFont f, int px)
 	(void) f;
 	return px * 13 / 10;
 }
+
+void kui_wait_refresh(void)
+{
+	if (fb >= 0) fbink_wait_for_complete(fb, LAST_MARKER);
+}

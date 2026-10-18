@@ -217,7 +217,9 @@ static void update(void)
 	const UploadFile *files;
 	int n = srv ? upload_files(srv, &files) : 0;
 	if (n != shown_files) {
-		if (n > shown_files) snprintf(notice, sizeof notice, T("Alındı: %s"), files[n - 1].name);
+		if (n > shown_files)
+			snprintf(notice, sizeof notice, httpd_kindle_native(files[n - 1].name) ? T("Alındı: %s") : T("Alındı: %s (KOReader ile açın)"),
+				 files[n - 1].name);
 		shown_files = n;
 		draw_list();
 		if (!active) draw_status(); /* a small file can come and go between two polls */

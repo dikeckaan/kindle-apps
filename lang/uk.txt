@@ -345,7 +345,6 @@ Tarihte bugün · %d	Цього дня · %d
 Namaz vakitleri alınamadı	Не вдалося отримати час намазу
 Sıradaki: %s %s · %d sa %d dk	Далі: %s %s · %d год %d хв
 Haber kaynağı: %s	Джерело новин: %s
-Hava durumu ve namaz vakitleri Hava Durumu uygulamasındaki ilk şehre göredir. Namaz vakitleri Diyanet yöntemiyle hesaplanır.	Погода й час намазу — за першим містом у застосунку «Погода». Час намазу розраховується за методом Diyanet.
 Haber kaynağı	Джерело новин
 İmsak	Фаджр
 Güneş	Схід
@@ -362,3 +361,9 @@ Dolunay	Повня
 Son dördün	Остання чверть
 Hilal (küçülen)	Старий серп
 Masa Panosu	Настільна панель
+Pil tasarrufu (derin uyku)	Економія батареї (глибокий сон)
+☾ uykuda	☾ спить
+Uykuya geçiş: %d dk dokunulmazsa	Сон через: %d хв без дотику
+Veri güncelleme: %d saatte bir	Оновлення даних: раз на %d год
+Pil tasarrufunda Kindle uyur, ekran e-ink sayesinde kalır; saat dakikada bir güncellenir, Wi-Fi yalnızca veri güncellerken açılır. Uyandırmak için güç tuşuna basın ya da ekrana dokunun.	У режимі економії Kindle спить, а зображення e-ink лишається; годинник оновлюється щохвилини, Wi-Fi вмикається лише для оновлення. Щоб розбудити, натисніть кнопку живлення або торкніться екрана.
+Alındı: %s (KOReader ile açın)	Отримано: %s (відкрийте в KOReader)

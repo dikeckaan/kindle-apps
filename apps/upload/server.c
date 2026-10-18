@@ -517,6 +517,7 @@ static int cb_end(void *ctx)
 	httpd_fmt_size(c->file_bytes, sz, sizeof sz);
 	snprintf(post, sizeof post, " (%s)", sz);
 	note(c, "Alındı: ", c->final_name, post);
+	if (!httpd_kindle_native(c->final_name)) note(c, "Kindle kitaplığında görünmez; KOReader ile açın: ", c->final_name, "");
 	return 0;
 }
 

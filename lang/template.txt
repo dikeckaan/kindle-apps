@@ -1,5 +1,5 @@
 # Translatable texts (Turkish source). Catalog lines: source<TAB>translation; \n and \t escaped.
-# apps/pano/main.c
+# apps/sysinfo/main.c
 %%%d	
 # apps/sysinfo/main.c
 %%%d · şarj oluyor	
@@ -67,6 +67,8 @@ Akşam
 Altın (serbest piyasa, ₺)	
 # apps/upload/main.c
 Alındı: %s	
+# apps/upload/main.c
+Alındı: %s (KOReader ile açın)	
 # apps/upload/main.c
 Alınıyor: %s	
 # apps/currency/main.c
@@ -263,8 +265,6 @@ Hava Durumu
 Hava durumu	
 # apps/weather/main.c
 Hava durumu alınamadı.\nWi-Fi bağlantısını kontrol edip Yenile'ye basın.	
-# apps/pano/main.c
-Hava durumu ve namaz vakitleri Hava Durumu uygulamasındaki ilk şehre göredir. Namaz vakitleri Diyanet yöntemiyle hesaplanır.	
 # apps/clock/main.c
 Hava durumu yok (Wi-Fi kapalı olabilir)	
 # apps/chess/main.c
@@ -319,7 +319,7 @@ Kasım
 Kaydedilemedi.	
 # apps/currency/main.c
 Kaynak para	
-# apps/news/main.c
+# apps/news/reader.c
 Kaynak: %s	
 # apps/ebooks/main.c
 Kaynak: gutenberg.org/ebooks/%d	
@@ -437,6 +437,10 @@ Perşembe
 Pil	
 # apps/sysinfo/main.c
 Pil sıcaklığı	
+# apps/pano/main.c
+Pil tasarrufu (derin uyku)	
+# apps/pano/main.c
+Pil tasarrufunda Kindle uyur, ekran e-ink sayesinde kalır; saat dakikada bir güncellenir, Wi-Fi yalnızca veri güncellerken açılır. Uyandırmak için güç tuşuna basın ya da ekrana dokunun.	
 # apps/chess/main.c
 Piyon hangi taşa dönüşsün?	
 # apps/ebooks/main.c
@@ -571,8 +575,12 @@ Usta
 Uygulamalar	
 # apps/sleep/main.c
 Uyku Ayarı	
+# apps/pano/main.c
+Uykuya geçiş: %d dk dokunulmazsa	
 # apps/ebooks/main.c
 Vazgeç	
+# apps/pano/main.c
+Veri güncelleme: %d saatte bir	
 # apps/chess/main.c
 Vezir	
 # apps/upload/main.c
@@ -721,6 +729,8 @@ boşluk
 Şubat	
 # apps/ebooks/main.c
 “%s” · %d kitap%s	
+# apps/pano/main.c
+☾ uykuda	
 # apps/mines/main.c
 ⚑ Açık	
 # apps/mines/main.c

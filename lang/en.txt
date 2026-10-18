@@ -345,7 +345,6 @@ Tarihte bugün · %d	On this day · %d
 Namaz vakitleri alınamadı	Could not get prayer times
 Sıradaki: %s %s · %d sa %d dk	Next: %s %s · %d h %d min
 Haber kaynağı: %s	News source: %s
-Hava durumu ve namaz vakitleri Hava Durumu uygulamasındaki ilk şehre göredir. Namaz vakitleri Diyanet yöntemiyle hesaplanır.	Weather and prayer times follow the first city in the Weather app. Prayer times use the Diyanet method.
 Haber kaynağı	News source
 İmsak	Fajr
 Güneş	Sunrise
@@ -362,3 +361,9 @@ Dolunay	Full moon
 Son dördün	Last quarter
 Hilal (küçülen)	Waning crescent
 Masa Panosu	Desk Dashboard
+Pil tasarrufu (derin uyku)	Battery saver (deep sleep)
+☾ uykuda	☾ asleep
+Uykuya geçiş: %d dk dokunulmazsa	Sleep after: %d min idle
+Veri güncelleme: %d saatte bir	Update data: every %d h
+Pil tasarrufunda Kindle uyur, ekran e-ink sayesinde kalır; saat dakikada bir güncellenir, Wi-Fi yalnızca veri güncellerken açılır. Uyandırmak için güç tuşuna basın ya da ekrana dokunun.	In battery saver the Kindle sleeps and the e-ink screen stays; the clock updates every minute and Wi-Fi is on only while data updates. Press the power button or touch the screen to wake it.
+Alındı: %s (KOReader ile açın)	Received: %s (open in KOReader)

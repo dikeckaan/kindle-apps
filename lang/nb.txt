@@ -345,7 +345,6 @@ Tarihte bugün · %d	På denne dagen · %d
 Namaz vakitleri alınamadı	Bønnetidene kunne ikke hentes
 Sıradaki: %s %s · %d sa %d dk	Neste: %s %s · %d t %d min
 Haber kaynağı: %s	Nyhetskilde: %s
-Hava durumu ve namaz vakitleri Hava Durumu uygulamasındaki ilk şehre göredir. Namaz vakitleri Diyanet yöntemiyle hesaplanır.	Vær og bønnetider følger den første byen i Vær-appen. Bønnetidene beregnes etter Diyanet-metoden.
 Haber kaynağı	Nyhetskilde
 İmsak	Fajr
 Güneş	Soloppgang
@@ -362,3 +361,9 @@ Dolunay	Fullmåne
 Son dördün	Siste kvarter
 Hilal (küçülen)	Minkende sigd
 Masa Panosu	Bordpanel
+Pil tasarrufu (derin uyku)	Batterisparing (dyp hvile)
+☾ uykuda	☾ hviler
+Uykuya geçiş: %d dk dokunulmazsa	Hvile etter: %d min uten berøring
+Veri güncelleme: %d saatte bir	Oppdater data: hver %d. time
+Pil tasarrufunda Kindle uyur, ekran e-ink sayesinde kalır; saat dakikada bir güncellenir, Wi-Fi yalnızca veri güncellerken açılır. Uyandırmak için güç tuşuna basın ya da ekrana dokunun.	Ved batterisparing sover Kindle, og e-ink-bildet blir stående; klokken oppdateres hvert minutt, og Wi-Fi er bare på under oppdatering. Trykk på av/på-knappen eller berør skjermen for å vekke den.
+Alındı: %s (KOReader ile açın)	Mottatt: %s (åpne i KOReader)

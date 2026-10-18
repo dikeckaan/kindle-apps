@@ -67,7 +67,8 @@ void kui_tr_date(const struct tm *tm, char *out, int cap); /* "18 Ekim 2026, Paz
 void kui_fmt_num(double v, int decimals, char *out, int cap); /* 6632.39 → "6.632,39" */
 
 /* ---- events and gestures ---- */
-typedef enum { KUI_EV_NONE, KUI_EV_TAP, KUI_EV_LONGPRESS, KUI_EV_SWIPE, KUI_EV_WAKE, KUI_EV_QUIT } KuiEvType;
+typedef enum { KUI_EV_NONE, KUI_EV_TAP, KUI_EV_LONGPRESS, KUI_EV_SWIPE, KUI_EV_WAKE, KUI_EV_QUIT, KUI_EV_POWER } KuiEvType;
+/* KUI_EV_POWER: the power button was pressed (only while kui_grab_power_key(1) is on) */
 typedef enum { KUI_DIR_NONE, KUI_DIR_LEFT, KUI_DIR_RIGHT, KUI_DIR_UP, KUI_DIR_DOWN } KuiDir;
 typedef struct { KuiEvType type; int x, y; KuiDir dir; } KuiEvent;
 typedef struct { int down, x0, y0, x, y; long t0_ms; } KuiGesture;
@@ -100,6 +101,7 @@ int kui_cfg_set_int(const char *path, const char *key, int val);  /* 0 = ok */
 /* ---- lipc (Kindle system properties) ---- */
 int  kui_lipc_get_int(const char *pub, const char *prop, int def);
 void kui_lipc_set_int(const char *pub, const char *prop, int v);
+int  kui_lipc_get_str(const char *pub, const char *prop, char *out, int cap); /* 0 = ok */
 /* Keep the Kindle awake while on: the previous preventScreenSaver value is saved to
  * /var/local/kindle-apps/prevent_ss.restore and put back by kui_prevent_sleep(0) — or by kui-run.sh if the app crashes. */
 void kui_prevent_sleep(int on);
@@ -126,6 +128,21 @@ void kui_flush(int screen_changed); /* the only place that refreshes the panel *
 void kui_set_refresh_every(int n);
 KuiEvent kui_next_event(int timeout_ms); /* KUI_EV_NONE on timeout */
 int  kui_input_asleep(void); /* 1 while the screensaver is up: do not draw (KUI_EV_WAKE follows) */
+int  kui_quit_pending(void); /* 1 once SIGTERM/SIGINT arrived (kui_next_event would return KUI_EV_QUIT) */
+/* Takes the power button from powerd while on (it then arrives as KUI_EV_POWER instead of starting the screensaver);
+ * released by kui_quit or when the process ends. 0 = ok, -1 if there is no power key device. */
+int  kui_grab_power_key(int on);
+void kui_drain_power_key(void); /* drops queued power-button events (e.g. the press that woke the device) */
+void kui_wait_refresh(void);    /* waits until the e-ink panel finished the last refresh (before suspending) */
+
+/* ---- power: Wi-Fi and timed suspend ---- */
+int  kui_wifi_enabled(void);           /* 1 on, 0 off, -1 unknown */
+void kui_wifi_enable(int on);
+int  kui_wifi_wait(int timeout_s);     /* 1 once the Wi-Fi reports CONNECTED */
+/* Suspends to RAM for about `seconds` (RTC alarm wakes it; the power button or a touch may wake it sooner).
+ * Wi-Fi must be off (its wakeup source blocks suspend). Returns the seconds actually asleep, -1 if suspend failed. */
+int  kui_suspend(int seconds);
+int  kui_woke_early(int requested, int slept); /* pure: 1 when something other than the alarm woke the device */
 void kui_topbar(const char *title, const char *right_label); /* right_label may be NULL */
 int  kui_fit_px(const char *text, KuiFont f, int px, int max_w); /* largest size <= px whose single line fits max_w */
 void kui_button(const KuiButton *b, int pressed);

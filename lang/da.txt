@@ -345,7 +345,6 @@ Tarihte bugün · %d	På denne dag · %d
 Namaz vakitleri alınamadı	Bedetiderne kunne ikke hentes
 Sıradaki: %s %s · %d sa %d dk	Næste: %s %s · %d t %d min
 Haber kaynağı: %s	Nyhedskilde: %s
-Hava durumu ve namaz vakitleri Hava Durumu uygulamasındaki ilk şehre göredir. Namaz vakitleri Diyanet yöntemiyle hesaplanır.	Vejr og bedetider følger den første by i Vejret-appen. Bedetiderne beregnes efter Diyanet-metoden.
 Haber kaynağı	Nyhedskilde
 İmsak	Fajr
 Güneş	Solopgang
@@ -362,3 +361,9 @@ Dolunay	Fuldmåne
 Son dördün	Sidste kvarter
 Hilal (küçülen)	Aftagende segl
 Masa Panosu	Bordpanel
+Pil tasarrufu (derin uyku)	Batterisparetilstand (dyb dvale)
+☾ uykuda	☾ i dvale
+Uykuya geçiş: %d dk dokunulmazsa	Dvale efter: %d min uden berøring
+Veri güncelleme: %d saatte bir	Opdater data: hver %d. time
+Pil tasarrufunda Kindle uyur, ekran e-ink sayesinde kalır; saat dakikada bir güncellenir, Wi-Fi yalnızca veri güncellerken açılır. Uyandırmak için güç tuşuna basın ya da ekrana dokunun.	I batterisparetilstand sover Kindle, og e-ink-billedet bliver stående; uret opdateres hvert minut, og Wi-Fi er kun tændt under opdatering. Tryk på tænd/sluk-knappen eller rør skærmen for at vække den.
+Alındı: %s (KOReader ile açın)	Modtaget: %s (åbn i KOReader)

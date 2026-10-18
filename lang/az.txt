@@ -345,7 +345,6 @@ Tarihte bugün · %d	Tarixdə bu gün · %d
 Namaz vakitleri alınamadı	Namaz vaxtları alınmadı
 Sıradaki: %s %s · %d sa %d dk	Növbəti: %s %s · %d saat %d dəq
 Haber kaynağı: %s	Xəbər mənbəyi: %s
-Hava durumu ve namaz vakitleri Hava Durumu uygulamasındaki ilk şehre göredir. Namaz vakitleri Diyanet yöntemiyle hesaplanır.	Hava və namaz vaxtları Hava tətbiqindəki ilk şəhərə görədir. Namaz vaxtları Diyanət üsulu ilə hesablanır.
 Haber kaynağı	Xəbər mənbəyi
 İmsak	İmsak
 Güneş	Günəş
@@ -362,3 +361,9 @@ Dolunay	Bədr
 Son dördün	Son rüb
 Hilal (küçülen)	Aypara (kiçilən)
 Masa Panosu	Stolüstü panel
+Pil tasarrufu (derin uyku)	Batareya qənaəti (dərin yuxu)
+☾ uykuda	☾ yuxuda
+Uykuya geçiş: %d dk dokunulmazsa	Yuxuya keçid: %d dəq toxunulmasa
+Veri güncelleme: %d saatte bir	Məlumat yeniləmə: hər %d saatdan bir
+Pil tasarrufunda Kindle uyur, ekran e-ink sayesinde kalır; saat dakikada bir güncellenir, Wi-Fi yalnızca veri güncellerken açılır. Uyandırmak için güç tuşuna basın ya da ekrana dokunun.	Qənaət rejimində Kindle yatır, e-ink ekranı olduğu kimi qalır; saat hər dəqiqə yenilənir, Wi-Fi yalnız məlumat yenilənəndə açılır. Oyatmaq üçün güc düyməsinə basın və ya ekrana toxunun.
+Alındı: %s (KOReader ile açın)	Alındı: %s (KOReader ilə açın)
