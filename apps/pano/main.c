@@ -654,6 +654,7 @@ static void tick(void)
 	}
 	if (tm.tm_hour != shown_hour) { /* hourly: a full refresh clears e-ink ghosting */
 		refresh_data(0);
+		kui_request_flash(); /* the minutes' partial updates leave ghosts only a flash clears */
 		draw_all(1);
 		return;
 	}

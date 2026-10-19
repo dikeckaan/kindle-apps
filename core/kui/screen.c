@@ -69,7 +69,9 @@ int kui_init(const char *app)
 	cfg.is_bgless = true;
 
 	snprintf(path, sizeof path, "%s/settings", kui_data_dir(app));
-	kui_policy_init(&policy, kui_cfg_get_int(path, "full_refresh_every", 25));
+	/* the first draw (over the hub, or the Kindle UI when started from KUAL) is a quiet full update, not a flash */
+	kui_policy_init(&policy, kui_cfg_get_int(path, "full_refresh_every", 25),
+			kui_cfg_get_int(path, "flash_every", KUI_FLASH_EVERY_DEFAULT));
 	/* partial_wfm: 0 = GL16 (grays, default), 1 = DU (faster, black/white); KUI_WFM env overrides */
 	const char *w = getenv("KUI_WFM");
 	int du = w ? strcmp(w, "DU") == 0 : kui_cfg_get_int(path, "partial_wfm", 0) == 1;
@@ -94,7 +96,12 @@ void kui_quit(void)
 	}
 }
 
-void kui_set_refresh_every(int n) { kui_policy_init(&policy, n); }
+void kui_set_refresh_every(int n) { kui_policy_set_every(&policy, n); }
+
+void kui_request_flash(void) { kui_policy_request_flash(&policy); }
+
+/* input.c: KUI_EV_WAKE is being delivered — the screensaver covered everything, so the next update flashes */
+void kui_screen_woke(void) { kui_policy_request_flash(&policy); }
 
 void kui_fill(KuiRect r, unsigned char gray)
 {
@@ -183,14 +190,17 @@ void kui_mark_dirty(KuiRect r) { kui_dirty_add(&dirty, r); }
 void kui_flush(int screen_changed)
 {
 	if (!screen_changed && dirty.n == 0) return;
-	if (kui_input_asleep()) { /* never draw over the screensaver; KUI_EV_WAKE redraws everything */
+	if (kui_input_asleep()) { /* never draw over the screensaver; KUI_EV_WAKE redraws everything (and flashes) */
 		dirty.n = 0;
 		return;
 	}
 	FBInkConfig c = cfg;
-	if (kui_policy_next(&policy, screen_changed) == KUI_UPD_FULL) {
+	KuiUpdKind kind = kui_policy_next(&policy, screen_changed);
+	if (kind != KUI_UPD_PARTIAL) {
+		/* GC16 either way (all 16 grays, "any to any"). Without is_flashing the EPDC updates only the pixels
+		 * that changed (no black flash); with it every pixel is driven through black, which clears ghosting. */
 		c.wfm_mode = WFM_GC16;
-		c.is_flashing = true;
+		c.is_flashing = kind == KUI_UPD_FULL_FLASH;
 		fbink_refresh(fb, 0, 0, 0, 0, &c);
 	} else {
 		c.wfm_mode = partial_wfm;

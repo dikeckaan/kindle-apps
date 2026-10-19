@@ -18,10 +18,26 @@ KuiRect kui_topbar_menu_rect(int screen_w);    /* top-right button */
 int kui_topbar_hit(int screen_w, int has_menu, int x, int y); /* KUI_BTN_EXIT, KUI_BTN_MENU or 0 */
 int kui_buttons_hit(const KuiButton *bs, int n, int x, int y); /* id or 0 */
 
-/* ---- refresh policy ---- */
-typedef enum { KUI_UPD_PARTIAL, KUI_UPD_FULL } KuiUpdKind;
-typedef struct { int every; int count; } KuiRefreshPolicy; /* every == 0: never auto full */
-void       kui_policy_init(KuiRefreshPolicy *p, int every);
+/* ---- refresh policy (pure logic; screen.c applies it) ----
+ * PARTIAL:    only the dirty rects with partial_wfm (GL16), no flash.
+ * FULL_QUIET: the whole screen with GC16 but no flash: the EPDC drives only the pixels that changed, grays render
+ *             fully. A new screen, an app's first draw over the hub / Kindle UI, the hub coming back.
+ * FULL_FLASH: the whole screen with GC16 and a black flash (every pixel is driven): clears ghosting. Only when
+ *             needed: the first update after a wake from the screensaver, an explicit request (KUI_FLUSH_FLASH,
+ *             kui_request_flash), every `every` partial updates and every `flash_every` screen changes
+ *             (0 = never, for either counter). */
+typedef enum { KUI_UPD_PARTIAL, KUI_UPD_FULL_QUIET, KUI_UPD_FULL_FLASH } KuiUpdKind;
+typedef struct {
+	int every, count;         /* partial updates between flashes (settings: full_refresh_every, default 25) */
+	int flash_every, changes; /* screen changes between flashes (settings: flash_every, default 8) */
+	int flash_pending;        /* the next update flashes (after a wake, kui_request_flash) */
+} KuiRefreshPolicy;
+#define KUI_FLASH_EVERY_DEFAULT 8
+#define KUI_FLUSH_FLASH 2 /* kui_flush(KUI_FLUSH_FLASH): a clean full-screen flash now */
+void       kui_policy_init(KuiRefreshPolicy *p, int every, int flash_every);
+void       kui_policy_set_every(KuiRefreshPolicy *p, int every); /* keeps the screen-change counter and a pending flash */
+void       kui_policy_request_flash(KuiRefreshPolicy *p);
+/* screen_changed: 0 = dirty rects only, 1 = the whole screen changed, KUI_FLUSH_FLASH = flash now */
 KuiUpdKind kui_policy_next(KuiRefreshPolicy *p, int screen_changed);
 
 /* ---- dirty regions: separate small rects are refreshed separately (unchanged pixels in between are left alone);
@@ -124,8 +140,15 @@ int  kui_text_width(const char *utf8, KuiFont f, int px);
 int  kui_wrap_text(const char *text, int width, KuiFont f, int px, KuiLine *out, int max); /* kui_wrap with FBInk metrics */
 int  kui_line_height(KuiFont f, int px); /* pixel advance between wrapped lines */
 void kui_mark_dirty(KuiRect r);
-void kui_flush(int screen_changed); /* the only place that refreshes the panel */
-void kui_set_refresh_every(int n);
+/* The only place that refreshes the panel. screen_changed:
+ *   0 — the rects given to kui_mark_dirty, no flash;
+ *   1 — the whole screen changed: a quiet full-screen GC16 update (no flash); the policy turns it into a flash only
+ *       after a wake from the screensaver and once every `flash_every` screen changes (ghosting);
+ *   KUI_FLUSH_FLASH — a clean full-screen flash now, only where an app truly needs one (e.g. the hourly ghost
+ *       cleanup of an always-on screen). Prefer 1: the policy already flashes when the panel needs it. */
+void kui_flush(int screen_changed);
+void kui_request_flash(void);      /* the next kui_flush (of any kind) flashes the whole screen */
+void kui_set_refresh_every(int n); /* partial updates between flashes, 0 = never (screen changes still count) */
 KuiEvent kui_next_event(int timeout_ms); /* KUI_EV_NONE on timeout */
 int  kui_input_asleep(void); /* 1 while the screensaver is up: do not draw (KUI_EV_WAKE follows) */
 int  kui_quit_pending(void); /* 1 once SIGTERM/SIGINT arrived (kui_next_event would return KUI_EV_QUIT) */
