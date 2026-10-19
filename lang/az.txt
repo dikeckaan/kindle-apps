@@ -1186,3 +1186,6 @@ Sistem servisleri, SSH ve Kindle Apps hiçbir zaman durdurulmaz.	Sistem xidmətl
 Arka planda program var	Arxa planda proqram var
 Arkada açık program: %s. Ekranı ve dokunmayı kullanabilir.	Arxada açıq proqram: %s. Ekrandan və toxunuşdan istifadə edə bilər.
 Arkada açık programlar: %s. Ekranı ve dokunmayı kullanabilirler.	Arxada açıq proqramlar: %s. Ekrandan və toxunuşdan istifadə edə bilərlər.
+Pil %%%d	Batareya %%%d
+Uyku modunda	Yuxu rejimində
+Açmak için güç tuşuna basın	Oyatmaq üçün güc düyməsini basın

@@ -404,13 +404,28 @@ KuiEvent kui_next_event(int timeout_ms)
 			return (KuiEvent){ KUI_EV_WAKE, 0, 0, KUI_DIR_NONE };
 		}
 		if (!strcmp(cmd, "asleep")) {
+			int was = asleep;
 			sscanf(script, "%d %n", &asleep, &used);
 			script += used;
+			if (asleep && !was) kui_sleep_screen(); /* as input.c on goingToScreenSaver */
 			continue;
 		}
 		if (!strcmp(cmd, "none")) return (KuiEvent){ KUI_EV_NONE, 0, 0, KUI_DIR_NONE };
 		fprintf(stderr, "sim: unknown command %s\n", cmd);
 	}
+}
+
+void kui_flush_sleep(void)
+{
+	const char *out = getenv("KUI_SIM_OUT");
+	if (out && *out) {
+		char path[512];
+		snprintf(path, sizeof path, "%s/%s_%03d_sleep.png", out, app_name, shot);
+		write_png(path, 1, &dirty);
+		fprintf(stderr, "sim: flush %d (sleep screen) -> %s\n", shot, path);
+	}
+	shot++;
+	dirty.n = 0;
 }
 
 void kui_flush_fast(KuiRect r)

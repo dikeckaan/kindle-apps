@@ -169,6 +169,10 @@ void kui_request_flash(void);      /* the next kui_flush (of any kind) flashes t
 void kui_set_refresh_every(int n); /* partial updates between flashes, 0 = never (screen changes still count) */
 KuiEvent kui_next_event(int timeout_ms); /* KUI_EV_NONE on timeout */
 int  kui_input_asleep(void); /* 1 while the screensaver is up: do not draw (KUI_EV_WAKE follows) */
+/* our sleep screen (sleepscreen.c), drawn by input.c on goingToScreenSaver: the Kindle's own screensaver cannot draw
+ * while kui-run.sh has its UI paused. kui_flush_sleep: a flashing full refresh even though input is now asleep. */
+void kui_sleep_screen(void);
+void kui_flush_sleep(void);
 int  kui_quit_pending(void); /* 1 once SIGTERM/SIGINT arrived (kui_next_event would return KUI_EV_QUIT) */
 /* Takes the power button from powerd while on (it then arrives as KUI_EV_POWER instead of starting the screensaver);
  * released by kui_quit or when the process ends. 0 = ok, -1 if there is no power key device. */

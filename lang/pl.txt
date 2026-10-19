@@ -1186,3 +1186,6 @@ Sistem servisleri, SSH ve Kindle Apps hiçbir zaman durdurulmaz.	Usługi systemo
 Arka planda program var	W tle działa program
 Arkada açık program: %s. Ekranı ve dokunmayı kullanabilir.	Otwarty w tle: %s. Może używać ekranu i dotyku.
 Arkada açık programlar: %s. Ekranı ve dokunmayı kullanabilirler.	Otwarte w tle: %s. Mogą używać ekranu i dotyku.
+Pil %%%d	Bateria %%%d
+Uyku modunda	Uśpiony
+Açmak için güç tuşuna basın	Naciśnij przycisk zasilania, aby wybudzić

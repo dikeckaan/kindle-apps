@@ -1186,3 +1186,6 @@ Sistem servisleri, SSH ve Kindle Apps hiçbir zaman durdurulmaz.	Системн�
 Arka planda program var	У фоні працює програма
 Arkada açık program: %s. Ekranı ve dokunmayı kullanabilir.	Відкрито у фоні: %s. Може використовувати екран і дотики.
 Arkada açık programlar: %s. Ekranı ve dokunmayı kullanabilirler.	Відкриті у фоні: %s. Можуть використовувати екран і дотики.
+Pil %%%d	Батарея %%%d
+Uyku modunda	Режим сну
+Açmak için güç tuşuna basın	Натисніть кнопку живлення, щоб розбудити

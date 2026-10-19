@@ -18,6 +18,8 @@ case "$0" in
 esac
 if [ "$APP_ID" = hub ] && [ -f "$1" ]; then
     cp -f "$1" /tmp/kui-hub.new && chmod +x /tmp/kui-hub.new && mv -f /tmp/kui-hub.new /tmp/kui-hub && { shift; set -- /tmp/kui-hub "$@"; }
+elif [ -f "$1" ]; then # an app started directly (KUAL): also from RAM, so an update cannot SIGBUS it
+    cp -f "$1" /tmp/kui-app-direct.new && chmod +x /tmp/kui-app-direct.new && mv -f /tmp/kui-app-direct.new /tmp/kui-app-direct && { shift; set -- /tmp/kui-app-direct "$@"; }
 fi
 
 export KUI_ROOT="${KUI_ROOT:-/mnt/us/kindle-apps}"

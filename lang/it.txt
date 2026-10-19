@@ -1186,3 +1186,6 @@ Sistem servisleri, SSH ve Kindle Apps hiçbir zaman durdurulmaz.	I servizi di si
 Arka planda program var	Un programma è in background
 Arkada açık program: %s. Ekranı ve dokunmayı kullanabilir.	Aperto in background: %s. Può usare lo schermo e il tocco.
 Arkada açık programlar: %s. Ekranı ve dokunmayı kullanabilirler.	Aperti in background: %s. Possono usare lo schermo e il tocco.
+Pil %%%d	Batteria %%%d
+Uyku modunda	In sospensione
+Açmak için güç tuşuna basın	Premi il tasto di accensione per riattivare

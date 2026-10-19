@@ -1186,3 +1186,6 @@ Sistem servisleri, SSH ve Kindle Apps hiçbir zaman durdurulmaz.	Serviciile de s
 Arka planda program var	Un program rulează în fundal
 Arkada açık program: %s. Ekranı ve dokunmayı kullanabilir.	Deschis în fundal: %s. Poate folosi ecranul și atingerea.
 Arkada açık programlar: %s. Ekranı ve dokunmayı kullanabilirler.	Deschise în fundal: %s. Pot folosi ecranul și atingerea.
+Pil %%%d	Baterie %%%d
+Uyku modunda	În repaus
+Açmak için güç tuşuna basın	Apăsați butonul de pornire pentru trezire

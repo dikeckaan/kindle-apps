@@ -4,7 +4,7 @@
   "name": "Uyku Ekranı",
   "author": "Kaan Dikeç",
   "description": "Komodin için sakin bir bilgi ekranı: bugünün tarihi, hava durumu, Ajanda'dan bugün ve yarın, günün şiiri; Kindle aralarda derin uykuda kalır ve 30, 60 ya da 120 dakikada bir sessizce tazelenir, güç tuşu normal Kindle'a döndürür",
-  "version": [2026, 10, 20],
+  "version": [2026, 10, 20, 1],
   "dependencies": [],
   "supported_platforms": ["kindlehf"]
 }

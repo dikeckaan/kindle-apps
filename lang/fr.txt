@@ -1186,3 +1186,6 @@ Sistem servisleri, SSH ve Kindle Apps hiçbir zaman durdurulmaz.	Les services sy
 Arka planda program var	Un programme tourne en arrière-plan
 Arkada açık program: %s. Ekranı ve dokunmayı kullanabilir.	Ouvert en arrière-plan : %s. Il peut utiliser l'écran et le tactile.
 Arkada açık programlar: %s. Ekranı ve dokunmayı kullanabilirler.	Ouverts en arrière-plan : %s. Ils peuvent utiliser l'écran et le tactile.
+Pil %%%d	Batterie %%%d
+Uyku modunda	En veille
+Açmak için güç tuşuna basın	Appuyez sur le bouton marche pour réveiller

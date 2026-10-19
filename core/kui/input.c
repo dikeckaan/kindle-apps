@@ -315,20 +315,34 @@ KuiEvent kui_next_event(int timeout_ms)
 		if (n <= 0) return none;
 		if (lipc_fd < 0 && lipc_pid < 0 && now_ms() - lipc_respawn_ms >= 5000) open_lipc();
 		if (lipc_fd >= 0 && pf[1].revents) {
+			static char line[256]; /* lipc-wait-event prints one event per line; a read may hold several or half of one */
+			static int line_n;
 			char buf[256];
-			ssize_t r = (pf[1].revents & POLLIN) ? read(lipc_fd, buf, sizeof buf - 1) : 0;
+			ssize_t r = (pf[1].revents & POLLIN) ? read(lipc_fd, buf, sizeof buf) : 0;
 			if (r > 0) {
-				buf[r] = '\0';
-				if (strstr(buf, "goingToScreenSaver")) {
-					asleep = 1;
-					memset(&gesture, 0, sizeof gesture);
-					drag_reset();
+				int woke = 0;
+				for (ssize_t i = 0; i < r; i++) {
+					if (buf[i] != '\n') {
+						if (line_n < (int) sizeof line - 1) line[line_n++] = buf[i];
+						continue;
+					}
+					line[line_n] = '\0';
+					line_n = 0;
+					if (strstr(line, "goingToScreenSaver")) {
+						if (!asleep) kui_sleep_screen(); /* the Kindle's own screensaver cannot draw over us */
+						asleep = 1;
+						woke = 0;
+						memset(&gesture, 0, sizeof gesture);
+						drag_reset();
+					} else if (strstr(line, "outOfScreenSaver")) {
+						asleep = 0;
+						woke = 1;
+						memset(&gesture, 0, sizeof gesture);
+						drag_reset();
+					}
 				}
-				if (strstr(buf, "outOfScreenSaver")) {
-					asleep = 0;
-					memset(&gesture, 0, sizeof gesture);
+				if (woke) { /* in order: a wake followed by a new sleep in the same read stays asleep */
 					kui_screen_woke(); /* the app's redraw after this event flashes once, with no change in the app */
-					drag_reset();
 					return (KuiEvent){ KUI_EV_WAKE, 0, 0, KUI_DIR_NONE };
 				}
 			} else if (r == 0 || (r < 0 && errno != EAGAIN)) {

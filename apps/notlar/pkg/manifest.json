@@ -4,7 +4,7 @@
   "name": "Not Defteri",
   "author": "Kaan Dikeç",
   "description": "Parmakla el yazısı notlar ve çizimler: üç kalem kalınlığı, silgi, geri al, çok sayfalı defterler, kareli / çizgili / düz sayfa, sayfayı PNG olarak dışa aktarma; klavyeyle yazı notları; tamamen çevrimdışı",
-  "version": [2026, 10, 20],
+  "version": [2026, 10, 20, 1],
   "dependencies": [],
   "supported_platforms": ["kindlehf"]
 }

@@ -70,6 +70,9 @@ static void test_ver_cmp(void)
 	T_ASSERT(upd_ver_cmp("2026.10.9", "2026.10.10") < 0); /* numeric, not lexical */
 	T_ASSERT(upd_ver_cmp("2026.10.12", "2026.10.12") == 0);
 	T_ASSERT(upd_ver_cmp("", "2026.1.1") < 0);
+	T_ASSERT(upd_ver_cmp("2026.10.20", "2026.10.20.1") < 0); /* same-day fixes: a fourth part */
+	T_ASSERT(upd_ver_cmp("2026.10.20.2", "2026.10.20.10") < 0);
+	T_ASSERT(upd_ver_cmp("2026.10.20.3", "2026.10.21") < 0);
 }
 
 static void test_installed_state(void)

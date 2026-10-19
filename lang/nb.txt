@@ -1186,3 +1186,6 @@ Sistem servisleri, SSH ve Kindle Apps hiçbir zaman durdurulmaz.	Systemtjenester
 Arka planda program var	Et program kjører i bakgrunnen
 Arkada açık program: %s. Ekranı ve dokunmayı kullanabilir.	Åpent i bakgrunnen: %s. Det kan bruke skjermen og berøring.
 Arkada açık programlar: %s. Ekranı ve dokunmayı kullanabilirler.	Åpne i bakgrunnen: %s. De kan bruke skjermen og berøring.
+Pil %%%d	Batteri %%%d
+Uyku modunda	Hvilemodus
+Açmak için güç tuşuna basın	Trykk på av/på-knappen for å vekke

@@ -4,7 +4,7 @@
   "name": "Sudoku",
   "author": "Kaan Dikeç",
   "description": "Tek çözümlü Sudoku: üç zorluk, not alma, hata gösterme, geri alma ve ipucu",
-  "version": [2026, 10, 20],
+  "version": [2026, 10, 20, 1],
   "dependencies": [],
   "supported_platforms": ["kindlehf"]
 }

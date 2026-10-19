@@ -225,6 +225,25 @@ static void settings(void)
 	}
 }
 
+/* copies the app's binary to RAM: an update overwrites files on /mnt/us (fuse), and a running program whose binary is
+ * replaced there dies with SIGBUS (seen: Satranç while the packages were reinstalled). NULL when the copy fails. */
+static const char *ram_copy(const char *exe)
+{
+	static const char *dst = "/tmp/kui-app", *tmp = "/tmp/kui-app.new";
+	int in = open(exe, O_RDONLY), out = in < 0 ? -1 : open(tmp, O_WRONLY | O_CREAT | O_TRUNC, 0755);
+	char buf[65536];
+	ssize_t n = 0;
+	while (out >= 0 && (n = read(in, buf, sizeof buf)) > 0)
+		if (write(out, buf, (size_t) n) != n) n = -1;
+	if (in >= 0) close(in);
+	if (out < 0) return NULL;
+	if (close(out) != 0 || n < 0 || rename(tmp, dst) != 0) {
+		unlink(tmp);
+		return NULL;
+	}
+	return dst;
+}
+
 /* Runs an app with the screen and input handed over to it; returns its wait status. */
 static int run_app(const HubApp *a)
 {
@@ -242,7 +261,8 @@ static int run_app(const HubApp *a)
 			dup2(fd, 2);
 			close(fd);
 		}
-		execl(a->exec, a->exec, (char *) NULL);
+		const char *ram = ram_copy(a->exec);
+		execl(ram ? ram : a->exec, a->exec, (char *) NULL); /* argv[0] stays the installed path */
 		_exit(127);
 	}
 	int status = 0;

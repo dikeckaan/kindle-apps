@@ -367,6 +367,8 @@ Aç
 Açarak saldırı	
 # apps/chess/puzzle.c
 Açarak şah	
+# core/kui/sleepscreen.c
+Açmak için güç tuşuna basın	
 # apps/chess/puzzle.c
 Açmaz	
 # apps/weather/wx.c
@@ -1407,6 +1409,8 @@ Per
 Perşembe	
 # apps/sysinfo/main.c
 Pil	
+# core/kui/sleepscreen.c
+Pil %%%d	
 # apps/sysinfo/main.c
 Pil sıcaklığı	
 # apps/pano/main.c
@@ -1825,6 +1829,8 @@ Uyku Ekranı
 Uyku ekranı duraklatıldı	
 # apps/uyku/main.c
 Uyku ekranını başlat	
+# core/kui/sleepscreen.c
+Uyku modunda	
 # core/kui/powerui.c
 Uykuda saat: %d dakikada bir	
 # core/kui/powerui.c

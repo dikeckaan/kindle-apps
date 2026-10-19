@@ -1186,3 +1186,6 @@ Sistem servisleri, SSH ve Kindle Apps hiçbir zaman durdurulmaz.	A rendszerszolg
 Arka planda program var	Egy program fut a háttérben
 Arkada açık program: %s. Ekranı ve dokunmayı kullanabilir.	A háttérben nyitva: %s. Használhatja a képernyőt és az érintést.
 Arkada açık programlar: %s. Ekranı ve dokunmayı kullanabilirler.	A háttérben nyitva: %s. Használhatják a képernyőt és az érintést.
+Pil %%%d	Akkumulátor %%%d
+Uyku modunda	Alvó mód
+Açmak için güç tuşuna basın	Ébresztéshez nyomja meg a bekapcsológombot

@@ -4,7 +4,7 @@
   "name": "2048",
   "author": "Kaan Dikeç",
   "description": "Klasik 2048, e-ink için az yenilemeli",
-  "version": [2026, 10, 20],
+  "version": [2026, 10, 20, 1],
   "dependencies": [],
   "supported_platforms": ["kindlehf"]
 }

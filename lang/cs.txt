@@ -1186,3 +1186,6 @@ Sistem servisleri, SSH ve Kindle Apps hiçbir zaman durdurulmaz.	Systémové slu
 Arka planda program var	Na pozadí běží program
 Arkada açık program: %s. Ekranı ve dokunmayı kullanabilir.	Otevřeno na pozadí: %s. Může používat obrazovku a dotyk.
 Arkada açık programlar: %s. Ekranı ve dokunmayı kullanabilirler.	Otevřeno na pozadí: %s. Mohou používat obrazovku a dotyk.
+Pil %%%d	Baterie %%%d
+Uyku modunda	Režim spánku
+Açmak için güç tuşuna basın	Probuďte stisknutím vypínače

@@ -1186,3 +1186,6 @@ Sistem servisleri, SSH ve Kindle Apps hiçbir zaman durdurulmaz.	Systeemdiensten
 Arka planda program var	Er draait een programma op de achtergrond
 Arkada açık program: %s. Ekranı ve dokunmayı kullanabilir.	Open op de achtergrond: %s. Het kan het scherm en aanraking gebruiken.
 Arkada açık programlar: %s. Ekranı ve dokunmayı kullanabilirler.	Open op de achtergrond: %s. Ze kunnen het scherm en aanraking gebruiken.
+Pil %%%d	Batterij %%%d
+Uyku modunda	Slaapstand
+Açmak için güç tuşuna basın	Druk op de aan/uit-knop om te wekken

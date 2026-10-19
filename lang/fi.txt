@@ -1186,3 +1186,6 @@ Sistem servisleri, SSH ve Kindle Apps hiçbir zaman durdurulmaz.	Järjestelmäpa
 Arka planda program var	Taustalla on ohjelma käynnissä
 Arkada açık program: %s. Ekranı ve dokunmayı kullanabilir.	Auki taustalla: %s. Se voi käyttää näyttöä ja kosketusta.
 Arkada açık programlar: %s. Ekranı ve dokunmayı kullanabilirler.	Auki taustalla: %s. Ne voivat käyttää näyttöä ja kosketusta.
+Pil %%%d	Akku %%%d
+Uyku modunda	Lepotilassa
+Açmak için güç tuşuna basın	Herätä painamalla virtapainiketta

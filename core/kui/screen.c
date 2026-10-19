@@ -103,6 +103,16 @@ void kui_request_flash(void) { kui_policy_request_flash(&policy); }
 /* input.c: KUI_EV_WAKE is being delivered — the screensaver covered everything, so the next update flashes */
 void kui_screen_woke(void) { kui_policy_request_flash(&policy); }
 
+void kui_flush_sleep(void)
+{
+	FBInkConfig c = cfg;
+	c.wfm_mode = WFM_GC16;
+	c.is_flashing = true;
+	fbink_refresh(fb, 0, 0, 0, 0, &c);
+	fbink_wait_for_complete(fb, LAST_MARKER); /* on the panel before powerd suspends */
+	dirty.n = 0;
+}
+
 void kui_fill(KuiRect r, unsigned char gray)
 {
 	if (r.w <= 0 || r.h <= 0) return;

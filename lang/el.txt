@@ -1186,3 +1186,6 @@ Sistem servisleri, SSH ve Kindle Apps hiçbir zaman durdurulmaz.	Οι υπηρε
 Arka planda program var	Ένα πρόγραμμα τρέχει στο παρασκήνιο
 Arkada açık program: %s. Ekranı ve dokunmayı kullanabilir.	Ανοιχτό στο παρασκήνιο: %s. Μπορεί να χρησιμοποιεί την οθόνη και την αφή.
 Arkada açık programlar: %s. Ekranı ve dokunmayı kullanabilirler.	Ανοιχτά στο παρασκήνιο: %s. Μπορεί να χρησιμοποιούν την οθόνη και την αφή.
+Pil %%%d	Μπαταρία %%%d
+Uyku modunda	Σε αναστολή
+Açmak için güç tuşuna basın	Πατήστε το κουμπί λειτουργίας για αφύπνιση

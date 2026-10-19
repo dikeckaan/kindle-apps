@@ -1186,3 +1186,6 @@ Sistem servisleri, SSH ve Kindle Apps hiçbir zaman durdurulmaz.	Systemdienste, 
 Arka planda program var	Ein Programm läuft im Hintergrund
 Arkada açık program: %s. Ekranı ve dokunmayı kullanabilir.	Im Hintergrund geöffnet: %s. Es kann Bildschirm und Touch-Eingaben nutzen.
 Arkada açık programlar: %s. Ekranı ve dokunmayı kullanabilirler.	Im Hintergrund geöffnet: %s. Sie können Bildschirm und Touch-Eingaben nutzen.
+Pil %%%d	Akku %%%d
+Uyku modunda	Ruhezustand
+Açmak için güç tuşuna basın	Zum Aufwecken Ein/Aus-Taste drücken
