@@ -740,3 +740,31 @@ Kolay okuma: Kapalı	Leicht lesen: Aus
 Basit mod: Açık	Einfacher Modus: An
 Basit mod: Kapalı	Einfacher Modus: Aus
 Kolay okuma: bütün yazılar büyük, kalın ve siyah olur.\nBasit mod: menüde dört büyük düğme; panoda yalnızca saat, hava ve üç haber. Teknik uygulamalar gizlenir; bu ekrandan her zaman geri açılabilir.	Leicht lesen: Alle Texte werden groß, fett und schwarz.\nEinfacher Modus: vier große Tasten im Menü; die Übersicht zeigt nur Uhr, Wetter und drei Nachrichten. Technische Apps werden ausgeblendet; auf diesem Bildschirm jederzeit wieder einschaltbar.
+%d yanlış harf	%d falsche Buchstaben
+%d yanlış harf (çizildi), %d boş kare var.	%d falsche Buchstaben (durchgestrichen), %d leere Felder.
+%d yanlış harf var; çizili kareler.	%d falsche Buchstaben; sie sind durchgestrichen.
+Arşiv	Archiv
+Bir kareye dokunun	Tippen Sie auf ein Feld
+Bitti	Fertig
+Bu bulmacadaki bütün harfler silinsin mi?	Alle Buchstaben in diesem Rätsel löschen?
+Bulmaca	Kreuzworträtsel
+Bulmaca No. %d	Kreuzworträtsel Nr. %d
+Bulmacalar yüklenemedi. Uygulamayı yeniden kurun.	Die Rätsel konnten nicht geladen werden. Installieren Sie die App neu.
+Bulmacayı %s içinde çözdünüz.	Sie haben das Rätsel in %s gelöst.
+Bulmacayı %s içinde, hiç harf açmadan çözdünüz.	Sie haben das Rätsel in %s gelöst, ohne einen Buchstaben aufzudecken.
+Bulmacayı sıfırla	Rätsel zurücksetzen
+En kısa süre	Schnellste Zeit
+Harf aç	Buchstabe aufdecken
+Harfler doğru; %d boş kare kaldı.	Die Buchstaben stimmen; noch %d leere Felder.
+Henüz bitmedi	Noch nicht fertig
+Kelimeyi kontrol et	Wort prüfen
+No. %d	Nr. %d
+Ortalama süre	Durchschnittszeit
+Seri: günün bulmacasını kendi gününde çözdüğünüz ardışık günler. Yardımsız: hiç harf açmadan.	Serie: aufeinanderfolgende Tage, an denen Sie das Rätsel des Tages gelöst haben. Ohne Hilfe: ohne einen Buchstaben aufzudecken.
+Soldan sağa	Waagerecht
+Sıfırla	Zurücksetzen
+Yardımsız	Ohne Hilfe
+Yukarıdan aşağıya	Senkrecht
+harf	Buchstaben
+Çözülen	Gelöst
+Şimdilik doğru, %d boş kare	Bisher richtig, %d leere Felder

@@ -740,3 +740,31 @@ Kolay okuma: Kapalı	Snadné čtení: Ne
 Basit mod: Açık	Jednoduchý režim: Ano
 Basit mod: Kapalı	Jednoduchý režim: Ne
 Kolay okuma: bütün yazılar büyük, kalın ve siyah olur.\nBasit mod: menüde dört büyük düğme; panoda yalnızca saat, hava ve üç haber. Teknik uygulamalar gizlenir; bu ekrandan her zaman geri açılabilir.	Snadné čtení: veškerý text bude velký, tučný a černý.\nJednoduchý režim: čtyři velká tlačítka v menu; přehled ukazuje jen hodiny, počasí a tři zprávy. Technické aplikace se skryjí; na této obrazovce je lze kdykoli znovu zapnout.
+%d yanlış harf	Chybná písmena: %d
+%d yanlış harf (çizildi), %d boş kare var.	Chybná písmena: %d (přeškrtnutá), prázdná pole: %d.
+%d yanlış harf var; çizili kareler.	Chybná písmena: %d; jsou přeškrtnutá.
+Arşiv	Archiv
+Bir kareye dokunun	Klepněte na políčko
+Bitti	Hotovo
+Bu bulmacadaki bütün harfler silinsin mi?	Smazat všechna písmena v této křížovce?
+Bulmaca	Křížovka
+Bulmaca No. %d	Křížovka č. %d
+Bulmacalar yüklenemedi. Uygulamayı yeniden kurun.	Křížovky se nepodařilo načíst. Přeinstalujte aplikaci.
+Bulmacayı %s içinde çözdünüz.	Křížovku jste vyřešili za %s.
+Bulmacayı %s içinde, hiç harf açmadan çözdünüz.	Křížovku jste vyřešili za %s bez odkrytí jediného písmene.
+Bulmacayı sıfırla	Vymazat křížovku
+En kısa süre	Nejlepší čas
+Harf aç	Odkrýt písmeno
+Harfler doğru; %d boş kare kaldı.	Písmena jsou správně; zbývá prázdných polí: %d.
+Henüz bitmedi	Ještě není hotovo
+Kelimeyi kontrol et	Zkontrolovat slovo
+No. %d	Č. %d
+Ortalama süre	Průměrný čas
+Seri: günün bulmacasını kendi gününde çözdüğünüz ardışık günler. Yardımsız: hiç harf açmadan.	Série: po sobě jdoucí dny, kdy jste vyřešili křížovku dne. Bez pomoci: bez odkrytí písmene.
+Soldan sağa	Vodorovně
+Sıfırla	Vymazat
+Yardımsız	Bez pomoci
+Yukarıdan aşağıya	Svisle
+harf	písmen
+Çözülen	Vyřešeno
+Şimdilik doğru, %d boş kare	Zatím správně, prázdná pole: %d

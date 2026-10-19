@@ -740,3 +740,31 @@ Kolay okuma: Kapalı	Lettura facile: No
 Basit mod: Açık	Modo semplice: Sì
 Basit mod: Kapalı	Modo semplice: No
 Kolay okuma: bütün yazılar büyük, kalın ve siyah olur.\nBasit mod: menüde dört büyük düğme; panoda yalnızca saat, hava ve üç haber. Teknik uygulamalar gizlenir; bu ekrandan her zaman geri açılabilir.	Lettura facile: tutti i testi diventano grandi, in grassetto e neri.\nModo semplice: quattro grandi pulsanti nel menu; il pannello mostra solo ora, meteo e tre notizie. Le app tecniche vengono nascoste; si possono sempre riattivare da questa schermata.
+%d yanlış harf	%d lettere sbagliate
+%d yanlış harf (çizildi), %d boş kare var.	%d lettere sbagliate (barrate), %d caselle vuote.
+%d yanlış harf var; çizili kareler.	%d lettere sbagliate; sono barrate.
+Arşiv	Archivio
+Bir kareye dokunun	Tocca una casella
+Bitti	Fatto
+Bu bulmacadaki bütün harfler silinsin mi?	Cancellare tutte le lettere di questo cruciverba?
+Bulmaca	Cruciverba
+Bulmaca No. %d	Cruciverba n. %d
+Bulmacalar yüklenemedi. Uygulamayı yeniden kurun.	Impossibile caricare i cruciverba. Reinstalla l’app.
+Bulmacayı %s içinde çözdünüz.	Hai risolto il cruciverba in %s.
+Bulmacayı %s içinde, hiç harf açmadan çözdünüz.	Hai risolto il cruciverba in %s senza scoprire alcuna lettera.
+Bulmacayı sıfırla	Azzera cruciverba
+En kısa süre	Tempo migliore
+Harf aç	Scopri lettera
+Harfler doğru; %d boş kare kaldı.	Le lettere sono giuste; restano %d caselle vuote.
+Henüz bitmedi	Non ancora finito
+Kelimeyi kontrol et	Controlla parola
+No. %d	N. %d
+Ortalama süre	Tempo medio
+Seri: günün bulmacasını kendi gününde çözdüğünüz ardışık günler. Yardımsız: hiç harf açmadan.	Serie: giorni consecutivi in cui hai risolto il cruciverba del giorno. Senza aiuti: senza scoprire alcuna lettera.
+Soldan sağa	Orizzontali
+Sıfırla	Azzera
+Yardımsız	Senza aiuti
+Yukarıdan aşağıya	Verticali
+harf	lettere
+Çözülen	Risolti
+Şimdilik doğru, %d boş kare	Giusto finora, %d caselle vuote

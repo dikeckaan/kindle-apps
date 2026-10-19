@@ -740,3 +740,31 @@ Kolay okuma: Kapalı	Asan oxu: Bağlı
 Basit mod: Açık	Sadə rejim: Açıq
 Basit mod: Kapalı	Sadə rejim: Bağlı
 Kolay okuma: bütün yazılar büyük, kalın ve siyah olur.\nBasit mod: menüde dört büyük düğme; panoda yalnızca saat, hava ve üç haber. Teknik uygulamalar gizlenir; bu ekrandan her zaman geri açılabilir.	Asan oxu: bütün yazılar böyük, qalın və qara olur.\nSadə rejim: menyuda dörd böyük düymə; paneldə yalnız saat, hava və üç xəbər. Texniki tətbiqlər gizlədilir; bu ekrandan həmişə geri açıla bilər.
+%d yanlış harf	%d səhv hərf
+%d yanlış harf (çizildi), %d boş kare var.	%d səhv hərf (üstündən xətt çəkilib), %d boş xana.
+%d yanlış harf var; çizili kareler.	%d səhv hərf; üstündən xətt çəkilib.
+Arşiv	Arxiv
+Bir kareye dokunun	Bir xanaya toxunun
+Bitti	Bitdi
+Bu bulmacadaki bütün harfler silinsin mi?	Bu krossvorddakı bütün hərflər silinsin?
+Bulmaca	Krossvord
+Bulmaca No. %d	Krossvord № %d
+Bulmacalar yüklenemedi. Uygulamayı yeniden kurun.	Krossvordlar yüklənmədi. Tətbiqi yenidən quraşdırın.
+Bulmacayı %s içinde çözdünüz.	Krossvordu %s ərzində həll etdiniz.
+Bulmacayı %s içinde, hiç harf açmadan çözdünüz.	Krossvordu %s ərzində, heç bir hərf açmadan həll etdiniz.
+Bulmacayı sıfırla	Krossvordu sıfırla
+En kısa süre	Ən qısa vaxt
+Harf aç	Hərfi aç
+Harfler doğru; %d boş kare kaldı.	Hərflər düzdür; %d boş xana qaldı.
+Henüz bitmedi	Hələ bitməyib
+Kelimeyi kontrol et	Sözü yoxla
+No. %d	№ %d
+Ortalama süre	Orta vaxt
+Seri: günün bulmacasını kendi gününde çözdüğünüz ardışık günler. Yardımsız: hiç harf açmadan.	Seriya: günün krossvordunu öz günündə həll etdiyiniz ardıcıl günlər. Yardımsız: heç bir hərf açmadan.
+Soldan sağa	Soldan sağa
+Sıfırla	Sıfırla
+Yardımsız	Yardımsız
+Yukarıdan aşağıya	Yuxarıdan aşağı
+harf	hərf
+Çözülen	Həll edilən
+Şimdilik doğru, %d boş kare	Hələlik düzdür, %d boş xana

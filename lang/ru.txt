@@ -740,3 +740,31 @@ Kolay okuma: Kapalı	Лёгкое чтение: выкл
 Basit mod: Açık	Простой режим: вкл
 Basit mod: Kapalı	Простой режим: выкл
 Kolay okuma: bütün yazılar büyük, kalın ve siyah olur.\nBasit mod: menüde dört büyük düğme; panoda yalnızca saat, hava ve üç haber. Teknik uygulamalar gizlenir; bu ekrandan her zaman geri açılabilir.	Лёгкое чтение: весь текст становится крупным, жирным и чёрным.\nПростой режим: четыре большие кнопки в меню; на панели только часы, погода и три новости. Технические приложения скрываются; их всегда можно вернуть на этом экране.
+%d yanlış harf	Неверных букв: %d
+%d yanlış harf (çizildi), %d boş kare var.	Неверных букв: %d (зачёркнуты), пустых клеток: %d.
+%d yanlış harf var; çizili kareler.	Неверных букв: %d; они зачёркнуты.
+Arşiv	Архив
+Bir kareye dokunun	Коснитесь клетки
+Bitti	Готово
+Bu bulmacadaki bütün harfler silinsin mi?	Стереть все буквы в этом кроссворде?
+Bulmaca	Кроссворд
+Bulmaca No. %d	Кроссворд № %d
+Bulmacalar yüklenemedi. Uygulamayı yeniden kurun.	Не удалось загрузить кроссворды. Переустановите приложение.
+Bulmacayı %s içinde çözdünüz.	Вы решили кроссворд за %s.
+Bulmacayı %s içinde, hiç harf açmadan çözdünüz.	Вы решили кроссворд за %s, не открыв ни одной буквы.
+Bulmacayı sıfırla	Сбросить кроссворд
+En kısa süre	Лучшее время
+Harf aç	Открыть букву
+Harfler doğru; %d boş kare kaldı.	Буквы верны; осталось пустых клеток: %d.
+Henüz bitmedi	Ещё не всё
+Kelimeyi kontrol et	Проверить слово
+No. %d	№ %d
+Ortalama süre	Среднее время
+Seri: günün bulmacasını kendi gününde çözdüğünüz ardışık günler. Yardımsız: hiç harf açmadan.	Серия: дни подряд, когда вы решали кроссворд дня. Без подсказок: не открывая букв.
+Soldan sağa	По горизонтали
+Sıfırla	Сбросить
+Yardımsız	Без подсказок
+Yukarıdan aşağıya	По вертикали
+harf	букв
+Çözülen	Решено
+Şimdilik doğru, %d boş kare	Пока верно, пустых клеток: %d

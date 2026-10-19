@@ -740,3 +740,31 @@ Kolay okuma: Kapalı	Makkelijk lezen: Uit
 Basit mod: Açık	Eenvoudige modus: Aan
 Basit mod: Kapalı	Eenvoudige modus: Uit
 Kolay okuma: bütün yazılar büyük, kalın ve siyah olur.\nBasit mod: menüde dört büyük düğme; panoda yalnızca saat, hava ve üç haber. Teknik uygulamalar gizlenir; bu ekrandan her zaman geri açılabilir.	Makkelijk lezen: alle tekst wordt groot, vet en zwart.\nEenvoudige modus: vier grote knoppen in het menu; het overzicht toont alleen klok, weer en drie nieuwsberichten. Technische apps worden verborgen; via dit scherm altijd weer aan te zetten.
+%d yanlış harf	%d foute letters
+%d yanlış harf (çizildi), %d boş kare var.	%d foute letters (doorgestreept), %d lege vakjes.
+%d yanlış harf var; çizili kareler.	%d foute letters; ze zijn doorgestreept.
+Arşiv	Archief
+Bir kareye dokunun	Tik op een vakje
+Bitti	Klaar
+Bu bulmacadaki bütün harfler silinsin mi?	Alle letters in deze puzzel wissen?
+Bulmaca	Kruiswoordpuzzel
+Bulmaca No. %d	Kruiswoordpuzzel nr. %d
+Bulmacalar yüklenemedi. Uygulamayı yeniden kurun.	De puzzels konden niet worden geladen. Installeer de app opnieuw.
+Bulmacayı %s içinde çözdünüz.	Je hebt de puzzel opgelost in %s.
+Bulmacayı %s içinde, hiç harf açmadan çözdünüz.	Je hebt de puzzel opgelost in %s zonder een letter te onthullen.
+Bulmacayı sıfırla	Puzzel wissen
+En kısa süre	Snelste tijd
+Harf aç	Letter onthullen
+Harfler doğru; %d boş kare kaldı.	De letters kloppen; nog %d lege vakjes.
+Henüz bitmedi	Nog niet klaar
+Kelimeyi kontrol et	Woord controleren
+No. %d	Nr. %d
+Ortalama süre	Gemiddelde tijd
+Seri: günün bulmacasını kendi gününde çözdüğünüz ardışık günler. Yardımsız: hiç harf açmadan.	Reeks: opeenvolgende dagen waarop je de puzzel van de dag oploste. Zonder hulp: zonder een letter te onthullen.
+Soldan sağa	Horizontaal
+Sıfırla	Wissen
+Yardımsız	Zonder hulp
+Yukarıdan aşağıya	Verticaal
+harf	letters
+Çözülen	Opgelost
+Şimdilik doğru, %d boş kare	Tot nu toe goed, %d lege vakjes

@@ -740,3 +740,31 @@ Kolay okuma: Kapalı	Let læsning: Fra
 Basit mod: Açık	Enkel tilstand: Til
 Basit mod: Kapalı	Enkel tilstand: Fra
 Kolay okuma: bütün yazılar büyük, kalın ve siyah olur.\nBasit mod: menüde dört büyük düğme; panoda yalnızca saat, hava ve üç haber. Teknik uygulamalar gizlenir; bu ekrandan her zaman geri açılabilir.	Let læsning: al tekst bliver stor, fed og sort.\nEnkel tilstand: fire store knapper i menuen; oversigten viser kun ur, vejr og tre nyheder. Tekniske apps skjules; de kan altid slås til igen fra denne skærm.
+%d yanlış harf	%d forkerte bogstaver
+%d yanlış harf (çizildi), %d boş kare var.	%d forkerte bogstaver (overstreget), %d tomme felter.
+%d yanlış harf var; çizili kareler.	%d forkerte bogstaver; de er overstreget.
+Arşiv	Arkiv
+Bir kareye dokunun	Tryk på et felt
+Bitti	Færdig
+Bu bulmacadaki bütün harfler silinsin mi?	Slet alle bogstaver i denne krydsogtværs?
+Bulmaca	Krydsogtværs
+Bulmaca No. %d	Krydsogtværs nr. %d
+Bulmacalar yüklenemedi. Uygulamayı yeniden kurun.	Krydsogtværsene kunne ikke indlæses. Geninstaller appen.
+Bulmacayı %s içinde çözdünüz.	Du løste krydsogtværsen på %s.
+Bulmacayı %s içinde, hiç harf açmadan çözdünüz.	Du løste krydsogtværsen på %s uden at vise et eneste bogstav.
+Bulmacayı sıfırla	Nulstil krydsogtværsen
+En kısa süre	Hurtigste tid
+Harf aç	Vis bogstav
+Harfler doğru; %d boş kare kaldı.	Bogstaverne er rigtige; %d tomme felter tilbage.
+Henüz bitmedi	Ikke færdig endnu
+Kelimeyi kontrol et	Kontrollér ordet
+No. %d	Nr. %d
+Ortalama süre	Gennemsnitstid
+Seri: günün bulmacasını kendi gününde çözdüğünüz ardışık günler. Yardımsız: hiç harf açmadan.	Stime: dage i træk, hvor du løste dagens krydsogtværs. Uden hjælp: uden at vise et bogstav.
+Soldan sağa	Vandret
+Sıfırla	Nulstil
+Yardımsız	Uden hjælp
+Yukarıdan aşağıya	Lodret
+harf	bogstaver
+Çözülen	Løst
+Şimdilik doğru, %d boş kare	Rigtigt indtil videre, %d tomme felter

@@ -740,3 +740,31 @@ Kolay okuma: Kapalı	Helppo lukea: Pois
 Basit mod: Açık	Yksinkertainen tila: Päällä
 Basit mod: Kapalı	Yksinkertainen tila: Pois
 Kolay okuma: bütün yazılar büyük, kalın ve siyah olur.\nBasit mod: menüde dört büyük düğme; panoda yalnızca saat, hava ve üç haber. Teknik uygulamalar gizlenir; bu ekrandan her zaman geri açılabilir.	Helppo lukea: kaikki teksti muuttuu suureksi, lihavoiduksi ja mustaksi.\nYksinkertainen tila: valikossa neljä isoa painiketta; näkymässä vain kello, sää ja kolme uutista. Tekniset sovellukset piilotetaan; ne voi aina palauttaa tästä näkymästä.
+%d yanlış harf	%d väärää kirjainta
+%d yanlış harf (çizildi), %d boş kare var.	%d väärää kirjainta (yliviivattu), %d tyhjää ruutua.
+%d yanlış harf var; çizili kareler.	%d väärää kirjainta; ne on yliviivattu.
+Arşiv	Arkisto
+Bir kareye dokunun	Napauta ruutua
+Bitti	Valmis
+Bu bulmacadaki bütün harfler silinsin mi?	Poistetaanko ristikon kaikki kirjaimet?
+Bulmaca	Ristikko
+Bulmaca No. %d	Ristikko nro %d
+Bulmacalar yüklenemedi. Uygulamayı yeniden kurun.	Ristikoita ei voitu ladata. Asenna sovellus uudelleen.
+Bulmacayı %s içinde çözdünüz.	Ratkaisit ristikon ajassa %s.
+Bulmacayı %s içinde, hiç harf açmadan çözdünüz.	Ratkaisit ristikon ajassa %s paljastamatta yhtään kirjainta.
+Bulmacayı sıfırla	Tyhjennä ristikko
+En kısa süre	Paras aika
+Harf aç	Paljasta kirjain
+Harfler doğru; %d boş kare kaldı.	Kirjaimet ovat oikein; %d tyhjää ruutua jäljellä.
+Henüz bitmedi	Ei vielä valmis
+Kelimeyi kontrol et	Tarkista sana
+No. %d	Nro %d
+Ortalama süre	Keskiaika
+Seri: günün bulmacasını kendi gününde çözdüğünüz ardışık günler. Yardımsız: hiç harf açmadan.	Putki: peräkkäiset päivät, joina ratkaisit päivän ristikon. Ilman apua: paljastamatta kirjaimia.
+Soldan sağa	Vaakaan
+Sıfırla	Tyhjennä
+Yardımsız	Ilman apua
+Yukarıdan aşağıya	Pystyyn
+harf	kirjainta
+Çözülen	Ratkaistu
+Şimdilik doğru, %d boş kare	Oikein tähän asti, %d tyhjää ruutua

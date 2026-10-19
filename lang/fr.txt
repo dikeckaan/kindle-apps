@@ -740,3 +740,31 @@ Kolay okuma: Kapalı	Lecture facile : Non
 Basit mod: Açık	Mode simple : Oui
 Basit mod: Kapalı	Mode simple : Non
 Kolay okuma: bütün yazılar büyük, kalın ve siyah olur.\nBasit mod: menüde dört büyük düğme; panoda yalnızca saat, hava ve üç haber. Teknik uygulamalar gizlenir; bu ekrandan her zaman geri açılabilir.	Lecture facile : tous les textes deviennent grands, gras et noirs.\nMode simple : quatre grands boutons dans le menu ; le tableau de bord n’affiche que l’heure, la météo et trois actualités. Les applis techniques sont masquées ; on peut toujours les réactiver depuis cet écran.
+%d yanlış harf	%d lettres fausses
+%d yanlış harf (çizildi), %d boş kare var.	%d lettres fausses (barrées), %d cases vides.
+%d yanlış harf var; çizili kareler.	%d lettres fausses ; elles sont barrées.
+Arşiv	Archives
+Bir kareye dokunun	Touchez une case
+Bitti	Terminé
+Bu bulmacadaki bütün harfler silinsin mi?	Effacer toutes les lettres de cette grille ?
+Bulmaca	Mots croisés
+Bulmaca No. %d	Mots croisés n° %d
+Bulmacalar yüklenemedi. Uygulamayı yeniden kurun.	Impossible de charger les grilles. Réinstallez l’application.
+Bulmacayı %s içinde çözdünüz.	Vous avez résolu la grille en %s.
+Bulmacayı %s içinde, hiç harf açmadan çözdünüz.	Vous avez résolu la grille en %s sans dévoiler de lettre.
+Bulmacayı sıfırla	Réinitialiser la grille
+En kısa süre	Meilleur temps
+Harf aç	Dévoiler une lettre
+Harfler doğru; %d boş kare kaldı.	Les lettres sont justes ; il reste %d cases vides.
+Henüz bitmedi	Pas encore fini
+Kelimeyi kontrol et	Vérifier le mot
+No. %d	N° %d
+Ortalama süre	Temps moyen
+Seri: günün bulmacasını kendi gününde çözdüğünüz ardışık günler. Yardımsız: hiç harf açmadan.	Série : jours consécutifs où vous avez résolu la grille du jour. Sans aide : sans dévoiler de lettre.
+Soldan sağa	Horizontalement
+Sıfırla	Réinitialiser
+Yardımsız	Sans aide
+Yukarıdan aşağıya	Verticalement
+harf	lettres
+Çözülen	Résolues
+Şimdilik doğru, %d boş kare	Juste pour l’instant, %d cases vides

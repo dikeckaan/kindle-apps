@@ -740,3 +740,31 @@ Kolay okuma: Kapalı	Łatwe czytanie: Nie
 Basit mod: Açık	Tryb prosty: Tak
 Basit mod: Kapalı	Tryb prosty: Nie
 Kolay okuma: bütün yazılar büyük, kalın ve siyah olur.\nBasit mod: menüde dört büyük düğme; panoda yalnızca saat, hava ve üç haber. Teknik uygulamalar gizlenir; bu ekrandan her zaman geri açılabilir.	Łatwe czytanie: cały tekst staje się duży, pogrubiony i czarny.\nTryb prosty: cztery duże przyciski w menu; panel pokazuje tylko zegar, pogodę i trzy wiadomości. Aplikacje techniczne są ukryte; zawsze można je przywrócić na tym ekranie.
+%d yanlış harf	Błędne litery: %d
+%d yanlış harf (çizildi), %d boş kare var.	Błędne litery: %d (przekreślone), puste pola: %d.
+%d yanlış harf var; çizili kareler.	Błędne litery: %d; są przekreślone.
+Arşiv	Archiwum
+Bir kareye dokunun	Dotknij pola
+Bitti	Gotowe
+Bu bulmacadaki bütün harfler silinsin mi?	Usunąć wszystkie litery w tej krzyżówce?
+Bulmaca	Krzyżówka
+Bulmaca No. %d	Krzyżówka nr %d
+Bulmacalar yüklenemedi. Uygulamayı yeniden kurun.	Nie udało się wczytać krzyżówek. Zainstaluj aplikację ponownie.
+Bulmacayı %s içinde çözdünüz.	Krzyżówka rozwiązana w %s.
+Bulmacayı %s içinde, hiç harf açmadan çözdünüz.	Krzyżówka rozwiązana w %s bez odsłaniania liter.
+Bulmacayı sıfırla	Wyczyść krzyżówkę
+En kısa süre	Najlepszy czas
+Harf aç	Odsłoń literę
+Harfler doğru; %d boş kare kaldı.	Litery są dobre; zostało pustych pól: %d.
+Henüz bitmedi	Jeszcze nie koniec
+Kelimeyi kontrol et	Sprawdź słowo
+No. %d	Nr %d
+Ortalama süre	Średni czas
+Seri: günün bulmacasını kendi gününde çözdüğünüz ardışık günler. Yardımsız: hiç harf açmadan.	Seria: kolejne dni, w których rozwiązano krzyżówkę dnia. Bez pomocy: bez odsłaniania liter.
+Soldan sağa	Poziomo
+Sıfırla	Wyczyść
+Yardımsız	Bez pomocy
+Yukarıdan aşağıya	Pionowo
+harf	liter
+Çözülen	Rozwiązane
+Şimdilik doğru, %d boş kare	Na razie dobrze, puste pola: %d

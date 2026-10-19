@@ -740,3 +740,31 @@ Kolay okuma: Kapalı	Lectura fácil: No
 Basit mod: Açık	Modo sencillo: Sí
 Basit mod: Kapalı	Modo sencillo: No
 Kolay okuma: bütün yazılar büyük, kalın ve siyah olur.\nBasit mod: menüde dört büyük düğme; panoda yalnızca saat, hava ve üç haber. Teknik uygulamalar gizlenir; bu ekrandan her zaman geri açılabilir.	Lectura fácil: todo el texto se vuelve grande, en negrita y negro.\nModo sencillo: cuatro botones grandes en el menú; el panel muestra solo la hora, el tiempo y tres noticias. Las apps técnicas se ocultan; siempre se pueden volver a activar desde esta pantalla.
+%d yanlış harf	%d letras incorrectas
+%d yanlış harf (çizildi), %d boş kare var.	%d letras incorrectas (tachadas), %d casillas vacías.
+%d yanlış harf var; çizili kareler.	%d letras incorrectas; están tachadas.
+Arşiv	Archivo
+Bir kareye dokunun	Toque una casilla
+Bitti	Listo
+Bu bulmacadaki bütün harfler silinsin mi?	¿Borrar todas las letras de este crucigrama?
+Bulmaca	Crucigrama
+Bulmaca No. %d	Crucigrama n.º %d
+Bulmacalar yüklenemedi. Uygulamayı yeniden kurun.	No se pudieron cargar los crucigramas. Reinstale la aplicación.
+Bulmacayı %s içinde çözdünüz.	Resolvió el crucigrama en %s.
+Bulmacayı %s içinde, hiç harf açmadan çözdünüz.	Resolvió el crucigrama en %s sin descubrir ninguna letra.
+Bulmacayı sıfırla	Reiniciar crucigrama
+En kısa süre	Mejor tiempo
+Harf aç	Descubrir letra
+Harfler doğru; %d boş kare kaldı.	Las letras son correctas; quedan %d casillas vacías.
+Henüz bitmedi	Aún no está terminado
+Kelimeyi kontrol et	Comprobar palabra
+No. %d	N.º %d
+Ortalama süre	Tiempo medio
+Seri: günün bulmacasını kendi gününde çözdüğünüz ardışık günler. Yardımsız: hiç harf açmadan.	Racha: días seguidos en que resolvió el crucigrama del día. Sin ayuda: sin descubrir ninguna letra.
+Soldan sağa	Horizontales
+Sıfırla	Reiniciar
+Yardımsız	Sin ayuda
+Yukarıdan aşağıya	Verticales
+harf	letras
+Çözülen	Resueltos
+Şimdilik doğru, %d boş kare	Correcto por ahora, %d casillas vacías

@@ -740,3 +740,31 @@ Kolay okuma: Kapalı	Lättläst: Av
 Basit mod: Açık	Enkelt läge: På
 Basit mod: Kapalı	Enkelt läge: Av
 Kolay okuma: bütün yazılar büyük, kalın ve siyah olur.\nBasit mod: menüde dört büyük düğme; panoda yalnızca saat, hava ve üç haber. Teknik uygulamalar gizlenir; bu ekrandan her zaman geri açılabilir.	Lättläst: all text blir stor, fet och svart.\nEnkelt läge: fyra stora knappar i menyn; översikten visar bara klocka, väder och tre nyheter. Tekniska appar döljs; de kan alltid slås på igen från den här skärmen.
+%d yanlış harf	%d fel bokstäver
+%d yanlış harf (çizildi), %d boş kare var.	%d fel bokstäver (överstrukna), %d tomma rutor.
+%d yanlış harf var; çizili kareler.	%d fel bokstäver; de är överstrukna.
+Arşiv	Arkiv
+Bir kareye dokunun	Tryck på en ruta
+Bitti	Klar
+Bu bulmacadaki bütün harfler silinsin mi?	Radera alla bokstäver i det här korsordet?
+Bulmaca	Korsord
+Bulmaca No. %d	Korsord nr %d
+Bulmacalar yüklenemedi. Uygulamayı yeniden kurun.	Korsorden kunde inte läsas in. Installera om appen.
+Bulmacayı %s içinde çözdünüz.	Du löste korsordet på %s.
+Bulmacayı %s içinde, hiç harf açmadan çözdünüz.	Du löste korsordet på %s utan att visa någon bokstav.
+Bulmacayı sıfırla	Nollställ korsordet
+En kısa süre	Snabbaste tid
+Harf aç	Visa bokstav
+Harfler doğru; %d boş kare kaldı.	Bokstäverna stämmer; %d tomma rutor kvar.
+Henüz bitmedi	Inte klart än
+Kelimeyi kontrol et	Kontrollera ordet
+No. %d	Nr %d
+Ortalama süre	Medeltid
+Seri: günün bulmacasını kendi gününde çözdüğünüz ardışık günler. Yardımsız: hiç harf açmadan.	Svit: dagar i rad då du löste dagens korsord. Utan hjälp: utan att visa någon bokstav.
+Soldan sağa	Vågrätt
+Sıfırla	Nollställ
+Yardımsız	Utan hjälp
+Yukarıdan aşağıya	Lodrätt
+harf	bokstäver
+Çözülen	Lösta
+Şimdilik doğru, %d boş kare	Rätt hittills, %d tomma rutor

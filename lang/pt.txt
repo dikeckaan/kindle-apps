@@ -740,3 +740,31 @@ Kolay okuma: Kapalı	Leitura fácil: Não
 Basit mod: Açık	Modo simples: Sim
 Basit mod: Kapalı	Modo simples: Não
 Kolay okuma: bütün yazılar büyük, kalın ve siyah olur.\nBasit mod: menüde dört büyük düğme; panoda yalnızca saat, hava ve üç haber. Teknik uygulamalar gizlenir; bu ekrandan her zaman geri açılabilir.	Leitura fácil: todo o texto fica grande, em negrito e preto.\nModo simples: quatro botões grandes no menu; o painel mostra só a hora, o tempo e três notícias. As apps técnicas ficam ocultas; pode sempre reativá-las neste ecrã.
+%d yanlış harf	%d letras erradas
+%d yanlış harf (çizildi), %d boş kare var.	%d letras erradas (riscadas), %d quadrados vazios.
+%d yanlış harf var; çizili kareler.	%d letras erradas; estão riscadas.
+Arşiv	Arquivo
+Bir kareye dokunun	Toque num quadrado
+Bitti	Concluído
+Bu bulmacadaki bütün harfler silinsin mi?	Apagar todas as letras desta palavra cruzada?
+Bulmaca	Palavras cruzadas
+Bulmaca No. %d	Palavras cruzadas n.º %d
+Bulmacalar yüklenemedi. Uygulamayı yeniden kurun.	Não foi possível carregar as palavras cruzadas. Reinstale a aplicação.
+Bulmacayı %s içinde çözdünüz.	Resolveu a palavra cruzada em %s.
+Bulmacayı %s içinde, hiç harf açmadan çözdünüz.	Resolveu a palavra cruzada em %s sem revelar nenhuma letra.
+Bulmacayı sıfırla	Reiniciar palavra cruzada
+En kısa süre	Melhor tempo
+Harf aç	Revelar letra
+Harfler doğru; %d boş kare kaldı.	As letras estão certas; faltam %d quadrados vazios.
+Henüz bitmedi	Ainda não terminou
+Kelimeyi kontrol et	Verificar palavra
+No. %d	N.º %d
+Ortalama süre	Tempo médio
+Seri: günün bulmacasını kendi gününde çözdüğünüz ardışık günler. Yardımsız: hiç harf açmadan.	Sequência: dias seguidos em que resolveu a palavra cruzada do dia. Sem ajuda: sem revelar nenhuma letra.
+Soldan sağa	Horizontais
+Sıfırla	Reiniciar
+Yardımsız	Sem ajuda
+Yukarıdan aşağıya	Verticais
+harf	letras
+Çözülen	Resolvidas
+Şimdilik doğru, %d boş kare	Certo até agora, %d quadrados vazios
