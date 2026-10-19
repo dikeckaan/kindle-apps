@@ -4,7 +4,7 @@
   "name": "Görev Yöneticisi",
   "author": "Kaan Dikeç",
   "description": "Arka planda açık kalan üçüncü taraf programları (KUAL oyunları, KOReader, kterm) bellek ve çalışma süreleriyle listeler; tek tek ya da hepsini güvenle kapatır. Sistem servisleri, SSH ve Kindle Apps hiçbir zaman durdurulmaz",
-  "version": [2026, 10, 19],
+  "version": [2026, 10, 20],
   "dependencies": [],
   "supported_platforms": ["kindlehf"]
 }

@@ -4,7 +4,7 @@
   "name": "Odak",
   "author": "Kaan Dikeç",
   "description": "Odak zamanlayıcısı (Pomodoro 25/5, 50/10, özel süre): etiketli oturumlar, günlük toplam, 7 günlük grafik ve seri; oturum boyunca Kindle dakikalar arasında uyur, Wi-Fi kapalı kalır",
-  "version": [2026, 10, 19],
+  "version": [2026, 10, 20],
   "dependencies": [],
   "supported_platforms": ["kindlehf"]
 }

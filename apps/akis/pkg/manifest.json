@@ -4,7 +4,7 @@
   "name": "Akış",
   "author": "Kaan Dikeç",
   "description": "Kendi RSS/Atom akışlarınız için okuyucu: klasörler, okunmamış sayıları, sade okuma görünümü, son indirilenler çevrimdışı, Türkçe ve dünyadan popüler akışlar kataloğu, OPML içe/dışa aktarma",
-  "version": [2026, 10, 19],
+  "version": [2026, 10, 20],
   "dependencies": [],
   "supported_platforms": ["kindlehf"]
 }

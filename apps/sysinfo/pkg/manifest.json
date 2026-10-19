@@ -4,7 +4,7 @@
   "name": "Sistem Bilgisi",
   "author": "Kaan Dikeç",
   "description": "Pil, depolama, bellek, Wi-Fi, yazılım sürümü ve güvenlik durumu",
-  "version": [2026, 10, 19],
+  "version": [2026, 10, 20],
   "dependencies": [],
   "supported_platforms": ["kindlehf"]
 }
