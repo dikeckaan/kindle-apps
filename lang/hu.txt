@@ -740,3 +740,38 @@ Kolay okuma: Kapalı	Könnyű olvasás: Ki
 Basit mod: Açık	Egyszerű mód: Be
 Basit mod: Kapalı	Egyszerű mód: Ki
 Kolay okuma: bütün yazılar büyük, kalın ve siyah olur.\nBasit mod: menüde dört büyük düğme; panoda yalnızca saat, hava ve üç haber. Teknik uygulamalar gizlenir; bu ekrandan her zaman geri açılabilir.	Könnyű olvasás: minden szöveg nagy, félkövér és fekete lesz.\nEgyszerű mód: négy nagy gomb a menüben; az áttekintő csak az órát, az időjárást és három hírt mutatja. A technikai alkalmazások elrejtődnek; ezen a képernyőn bármikor visszakapcsolhatók.
+Not Defteri	Jegyzetfüzet
+Adsız çizim	Névtelen rajz
+İnce	Vékony
+Kalın	Vastag
+Silgi	Radír
+sayfa	oldal
+Sayfa resim olarak kaydedildi:\ndocuments/Notlar\n%s	Az oldal képként mentve:\ndocuments/Notlar\n%s
+Resim kaydedilemedi.	A képet nem sikerült menteni.
+Dışa aktar	Exportálás
+Sayfa %d	%d. oldal
+Temizle	Ürítés
+Temizle: sayfadaki çizimler silinir.\nSil: sayfa nottan çıkarılır.	Ürítés: az oldal rajza törlődik.\nTörlés: az oldal kikerül a jegyzetből.
+Arka plan	Háttér
+Başlık	Cím
+Sayfa	Oldal
+Sayfa %d / %d · %d çizgi	%d. / %d oldal · %d vonal
+Düz	Sima
+Kareli	Kockás
+Çizgili	Vonalas
+Bütün sayfalar için	Minden oldalra
+Yazı notu	Szöveges jegyzet
+Ekle	Hozzáadás
+Boş not.\n“Ekle” ile bir satır yazın.	Üres jegyzet.\nÍrjon egy sort a „Hozzáadás” gombbal.
+%d–%d / %d · kaydırın	%d–%d / %d · lapozzon
+Dokunun: düzenle · basılı tutun: sil	Koppintás: szerkesztés · nyomva tartás: törlés
+Yeni satır	Új sor
+Satır silinsin mi?	Törli ezt a sort?
+Satırı düzenle	Sor szerkesztése
+Henüz not yok.\n“Yeni” ile bir çizim ya da yazı notu başlatın.	Még nincs jegyzet.\nKezdjen rajzot vagy szöveges jegyzetet az „Új” gombbal.
+Boş yazı notu	Üres szöveges jegyzet
+Çizim · %d sayfa	Rajz · %d oldal
+Yazı · %d satır	Szöveg · %d sor
+Çizim	Rajz
+Parmakla çizim mi, klavyeyle yazı mı?	Ujjal rajzol, vagy billentyűzettel ír?
+Not silinsin mi?	Törli ezt a jegyzetet?

@@ -740,3 +740,38 @@ Kolay okuma: Kapalı	Makkelijk lezen: Uit
 Basit mod: Açık	Eenvoudige modus: Aan
 Basit mod: Kapalı	Eenvoudige modus: Uit
 Kolay okuma: bütün yazılar büyük, kalın ve siyah olur.\nBasit mod: menüde dört büyük düğme; panoda yalnızca saat, hava ve üç haber. Teknik uygulamalar gizlenir; bu ekrandan her zaman geri açılabilir.	Makkelijk lezen: alle tekst wordt groot, vet en zwart.\nEenvoudige modus: vier grote knoppen in het menu; het overzicht toont alleen klok, weer en drie nieuwsberichten. Technische apps worden verborgen; via dit scherm altijd weer aan te zetten.
+Not Defteri	Notitieboek
+Adsız çizim	Naamloze tekening
+İnce	Dun
+Kalın	Dik
+Silgi	Gum
+sayfa	pagina
+Sayfa resim olarak kaydedildi:\ndocuments/Notlar\n%s	Pagina als afbeelding opgeslagen:\ndocuments/Notlar\n%s
+Resim kaydedilemedi.	De afbeelding kon niet worden opgeslagen.
+Dışa aktar	Exporteren
+Sayfa %d	Pagina %d
+Temizle	Leegmaken
+Temizle: sayfadaki çizimler silinir.\nSil: sayfa nottan çıkarılır.	Leegmaken: de tekening op deze pagina wordt gewist.\nWissen: de pagina wordt uit de notitie verwijderd.
+Arka plan	Achtergrond
+Başlık	Titel
+Sayfa	Pagina
+Sayfa %d / %d · %d çizgi	Pagina %d / %d · %d lijnen
+Düz	Blanco
+Kareli	Geruit
+Çizgili	Gelinieerd
+Bütün sayfalar için	Voor alle pagina's
+Yazı notu	Tekstnotitie
+Ekle	Toevoegen
+Boş not.\n“Ekle” ile bir satır yazın.	Lege notitie.\nSchrijf een regel met ‘Toevoegen’.
+%d–%d / %d · kaydırın	%d–%d / %d · veeg
+Dokunun: düzenle · basılı tutun: sil	Tik: bewerken · vasthouden: wissen
+Yeni satır	Nieuwe regel
+Satır silinsin mi?	Deze regel wissen?
+Satırı düzenle	Regel bewerken
+Henüz not yok.\n“Yeni” ile bir çizim ya da yazı notu başlatın.	Nog geen notities.\nBegin een tekening of tekstnotitie met ‘Nieuw’.
+Boş yazı notu	Lege tekstnotitie
+Çizim · %d sayfa	Tekening · %d pagina's
+Yazı · %d satır	Tekst · %d regels
+Çizim	Tekening
+Parmakla çizim mi, klavyeyle yazı mı?	Met je vinger tekenen of met het toetsenbord typen?
+Not silinsin mi?	Deze notitie wissen?

@@ -740,3 +740,38 @@ Kolay okuma: Kapalı	Łatwe czytanie: Nie
 Basit mod: Açık	Tryb prosty: Tak
 Basit mod: Kapalı	Tryb prosty: Nie
 Kolay okuma: bütün yazılar büyük, kalın ve siyah olur.\nBasit mod: menüde dört büyük düğme; panoda yalnızca saat, hava ve üç haber. Teknik uygulamalar gizlenir; bu ekrandan her zaman geri açılabilir.	Łatwe czytanie: cały tekst staje się duży, pogrubiony i czarny.\nTryb prosty: cztery duże przyciski w menu; panel pokazuje tylko zegar, pogodę i trzy wiadomości. Aplikacje techniczne są ukryte; zawsze można je przywrócić na tym ekranie.
+Not Defteri	Notatnik
+Adsız çizim	Rysunek bez tytułu
+İnce	Cienki
+Kalın	Gruby
+Silgi	Gumka
+sayfa	strona
+Sayfa resim olarak kaydedildi:\ndocuments/Notlar\n%s	Strona zapisana jako obraz:\ndocuments/Notlar\n%s
+Resim kaydedilemedi.	Nie udało się zapisać obrazu.
+Dışa aktar	Eksportuj
+Sayfa %d	Strona %d
+Temizle	Wyczyść
+Temizle: sayfadaki çizimler silinir.\nSil: sayfa nottan çıkarılır.	Wyczyść: rysunek na tej stronie zostanie usunięty.\nUsuń: strona zostanie usunięta z notatki.
+Arka plan	Tło
+Başlık	Tytuł
+Sayfa	Strona
+Sayfa %d / %d · %d çizgi	Strona %d / %d · %d kresek
+Düz	Gładkie
+Kareli	W kratkę
+Çizgili	W linie
+Bütün sayfalar için	Dla wszystkich stron
+Yazı notu	Notatka tekstowa
+Ekle	Dodaj
+Boş not.\n“Ekle” ile bir satır yazın.	Pusta notatka.\nNapisz wiersz przyciskiem „Dodaj”.
+%d–%d / %d · kaydırın	%d–%d / %d · przesuń
+Dokunun: düzenle · basılı tutun: sil	Dotknij: edytuj · przytrzymaj: usuń
+Yeni satır	Nowy wiersz
+Satır silinsin mi?	Usunąć ten wiersz?
+Satırı düzenle	Edytuj wiersz
+Henüz not yok.\n“Yeni” ile bir çizim ya da yazı notu başlatın.	Nie ma jeszcze notatek.\nZacznij rysunek lub notatkę tekstową przyciskiem „Nowa”.
+Boş yazı notu	Pusta notatka tekstowa
+Çizim · %d sayfa	Rysunek · stron: %d
+Yazı · %d satır	Tekst · wierszy: %d
+Çizim	Rysunek
+Parmakla çizim mi, klavyeyle yazı mı?	Rysować palcem czy pisać na klawiaturze?
+Not silinsin mi?	Usunąć tę notatkę?

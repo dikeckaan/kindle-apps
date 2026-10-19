@@ -740,3 +740,38 @@ Kolay okuma: Kapalı	Lecture facile : Non
 Basit mod: Açık	Mode simple : Oui
 Basit mod: Kapalı	Mode simple : Non
 Kolay okuma: bütün yazılar büyük, kalın ve siyah olur.\nBasit mod: menüde dört büyük düğme; panoda yalnızca saat, hava ve üç haber. Teknik uygulamalar gizlenir; bu ekrandan her zaman geri açılabilir.	Lecture facile : tous les textes deviennent grands, gras et noirs.\nMode simple : quatre grands boutons dans le menu ; le tableau de bord n’affiche que l’heure, la météo et trois actualités. Les applis techniques sont masquées ; on peut toujours les réactiver depuis cet écran.
+Not Defteri	Carnet
+Adsız çizim	Dessin sans titre
+İnce	Fin
+Kalın	Épais
+Silgi	Gomme
+sayfa	page
+Sayfa resim olarak kaydedildi:\ndocuments/Notlar\n%s	Page enregistrée en image :\ndocuments/Notlar\n%s
+Resim kaydedilemedi.	L'image n'a pas pu être enregistrée.
+Dışa aktar	Exporter
+Sayfa %d	Page %d
+Temizle	Vider
+Temizle: sayfadaki çizimler silinir.\nSil: sayfa nottan çıkarılır.	Vider : le dessin de cette page est effacé.\nEffacer : la page est retirée de la note.
+Arka plan	Fond
+Başlık	Titre
+Sayfa	Page
+Sayfa %d / %d · %d çizgi	Page %d / %d · %d traits
+Düz	Uni
+Kareli	Quadrillé
+Çizgili	Ligné
+Bütün sayfalar için	Pour toutes les pages
+Yazı notu	Note texte
+Ekle	Ajouter
+Boş not.\n“Ekle” ile bir satır yazın.	Note vide.\nÉcrivez une ligne avec « Ajouter ».
+%d–%d / %d · kaydırın	%d–%d / %d · balayez
+Dokunun: düzenle · basılı tutun: sil	Toucher : modifier · maintenir : effacer
+Yeni satır	Nouvelle ligne
+Satır silinsin mi?	Effacer cette ligne ?
+Satırı düzenle	Modifier la ligne
+Henüz not yok.\n“Yeni” ile bir çizim ya da yazı notu başlatın.	Aucune note pour l'instant.\nCommencez un dessin ou une note texte avec « Nouveau ».
+Boş yazı notu	Note texte vide
+Çizim · %d sayfa	Dessin · %d pages
+Yazı · %d satır	Texte · %d lignes
+Çizim	Dessin
+Parmakla çizim mi, klavyeyle yazı mı?	Dessiner au doigt ou écrire au clavier ?
+Not silinsin mi?	Effacer cette note ?

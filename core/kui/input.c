@@ -1,4 +1,5 @@
-/* Input layer: touchscreen via evdev (multi-touch protocol B, slot 0 only) and power events via lipc. */
+/* Input layer: touchscreen via evdev (multi-touch protocol B, slot 0 only) and power events via lipc.
+ * Opt-in drag stream (kui_set_drag_events): DOWN/MOVE/UP + the gesture, buffered in a small queue. */
 #include <errno.h>
 #include <fcntl.h>
 #include <linux/input.h>
@@ -25,6 +26,13 @@ static pid_t lipc_pid = -1;
 static volatile sig_atomic_t quit_requested;
 static KuiGesture gesture;
 static int slot, down, tx, ty, changed;
+static int track_id = -1;   /* slot 0's tracking id while down */
+static int dropped;         /* SYN_DROPPED seen: ignore events up to the next SYN_REPORT, then resync */
+static int drag_mode;       /* kui_set_drag_events */
+static KuiDrag drag;
+#define QN 256
+static KuiEvent queue[QN];  /* drag-mode events not yet returned */
+static int q_head, q_len;
 static int asleep;          /* between goingToScreenSaver and outOfScreenSaver */
 static long lipc_respawn_ms; /* last helper (re)start, to rate-limit respawns */
 
@@ -147,6 +155,65 @@ static void lipc_lost(void)
 	if (now_ms() - lipc_respawn_ms >= 5000) open_lipc();
 }
 
+/* queue: when full, a MOVE replaces the last queued MOVE (the path gets coarser, never wrong) */
+static void q_push(KuiEvent e)
+{
+	if (q_len == QN) {
+		KuiEvent *last = &queue[(q_head + q_len - 1) % QN];
+		if (e.type == KUI_EV_MOVE && last->type == KUI_EV_MOVE) *last = e;
+		else if (e.type != KUI_EV_MOVE) *last = e; /* never happens in practice: one read holds far fewer */
+		return;
+	}
+	queue[(q_head + q_len++) % QN] = e;
+}
+
+static int q_pop(KuiEvent *e)
+{
+	if (!q_len) return 0;
+	*e = queue[q_head];
+	q_head = (q_head + 1) % QN;
+	q_len--;
+	return 1;
+}
+
+static void drag_reset(void)
+{
+	memset(&drag, 0, sizeof drag);
+	q_head = q_len = 0;
+}
+
+void kui_set_drag_events(int on)
+{
+	drag_mode = on != 0;
+	drag_reset();
+	memset(&gesture, 0, sizeof gesture);
+}
+
+/* the kernel's current slot: events before the first ABS_MT_SLOT belong to it */
+static void sync_slot(void)
+{
+	struct input_absinfo ai;
+	if (touch_fd >= 0 && ioctl(touch_fd, EVIOCGABS(ABS_MT_SLOT), &ai) == 0 && ai.value >= 0) slot = ai.value;
+}
+
+/* after SYN_DROPPED: read slot 0's contact and position back from the kernel */
+static void resync_touch(void)
+{
+	struct { unsigned int code; int v[16]; } req;
+	sync_slot();
+	memset(&req, 0, sizeof req);
+	req.code = ABS_MT_TRACKING_ID;
+	if (ioctl(touch_fd, EVIOCGMTSLOTS(sizeof req), &req) == 0) {
+		track_id = req.v[0];
+		down = req.v[0] >= 0;
+	}
+	req.code = ABS_MT_POSITION_X;
+	if (ioctl(touch_fd, EVIOCGMTSLOTS(sizeof req), &req) == 0) tx = req.v[0];
+	req.code = ABS_MT_POSITION_Y;
+	if (ioctl(touch_fd, EVIOCGMTSLOTS(sizeof req), &req) == 0) ty = req.v[0];
+	changed = 1;
+}
+
 int kui_input_open(void)
 {
 	struct sigaction sa;
@@ -159,7 +226,10 @@ int kui_input_open(void)
 	if (touch_fd < 0) return touch_fd;
 	open_lipc();
 	memset(&gesture, 0, sizeof gesture);
-	slot = down = changed = asleep = 0;
+	slot = down = changed = asleep = dropped = 0;
+	track_id = -1;
+	drag_reset();
+	sync_slot(); /* the touch that launched us may still be down: its contact stays ignored as before */
 	return 0;
 }
 
@@ -188,19 +258,38 @@ static KuiEvent drain_touch(void)
 	struct input_event ev;
 	KuiEvent out = { KUI_EV_NONE, 0, 0, KUI_DIR_NONE };
 	while (read(touch_fd, &ev, sizeof ev) == (ssize_t) sizeof ev) {
+		if (ev.type == EV_SYN && ev.code == SYN_DROPPED) { /* the kernel buffer overflowed */
+			dropped = 1;
+			continue;
+		}
+		if (dropped) {
+			if (ev.type == EV_SYN && ev.code == SYN_REPORT) {
+				dropped = 0;
+				resync_touch();
+			} else {
+				continue;
+			}
+		}
 		if (ev.type == EV_ABS) {
 			if (ev.code == ABS_MT_SLOT) slot = ev.value;
 			else if (slot != 0) continue;
-			else if (ev.code == ABS_MT_TRACKING_ID) { down = ev.value >= 0; changed = 1; }
+			else if (ev.code == ABS_MT_TRACKING_ID) { down = ev.value >= 0; track_id = ev.value; changed = 1; }
 			else if (ev.code == ABS_MT_POSITION_X) { tx = ev.value; changed = 1; }
 			else if (ev.code == ABS_MT_POSITION_Y) { ty = ev.value; changed = 1; }
 		} else if (ev.type == EV_SYN && ev.code == SYN_REPORT && changed) {
 			changed = 0;
 			if (asleep) continue; /* screensaver is up: input is not for us */
+			if (drag_mode) { /* queue everything; the caller gets it event by event */
+				KuiEvent evs[KUI_DRAG_MAX_OUT];
+				int n = kui_drag_feed(&drag, down ? (track_id >= 0 ? track_id : 0) : -1, tx, ty, now_ms(), evs);
+				for (int i = 0; i < n; i++) q_push(evs[i]);
+				continue;
+			}
 			out = kui_gesture_feed(&gesture, down, tx, ty, now_ms());
 			if (out.type != KUI_EV_NONE) return out;
 		}
 	}
+	if (drag_mode) q_pop(&out);
 	return out;
 }
 
@@ -210,6 +299,11 @@ KuiEvent kui_next_event(int timeout_ms)
 	long deadline = now_ms() + timeout_ms;
 	for (;;) {
 		if (quit_requested) return (KuiEvent){ KUI_EV_QUIT, 0, 0, KUI_DIR_NONE };
+		KuiEvent q;
+		if (q_pop(&q)) {
+			if (q.type != KUI_EV_MOVE) kui_crash_note_event((int) q.type, q.x, q.y);
+			return q;
+		}
 		struct pollfd pf[3] = { { touch_fd, POLLIN, 0 }, { lipc_fd, POLLIN, 0 }, { power_fd, POLLIN, 0 } };
 		long left = timeout_ms < 0 ? -1 : deadline - now_ms();
 		if (timeout_ms >= 0 && left <= 0) return none;
@@ -227,10 +321,12 @@ KuiEvent kui_next_event(int timeout_ms)
 				if (strstr(buf, "goingToScreenSaver")) {
 					asleep = 1;
 					memset(&gesture, 0, sizeof gesture);
+					drag_reset();
 				}
 				if (strstr(buf, "outOfScreenSaver")) {
 					asleep = 0;
 					memset(&gesture, 0, sizeof gesture);
+					drag_reset();
 					return (KuiEvent){ KUI_EV_WAKE, 0, 0, KUI_DIR_NONE };
 				}
 			} else if (r == 0 || (r < 0 && errno != EAGAIN)) {
@@ -244,7 +340,7 @@ KuiEvent kui_next_event(int timeout_ms)
 		if (pf[0].revents & POLLIN) {
 			KuiEvent e = drain_touch();
 			if (e.type != KUI_EV_NONE) {
-				kui_crash_note_event((int) e.type, e.x, e.y); /* for a crash report */
+				if (e.type != KUI_EV_MOVE) kui_crash_note_event((int) e.type, e.x, e.y); /* for a crash report */
 				return e;
 			}
 		}

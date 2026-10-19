@@ -39,6 +39,8 @@
 %d/%d · güncellendi %02d:%02d	
 # apps/news/main.c
 %d/%d · çevrimdışı, son veri %02d:%02d	
+# apps/notlar/main.c
+%d–%d / %d · kaydırın	
 # apps/sysinfo/si.c
 %ld dk	
 # apps/sysinfo/si.c
@@ -125,6 +127,8 @@
 70.000'den fazla ücretsiz e-kitap. Arama İngilizce başlık ve yazar adlarıyla en iyi sonucu verir.	
 # apps/ebooks/main.c
 AZW3 Kindle'ın kendi okuyucusunda, EPUB KOReader'da açılır.	
+# apps/notlar/main.c
+Adsız çizim	
 # apps/ajanda/main.c
 Ajanda	
 # apps/sky/skydata.c
@@ -169,6 +173,8 @@ Aranıyor…
 Arap matı	
 # apps/puzzle/puzzle.c
 Araya girme	
+# apps/notlar/main.c
+Arka plan	
 # apps/sky/skydata.c
 Arktürüs	
 # apps/sky/skydata.c
@@ -245,6 +251,8 @@ Başak
 Başka bulmaca	
 # apps/odak/main.c
 Başla	
+# apps/notlar/main.c
+Başlık	
 # apps/puzzle/main.c
 Baştan başla	
 # apps/sysinfo/main.c
@@ -271,6 +279,10 @@ Boden matı
 Boğa	
 # apps/puzzle/puzzle.c
 Boğmaca mat	
+# apps/notlar/main.c
+Boş not.\n“Ekle” ile bir satır yazın.	
+# apps/notlar/main.c
+Boş yazı notu	
 # apps/sky/main.c
 Bu gece görünen gezegenler: %s	
 # apps/sky/main.c
@@ -313,6 +325,8 @@ Bulmacayı çözdünüz.
 Bütün kartlar açık. Oyun tamamlansın mı?	
 # apps/solitaire/main.c
 Bütün kartları yerleştirdin.	
+# apps/notlar/main.c
+Bütün sayfalar için	
 # apps/siir/main.c
 Bütün şiirlerden biri	
 # apps/sky/skydata.c
@@ -381,6 +395,8 @@ Dokun: aç
 Dokun: bayrak	
 # apps/odak/main.c
 Dokunun: Duraklat · +5 dk · Bitir	
+# apps/notlar/main.c
+Dokunun: düzenle · basılı tutun: sil	
 # apps/weather/wx.c
 Dolu, fırtına	
 # apps/pano/pano.c
@@ -411,16 +427,22 @@ Döviz & Altın
 Döviz ve altın	
 # apps/news/news.c
 Dünya	
+# apps/notlar/main.c
+Düz	
 # apps/ajanda/main.c
 Düzenle	
 # apps/chess/main.c
 Düşünüyor… (%s)	
+# apps/notlar/main.c
+Dışa aktar	
 # apps/ebooks/main.c
 E-Kitap	
 # apps/sky/skydata.c
 Ejderha	
 # core/kui/trfmt.c
 Ekim	
+# apps/notlar/main.c
+Ekle	
 # apps/news/news.c
 Ekonomi	
 # apps/ajanda/agenda.c
@@ -569,6 +591,8 @@ Hedef para
 Henüz favori şiir yok.\nBir şiirde ☆ düğmesine dokunun.	
 # apps/ebooks/main.c
 Henüz kitap indirilmedi.	
+# apps/notlar/main.c
+Henüz not yok.\n“Yeni” ile bir çizim ya da yazı notu başlatın.	
 # apps/odak/main.c
 Henüz oturum yok	
 # apps/ssh/main.c
@@ -621,6 +645,8 @@ Kaldırınca ayarlar ve kayıtlar (data/) korunur.
 Kale	
 # apps/puzzle/puzzle.c
 Kale oyun sonu	
+# apps/notlar/main.c
+Kalın	
 # apps/sky/skydata.c
 Kanatlı At	
 # apps/puzzle/puzzle.c
@@ -643,6 +669,8 @@ Kapella
 Kar sağanağı	
 # apps/weather/wx.c
 Kar taneleri	
+# apps/notlar/main.c
+Kareli	
 # apps/weather/wx.c
 Karlı	
 # apps/sky/skydata.c
@@ -813,8 +841,12 @@ Nem %s
 Nisan	
 # apps/ajanda/main.c
 Not	
+# apps/notlar/main.c
+Not Defteri	
 # apps/ajanda/main.c
 Not kaydedilemedi.	
+# apps/notlar/main.c
+Not silinsin mi?	
 # apps/sudoku/main.c
 Not: Açık	
 # apps/sudoku/main.c
@@ -863,6 +895,8 @@ Oğlak
 Parlaklık %s kadir	
 # apps/sky/main.c
 Parlaklık (kadir)	
+# apps/notlar/main.c
+Parmakla çizim mi, klavyeyle yazı mı?	
 # apps/ssh/main.c
 Parola	
 # apps/ssh/main.c
@@ -945,6 +979,8 @@ Regaib Kandili
 Regulus	
 # apps/chess/main.c
 Renginiz	
+# apps/notlar/main.c
+Resim kaydedilemedi.	
 # apps/ajanda/main.c
 Resmi tatil	
 # apps/sky/skydata.c
@@ -977,14 +1013,26 @@ Satranç
 Satranç Bulmacası	
 # apps/chess/main.c
 Satranç motoru çalışmadı.	
+# apps/notlar/main.c
+Satır silinsin mi?	
+# apps/notlar/main.c
+Satırı düzenle	
 # apps/currency/main.c
 Satış	
 # apps/puzzle/puzzle.c
 Savunanı alma	
 # apps/puzzle/puzzle.c
 Savunma hamlesi	
+# apps/notlar/main.c
+Sayfa	
+# apps/notlar/main.c
+Sayfa %d	
+# apps/notlar/main.c
+Sayfa %d / %d · %d çizgi	
 # apps/deprem/main.c
 Sayfa %d/%d	
+# apps/notlar/main.c
+Sayfa resim olarak kaydedildi:\ndocuments/Notlar\n%s	
 # apps/weather/wx.c
 Sağanak	
 # apps/news/news.c
@@ -997,6 +1045,8 @@ Seri: %d · En iyi seri: %d
 Sessiz hamle	
 # apps/ajanda/main.c
 Sil	
+# apps/notlar/main.c
+Silgi	
 # apps/sky/skydata.c
 Sirius	
 # apps/weather/wx.c
@@ -1109,6 +1159,10 @@ Teknoloji
 Tekrar dene	
 # apps/upload/main.c
 Telefon ya da bilgisayar aynı Wi-Fi ağında olmalı. Sayfada PIN'i girin, kitapları seçip Gönder'e basın. Uygulamayı kapatınca sunucu durur.	
+# apps/notlar/main.c
+Temizle	
+# apps/notlar/main.c
+Temizle: sayfadaki çizimler silinir.\nSil: sayfa nottan çıkarılır.	
 # core/kui/trfmt.c
 Temmuz	
 # apps/sky/skydata.c
@@ -1189,8 +1243,12 @@ Yatsı
 Yay	
 # apps/ebooks/main.c
 Yazar bilinmiyor	
-# apps/odak/odak.c
+# apps/notlar/main.c
 Yazı	
+# apps/notlar/main.c
+Yazı notu	
+# apps/notlar/main.c
+Yazı · %d satır	
 # apps/sysinfo/main.c
 Yazılım	
 # apps/weather/wx.c
@@ -1211,6 +1269,8 @@ Yeni etiket
 Yeni not	
 # apps/chess/main.c
 Yeni oyun	
+# apps/notlar/main.c
+Yeni satır	
 # apps/ebooks/main.c
 Yeniden dene	
 # core/hub/upd_ui.c
@@ -1267,6 +1327,8 @@ dk
 f2/f7 saldırısı	
 # apps/news/main.c
 güncellendi %02d:%02d	
+# apps/notlar/main.c
+sayfa	
 # apps/deprem/main.c
 son 24 saat	
 # apps/ajanda/main.c
@@ -1303,6 +1365,12 @@ yarım gün
 Çifte şah	
 # apps/weather/wx.c
 Çisenti	
+# apps/notlar/main.c
+Çizgili	
+# apps/notlar/main.c
+Çizim	
+# apps/notlar/main.c
+Çizim · %d sayfa	
 # apps/sky/skydata.c
 Çoban	
 # apps/chess/levels.c
@@ -1367,6 +1435,8 @@ yarım gün
 İlk dördün	
 # apps/pano/pano.c
 İmsak	
+# apps/notlar/main.c
+İnce	
 # apps/ebooks/main.c
 İndir	
 # apps/ebooks/main.c

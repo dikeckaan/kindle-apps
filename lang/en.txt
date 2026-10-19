@@ -740,3 +740,38 @@ Kolay okuma: Kapalı	Easy reading: Off
 Basit mod: Açık	Simple mode: On
 Basit mod: Kapalı	Simple mode: Off
 Kolay okuma: bütün yazılar büyük, kalın ve siyah olur.\nBasit mod: menüde dört büyük düğme; panoda yalnızca saat, hava ve üç haber. Teknik uygulamalar gizlenir; bu ekrandan her zaman geri açılabilir.	Easy reading: all text becomes large, bold and black.\nSimple mode: four big buttons in the menu; the dashboard shows only the clock, weather and three news items. Technical apps are hidden; you can always turn them back on from this screen.
+Not Defteri	Notebook
+Adsız çizim	Untitled drawing
+İnce	Thin
+Kalın	Thick
+Silgi	Eraser
+sayfa	page
+Sayfa resim olarak kaydedildi:\ndocuments/Notlar\n%s	Page saved as an image:\ndocuments/Notlar\n%s
+Resim kaydedilemedi.	The image could not be saved.
+Dışa aktar	Export
+Sayfa %d	Page %d
+Temizle	Clear
+Temizle: sayfadaki çizimler silinir.\nSil: sayfa nottan çıkarılır.	Clear: the drawing on this page is erased.\nDelete: the page is removed from the note.
+Arka plan	Background
+Başlık	Title
+Sayfa	Page
+Sayfa %d / %d · %d çizgi	Page %d / %d · %d strokes
+Düz	Plain
+Kareli	Squared
+Çizgili	Ruled
+Bütün sayfalar için	For all pages
+Yazı notu	Text note
+Ekle	Add
+Boş not.\n“Ekle” ile bir satır yazın.	Empty note.\nWrite a line with “Add”.
+%d–%d / %d · kaydırın	%d–%d / %d · swipe
+Dokunun: düzenle · basılı tutun: sil	Tap: edit · hold: delete
+Yeni satır	New line
+Satır silinsin mi?	Delete this line?
+Satırı düzenle	Edit line
+Henüz not yok.\n“Yeni” ile bir çizim ya da yazı notu başlatın.	No notes yet.\nStart a drawing or a text note with “New”.
+Boş yazı notu	Empty text note
+Çizim · %d sayfa	Drawing · %d pages
+Yazı · %d satır	Text · %d lines
+Çizim	Drawing
+Parmakla çizim mi, klavyeyle yazı mı?	Draw with your finger or type with the keyboard?
+Not silinsin mi?	Delete this note?

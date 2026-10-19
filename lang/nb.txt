@@ -740,3 +740,38 @@ Kolay okuma: Kapalı	Lettlest: Av
 Basit mod: Açık	Enkel modus: På
 Basit mod: Kapalı	Enkel modus: Av
 Kolay okuma: bütün yazılar büyük, kalın ve siyah olur.\nBasit mod: menüde dört büyük düğme; panoda yalnızca saat, hava ve üç haber. Teknik uygulamalar gizlenir; bu ekrandan her zaman geri açılabilir.	Lettlest: all tekst blir stor, fet og svart.\nEnkel modus: fire store knapper i menyen; oversikten viser bare klokke, vær og tre nyheter. Tekniske apper skjules; de kan alltid slås på igjen fra denne skjermen.
+Not Defteri	Notatbok
+Adsız çizim	Tegning uten navn
+İnce	Tynn
+Kalın	Tykk
+Silgi	Viskelær
+sayfa	side
+Sayfa resim olarak kaydedildi:\ndocuments/Notlar\n%s	Siden er lagret som bilde:\ndocuments/Notlar\n%s
+Resim kaydedilemedi.	Bildet kunne ikke lagres.
+Dışa aktar	Eksporter
+Sayfa %d	Side %d
+Temizle	Tøm
+Temizle: sayfadaki çizimler silinir.\nSil: sayfa nottan çıkarılır.	Tøm: tegningen på siden slettes.\nSlett: siden fjernes fra notatet.
+Arka plan	Bakgrunn
+Başlık	Tittel
+Sayfa	Side
+Sayfa %d / %d · %d çizgi	Side %d / %d · %d strøk
+Düz	Blank
+Kareli	Rutet
+Çizgili	Linjert
+Bütün sayfalar için	For alle sider
+Yazı notu	Tekstnotat
+Ekle	Legg til
+Boş not.\n“Ekle” ile bir satır yazın.	Tomt notat.\nSkriv en linje med «Legg til».
+%d–%d / %d · kaydırın	%d–%d / %d · sveip
+Dokunun: düzenle · basılı tutun: sil	Trykk: rediger · hold: slett
+Yeni satır	Ny linje
+Satır silinsin mi?	Slette linjen?
+Satırı düzenle	Rediger linje
+Henüz not yok.\n“Yeni” ile bir çizim ya da yazı notu başlatın.	Ingen notater ennå.\nStart en tegning eller et tekstnotat med «Nytt».
+Boş yazı notu	Tomt tekstnotat
+Çizim · %d sayfa	Tegning · %d sider
+Yazı · %d satır	Tekst · %d linjer
+Çizim	Tegning
+Parmakla çizim mi, klavyeyle yazı mı?	Tegne med fingeren eller skrive med tastaturet?
+Not silinsin mi?	Slette notatet?

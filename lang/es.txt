@@ -740,3 +740,38 @@ Kolay okuma: Kapalı	Lectura fácil: No
 Basit mod: Açık	Modo sencillo: Sí
 Basit mod: Kapalı	Modo sencillo: No
 Kolay okuma: bütün yazılar büyük, kalın ve siyah olur.\nBasit mod: menüde dört büyük düğme; panoda yalnızca saat, hava ve üç haber. Teknik uygulamalar gizlenir; bu ekrandan her zaman geri açılabilir.	Lectura fácil: todo el texto se vuelve grande, en negrita y negro.\nModo sencillo: cuatro botones grandes en el menú; el panel muestra solo la hora, el tiempo y tres noticias. Las apps técnicas se ocultan; siempre se pueden volver a activar desde esta pantalla.
+Not Defteri	Cuaderno
+Adsız çizim	Dibujo sin título
+İnce	Fino
+Kalın	Grueso
+Silgi	Goma
+sayfa	página
+Sayfa resim olarak kaydedildi:\ndocuments/Notlar\n%s	Página guardada como imagen:\ndocuments/Notlar\n%s
+Resim kaydedilemedi.	No se pudo guardar la imagen.
+Dışa aktar	Exportar
+Sayfa %d	Página %d
+Temizle	Vaciar
+Temizle: sayfadaki çizimler silinir.\nSil: sayfa nottan çıkarılır.	Vaciar: se borra el dibujo de esta página.\nBorrar: se quita la página de la nota.
+Arka plan	Fondo
+Başlık	Título
+Sayfa	Página
+Sayfa %d / %d · %d çizgi	Página %d / %d · %d trazos
+Düz	Liso
+Kareli	Cuadriculado
+Çizgili	Rayado
+Bütün sayfalar için	Para todas las páginas
+Yazı notu	Nota de texto
+Ekle	Añadir
+Boş not.\n“Ekle” ile bir satır yazın.	Nota vacía.\nEscribe una línea con «Añadir».
+%d–%d / %d · kaydırın	%d–%d / %d · desliza
+Dokunun: düzenle · basılı tutun: sil	Toca: editar · mantén: borrar
+Yeni satır	Nueva línea
+Satır silinsin mi?	¿Borrar esta línea?
+Satırı düzenle	Editar línea
+Henüz not yok.\n“Yeni” ile bir çizim ya da yazı notu başlatın.	Aún no hay notas.\nEmpieza un dibujo o una nota de texto con «Nueva».
+Boş yazı notu	Nota de texto vacía
+Çizim · %d sayfa	Dibujo · %d páginas
+Yazı · %d satır	Texto · %d líneas
+Çizim	Dibujo
+Parmakla çizim mi, klavyeyle yazı mı?	¿Dibujar con el dedo o escribir con el teclado?
+Not silinsin mi?	¿Borrar esta nota?

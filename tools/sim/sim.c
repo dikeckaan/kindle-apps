@@ -2,6 +2,10 @@
  * stb_truetype (same DejaVu fonts as the device) and writes a PNG at every kui_flush to $KUI_SIM_OUT.
  * Input comes from $KUI_SIM, a ';'-separated script:
  *   tap X Y | long X Y | swipe left|right|up|down | wake | none | asleep 0|1
+ *   draw X1 Y1 X2 Y2 … — a finger dragged along the polyline (samples every 6 px, 8 ms apart): with
+ *   kui_set_drag_events(1) on, KUI_EV_DOWN / MOVE… / UP and then the gesture; otherwise only the gesture.
+ *   In drag mode tap and long also arrive as DOWN, UP, then TAP / LONGPRESS (as on the device).
+ * kui_flush_fast writes a "<app>_NNN_ink.png" screenshot.
  * When the script is exhausted the app receives KUI_EV_QUIT.
  * Glyphs missing from the font are drawn as a crossed box so they stand out in screenshots. */
 #define STB_TRUETYPE_IMPLEMENTATION
@@ -21,6 +25,48 @@ static int shot, asleep;
 static const char *script;
 static KuiDirty dirty;
 static char app_name[64];
+static int drag_mode;
+#define QN 4096
+static KuiEvent queue[QN];
+static int q_head, q_len;
+static long sim_t = 100000; /* synthetic clock for drag samples (ms) */
+
+void kui_set_drag_events(int on)
+{
+	drag_mode = on != 0;
+	q_head = q_len = 0;
+}
+
+static void q_push(const KuiEvent *e, int n)
+{
+	for (int i = 0; i < n && q_len < QN; i++) queue[(q_head + q_len++) % QN] = e[i];
+}
+
+/* a touch along pts (n points): queued as the device would report it; returns the gesture event */
+static KuiEvent sim_touch(const int *pts, int n, long hold_ms)
+{
+	KuiDrag d = { 0 };
+	KuiEvent evs[KUI_DRAG_MAX_OUT], gest = { KUI_EV_NONE, 0, 0, KUI_DIR_NONE };
+	int k = kui_drag_feed(&d, 0, pts[0], pts[1], sim_t, evs), base = q_len;
+	q_push(evs, k);
+	for (int i = 1; i < n; i++) {
+		int x0 = pts[2 * i - 2], y0 = pts[2 * i - 1], x1 = pts[2 * i], y1 = pts[2 * i + 1];
+		int dx = x1 - x0, dy = y1 - y0, len = abs(dx) > abs(dy) ? abs(dx) : abs(dy), steps = len / 6 + 1;
+		for (int s = 1; s <= steps; s++) {
+			sim_t += 8;
+			k = kui_drag_feed(&d, 0, x0 + dx * s / steps, y0 + dy * s / steps, sim_t, evs);
+			q_push(evs, k);
+		}
+	}
+	sim_t += hold_ms + 8;
+	k = kui_drag_feed(&d, -1, 0, 0, sim_t, evs);
+	for (int i = 0; i < k; i++)
+		if (evs[i].type != KUI_EV_UP) gest = evs[i];
+	if (drag_mode) q_push(evs, k);
+	else q_len = base; /* without drag events only the gesture is delivered */
+	sim_t += 50;
+	return gest;
+}
 
 static unsigned char *slurp(const char *path)
 {
@@ -294,6 +340,12 @@ KuiEvent kui_next_event(int timeout_ms)
 	(void) timeout_ms;
 	KuiEvent e = { KUI_EV_QUIT, 0, 0, KUI_DIR_NONE };
 	for (;;) {
+		if (q_len) {
+			KuiEvent q = queue[q_head];
+			q_head = (q_head + 1) % QN;
+			q_len--;
+			return q;
+		}
 		while (*script == ';' || *script == ' ') script++;
 		if (!*script) return e;
 		char cmd[16] = "", arg[16] = "";
@@ -307,6 +359,11 @@ KuiEvent kui_next_event(int timeout_ms)
 			sscanf(script, "%d %d %n", &x, &y, &used);
 			script += used;
 			fprintf(stderr, "sim: %s %d %d\n", cmd, x, y);
+			if (drag_mode) {
+				int pt[2] = { x, y };
+				sim_touch(pt, 1, cmd[0] == 't' ? 80 : KUI_LONGPRESS_MS + 100);
+				continue;
+			}
 			return (KuiEvent){ cmd[0] == 't' ? KUI_EV_TAP : KUI_EV_LONGPRESS, x, y, KUI_DIR_NONE };
 		}
 		if (!strcmp(cmd, "swipe")) {
@@ -314,6 +371,20 @@ KuiEvent kui_next_event(int timeout_ms)
 			script += used;
 			KuiDir dir = !strcmp(arg, "left") ? KUI_DIR_LEFT : !strcmp(arg, "right") ? KUI_DIR_RIGHT : !strcmp(arg, "up") ? KUI_DIR_UP : KUI_DIR_DOWN;
 			return (KuiEvent){ KUI_EV_SWIPE, 0, 0, dir };
+		}
+		if (!strcmp(cmd, "draw")) {
+			static int pts[2 * 1024];
+			int n = 0, v;
+			while (n < 2 * 1024 && sscanf(script, "%d %n", &v, &used) == 1) {
+				pts[n++] = v;
+				script += used;
+			}
+			n /= 2;
+			if (n < 1) continue;
+			fprintf(stderr, "sim: draw (%d points)\n", n);
+			KuiEvent g = sim_touch(pts, n, 0);
+			if (!drag_mode && g.type != KUI_EV_NONE) return g;
+			continue;
 		}
 		if (!strcmp(cmd, "wake")) {
 			asleep = 0;
@@ -327,6 +398,19 @@ KuiEvent kui_next_event(int timeout_ms)
 		if (!strcmp(cmd, "none")) return (KuiEvent){ KUI_EV_NONE, 0, 0, KUI_DIR_NONE };
 		fprintf(stderr, "sim: unknown command %s\n", cmd);
 	}
+}
+
+void kui_flush_fast(KuiRect r)
+{
+	if (asleep || r.w <= 0 || r.h <= 0) return;
+	const char *out = getenv("KUI_SIM_OUT");
+	if (out && *out) {
+		char path[512];
+		snprintf(path, sizeof path, "%s/%s_%03d_ink.png", out, app_name, shot);
+		write_png(path, 0, &dirty);
+		fprintf(stderr, "sim: flush %d (ink %dx%d) -> %s\n", shot, r.w, r.h, path);
+	}
+	shot++;
 }
 
 void kui_wait_refresh(void) {}

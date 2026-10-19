@@ -740,3 +740,38 @@ Kolay okuma: Kapalı	Лёгкое чтение: выкл
 Basit mod: Açık	Простой режим: вкл
 Basit mod: Kapalı	Простой режим: выкл
 Kolay okuma: bütün yazılar büyük, kalın ve siyah olur.\nBasit mod: menüde dört büyük düğme; panoda yalnızca saat, hava ve üç haber. Teknik uygulamalar gizlenir; bu ekrandan her zaman geri açılabilir.	Лёгкое чтение: весь текст становится крупным, жирным и чёрным.\nПростой режим: четыре большие кнопки в меню; на панели только часы, погода и три новости. Технические приложения скрываются; их всегда можно вернуть на этом экране.
+Not Defteri	Блокнот
+Adsız çizim	Рисунок без названия
+İnce	Тонкий
+Kalın	Толстый
+Silgi	Ластик
+sayfa	стр.
+Sayfa resim olarak kaydedildi:\ndocuments/Notlar\n%s	Страница сохранена как изображение:\ndocuments/Notlar\n%s
+Resim kaydedilemedi.	Не удалось сохранить изображение.
+Dışa aktar	Экспорт
+Sayfa %d	Страница %d
+Temizle	Очистить
+Temizle: sayfadaki çizimler silinir.\nSil: sayfa nottan çıkarılır.	Очистить: рисунок на странице стирается.\nСтереть: страница удаляется из заметки.
+Arka plan	Фон
+Başlık	Заголовок
+Sayfa	Страница
+Sayfa %d / %d · %d çizgi	Страница %d / %d · штрихов: %d
+Düz	Чистый
+Kareli	В клетку
+Çizgili	В линейку
+Bütün sayfalar için	Для всех страниц
+Yazı notu	Текстовая заметка
+Ekle	Добавить
+Boş not.\n“Ekle” ile bir satır yazın.	Пустая заметка.\nНапишите строку кнопкой «Добавить».
+%d–%d / %d · kaydırın	%d–%d / %d · листайте
+Dokunun: düzenle · basılı tutun: sil	Нажатие: изменить · удержание: стереть
+Yeni satır	Новая строка
+Satır silinsin mi?	Стереть эту строку?
+Satırı düzenle	Изменить строку
+Henüz not yok.\n“Yeni” ile bir çizim ya da yazı notu başlatın.	Заметок пока нет.\nНачните рисунок или текстовую заметку кнопкой «Новая».
+Boş yazı notu	Пустая текстовая заметка
+Çizim · %d sayfa	Рисунок · страниц: %d
+Yazı · %d satır	Текст · строк: %d
+Çizim	Рисунок
+Parmakla çizim mi, klavyeyle yazı mı?	Рисовать пальцем или печатать на клавиатуре?
+Not silinsin mi?	Стереть эту заметку?
