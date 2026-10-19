@@ -740,3 +740,90 @@ Kolay okuma: Kapalı	Lettura facile: No
 Basit mod: Açık	Modo semplice: Sì
 Basit mod: Kapalı	Modo semplice: No
 Kolay okuma: bütün yazılar büyük, kalın ve siyah olur.\nBasit mod: menüde dört büyük düğme; panoda yalnızca saat, hava ve üç haber. Teknik uygulamalar gizlenir; bu ekrandan her zaman geri açılabilir.	Lettura facile: tutti i testi diventano grandi, in grassetto e neri.\nModo semplice: quattro grandi pulsanti nel menu; il pannello mostra solo ora, meteo e tre notizie. Le app tecniche vengono nascoste; si possono sempre riattivare da questa schermata.
+Süre doldu!	Tempo scaduto!
+Kapatmak için dokunun	Tocca per chiudere
+Çorba	Zuppa
+Ana yemek	Piatto principale
+Tatlı	Dolce
+Salata, meze	Insalata, meze
+Hamur işi	Lievitati
+Kahvaltılık	Colazione
+İçecek	Bevanda
+Vegan	Vegano
+Vejetaryen	Vegetariano
+İngilizce	Inglese
+%d/%d malzeme	%d/%d ingredienti
+İngilizce tarif	Ricetta inglese
+Malzemeler (%d kişilik)	Ingredienti (%d persone)
+Malzemeler (%d kişilik, tahmini)	Ingredienti (%d persone, stima)
+Hazırlanışı	Preparazione
+Kaynak: %s · %s · %s	Fonte: %s · %s · %s
+ — Wikibooks katkıcılarının metni, biçimi değiştirildi; aynı lisansla paylaşılır.	 — testo dei contributori di Wikibooks, formato modificato; condiviso con la stessa licenza.
+Kişi:	Persone:
+Pişirme modu ▶	Modalità cucina ▶
+Tarif	Ricetta
+Hazırlık · %d kişilik	Preparazione · %d persone
+Adım %d / %d	Passo %d / %d
+◀ Önceki	◀ Precedente
+Sonraki ▶	Successivo ▶
+Pişirme modu	Modalità cucina
+Süreler	Timer
+%d sn	%d s
+Zamanlayıcı kur: %s	Imposta timer: %s
+Bitti ✓	Fatto ✓
+Adım %d · %s	Passo %d · %s
+Zamanlayıcılar	Timer
+En çok 6 zamanlayıcı kurulabilir.	Al massimo 6 timer.
+Ad ver	Dai un nome
+Zamanlayıcı %d	Timer %d
+Kurulu zamanlayıcı yok.	Nessun timer impostato.
+Yeni: %s	Nuovo: %s
+Süre dolunca ekrandaki kutu yanıp söner (Kindle'da hoparlör yok). Zamanlayıcılar Tarifler açıkken çalışır.	Allo scadere del tempo il riquadro sullo schermo lampeggia (il Kindle non ha altoparlante). I timer funzionano mentre Ricette è aperta.
+Bitti	Fatto
+Zamanlayıcının adı	Nome del timer
+Türkçe	Turco
+ · çevrimdışı kayıtlı	 · salvata offline
+Çevrimiçi aranıyor…	Ricerca online…
+“%s” · %d sonuç · seçilen tarif çevrimdışı için saklanır	“%s” · %d risultati · la ricetta scelta viene salvata offline
+Çevrimiçi sonuçlar	Risultati online
+Sonuç yok ya da bağlantı kurulamadı.\nWi-Fi bağlantısını kontrol edin.	Nessun risultato o nessuna connessione.\nControlla la connessione Wi-Fi.
+Tarif açılamadı	Impossibile aprire la ricetta
+Bu sayfada malzeme listesi bulunamadı ya da bağlantı kesildi.	Nessun elenco di ingredienti in questa pagina, oppure la connessione è caduta.
+Elinizdeki malzemeler (ör. domates, yumurta)	Ingredienti che hai (es. pomodoro, uovo)
+Tarif ara (ad ya da ülke)	Cerca ricetta (nome o paese)
+“%s” · %d tarif	“%s” · %d ricette
+Elimde ne var?	Cosa ho in casa?
+Arama	Ricerca
+Çevrimiçi ara	Cerca online
+Çevrimdışı tariflerde bulunamadı.\nAşağıdan çevrimiçi arayabilirsiniz.	Non trovata tra le ricette offline.\nPuoi cercare online qui sotto.
+%d tarif	%d ricette
+%d tarif · %d Türkçe, %d İngilizce	%d ricette · %d in turco, %d in inglese
+Dünya mutfağı	Cucina del mondo
+Ülkeler, tarif sayısına göre	Paesi, per numero di ricette
+Anahtar gir	Inserisci chiave
+Anahtarı sil	Elimina chiave
+Çevrimdışı: %d tarif (%d Türkçe, %d İngilizce) · kaydedilen: %d	Offline: %d ricette (%d in turco, %d in inglese) · salvate: %d
+Vikikitap Yemek Kitabı (tr.wikibooks.org) ve Wikibooks Cookbook (en.wikibooks.org): Wikibooks katkıcılarının metinleri, CC BY-SA 4.0 lisansıyla. Biçim sadeleştirildi; her tarifin altında sayfa adresi var. İnternette de bu iki kaynakta aranır.	Vikikitap Yemek Kitabı (ricettario del Wikibooks turco, tr.wikibooks.org) e Wikibooks Cookbook (en.wikibooks.org): testi dei contributori di Wikibooks, con licenza CC BY-SA 4.0. Formato semplificato; sotto ogni ricetta c'è l'indirizzo della pagina. Anche la ricerca online usa queste due fonti.
+TheMealDB (themealdb.com) isteğe bağlıdır: ücretsiz deneme anahtarı "1" yalnızca geliştirme ve eğitim içindir, herkese açık uygulamalar destekçi anahtarı ister. Kendi anahtarınızı girerseniz çevrimiçi aramada TheMealDB de kullanılır (veri ve görseller: TheMealDB).	TheMealDB (themealdb.com) è facoltativo: la chiave di prova gratuita "1" è solo per sviluppo e didattica; le app pubbliche richiedono una chiave sostenitore. Se inserisci la tua chiave, la ricerca online usa anche TheMealDB (dati e immagini: TheMealDB).
+Miktarlar kişi sayısına göre yaklaşık ölçeklenir; vegan/vejetaryen etiketleri malzemelerden çıkarılır, alerjiler için tarifi kontrol edin.	Le quantità si adattano approssimativamente al numero di persone; le etichette vegano/vegetariano sono dedotte dagli ingredienti, controlla la ricetta in caso di allergie.
+TheMealDB anahtarı: %s	Chiave TheMealDB: %s
+yok	nessuna
+TheMealDB API anahtarı	Chiave API TheMealDB
+Türk mutfağı	Cucina turca
+Çorbalar	Zuppe
+Ana yemekler	Piatti principali
+Tatlılar	Dolci
+Salata ve mezeler	Insalate e meze
+Hamur işleri	Lievitati e pane
+Tarifler	Ricette
+Tarif ara	Cerca ricetta
+%d ülke	%d paesi
+★ Favoriler (%d)	★ Preferiti (%d)
+Son bakılanlar (%d)	Viste di recente (%d)
+Zamanlayıcılar (%d)	Timer (%d)
+%d tarif çevrimdışı (%d Türkçe) · Vikikitap, Wikibooks · CC BY-SA 4.0	%d ricette offline (%d in turco) · Vikikitap, Wikibooks · CC BY-SA 4.0
+Kaynaklar ve ayarlar	Fonti e impostazioni
+Henüz favori tarif yok.\nBir tarifte ☆ düğmesine dokunun.	Ancora nessuna ricetta preferita.\nTocca ☆ in una ricetta.
+Son bakılanlar	Viste di recente
+Henüz tarif açılmadı.	Nessuna ricetta aperta.
+Tarifler yüklenemedi.	Impossibile caricare le ricette.

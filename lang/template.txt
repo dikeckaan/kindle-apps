@@ -1,4 +1,8 @@
 # Translatable texts (Turkish source). Catalog lines: source<TAB>translation; \n and \t escaped.
+# apps/tarif/main.c
+ · çevrimdışı kayıtlı	
+# apps/tarif/main.c
+ — Wikibooks katkıcılarının metni, biçimi değiştirildi; aynı lisansla paylaşılır.	
 # apps/sysinfo/main.c
 %%%d	
 # apps/sysinfo/main.c
@@ -25,6 +29,16 @@
 %d sa %d dk	
 # apps/deprem/deprem.c
 %d sa önce	
+# apps/tarif/main.c
+%d sn	
+# apps/tarif/main.c
+%d tarif	
+# apps/tarif/main.c
+%d tarif · %d Türkçe, %d İngilizce	
+# apps/tarif/main.c
+%d tarif çevrimdışı (%d Türkçe) · Vikikitap, Wikibooks · CC BY-SA 4.0	
+# apps/tarif/main.c
+%d ülke	
 # apps/siir/main.c
 %d şair, yüzyıllara göre	
 # apps/siir/main.c
@@ -35,6 +49,8 @@
 %d şiir · %d şair · kaynak: Vikikaynak (kamu malı)	
 # apps/upload/main.c
 %d-%d portları dolu ya da %s yok.	
+# apps/tarif/main.c
+%d/%d malzeme	
 # apps/news/main.c
 %d/%d · güncellendi %02d:%02d	
 # apps/news/main.c
@@ -125,6 +141,12 @@
 70.000'den fazla ücretsiz e-kitap. Arama İngilizce başlık ve yazar adlarıyla en iyi sonucu verir.	
 # apps/ebooks/main.c
 AZW3 Kindle'ın kendi okuyucusunda, EPUB KOReader'da açılır.	
+# apps/tarif/main.c
+Ad ver	
+# apps/tarif/main.c
+Adım %d / %d	
+# apps/tarif/main.c
+Adım %d · %s	
 # apps/ajanda/main.c
 Ajanda	
 # apps/sky/skydata.c
@@ -147,6 +169,14 @@ Alındı: %s (KOReader ile açın)
 Alınıyor: %s	
 # apps/currency/main.c
 Alış	
+# apps/tarif/main.c
+Ana yemek	
+# apps/tarif/main.c
+Ana yemekler	
+# apps/tarif/main.c
+Anahtar gir	
+# apps/tarif/main.c
+Anahtarı sil	
 # apps/puzzle/puzzle.c
 Anastasia matı	
 # apps/sky/skydata.c
@@ -163,6 +193,8 @@ Ara hamle
 Arabacı	
 # core/kui/trfmt.c
 Aralık	
+# apps/tarif/main.c
+Arama	
 # apps/ebooks/main.c
 Aranıyor…	
 # apps/puzzle/puzzle.c
@@ -261,6 +293,10 @@ Beyaz oynar
 Bilim	
 # apps/odak/main.c
 Bitir	
+# apps/tarif/main.c
+Bitti	
+# apps/tarif/main.c
+Bitti ✓	
 # apps/ebooks/main.c
 Biçim:	
 # apps/ebooks/main.c
@@ -285,6 +321,8 @@ Bu oturumda gelenler (%d)
 Bu oturumda henüz dosya gelmedi	
 # apps/chess/main.c
 Bu oyun bitirilsin mi?	
+# apps/tarif/main.c
+Bu sayfada malzeme listesi bulunamadı ya da bağlantı kesildi.	
 # apps/wordle/main.c
 Bu sefer olmadı	
 # apps/deprem/main.c
@@ -411,6 +449,8 @@ Döviz & Altın
 Döviz ve altın	
 # apps/news/news.c
 Dünya	
+# apps/tarif/main.c
+Dünya mutfağı	
 # apps/ajanda/main.c
 Düzenle	
 # apps/chess/main.c
@@ -423,6 +463,10 @@ Ejderha
 Ekim	
 # apps/news/news.c
 Ekonomi	
+# apps/tarif/main.c
+Elimde ne var?	
+# apps/tarif/main.c
+Elinizdeki malzemeler (ör. domates, yumurta)	
 # apps/ajanda/agenda.c
 Emek ve Dayanışma Günü	
 # core/kui/widgets.c
@@ -437,6 +481,8 @@ En iyi
 En iyi seri	
 # apps/sky/main.c
 En parlak yıldızı: %s	
+# apps/tarif/main.c
+En çok 6 zamanlayıcı kurulabilir.	
 # apps/odak/main.c
 Etiket (silmek için basılı tutun)	
 # apps/odak/main.c
@@ -537,6 +583,10 @@ Haberler alınamadı.\nWi-Fi bağlantısını kontrol edin.
 Hafta %d · Gün %d	
 # apps/puzzle/main.c
 Hamlenizi yapın · Seri: %d	
+# apps/tarif/main.c
+Hamur işi	
+# apps/tarif/main.c
+Hamur işleri	
 # apps/wordle/main.c
 Harika!	
 # apps/deprem/main.c
@@ -563,8 +613,14 @@ Hava durumu: %d saatte bir
 Hayır	
 # core/kui/trfmt.c
 Haziran	
+# apps/tarif/main.c
+Hazırlanışı	
+# apps/tarif/main.c
+Hazırlık · %d kişilik	
 # apps/currency/main.c
 Hedef para	
+# apps/tarif/main.c
+Henüz favori tarif yok.\nBir tarifte ☆ düğmesine dokunun.	
 # apps/siir/main.c
 Henüz favori şiir yok.\nBir şiirde ☆ düğmesine dokunun.	
 # apps/ebooks/main.c
@@ -573,6 +629,8 @@ Henüz kitap indirilmedi.
 Henüz oturum yok	
 # apps/ssh/main.c
 Henüz parola yok	
+# apps/tarif/main.c
+Henüz tarif açılmadı.	
 # apps/puzzle/main.c
 Henüz çözülen bulmaca yok.	
 # apps/chess/main.c
@@ -609,6 +667,8 @@ KD
 Kadir Gecesi	
 # apps/sky/skydata.c
 Kahraman	
+# apps/tarif/main.c
+Kahvaltılık	
 # core/kui/powerui.c
 Kalan süre: biraz daha kullanım sonra hesaplanır	
 # core/hub/upd_ui.c
@@ -635,6 +695,8 @@ Kapalı (gelen bağlantılara açık)
 Kapana kısılan taş	
 # apps/chess/main.c
 Kapat	
+# apps/tarif/main.c
+Kapatmak için dokunun	
 # apps/firewall/main.c
 Kapatıldı. Kindle yeniden başlayınca tekrar açılır.	
 # apps/sky/skydata.c
@@ -659,6 +721,8 @@ Kaynak
 Kaynak para	
 # apps/news/reader.c
 Kaynak: %s	
+# apps/tarif/main.c
+Kaynak: %s · %s · %s	
 # apps/deprem/main.c
 Kaynak: Boğaziçi Üni. Kandilli Rasathanesi (KRDAE)	
 # apps/deprem/main.c
@@ -667,6 +731,8 @@ Kaynak: EMSC
 Kaynak: gutenberg.org/ebooks/%d	
 # apps/news/main.c
 Kaynaklar	
+# apps/tarif/main.c
+Kaynaklar ve ayarlar	
 # apps/news/main.c
 Kaynağa dokunun: haberlerini açar. ☑ / ☐: ön sayfada gösterilsin mi.	
 # apps/mines/main.c
@@ -693,6 +759,8 @@ Kitap ara
 Kitap ara (başlık veya yazar)	
 # apps/ebooks/main.c
 Kitaplığa eklendi:\n%s	
+# apps/tarif/main.c
+Kişi:	
 # apps/chess/levels.c
 Kolay	
 # core/hub/main.c
@@ -737,6 +805,8 @@ Kurulu
 Kurulu değil	
 # core/hub/upd_ui.c
 Kurulu sürüm: %s	
+# apps/tarif/main.c
+Kurulu zamanlayıcı yok.	
 # core/hub/upd_ui.c
 Kuruluyor…	
 # apps/sky/skydata.c
@@ -759,6 +829,10 @@ Kırlangıç matı
 Liste	
 # apps/odak/main.c
 MOLA	
+# apps/tarif/main.c
+Malzemeler (%d kişilik)	
+# apps/tarif/main.c
+Malzemeler (%d kişilik, tahmini)	
 # apps/news/news.c
 Manşet	
 # core/kui/trfmt.c
@@ -785,6 +859,8 @@ Menü sırası
 Mevcut oyun silinsin mi?	
 # apps/ajanda/agenda.c
 Mevlid Kandili	
+# apps/tarif/main.c
+Miktarlar kişi sayısına göre yaklaşık ölçeklenir; vegan/vejetaryen etiketleri malzemelerden çıkarılır, alerjiler için tarifi kontrol edin.	
 # apps/ajanda/agenda.c
 Miraç Kandili	
 # apps/sky/skydata.c
@@ -907,6 +983,10 @@ Pil ve ekran…
 Piyon hangi taşa dönüşsün?	
 # apps/puzzle/puzzle.c
 Piyon oyun sonu	
+# apps/tarif/main.c
+Pişirme modu	
+# apps/tarif/main.c
+Pişirme modu ▶	
 # apps/sky/skydata.c
 Polluks	
 # apps/odak/main.c
@@ -967,6 +1047,10 @@ SSH sunucusu
 Safer	
 # core/kui/trfmt.c
 Sal	
+# apps/tarif/main.c
+Salata ve mezeler	
+# apps/tarif/main.c
+Salata, meze	
 # core/kui/trfmt.c
 Salı	
 # apps/puzzle/puzzle.c
@@ -1019,6 +1103,10 @@ Son 7 gün
 Son Depremler	
 # apps/wordle/main.c
 Son anda!	
+# apps/tarif/main.c
+Son bakılanlar	
+# apps/tarif/main.c
+Son bakılanlar (%d)	
 # apps/news/news.c
 Son dakika	
 # apps/pano/main.c
@@ -1033,10 +1121,14 @@ Sonraki
 Sonraki aşama kendiliğinden başlasın	
 # apps/puzzle/main.c
 Sonraki hamle	
+# apps/tarif/main.c
+Sonraki ▶	
 # apps/weather/main.c
 Sonuç bulunamadı	
 # apps/ebooks/main.c
 Sonuç bulunamadı.\nBaşka bir başlık ya da yazar adı deneyin.	
+# apps/tarif/main.c
+Sonuç yok ya da bağlantı kurulamadı.\nWi-Fi bağlantısını kontrol edin.	
 # apps/ebooks/main.c
 Sonuçlar	
 # apps/sky/skydata.c
@@ -1055,8 +1147,14 @@ Sözlükte yok (yalnızca kök kelimeler)
 Süheyl	
 # apps/odak/main.c
 Süre	
+# apps/tarif/main.c
+Süre doldu!	
+# apps/tarif/main.c
+Süre dolunca ekrandaki kutu yanıp söner (Kindle'da hoparlör yok). Zamanlayıcılar Tarifler açıkken çalışır.	
 # apps/mines/main.c
 Süre: %ld:%02ld	
+# apps/tarif/main.c
+Süreler	
 # apps/chess/main.c
 Sıra: %s	
 # apps/pano/main.c
@@ -1093,10 +1191,26 @@ Tamamla
 Tamamlanan odak: %s · %s	
 # apps/upload/main.c
 Tarayıcıda bu adresi açın:	
+# apps/tarif/main.c
+Tarif	
+# apps/tarif/main.c
+Tarif ara	
+# apps/tarif/main.c
+Tarif ara (ad ya da ülke)	
+# apps/tarif/main.c
+Tarif açılamadı	
+# apps/tarif/main.c
+Tarifler	
+# apps/tarif/main.c
+Tarifler yüklenemedi.	
 # apps/pano/main.c
 Tarihte bugün	
 # apps/pano/main.c
 Tarihte bugün · %d	
+# apps/tarif/main.c
+Tatlı	
+# apps/tarif/main.c
+Tatlılar	
 # apps/game2048/main.c
 Tebrikler!	
 # apps/solitaire/main.c
@@ -1115,6 +1229,12 @@ Temmuz
 Terazi	
 # apps/chess/main.c
 Terfi	
+# apps/tarif/main.c
+TheMealDB (themealdb.com) isteğe bağlıdır: ücretsiz deneme anahtarı "1" yalnızca geliştirme ve eğitim içindir, herkese açık uygulamalar destekçi anahtarı ister. Kendi anahtarınızı girerseniz çevrimiçi aramada TheMealDB de kullanılır (veri ve görseller: TheMealDB).	
+# apps/tarif/main.c
+TheMealDB API anahtarı	
+# apps/tarif/main.c
+TheMealDB anahtarı: %s	
 # apps/currency/main.c
 Tüm kurlar	
 # core/hub/upd_ui.c
@@ -1123,10 +1243,14 @@ Tüm uygulamalar güncel
 Tümü	
 # core/hub/upd_ui.c
 Tümünü güncelle	
+# apps/tarif/main.c
+Türk mutfağı	
 # apps/news/news.c
 Türkiye	
 # apps/deprem/main.c
 Türkiye saati	
+# apps/tarif/main.c
+Türkçe	
 # apps/odak/main.c
 UZUN MOLA	
 # apps/ajanda/agenda.c
@@ -1159,6 +1283,10 @@ Uzun · 50 / 10 dk
 Vazgeç	
 # apps/sky/skydata.c
 Vega	
+# apps/tarif/main.c
+Vegan	
+# apps/tarif/main.c
+Vejetaryen	
 # apps/chess/main.c
 Vezir	
 # apps/puzzle/puzzle.c
@@ -1167,6 +1295,8 @@ Vezir kanadı saldırısı
 Vezir oyun sonu	
 # apps/puzzle/puzzle.c
 Vezir ve kale oyun sonu	
+# apps/tarif/main.c
+Vikikitap Yemek Kitabı (tr.wikibooks.org) ve Wikibooks Cookbook (en.wikibooks.org): Wikibooks katkıcılarının metinleri, CC BY-SA 4.0 lisansıyla. Biçim sadeleştirildi; her tarifin altında sayfa adresi var. İnternette de bu iki kaynakta aranır.	
 # apps/puzzle/main.c
 Wi-Fi bağlantısını kontrol edin.	
 # apps/upload/main.c
@@ -1211,6 +1341,8 @@ Yeni etiket
 Yeni not	
 # apps/chess/main.c
 Yeni oyun	
+# apps/tarif/main.c
+Yeni: %s	
 # apps/ebooks/main.c
 Yeniden dene	
 # core/hub/upd_ui.c
@@ -1239,6 +1371,16 @@ Yıldız · %s
 Yıldız · %s · %s	
 # apps/ajanda/agenda.c
 Zafer Bayramı	
+# apps/tarif/main.c
+Zamanlayıcı %d	
+# apps/tarif/main.c
+Zamanlayıcı kur: %s	
+# apps/tarif/main.c
+Zamanlayıcılar	
+# apps/tarif/main.c
+Zamanlayıcılar (%d)	
+# apps/tarif/main.c
+Zamanlayıcının adı	
 # apps/ajanda/agenda.c
 Zilhicce	
 # apps/ajanda/agenda.c
@@ -1271,6 +1413,8 @@ güncellendi %02d:%02d
 son 24 saat	
 # apps/ajanda/main.c
 yarım gün	
+# apps/tarif/main.c
+yok	
 # apps/sky/skydata.c
 Çalgı	
 # apps/sysinfo/main.c
@@ -1289,12 +1433,22 @@ yarım gün
 Çekme	
 # apps/currency/main.c
 Çevirici	
+# apps/tarif/main.c
+Çevrimdışı tariflerde bulunamadı.\nAşağıdan çevrimiçi arayabilirsiniz.	
 # apps/currency/main.c
 Çevrimdışı · güncellendi %d %s %02d:%02d	
 # apps/deprem/main.c
 Çevrimdışı — son veri %s · %s	
 # apps/weather/main.c
 Çevrimdışı — son veri %s · Open-Meteo	
+# apps/tarif/main.c
+Çevrimdışı: %d tarif (%d Türkçe, %d İngilizce) · kaydedilen: %d	
+# apps/tarif/main.c
+Çevrimiçi ara	
+# apps/tarif/main.c
+Çevrimiçi aranıyor…	
+# apps/tarif/main.c
+Çevrimiçi sonuçlar	
 # apps/currency/fx.c
 Çeyrek altın	
 # apps/puzzle/puzzle.c
@@ -1311,6 +1465,10 @@ yarım gün
 Çok fazla yanlış PIN denendi.\nGüvenlik için yükleme durduruldu.	
 # apps/wordle/main.c
 Çok iyi!	
+# apps/tarif/main.c
+Çorba	
+# apps/tarif/main.c
+Çorbalar	
 # apps/puzzle/main.c
 Çözüldü	
 # apps/puzzle/main.c
@@ -1345,6 +1503,8 @@ yarım gün
 Öğle	
 # apps/ajanda/agenda.c
 Öğretmenler Günü	
+# apps/tarif/main.c
+Ülkeler, tarif sayısına göre	
 # apps/puzzle/puzzle.c
 Üstünlük	
 # apps/solitaire/main.c
@@ -1377,6 +1537,10 @@ yarım gün
 İndiriliyor…	
 # apps/ebooks/main.c
 İndiriliyor…\nGutenberg yavaş olabilir, lütfen bekleyin.	
+# apps/tarif/main.c
+İngilizce	
+# apps/tarif/main.c
+İngilizce tarif	
 # apps/puzzle/main.c
 İpucu	
 # apps/puzzle/main.c
@@ -1385,6 +1549,8 @@ yarım gün
 İstatistik	
 # apps/chess/levels.c
 İyi	
+# apps/tarif/main.c
+İçecek	
 # apps/odak/odak.c
 İş	
 # apps/firewall/main.c
@@ -1445,6 +1611,10 @@ yarım gün
 Şubat	
 # apps/ebooks/main.c
 “%s” · %d kitap%s	
+# apps/tarif/main.c
+“%s” · %d sonuç · seçilen tarif çevrimdışı için saklanır	
+# apps/tarif/main.c
+“%s” · %d tarif	
 # apps/ajanda/main.c
 … ve %d daha	
 # apps/sky/main.c
@@ -1457,6 +1627,10 @@ yarım gün
 ≈ %d gün %d sa	
 # core/kui/battest.c
 ≈ %d sa %d dk	
+# apps/tarif/main.c
+◀ Önceki	
+# apps/tarif/main.c
+★ Favoriler (%d)	
 # apps/sky/main.c
 ☉ Güneş	
 # apps/sky/main.c

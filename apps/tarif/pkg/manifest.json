@@ -1,0 +1,10 @@
+{
+  "manifest_version": 2,
+  "id": "kindle-apps-tarif",
+  "name": "Tarifler",
+  "author": "Kaan Dikeç",
+  "description": "Türk ve dünya mutfağından yemek tarifleri: ada ya da eldeki malzemelere göre arama, kişi sayısına göre miktar, malzemeleri işaretleme, ekranı açık tutan adım adım pişirme modu, adlı mutfak zamanlayıcıları, favoriler; 690 tarif çevrimdışı (Vikikitap ve Wikibooks, CC BY-SA 4.0), internette Vikikitap ve Wikibooks'ta arama",
+  "version": [2026, 10, 19],
+  "dependencies": [],
+  "supported_platforms": ["kindlehf"]
+}

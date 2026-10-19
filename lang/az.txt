@@ -740,3 +740,90 @@ Kolay okuma: Kapalı	Asan oxu: Bağlı
 Basit mod: Açık	Sadə rejim: Açıq
 Basit mod: Kapalı	Sadə rejim: Bağlı
 Kolay okuma: bütün yazılar büyük, kalın ve siyah olur.\nBasit mod: menüde dört büyük düğme; panoda yalnızca saat, hava ve üç haber. Teknik uygulamalar gizlenir; bu ekrandan her zaman geri açılabilir.	Asan oxu: bütün yazılar böyük, qalın və qara olur.\nSadə rejim: menyuda dörd böyük düymə; paneldə yalnız saat, hava və üç xəbər. Texniki tətbiqlər gizlədilir; bu ekrandan həmişə geri açıla bilər.
+Süre doldu!	Vaxt bitdi!
+Kapatmak için dokunun	Bağlamaq üçün toxunun
+Çorba	Şorba
+Ana yemek	Əsas yemək
+Tatlı	Şirniyyat
+Salata, meze	Salat, meze
+Hamur işi	Xəmir xörəyi
+Kahvaltılık	Səhər yeməyi
+İçecek	İçki
+Vegan	Vegan
+Vejetaryen	Vegetarian
+İngilizce	İngilis dili
+%d/%d malzeme	%d/%d inqrediyent
+İngilizce tarif	İngiliscə resept
+Malzemeler (%d kişilik)	İnqrediyentlər (%d nəfərlik)
+Malzemeler (%d kişilik, tahmini)	İnqrediyentlər (%d nəfərlik, təxmini)
+Hazırlanışı	Hazırlanması
+Kaynak: %s · %s · %s	Mənbə: %s · %s · %s
+ — Wikibooks katkıcılarının metni, biçimi değiştirildi; aynı lisansla paylaşılır.	 — Wikibooks iştirakçılarının mətni, formatı dəyişdirilib; eyni lisenziya ilə paylaşılır.
+Kişi:	Nəfər:
+Pişirme modu ▶	Bişirmə rejimi ▶
+Tarif	Resept
+Hazırlık · %d kişilik	Hazırlıq · %d nəfərlik
+Adım %d / %d	Addım %d / %d
+◀ Önceki	◀ Əvvəlki
+Sonraki ▶	Növbəti ▶
+Pişirme modu	Bişirmə rejimi
+Süreler	Vaxtlar
+%d sn	%d san
+Zamanlayıcı kur: %s	Taymer qur: %s
+Bitti ✓	Bitdi ✓
+Adım %d · %s	Addım %d · %s
+Zamanlayıcılar	Taymerlər
+En çok 6 zamanlayıcı kurulabilir.	Ən çox 6 taymer qurmaq olar.
+Ad ver	Ad ver
+Zamanlayıcı %d	Taymer %d
+Kurulu zamanlayıcı yok.	Qurulmuş taymer yoxdur.
+Yeni: %s	Yeni: %s
+Süre dolunca ekrandaki kutu yanıp söner (Kindle'da hoparlör yok). Zamanlayıcılar Tarifler açıkken çalışır.	Vaxt bitəndə ekrandakı qutu yanıb-sönür (Kindle-da dinamik yoxdur). Taymerlər Reseptlər açıq olanda işləyir.
+Bitti	Bitdi
+Zamanlayıcının adı	Taymerin adı
+Türkçe	Türk dili
+ · çevrimdışı kayıtlı	 · oflayn saxlanılıb
+Çevrimiçi aranıyor…	Onlayn axtarılır…
+“%s” · %d sonuç · seçilen tarif çevrimdışı için saklanır	“%s” · %d nəticə · seçilən resept oflayn üçün saxlanılır
+Çevrimiçi sonuçlar	Onlayn nəticələr
+Sonuç yok ya da bağlantı kurulamadı.\nWi-Fi bağlantısını kontrol edin.	Nəticə yoxdur və ya bağlantı qurulmadı.\nWi-Fi bağlantısını yoxlayın.
+Tarif açılamadı	Resept açılmadı
+Bu sayfada malzeme listesi bulunamadı ya da bağlantı kesildi.	Bu səhifədə inqrediyent siyahısı tapılmadı və ya bağlantı kəsildi.
+Elinizdeki malzemeler (ör. domates, yumurta)	Əlinizdəki inqrediyentlər (məs. pomidor, yumurta)
+Tarif ara (ad ya da ülke)	Resept axtar (ad və ya ölkə)
+“%s” · %d tarif	“%s” · %d resept
+Elimde ne var?	Əlimdə nə var?
+Arama	Axtarış
+Çevrimiçi ara	Onlayn axtar
+Çevrimdışı tariflerde bulunamadı.\nAşağıdan çevrimiçi arayabilirsiniz.	Oflayn reseptlərdə tapılmadı.\nAşağıdan onlayn axtara bilərsiniz.
+%d tarif	%d resept
+%d tarif · %d Türkçe, %d İngilizce	%d resept · %d türkcə, %d ingiliscə
+Dünya mutfağı	Dünya mətbəxi
+Ülkeler, tarif sayısına göre	Ölkələr, resept sayına görə
+Anahtar gir	Açar daxil et
+Anahtarı sil	Açarı sil
+Çevrimdışı: %d tarif (%d Türkçe, %d İngilizce) · kaydedilen: %d	Oflayn: %d resept (%d türkcə, %d ingiliscə) · saxlanılan: %d
+Vikikitap Yemek Kitabı (tr.wikibooks.org) ve Wikibooks Cookbook (en.wikibooks.org): Wikibooks katkıcılarının metinleri, CC BY-SA 4.0 lisansıyla. Biçim sadeleştirildi; her tarifin altında sayfa adresi var. İnternette de bu iki kaynakta aranır.	Vikikitap Yemek Kitabı (türk Wikibooks yemək kitabı, tr.wikibooks.org) və Wikibooks Cookbook (en.wikibooks.org): Wikibooks iştirakçılarının mətnləri, CC BY-SA 4.0 lisenziyası ilə. Format sadələşdirilib; hər reseptin altında səhifə ünvanı var. Onlayn axtarış da bu iki mənbədə aparılır.
+TheMealDB (themealdb.com) isteğe bağlıdır: ücretsiz deneme anahtarı "1" yalnızca geliştirme ve eğitim içindir, herkese açık uygulamalar destekçi anahtarı ister. Kendi anahtarınızı girerseniz çevrimiçi aramada TheMealDB de kullanılır (veri ve görseller: TheMealDB).	TheMealDB (themealdb.com) istəyə bağlıdır: pulsuz sınaq açarı "1" yalnız tərtibat və təhsil üçündür, hamıya açıq tətbiqlər dəstəkçi açarı tələb edir. Öz açarınızı daxil etsəniz, onlayn axtarışda TheMealDB də istifadə olunur (məlumat və şəkillər: TheMealDB).
+Miktarlar kişi sayısına göre yaklaşık ölçeklenir; vegan/vejetaryen etiketleri malzemelerden çıkarılır, alerjiler için tarifi kontrol edin.	Miqdarlar nəfər sayına görə təxminən miqyaslanır; vegan/vegetarian etiketləri inqrediyentlərdən çıxarılır, allergiya üçün resepti yoxlayın.
+TheMealDB anahtarı: %s	TheMealDB açarı: %s
+yok	yoxdur
+TheMealDB API anahtarı	TheMealDB API açarı
+Türk mutfağı	Türk mətbəxi
+Çorbalar	Şorbalar
+Ana yemekler	Əsas yeməklər
+Tatlılar	Şirniyyatlar
+Salata ve mezeler	Salatlar və mezelər
+Hamur işleri	Xəmir xörəkləri
+Tarifler	Reseptlər
+Tarif ara	Resept axtar
+%d ülke	%d ölkə
+★ Favoriler (%d)	★ Seçilmişlər (%d)
+Son bakılanlar (%d)	Son baxılanlar (%d)
+Zamanlayıcılar (%d)	Taymerlər (%d)
+%d tarif çevrimdışı (%d Türkçe) · Vikikitap, Wikibooks · CC BY-SA 4.0	%d resept oflayn (%d türkcə) · Vikikitap, Wikibooks · CC BY-SA 4.0
+Kaynaklar ve ayarlar	Mənbələr və ayarlar
+Henüz favori tarif yok.\nBir tarifte ☆ düğmesine dokunun.	Hələ seçilmiş resept yoxdur.\nReseptdə ☆ düyməsinə toxunun.
+Son bakılanlar	Son baxılanlar
+Henüz tarif açılmadı.	Hələ resept açılmayıb.
+Tarifler yüklenemedi.	Reseptlər yüklənmədi.

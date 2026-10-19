@@ -740,3 +740,90 @@ Kolay okuma: Kapalı	Lettlest: Av
 Basit mod: Açık	Enkel modus: På
 Basit mod: Kapalı	Enkel modus: Av
 Kolay okuma: bütün yazılar büyük, kalın ve siyah olur.\nBasit mod: menüde dört büyük düğme; panoda yalnızca saat, hava ve üç haber. Teknik uygulamalar gizlenir; bu ekrandan her zaman geri açılabilir.	Lettlest: all tekst blir stor, fet og svart.\nEnkel modus: fire store knapper i menyen; oversikten viser bare klokke, vær og tre nyheter. Tekniske apper skjules; de kan alltid slås på igjen fra denne skjermen.
+Süre doldu!	Tiden er ute!
+Kapatmak için dokunun	Trykk for å lukke
+Çorba	Suppe
+Ana yemek	Hovedrett
+Tatlı	Dessert
+Salata, meze	Salat, meze
+Hamur işi	Bakverk
+Kahvaltılık	Frokost
+İçecek	Drikke
+Vegan	Vegansk
+Vejetaryen	Vegetarisk
+İngilizce	Engelsk
+%d/%d malzeme	%d/%d ingredienser
+İngilizce tarif	Engelsk oppskrift
+Malzemeler (%d kişilik)	Ingredienser (%d porsjoner)
+Malzemeler (%d kişilik, tahmini)	Ingredienser (%d porsjoner, anslått)
+Hazırlanışı	Fremgangsmåte
+Kaynak: %s · %s · %s	Kilde: %s · %s · %s
+ — Wikibooks katkıcılarının metni, biçimi değiştirildi; aynı lisansla paylaşılır.	 — tekst av Wikibooks-bidragsytere, endret formatering; delt under samme lisens.
+Kişi:	Porsjoner:
+Pişirme modu ▶	Matlagingsmodus ▶
+Tarif	Oppskrift
+Hazırlık · %d kişilik	Forberedelse · %d porsjoner
+Adım %d / %d	Trinn %d / %d
+◀ Önceki	◀ Forrige
+Sonraki ▶	Neste ▶
+Pişirme modu	Matlagingsmodus
+Süreler	Tidtakere
+%d sn	%d s
+Zamanlayıcı kur: %s	Still tidtaker: %s
+Bitti ✓	Ferdig ✓
+Adım %d · %s	Trinn %d · %s
+Zamanlayıcılar	Tidtakere
+En çok 6 zamanlayıcı kurulabilir.	Maks 6 tidtakere kan stilles.
+Ad ver	Gi navn
+Zamanlayıcı %d	Tidtaker %d
+Kurulu zamanlayıcı yok.	Ingen tidtakere stilt.
+Yeni: %s	Ny: %s
+Süre dolunca ekrandaki kutu yanıp söner (Kindle'da hoparlör yok). Zamanlayıcılar Tarifler açıkken çalışır.	Når tiden er ute, blinker boksen på skjermen (Kindle har ingen høyttaler). Tidtakerne går mens Oppskrifter er åpen.
+Bitti	Ferdig
+Zamanlayıcının adı	Navn på tidtakeren
+Türkçe	Tyrkisk
+ · çevrimdışı kayıtlı	 · lagret frakoblet
+Çevrimiçi aranıyor…	Søker på nett…
+“%s” · %d sonuç · seçilen tarif çevrimdışı için saklanır	«%s» · %d treff · valgt oppskrift lagres for frakoblet bruk
+Çevrimiçi sonuçlar	Nettresultater
+Sonuç yok ya da bağlantı kurulamadı.\nWi-Fi bağlantısını kontrol edin.	Ingen treff eller ingen tilkobling.\nSjekk Wi-Fi-tilkoblingen.
+Tarif açılamadı	Kunne ikke åpne oppskriften
+Bu sayfada malzeme listesi bulunamadı ya da bağlantı kesildi.	Fant ingen ingrediensliste på denne siden, eller tilkoblingen ble brutt.
+Elinizdeki malzemeler (ör. domates, yumurta)	Ingredienser du har (f.eks. tomat, egg)
+Tarif ara (ad ya da ülke)	Søk oppskrift (navn eller land)
+“%s” · %d tarif	«%s» · %d oppskrifter
+Elimde ne var?	Hva har jeg?
+Arama	Søk
+Çevrimiçi ara	Søk på nett
+Çevrimdışı tariflerde bulunamadı.\nAşağıdan çevrimiçi arayabilirsiniz.	Ikke funnet blant frakoblede oppskrifter.\nDu kan søke på nett nedenfor.
+%d tarif	%d oppskrifter
+%d tarif · %d Türkçe, %d İngilizce	%d oppskrifter · %d tyrkiske, %d engelske
+Dünya mutfağı	Verdenskjøkken
+Ülkeler, tarif sayısına göre	Land etter antall oppskrifter
+Anahtar gir	Skriv inn nøkkel
+Anahtarı sil	Slett nøkkel
+Çevrimdışı: %d tarif (%d Türkçe, %d İngilizce) · kaydedilen: %d	Frakoblet: %d oppskrifter (%d tyrkiske, %d engelske) · lagret: %d
+Vikikitap Yemek Kitabı (tr.wikibooks.org) ve Wikibooks Cookbook (en.wikibooks.org): Wikibooks katkıcılarının metinleri, CC BY-SA 4.0 lisansıyla. Biçim sadeleştirildi; her tarifin altında sayfa adresi var. İnternette de bu iki kaynakta aranır.	Vikikitap Yemek Kitabı (tyrkisk Wikibooks-kokebok, tr.wikibooks.org) og Wikibooks Cookbook (en.wikibooks.org): tekster av Wikibooks-bidragsytere, under CC BY-SA 4.0. Formateringen er forenklet; under hver oppskrift står sideadressen. Nettsøket bruker også disse to kildene.
+TheMealDB (themealdb.com) isteğe bağlıdır: ücretsiz deneme anahtarı "1" yalnızca geliştirme ve eğitim içindir, herkese açık uygulamalar destekçi anahtarı ister. Kendi anahtarınızı girerseniz çevrimiçi aramada TheMealDB de kullanılır (veri ve görseller: TheMealDB).	TheMealDB (themealdb.com) er valgfritt: den gratis testnøkkelen "1" er kun for utvikling og undervisning; offentlige apper trenger en støttenøkkel. Hvis du skriver inn din egen nøkkel, bruker nettsøket også TheMealDB (data og bilder: TheMealDB).
+Miktarlar kişi sayısına göre yaklaşık ölçeklenir; vegan/vejetaryen etiketleri malzemelerden çıkarılır, alerjiler için tarifi kontrol edin.	Mengdene skaleres omtrentlig etter antall porsjoner; vegansk/vegetarisk utledes fra ingrediensene, sjekk oppskriften ved allergier.
+TheMealDB anahtarı: %s	TheMealDB-nøkkel: %s
+yok	ingen
+TheMealDB API anahtarı	TheMealDB API-nøkkel
+Türk mutfağı	Tyrkisk kjøkken
+Çorbalar	Supper
+Ana yemekler	Hovedretter
+Tatlılar	Desserter
+Salata ve mezeler	Salater og meze
+Hamur işleri	Bakverk og brød
+Tarifler	Oppskrifter
+Tarif ara	Søk oppskrift
+%d ülke	%d land
+★ Favoriler (%d)	★ Favoritter (%d)
+Son bakılanlar (%d)	Sist sett (%d)
+Zamanlayıcılar (%d)	Tidtakere (%d)
+%d tarif çevrimdışı (%d Türkçe) · Vikikitap, Wikibooks · CC BY-SA 4.0	%d oppskrifter frakoblet (%d tyrkiske) · Vikikitap, Wikibooks · CC BY-SA 4.0
+Kaynaklar ve ayarlar	Kilder og innstillinger
+Henüz favori tarif yok.\nBir tarifte ☆ düğmesine dokunun.	Ingen favorittoppskrifter ennå.\nTrykk på ☆ i en oppskrift.
+Son bakılanlar	Sist sett
+Henüz tarif açılmadı.	Ingen oppskrifter åpnet ennå.
+Tarifler yüklenemedi.	Kunne ikke laste oppskriftene.

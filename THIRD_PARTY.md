@@ -26,3 +26,11 @@ Because FBInk is linked statically and is GPLv3+, this project is distributed un
 | TCMB `kurlar/today.xml` | public daily indicative rates | Döviz & Altın |
 | Truncgil Finans `today.json` | free public API | Döviz & Altın (gold) |
 | Turkish news RSS/Atom feeds (AA, TRT Haber, Hürriyet, Sözcü, NTV, CNN Türk, BBC Türkçe, Cumhuriyet, Milliyet, Sabah, Habertürk, DW Türkçe, Euronews, Yeni Şafak, BirGün, Karar, Star, Akşam, Dünya, Bloomberg HT) | publishers' public feeds; only the feed text and the article link are shown, no images | Gazete |
+| Wikibooks MediaWiki API: Vikikitap `Yemek:` pages (tr.wikibooks.org) and the English Cookbook (en.wikibooks.org) | CC BY-SA 4.0 (Wikibooks contributors); source address and licence shown under every recipe | Tarifler (online search; opened recipes are kept in `data/tarif/cache.txt`) |
+| TheMealDB API (themealdb.com) — optional, only with a key the user enters | free test key "1" for development/educational use only, public apps need a supporter key; data credited to TheMealDB | Tarifler |
+
+## Bundled data
+
+| Data | License | Source | Used by |
+|------|---------|--------|---------|
+| Tarifler recipe set (`apps/tarif/data/recipes.txt`: 170 Turkish-language recipes from Vikikitap "Yemek Kitabı", 520 English-language recipes from Wikibooks Cookbook) | CC BY-SA 4.0 (`LICENSE` in the Tarifler package; page and revision of every recipe in `SOURCES`) | https://tr.wikibooks.org, https://en.wikibooks.org — built by `tools/tarif/build-recipes.py` | Tarifler |

@@ -740,3 +740,90 @@ Kolay okuma: Kapalı	Helppo lukea: Pois
 Basit mod: Açık	Yksinkertainen tila: Päällä
 Basit mod: Kapalı	Yksinkertainen tila: Pois
 Kolay okuma: bütün yazılar büyük, kalın ve siyah olur.\nBasit mod: menüde dört büyük düğme; panoda yalnızca saat, hava ve üç haber. Teknik uygulamalar gizlenir; bu ekrandan her zaman geri açılabilir.	Helppo lukea: kaikki teksti muuttuu suureksi, lihavoiduksi ja mustaksi.\nYksinkertainen tila: valikossa neljä isoa painiketta; näkymässä vain kello, sää ja kolme uutista. Tekniset sovellukset piilotetaan; ne voi aina palauttaa tästä näkymästä.
+Süre doldu!	Aika loppui!
+Kapatmak için dokunun	Sulje napauttamalla
+Çorba	Keitto
+Ana yemek	Pääruoka
+Tatlı	Jälkiruoka
+Salata, meze	Salaatti, meze
+Hamur işi	Leivonnainen
+Kahvaltılık	Aamiainen
+İçecek	Juoma
+Vegan	Vegaani
+Vejetaryen	Kasvis
+İngilizce	Englanti
+%d/%d malzeme	%d/%d ainesosaa
+İngilizce tarif	Englanninkielinen
+Malzemeler (%d kişilik)	Ainekset (%d annosta)
+Malzemeler (%d kişilik, tahmini)	Ainekset (%d annosta, arvio)
+Hazırlanışı	Valmistus
+Kaynak: %s · %s · %s	Lähde: %s · %s · %s
+ — Wikibooks katkıcılarının metni, biçimi değiştirildi; aynı lisansla paylaşılır.	 — Wikibooksin kirjoittajien teksti, muotoilua muutettu; jaetaan samalla lisenssillä.
+Kişi:	Annokset:
+Pişirme modu ▶	Kokkaustila ▶
+Tarif	Resepti
+Hazırlık · %d kişilik	Valmistelu · %d annosta
+Adım %d / %d	Vaihe %d / %d
+◀ Önceki	◀ Edellinen
+Sonraki ▶	Seuraava ▶
+Pişirme modu	Kokkaustila
+Süreler	Ajastimet
+%d sn	%d s
+Zamanlayıcı kur: %s	Aseta ajastin: %s
+Bitti ✓	Valmis ✓
+Adım %d · %s	Vaihe %d · %s
+Zamanlayıcılar	Ajastimet
+En çok 6 zamanlayıcı kurulabilir.	Enintään 6 ajastinta.
+Ad ver	Nimeä
+Zamanlayıcı %d	Ajastin %d
+Kurulu zamanlayıcı yok.	Ei ajastimia.
+Yeni: %s	Uusi: %s
+Süre dolunca ekrandaki kutu yanıp söner (Kindle'da hoparlör yok). Zamanlayıcılar Tarifler açıkken çalışır.	Kun aika loppuu, ruutu näytöllä vilkkuu (Kindlessä ei ole kaiutinta). Ajastimet toimivat, kun Reseptit on auki.
+Bitti	Valmis
+Zamanlayıcının adı	Ajastimen nimi
+Türkçe	Turkki
+ · çevrimdışı kayıtlı	 · tallennettu offline-tilaan
+Çevrimiçi aranıyor…	Haetaan verkosta…
+“%s” · %d sonuç · seçilen tarif çevrimdışı için saklanır	”%s” · %d tulosta · valittu resepti tallennetaan offline-käyttöön
+Çevrimiçi sonuçlar	Verkkotulokset
+Sonuç yok ya da bağlantı kurulamadı.\nWi-Fi bağlantısını kontrol edin.	Ei tuloksia tai ei yhteyttä.\nTarkista Wi-Fi-yhteys.
+Tarif açılamadı	Reseptiä ei voitu avata
+Bu sayfada malzeme listesi bulunamadı ya da bağlantı kesildi.	Sivulta ei löytynyt ainesluetteloa, tai yhteys katkesi.
+Elinizdeki malzemeler (ör. domates, yumurta)	Ainekset, jotka sinulla on (esim. tomaatti, muna)
+Tarif ara (ad ya da ülke)	Hae reseptiä (nimi tai maa)
+“%s” · %d tarif	”%s” · %d reseptiä
+Elimde ne var?	Mitä minulla on?
+Arama	Haku
+Çevrimiçi ara	Hae verkosta
+Çevrimdışı tariflerde bulunamadı.\nAşağıdan çevrimiçi arayabilirsiniz.	Ei löytynyt offline-resepteistä.\nVoit hakea verkosta alta.
+%d tarif	%d reseptiä
+%d tarif · %d Türkçe, %d İngilizce	%d reseptiä · %d turkiksi, %d englanniksi
+Dünya mutfağı	Maailman keittiöt
+Ülkeler, tarif sayısına göre	Maat reseptien määrän mukaan
+Anahtar gir	Anna avain
+Anahtarı sil	Poista avain
+Çevrimdışı: %d tarif (%d Türkçe, %d İngilizce) · kaydedilen: %d	Offline: %d reseptiä (%d turkiksi, %d englanniksi) · tallennettu: %d
+Vikikitap Yemek Kitabı (tr.wikibooks.org) ve Wikibooks Cookbook (en.wikibooks.org): Wikibooks katkıcılarının metinleri, CC BY-SA 4.0 lisansıyla. Biçim sadeleştirildi; her tarifin altında sayfa adresi var. İnternette de bu iki kaynakta aranır.	Vikikitap Yemek Kitabı (turkinkielisen Wikibooksin keittokirja, tr.wikibooks.org) ja Wikibooks Cookbook (en.wikibooks.org): Wikibooksin kirjoittajien tekstejä, lisenssi CC BY-SA 4.0. Muotoilua yksinkertaistettu; jokaisen reseptin alla on sivun osoite. Verkkohaku käyttää myös näitä kahta lähdettä.
+TheMealDB (themealdb.com) isteğe bağlıdır: ücretsiz deneme anahtarı "1" yalnızca geliştirme ve eğitim içindir, herkese açık uygulamalar destekçi anahtarı ister. Kendi anahtarınızı girerseniz çevrimiçi aramada TheMealDB de kullanılır (veri ve görseller: TheMealDB).	TheMealDB (themealdb.com) on valinnainen: ilmainen testiavain "1" on vain kehitys- ja opetuskäyttöön; julkiset sovellukset tarvitsevat tukija-avaimen. Jos annat oman avaimen, verkkohaku käyttää myös TheMealDB:tä (tiedot ja kuvat: TheMealDB).
+Miktarlar kişi sayısına göre yaklaşık ölçeklenir; vegan/vejetaryen etiketleri malzemelerden çıkarılır, alerjiler için tarifi kontrol edin.	Määrät skaalautuvat likimäärin annosmäärän mukaan; vegaani-/kasvismerkinnät päätellään aineksista, tarkista resepti allergioiden vuoksi.
+TheMealDB anahtarı: %s	TheMealDB-avain: %s
+yok	ei ole
+TheMealDB API anahtarı	TheMealDB-API-avain
+Türk mutfağı	Turkkilainen keittiö
+Çorbalar	Keitot
+Ana yemekler	Pääruoat
+Tatlılar	Jälkiruoat
+Salata ve mezeler	Salaatit ja mezet
+Hamur işleri	Leivonnaiset ja leivät
+Tarifler	Reseptit
+Tarif ara	Hae reseptiä
+%d ülke	%d maata
+★ Favoriler (%d)	★ Suosikit (%d)
+Son bakılanlar (%d)	Viimeksi katsotut (%d)
+Zamanlayıcılar (%d)	Ajastimet (%d)
+%d tarif çevrimdışı (%d Türkçe) · Vikikitap, Wikibooks · CC BY-SA 4.0	%d reseptiä offline (%d turkiksi) · Vikikitap, Wikibooks · CC BY-SA 4.0
+Kaynaklar ve ayarlar	Lähteet ja asetukset
+Henüz favori tarif yok.\nBir tarifte ☆ düğmesine dokunun.	Ei vielä suosikkireseptejä.\nNapauta reseptissä ☆.
+Son bakılanlar	Viimeksi katsotut
+Henüz tarif açılmadı.	Yhtään reseptiä ei ole vielä avattu.
+Tarifler yüklenemedi.	Reseptejä ei voitu ladata.

@@ -1,0 +1,15 @@
+Tarifler recipe data (recipes.txt, installed next to the tarif binary)
+
+The recipes are adapted from two Wikibooks projects by tools/tarif/build-recipes.py:
+  * Turkish Wikibooks (Vikikitap), the "Yemek:" namespace — https://tr.wikibooks.org/wiki/Yemek:İçindekiler
+  * English Wikibooks Cookbook — https://en.wikibooks.org/wiki/Cookbook:Table_of_Contents
+Text by the Wikibooks contributors, licensed under the Creative Commons Attribution-ShareAlike 4.0 International
+licence (CC BY-SA 4.0, https://creativecommons.org/licenses/by-sa/4.0/). Changes: wiki markup removed, ingredient
+lists and method steps re-arranged into the app's format, long paragraphs split into steps; tags (soup, dessert,
+vegan, …) added from the page categories and the ingredients. The adapted recipes are shared under the same licence.
+SOURCES lists the page address and revision of every recipe; the app shows each recipe's address and licence.
+
+Recipes opened online in the app are fetched from the same Wikibooks APIs (same licence) or, only when the user has
+entered their own TheMealDB API key, from TheMealDB (https://www.themealdb.com; data and imagery credited to
+TheMealDB; its free test key "1" is for development and educational use only, public apps need a supporter key).
+They are kept on the device in data/tarif/cache.txt for offline use.

@@ -740,3 +740,90 @@ Kolay okuma: Kapalı	Εύκολη ανάγνωση: Όχι
 Basit mod: Açık	Απλή λειτουργία: Ναι
 Basit mod: Kapalı	Απλή λειτουργία: Όχι
 Kolay okuma: bütün yazılar büyük, kalın ve siyah olur.\nBasit mod: menüde dört büyük düğme; panoda yalnızca saat, hava ve üç haber. Teknik uygulamalar gizlenir; bu ekrandan her zaman geri açılabilir.	Εύκολη ανάγνωση: όλα τα κείμενα γίνονται μεγάλα, έντονα και μαύρα.\nΑπλή λειτουργία: τέσσερα μεγάλα κουμπιά στο μενού· ο πίνακας δείχνει μόνο ώρα, καιρό και τρεις ειδήσεις. Οι τεχνικές εφαρμογές κρύβονται· μπορούν πάντα να ενεργοποιηθούν ξανά από αυτή την οθόνη.
+Süre doldu!	Ο χρόνος τελείωσε!
+Kapatmak için dokunun	Πατήστε για κλείσιμο
+Çorba	Σούπα
+Ana yemek	Κυρίως πιάτο
+Tatlı	Γλυκό
+Salata, meze	Σαλάτα, μεζές
+Hamur işi	Ζυμαρικό
+Kahvaltılık	Πρωινό
+İçecek	Ρόφημα
+Vegan	Vegan
+Vejetaryen	Χορτοφαγικό
+İngilizce	Αγγλικά
+%d/%d malzeme	%d/%d υλικά
+İngilizce tarif	Αγγλική συνταγή
+Malzemeler (%d kişilik)	Υλικά (%d μερίδες)
+Malzemeler (%d kişilik, tahmini)	Υλικά (%d μερίδες, κατά προσέγγιση)
+Hazırlanışı	Εκτέλεση
+Kaynak: %s · %s · %s	Πηγή: %s · %s · %s
+ — Wikibooks katkıcılarının metni, biçimi değiştirildi; aynı lisansla paylaşılır.	 — κείμενο των συντακτών του Wikibooks, με αλλαγμένη μορφή· διανέμεται με την ίδια άδεια.
+Kişi:	Μερίδες:
+Pişirme modu ▶	Μαγείρεμα ▶
+Tarif	Συνταγή
+Hazırlık · %d kişilik	Προετοιμασία · %d μερίδες
+Adım %d / %d	Βήμα %d / %d
+◀ Önceki	◀ Προηγούμενο
+Sonraki ▶	Επόμενο ▶
+Pişirme modu	Μαγείρεμα
+Süreler	Χρόνοι
+%d sn	%d δ
+Zamanlayıcı kur: %s	Χρονόμετρο: %s
+Bitti ✓	Έτοιμο ✓
+Adım %d · %s	Βήμα %d · %s
+Zamanlayıcılar	Χρονόμετρα
+En çok 6 zamanlayıcı kurulabilir.	Έως 6 χρονόμετρα.
+Ad ver	Όνομα
+Zamanlayıcı %d	Χρονόμετρο %d
+Kurulu zamanlayıcı yok.	Δεν υπάρχουν χρονόμετρα.
+Yeni: %s	Νέο: %s
+Süre dolunca ekrandaki kutu yanıp söner (Kindle'da hoparlör yok). Zamanlayıcılar Tarifler açıkken çalışır.	Όταν τελειώσει ο χρόνος, το πλαίσιο στην οθόνη αναβοσβήνει (το Kindle δεν έχει ηχείο). Τα χρονόμετρα λειτουργούν όσο οι Συνταγές είναι ανοιχτές.
+Bitti	Έτοιμο
+Zamanlayıcının adı	Όνομα χρονομέτρου
+Türkçe	Τουρκικά
+ · çevrimdışı kayıtlı	 · αποθηκευμένη εκτός σύνδεσης
+Çevrimiçi aranıyor…	Αναζήτηση στο διαδίκτυο…
+“%s” · %d sonuç · seçilen tarif çevrimdışı için saklanır	«%s» · %d αποτελέσματα · η επιλεγμένη συνταγή αποθηκεύεται εκτός σύνδεσης
+Çevrimiçi sonuçlar	Αποτελέσματα στο διαδίκτυο
+Sonuç yok ya da bağlantı kurulamadı.\nWi-Fi bağlantısını kontrol edin.	Κανένα αποτέλεσμα ή χωρίς σύνδεση.\nΕλέγξτε τη σύνδεση Wi-Fi.
+Tarif açılamadı	Η συνταγή δεν άνοιξε
+Bu sayfada malzeme listesi bulunamadı ya da bağlantı kesildi.	Δεν βρέθηκε λίστα υλικών σε αυτή τη σελίδα ή η σύνδεση διακόπηκε.
+Elinizdeki malzemeler (ör. domates, yumurta)	Υλικά που έχετε (π.χ. ντομάτα, αυγό)
+Tarif ara (ad ya da ülke)	Αναζήτηση συνταγής (όνομα ή χώρα)
+“%s” · %d tarif	«%s» · %d συνταγές
+Elimde ne var?	Τι έχω;
+Arama	Αναζήτηση
+Çevrimiçi ara	Αναζήτηση online
+Çevrimdışı tariflerde bulunamadı.\nAşağıdan çevrimiçi arayabilirsiniz.	Δεν βρέθηκε στις συνταγές εκτός σύνδεσης.\nΜπορείτε να αναζητήσετε online παρακάτω.
+%d tarif	%d συνταγές
+%d tarif · %d Türkçe, %d İngilizce	%d συνταγές · %d τουρκικές, %d αγγλικές
+Dünya mutfağı	Παγκόσμια κουζίνα
+Ülkeler, tarif sayısına göre	Χώρες, κατά αριθμό συνταγών
+Anahtar gir	Εισαγωγή κλειδιού
+Anahtarı sil	Διαγραφή κλειδιού
+Çevrimdışı: %d tarif (%d Türkçe, %d İngilizce) · kaydedilen: %d	Εκτός σύνδεσης: %d συνταγές (%d τουρκικές, %d αγγλικές) · αποθηκευμένες: %d
+Vikikitap Yemek Kitabı (tr.wikibooks.org) ve Wikibooks Cookbook (en.wikibooks.org): Wikibooks katkıcılarının metinleri, CC BY-SA 4.0 lisansıyla. Biçim sadeleştirildi; her tarifin altında sayfa adresi var. İnternette de bu iki kaynakta aranır.	Vikikitap Yemek Kitabı (βιβλίο μαγειρικής του τουρκικού Wikibooks, tr.wikibooks.org) και Wikibooks Cookbook (en.wikibooks.org): κείμενα των συντακτών του Wikibooks, με άδεια CC BY-SA 4.0. Η μορφή απλοποιήθηκε· κάτω από κάθε συνταγή υπάρχει η διεύθυνση της σελίδας. Η αναζήτηση στο διαδίκτυο χρησιμοποιεί επίσης αυτές τις δύο πηγές.
+TheMealDB (themealdb.com) isteğe bağlıdır: ücretsiz deneme anahtarı "1" yalnızca geliştirme ve eğitim içindir, herkese açık uygulamalar destekçi anahtarı ister. Kendi anahtarınızı girerseniz çevrimiçi aramada TheMealDB de kullanılır (veri ve görseller: TheMealDB).	Το TheMealDB (themealdb.com) είναι προαιρετικό: το δωρεάν δοκιμαστικό κλειδί "1" προορίζεται μόνο για ανάπτυξη και εκπαίδευση· οι δημόσιες εφαρμογές χρειάζονται κλειδί υποστηρικτή. Αν εισαγάγετε δικό σας κλειδί, η αναζήτηση στο διαδίκτυο χρησιμοποιεί και το TheMealDB (δεδομένα και εικόνες: TheMealDB).
+Miktarlar kişi sayısına göre yaklaşık ölçeklenir; vegan/vejetaryen etiketleri malzemelerden çıkarılır, alerjiler için tarifi kontrol edin.	Οι ποσότητες προσαρμόζονται κατά προσέγγιση στον αριθμό μερίδων· οι ετικέτες vegan/χορτοφαγικό προκύπτουν από τα υλικά, ελέγξτε τη συνταγή για αλλεργίες.
+TheMealDB anahtarı: %s	Κλειδί TheMealDB: %s
+yok	κανένα
+TheMealDB API anahtarı	Κλειδί API TheMealDB
+Türk mutfağı	Τουρκική κουζίνα
+Çorbalar	Σούπες
+Ana yemekler	Κυρίως πιάτα
+Tatlılar	Γλυκά
+Salata ve mezeler	Σαλάτες και μεζέδες
+Hamur işleri	Ζύμες και ψωμιά
+Tarifler	Συνταγές
+Tarif ara	Αναζήτηση συνταγής
+%d ülke	%d χώρες
+★ Favoriler (%d)	★ Αγαπημένα (%d)
+Son bakılanlar (%d)	Πρόσφατες (%d)
+Zamanlayıcılar (%d)	Χρονόμετρα (%d)
+%d tarif çevrimdışı (%d Türkçe) · Vikikitap, Wikibooks · CC BY-SA 4.0	%d συνταγές εκτός σύνδεσης (%d τουρκικές) · Vikikitap, Wikibooks · CC BY-SA 4.0
+Kaynaklar ve ayarlar	Πηγές και ρυθμίσεις
+Henüz favori tarif yok.\nBir tarifte ☆ düğmesine dokunun.	Δεν υπάρχουν ακόμη αγαπημένες συνταγές.\nΠατήστε ☆ σε μια συνταγή.
+Son bakılanlar	Πρόσφατες
+Henüz tarif açılmadı.	Δεν έχει ανοιχτεί ακόμη συνταγή.
+Tarifler yüklenemedi.	Δεν ήταν δυνατή η φόρτωση των συνταγών.
