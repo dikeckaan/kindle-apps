@@ -173,6 +173,8 @@ dist:
 	@set -e; $(foreach p,$(PKGS),./tools/stage-app.sh $(p) build/pkg/$(p) $(PKG_$(p)_FILES); ./tools/pack.sh build/pkg/$(p) dist;)
 	./tools/gen-manifest.sh dist
 	./tests/pkg/test_pack.sh
+	@ids="kindle-apps-core $$(for p in $(PKGS); do python3 -c 'import json,sys;print(json.load(open(sys.argv[1]))["id"])' apps/$$p/pkg/manifest.json; done | tr '\n' ' ')"; \
+		sed "s/@PACKAGES@/$$ids/" tools/kindle-apps-depo.sh.in > dist/kindle-apps-depo.sh # every package, core first
 	cp -R site/. dist/ # the website (GitHub Pages serves dist/: index.html next to manifest.json)
 
 KINDLE ?= 192.168.2.90

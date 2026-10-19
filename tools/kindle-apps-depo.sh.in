@@ -9,13 +9,13 @@ KPM=/var/local/kmc/bin/kpm
 say() { [ -x "$FBINK" ] && $FBINK -q -m -y -3 "$1" >/dev/null 2>&1; echo "$1"; }
 
 say "Kindle Apps deposu ekleniyor..."
-/var/local/kmc/bin/su -c "$KPM list-repo" | grep -q dikeckaan.github.io/kindle-apps || \
+/var/local/kmc/bin/su -c "$KPM list-repo" | grep -q -e dikeckaan.github.io/kindle-apps -e kaandikec.com/kindle-apps || \
     /var/local/kmc/bin/su -c "$KPM add-repo https://dikeckaan.github.io/kindle-apps/manifest.json"
 /var/local/kmc/bin/su -c "$KPM update" >/dev/null 2>&1
 say "Uygulamalar kuruluyor..."
 # One package per kpm call, core first: kpm 0.2.2 aborts when it has to resolve dependencies itself.
 ok=1
-for p in kindle-apps-core kindle-apps-2048 kindle-apps-chess kindle-apps-sleep kindle-apps-ssh kindle-apps-firewall kindle-apps-weather kindle-apps-clock kindle-apps-currency kindle-apps-news kindle-apps-wordle kindle-apps-mines kindle-apps-sudoku kindle-apps-solitaire kindle-apps-sysinfo kindle-apps-upload kindle-apps-ebooks kindle-apps-pano; do
+for p in @PACKAGES@; do
     /var/local/kmc/bin/su -c "$KPM -y install $p" || ok=0
 done
 if [ "$ok" = 1 ]; then

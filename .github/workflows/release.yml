@@ -39,8 +39,8 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           gh release create "$GITHUB_REF_NAME" --title "$GITHUB_REF_NAME" --notes "Kurulum için README'ye bakın." \
-            dist/packages/*/*.kpkg tools/kindle-apps-depo.sh || \
-          gh release upload "$GITHUB_REF_NAME" dist/packages/*/*.kpkg tools/kindle-apps-depo.sh --clobber
+            dist/packages/*/*.kpkg dist/kindle-apps-depo.sh || \
+          gh release upload "$GITHUB_REF_NAME" dist/packages/*/*.kpkg dist/kindle-apps-depo.sh --clobber
 
   deploy:
     needs: build
