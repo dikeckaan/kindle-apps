@@ -179,7 +179,7 @@ static void test_sanitize(void)
 static void test_ext(void)
 {
 	const char *ok[] = { "a.epub", "a.PDF", "a.mobi", "a.azw", "a.AZW3", "a.kfx", "a.txt", "a.cbz", "a.cbr",
-			     "a.djvu", "a.fb2", "a.rtf", "a.doc", "a.docx", "a.html", "a.htm", "kitap şiir.Epub" };
+			     "a.djvu", "a.fb2", "a.rtf", "a.doc", "a.docx", "a.html", "a.htm", "kitap şiir.Epub", "abonelikler.opml" };
 	for (unsigned i = 0; i < sizeof ok / sizeof ok[0]; i++)
 		if (!httpd_ext_allowed(ok[i])) T_FAIL_("%s refused", ok[i]);
 	const char *no[] = { "a.sh", "a.so", "a", "epub", ".epub", "a.epub.sh", "a.exe", "a.", "a.zip", "a.epubx",

@@ -903,3 +903,86 @@ Türk daması · almak zorunlu, en çok taşı alan yol seçilir	Turkish draught
 İpucu: açık	Hints: on
 İpucu: kapalı	Hints: off
 İstatistikler	Statistics
+%d akış	%d feeds
+%d akış alınamadı.\nWi-Fi bağlantısını kontrol edin.	%d feeds could not be fetched.\nCheck the Wi-Fi connection.
+%d akış eklendi (%d akış dosyada).	%d feeds added (%d in the file).
+%d dakika	%d minutes
+%d yazı · %s	%d posts · %s
+%s (+%d)	%s (+%d)
+%s / %s · yağış %%%d	%s / %s · rain %d%%
+Adres yaz	Type an address
+Adını değiştir	Rename
+Ajanda'daki notlar, bayramlar ve özel günler	Notes, holidays and special days from Planner
+Ajanda: bugün ve yarın	Planner: today and tomorrow
+Akış	Feeds
+Akış adresi (RSS / Atom)	Feed address (RSS / Atom)
+Akış ekle	Add a feed
+Akış ekle'ye dokunun: katalogdan popüler bir akış seçin, bir sitenin RSS adresini yazın ya da documents klasörüne attığınız bir .opml dosyasını içe aktarın.	Tap Add a feed: pick a popular feed from the catalogue, type a site's RSS address or import an .opml file you put in the documents folder.
+Akış eklenemedi	The feed could not be added
+Akış kontrol ediliyor…	Checking the feed…
+Akış listesi dolu.	The feed list is full.
+Akışlar %s dosyasına yazıldı.	The feeds were written to %s.
+Akışları indirmek için Wi-Fi açılsın mı?	Turn on Wi-Fi to download the feeds?
+Akışı sil	Delete the feed
+Akışın adı	Feed name
+Atasözü	Turkish proverb
+Bilim (Türkçe)	Science (Turkish)
+Bilim (dünya)	Science (world)
+Bir dakika içinde seçilmezse uykuya devam eder.	Goes back to sleep if nothing is chosen within a minute.
+Bir sitenin RSS / Atom adresi	A site's RSS / Atom address
+Bloglar (dünya)	Blogs (world)
+Bu adreste RSS ya da Atom akışı bulunamadı.	No RSS or Atom feed was found at this address.
+Bu akış zaten listede.	This feed is already on the list.
+Bu akışın kayıtlı yazısı yok.\nYenile'ye dokunun.	This feed has no saved posts.\nTap Refresh.
+Bu bir web adresi değil.	This is not a web address.
+Bu yazının akışta metni yok; tamamı kaynağında.	The feed has no text for this post; it is all at the source.
+Dosya yazılamadı.	The file could not be written.
+Genel	General
+Günün sözü	Saying of the day
+Güç tuşu: Kindle'a dön	Power button: back to the Kindle
+Haber (dünya)	News (world)
+Hava Durumu'ndaki ilk şehir; Wi-Fi üç saatte bir kısa süre açılır	The first city in Weather; Wi-Fi comes on briefly every three hours
+Hava durumu yok: Hava Durumu'nda bir şehir seçin; Wi-Fi ile güncellenir.	No weather: choose a city in Weather; it is updated over Wi-Fi.
+Henüz akış yok	No feeds yet
+Hepsini okundu say	Mark all as read
+Hepsini yenile	Refresh all
+Katalog	Catalogue
+Katalogdan seç	Choose from the catalogue
+Kayıtlı bir şey yok.	Nothing planned.
+Kindle her %d dakikada bir birkaç saniyeliğine uyanır, ekranı sessizce tazeler ve yeniden derin uykuya geçer; Wi-Fi yalnızca hava durumu için birkaç saatte bir açılır. Güç tuşuna basınca normal Kindle'a dönülür.	Every %d minutes the Kindle wakes for a few seconds, quietly refreshes the screen and goes back to deep sleep; Wi-Fi comes on only for the weather, every few hours. Press the power button to return to the normal Kindle.
+Kindle'a dön	Back to Kindle
+Klasör adı	Folder name
+Klasör seçin	Choose a folder
+Klasörünü değiştir	Move to another folder
+Kültür ve blog (Türkçe)	Culture and blogs (Turkish)
+OPML dışa aktar	Export OPML
+OPML içe aktar	Import OPML
+Sonra	Later
+Sonraki ▶	Next ▶
+Teknoloji (Türkçe)	Technology (Turkish)
+Teknoloji (dünya)	Technology (world)
+Tümü okundu	All read
+Tümünü okundu say	Mark all as read
+Türkçe ve dünyadan teknoloji, bilim, blog ve haber akışları	Technology, science, blog and news feeds, Turkish and from around the world
+Uyku Ekranı	Sleep Screen
+Uyku ekranı duraklatıldı	Sleep screen paused
+Uyku ekranını başlat	Start the sleep screen
+Uykudayken ön ışığı kapat	Front light off while asleep
+Uykuya devam	Keep sleeping
+Wi-Fi bağlanıyor…	Connecting to Wi-Fi…
+Wi-Fi'ı aç	Turn on Wi-Fi
+Yarın	Tomorrow
+Yeni klasör…	New folder…
+Yenileme	Refresh
+Yenileme aralığı	Refresh interval
+Yenileniyor %d / %d\n%s\n\nDurdurmak için dokunun	Refreshing %d / %d\n%s\n\nTap to stop
+alınamadı	could not be fetched
+alınamadı · kayıtlı: %s	could not be fetched · saved: %s
+documents klasöründe .opml dosyası yok. Wi-Fi ile Yükle ya da USB ile gönderin.	There is no .opml file in the documents folder. Send one with Upload via Wi-Fi or over USB.
+documents klasöründeki .opml dosyası	An .opml file in the documents folder
+documents/akis.opml: yedek ya da başka bir okuyucu için	documents/akis.opml: a backup, or for another reader
+henüz indirilmedi	not downloaded yet
+Çıkınca ışık eski düzeyine döner	The light returns to its level when you leave
+Şiir Defteri kuruluysa onun günün şiiri, değilse bir atasözü	Poetry Notebook's poem of the day if it is installed, otherwise a proverb
+Şimdi indir	Download now
+☾ %02d:%02d'de güncellendi · sonraki %02d:%02d	☾ updated %02d:%02d · next %02d:%02d

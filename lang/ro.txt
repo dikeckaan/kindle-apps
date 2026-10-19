@@ -903,3 +903,86 @@ Türk daması · almak zorunlu, en çok taşı alan yol seçilir	Dame turcești 
 İpucu: açık	Indicii: da
 İpucu: kapalı	Indicii: nu
 İstatistikler	Statistici
+%d akış	%d fluxuri
+%d akış alınamadı.\nWi-Fi bağlantısını kontrol edin.	%d fluxuri nu au putut fi descărcate.\nVerificați conexiunea Wi-Fi.
+%d akış eklendi (%d akış dosyada).	%d fluxuri adăugate (%d în fișier).
+%d dakika	%d minute
+%d yazı · %s	%d articole · %s
+%s (+%d)	%s (+%d)
+%s / %s · yağış %%%d	%s / %s · ploaie %d%%
+Adres yaz	Scrieți o adresă
+Adını değiştir	Redenumiți
+Ajanda'daki notlar, bayramlar ve özel günler	Note, sărbători și zile speciale din Agendă
+Ajanda: bugün ve yarın	Agendă: azi și mâine
+Akış	Fluxuri
+Akış adresi (RSS / Atom)	Adresa fluxului (RSS / Atom)
+Akış ekle	Adăugați un flux
+Akış ekle'ye dokunun: katalogdan popüler bir akış seçin, bir sitenin RSS adresini yazın ya da documents klasörüne attığınız bir .opml dosyasını içe aktarın.	Atingeți Adăugați un flux: alegeți un flux popular din catalog, scrieți adresa RSS a unui site sau importați un fișier .opml pus în dosarul documents.
+Akış eklenemedi	Fluxul nu a putut fi adăugat
+Akış kontrol ediliyor…	Se verifică fluxul…
+Akış listesi dolu.	Lista de fluxuri este plină.
+Akışlar %s dosyasına yazıldı.	Fluxurile au fost salvate în %s.
+Akışları indirmek için Wi-Fi açılsın mı?	Porniți Wi-Fi pentru a descărca fluxurile?
+Akışı sil	Ștergeți fluxul
+Akışın adı	Numele fluxului
+Atasözü	Proverb turcesc
+Bilim (Türkçe)	Știință (turcă)
+Bilim (dünya)	Știință (lume)
+Bir dakika içinde seçilmezse uykuya devam eder.	Adoarme din nou dacă nu alegeți nimic într-un minut.
+Bir sitenin RSS / Atom adresi	Adresa RSS / Atom a unui site
+Bloglar (dünya)	Bloguri (lume)
+Bu adreste RSS ya da Atom akışı bulunamadı.	La această adresă nu există un flux RSS sau Atom.
+Bu akış zaten listede.	Acest flux este deja în listă.
+Bu akışın kayıtlı yazısı yok.\nYenile'ye dokunun.	Acest flux nu are articole salvate.\nAtingeți Actualizează.
+Bu bir web adresi değil.	Aceasta nu este o adresă web.
+Bu yazının akışta metni yok; tamamı kaynağında.	Fluxul nu conține textul acestui articol; e complet la sursă.
+Dosya yazılamadı.	Fișierul nu a putut fi scris.
+Genel	General
+Günün sözü	Proverbul zilei
+Güç tuşu: Kindle'a dön	Butonul de pornire: înapoi la Kindle
+Haber (dünya)	Știri (lume)
+Hava Durumu'ndaki ilk şehir; Wi-Fi üç saatte bir kısa süre açılır	Primul oraș din Vremea; Wi-Fi pornește scurt la fiecare trei ore
+Hava durumu yok: Hava Durumu'nda bir şehir seçin; Wi-Fi ile güncellenir.	Fără vreme: alegeți un oraș în Vremea; se actualizează prin Wi-Fi.
+Henüz akış yok	Încă nu există fluxuri
+Hepsini okundu say	Marcați totul ca citit
+Hepsini yenile	Actualizează tot
+Katalog	Catalog
+Katalogdan seç	Alegeți din catalog
+Kayıtlı bir şey yok.	Nimic planificat.
+Kindle her %d dakikada bir birkaç saniyeliğine uyanır, ekranı sessizce tazeler ve yeniden derin uykuya geçer; Wi-Fi yalnızca hava durumu için birkaç saatte bir açılır. Güç tuşuna basınca normal Kindle'a dönülür.	La fiecare %d minute Kindle se trezește câteva secunde, reîmprospătează ecranul în liniște și revine la somn profund; Wi-Fi pornește doar pentru vreme, la câteva ore. Butonul de pornire revine la Kindle-ul obișnuit.
+Kindle'a dön	Înapoi la Kindle
+Klasör adı	Numele dosarului
+Klasör seçin	Alegeți un dosar
+Klasörünü değiştir	Mutați în alt dosar
+Kültür ve blog (Türkçe)	Cultură și bloguri (turcă)
+OPML dışa aktar	Exportați OPML
+OPML içe aktar	Importați OPML
+Sonra	Mai târziu
+Sonraki ▶	Următorul ▶
+Teknoloji (Türkçe)	Tehnologie (turcă)
+Teknoloji (dünya)	Tehnologie (lume)
+Tümü okundu	Toate citite
+Tümünü okundu say	Marcați totul ca citit
+Türkçe ve dünyadan teknoloji, bilim, blog ve haber akışları	Fluxuri de tehnologie, știință, bloguri și știri, turcești și din toată lumea
+Uyku Ekranı	Ecran de noapte
+Uyku ekranı duraklatıldı	Ecran de noapte în pauză
+Uyku ekranını başlat	Porniți ecranul de noapte
+Uykudayken ön ışığı kapat	Opriți lumina în timpul somnului
+Uykuya devam	Continuă somnul
+Wi-Fi bağlanıyor…	Conectare la Wi-Fi…
+Wi-Fi'ı aç	Porniți Wi-Fi
+Yarın	Mâine
+Yeni klasör…	Dosar nou…
+Yenileme	Actualizare
+Yenileme aralığı	Interval de actualizare
+Yenileniyor %d / %d\n%s\n\nDurdurmak için dokunun	Actualizare %d / %d\n%s\n\nAtingeți pentru a opri
+alınamadı	nedescărcat
+alınamadı · kayıtlı: %s	nedescărcat · salvat: %s
+documents klasöründe .opml dosyası yok. Wi-Fi ile Yükle ya da USB ile gönderin.	Nu există niciun fișier .opml în dosarul documents. Trimiteți unul cu Încărcare prin Wi-Fi sau prin USB.
+documents klasöründeki .opml dosyası	Un fișier .opml din dosarul documents
+documents/akis.opml: yedek ya da başka bir okuyucu için	documents/akis.opml: copie de rezervă sau pentru alt cititor
+henüz indirilmedi	încă nedescărcat
+Çıkınca ışık eski düzeyine döner	La ieșire lumina revine la nivelul ei
+Şiir Defteri kuruluysa onun günün şiiri, değilse bir atasözü	Poezia zilei din Caiet de poezii dacă e instalat, altfel un proverb
+Şimdi indir	Descărcați acum
+☾ %02d:%02d'de güncellendi · sonraki %02d:%02d	☾ actualizat la %02d:%02d · următoarea %02d:%02d

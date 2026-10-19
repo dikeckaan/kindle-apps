@@ -903,3 +903,86 @@ Türk daması · almak zorunlu, en çok taşı alan yol seçilir	Warcaby turecki
 İpucu: açık	Podpowiedzi: wł.
 İpucu: kapalı	Podpowiedzi: wył.
 İstatistikler	Statystyki
+%d akış	Kanały: %d
+%d akış alınamadı.\nWi-Fi bağlantısını kontrol edin.	Nie udało się pobrać kanałów: %d.\nSprawdź połączenie Wi-Fi.
+%d akış eklendi (%d akış dosyada).	Dodano kanały: %d (w pliku: %d).
+%d dakika	%d minut
+%d yazı · %s	Wpisy: %d · %s
+%s (+%d)	%s (+%d)
+%s / %s · yağış %%%d	%s / %s · opady %d%%
+Adres yaz	Wpisz adres
+Adını değiştir	Zmień nazwę
+Ajanda'daki notlar, bayramlar ve özel günler	Notatki, święta i szczególne dni z Terminarza
+Ajanda: bugün ve yarın	Terminarz: dziś i jutro
+Akış	Kanały
+Akış adresi (RSS / Atom)	Adres kanału (RSS / Atom)
+Akış ekle	Dodaj kanał
+Akış ekle'ye dokunun: katalogdan popüler bir akış seçin, bir sitenin RSS adresini yazın ya da documents klasörüne attığınız bir .opml dosyasını içe aktarın.	Dotknij „Dodaj kanał”: wybierz popularny kanał z katalogu, wpisz adres RSS strony albo zaimportuj plik .opml umieszczony w folderze documents.
+Akış eklenemedi	Nie udało się dodać kanału
+Akış kontrol ediliyor…	Sprawdzanie kanału…
+Akış listesi dolu.	Lista kanałów jest pełna.
+Akışlar %s dosyasına yazıldı.	Kanały zapisano w %s.
+Akışları indirmek için Wi-Fi açılsın mı?	Włączyć Wi-Fi, aby pobrać kanały?
+Akışı sil	Usuń kanał
+Akışın adı	Nazwa kanału
+Atasözü	Tureckie przysłowie
+Bilim (Türkçe)	Nauka (po turecku)
+Bilim (dünya)	Nauka (świat)
+Bir dakika içinde seçilmezse uykuya devam eder.	Zaśnie ponownie, jeśli w ciągu minuty nic nie zostanie wybrane.
+Bir sitenin RSS / Atom adresi	Adres RSS / Atom strony
+Bloglar (dünya)	Blogi (świat)
+Bu adreste RSS ya da Atom akışı bulunamadı.	Pod tym adresem nie znaleziono kanału RSS ani Atom.
+Bu akış zaten listede.	Ten kanał jest już na liście.
+Bu akışın kayıtlı yazısı yok.\nYenile'ye dokunun.	Ten kanał nie ma zapisanych wpisów.\nDotknij „Odśwież”.
+Bu bir web adresi değil.	To nie jest adres internetowy.
+Bu yazının akışta metni yok; tamamı kaynağında.	Kanał nie zawiera tekstu tego wpisu; całość jest u źródła.
+Dosya yazılamadı.	Nie udało się zapisać pliku.
+Genel	Ogólne
+Günün sözü	Przysłowie dnia
+Güç tuşu: Kindle'a dön	Przycisk zasilania: powrót do Kindle
+Haber (dünya)	Wiadomości (świat)
+Hava Durumu'ndaki ilk şehir; Wi-Fi üç saatte bir kısa süre açılır	Pierwsze miasto z Pogody; Wi-Fi włącza się na chwilę co trzy godziny
+Hava durumu yok: Hava Durumu'nda bir şehir seçin; Wi-Fi ile güncellenir.	Brak pogody: wybierz miasto w Pogodzie; aktualizacja przez Wi-Fi.
+Henüz akış yok	Brak kanałów
+Hepsini okundu say	Oznacz wszystko jako przeczytane
+Hepsini yenile	Odśwież wszystko
+Katalog	Katalog
+Katalogdan seç	Wybierz z katalogu
+Kayıtlı bir şey yok.	Nic nie zaplanowano.
+Kindle her %d dakikada bir birkaç saniyeliğine uyanır, ekranı sessizce tazeler ve yeniden derin uykuya geçer; Wi-Fi yalnızca hava durumu için birkaç saatte bir açılır. Güç tuşuna basınca normal Kindle'a dönülür.	Co %d minut Kindle budzi się na kilka sekund, cicho odświeża ekran i znów zapada w głęboki sen; Wi-Fi włącza się tylko dla pogody, co kilka godzin. Przycisk zasilania przywraca zwykły Kindle.
+Kindle'a dön	Do Kindle
+Klasör adı	Nazwa folderu
+Klasör seçin	Wybierz folder
+Klasörünü değiştir	Przenieś do innego folderu
+Kültür ve blog (Türkçe)	Kultura i blogi (po turecku)
+OPML dışa aktar	Eksportuj OPML
+OPML içe aktar	Importuj OPML
+Sonra	Później
+Sonraki ▶	Następny ▶
+Teknoloji (Türkçe)	Technologia (po turecku)
+Teknoloji (dünya)	Technologia (świat)
+Tümü okundu	Wszystko przeczytane
+Tümünü okundu say	Oznacz wszystko jako przeczytane
+Türkçe ve dünyadan teknoloji, bilim, blog ve haber akışları	Kanały o technologii, nauce, blogi i wiadomości, tureckie i z całego świata
+Uyku Ekranı	Ekran nocny
+Uyku ekranı duraklatıldı	Ekran nocny wstrzymany
+Uyku ekranını başlat	Uruchom ekran nocny
+Uykudayken ön ışığı kapat	Wyłącz podświetlenie we śnie
+Uykuya devam	Śpij dalej
+Wi-Fi bağlanıyor…	Łączenie z Wi-Fi…
+Wi-Fi'ı aç	Włącz Wi-Fi
+Yarın	Jutro
+Yeni klasör…	Nowy folder…
+Yenileme	Odświeżanie
+Yenileme aralığı	Odstęp odświeżania
+Yenileniyor %d / %d\n%s\n\nDurdurmak için dokunun	Odświeżanie %d / %d\n%s\n\nDotknij, aby zatrzymać
+alınamadı	nie pobrano
+alınamadı · kayıtlı: %s	nie pobrano · zapisano: %s
+documents klasöründe .opml dosyası yok. Wi-Fi ile Yükle ya da USB ile gönderin.	W folderze documents nie ma pliku .opml. Wyślij go przez „Wyślij przez Wi-Fi” albo USB.
+documents klasöründeki .opml dosyası	Plik .opml z folderu documents
+documents/akis.opml: yedek ya da başka bir okuyucu için	documents/akis.opml: kopia zapasowa lub dla innego czytnika
+henüz indirilmedi	jeszcze nie pobrano
+Çıkınca ışık eski düzeyine döner	Po wyjściu podświetlenie wraca do poziomu
+Şiir Defteri kuruluysa onun günün şiiri, değilse bir atasözü	Wiersz dnia z Zeszytu wierszy, jeśli jest zainstalowany, w przeciwnym razie przysłowie
+Şimdi indir	Pobierz teraz
+☾ %02d:%02d'de güncellendi · sonraki %02d:%02d	☾ odświeżono %02d:%02d · następne %02d:%02d

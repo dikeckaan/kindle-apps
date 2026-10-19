@@ -903,3 +903,86 @@ Türk daması · almak zorunlu, en çok taşı alan yol seçilir	Turkkilainen ta
 İpucu: açık	Vihjeet: päällä
 İpucu: kapalı	Vihjeet: pois
 İstatistikler	Tilastot
+%d akış	%d syötettä
+%d akış alınamadı.\nWi-Fi bağlantısını kontrol edin.	%d syötettä ei voitu hakea.\nTarkista Wi-Fi-yhteys.
+%d akış eklendi (%d akış dosyada).	%d syötettä lisätty (%d tiedostossa).
+%d dakika	%d minuuttia
+%d yazı · %s	%d kirjoitusta · %s
+%s (+%d)	%s (+%d)
+%s / %s · yağış %%%d	%s / %s · sade %d%%
+Adres yaz	Kirjoita osoite
+Adını değiştir	Nimeä uudelleen
+Ajanda'daki notlar, bayramlar ve özel günler	Muistiinpanot, juhlapäivät ja erityiset päivät Kalenterista
+Ajanda: bugün ve yarın	Kalenteri: tänään ja huomenna
+Akış	Syötteet
+Akış adresi (RSS / Atom)	Syötteen osoite (RSS / Atom)
+Akış ekle	Lisää syöte
+Akış ekle'ye dokunun: katalogdan popüler bir akış seçin, bir sitenin RSS adresini yazın ya da documents klasörüne attığınız bir .opml dosyasını içe aktarın.	Napauta Lisää syöte: valitse suosittu syöte luettelosta, kirjoita sivuston RSS-osoite tai tuo documents-kansioon laittamasi .opml-tiedosto.
+Akış eklenemedi	Syötettä ei voitu lisätä
+Akış kontrol ediliyor…	Tarkistetaan syötettä…
+Akış listesi dolu.	Syöteluettelo on täynnä.
+Akışlar %s dosyasına yazıldı.	Syötteet tallennettiin tiedostoon %s.
+Akışları indirmek için Wi-Fi açılsın mı?	Otetaanko Wi-Fi käyttöön syötteiden hakemiseksi?
+Akışı sil	Poista syöte
+Akışın adı	Syötteen nimi
+Atasözü	Turkkilainen sananlasku
+Bilim (Türkçe)	Tiede (turkki)
+Bilim (dünya)	Tiede (maailma)
+Bir dakika içinde seçilmezse uykuya devam eder.	Nukahtaa uudelleen, jos mitään ei valita minuutin kuluessa.
+Bir sitenin RSS / Atom adresi	Sivuston RSS / Atom -osoite
+Bloglar (dünya)	Blogit (maailma)
+Bu adreste RSS ya da Atom akışı bulunamadı.	Osoitteesta ei löytynyt RSS- tai Atom-syötettä.
+Bu akış zaten listede.	Syöte on jo luettelossa.
+Bu akışın kayıtlı yazısı yok.\nYenile'ye dokunun.	Syötteellä ei ole tallennettuja kirjoituksia.\nNapauta Päivitä.
+Bu bir web adresi değil.	Tämä ei ole verkko-osoite.
+Bu yazının akışta metni yok; tamamı kaynağında.	Syötteessä ei ole tämän kirjoituksen tekstiä; se on kokonaan lähteessä.
+Dosya yazılamadı.	Tiedostoa ei voitu kirjoittaa.
+Genel	Yleiset
+Günün sözü	Päivän sananlasku
+Güç tuşu: Kindle'a dön	Virtapainike: takaisin Kindleen
+Haber (dünya)	Uutiset (maailma)
+Hava Durumu'ndaki ilk şehir; Wi-Fi üç saatte bir kısa süre açılır	Sään ensimmäinen kaupunki; Wi-Fi käynnistyy hetkeksi kolmen tunnin välein
+Hava durumu yok: Hava Durumu'nda bir şehir seçin; Wi-Fi ile güncellenir.	Ei säätä: valitse kaupunki Sää-sovelluksessa; päivittyy Wi-Fin kautta.
+Henüz akış yok	Ei vielä syötteitä
+Hepsini okundu say	Merkitse kaikki luetuiksi
+Hepsini yenile	Päivitä kaikki
+Katalog	Luettelo
+Katalogdan seç	Valitse luettelosta
+Kayıtlı bir şey yok.	Ei merkintöjä.
+Kindle her %d dakikada bir birkaç saniyeliğine uyanır, ekranı sessizce tazeler ve yeniden derin uykuya geçer; Wi-Fi yalnızca hava durumu için birkaç saatte bir açılır. Güç tuşuna basınca normal Kindle'a dönülür.	Kindle herää %d minuutin välein muutamaksi sekunniksi, päivittää näytön hiljaa ja palaa syvään lepoon; Wi-Fi käynnistyy vain säätä varten muutaman tunnin välein. Virtapainike palauttaa tavallisen Kindlen.
+Kindle'a dön	Takaisin Kindleen
+Klasör adı	Kansion nimi
+Klasör seçin	Valitse kansio
+Klasörünü değiştir	Siirrä toiseen kansioon
+Kültür ve blog (Türkçe)	Kulttuuri ja blogit (turkki)
+OPML dışa aktar	Vie OPML
+OPML içe aktar	Tuo OPML
+Sonra	Myöhemmin
+Sonraki ▶	Seuraava ▶
+Teknoloji (Türkçe)	Teknologia (turkki)
+Teknoloji (dünya)	Teknologia (maailma)
+Tümü okundu	Kaikki luettu
+Tümünü okundu say	Merkitse kaikki luetuiksi
+Türkçe ve dünyadan teknoloji, bilim, blog ve haber akışları	Teknologia-, tiede-, blogi- ja uutissyötteitä, turkkilaisia ja eri puolilta maailmaa
+Uyku Ekranı	Leponäyttö
+Uyku ekranı duraklatıldı	Leponäyttö keskeytetty
+Uyku ekranını başlat	Käynnistä leponäyttö
+Uykudayken ön ışığı kapat	Valo pois levon ajaksi
+Uykuya devam	Jatka lepoa
+Wi-Fi bağlanıyor…	Yhdistetään Wi-Fiin…
+Wi-Fi'ı aç	Kytke Wi-Fi
+Yarın	Huomenna
+Yeni klasör…	Uusi kansio…
+Yenileme	Päivitys
+Yenileme aralığı	Päivitysväli
+Yenileniyor %d / %d\n%s\n\nDurdurmak için dokunun	Päivitetään %d / %d\n%s\n\nPysäytä napauttamalla
+alınamadı	ei voitu hakea
+alınamadı · kayıtlı: %s	ei voitu hakea · tallennettu: %s
+documents klasöründe .opml dosyası yok. Wi-Fi ile Yükle ya da USB ile gönderin.	documents-kansiossa ei ole .opml-tiedostoa. Lähetä sellainen Lähetä Wi-Fillä -sovelluksella tai USB:n kautta.
+documents klasöründeki .opml dosyası	documents-kansion .opml-tiedosto
+documents/akis.opml: yedek ya da başka bir okuyucu için	documents/akis.opml: varmuuskopio tai toista lukijaa varten
+henüz indirilmedi	ei vielä haettu
+Çıkınca ışık eski düzeyine döner	Valo palaa ennalleen poistuttaessa
+Şiir Defteri kuruluysa onun günün şiiri, değilse bir atasözü	Runovihkon päivän runo, jos se on asennettu, muuten sananlasku
+Şimdi indir	Hae nyt
+☾ %02d:%02d'de güncellendi · sonraki %02d:%02d	☾ päivitetty %02d:%02d · seuraava %02d:%02d

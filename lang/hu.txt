@@ -903,3 +903,86 @@ Türk daması · almak zorunlu, en çok taşı alan yol seçilir	Török dáma �
 İpucu: açık	Tippek: be
 İpucu: kapalı	Tippek: ki
 İstatistikler	Statisztika
+%d akış	%d csatorna
+%d akış alınamadı.\nWi-Fi bağlantısını kontrol edin.	%d csatornát nem sikerült letölteni.\nEllenőrizze a Wi-Fi-kapcsolatot.
+%d akış eklendi (%d akış dosyada).	%d csatorna hozzáadva (%d a fájlban).
+%d dakika	%d perc
+%d yazı · %s	%d bejegyzés · %s
+%s (+%d)	%s (+%d)
+%s / %s · yağış %%%d	%s / %s · csapadék %d%%
+Adres yaz	Cím beírása
+Adını değiştir	Átnevezés
+Ajanda'daki notlar, bayramlar ve özel günler	Jegyzetek, ünnepek és különleges napok a Határidőnaplóból
+Ajanda: bugün ve yarın	Határidőnapló: ma és holnap
+Akış	Hírcsatornák
+Akış adresi (RSS / Atom)	Csatorna címe (RSS / Atom)
+Akış ekle	Csatorna hozzáadása
+Akış ekle'ye dokunun: katalogdan popüler bir akış seçin, bir sitenin RSS adresini yazın ya da documents klasörüne attığınız bir .opml dosyasını içe aktarın.	Koppintson a Csatorna hozzáadása gombra: válasszon népszerű csatornát a katalógusból, írja be egy oldal RSS-címét, vagy importáljon egy .opml fájlt a documents mappából.
+Akış eklenemedi	A csatornát nem sikerült hozzáadni
+Akış kontrol ediliyor…	Csatorna ellenőrzése…
+Akış listesi dolu.	A csatornalista megtelt.
+Akışlar %s dosyasına yazıldı.	A csatornák mentve: %s.
+Akışları indirmek için Wi-Fi açılsın mı?	Bekapcsolja a Wi-Fi-t a csatornák letöltéséhez?
+Akışı sil	Csatorna törlése
+Akışın adı	Csatorna neve
+Atasözü	Török közmondás
+Bilim (Türkçe)	Tudomány (török)
+Bilim (dünya)	Tudomány (világ)
+Bir dakika içinde seçilmezse uykuya devam eder.	Ha egy percen belül nem választ, újra elalszik.
+Bir sitenin RSS / Atom adresi	Egy oldal RSS / Atom címe
+Bloglar (dünya)	Blogok (világ)
+Bu adreste RSS ya da Atom akışı bulunamadı.	Ezen a címen nem található RSS- vagy Atom-csatorna.
+Bu akış zaten listede.	Ez a csatorna már szerepel a listán.
+Bu akışın kayıtlı yazısı yok.\nYenile'ye dokunun.	Ennek a csatornának nincs mentett bejegyzése.\nKoppintson a Frissítésre.
+Bu bir web adresi değil.	Ez nem webcím.
+Bu yazının akışta metni yok; tamamı kaynağında.	A csatorna nem tartalmazza a bejegyzés szövegét; teljes egészében a forrásnál olvasható.
+Dosya yazılamadı.	A fájlt nem sikerült írni.
+Genel	Általános
+Günün sözü	A nap mondása
+Güç tuşu: Kindle'a dön	Bekapcsológomb: vissza a Kindle-höz
+Haber (dünya)	Hírek (világ)
+Hava Durumu'ndaki ilk şehir; Wi-Fi üç saatte bir kısa süre açılır	Az Időjárás első városa; a Wi-Fi háromóránként rövid időre bekapcsol
+Hava durumu yok: Hava Durumu'nda bir şehir seçin; Wi-Fi ile güncellenir.	Nincs időjárás: válasszon várost az Időjárásban; Wi-Fin frissül.
+Henüz akış yok	Még nincs csatorna
+Hepsini okundu say	Összes olvasottnak jelölése
+Hepsini yenile	Összes frissítése
+Katalog	Katalógus
+Katalogdan seç	Választás a katalógusból
+Kayıtlı bir şey yok.	Nincs bejegyzés.
+Kindle her %d dakikada bir birkaç saniyeliğine uyanır, ekranı sessizce tazeler ve yeniden derin uykuya geçer; Wi-Fi yalnızca hava durumu için birkaç saatte bir açılır. Güç tuşuna basınca normal Kindle'a dönülür.	A Kindle %d percenként néhány másodpercre felébred, csendben frissíti a képernyőt, majd ismét mély alvásba kerül; a Wi-Fi csak az időjárás miatt kapcsol be, néhány óránként. A bekapcsológomb visszavisz a szokásos Kindle-höz.
+Kindle'a dön	Vissza a Kindle-höz
+Klasör adı	Mappa neve
+Klasör seçin	Válasszon mappát
+Klasörünü değiştir	Áthelyezés másik mappába
+Kültür ve blog (Türkçe)	Kultúra és blogok (török)
+OPML dışa aktar	OPML exportálása
+OPML içe aktar	OPML importálása
+Sonra	Később
+Sonraki ▶	Következő ▶
+Teknoloji (Türkçe)	Technológia (török)
+Teknoloji (dünya)	Technológia (világ)
+Tümü okundu	Mind olvasott
+Tümünü okundu say	Összes olvasottnak jelölése
+Türkçe ve dünyadan teknoloji, bilim, blog ve haber akışları	Technológiai, tudományos, blog- és hírcsatornák, törökök és a világ minden tájáról
+Uyku Ekranı	Alvóképernyő
+Uyku ekranı duraklatıldı	Alvóképernyő szüneteltetve
+Uyku ekranını başlat	Alvóképernyő indítása
+Uykudayken ön ışığı kapat	Alváskor a világítás kikapcsolása
+Uykuya devam	Alvás tovább
+Wi-Fi bağlanıyor…	Csatlakozás a Wi-Fi-hez…
+Wi-Fi'ı aç	Wi-Fi bekapcsolása
+Yarın	Holnap
+Yeni klasör…	Új mappa…
+Yenileme	Frissítés
+Yenileme aralığı	Frissítési időköz
+Yenileniyor %d / %d\n%s\n\nDurdurmak için dokunun	Frissítés %d / %d\n%s\n\nKoppintson a leállításhoz
+alınamadı	nem sikerült letölteni
+alınamadı · kayıtlı: %s	nem sikerült letölteni · mentve: %s
+documents klasöründe .opml dosyası yok. Wi-Fi ile Yükle ya da USB ile gönderin.	A documents mappában nincs .opml fájl. Küldjön egyet a Feltöltés Wi-Fin alkalmazással vagy USB-n.
+documents klasöründeki .opml dosyası	Egy .opml fájl a documents mappából
+documents/akis.opml: yedek ya da başka bir okuyucu için	documents/akis.opml: biztonsági mentés vagy másik olvasóhoz
+henüz indirilmedi	még nincs letöltve
+Çıkınca ışık eski düzeyine döner	Kilépéskor a világítás visszaáll
+Şiir Defteri kuruluysa onun günün şiiri, değilse bir atasözü	A Versesfüzet napi verse, ha telepítve van, különben egy közmondás
+Şimdi indir	Letöltés most
+☾ %02d:%02d'de güncellendi · sonraki %02d:%02d	☾ frissítve %02d:%02d · következő %02d:%02d

@@ -903,3 +903,86 @@ Türk daması · almak zorunlu, en çok taşı alan yol seçilir	Türkische Dame
 İpucu: açık	Hinweise: an
 İpucu: kapalı	Hinweise: aus
 İstatistikler	Statistik
+%d akış	%d Feeds
+%d akış alınamadı.\nWi-Fi bağlantısını kontrol edin.	%d Feeds konnten nicht geladen werden.\nPrüfen Sie die WLAN-Verbindung.
+%d akış eklendi (%d akış dosyada).	%d Feeds hinzugefügt (%d in der Datei).
+%d dakika	%d Minuten
+%d yazı · %s	%d Beiträge · %s
+%s (+%d)	%s (+%d)
+%s / %s · yağış %%%d	%s / %s · Regen %d%%
+Adres yaz	Adresse eingeben
+Adını değiştir	Umbenennen
+Ajanda'daki notlar, bayramlar ve özel günler	Notizen, Feiertage und besondere Tage aus dem Terminplaner
+Ajanda: bugün ve yarın	Terminplaner: heute und morgen
+Akış	Feeds
+Akış adresi (RSS / Atom)	Feed-Adresse (RSS / Atom)
+Akış ekle	Feed hinzufügen
+Akış ekle'ye dokunun: katalogdan popüler bir akış seçin, bir sitenin RSS adresini yazın ya da documents klasörüne attığınız bir .opml dosyasını içe aktarın.	Tippen Sie auf „Feed hinzufügen“: Wählen Sie einen beliebten Feed aus dem Katalog, geben Sie die RSS-Adresse einer Website ein oder importieren Sie eine .opml-Datei aus dem Ordner documents.
+Akış eklenemedi	Feed konnte nicht hinzugefügt werden
+Akış kontrol ediliyor…	Feed wird geprüft…
+Akış listesi dolu.	Die Feed-Liste ist voll.
+Akışlar %s dosyasına yazıldı.	Die Feeds wurden in %s gespeichert.
+Akışları indirmek için Wi-Fi açılsın mı?	WLAN einschalten, um die Feeds zu laden?
+Akışı sil	Feed löschen
+Akışın adı	Name des Feeds
+Atasözü	Türkisches Sprichwort
+Bilim (Türkçe)	Wissenschaft (Türkisch)
+Bilim (dünya)	Wissenschaft (Welt)
+Bir dakika içinde seçilmezse uykuya devam eder.	Schläft weiter, wenn binnen einer Minute nichts gewählt wird.
+Bir sitenin RSS / Atom adresi	RSS-/Atom-Adresse einer Website
+Bloglar (dünya)	Blogs (Welt)
+Bu adreste RSS ya da Atom akışı bulunamadı.	Unter dieser Adresse wurde kein RSS- oder Atom-Feed gefunden.
+Bu akış zaten listede.	Dieser Feed ist bereits in der Liste.
+Bu akışın kayıtlı yazısı yok.\nYenile'ye dokunun.	Dieser Feed hat keine gespeicherten Beiträge.\nTippen Sie auf Aktualisieren.
+Bu bir web adresi değil.	Das ist keine Webadresse.
+Bu yazının akışta metni yok; tamamı kaynağında.	Der Feed enthält keinen Text zu diesem Beitrag; er steht vollständig an der Quelle.
+Dosya yazılamadı.	Die Datei konnte nicht geschrieben werden.
+Genel	Allgemein
+Günün sözü	Spruch des Tages
+Güç tuşu: Kindle'a dön	Ein-/Aus-Taste: zurück zum Kindle
+Haber (dünya)	Nachrichten (Welt)
+Hava Durumu'ndaki ilk şehir; Wi-Fi üç saatte bir kısa süre açılır	Die erste Stadt aus Wetter; WLAN wird alle drei Stunden kurz eingeschaltet
+Hava durumu yok: Hava Durumu'nda bir şehir seçin; Wi-Fi ile güncellenir.	Kein Wetter: Wählen Sie in Wetter eine Stadt; es wird per WLAN aktualisiert.
+Henüz akış yok	Noch keine Feeds
+Hepsini okundu say	Alle als gelesen markieren
+Hepsini yenile	Alle aktualisieren
+Katalog	Katalog
+Katalogdan seç	Aus dem Katalog wählen
+Kayıtlı bir şey yok.	Nichts eingetragen.
+Kindle her %d dakikada bir birkaç saniyeliğine uyanır, ekranı sessizce tazeler ve yeniden derin uykuya geçer; Wi-Fi yalnızca hava durumu için birkaç saatte bir açılır. Güç tuşuna basınca normal Kindle'a dönülür.	Alle %d Minuten wacht der Kindle für einige Sekunden auf, aktualisiert den Bildschirm leise und schläft wieder tief; WLAN wird nur für das Wetter alle paar Stunden eingeschaltet. Die Ein-/Aus-Taste führt zurück zum normalen Kindle.
+Kindle'a dön	Zum Kindle
+Klasör adı	Ordnername
+Klasör seçin	Ordner wählen
+Klasörünü değiştir	In anderen Ordner verschieben
+Kültür ve blog (Türkçe)	Kultur und Blogs (Türkisch)
+OPML dışa aktar	OPML exportieren
+OPML içe aktar	OPML importieren
+Sonra	Später
+Sonraki ▶	Weiter ▶
+Teknoloji (Türkçe)	Technik (Türkisch)
+Teknoloji (dünya)	Technik (Welt)
+Tümü okundu	Alle gelesen
+Tümünü okundu say	Alle als gelesen markieren
+Türkçe ve dünyadan teknoloji, bilim, blog ve haber akışları	Technik-, Wissenschafts-, Blog- und Nachrichten-Feeds, türkisch und aus aller Welt
+Uyku Ekranı	Schlafbildschirm
+Uyku ekranı duraklatıldı	Schlafbildschirm angehalten
+Uyku ekranını başlat	Schlafbildschirm starten
+Uykudayken ön ışığı kapat	Beleuchtung im Schlaf ausschalten
+Uykuya devam	Weiterschlafen
+Wi-Fi bağlanıyor…	WLAN wird verbunden…
+Wi-Fi'ı aç	WLAN einschalten
+Yarın	Morgen
+Yeni klasör…	Neuer Ordner…
+Yenileme	Aktualisierung
+Yenileme aralığı	Aktualisierungsintervall
+Yenileniyor %d / %d\n%s\n\nDurdurmak için dokunun	Aktualisiere %d / %d\n%s\n\nZum Anhalten tippen
+alınamadı	nicht geladen
+alınamadı · kayıtlı: %s	nicht geladen · gespeichert: %s
+documents klasöründe .opml dosyası yok. Wi-Fi ile Yükle ya da USB ile gönderin.	Im Ordner documents ist keine .opml-Datei. Senden Sie eine mit „Per WLAN hochladen“ oder per USB.
+documents klasöründeki .opml dosyası	Eine .opml-Datei im Ordner documents
+documents/akis.opml: yedek ya da başka bir okuyucu için	documents/akis.opml: als Sicherung oder für einen anderen Reader
+henüz indirilmedi	noch nicht geladen
+Çıkınca ışık eski düzeyine döner	Beim Verlassen kehrt die Beleuchtung zurück
+Şiir Defteri kuruluysa onun günün şiiri, değilse bir atasözü	Das Gedicht des Tages aus dem Gedichtheft, falls installiert, sonst ein Sprichwort
+Şimdi indir	Jetzt laden
+☾ %02d:%02d'de güncellendi · sonraki %02d:%02d	☾ aktualisiert %02d:%02d · nächste %02d:%02d

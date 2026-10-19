@@ -903,3 +903,86 @@ Türk daması · almak zorunlu, en çok taşı alan yol seçilir	Турецки�
 İpucu: açık	Подсказки: вкл.
 İpucu: kapalı	Подсказки: выкл.
 İstatistikler	Статистика
+%d akış	Лент: %d
+%d akış alınamadı.\nWi-Fi bağlantısını kontrol edin.	Не удалось загрузить ленты: %d.\nПроверьте подключение Wi-Fi.
+%d akış eklendi (%d akış dosyada).	Добавлено лент: %d (в файле: %d).
+%d dakika	%d минут
+%d yazı · %s	Записей: %d · %s
+%s (+%d)	%s (+%d)
+%s / %s · yağış %%%d	%s / %s · осадки %d%%
+Adres yaz	Ввести адрес
+Adını değiştir	Переименовать
+Ajanda'daki notlar, bayramlar ve özel günler	Заметки, праздники и особые дни из Ежедневника
+Ajanda: bugün ve yarın	Ежедневник: сегодня и завтра
+Akış	Ленты
+Akış adresi (RSS / Atom)	Адрес ленты (RSS / Atom)
+Akış ekle	Добавить ленту
+Akış ekle'ye dokunun: katalogdan popüler bir akış seçin, bir sitenin RSS adresini yazın ya da documents klasörüne attığınız bir .opml dosyasını içe aktarın.	Нажмите «Добавить ленту»: выберите популярную ленту из каталога, введите RSS-адрес сайта или импортируйте файл .opml из папки documents.
+Akış eklenemedi	Не удалось добавить ленту
+Akış kontrol ediliyor…	Проверка ленты…
+Akış listesi dolu.	Список лент заполнен.
+Akışlar %s dosyasına yazıldı.	Ленты сохранены в %s.
+Akışları indirmek için Wi-Fi açılsın mı?	Включить Wi-Fi, чтобы загрузить ленты?
+Akışı sil	Удалить ленту
+Akışın adı	Название ленты
+Atasözü	Турецкая пословица
+Bilim (Türkçe)	Наука (на турецком)
+Bilim (dünya)	Наука (мир)
+Bir dakika içinde seçilmezse uykuya devam eder.	Снова уснёт, если в течение минуты ничего не выбрать.
+Bir sitenin RSS / Atom adresi	RSS / Atom-адрес сайта
+Bloglar (dünya)	Блоги (мир)
+Bu adreste RSS ya da Atom akışı bulunamadı.	По этому адресу не найдено ленты RSS или Atom.
+Bu akış zaten listede.	Эта лента уже в списке.
+Bu akışın kayıtlı yazısı yok.\nYenile'ye dokunun.	В этой ленте нет сохранённых записей.\nНажмите «Обновить».
+Bu bir web adresi değil.	Это не веб-адрес.
+Bu yazının akışta metni yok; tamamı kaynağında.	В ленте нет текста этой записи; полностью она у источника.
+Dosya yazılamadı.	Не удалось записать файл.
+Genel	Общее
+Günün sözü	Пословица дня
+Güç tuşu: Kindle'a dön	Кнопка питания: назад к Kindle
+Haber (dünya)	Новости (мир)
+Hava Durumu'ndaki ilk şehir; Wi-Fi üç saatte bir kısa süre açılır	Первый город из Погоды; Wi-Fi ненадолго включается раз в три часа
+Hava durumu yok: Hava Durumu'nda bir şehir seçin; Wi-Fi ile güncellenir.	Нет погоды: выберите город в Погоде; обновляется по Wi-Fi.
+Henüz akış yok	Лент пока нет
+Hepsini okundu say	Отметить всё как прочитанное
+Hepsini yenile	Обновить все
+Katalog	Каталог
+Katalogdan seç	Выбрать из каталога
+Kayıtlı bir şey yok.	Ничего не запланировано.
+Kindle her %d dakikada bir birkaç saniyeliğine uyanır, ekranı sessizce tazeler ve yeniden derin uykuya geçer; Wi-Fi yalnızca hava durumu için birkaç saatte bir açılır. Güç tuşuna basınca normal Kindle'a dönülür.	Каждые %d минут Kindle просыпается на несколько секунд, тихо обновляет экран и снова уходит в глубокий сон; Wi-Fi включается только ради погоды, раз в несколько часов. Кнопка питания возвращает к обычному Kindle.
+Kindle'a dön	К Kindle
+Klasör adı	Название папки
+Klasör seçin	Выберите папку
+Klasörünü değiştir	Переместить в другую папку
+Kültür ve blog (Türkçe)	Культура и блоги (на турецком)
+OPML dışa aktar	Экспорт OPML
+OPML içe aktar	Импорт OPML
+Sonra	Позже
+Sonraki ▶	Далее ▶
+Teknoloji (Türkçe)	Технологии (на турецком)
+Teknoloji (dünya)	Технологии (мир)
+Tümü okundu	Всё прочитано
+Tümünü okundu say	Отметить всё как прочитанное
+Türkçe ve dünyadan teknoloji, bilim, blog ve haber akışları	Ленты о технологиях, науке, блоги и новости, турецкие и со всего мира
+Uyku Ekranı	Ночной экран
+Uyku ekranı duraklatıldı	Ночной экран приостановлен
+Uyku ekranını başlat	Запустить ночной экран
+Uykudayken ön ışığı kapat	Выключать подсветку во сне
+Uykuya devam	Спать дальше
+Wi-Fi bağlanıyor…	Подключение к Wi-Fi…
+Wi-Fi'ı aç	Включить Wi-Fi
+Yarın	Завтра
+Yeni klasör…	Новая папка…
+Yenileme	Обновление
+Yenileme aralığı	Интервал обновления
+Yenileniyor %d / %d\n%s\n\nDurdurmak için dokunun	Обновление %d / %d\n%s\n\nНажмите, чтобы остановить
+alınamadı	не загружено
+alınamadı · kayıtlı: %s	не загружено · сохранено: %s
+documents klasöründe .opml dosyası yok. Wi-Fi ile Yükle ya da USB ile gönderin.	В папке documents нет файла .opml. Отправьте его через «Загрузку по Wi-Fi» или по USB.
+documents klasöründeki .opml dosyası	Файл .opml из папки documents
+documents/akis.opml: yedek ya da başka bir okuyucu için	documents/akis.opml: резервная копия или для другой читалки
+henüz indirilmedi	ещё не загружено
+Çıkınca ışık eski düzeyine döner	При выходе подсветка вернётся
+Şiir Defteri kuruluysa onun günün şiiri, değilse bir atasözü	Стихотворение дня из «Тетради стихов», если она установлена, иначе пословица
+Şimdi indir	Загрузить сейчас
+☾ %02d:%02d'de güncellendi · sonraki %02d:%02d	☾ обновлено в %02d:%02d · следующее %02d:%02d

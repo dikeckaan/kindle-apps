@@ -327,6 +327,10 @@ int main(void)
 				break;
 			}
 			int st = run_app(&apps[k]);
+			if (WIFEXITED(st) && WEXITSTATUS(st) == KUI_EXIT_TO_KINDLE) { /* e.g. Uyku Ekranı's power button */
+				kui_quit();
+				return 0;
+			}
 			scan();
 			if (page >= pages()) page = pages() - 1;
 			draw();
