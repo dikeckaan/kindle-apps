@@ -289,16 +289,25 @@ static const char *source_name(const TarifRecipe *r)
 	return "";
 }
 
-/* "Türkiye · Çorba · Vegan · İngilizce" */
-static void sub_line(const TarifRecipe *r, char *s, int cap)
+/* appends " · part" to s, never past cap (snprintf's return value is not used as an offset) */
+static void add_part(char *s, size_t cap, const char *part)
 {
-	int o = snprintf(s, (size_t) cap, "%s", r->cuisine);
-	const char *k = kind_label(r);
-	if (k) o += snprintf(s + o, (size_t) (cap - o), " · %s", k);
-	if (tarif_has_tag(r, 'v')) o += snprintf(s + o, (size_t) (cap - o), " · %s", T("Vegan"));
-	else if (tarif_has_tag(r, 'g')) o += snprintf(s + o, (size_t) (cap - o), " · %s", T("Vejetaryen"));
-	if (strcmp(r->lang, "tr") && o < cap) snprintf(s + o, (size_t) (cap - o), " · %s", T("İngilizce"));
+	size_t o = strlen(s);
+	if (o + 1 < cap) snprintf(s + o, cap - o, " · %s", part);
 }
+
+/* "Türkiye · Çorba · Vegan · İngilizce" */
+static void meta_line(const TarifRecipe *r, char *s, size_t cap, const char *english)
+{
+	snprintf(s, cap, "%s", r->cuisine);
+	const char *k = kind_label(r);
+	if (k) add_part(s, cap, k);
+	if (tarif_has_tag(r, 'v')) add_part(s, cap, T("Vegan"));
+	else if (tarif_has_tag(r, 'g')) add_part(s, cap, T("Vejetaryen"));
+	if (strcmp(r->lang, "tr")) add_part(s, cap, english);
+}
+
+static void sub_line(const TarifRecipe *r, char *s, int cap) { meta_line(r, s, (size_t) cap, T("İngilizce")); }
 
 /* ---- lists ---- */
 
@@ -393,10 +402,13 @@ static void recipe_row(int i, KuiRect r)
 	snprintf(t, sizeof t, "%s%s", fav ? "★ " : "", x->title);
 	ellipsize(t, KUI_FONT_BOLD, 36, r.w - 40, s, sizeof s);
 	kui_text((KuiRect){ r.x + 20, r.y + 8, r.w - 40, 56 }, s, KUI_FONT_BOLD, 36, KUI_ALIGN_LEFT, 0);
-	int o = 0;
-	if (list_words) o = snprintf(t, sizeof t, T("%d/%d malzeme"), list_matched[i], list_words), o += snprintf(t + o, sizeof t - (size_t) o, " · ");
 	sub_line(x, sub, sizeof sub);
-	snprintf(t + o, sizeof t - (size_t) o, "%s", sub);
+	if (list_words) {
+		snprintf(t, sizeof t, T("%d/%d malzeme"), list_matched[i], list_words);
+		add_part(t, sizeof t, sub);
+	} else {
+		snprintf(t, sizeof t, "%s", sub);
+	}
 	ellipsize(t, KUI_FONT_REG, 28, r.w - 40, s, sizeof s);
 	kui_text((KuiRect){ r.x + 20, r.y + 64, r.w - 40, 44 }, s, KUI_FONT_REG, 28, KUI_ALIGN_LEFT, 0x40);
 }
@@ -477,12 +489,7 @@ static void layout_recipe(Ref ref)
 	n_items = 0;
 	scale_ings(ref);
 	add_item(IT_TITLE, 0, draw_block(0, 0, tw, r->title, KUI_FONT_BOLD, 46, KUI_ALIGN_LEFT, 3, 0, 0) + 10, r->title);
-	int o = snprintf(meta_txt, sizeof meta_txt, "%s", r->cuisine);
-	const char *k = kind_label(r);
-	if (k) o += snprintf(meta_txt + o, sizeof meta_txt - (size_t) o, " · %s", k);
-	if (tarif_has_tag(r, 'v')) o += snprintf(meta_txt + o, sizeof meta_txt - (size_t) o, " · %s", T("Vegan"));
-	else if (tarif_has_tag(r, 'g')) o += snprintf(meta_txt + o, sizeof meta_txt - (size_t) o, " · %s", T("Vejetaryen"));
-	if (strcmp(r->lang, "tr")) snprintf(meta_txt + o, sizeof meta_txt - (size_t) o, " · %s", T("İngilizce tarif"));
+	meta_line(r, meta_txt, sizeof meta_txt, T("İngilizce tarif"));
 	add_item(IT_META, 0, 50, meta_txt);
 	if (r->intro[0]) add_item(IT_INTRO, 0, draw_block(0, 0, tw, r->intro, KUI_FONT_SERIF, 29, KUI_ALIGN_LEFT, 8, 0, 0) + 14, r->intro);
 	add_item(IT_SERV, 0, 120, NULL);
