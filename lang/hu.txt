@@ -740,3 +740,27 @@ Kolay okuma: Kapalı	Könnyű olvasás: Ki
 Basit mod: Açık	Egyszerű mód: Be
 Basit mod: Kapalı	Egyszerű mód: Ki
 Kolay okuma: bütün yazılar büyük, kalın ve siyah olur.\nBasit mod: menüde dört büyük düğme; panoda yalnızca saat, hava ve üç haber. Teknik uygulamalar gizlenir; bu ekrandan her zaman geri açılabilir.	Könnyű olvasás: minden szöveg nagy, félkövér és fekete lesz.\nEgyszerű mód: négy nagy gomb a menüben; az áttekintő csak az órát, az időjárást és három hírt mutatja. A technikai alkalmazások elrejtődnek; ezen a képernyőn bármikor visszakapcsolhatók.
+Görev Yöneticisi	Feladatkezelő
+Arka planda çalışan programlar	A háttérben futó programok
+Arka planda başka program yok.	Nincs más program a háttérben.
+%d MB · %s açık	%d MB · %s óta fut
+%s açık	%s óta fut
+Boş bellek: %d MB	Szabad memória: %d MB
+Boş bellek: %d MB → %d MB	Szabad memória: %d MB → %d MB
+Boş bellek: bilinmiyor	Szabad memória: ismeretlen
+Hepsini durdur	Összes leállítása
+Durdur	Leállítás
+Durdurulacak: %s.\nSistem servisleri, SSH ve Kindle Apps açık kalır.	Leáll: %s.\nA rendszerszolgáltatások, az SSH és a Kindle Apps tovább futnak.
+Kapatılıyor: %s…	Bezárás: %s…
+%s kapatılamadı.	%s nem zárható be.
+Korunanları göster (%d)	Védettek mutatása (%d)
+◀ Programlara dön	◀ Vissza a programokhoz
+Korunanlar: hiçbir zaman durdurulmaz	Védettek: soha nem állnak le
+Korunan üçüncü taraf program yok.	Nincs védett külső program.
+korunuyor	védett
+Paket yöneticisi (kpm)	Csomagkezelő (kpm)
+Jailbreak aracı	Jailbreak-eszköz
+Sistem servisleri, SSH ve Kindle Apps hiçbir zaman durdurulmaz.	A rendszerszolgáltatások, az SSH és a Kindle Apps soha nem állnak le.
+Arka planda program var	Egy program fut a háttérben
+Arkada açık program: %s. Ekranı ve dokunmayı kullanabilir.	A háttérben nyitva: %s. Használhatja a képernyőt és az érintést.
+Arkada açık programlar: %s. Ekranı ve dokunmayı kullanabilirler.	A háttérben nyitva: %s. Használhatják a képernyőt és az érintést.

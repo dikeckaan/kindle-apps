@@ -740,3 +740,27 @@ Kolay okuma: Kapalı	Lettura facile: No
 Basit mod: Açık	Modo semplice: Sì
 Basit mod: Kapalı	Modo semplice: No
 Kolay okuma: bütün yazılar büyük, kalın ve siyah olur.\nBasit mod: menüde dört büyük düğme; panoda yalnızca saat, hava ve üç haber. Teknik uygulamalar gizlenir; bu ekrandan her zaman geri açılabilir.	Lettura facile: tutti i testi diventano grandi, in grassetto e neri.\nModo semplice: quattro grandi pulsanti nel menu; il pannello mostra solo ora, meteo e tre notizie. Le app tecniche vengono nascoste; si possono sempre riattivare da questa schermata.
+Görev Yöneticisi	Gestione attività
+Arka planda çalışan programlar	Programmi in background
+Arka planda başka program yok.	Nessun altro programma in background.
+%d MB · %s açık	%d MB · attivo da %s
+%s açık	attivo da %s
+Boş bellek: %d MB	Memoria libera: %d MB
+Boş bellek: %d MB → %d MB	Memoria libera: %d MB → %d MB
+Boş bellek: bilinmiyor	Memoria libera: sconosciuta
+Hepsini durdur	Ferma tutto
+Durdur	Ferma
+Durdurulacak: %s.\nSistem servisleri, SSH ve Kindle Apps açık kalır.	Verranno fermati: %s.\nI servizi di sistema, SSH e Kindle Apps restano attivi.
+Kapatılıyor: %s…	Chiusura: %s…
+%s kapatılamadı.	Impossibile chiudere %s.
+Korunanları göster (%d)	Mostra protetti (%d)
+◀ Programlara dön	◀ Torna ai programmi
+Korunanlar: hiçbir zaman durdurulmaz	Protetti: mai fermati
+Korunan üçüncü taraf program yok.	Nessun programma di terze parti protetto.
+korunuyor	protetto
+Paket yöneticisi (kpm)	Gestore pacchetti (kpm)
+Jailbreak aracı	Strumento di jailbreak
+Sistem servisleri, SSH ve Kindle Apps hiçbir zaman durdurulmaz.	I servizi di sistema, SSH e Kindle Apps non vengono mai fermati.
+Arka planda program var	Un programma è in background
+Arkada açık program: %s. Ekranı ve dokunmayı kullanabilir.	Aperto in background: %s. Può usare lo schermo e il tocco.
+Arkada açık programlar: %s. Ekranı ve dokunmayı kullanabilirler.	Aperti in background: %s. Possono usare lo schermo e il tocco.

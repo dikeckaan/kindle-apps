@@ -740,3 +740,27 @@ Kolay okuma: Kapalı	Лёгкое чтение: выкл
 Basit mod: Açık	Простой режим: вкл
 Basit mod: Kapalı	Простой режим: выкл
 Kolay okuma: bütün yazılar büyük, kalın ve siyah olur.\nBasit mod: menüde dört büyük düğme; panoda yalnızca saat, hava ve üç haber. Teknik uygulamalar gizlenir; bu ekrandan her zaman geri açılabilir.	Лёгкое чтение: весь текст становится крупным, жирным и чёрным.\nПростой режим: четыре большие кнопки в меню; на панели только часы, погода и три новости. Технические приложения скрываются; их всегда можно вернуть на этом экране.
+Görev Yöneticisi	Диспетчер задач
+Arka planda çalışan programlar	Программы в фоне
+Arka planda başka program yok.	Других программ в фоне нет.
+%d MB · %s açık	%d МБ · работает %s
+%s açık	работает %s
+Boş bellek: %d MB	Свободная память: %d МБ
+Boş bellek: %d MB → %d MB	Свободная память: %d МБ → %d МБ
+Boş bellek: bilinmiyor	Свободная память: неизвестно
+Hepsini durdur	Остановить все
+Durdur	Остановить
+Durdurulacak: %s.\nSistem servisleri, SSH ve Kindle Apps açık kalır.	Будут остановлены: %s.\nСистемные службы, SSH и Kindle Apps продолжат работу.
+Kapatılıyor: %s…	Закрытие: %s…
+%s kapatılamadı.	Не удалось закрыть: %s.
+Korunanları göster (%d)	Показать защищённые (%d)
+◀ Programlara dön	◀ Назад к программам
+Korunanlar: hiçbir zaman durdurulmaz	Защищённые: никогда не останавливаются
+Korunan üçüncü taraf program yok.	Нет защищённых сторонних программ.
+korunuyor	защищено
+Paket yöneticisi (kpm)	Менеджер пакетов (kpm)
+Jailbreak aracı	Инструмент джейлбрейка
+Sistem servisleri, SSH ve Kindle Apps hiçbir zaman durdurulmaz.	Системные службы, SSH и Kindle Apps никогда не останавливаются.
+Arka planda program var	В фоне работает программа
+Arkada açık program: %s. Ekranı ve dokunmayı kullanabilir.	Открыто в фоне: %s. Может использовать экран и касания.
+Arkada açık programlar: %s. Ekranı ve dokunmayı kullanabilirler.	Открыты в фоне: %s. Могут использовать экран и касания.

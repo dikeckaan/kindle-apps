@@ -740,3 +740,27 @@ Kolay okuma: Kapalı	Εύκολη ανάγνωση: Όχι
 Basit mod: Açık	Απλή λειτουργία: Ναι
 Basit mod: Kapalı	Απλή λειτουργία: Όχι
 Kolay okuma: bütün yazılar büyük, kalın ve siyah olur.\nBasit mod: menüde dört büyük düğme; panoda yalnızca saat, hava ve üç haber. Teknik uygulamalar gizlenir; bu ekrandan her zaman geri açılabilir.	Εύκολη ανάγνωση: όλα τα κείμενα γίνονται μεγάλα, έντονα και μαύρα.\nΑπλή λειτουργία: τέσσερα μεγάλα κουμπιά στο μενού· ο πίνακας δείχνει μόνο ώρα, καιρό και τρεις ειδήσεις. Οι τεχνικές εφαρμογές κρύβονται· μπορούν πάντα να ενεργοποιηθούν ξανά από αυτή την οθόνη.
+Görev Yöneticisi	Διαχείριση εργασιών
+Arka planda çalışan programlar	Προγράμματα στο παρασκήνιο
+Arka planda başka program yok.	Κανένα άλλο πρόγραμμα στο παρασκήνιο.
+%d MB · %s açık	%d MB · σε λειτουργία %s
+%s açık	σε λειτουργία %s
+Boş bellek: %d MB	Ελεύθερη μνήμη: %d MB
+Boş bellek: %d MB → %d MB	Ελεύθερη μνήμη: %d MB → %d MB
+Boş bellek: bilinmiyor	Ελεύθερη μνήμη: άγνωστη
+Hepsini durdur	Διακοπή όλων
+Durdur	Διακοπή
+Durdurulacak: %s.\nSistem servisleri, SSH ve Kindle Apps açık kalır.	Θα σταματήσουν: %s.\nΟι υπηρεσίες συστήματος, το SSH και τα Kindle Apps συνεχίζουν.
+Kapatılıyor: %s…	Κλείσιμο: %s…
+%s kapatılamadı.	Δεν ήταν δυνατό το κλείσιμο: %s.
+Korunanları göster (%d)	Εμφάνιση προστατευμένων (%d)
+◀ Programlara dön	◀ Πίσω στα προγράμματα
+Korunanlar: hiçbir zaman durdurulmaz	Προστατευμένα: δεν σταματούν ποτέ
+Korunan üçüncü taraf program yok.	Κανένα προστατευμένο πρόγραμμα τρίτων.
+korunuyor	προστατεύεται
+Paket yöneticisi (kpm)	Διαχείριση πακέτων (kpm)
+Jailbreak aracı	Εργαλείο jailbreak
+Sistem servisleri, SSH ve Kindle Apps hiçbir zaman durdurulmaz.	Οι υπηρεσίες συστήματος, το SSH και τα Kindle Apps δεν σταματούν ποτέ.
+Arka planda program var	Ένα πρόγραμμα τρέχει στο παρασκήνιο
+Arkada açık program: %s. Ekranı ve dokunmayı kullanabilir.	Ανοιχτό στο παρασκήνιο: %s. Μπορεί να χρησιμοποιεί την οθόνη και την αφή.
+Arkada açık programlar: %s. Ekranı ve dokunmayı kullanabilirler.	Ανοιχτά στο παρασκήνιο: %s. Μπορεί να χρησιμοποιούν την οθόνη και την αφή.

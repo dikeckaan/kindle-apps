@@ -740,3 +740,27 @@ Kolay okuma: Kapalı	Let læsning: Fra
 Basit mod: Açık	Enkel tilstand: Til
 Basit mod: Kapalı	Enkel tilstand: Fra
 Kolay okuma: bütün yazılar büyük, kalın ve siyah olur.\nBasit mod: menüde dört büyük düğme; panoda yalnızca saat, hava ve üç haber. Teknik uygulamalar gizlenir; bu ekrandan her zaman geri açılabilir.	Let læsning: al tekst bliver stor, fed og sort.\nEnkel tilstand: fire store knapper i menuen; oversigten viser kun ur, vejr og tre nyheder. Tekniske apps skjules; de kan altid slås til igen fra denne skærm.
+Görev Yöneticisi	Jobliste
+Arka planda çalışan programlar	Programmer, der kører i baggrunden
+Arka planda başka program yok.	Ingen andre programmer i baggrunden.
+%d MB · %s açık	%d MB · har kørt i %s
+%s açık	har kørt i %s
+Boş bellek: %d MB	Ledig hukommelse: %d MB
+Boş bellek: %d MB → %d MB	Ledig hukommelse: %d MB → %d MB
+Boş bellek: bilinmiyor	Ledig hukommelse: ukendt
+Hepsini durdur	Stop alle
+Durdur	Stop
+Durdurulacak: %s.\nSistem servisleri, SSH ve Kindle Apps açık kalır.	Stoppes: %s.\nSystemtjenester, SSH og Kindle Apps bliver ved med at køre.
+Kapatılıyor: %s…	Lukker: %s…
+%s kapatılamadı.	%s kunne ikke lukkes.
+Korunanları göster (%d)	Vis beskyttede (%d)
+◀ Programlara dön	◀ Tilbage til programmerne
+Korunanlar: hiçbir zaman durdurulmaz	Beskyttede: stoppes aldrig
+Korunan üçüncü taraf program yok.	Ingen beskyttede tredjepartsprogrammer.
+korunuyor	beskyttet
+Paket yöneticisi (kpm)	Pakkehåndtering (kpm)
+Jailbreak aracı	Jailbreak-værktøj
+Sistem servisleri, SSH ve Kindle Apps hiçbir zaman durdurulmaz.	Systemtjenester, SSH og Kindle Apps stoppes aldrig.
+Arka planda program var	Et program kører i baggrunden
+Arkada açık program: %s. Ekranı ve dokunmayı kullanabilir.	Åbent i baggrunden: %s. Det kan bruge skærmen og berøring.
+Arkada açık programlar: %s. Ekranı ve dokunmayı kullanabilirler.	Åbne i baggrunden: %s. De kan bruge skærmen og berøring.

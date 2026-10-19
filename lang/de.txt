@@ -740,3 +740,27 @@ Kolay okuma: Kapalı	Leicht lesen: Aus
 Basit mod: Açık	Einfacher Modus: An
 Basit mod: Kapalı	Einfacher Modus: Aus
 Kolay okuma: bütün yazılar büyük, kalın ve siyah olur.\nBasit mod: menüde dört büyük düğme; panoda yalnızca saat, hava ve üç haber. Teknik uygulamalar gizlenir; bu ekrandan her zaman geri açılabilir.	Leicht lesen: Alle Texte werden groß, fett und schwarz.\nEinfacher Modus: vier große Tasten im Menü; die Übersicht zeigt nur Uhr, Wetter und drei Nachrichten. Technische Apps werden ausgeblendet; auf diesem Bildschirm jederzeit wieder einschaltbar.
+Görev Yöneticisi	Task-Manager
+Arka planda çalışan programlar	Im Hintergrund laufende Programme
+Arka planda başka program yok.	Keine anderen Programme im Hintergrund.
+%d MB · %s açık	%d MB · läuft seit %s
+%s açık	läuft seit %s
+Boş bellek: %d MB	Freier Speicher: %d MB
+Boş bellek: %d MB → %d MB	Freier Speicher: %d MB → %d MB
+Boş bellek: bilinmiyor	Freier Speicher: unbekannt
+Hepsini durdur	Alle beenden
+Durdur	Beenden
+Durdurulacak: %s.\nSistem servisleri, SSH ve Kindle Apps açık kalır.	Wird beendet: %s.\nSystemdienste, SSH und Kindle Apps laufen weiter.
+Kapatılıyor: %s…	Wird beendet: %s…
+%s kapatılamadı.	%s konnte nicht beendet werden.
+Korunanları göster (%d)	Geschützte zeigen (%d)
+◀ Programlara dön	◀ Zurück zu den Programmen
+Korunanlar: hiçbir zaman durdurulmaz	Geschützt: werden nie beendet
+Korunan üçüncü taraf program yok.	Keine geschützten Drittanbieterprogramme.
+korunuyor	geschützt
+Paket yöneticisi (kpm)	Paketverwaltung (kpm)
+Jailbreak aracı	Jailbreak-Werkzeug
+Sistem servisleri, SSH ve Kindle Apps hiçbir zaman durdurulmaz.	Systemdienste, SSH und Kindle Apps werden nie beendet.
+Arka planda program var	Ein Programm läuft im Hintergrund
+Arkada açık program: %s. Ekranı ve dokunmayı kullanabilir.	Im Hintergrund geöffnet: %s. Es kann Bildschirm und Touch-Eingaben nutzen.
+Arkada açık programlar: %s. Ekranı ve dokunmayı kullanabilirler.	Im Hintergrund geöffnet: %s. Sie können Bildschirm und Touch-Eingaben nutzen.

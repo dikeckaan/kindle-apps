@@ -740,3 +740,27 @@ Kolay okuma: Kapalı	Lectura fácil: No
 Basit mod: Açık	Modo sencillo: Sí
 Basit mod: Kapalı	Modo sencillo: No
 Kolay okuma: bütün yazılar büyük, kalın ve siyah olur.\nBasit mod: menüde dört büyük düğme; panoda yalnızca saat, hava ve üç haber. Teknik uygulamalar gizlenir; bu ekrandan her zaman geri açılabilir.	Lectura fácil: todo el texto se vuelve grande, en negrita y negro.\nModo sencillo: cuatro botones grandes en el menú; el panel muestra solo la hora, el tiempo y tres noticias. Las apps técnicas se ocultan; siempre se pueden volver a activar desde esta pantalla.
+Görev Yöneticisi	Administrador de tareas
+Arka planda çalışan programlar	Programas en segundo plano
+Arka planda başka program yok.	No hay otros programas en segundo plano.
+%d MB · %s açık	%d MB · activo desde hace %s
+%s açık	activo desde hace %s
+Boş bellek: %d MB	Memoria libre: %d MB
+Boş bellek: %d MB → %d MB	Memoria libre: %d MB → %d MB
+Boş bellek: bilinmiyor	Memoria libre: desconocida
+Hepsini durdur	Detener todo
+Durdur	Detener
+Durdurulacak: %s.\nSistem servisleri, SSH ve Kindle Apps açık kalır.	Se detendrán: %s.\nLos servicios del sistema, SSH y Kindle Apps siguen en marcha.
+Kapatılıyor: %s…	Cerrando: %s…
+%s kapatılamadı.	No se pudo cerrar %s.
+Korunanları göster (%d)	Mostrar protegidos (%d)
+◀ Programlara dön	◀ Volver a los programas
+Korunanlar: hiçbir zaman durdurulmaz	Protegidos: nunca se detienen
+Korunan üçüncü taraf program yok.	No hay programas de terceros protegidos.
+korunuyor	protegido
+Paket yöneticisi (kpm)	Gestor de paquetes (kpm)
+Jailbreak aracı	Herramienta de jailbreak
+Sistem servisleri, SSH ve Kindle Apps hiçbir zaman durdurulmaz.	Los servicios del sistema, SSH y Kindle Apps nunca se detienen.
+Arka planda program var	Hay un programa en segundo plano
+Arkada açık program: %s. Ekranı ve dokunmayı kullanabilir.	Abierto en segundo plano: %s. Puede usar la pantalla y el tacto.
+Arkada açık programlar: %s. Ekranı ve dokunmayı kullanabilirler.	Abiertos en segundo plano: %s. Pueden usar la pantalla y el tacto.

@@ -740,3 +740,27 @@ Kolay okuma: Kapalı	Łatwe czytanie: Nie
 Basit mod: Açık	Tryb prosty: Tak
 Basit mod: Kapalı	Tryb prosty: Nie
 Kolay okuma: bütün yazılar büyük, kalın ve siyah olur.\nBasit mod: menüde dört büyük düğme; panoda yalnızca saat, hava ve üç haber. Teknik uygulamalar gizlenir; bu ekrandan her zaman geri açılabilir.	Łatwe czytanie: cały tekst staje się duży, pogrubiony i czarny.\nTryb prosty: cztery duże przyciski w menu; panel pokazuje tylko zegar, pogodę i trzy wiadomości. Aplikacje techniczne są ukryte; zawsze można je przywrócić na tym ekranie.
+Görev Yöneticisi	Menedżer zadań
+Arka planda çalışan programlar	Programy działające w tle
+Arka planda başka program yok.	Brak innych programów w tle.
+%d MB · %s açık	%d MB · działa od %s
+%s açık	działa od %s
+Boş bellek: %d MB	Wolna pamięć: %d MB
+Boş bellek: %d MB → %d MB	Wolna pamięć: %d MB → %d MB
+Boş bellek: bilinmiyor	Wolna pamięć: nieznana
+Hepsini durdur	Zatrzymaj wszystkie
+Durdur	Zatrzymaj
+Durdurulacak: %s.\nSistem servisleri, SSH ve Kindle Apps açık kalır.	Zostaną zatrzymane: %s.\nUsługi systemowe, SSH i Kindle Apps działają dalej.
+Kapatılıyor: %s…	Zamykanie: %s…
+%s kapatılamadı.	Nie udało się zamknąć: %s.
+Korunanları göster (%d)	Pokaż chronione (%d)
+◀ Programlara dön	◀ Wróć do programów
+Korunanlar: hiçbir zaman durdurulmaz	Chronione: nigdy nie są zatrzymywane
+Korunan üçüncü taraf program yok.	Brak chronionych programów innych firm.
+korunuyor	chroniony
+Paket yöneticisi (kpm)	Menedżer pakietów (kpm)
+Jailbreak aracı	Narzędzie jailbreak
+Sistem servisleri, SSH ve Kindle Apps hiçbir zaman durdurulmaz.	Usługi systemowe, SSH i Kindle Apps nigdy nie są zatrzymywane.
+Arka planda program var	W tle działa program
+Arkada açık program: %s. Ekranı ve dokunmayı kullanabilir.	Otwarty w tle: %s. Może używać ekranu i dotyku.
+Arkada açık programlar: %s. Ekranı ve dokunmayı kullanabilirler.	Otwarte w tle: %s. Mogą używać ekranu i dotyku.

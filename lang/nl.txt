@@ -740,3 +740,27 @@ Kolay okuma: Kapalı	Makkelijk lezen: Uit
 Basit mod: Açık	Eenvoudige modus: Aan
 Basit mod: Kapalı	Eenvoudige modus: Uit
 Kolay okuma: bütün yazılar büyük, kalın ve siyah olur.\nBasit mod: menüde dört büyük düğme; panoda yalnızca saat, hava ve üç haber. Teknik uygulamalar gizlenir; bu ekrandan her zaman geri açılabilir.	Makkelijk lezen: alle tekst wordt groot, vet en zwart.\nEenvoudige modus: vier grote knoppen in het menu; het overzicht toont alleen klok, weer en drie nieuwsberichten. Technische apps worden verborgen; via dit scherm altijd weer aan te zetten.
+Görev Yöneticisi	Taakbeheer
+Arka planda çalışan programlar	Programma's op de achtergrond
+Arka planda başka program yok.	Geen andere programma's op de achtergrond.
+%d MB · %s açık	%d MB · actief sinds %s
+%s açık	actief sinds %s
+Boş bellek: %d MB	Vrij geheugen: %d MB
+Boş bellek: %d MB → %d MB	Vrij geheugen: %d MB → %d MB
+Boş bellek: bilinmiyor	Vrij geheugen: onbekend
+Hepsini durdur	Alles stoppen
+Durdur	Stoppen
+Durdurulacak: %s.\nSistem servisleri, SSH ve Kindle Apps açık kalır.	Wordt gestopt: %s.\nSysteemdiensten, SSH en Kindle Apps blijven draaien.
+Kapatılıyor: %s…	Sluiten: %s…
+%s kapatılamadı.	%s kon niet worden gesloten.
+Korunanları göster (%d)	Beschermde tonen (%d)
+◀ Programlara dön	◀ Terug naar programma's
+Korunanlar: hiçbir zaman durdurulmaz	Beschermd: worden nooit gestopt
+Korunan üçüncü taraf program yok.	Geen beschermde programma's van derden.
+korunuyor	beschermd
+Paket yöneticisi (kpm)	Pakketbeheer (kpm)
+Jailbreak aracı	Jailbreak-hulpmiddel
+Sistem servisleri, SSH ve Kindle Apps hiçbir zaman durdurulmaz.	Systeemdiensten, SSH en Kindle Apps worden nooit gestopt.
+Arka planda program var	Er draait een programma op de achtergrond
+Arkada açık program: %s. Ekranı ve dokunmayı kullanabilir.	Open op de achtergrond: %s. Het kan het scherm en aanraking gebruiken.
+Arkada açık programlar: %s. Ekranı ve dokunmayı kullanabilirler.	Open op de achtergrond: %s. Ze kunnen het scherm en aanraking gebruiken.

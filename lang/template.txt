@@ -5,6 +5,8 @@
 %%%d · şarj oluyor	
 # core/kui/trfmt.c
 %d %s %d, %s	
+# apps/gorev/main.c
+%d MB · %s açık	
 # apps/deprem/main.c
 %d deprem	
 # apps/odak/main.c
@@ -39,16 +41,18 @@
 %d/%d · güncellendi %02d:%02d	
 # apps/news/main.c
 %d/%d · çevrimdışı, son veri %02d:%02d	
-# apps/sysinfo/si.c
+# apps/gorev/main.c
 %ld dk	
-# apps/sysinfo/si.c
+# apps/gorev/main.c
 %ld gün %ld sa	
-# apps/sysinfo/si.c
+# apps/gorev/main.c
 %ld sa %ld dk	
 # apps/wordle/main.c
 %s %d/6 tahminde bildin.	
 # apps/upload/main.c
 %s / %s  (%%%d)	
+# apps/gorev/main.c
+%s açık	
 # core/hub/main.c
 %s beklenmedik şekilde kapandı	
 # apps/sysinfo/main.c
@@ -57,6 +61,8 @@
 %s kaldırıldı	
 # core/hub/upd_ui.c
 %s kaldırılsın mı?	
+# apps/gorev/main.c
+%s kapatılamadı.	
 # core/hub/upd_ui.c
 %s kuruldu	
 # apps/weather/main.c
@@ -169,6 +175,16 @@ Aranıyor…
 Arap matı	
 # apps/puzzle/puzzle.c
 Araya girme	
+# apps/gorev/main.c
+Arka planda başka program yok.	
+# core/hub/guard.c
+Arka planda program var	
+# apps/gorev/main.c
+Arka planda çalışan programlar	
+# core/hub/guard.c
+Arkada açık program: %s. Ekranı ve dokunmayı kullanabilir.	
+# core/hub/guard.c
+Arkada açık programlar: %s. Ekranı ve dokunmayı kullanabilirler.	
 # apps/sky/skydata.c
 Arktürüs	
 # apps/sky/skydata.c
@@ -271,6 +287,12 @@ Boden matı
 Boğa	
 # apps/puzzle/puzzle.c
 Boğmaca mat	
+# apps/gorev/main.c
+Boş bellek: %d MB	
+# apps/gorev/main.c
+Boş bellek: %d MB → %d MB	
+# apps/gorev/main.c
+Boş bellek: bilinmiyor	
 # apps/sky/main.c
 Bu gece görünen gezegenler: %s	
 # apps/sky/main.c
@@ -403,6 +425,10 @@ Doğru! Çözüldü · Seri: %d
 Doğuş %s · batış %s	
 # apps/odak/main.c
 Duraklat	
+# apps/gorev/main.c
+Durdur	
+# apps/gorev/main.c
+Durdurulacak: %s.\nSistem servisleri, SSH ve Kindle Apps açık kalır.	
 # apps/wordle/main.c
 Dâhice!	
 # apps/currency/main.c
@@ -493,6 +519,8 @@ Gök gürültülü
 Gökyüzü	
 # apps/wordle/main.c
 Gönder	
+# apps/gorev/main.c
+Görev Yöneticisi	
 # apps/news/news.c
 Güncel	
 # core/hub/upd_ui.c
@@ -575,6 +603,8 @@ Henüz oturum yok
 Henüz parola yok	
 # apps/puzzle/main.c
 Henüz çözülen bulmaca yok.	
+# apps/gorev/main.c
+Hepsini durdur	
 # apps/chess/main.c
 Her hamlede tahtayı çevir	
 # apps/ajanda/main.c
@@ -597,6 +627,8 @@ Hissedilen %s
 Hiç mola yok: oturum tamam.	
 # apps/sleep/sleep_opts.c
 Hiç uyuma	
+# apps/gorev/main.c
+Jailbreak aracı	
 # apps/weather/wx.c
 K	
 # apps/ssh/main.c
@@ -637,6 +669,8 @@ Kapana kısılan taş
 Kapat	
 # apps/firewall/main.c
 Kapatıldı. Kindle yeniden başlayınca tekrar açılır.	
+# apps/gorev/main.c
+Kapatılıyor: %s…	
 # apps/sky/skydata.c
 Kapella	
 # apps/weather/wx.c
@@ -705,6 +739,12 @@ Kolay okuma: bütün yazılar büyük, kalın ve siyah olur.\nBasit mod: menüde
 Koordinatlar	
 # apps/puzzle/puzzle.c
 Korumasız taş	
+# apps/gorev/main.c
+Korunan üçüncü taraf program yok.	
+# apps/gorev/main.c
+Korunanlar: hiçbir zaman durdurulmaz	
+# apps/gorev/main.c
+Korunanları göster (%d)	
 # apps/sky/skydata.c
 Kova	
 # apps/sky/skydata.c
@@ -859,6 +899,8 @@ Oyun ortası
 Oyun sonu	
 # apps/sky/skydata.c
 Oğlak	
+# apps/gorev/main.c
+Paket yöneticisi (kpm)	
 # apps/sky/main.c
 Parlaklık %s kadir	
 # apps/sky/main.c
@@ -961,7 +1003,7 @@ Rüzgâr —
 SON DAKİKA · %s	
 # apps/ssh/main.c
 SSH Sunucusu	
-# apps/sysinfo/main.c
+# apps/gorev/main.c
 SSH sunucusu	
 # apps/ajanda/agenda.c
 Safer	
@@ -1003,6 +1045,8 @@ Sirius
 Sisli	
 # apps/sysinfo/main.c
 Sistem Bilgisi	
+# apps/gorev/main.c
+Sistem servisleri, SSH ve Kindle Apps hiçbir zaman durdurulmaz.	
 # apps/chess/main.c
 Siyah	
 # apps/puzzle/main.c
@@ -1267,6 +1311,8 @@ dk
 f2/f7 saldırısı	
 # apps/news/main.c
 güncellendi %02d:%02d	
+# apps/gorev/main.c
+korunuyor	
 # apps/deprem/main.c
 son 24 saat	
 # apps/ajanda/main.c
@@ -1457,6 +1503,8 @@ yarım gün
 ≈ %d gün %d sa	
 # core/kui/battest.c
 ≈ %d sa %d dk	
+# apps/gorev/main.c
+◀ Programlara dön	
 # apps/sky/main.c
 ☉ Güneş	
 # apps/sky/main.c

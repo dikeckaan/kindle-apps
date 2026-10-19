@@ -194,4 +194,56 @@ int  kui_dialog(const char *title, const char *msg, const char **choices, int n,
 int  kui_input_text(const char *title, char *buf, int cap, int secret, int min_len, void (*redraw_bg)(void));
 /* redraw_bg (may be NULL) repaints the screen behind the dialog after a wake from the screensaver. */
 
+/* ---- background programs (procscan.c): /proc scan, classification and a safe stop ----
+ * The root is $KUI_PROC_ROOT (default /proc). Signals are only ever sent with the real /proc on Linux; with any other
+ * root (tests, simulator) a "signal" is logged to <root>/signals.log and marks <root>/<pid>/dead instead (SIGTERM is
+ * ignored when <root>/<pid>/ignore_term exists; <root>/<pid>/exits_after holding a pid ends it with that process).
+ * Classes: SYSTEM (Kindle services, kernel threads, pid 1), OURS (Kindle Apps), PROTECTED (never stopped: SSH servers and
+ * their sessions, kpm and other /var/local jailbreak tools, the scanning process and its ancestors), FOREIGN (third-party
+ * programs from /mnt/us, their child processes and their /tmp launcher shells). */
+typedef enum { KUI_PROC_SYSTEM, KUI_PROC_OURS, KUI_PROC_PROTECTED, KUI_PROC_FOREIGN } KuiProcClass;
+typedef enum { KUI_WHY_NONE, KUI_WHY_SSH, KUI_WHY_KPM, KUI_WHY_JAILBREAK, KUI_WHY_SELF } KuiProcWhy;
+#define KUI_PROC_MAX 512
+typedef struct {
+	int pid, ppid;
+	char state;               /* R S D T Z … from stat */
+	unsigned long long start; /* clock ticks after boot: with pid, the identity of the process */
+	long rss_kb, age_s;       /* -1 unknown */
+	KuiProcClass cls;
+	KuiProcWhy why;           /* PROTECTED: why */
+	unsigned char kthread, shell, gui, third; /* third: runs third-party code (from /mnt/us or /var/local) */
+	char comm[20];
+	char exe[160];            /* readlink exe (" (deleted)" removed); argv[0] if unreadable */
+	char args[256];           /* argv, NUL-separated */
+	int args_len;
+	char name[48];            /* shown name: extension dir, "KOReader", … (FOREIGN children and launchers take theirs) */
+} KuiProc;
+typedef struct { int pid; unsigned long long start; } KuiProcId;
+typedef struct {
+	char name[48];
+	KuiProcClass cls;
+	KuiProcWhy why;
+	int n, gui;
+	long rss_kb, age_s;       /* sum / oldest */
+	KuiProcId ids[16];
+} KuiProcGroup;
+const char *kui_proc_root(void);
+/* pure: classifies parsed entries (base rules by path and name, then self/ancestors, SSH sessions, inheritance) */
+void kui_proc_classify(KuiProc *ps, int n, int self_pid);
+/* reads every <root>/<pid> and classifies; gui is set for FOREIGN non-shell processes with DISPLAY in their environment,
+ * /dev/fb0 or /dev/input open, or a known screen program (KOReader). Returns the count (0 when there is no /proc). */
+int kui_proc_scan(KuiProc *out, int max, int self_pid);
+/* groups of one class by name (third-party only for PROTECTED); returns the count */
+int kui_proc_groups(const KuiProc *ps, int n, KuiProcClass cls, KuiProcGroup *out, int max);
+/* Stops FOREIGN processes (and their FOREIGN descendants, also ones that appear meanwhile): SIGTERM programs first,
+ * wait up to 3 s, give their launcher shells up to 5 s to finish their own clean-up (KOReader restores the Kindle UI),
+ * then SIGTERM what is left (2 s) and SIGKILL survivors. Ids that are no longer FOREIGN are skipped.
+ * Returns how many are still alive. */
+int kui_proc_stop(const KuiProcId *ids, int n);
+/* after kui_proc_stop, on the device: resumes a framework process left SIGSTOPped (cvm, KPPMainApp); while kui-run.sh is
+ * in front (its lock exists) pauses the Kindle UI again the way kui-run.sh does (a launcher's clean-up resumed it) and,
+ * if the framework (lab126_gui) is stopped, asks kui-run.sh to start it when our app exits. Nothing off the device. */
+void kui_proc_after_stop(void);
+long kui_mem_available_kb(void); /* MemAvailable from <root>/meminfo, -1 unknown */
+
 #endif

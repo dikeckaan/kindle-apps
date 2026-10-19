@@ -740,3 +740,27 @@ Kolay okuma: Kapalı	Leitura fácil: Não
 Basit mod: Açık	Modo simples: Sim
 Basit mod: Kapalı	Modo simples: Não
 Kolay okuma: bütün yazılar büyük, kalın ve siyah olur.\nBasit mod: menüde dört büyük düğme; panoda yalnızca saat, hava ve üç haber. Teknik uygulamalar gizlenir; bu ekrandan her zaman geri açılabilir.	Leitura fácil: todo o texto fica grande, em negrito e preto.\nModo simples: quatro botões grandes no menu; o painel mostra só a hora, o tempo e três notícias. As apps técnicas ficam ocultas; pode sempre reativá-las neste ecrã.
+Görev Yöneticisi	Gerenciador de tarefas
+Arka planda çalışan programlar	Programas em segundo plano
+Arka planda başka program yok.	Nenhum outro programa em segundo plano.
+%d MB · %s açık	%d MB · ativo há %s
+%s açık	ativo há %s
+Boş bellek: %d MB	Memória livre: %d MB
+Boş bellek: %d MB → %d MB	Memória livre: %d MB → %d MB
+Boş bellek: bilinmiyor	Memória livre: desconhecida
+Hepsini durdur	Parar todos
+Durdur	Parar
+Durdurulacak: %s.\nSistem servisleri, SSH ve Kindle Apps açık kalır.	Serão parados: %s.\nServiços do sistema, SSH e Kindle Apps continuam ativos.
+Kapatılıyor: %s…	Fechando: %s…
+%s kapatılamadı.	Não foi possível fechar %s.
+Korunanları göster (%d)	Mostrar protegidos (%d)
+◀ Programlara dön	◀ Voltar aos programas
+Korunanlar: hiçbir zaman durdurulmaz	Protegidos: nunca são parados
+Korunan üçüncü taraf program yok.	Nenhum programa de terceiros protegido.
+korunuyor	protegido
+Paket yöneticisi (kpm)	Gerenciador de pacotes (kpm)
+Jailbreak aracı	Ferramenta de jailbreak
+Sistem servisleri, SSH ve Kindle Apps hiçbir zaman durdurulmaz.	Serviços do sistema, SSH e Kindle Apps nunca são parados.
+Arka planda program var	Há um programa em segundo plano
+Arkada açık program: %s. Ekranı ve dokunmayı kullanabilir.	Aberto em segundo plano: %s. Pode usar a tela e o toque.
+Arkada açık programlar: %s. Ekranı ve dokunmayı kullanabilirler.	Abertos em segundo plano: %s. Podem usar a tela e o toque.

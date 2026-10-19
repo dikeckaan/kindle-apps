@@ -740,3 +740,27 @@ Kolay okuma: Kapalı	Asan oxu: Bağlı
 Basit mod: Açık	Sadə rejim: Açıq
 Basit mod: Kapalı	Sadə rejim: Bağlı
 Kolay okuma: bütün yazılar büyük, kalın ve siyah olur.\nBasit mod: menüde dört büyük düğme; panoda yalnızca saat, hava ve üç haber. Teknik uygulamalar gizlenir; bu ekrandan her zaman geri açılabilir.	Asan oxu: bütün yazılar böyük, qalın və qara olur.\nSadə rejim: menyuda dörd böyük düymə; paneldə yalnız saat, hava və üç xəbər. Texniki tətbiqlər gizlədilir; bu ekrandan həmişə geri açıla bilər.
+Görev Yöneticisi	Tapşırıq meneceri
+Arka planda çalışan programlar	Arxa planda işləyən proqramlar
+Arka planda başka program yok.	Arxa planda başqa proqram yoxdur.
+%d MB · %s açık	%d MB · %s açıqdır
+%s açık	%s açıqdır
+Boş bellek: %d MB	Boş yaddaş: %d MB
+Boş bellek: %d MB → %d MB	Boş yaddaş: %d MB → %d MB
+Boş bellek: bilinmiyor	Boş yaddaş: naməlum
+Hepsini durdur	Hamısını dayandır
+Durdur	Dayandır
+Durdurulacak: %s.\nSistem servisleri, SSH ve Kindle Apps açık kalır.	Dayandırılacaq: %s.\nSistem xidmətləri, SSH və Kindle Apps açıq qalır.
+Kapatılıyor: %s…	Bağlanır: %s…
+%s kapatılamadı.	%s bağlana bilmədi.
+Korunanları göster (%d)	Qorunanları göstər (%d)
+◀ Programlara dön	◀ Proqramlara qayıt
+Korunanlar: hiçbir zaman durdurulmaz	Qorunanlar: heç vaxt dayandırılmır
+Korunan üçüncü taraf program yok.	Qorunan üçüncü tərəf proqramı yoxdur.
+korunuyor	qorunur
+Paket yöneticisi (kpm)	Paket meneceri (kpm)
+Jailbreak aracı	Jailbreak aləti
+Sistem servisleri, SSH ve Kindle Apps hiçbir zaman durdurulmaz.	Sistem xidmətləri, SSH və Kindle Apps heç vaxt dayandırılmır.
+Arka planda program var	Arxa planda proqram var
+Arkada açık program: %s. Ekranı ve dokunmayı kullanabilir.	Arxada açıq proqram: %s. Ekrandan və toxunuşdan istifadə edə bilər.
+Arkada açık programlar: %s. Ekranı ve dokunmayı kullanabilirler.	Arxada açıq proqramlar: %s. Ekrandan və toxunuşdan istifadə edə bilərlər.
