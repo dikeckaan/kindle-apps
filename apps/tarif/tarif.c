@@ -642,6 +642,27 @@ static void emit_qty(char *out, int cap, int *o, double lo, double hi, int frac,
 	if (*o > cap - 1) *o = cap - 1;
 }
 
+/* "0,25 kilo" reads badly: below one kilo / litre the scaled amount becomes grams / millilitres (to 10, from 100 on to 50).
+ * rest points just past the number; returns the length of the unit word replaced, 0 when nothing was done. */
+static int metric_small(const char *rest, double v, char *out, int cap, int *o)
+{
+	static const struct { const char *u; const char *to; } M[] = {
+		{ "kilogram", "gram" }, { "kilo", "gram" }, { "kg", "g" }, { "litre", "ml" }, { "lt", "ml" }, { "l", "ml" },
+	};
+	if (v <= 0 || v >= 1) return 0;
+	const char *w = rest;
+	while (*w == ' ') w++;
+	for (size_t i = 0; i < sizeof M / sizeof M[0]; i++) {
+		size_t n = strlen(M[i].u);
+		if (strncmp(w, M[i].u, n) || isalpha((unsigned char) w[n])) continue;
+		double g = v * 1000, step = g >= 100 ? 50 : 10;
+		*o += snprintf(out + *o, (size_t) (cap - *o), "%.0f %s", floor(g / step + 0.5) * step, M[i].to);
+		if (*o > cap - 1) *o = cap - 1;
+		return (int) (w - rest + n);
+	}
+	return 0;
+}
+
 int tarif_scale_line(const char *line, double f, int comma, char *out, int cap)
 {
 	double lo, hi;
@@ -652,8 +673,9 @@ int tarif_scale_line(const char *line, double f, int comma, char *out, int cap)
 		o = (int) (s - line);
 		if (o > cap - 1) o = cap - 1;
 		memcpy(out, line, (size_t) o);
-		emit_qty(out, cap, &o, lo, hi, frac, f, comma);
-		snprintf(out + o, (size_t) (cap - o), "%s", s + n);
+		int u = hi > lo ? 0 : metric_small(s + n, lo * f, out, cap, &o);
+		if (!u) emit_qty(out, cap, &o, lo, hi, frac, f, comma);
+		snprintf(out + o, (size_t) (cap - o), "%s", s + n + u);
 		return 1;
 	}
 	if (fabs(f - 1) > 1e-9)

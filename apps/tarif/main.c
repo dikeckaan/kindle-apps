@@ -21,6 +21,14 @@
 
 typedef struct { TarifDb *d; int i; } Ref;
 
+/* copies at most cap - 1 bytes (a deliberate cut, like snprintf's, without gcc's truncation warning) */
+static void scopy(char *d, size_t cap, const char *s)
+{
+	size_t n = strnlen(s, cap - 1);
+	memcpy(d, s, n);
+	d[n] = '\0';
+}
+
 static TarifDb db, cache; /* bundled set, recipes seen online */
 static TarifKeys favs, recent;
 static TarifTimers timers;
@@ -169,7 +177,7 @@ static void ellipsize(const char *in, KuiFont f, int px, int w, char *s, int cap
 		char t[600];
 		snprintf(t, sizeof t, "%s…", s);
 		if (kui_text_width(t, f, px) <= w || len == 0) {
-			snprintf(s, (size_t) cap, "%s", t);
+			scopy(s, (size_t) cap, t);
 			return;
 		}
 	}
@@ -994,7 +1002,7 @@ static void wiki_search(int src, const char *q)
 	for (int i = 0; i < n && n_hits < MAX_HITS; i++) {
 		if (strstr(titles[i], "Cuisine") || strstr(titles[i], "Mutfağı") || strchr(titles[i], '/')) continue; /* index pages */
 		hits[n_hits].src = src;
-		snprintf(hits[n_hits].title, sizeof hits[n_hits].title, "%s", titles[i]);
+		scopy(hits[n_hits].title, sizeof hits[n_hits].title, titles[i]);
 		hits[n_hits++].id[0] = '\0';
 	}
 }
@@ -1004,7 +1012,7 @@ static void mealdb_search(const char *q_en, int by_ing)
 	if (!mealdb_key[0]) return;
 	char enc[300], url[600], *body, word[100];
 	if (by_ing) { /* the first ingredient, as TheMealDB writes it ("chicken_breast") */
-		snprintf(word, sizeof word, "%s", q_en);
+		scopy(word, sizeof word, q_en);
 		char *sp = strchr(word, ' ');
 		if (sp) *sp = '\0';
 		net_urlencode(word, enc, sizeof enc);
@@ -1016,8 +1024,8 @@ static void mealdb_search(const char *q_en, int by_ing)
 	free(body);
 	for (int i = 0; i < n && n_hits < MAX_HITS; i++) {
 		hits[n_hits].src = SRC_MEAL;
-		snprintf(hits[n_hits].title, sizeof hits[n_hits].title, "%s", names[i]);
-		snprintf(hits[n_hits++].id, sizeof hits[0].id, "%s", ids[i]);
+		scopy(hits[n_hits].title, sizeof hits[n_hits].title, names[i]);
+		scopy(hits[n_hits++].id, sizeof hits[0].id, ids[i]);
 	}
 }
 

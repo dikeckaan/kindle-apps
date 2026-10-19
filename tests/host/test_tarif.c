@@ -215,6 +215,11 @@ static void test_scale(void)
 	scale("3 yumurta", 1.0 / 3 * 2, "2 yumurta", 1);
 	scale("1 kg. kuşbaşı et", 1.5, "1,5 kg. kuşbaşı et", 1);
 	scale("Domates (2 adet)", 2, "Domates (2 adet)", 0);
+	scale("1 kilo ahududu", 1.0 / 7, "150 gram ahududu", 1); /* below a kilo: grams */
+	scale("1 kg. kuşbaşı et", 0.5, "500 g. kuşbaşı et", 1);
+	scale("1 litre süt", 0.25, "250 ml süt", 1);
+	scale("2 kilo şeker", 2.0 / 14, "300 gram şeker", 1);
+	scale("1 kilometre", 0.5, "½ kilometre", 1); /* only the unit word itself */
 }
 
 static void test_step_seconds(void)
