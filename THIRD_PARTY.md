@@ -14,6 +14,11 @@
 | Paul Schlyter, "How to compute planetary positions" | published method (orbital elements), no code or data copied | https://stjarnhimlen.se/comp/ppcomp.html | Gökyüzü Sun, Moon and planet positions (`apps/sky/astro.c`) |
 | stb_truetype (Sean Barrett) | public domain / MIT | https://github.com/nothings/stb | host simulator only (`tools/sim`), not shipped |
 | DejaVu Fonts 2.37 | Bitstream Vera / DejaVu license (free, see `DejaVu-LICENSE`) | https://dejavu-fonts.github.io | UI fonts (Sans for the UI, Serif for Gazete; Turkish, Greek, Cyrillic and chess glyphs) |
+| Wiktionary (en, simple, de, fr, es, it, pt, tr editions) via Wiktextract / kaikki.org, dumps of 2026-10 | CC BY-SA 4.0 (and GFDL) | https://kaikki.org, https://www.wiktionary.org | Kelime Öğren word lists (`apps/kelime/data/*.txt`, CC BY-SA 4.0; definitions, translations, examples; details in `apps/kelime/data/SOURCES`, built by `tools/kelime/`) |
+| Tatoeba sentences and links (per-language exports, 2026-10-19) | CC BY 2.0 FR | https://tatoeba.org | Kelime Öğren example sentences and their translations |
+| FrequencyWords 2018 (de, en, es, fr, it, pt, tr) | CC BY-SA 4.0 | https://github.com/hermitdave/FrequencyWords | Kelime Öğren word choice and order; approximate levels for languages other than English |
+| CEFR-J Wordlist 1.5 (Yukio Tono, TUFS) | free for research and commercial use with citation | http://www.cefr-j.org/download.html (via https://github.com/openlanguageprofiles/olp-en-cefrj) | Kelime Öğren English A1–B2 levels |
+| Octanove Vocabulary Profile C1/C2 1.0 (Octanove Labs) | CC BY-SA 4.0 | https://github.com/openlanguageprofiles/olp-en-cefrj | Kelime Öğren English C1/C2 levels |
 
 Because FBInk is linked statically and is GPLv3+, this project is distributed under GPLv3 (see `LICENSE`).
 

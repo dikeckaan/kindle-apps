@@ -1099,3 +1099,66 @@ Henüz favori tarif yok.\nBir tarifte ☆ düğmesine dokunun.	Обраних р
 Son bakılanlar	Нещодавні
 Henüz tarif açılmadı.	Ви ще не відкривали рецептів.
 Tarifler yüklenemedi.	Не вдалося завантажити рецепти.
+Kelime Öğren	Вчимо слова
+Almanca	Німецька
+Fransızca	Французька
+İspanyolca	Іспанська
+İtalyanca	Італійська
+Portekizce	Португальська
+Başlangıç	Початковий
+Temel	Елементарний
+Orta üstü	Вище середнього
+İleri	Просунутий
+Ustalık	Досконалий
+isim	іменник
+fiil	дієслово
+sıfat	прикметник
+zarf	прислівник
+zamir	займенник
+edat	прийменник
+bağlaç	сполучник
+sayı	числівник
+belirleyici	детермінатив
+ünlem	вигук
+deyim	вираз
+Diller	Мови
+Öğrendiğim dil	Я вивчаю
+Ana dilim	Моя мова
+Sorular öğrendiğin dilde, açıklamalar iki dilde gelir.	Питання мовою, яку ви вивчаєте, пояснення обома мовами.
+%d kelime, A1'den C2'ye	%d слів, від A1 до C2
+Bu kelime ne demek?	Що означає це слово?
+%s karşılığı hangisi?	Яке це слово (%s)?
+Bu tanım hangi kelimenin? (%s)	Яке слово тут пояснюється? (%s)
+Boşluğa hangi kelime gelir?	Яке слово пропущено?
+Bu çeviri doğru mu?	Цей переклад правильний?
+Doğru	Правильно
+Yanlış	Неправильно
+Sonuç	Підсумок
+Ders bitti	Урок завершено
+%d sorudan %d doğru	%d питань, %d правильно
++%d XP	+%d XP
++%d XP (hatasız ders: +%d)	+%d XP (без помилок: +%d)
+Seri: %d gün · bugün %d/%d XP	Серія: %d дн. · сьогодні %d/%d XP
+Tekrar edilecek kelimeler	Слова для повторення
+Hiç hata yok, harika!	Без помилок, чудово!
+Yeni ders	Новий урок
+Ana ekran	Головна
+Tekrar	Повторення
+Tekrar (%d)	Повторення (%d)
+Bu seviyede soru yok	На цьому рівні немає питань
+Tekrar edilecek kelime yok	Нічого повторювати
+Bu dil ikilisinde bu seviyede sorulacak kelime bulunamadı.	Для цієї пари мов на цьому рівні немає слів.
+Önce birkaç ders yapın; yanlış bildiğiniz kelimeler burada tekrar sorulur.	Спершу пройдіть кілька уроків; слова з помилками повторюються тут.
+%s öğreniyorum · ana dilim %s	Вивчаю: %s · моя мова: %s
+Toplam: %ld XP · bugün %d XP	Усього: %ld XP · сьогодні %d XP
+Seri: %d gün · en uzun %d gün	Серія: %d дн. · рекорд %d дн.
+%d ders · %d cevap · %%%d doğru	%d уроків · %d відповідей · %d%% правильно
+%d kelime görüldü · %d öğrenildi · %d tekrar bekliyor	%d слів побачено · %d вивчено · %d чекають повторення
+Seviyeler	Рівні
+Tekrar kutuları	Картки для повторення
+1: yeni kaçırılan · 5: iyice öğrenildi (aralık 1, 2, 4, 8, 21 gün)	1: щойно помилка · 5: добре вивчено (через 1, 2, 4, 8, 21 дн.)
+Değiştir	Змінити
+Seri: %d gün · %ld XP · bugün %d/%d	Серія: %d дн. · %ld XP · сьогодні %d/%d
+Kaynak: Vikisözlük (CC BY-SA), Tatoeba (CC BY), CEFR-J; seviyeler sıklığa göre	Джерела: Вікісловник (CC BY-SA), Tatoeba (CC BY), CEFR-J; рівні за частотністю
+Kelime listeleri yüklenemedi.	Не вдалося завантажити списки слів.
+%d / %d öğrenildi	%d / %d вивчено

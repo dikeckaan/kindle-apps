@@ -1099,3 +1099,66 @@ Henüz favori tarif yok.\nBir tarifte ☆ düğmesine dokunun.	Ingen favorittopp
 Son bakılanlar	Sist sett
 Henüz tarif açılmadı.	Ingen oppskrifter åpnet ennå.
 Tarifler yüklenemedi.	Kunne ikke laste oppskriftene.
+Kelime Öğren	Ordtrening
+Almanca	Tysk
+Fransızca	Fransk
+İspanyolca	Spansk
+İtalyanca	Italiensk
+Portekizce	Portugisisk
+Başlangıç	Nybegynner
+Temel	Grunnleggende
+Orta üstü	Øvre middels
+İleri	Avansert
+Ustalık	Mester
+isim	substantiv
+fiil	verb
+sıfat	adjektiv
+zarf	adverb
+zamir	pronomen
+edat	preposisjon
+bağlaç	konjunksjon
+sayı	tallord
+belirleyici	determinativ
+ünlem	interjeksjon
+deyim	uttrykk
+Diller	Språk
+Öğrendiğim dil	Jeg lærer
+Ana dilim	Mitt språk
+Sorular öğrendiğin dilde, açıklamalar iki dilde gelir.	Spørsmål på språket du lærer, forklaringer på begge språk.
+%d kelime, A1'den C2'ye	%d ord, fra A1 til C2
+Bu kelime ne demek?	Hva betyr dette ordet?
+%s karşılığı hangisi?	Hvilket er ordet på %s?
+Bu tanım hangi kelimenin? (%s)	Hvilket ord forklares her? (%s)
+Boşluğa hangi kelime gelir?	Hvilket ord passer i hullet?
+Bu çeviri doğru mu?	Er denne oversettelsen riktig?
+Doğru	Sant
+Yanlış	Feil
+Sonuç	Resultat
+Ders bitti	Leksjonen er ferdig
+%d sorudan %d doğru	%d spørsmål, %d riktige
++%d XP	+%d XP
++%d XP (hatasız ders: +%d)	+%d XP (feilfritt: +%d)
+Seri: %d gün · bugün %d/%d XP	Rekke: %d dager · i dag %d/%d XP
+Tekrar edilecek kelimeler	Ord å repetere
+Hiç hata yok, harika!	Ingen feil, flott!
+Yeni ders	Ny leksjon
+Ana ekran	Start
+Tekrar	Repetisjon
+Tekrar (%d)	Repetisjon (%d)
+Bu seviyede soru yok	Ingen spørsmål på dette nivået
+Tekrar edilecek kelime yok	Ingenting å repetere
+Bu dil ikilisinde bu seviyede sorulacak kelime bulunamadı.	Ingen ord på dette nivået for dette språkparet.
+Önce birkaç ders yapın; yanlış bildiğiniz kelimeler burada tekrar sorulur.	Ta noen leksjoner først; ord du bommer på, kommer tilbake her.
+%s öğreniyorum · ana dilim %s	Jeg lærer %s · mitt språk %s
+Toplam: %ld XP · bugün %d XP	Totalt: %ld XP · i dag %d XP
+Seri: %d gün · en uzun %d gün	Rekke: %d dager · lengste %d dager
+%d ders · %d cevap · %%%d doğru	%d leksjoner · %d svar · %d %% riktig
+%d kelime görüldü · %d öğrenildi · %d tekrar bekliyor	%d ord sett · %d lært · %d til repetisjon
+Seviyeler	Nivåer
+Tekrar kutuları	Repetisjonsbokser
+1: yeni kaçırılan · 5: iyice öğrenildi (aralık 1, 2, 4, 8, 21 gün)	1: nettopp feil · 5: godt lært (hver 1, 2, 4, 8, 21 dag)
+Değiştir	Endre
+Seri: %d gün · %ld XP · bugün %d/%d	Rekke: %d dager · %ld XP · i dag %d/%d
+Kaynak: Vikisözlük (CC BY-SA), Tatoeba (CC BY), CEFR-J; seviyeler sıklığa göre	Kilder: Wiktionary (CC BY-SA), Tatoeba (CC BY), CEFR-J; nivåer etter frekvens
+Kelime listeleri yüklenemedi.	Ordlistene kunne ikke lastes inn.
+%d / %d öğrenildi	%d / %d lært

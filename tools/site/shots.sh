@@ -48,6 +48,7 @@ SKY_TIME=1792432800 shot sky sky "none" _full
 shot siir siir "none"
 shot ajanda ajanda "none" _full
 shot odak odak "none" _full
+shot kelime kelime "none tap 288 580 none tap 536 1340 none" _full
 shot wordle wordle "none"
 shot sudoku sudoku "tap 536 440 none"
 shot mines mines "tap 536 440 tap 300 700 none"

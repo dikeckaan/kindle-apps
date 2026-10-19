@@ -1099,3 +1099,66 @@ Henüz favori tarif yok.\nBir tarifte ☆ düğmesine dokunun.	Zatím žádné o
 Son bakılanlar	Naposledy zobrazené
 Henüz tarif açılmadı.	Zatím nebyl otevřen žádný recept.
 Tarifler yüklenemedi.	Recepty nelze načíst.
+Kelime Öğren	Slovíčka
+Almanca	Němčina
+Fransızca	Francouzština
+İspanyolca	Španělština
+İtalyanca	Italština
+Portekizce	Portugalština
+Başlangıç	Začátečník
+Temel	Základní
+Orta üstü	Vyšší střední
+İleri	Pokročilý
+Ustalık	Mistrovský
+isim	podstatné jméno
+fiil	sloveso
+sıfat	přídavné jméno
+zarf	příslovce
+zamir	zájmeno
+edat	předložka
+bağlaç	spojka
+sayı	číslovka
+belirleyici	determinátor
+ünlem	citoslovce
+deyim	fráze
+Diller	Jazyky
+Öğrendiğim dil	Učím se
+Ana dilim	Můj jazyk
+Sorular öğrendiğin dilde, açıklamalar iki dilde gelir.	Otázky v jazyce, který se učíte, vysvětlení v obou jazycích.
+%d kelime, A1'den C2'ye	%d slov, od A1 do C2
+Bu kelime ne demek?	Co znamená toto slovo?
+%s karşılığı hangisi?	Které je to slovo (%s)?
+Bu tanım hangi kelimenin? (%s)	Které slovo je tu vysvětleno? (%s)
+Boşluğa hangi kelime gelir?	Které slovo patří do mezery?
+Bu çeviri doğru mu?	Je tento překlad správný?
+Doğru	Pravda
+Yanlış	Nepravda
+Sonuç	Výsledek
+Ders bitti	Lekce hotová
+%d sorudan %d doğru	%d otázek, %d správně
++%d XP	+%d XP
++%d XP (hatasız ders: +%d)	+%d XP (bez chyby: +%d)
+Seri: %d gün · bugün %d/%d XP	Série: %d dní · dnes %d/%d XP
+Tekrar edilecek kelimeler	Slova k opakování
+Hiç hata yok, harika!	Bez chyby, skvělé!
+Yeni ders	Nová lekce
+Ana ekran	Domů
+Tekrar	Opakování
+Tekrar (%d)	Opakování (%d)
+Bu seviyede soru yok	Na této úrovni nejsou otázky
+Tekrar edilecek kelime yok	Nic k opakování
+Bu dil ikilisinde bu seviyede sorulacak kelime bulunamadı.	Pro tuto dvojici jazyků nejsou na této úrovni slova.
+Önce birkaç ders yapın; yanlış bildiğiniz kelimeler burada tekrar sorulur.	Nejdřív udělejte pár lekcí; chybná slova se tu zopakují.
+%s öğreniyorum · ana dilim %s	Učím se: %s · můj jazyk: %s
+Toplam: %ld XP · bugün %d XP	Celkem: %ld XP · dnes %d XP
+Seri: %d gün · en uzun %d gün	Série: %d dní · nejdelší %d dní
+%d ders · %d cevap · %%%d doğru	%d lekcí · %d odpovědí · %d %% správně
+%d kelime görüldü · %d öğrenildi · %d tekrar bekliyor	%d slov viděno · %d naučeno · %d k opakování
+Seviyeler	Úrovně
+Tekrar kutuları	Krabičky opakování
+1: yeni kaçırılan · 5: iyice öğrenildi (aralık 1, 2, 4, 8, 21 gün)	1: právě chybné · 5: dobře naučené (po 1, 2, 4, 8, 21 dnech)
+Değiştir	Změnit
+Seri: %d gün · %ld XP · bugün %d/%d	Série: %d dní · %ld XP · dnes %d/%d
+Kaynak: Vikisözlük (CC BY-SA), Tatoeba (CC BY), CEFR-J; seviyeler sıklığa göre	Zdroje: Wikislovník (CC BY-SA), Tatoeba (CC BY), CEFR-J; úrovně podle četnosti
+Kelime listeleri yüklenemedi.	Seznamy slov se nepodařilo načíst.
+%d / %d öğrenildi	%d / %d naučeno

@@ -33,6 +33,7 @@ Kitaplıkta tek bir **"Uygulamalar"** girişi olur; açınca bütün uygulamalar
 | Masa Oyunları (Reversi, Türk daması, Go 9×9/13×13: Kindle'a karşı 3 zorluk ya da iki kişilik) | ✅ |
 | Akış (kendi RSS/Atom akışlarınız: klasörler, okunmamışlar, çevrimdışı okuma, popüler akışlar kataloğu, OPML) | ✅ |
 | Uyku Ekranı (tarih, hava, ajanda, günün şiiri; Kindle aralarda derin uykuda, 30/60/120 dk'da bir tazelenir) | ✅ |
+| Kelime Öğren (Duolingo gibi kelime oyunu: 7 dil arasında her ikili, A1–C2, tanım + örnek cümle, aralıklı tekrar, seri; Vikisözlük + Tatoeba, çevrimdışı) | ✅ |
 
 ## Gereksinimler
 

@@ -1099,3 +1099,66 @@ Henüz favori tarif yok.\nBir tarifte ☆ düğmesine dokunun.	Încă nu aveți 
 Son bakılanlar	Văzute recent
 Henüz tarif açılmadı.	Încă nu ați deschis nicio rețetă.
 Tarifler yüklenemedi.	Rețetele nu au putut fi încărcate.
+Kelime Öğren	Învață cuvinte
+Almanca	Germană
+Fransızca	Franceză
+İspanyolca	Spaniolă
+İtalyanca	Italiană
+Portekizce	Portugheză
+Başlangıç	Începător
+Temel	Elementar
+Orta üstü	Intermediar superior
+İleri	Avansat
+Ustalık	Expert
+isim	substantiv
+fiil	verb
+sıfat	adjectiv
+zarf	adverb
+zamir	pronume
+edat	prepoziție
+bağlaç	conjuncție
+sayı	numeral
+belirleyici	determinant
+ünlem	interjecție
+deyim	locuțiune
+Diller	Limbi
+Öğrendiğim dil	Învăț
+Ana dilim	Limba mea
+Sorular öğrendiğin dilde, açıklamalar iki dilde gelir.	Întrebări în limba pe care o înveți, explicații în ambele limbi.
+%d kelime, A1'den C2'ye	%d cuvinte, de la A1 la C2
+Bu kelime ne demek?	Ce înseamnă acest cuvânt?
+%s karşılığı hangisi?	Care este cuvântul în %s?
+Bu tanım hangi kelimenin? (%s)	Ce cuvânt este definit aici? (%s)
+Boşluğa hangi kelime gelir?	Ce cuvânt completează spațiul?
+Bu çeviri doğru mu?	Este corectă această traducere?
+Doğru	Adevărat
+Yanlış	Fals
+Sonuç	Rezultat
+Ders bitti	Lecție încheiată
+%d sorudan %d doğru	%d întrebări, %d corecte
++%d XP	+%d XP
++%d XP (hatasız ders: +%d)	+%d XP (fără greșeli: +%d)
+Seri: %d gün · bugün %d/%d XP	Serie: %d zile · azi %d/%d XP
+Tekrar edilecek kelimeler	Cuvinte de recapitulat
+Hiç hata yok, harika!	Nicio greșeală, super!
+Yeni ders	Lecție nouă
+Ana ekran	Acasă
+Tekrar	Recapitulare
+Tekrar (%d)	Recapitulare (%d)
+Bu seviyede soru yok	Nicio întrebare la acest nivel
+Tekrar edilecek kelime yok	Nimic de recapitulat
+Bu dil ikilisinde bu seviyede sorulacak kelime bulunamadı.	Nu există cuvinte la acest nivel pentru această pereche de limbi.
+Önce birkaç ders yapın; yanlış bildiğiniz kelimeler burada tekrar sorulur.	Faceți întâi câteva lecții; cuvintele greșite revin aici.
+%s öğreniyorum · ana dilim %s	Învăț %s · limba mea %s
+Toplam: %ld XP · bugün %d XP	Total: %ld XP · azi %d XP
+Seri: %d gün · en uzun %d gün	Serie: %d zile · cea mai lungă %d zile
+%d ders · %d cevap · %%%d doğru	%d lecții · %d răspunsuri · %d%% corecte
+%d kelime görüldü · %d öğrenildi · %d tekrar bekliyor	%d cuvinte văzute · %d învățate · %d de recapitulat
+Seviyeler	Niveluri
+Tekrar kutuları	Cutii de recapitulare
+1: yeni kaçırılan · 5: iyice öğrenildi (aralık 1, 2, 4, 8, 21 gün)	1: greșit recent · 5: bine învățat (la 1, 2, 4, 8, 21 zile)
+Değiştir	Schimbă
+Seri: %d gün · %ld XP · bugün %d/%d	Serie: %d zile · %ld XP · azi %d/%d
+Kaynak: Vikisözlük (CC BY-SA), Tatoeba (CC BY), CEFR-J; seviyeler sıklığa göre	Surse: Wikționar (CC BY-SA), Tatoeba (CC BY), CEFR-J; niveluri după frecvență
+Kelime listeleri yüklenemedi.	Listele de cuvinte nu au putut fi încărcate.
+%d / %d öğrenildi	%d / %d învățate

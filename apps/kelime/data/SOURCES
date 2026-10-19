@@ -1,0 +1,86 @@
+Kelime Öğren — word list sources and licences
+
+The word lists (<lang>.txt) were built by tools/kelime/fetch.py and tools/kelime/build-words.py from the
+sources below. They are a derivative of Wiktionary and Tatoeba and are distributed under the Creative Commons
+Attribution-ShareAlike 4.0 licence (https://creativecommons.org/licenses/by-sa/4.0/); example sentences from
+Tatoeba are CC BY 2.0 FR (https://creativecommons.org/licenses/by/2.0/fr/), © their Tatoeba contributors.
+
+* Wiktionary (https://www.wiktionary.org), © Wiktionary contributors, CC BY-SA 4.0 and GFDL, as extracted by
+  Wiktextract (Tatu Ylonen, "Wiktextract: Wiktionary as Machine-Readable Structured Data", LREC 2022) and
+  published at https://kaikki.org: definitions, translations, parts of speech, genders, inflected forms and
+  usage examples, from the English, Simple English, German, French, Spanish, Italian, Portuguese and Turkish
+  editions. Texts were shortened and the word itself is marked {like this}.
+* Tatoeba (https://tatoeba.org), CC BY 2.0 FR: example sentences and their translations (per-language exports).
+* FrequencyWords by Hermit Dave (https://github.com/hermitdave/FrequencyWords), OpenSubtitles 2018 frequency
+  lists, content CC BY-SA 4.0: which words are taught and in which order.
+* CEFR-J Wordlist Version 1.5, compiled by Yukio Tono, Tokyo University of Foreign Studies
+  (http://www.cefr-j.org/download.html; via https://github.com/openlanguageprofiles/olp-en-cefrj), free for
+  research and commercial use with this citation: the A1–B2 levels of the English words.
+* Octanove Vocabulary Profile C1/C2 1.0, Octanove Labs, CC BY-SA 4.0 (same repository): English C1/C2 levels.
+
+LEVELS. English levels are the CEFR-J / Octanove levels. For Turkish, German, French, Spanish, Italian and
+Portuguese no open CEFR-graded list exists, so their levels are an APPROXIMATION from word frequency: the
+most frequent 450 usable lemmas are A1, then up to rank 1100 A2, 2000 B1, 3100 B2,
+4300 C1 and 5600 C2. Vulgar, offensive and derogatory words and senses were left out.
+
+Downloads:
+  cefrj: 2026-10-19 https://raw.githubusercontent.com/openlanguageprofiles/olp-en-cefrj/master/cefrj-vocabulary-profile-1.5.csv (233214 bytes)
+  enwikt_de: 2026-10-19 https://kaikki.org/dictionary/German/kaikki.org-dictionary-German.jsonl (371261 entries read, 39512 kept)
+  enwikt_es: 2026-10-19 https://kaikki.org/dictionary/Spanish/kaikki.org-dictionary-Spanish.jsonl (811049 entries read, 43544 kept)
+  enwikt_fr: 2026-10-19 https://kaikki.org/dictionary/French/kaikki.org-dictionary-French.jsonl (403269 entries read, 37251 kept)
+  enwikt_it: 2026-10-19 https://kaikki.org/dictionary/Italian/kaikki.org-dictionary-Italian.jsonl (623702 entries read, 42784 kept)
+  enwikt_pt: 2026-10-19 https://kaikki.org/dictionary/Portuguese/kaikki.org-dictionary-Portuguese.jsonl (446043 entries read, 37342 kept)
+  enwikt_tr: 2026-10-19 https://kaikki.org/dictionary/Turkish/kaikki.org-dictionary-Turkish.jsonl (45949 entries read, 12415 kept)
+  freq_de: 2026-10-19 https://raw.githubusercontent.com/hermitdave/FrequencyWords/master/content/2018/de/de_50k.txt (662497 bytes)
+  freq_en: 2026-10-19 https://raw.githubusercontent.com/hermitdave/FrequencyWords/master/content/2018/en/en_50k.txt (622749 bytes)
+  freq_es: 2026-10-19 https://raw.githubusercontent.com/hermitdave/FrequencyWords/master/content/2018/es/es_50k.txt (658626 bytes)
+  freq_fr: 2026-10-19 https://raw.githubusercontent.com/hermitdave/FrequencyWords/master/content/2018/fr/fr_50k.txt (653452 bytes)
+  freq_it: 2026-10-19 https://raw.githubusercontent.com/hermitdave/FrequencyWords/master/content/2018/it/it_50k.txt (653205 bytes)
+  freq_pt: 2026-10-19 https://raw.githubusercontent.com/hermitdave/FrequencyWords/master/content/2018/pt/pt_50k.txt (652361 bytes)
+  freq_tr: 2026-10-19 https://raw.githubusercontent.com/hermitdave/FrequencyWords/master/content/2018/tr/tr_50k.txt (711935 bytes)
+  links_de_en: 2026-10-19 https://downloads.tatoeba.org/exports/per_language/deu/deu-eng_links.tsv.bz2 (9436708 bytes)
+  links_de_es: 2026-10-19 https://downloads.tatoeba.org/exports/per_language/deu/deu-spa_links.tsv.bz2 (1557402 bytes)
+  links_de_fr: 2026-10-19 https://downloads.tatoeba.org/exports/per_language/deu/deu-fra_links.tsv.bz2 (2482450 bytes)
+  links_de_it: 2026-10-19 https://downloads.tatoeba.org/exports/per_language/deu/deu-ita_links.tsv.bz2 (519242 bytes)
+  links_de_pt: 2026-10-19 https://downloads.tatoeba.org/exports/per_language/deu/deu-por_links.tsv.bz2 (409122 bytes)
+  links_de_tr: 2026-10-19 https://downloads.tatoeba.org/exports/per_language/deu/deu-tur_links.tsv.bz2 (364097 bytes)
+  links_en_es: 2026-10-19 https://downloads.tatoeba.org/exports/per_language/eng/eng-spa_links.tsv.bz2 (4441248 bytes)
+  links_en_fr: 2026-10-19 https://downloads.tatoeba.org/exports/per_language/eng/eng-fra_links.tsv.bz2 (6970556 bytes)
+  links_en_it: 2026-10-19 https://downloads.tatoeba.org/exports/per_language/eng/eng-ita_links.tsv.bz2 (11604387 bytes)
+  links_en_pt: 2026-10-19 https://downloads.tatoeba.org/exports/per_language/eng/eng-por_links.tsv.bz2 (4813515 bytes)
+  links_en_tr: 2026-10-19 https://downloads.tatoeba.org/exports/per_language/eng/eng-tur_links.tsv.bz2 (11369441 bytes)
+  links_es_fr: 2026-10-19 https://downloads.tatoeba.org/exports/per_language/spa/spa-fra_links.tsv.bz2 (946023 bytes)
+  links_es_it: 2026-10-19 https://downloads.tatoeba.org/exports/per_language/spa/spa-ita_links.tsv.bz2 (312688 bytes)
+  links_es_pt: 2026-10-19 https://downloads.tatoeba.org/exports/per_language/spa/spa-por_links.tsv.bz2 (1222297 bytes)
+  links_es_tr: 2026-10-19 https://downloads.tatoeba.org/exports/per_language/spa/spa-tur_links.tsv.bz2 (613469 bytes)
+  links_fr_it: 2026-10-19 https://downloads.tatoeba.org/exports/per_language/fra/fra-ita_links.tsv.bz2 (1410582 bytes)
+  links_fr_pt: 2026-10-19 https://downloads.tatoeba.org/exports/per_language/fra/fra-por_links.tsv.bz2 (558348 bytes)
+  links_fr_tr: 2026-10-19 https://downloads.tatoeba.org/exports/per_language/fra/fra-tur_links.tsv.bz2 (204362 bytes)
+  links_it_pt: 2026-10-19 https://downloads.tatoeba.org/exports/per_language/ita/ita-por_links.tsv.bz2 (249601 bytes)
+  links_it_tr: 2026-10-19 https://downloads.tatoeba.org/exports/per_language/ita/ita-tur_links.tsv.bz2 (276101 bytes)
+  links_pt_tr: 2026-10-19 https://downloads.tatoeba.org/exports/per_language/por/por-tur_links.tsv.bz2 (87842 bytes)
+  native_de: 2026-10-19 https://kaikki.org/dewiktionary/Deutsch/kaikki.org-dictionary-Deutsch.jsonl (1016900 entries read, 44420 kept)
+  native_en: 2026-10-19 https://kaikki.org/dictionary/English/kaikki.org-dictionary-English.jsonl (1492836 entries read, 78626 kept)
+  native_es: 2026-10-19 https://kaikki.org/eswiktionary/Espa%C3%B1ol/kaikki.org-dictionary-Espa%C3%B1ol.jsonl (855631 entries read, 37444 kept)
+  native_fr: 2026-10-19 https://kaikki.org/frwiktionary/Fran%C3%A7ais/kaikki.org-dictionary-Fran%C3%A7ais.jsonl (2112394 entries read, 57212 kept)
+  native_it: 2026-10-19 https://kaikki.org/itwiktionary/Italiano/kaikki.org-dictionary-Italiano.jsonl (560689 entries read, 36778 kept)
+  native_pt: 2026-10-19 https://kaikki.org/ptwiktionary/Portugu%C3%AAs/kaikki.org-dictionary-Portugu%C3%AAs.jsonl (401693 entries read, 29143 kept)
+  native_tr: 2026-10-19 https://kaikki.org/trwiktionary/T%C3%BCrk%C3%A7e/kaikki.org-dictionary-T%C3%BCrk%C3%A7e.jsonl (323796 entries read, 20536 kept)
+  octanove: 2026-10-19 https://raw.githubusercontent.com/openlanguageprofiles/olp-en-cefrj/master/octanove-vocabulary-profile-c1c2-1.0.csv (46462 bytes)
+  simple_en: 2026-10-19 https://kaikki.org/simplewiktionary/English/kaikki.org-dictionary-English.jsonl (61751 entries read, 30146 kept)
+  tatoeba_de: 2026-10-19 https://downloads.tatoeba.org/exports/per_language/deu/deu_sentences.tsv.bz2 (47802569 bytes)
+  tatoeba_en: 2026-10-19 https://downloads.tatoeba.org/exports/per_language/eng/eng_sentences.tsv.bz2 (108815802 bytes)
+  tatoeba_es: 2026-10-19 https://downloads.tatoeba.org/exports/per_language/spa/spa_sentences.tsv.bz2 (24235172 bytes)
+  tatoeba_fr: 2026-10-19 https://downloads.tatoeba.org/exports/per_language/fra/fra_sentences.tsv.bz2 (40588086 bytes)
+  tatoeba_it: 2026-10-19 https://downloads.tatoeba.org/exports/per_language/ita/ita_sentences.tsv.bz2 (47383759 bytes)
+  tatoeba_pt: 2026-10-19 https://downloads.tatoeba.org/exports/per_language/por/por_sentences.tsv.bz2 (25333264 bytes)
+  tatoeba_tr: 2026-10-19 https://downloads.tatoeba.org/exports/per_language/tur/tur_sentences.tsv.bz2 (38122855 bytes)
+
+Contents (words per level A1..C2; definitions in the language itself; examples; with a blank; translations):
+  tr.txt: 5600 words (450 650 900 1100 1200 1300); definitions 5360; examples 4935 (4935 with a blank); translations en:5379 de:4265 fr:3367 es:2202 it:1889 pt:2364
+  en.txt: 5520 words (900 1100 1300 1300 602 318); definitions 5511; examples 5398 (5398 with a blank); translations tr:3945 de:5123 fr:5186 es:4982 it:5163 pt:4873
+  de.txt: 5600 words (450 650 900 1100 1200 1300); definitions 5490; examples 5449 (5449 with a blank); translations tr:3535 en:5546 fr:5293 es:4903 it:4547 pt:4291
+  fr.txt: 5600 words (450 650 900 1100 1200 1300); definitions 5547; examples 5364 (5364 with a blank); translations tr:2836 en:5462 de:5084 es:4813 it:4799 pt:4623
+  es.txt: 5600 words (450 650 900 1100 1200 1300); definitions 5326; examples 5245 (5245 with a blank); translations tr:1830 en:5484 de:4898 fr:4972 it:3730 pt:4148
+  it.txt: 5600 words (450 650 900 1100 1200 1300); definitions 5436; examples 5102 (5102 with a blank); translations tr:1480 en:5509 de:4559 fr:4707 es:3498 pt:3439
+  pt.txt: 5600 words (450 650 900 1100 1200 1300); definitions 5505; examples 5032 (5032 with a blank); translations tr:2117 en:5441 de:4523 fr:4874 es:4185 it:3617

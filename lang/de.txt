@@ -1099,3 +1099,66 @@ Henüz favori tarif yok.\nBir tarifte ☆ düğmesine dokunun.	Noch keine Liebli
 Son bakılanlar	Zuletzt angesehen
 Henüz tarif açılmadı.	Noch kein Rezept geöffnet.
 Tarifler yüklenemedi.	Rezepte konnten nicht geladen werden.
+Kelime Öğren	Vokabeltrainer
+Almanca	Deutsch
+Fransızca	Französisch
+İspanyolca	Spanisch
+İtalyanca	Italienisch
+Portekizce	Portugiesisch
+Başlangıç	Anfänger
+Temel	Grundstufe
+Orta üstü	Gute Mittelstufe
+İleri	Fortgeschritten
+Ustalık	Kompetent
+isim	Substantiv
+fiil	Verb
+sıfat	Adjektiv
+zarf	Adverb
+zamir	Pronomen
+edat	Präposition
+bağlaç	Konjunktion
+sayı	Zahlwort
+belirleyici	Artikelwort
+ünlem	Interjektion
+deyim	Wendung
+Diller	Sprachen
+Öğrendiğim dil	Ich lerne
+Ana dilim	Meine Sprache
+Sorular öğrendiğin dilde, açıklamalar iki dilde gelir.	Fragen in der Lernsprache, Erklärungen in beiden Sprachen.
+%d kelime, A1'den C2'ye	%d Wörter, von A1 bis C2
+Bu kelime ne demek?	Was bedeutet dieses Wort?
+%s karşılığı hangisi?	Welches ist das Wort auf %s?
+Bu tanım hangi kelimenin? (%s)	Welches Wort wird hier erklärt? (%s)
+Boşluğa hangi kelime gelir?	Welches Wort passt in die Lücke?
+Bu çeviri doğru mu?	Ist diese Übersetzung richtig?
+Doğru	Richtig
+Yanlış	Falsch
+Sonuç	Ergebnis
+Ders bitti	Lektion beendet
+%d sorudan %d doğru	%d Fragen, %d richtig
++%d XP	+%d XP
++%d XP (hatasız ders: +%d)	+%d XP (fehlerfrei: +%d)
+Seri: %d gün · bugün %d/%d XP	Serie: %d Tage · heute %d/%d XP
+Tekrar edilecek kelimeler	Wörter zum Wiederholen
+Hiç hata yok, harika!	Keine Fehler, super!
+Yeni ders	Neue Lektion
+Ana ekran	Startseite
+Tekrar	Wiederholen
+Tekrar (%d)	Wiederholen (%d)
+Bu seviyede soru yok	Keine Fragen auf dieser Stufe
+Tekrar edilecek kelime yok	Nichts zu wiederholen
+Bu dil ikilisinde bu seviyede sorulacak kelime bulunamadı.	Für dieses Sprachpaar gibt es auf dieser Stufe keine Wörter.
+Önce birkaç ders yapın; yanlış bildiğiniz kelimeler burada tekrar sorulur.	Machen Sie zuerst ein paar Lektionen; falsch beantwortete Wörter werden hier wiederholt.
+%s öğreniyorum · ana dilim %s	Ich lerne %s · meine Sprache %s
+Toplam: %ld XP · bugün %d XP	Gesamt: %ld XP · heute %d XP
+Seri: %d gün · en uzun %d gün	Serie: %d Tage · längste %d Tage
+%d ders · %d cevap · %%%d doğru	%d Lektionen · %d Antworten · %d %% richtig
+%d kelime görüldü · %d öğrenildi · %d tekrar bekliyor	%d Wörter gesehen · %d gelernt · %d zum Wiederholen
+Seviyeler	Stufen
+Tekrar kutuları	Lernkartei
+1: yeni kaçırılan · 5: iyice öğrenildi (aralık 1, 2, 4, 8, 21 gün)	1: gerade falsch · 5: gut gelernt (alle 1, 2, 4, 8, 21 Tage)
+Değiştir	Ändern
+Seri: %d gün · %ld XP · bugün %d/%d	Serie: %d Tage · %ld XP · heute %d/%d
+Kaynak: Vikisözlük (CC BY-SA), Tatoeba (CC BY), CEFR-J; seviyeler sıklığa göre	Quellen: Wiktionary (CC BY-SA), Tatoeba (CC BY), CEFR-J; Stufen nach Häufigkeit
+Kelime listeleri yüklenemedi.	Die Wortlisten konnten nicht geladen werden.
+%d / %d öğrenildi	%d / %d gelernt
