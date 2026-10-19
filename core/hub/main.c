@@ -97,7 +97,8 @@ static void draw_battery(int force)
 	int v = kui_battery_level() * 2 + kui_battery_charging(); /* cached: read at most every 5 min (main) */
 	if (v == shown_batt && !force) return;                  /* unchanged: no redraw, no refresh */
 	shown_batt = v;
-	kui_battery((KuiRect){ kui_width() - 330, 28, 180, 64 });
+	/* between the title and "Ayarlar" (which starts at w - 200): it used to cover the A */
+	kui_battery((KuiRect){ kui_width() - 380, 32, 175, 56 });
 }
 
 /* tiles and page controls only: turning a page redraws just this, with no full-screen flash */
@@ -131,7 +132,11 @@ static void draw(void)
 {
 	int w = kui_width(), h = kui_height();
 	kui_fill((KuiRect){ 0, 0, w, h }, 255);
-	kui_topbar(T("Uygulamalar"), T("Ayarlar"));
+	kui_topbar("", T("Ayarlar"));
+	/* the title sits between Wi-Fi (left) and the battery (right) so none of them overlap, even in Kolay okuma */
+	const char *t = T("Uygulamalar");
+	KuiRect tb = { 310, 0, w - 380 - 10 - 310, KUI_TOPBAR_H - 4 };
+	kui_text(tb, t, KUI_FONT_BOLD, kui_fit_px(t, KUI_FONT_BOLD, 52, tb.w), KUI_ALIGN_CENTER, 0);
 	draw_body();
 	draw_wifi(1);
 	draw_battery(1);
