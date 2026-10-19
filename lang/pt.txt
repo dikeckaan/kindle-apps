@@ -1189,3 +1189,6 @@ Arkada açık programlar: %s. Ekranı ve dokunmayı kullanabilirler.	Abertos em 
 Pil %%%d	Bateria %%%d
 Uyku modunda	Em repouso
 Açmak için güç tuşuna basın	Prima o botão de energia para acordar
+İpuçları: Açık	Dicas: Ligadas
+İpuçları: Kapalı	Dicas: Desligadas
+İpuçları: seçtiğiniz taşın gidebileceği kareler	Dicas: casas para onde a peça escolhida pode ir

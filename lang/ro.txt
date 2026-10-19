@@ -1189,3 +1189,6 @@ Arkada açık programlar: %s. Ekranı ve dokunmayı kullanabilirler.	Deschise î
 Pil %%%d	Baterie %%%d
 Uyku modunda	În repaus
 Açmak için güç tuşuna basın	Apăsați butonul de pornire pentru trezire
+İpuçları: Açık	Indicii: Pornit
+İpuçları: Kapalı	Indicii: Oprit
+İpuçları: seçtiğiniz taşın gidebileceği kareler	Indicii: pătratele în care poate muta piesa aleasă

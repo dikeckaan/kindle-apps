@@ -1189,3 +1189,6 @@ Arkada açık programlar: %s. Ekranı ve dokunmayı kullanabilirler.	Відкр�
 Pil %%%d	Батарея %%%d
 Uyku modunda	Режим сну
 Açmak için güç tuşuna basın	Натисніть кнопку живлення, щоб розбудити
+İpuçları: Açık	Підказки: увімк.
+İpuçları: Kapalı	Підказки: вимк.
+İpuçları: seçtiğiniz taşın gidebileceği kareler	Підказки: поля, куди може піти вибрана фігура

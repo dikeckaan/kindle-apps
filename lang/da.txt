@@ -1189,3 +1189,6 @@ Arkada açık programlar: %s. Ekranı ve dokunmayı kullanabilirler.	Åbne i bag
 Pil %%%d	Batteri %%%d
 Uyku modunda	Dvale
 Açmak için güç tuşuna basın	Tryk på tænd/sluk-knappen for at vække
+İpuçları: Açık	Tips: Til
+İpuçları: Kapalı	Tips: Fra
+İpuçları: seçtiğiniz taşın gidebileceği kareler	Tips: felter den valgte brik kan flytte til

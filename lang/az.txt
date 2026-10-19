@@ -1189,3 +1189,6 @@ Arkada açık programlar: %s. Ekranı ve dokunmayı kullanabilirler.	Arxada aç�
 Pil %%%d	Batareya %%%d
 Uyku modunda	Yuxu rejimində
 Açmak için güç tuşuna basın	Oyatmaq üçün güc düyməsini basın
+İpuçları: Açık	İpucları: Açıq
+İpuçları: Kapalı	İpucları: Bağlı
+İpuçları: seçtiğiniz taşın gidebileceği kareler	İpucları: seçdiyiniz fiqurun gedə biləcəyi xanalar

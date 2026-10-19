@@ -1189,3 +1189,6 @@ Arkada açık programlar: %s. Ekranı ve dokunmayı kullanabilirler.	Aperti in b
 Pil %%%d	Batteria %%%d
 Uyku modunda	In sospensione
 Açmak için güç tuşuna basın	Premi il tasto di accensione per riattivare
+İpuçları: Açık	Suggerimenti: Sì
+İpuçları: Kapalı	Suggerimenti: No
+İpuçları: seçtiğiniz taşın gidebileceği kareler	Suggerimenti: le case dove può andare il pezzo scelto

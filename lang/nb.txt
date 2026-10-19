@@ -1189,3 +1189,6 @@ Arkada açık programlar: %s. Ekranı ve dokunmayı kullanabilirler.	Åpne i bak
 Pil %%%d	Batteri %%%d
 Uyku modunda	Hvilemodus
 Açmak için güç tuşuna basın	Trykk på av/på-knappen for å vekke
+İpuçları: Açık	Hint: På
+İpuçları: Kapalı	Hint: Av
+İpuçları: seçtiğiniz taşın gidebileceği kareler	Hint: feltene den valgte brikken kan flytte til

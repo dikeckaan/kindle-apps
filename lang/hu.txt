@@ -1189,3 +1189,6 @@ Arkada açık programlar: %s. Ekranı ve dokunmayı kullanabilirler.	A háttérb
 Pil %%%d	Akkumulátor %%%d
 Uyku modunda	Alvó mód
 Açmak için güç tuşuna basın	Ébresztéshez nyomja meg a bekapcsológombot
+İpuçları: Açık	Tippek: Be
+İpuçları: Kapalı	Tippek: Ki
+İpuçları: seçtiğiniz taşın gidebileceği kareler	Tippek: a mezők, ahová a kiválasztott bábu léphet

@@ -1189,3 +1189,6 @@ Arkada açık programlar: %s. Ekranı ve dokunmayı kullanabilirler.	Öppna i ba
 Pil %%%d	Batteri %%%d
 Uyku modunda	Viloläge
 Açmak için güç tuşuna basın	Tryck på strömknappen för att väcka
+İpuçları: Açık	Tips: På
+İpuçları: Kapalı	Tips: Av
+İpuçları: seçtiğiniz taşın gidebileceği kareler	Tips: rutor dit den valda pjäsen kan flytta

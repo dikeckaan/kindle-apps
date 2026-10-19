@@ -1189,3 +1189,6 @@ Arkada açık programlar: %s. Ekranı ve dokunmayı kullanabilirler.	Auki tausta
 Pil %%%d	Akku %%%d
 Uyku modunda	Lepotilassa
 Açmak için güç tuşuna basın	Herätä painamalla virtapainiketta
+İpuçları: Açık	Vihjeet: Päällä
+İpuçları: Kapalı	Vihjeet: Pois
+İpuçları: seçtiğiniz taşın gidebileceği kareler	Vihjeet: ruudut, joihin valittu nappula voi siirtyä

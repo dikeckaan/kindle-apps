@@ -1189,3 +1189,6 @@ Arkada açık programlar: %s. Ekranı ve dokunmayı kullanabilirler.	Abiertos en
 Pil %%%d	Batería %%%d
 Uyku modunda	En reposo
 Açmak için güç tuşuna basın	Pulse el botón de encendido para activar
+İpuçları: Açık	Pistas: Sí
+İpuçları: Kapalı	Pistas: No
+İpuçları: seçtiğiniz taşın gidebileceği kareler	Pistas: casillas a las que puede ir la pieza elegida

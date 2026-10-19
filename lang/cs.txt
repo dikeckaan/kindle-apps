@@ -1189,3 +1189,6 @@ Arkada açık programlar: %s. Ekranı ve dokunmayı kullanabilirler.	Otevřeno n
 Pil %%%d	Baterie %%%d
 Uyku modunda	Režim spánku
 Açmak için güç tuşuna basın	Probuďte stisknutím vypínače
+İpuçları: Açık	Nápověda: Zap.
+İpuçları: Kapalı	Nápověda: Vyp.
+İpuçları: seçtiğiniz taşın gidebileceği kareler	Nápověda: pole, kam může vybraná figura táhnout

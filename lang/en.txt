@@ -1189,3 +1189,6 @@ Arkada açık programlar: %s. Ekranı ve dokunmayı kullanabilirler.	Open in the
 Pil %%%d	Battery %%%d
 Uyku modunda	Sleeping
 Açmak için güç tuşuna basın	Press the power button to wake
+İpuçları: Açık	Hints: On
+İpuçları: Kapalı	Hints: Off
+İpuçları: seçtiğiniz taşın gidebileceği kareler	Hints: the squares the selected piece can move to

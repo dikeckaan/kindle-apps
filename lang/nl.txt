@@ -1189,3 +1189,6 @@ Arkada açık programlar: %s. Ekranı ve dokunmayı kullanabilirler.	Open op de 
 Pil %%%d	Batterij %%%d
 Uyku modunda	Slaapstand
 Açmak için güç tuşuna basın	Druk op de aan/uit-knop om te wekken
+İpuçları: Açık	Hints: Aan
+İpuçları: Kapalı	Hints: Uit
+İpuçları: seçtiğiniz taşın gidebileceği kareler	Hints: velden waar het gekozen stuk heen kan

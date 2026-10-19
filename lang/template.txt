@@ -1023,7 +1023,7 @@ Kapalı
 Kapalı (gelen bağlantılara açık)	
 # apps/chess/puzzle.c
 Kapana kısılan taş	
-# apps/chess/main.c
+# apps/firewall/main.c
 Kapat	
 # apps/tarif/main.c
 Kapatmak için dokunun	
@@ -2245,6 +2245,12 @@ zarf
 İpucu: işaretli taşı oynayın	
 # apps/masa/rv_ui.c
 İpucu: kapalı	
+# apps/chess/main.c
+İpuçları: Açık	
+# apps/chess/main.c
+İpuçları: Kapalı	
+# apps/chess/main.c
+İpuçları: seçtiğiniz taşın gidebileceği kareler	
 # apps/kelime/main.c
 İspanyolca	
 # apps/bulmaca/main.c

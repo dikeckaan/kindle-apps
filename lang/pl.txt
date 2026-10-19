@@ -1189,3 +1189,6 @@ Arkada açık programlar: %s. Ekranı ve dokunmayı kullanabilirler.	Otwarte w t
 Pil %%%d	Bateria %%%d
 Uyku modunda	Uśpiony
 Açmak için güç tuşuna basın	Naciśnij przycisk zasilania, aby wybudzić
+İpuçları: Açık	Podpowiedzi: Wł.
+İpuçları: Kapalı	Podpowiedzi: Wył.
+İpuçları: seçtiğiniz taşın gidebileceği kareler	Podpowiedzi: pola, na które może pójść wybrana bierka

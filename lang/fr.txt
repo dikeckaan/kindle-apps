@@ -1189,3 +1189,6 @@ Arkada açık programlar: %s. Ekranı ve dokunmayı kullanabilirler.	Ouverts en 
 Pil %%%d	Batterie %%%d
 Uyku modunda	En veille
 Açmak için güç tuşuna basın	Appuyez sur le bouton marche pour réveiller
+İpuçları: Açık	Aides : activées
+İpuçları: Kapalı	Aides : désactivées
+İpuçları: seçtiğiniz taşın gidebileceği kareler	Aides : les cases où la pièce choisie peut aller

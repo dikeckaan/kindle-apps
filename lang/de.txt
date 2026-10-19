@@ -1189,3 +1189,6 @@ Arkada açık programlar: %s. Ekranı ve dokunmayı kullanabilirler.	Im Hintergr
 Pil %%%d	Akku %%%d
 Uyku modunda	Ruhezustand
 Açmak için güç tuşuna basın	Zum Aufwecken Ein/Aus-Taste drücken
+İpuçları: Açık	Hinweise: An
+İpuçları: Kapalı	Hinweise: Aus
+İpuçları: seçtiğiniz taşın gidebileceği kareler	Hinweise: Felder, auf die die gewählte Figur ziehen kann

@@ -1,5 +1,6 @@
 /* Chess for Kindle: single player against Stockfish (6 levels), two players on one device, or Lichess puzzles
  * (Bulmacalar, puzzle_ui.c). Each square remembers what was last drawn on it; after a move only squares whose look changed are redrawn. */
+#include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -61,9 +62,29 @@ static int square_at(int x, int y)
 static const char *glyph_solid[7] = { "", "♟", "♞", "♝", "♜", "♛", "♚" };
 static const char *glyph_outline[7] = { "", "♙", "♘", "♗", "♖", "♕", "♔" };
 
+/* a filled circle of diameter d centred in r (row by row: kui has no circle primitive) */
+static void target_dot(KuiRect r, int d, unsigned char g)
+{
+	int cx = r.x + r.w / 2, cy = r.y + r.h / 2, R = d / 2;
+	for (int dy = -R; dy <= R; dy++) {
+		int half = (int) sqrt((double) (R * R - dy * dy));
+		kui_fill((KuiRect){ cx - half, cy + dy, 2 * half + 1, 1 }, g);
+	}
+}
+
+/* Menü → Hamle ipuçları (Satranç and its puzzles share it): dots on the squares the selected piece can reach */
+static int hints_on(void)
+{
+	char p[300];
+	snprintf(p, sizeof p, "%s/settings", kui_data_dir("chess"));
+	return kui_cfg_get_int(p, "move_hints", 1);
+}
+
+static int show_hints = 1;
+
 static int is_target(int sq)
 {
-	if (selected < 0) return 0;
+	if (selected < 0 || !show_hints) return 0;
 	Move ms[CHESS_MAX_MOVES];
 	int n = chess_legal_moves(&game.pos, ms);
 	for (int i = 0; i < n; i++)
@@ -87,9 +108,8 @@ static void draw_square(int sq)
 		kui_text(r, c == 0 ? glyph_outline[t] : glyph_solid[t], KUI_FONT_REG, 104, KUI_ALIGN_CENTER, 0);
 	}
 	if (is_target(sq)) {
-		int d = p != EMPTY ? 0 : 28;
-		if (d) kui_fill((KuiRect){ r.x + (SQ - d) / 2, r.y + (SQ - d) / 2, d, d }, 0x33);
-		else kui_frame((KuiRect){ r.x + 2, r.y + 2, r.w - 4, r.h - 4 }, 6, 0x33); /* capture target */
+		if (p == EMPTY) target_dot(r, 46, 0x22);
+		else kui_frame((KuiRect){ r.x + 3, r.y + 3, r.w - 6, r.h - 6 }, 9, 0x22); /* capture target */
 	}
 	if (sq == selected) kui_frame(r, 8, 0);
 	kui_mark_dirty(r);
@@ -375,6 +395,7 @@ static int setup(int can_resume)
 int main(void)
 {
 	if (kui_init("chess") != 0) return 1;
+	show_hints = hints_on();
 	const char *root = getenv("KUI_ROOT");
 	snprintf(save_path, sizeof save_path, "%s/save.txt", kui_data_dir("chess"));
 	snprintf(engine_path, sizeof engine_path, "%s/apps/chess/stockfish", root && *root ? root : "/mnt/us/kindle-apps");
@@ -415,13 +436,21 @@ int main(void)
 			int t = kui_topbar_hit(kui_width(), 1, e.x, e.y);
 			if (t == KUI_BTN_EXIT) { quit = 1; break; }
 			if (t == KUI_BTN_MENU) {
-				const char *ch[] = { T("Tahtayı çevir"), T("Yeni oyun"), T("Bulmacalar"), T("Kapat") };
-				int k = kui_dialog(T("Menü"), "", ch, 4, draw_all);
+				const char *ch[] = { T("Tahtayı çevir"), T("Yeni oyun"), T("Bulmacalar"),
+						     show_hints ? T("İpuçları: Açık") : T("İpuçları: Kapalı") };
+				int k = kui_dialog(T("Menü"), T("İpuçları: seçtiğiniz taşın gidebileceği kareler"), ch, 4, draw_all);
 				if (k == 0) view_flip = !view_flip;
+				if (k == 3) { /* ✕ closes the menu */
+					char sp[300];
+					show_hints = !show_hints;
+					snprintf(sp, sizeof sp, "%s/settings", kui_data_dir("chess"));
+					kui_cfg_set_int(sp, "move_hints", show_hints);
+				}
 				if (k == 2) {
 					engine_cancel(); /* the search would time out meanwhile; it starts again on return */
 					selected = -1;
 					if (puzzle_run()) { quit = 1; break; }
+					show_hints = hints_on();
 				}
 				if (k == 1) {
 					engine_cancel();

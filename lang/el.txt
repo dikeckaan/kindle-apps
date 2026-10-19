@@ -1189,3 +1189,6 @@ Arkada açık programlar: %s. Ekranı ve dokunmayı kullanabilirler.	Ανοιχ�
 Pil %%%d	Μπαταρία %%%d
 Uyku modunda	Σε αναστολή
 Açmak için güç tuşuna basın	Πατήστε το κουμπί λειτουργίας για αφύπνιση
+İpuçları: Açık	Υποδείξεις: Ναι
+İpuçları: Kapalı	Υποδείξεις: Όχι
+İpuçları: seçtiğiniz taşın gidebileceği kareler	Υποδείξεις: τα τετράγωνα όπου μπορεί να πάει το επιλεγμένο κομμάτι

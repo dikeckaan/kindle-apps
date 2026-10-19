@@ -2,6 +2,7 @@
  * and every puzzle opened are cached, so they work offline; solved puzzles and the streak are kept in a history. Each
  * square remembers what was last drawn on it: a move redraws only the squares whose look changed (partial refresh).
  * Puzzles: lichess.org, CC0. Until 2026-10 this was its own app; its data moves to data/chess/puzzle on first use. */
+#include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -149,9 +150,29 @@ static int square_at(int x, int y)
 static const char *glyph_solid[7] = { "", "♟", "♞", "♝", "♜", "♛", "♚" };
 static const char *glyph_outline[7] = { "", "♙", "♘", "♗", "♖", "♕", "♔" };
 
+/* a filled circle of diameter d centred in r (row by row: kui has no circle primitive) */
+static void target_dot(KuiRect r, int d, unsigned char g)
+{
+	int cx = r.x + r.w / 2, cy = r.y + r.h / 2, R = d / 2;
+	for (int dy = -R; dy <= R; dy++) {
+		int half = (int) sqrt((double) (R * R - dy * dy));
+		kui_fill((KuiRect){ cx - half, cy + dy, 2 * half + 1, 1 }, g);
+	}
+}
+
+/* Menü → Hamle ipuçları (Satranç and its puzzles share it): dots on the squares the selected piece can reach */
+static int hints_on(void)
+{
+	char p[300];
+	snprintf(p, sizeof p, "%s/settings", kui_data_dir("chess"));
+	return kui_cfg_get_int(p, "move_hints", 1);
+}
+
+static int show_hints = 1;
+
 static int is_target(int sq)
 {
-	if (selected < 0) return 0;
+	if (selected < 0 || !show_hints) return 0;
 	Move ms[CHESS_MAX_MOVES];
 	int n = chess_legal_moves(&play.pos, ms);
 	for (int i = 0; i < n; i++)
@@ -188,8 +209,8 @@ static void draw_square(int sq)
 		kui_text(r, c == 0 ? glyph_outline[t] : glyph_solid[t], KUI_FONT_REG, 98, KUI_ALIGN_CENTER, 0);
 	}
 	if (is_target(sq)) {
-		if (p == EMPTY) kui_fill((KuiRect){ r.x + (SQ - 26) / 2, r.y + (SQ - 26) / 2, 26, 26 }, 0x33);
-		else kui_frame((KuiRect){ r.x + 2, r.y + 2, r.w - 4, r.h - 4 }, 6, 0x33);
+		if (p == EMPTY) target_dot(r, 44, 0x22);
+		else kui_frame((KuiRect){ r.x + 3, r.y + 3, r.w - 6, r.h - 6 }, 9, 0x22);
 	}
 	if (sq == selected) kui_frame(r, 8, 0);
 	kui_mark_dirty(r);
@@ -623,6 +644,7 @@ static int menu(void)
 
 int puzzle_run(void)
 {
+	show_hints = hints_on();
 	migrate_old_data();
 	load_history();
 	int f = first_puzzle();
