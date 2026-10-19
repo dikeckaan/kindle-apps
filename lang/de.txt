@@ -1124,7 +1124,6 @@ deyim	Wendung
 Diller	Sprachen
 Öğrendiğim dil	Ich lerne
 Ana dilim	Meine Sprache
-Sorular öğrendiğin dilde, açıklamalar iki dilde gelir.	Fragen in der Lernsprache, Erklärungen in beiden Sprachen.
 %d kelime, A1'den C2'ye	%d Wörter, von A1 bis C2
 Bu kelime ne demek?	Was bedeutet dieses Wort?
 %s karşılığı hangisi?	Welches ist das Wort auf %s?
@@ -1137,31 +1136,21 @@ Sonuç	Ergebnis
 Ders bitti	Lektion beendet
 %d sorudan %d doğru	%d Fragen, %d richtig
 +%d XP	+%d XP
-+%d XP (hatasız ders: +%d)	+%d XP (fehlerfrei: +%d)
 Seri: %d gün · bugün %d/%d XP	Serie: %d Tage · heute %d/%d XP
 Tekrar edilecek kelimeler	Wörter zum Wiederholen
 Hiç hata yok, harika!	Keine Fehler, super!
-Yeni ders	Neue Lektion
 Ana ekran	Startseite
 Tekrar	Wiederholen
 Tekrar (%d)	Wiederholen (%d)
-Bu seviyede soru yok	Keine Fragen auf dieser Stufe
 Tekrar edilecek kelime yok	Nichts zu wiederholen
-Bu dil ikilisinde bu seviyede sorulacak kelime bulunamadı.	Für dieses Sprachpaar gibt es auf dieser Stufe keine Wörter.
-Önce birkaç ders yapın; yanlış bildiğiniz kelimeler burada tekrar sorulur.	Machen Sie zuerst ein paar Lektionen; falsch beantwortete Wörter werden hier wiederholt.
 %s öğreniyorum · ana dilim %s	Ich lerne %s · meine Sprache %s
 Toplam: %ld XP · bugün %d XP	Gesamt: %ld XP · heute %d XP
 Seri: %d gün · en uzun %d gün	Serie: %d Tage · längste %d Tage
 %d ders · %d cevap · %%%d doğru	%d Lektionen · %d Antworten · %d %% richtig
-%d kelime görüldü · %d öğrenildi · %d tekrar bekliyor	%d Wörter gesehen · %d gelernt · %d zum Wiederholen
-Seviyeler	Stufen
 Tekrar kutuları	Lernkartei
-1: yeni kaçırılan · 5: iyice öğrenildi (aralık 1, 2, 4, 8, 21 gün)	1: gerade falsch · 5: gut gelernt (alle 1, 2, 4, 8, 21 Tage)
 Değiştir	Ändern
-Seri: %d gün · %ld XP · bugün %d/%d	Serie: %d Tage · %ld XP · heute %d/%d
 Kaynak: Vikisözlük (CC BY-SA), Tatoeba (CC BY), CEFR-J; seviyeler sıklığa göre	Quellen: Wiktionary (CC BY-SA), Tatoeba (CC BY), CEFR-J; Stufen nach Häufigkeit
 Kelime listeleri yüklenemedi.	Die Wortlisten konnten nicht geladen werden.
-%d / %d öğrenildi	%d / %d gelernt
 Görev Yöneticisi	Task-Manager
 Arka planda çalışan programlar	Im Hintergrund laufende Programme
 Arka planda başka program yok.	Keine anderen Programme im Hintergrund.
@@ -1186,3 +1175,72 @@ Sistem servisleri, SSH ve Kindle Apps hiçbir zaman durdurulmaz.	Systemdienste, 
 Arka planda program var	Ein Programm läuft im Hintergrund
 Arkada açık program: %s. Ekranı ve dokunmayı kullanabilir.	Im Hintergrund geöffnet: %s. Es kann Bildschirm und Touch-Eingaben nutzen.
 Arkada açık programlar: %s. Ekranı ve dokunmayı kullanabilirler.	Im Hintergrund geöffnet: %s. Sie können Bildschirm und Touch-Eingaben nutzen.
+%d / %d kelime öğretildi · ✓ öğrenildi · • öğretildi · ★ biliyorum · ○ sırada	%d / %d Wörter eingeführt · ✓ gelernt · • eingeführt · ★ bekannt · ○ als Nächstes
+%d kelime öğretildi · %d öğrenildi · %d tekrar bekliyor	%d Wörter eingeführt · %d gelernt · %d zur Wiederholung fällig
+%d sorudan %d doğru · +%d XP	%d Fragen, %d richtig · +%d XP
+%d yeni kelime öğrendin!	Du hast %d neue Wörter gelernt!
+%s anlamı	Bedeutung (%s)
+%s tanımı	Definition (%s)
+%s · kelime %d / %d	%s · Wort %d / %d
+%s öğrenmeye nereden başlayalım?	Wo fangen wir mit %s an?
+%s: %d / %d doğru	%s: %d / %d richtig
+0: yeni öğretildi · 1: yeni kaçırılan · 5: iyice öğrenildi (aralık 1, 2, 4, 8, 21 gün)	0: neu eingeführt · 1: gerade verfehlt · 5: gut gelernt (Abstände 1, 2, 4, 8, 21 Tage)
+Anladım ▶	Verstanden ▶
+BUGÜNÜN DERSİ	HEUTIGE LEKTION
+Başlangıç seviyen	Dein Einstiegsniveau
+Ben, sen, o	Ich, du, er/sie
+Bildiğin %d kelime "biliyorum" olarak işaretlendi; ara sıra tekrar sorulur.	Die %d Wörter, die du kanntest, sind als „bekannt“ markiert; sie kommen ab und zu wieder.
+Bilmiyorum	Weiß ich nicht
+Bilmiyorum, bana öğret	Kenne ich nicht, bring es mir bei
+Biraz biliyorum	Ich kann schon etwas
+Bu dersin kelimeleri	Wörter dieser Lektion
+Bu dil ikilisinin bütün kelimelerini gördün. Tekrarlarla devam et.	Du hast alle Wörter dieses Sprachpaars gesehen. Mach mit den Wiederholungen weiter.
+Bu kelimeyi tekrar çalışalım	Schauen wir uns dieses Wort noch einmal an
+Bugün: %d tekrar	Heute: %d Wiederholungen
+Bugün: %d yeni kelime	Heute: %d neue Wörter
+Bugün: %d yeni kelime + %d tekrar	Heute: %d neue Wörter + %d Wiederholungen
+Bugünlük tekrar bitti. Yeni kelimeler için derse devam et.	Für heute keine Wiederholungen mehr. Mach mit der Lektion weiter für neue Wörter.
+Bunu zaten biliyorum ★	Kenne ich schon ★
+Derse başla ▶	Lektion starten ▶
+Derslere başla ▶	Mit den Lektionen beginnen ▶
+Derste yeni kelime:	Neue Wörter pro Lektion:
+Devam ▶	Weiter ▶
+Fiiller %d	Verben %d
+Günlük şeyler	Dinge des Alltags
+Henüz öğretilmedi	Noch nicht eingeführt
+Her derste önce yeni kelimeler öğretilir, sonra alıştırma yapılır.	Jede Lektion bringt dir zuerst neue Wörter bei, dann wird geübt.
+Hiç bilmiyorum	Ich kann noch nichts
+Küçük kelimeler %d	Kleine Wörter %d
+Kısa seviye testi: her seviyeden 5 kelime	Kurzer Einstufungstest: 5 Wörter pro Niveau
+Sayılar	Zahlen
+Sayılar %d	Zahlen %d
+Selamlaşma	Begrüßung
+Seri: %d gün · %ld XP · bugün %d/%d XP	Serie: %d Tage · %ld XP · heute %d/%d XP
+Seviye testi	Einstufungstest
+Sonraki ders ▶	Nächste Lektion ▶
+Sözlük	Wörterbuch
+Sözlüğe bak	Ins Wörterbuch
+Sıfatlar %d	Adjektive %d
+Sıfırdan başla: selamlaşma, sayılar, temel fiiller…	Bei null anfangen: Begrüßung, Zahlen, wichtige Verben…
+TEKRAR BAKALIM	NOCH EINMAL ANSEHEN
+Tekrar zamanı	Zeit zum Wiederholen
+Temel fiiller	Wichtige Verben
+Temel sıfatlar	Wichtige Adjektive
+Tüm kelimeler öğretildi	Alle Wörter eingeführt
+YENİ KELİME	NEUES WORT
+Yanlış — kartına bir daha bakalım	Falsch — sehen wir uns die Karte noch einmal an
+Yeni kelime %d / %d	Neues Wort %d / %d
+Yeni tekrar	Weitere Wiederholung
+dişil	feminin
+eril	maskulin
+nötr	neutrum
+okunuşu: %s	Aussprache: %s
+Önce kelimeler öğretilir, sonra yalnızca öğrendiklerin sorulur.	Erst werden Wörter beigebracht, dann wird nur Gelerntes abgefragt.
+Örnek cümle	Beispielsatz
+Öğretildi · tekrar kutusu %d / %d	Eingeführt · Lernkasten-Fach %d / %d
+Ünite %d: %s	Einheit %d: %s
+İng.	Engl.
+İnsanlar	Menschen
+İsimler %d	Nomen %d
+↻ yanlış bilinenler bir sonraki derste yine sorulur	↻ falsche Wörter kommen in der nächsten Lektion wieder
+★ Biliyorum olarak işaretli	★ Als bekannt markiert

@@ -3,7 +3,7 @@
   "id": "kindle-apps-kelime",
   "name": "Kelime Öğren",
   "author": "Kaan Dikeç",
-  "description": "Duolingo gibi kelime oyunu: İngilizce, Almanca, Fransızca, İspanyolca, İtalyanca, Portekizce ve Türkçe arasında her dil ikilisi, A1'den C2'ye seviyeler; anlam, tanım, boşluk doldurma ve doğru/yanlış soruları, her cevaptan sonra kelimenin o dildeki tanımı ve örnek cümlesi, aralıklı tekrar, XP ve günlük seri; Vikisözlük ve Tatoeba'dan açık lisanslı veriler, tamamen çevrimdışı",
+  "description": "Kelime kursu: her derste önce birkaç yeni kelime öğretilir (artikel, okunuş, anlam, örnek cümle), sonra yalnızca öğrenilenler sorulur ve sorular kelime pekiştikçe zorlaşır. İngilizce, Almanca, Fransızca, İspanyolca, İtalyanca, Portekizce ve Türkçe arasında her dil ikilisi, A1'den C2'ye üniteler (selamlaşma, sayılar, temel fiiller…), seviye testi, sözlük ve \"biliyorum\" işareti, aralıklı tekrar, XP ve günlük seri; Vikisözlük ve Tatoeba'dan açık lisanslı veriler, tamamen çevrimdışı",
   "version": [2026, 10, 20],
   "dependencies": [],
   "supported_platforms": ["kindlehf"]

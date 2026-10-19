@@ -1124,7 +1124,6 @@ deyim	phrase
 Diller	Languages
 Öğrendiğim dil	I am learning
 Ana dilim	My language
-Sorular öğrendiğin dilde, açıklamalar iki dilde gelir.	Questions are in the language you learn; explanations come in both languages.
 %d kelime, A1'den C2'ye	%d words, from A1 to C2
 Bu kelime ne demek?	What does this word mean?
 %s karşılığı hangisi?	Which is the %s word?
@@ -1137,31 +1136,21 @@ Sonuç	Results
 Ders bitti	Lesson complete
 %d sorudan %d doğru	%d questions, %d right
 +%d XP	+%d XP
-+%d XP (hatasız ders: +%d)	+%d XP (perfect lesson: +%d)
 Seri: %d gün · bugün %d/%d XP	Streak: %d days · today %d/%d XP
 Tekrar edilecek kelimeler	Words to review
 Hiç hata yok, harika!	No mistakes, great!
-Yeni ders	New lesson
 Ana ekran	Home
 Tekrar	Review
 Tekrar (%d)	Review (%d)
-Bu seviyede soru yok	No questions at this level
 Tekrar edilecek kelime yok	Nothing to review
-Bu dil ikilisinde bu seviyede sorulacak kelime bulunamadı.	No words to ask at this level for this language pair.
-Önce birkaç ders yapın; yanlış bildiğiniz kelimeler burada tekrar sorulur.	Do a few lessons first; the words you miss are asked again here.
 %s öğreniyorum · ana dilim %s	Learning %s · my language %s
 Toplam: %ld XP · bugün %d XP	Total: %ld XP · today %d XP
 Seri: %d gün · en uzun %d gün	Streak: %d days · longest %d days
 %d ders · %d cevap · %%%d doğru	%d lessons · %d answers · %d%% right
-%d kelime görüldü · %d öğrenildi · %d tekrar bekliyor	%d words seen · %d learned · %d due for review
-Seviyeler	Levels
 Tekrar kutuları	Review boxes
-1: yeni kaçırılan · 5: iyice öğrenildi (aralık 1, 2, 4, 8, 21 gün)	1: just missed · 5: well learned (every 1, 2, 4, 8, 21 days)
 Değiştir	Change
-Seri: %d gün · %ld XP · bugün %d/%d	Streak: %d days · %ld XP · today %d/%d
 Kaynak: Vikisözlük (CC BY-SA), Tatoeba (CC BY), CEFR-J; seviyeler sıklığa göre	Sources: Wiktionary (CC BY-SA), Tatoeba (CC BY), CEFR-J; levels by frequency
 Kelime listeleri yüklenemedi.	The word lists could not be loaded.
-%d / %d öğrenildi	%d / %d learned
 Görev Yöneticisi	Task Manager
 Arka planda çalışan programlar	Programs running in the background
 Arka planda başka program yok.	No other programs in the background.
@@ -1186,3 +1175,72 @@ Sistem servisleri, SSH ve Kindle Apps hiçbir zaman durdurulmaz.	System services
 Arka planda program var	A program is running in the background
 Arkada açık program: %s. Ekranı ve dokunmayı kullanabilir.	Open in the background: %s. It may use the screen and touch input.
 Arkada açık programlar: %s. Ekranı ve dokunmayı kullanabilirler.	Open in the background: %s. They may use the screen and touch input.
+%d / %d kelime öğretildi · ✓ öğrenildi · • öğretildi · ★ biliyorum · ○ sırada	%d / %d words taught · ✓ learned · • taught · ★ known · ○ next
+%d kelime öğretildi · %d öğrenildi · %d tekrar bekliyor	%d words taught · %d learned · %d due for review
+%d sorudan %d doğru · +%d XP	%d questions, %d right · +%d XP
+%d yeni kelime öğrendin!	You learned %d new words!
+%s anlamı	Meaning in %s
+%s tanımı	Definition in %s
+%s · kelime %d / %d	%s · word %d / %d
+%s öğrenmeye nereden başlayalım?	Where shall we start with %s?
+%s: %d / %d doğru	%s: %d / %d right
+0: yeni öğretildi · 1: yeni kaçırılan · 5: iyice öğrenildi (aralık 1, 2, 4, 8, 21 gün)	0: just taught · 1: just missed · 5: well learned (intervals 1, 2, 4, 8, 21 days)
+Anladım ▶	Got it ▶
+BUGÜNÜN DERSİ	TODAY'S LESSON
+Başlangıç seviyen	Your starting level
+Ben, sen, o	I, you, he/she
+Bildiğin %d kelime "biliyorum" olarak işaretlendi; ara sıra tekrar sorulur.	The %d words you knew were marked as "known"; they come back now and then.
+Bilmiyorum	I don't know
+Bilmiyorum, bana öğret	I don't know it, teach me
+Biraz biliyorum	I know a little
+Bu dersin kelimeleri	This lesson's words
+Bu dil ikilisinin bütün kelimelerini gördün. Tekrarlarla devam et.	You have seen every word of this language pair. Carry on with reviews.
+Bu kelimeyi tekrar çalışalım	Let's go over this word again
+Bugün: %d tekrar	Today: %d reviews
+Bugün: %d yeni kelime	Today: %d new words
+Bugün: %d yeni kelime + %d tekrar	Today: %d new words + %d reviews
+Bugünlük tekrar bitti. Yeni kelimeler için derse devam et.	No more reviews today. Continue the lesson for new words.
+Bunu zaten biliyorum ★	I already know this ★
+Derse başla ▶	Start lesson ▶
+Derslere başla ▶	Start the lessons ▶
+Derste yeni kelime:	New words per lesson:
+Devam ▶	Continue ▶
+Fiiller %d	Verbs %d
+Günlük şeyler	Everyday things
+Henüz öğretilmedi	Not taught yet
+Her derste önce yeni kelimeler öğretilir, sonra alıştırma yapılır.	Every lesson first teaches new words, then you practise them.
+Hiç bilmiyorum	I know nothing yet
+Küçük kelimeler %d	Little words %d
+Kısa seviye testi: her seviyeden 5 kelime	Short placement test: 5 words per level
+Sayılar	Numbers
+Sayılar %d	Numbers %d
+Selamlaşma	Greetings
+Seri: %d gün · %ld XP · bugün %d/%d XP	Streak: %d days · %ld XP · today %d/%d XP
+Seviye testi	Placement test
+Sonraki ders ▶	Next lesson ▶
+Sözlük	Dictionary
+Sözlüğe bak	Open the dictionary
+Sıfatlar %d	Adjectives %d
+Sıfırdan başla: selamlaşma, sayılar, temel fiiller…	Start from zero: greetings, numbers, basic verbs…
+TEKRAR BAKALIM	LET'S LOOK AGAIN
+Tekrar zamanı	Time to review
+Temel fiiller	Basic verbs
+Temel sıfatlar	Basic adjectives
+Tüm kelimeler öğretildi	Every word has been taught
+YENİ KELİME	NEW WORD
+Yanlış — kartına bir daha bakalım	Wrong — let's look at its card again
+Yeni kelime %d / %d	New word %d / %d
+Yeni tekrar	Another review
+dişil	feminine
+eril	masculine
+nötr	neuter
+okunuşu: %s	say it: %s
+Önce kelimeler öğretilir, sonra yalnızca öğrendiklerin sorulur.	Words are taught first; then you are only asked what you have learned.
+Örnek cümle	Example
+Öğretildi · tekrar kutusu %d / %d	Taught · review box %d / %d
+Ünite %d: %s	Unit %d: %s
+İng.	Eng.
+İnsanlar	People
+İsimler %d	Nouns %d
+↻ yanlış bilinenler bir sonraki derste yine sorulur	↻ missed words come back in the next lesson
+★ Biliyorum olarak işaretli	★ Marked as known

@@ -1124,7 +1124,6 @@ deyim	locution
 Diller	Langues
 Öğrendiğim dil	J'apprends
 Ana dilim	Ma langue
-Sorular öğrendiğin dilde, açıklamalar iki dilde gelir.	Questions dans la langue apprise, explications dans les deux langues.
 %d kelime, A1'den C2'ye	%d mots, de A1 à C2
 Bu kelime ne demek?	Que veut dire ce mot ?
 %s karşılığı hangisi?	Quel est le mot en %s ?
@@ -1137,31 +1136,21 @@ Sonuç	Résultat
 Ders bitti	Leçon terminée
 %d sorudan %d doğru	%d questions, %d justes
 +%d XP	+%d XP
-+%d XP (hatasız ders: +%d)	+%d XP (sans faute : +%d)
 Seri: %d gün · bugün %d/%d XP	Série : %d jours · aujourd'hui %d/%d XP
 Tekrar edilecek kelimeler	Mots à revoir
 Hiç hata yok, harika!	Aucune faute, bravo !
-Yeni ders	Nouvelle leçon
 Ana ekran	Accueil
 Tekrar	Révision
 Tekrar (%d)	Révision (%d)
-Bu seviyede soru yok	Aucune question à ce niveau
 Tekrar edilecek kelime yok	Rien à revoir
-Bu dil ikilisinde bu seviyede sorulacak kelime bulunamadı.	Aucun mot à ce niveau pour cette paire de langues.
-Önce birkaç ders yapın; yanlış bildiğiniz kelimeler burada tekrar sorulur.	Faites d'abord quelques leçons ; les mots manqués reviennent ici.
 %s öğreniyorum · ana dilim %s	J'apprends : %s · ma langue : %s
 Toplam: %ld XP · bugün %d XP	Total : %ld XP · aujourd'hui %d XP
 Seri: %d gün · en uzun %d gün	Série : %d jours · record %d jours
 %d ders · %d cevap · %%%d doğru	%d leçons · %d réponses · %d %% justes
-%d kelime görüldü · %d öğrenildi · %d tekrar bekliyor	%d mots vus · %d appris · %d à revoir
-Seviyeler	Niveaux
 Tekrar kutuları	Boîtes de révision
-1: yeni kaçırılan · 5: iyice öğrenildi (aralık 1, 2, 4, 8, 21 gün)	1 : juste manqué · 5 : bien appris (tous les 1, 2, 4, 8, 21 jours)
 Değiştir	Changer
-Seri: %d gün · %ld XP · bugün %d/%d	Série : %d jours · %ld XP · aujourd'hui %d/%d
 Kaynak: Vikisözlük (CC BY-SA), Tatoeba (CC BY), CEFR-J; seviyeler sıklığa göre	Sources : Wiktionnaire (CC BY-SA), Tatoeba (CC BY), CEFR-J ; niveaux selon la fréquence
 Kelime listeleri yüklenemedi.	Les listes de mots n'ont pas pu être chargées.
-%d / %d öğrenildi	%d / %d appris
 Görev Yöneticisi	Gestionnaire des tâches
 Arka planda çalışan programlar	Programmes en arrière-plan
 Arka planda başka program yok.	Aucun autre programme en arrière-plan.
@@ -1186,3 +1175,72 @@ Sistem servisleri, SSH ve Kindle Apps hiçbir zaman durdurulmaz.	Les services sy
 Arka planda program var	Un programme tourne en arrière-plan
 Arkada açık program: %s. Ekranı ve dokunmayı kullanabilir.	Ouvert en arrière-plan : %s. Il peut utiliser l'écran et le tactile.
 Arkada açık programlar: %s. Ekranı ve dokunmayı kullanabilirler.	Ouverts en arrière-plan : %s. Ils peuvent utiliser l'écran et le tactile.
+%d / %d kelime öğretildi · ✓ öğrenildi · • öğretildi · ★ biliyorum · ○ sırada	%d / %d mots vus · ✓ appris · • vu · ★ connu · ○ à venir
+%d kelime öğretildi · %d öğrenildi · %d tekrar bekliyor	%d mots vus · %d appris · %d à réviser
+%d sorudan %d doğru · +%d XP	%d questions, %d justes · +%d XP
+%d yeni kelime öğrendin!	Tu as appris %d nouveaux mots !
+%s anlamı	Sens en %s
+%s tanımı	Définition en %s
+%s · kelime %d / %d	%s · mot %d / %d
+%s öğrenmeye nereden başlayalım?	Par où commencer en %s ?
+%s: %d / %d doğru	%s : %d / %d justes
+0: yeni öğretildi · 1: yeni kaçırılan · 5: iyice öğrenildi (aralık 1, 2, 4, 8, 21 gün)	0 : tout juste vu · 1 : raté récemment · 5 : bien appris (intervalles 1, 2, 4, 8, 21 jours)
+Anladım ▶	Compris ▶
+BUGÜNÜN DERSİ	LEÇON DU JOUR
+Başlangıç seviyen	Ton niveau de départ
+Ben, sen, o	Je, tu, il/elle
+Bildiğin %d kelime "biliyorum" olarak işaretlendi; ara sıra tekrar sorulur.	Les %d mots que tu connaissais sont marqués « connus » ; ils reviennent de temps en temps.
+Bilmiyorum	Je ne sais pas
+Bilmiyorum, bana öğret	Je ne le connais pas, apprends-le-moi
+Biraz biliyorum	J'en connais un peu
+Bu dersin kelimeleri	Mots de cette leçon
+Bu dil ikilisinin bütün kelimelerini gördün. Tekrarlarla devam et.	Tu as vu tous les mots de cette paire de langues. Continue avec les révisions.
+Bu kelimeyi tekrar çalışalım	Revoyons ce mot
+Bugün: %d tekrar	Aujourd'hui : %d révisions
+Bugün: %d yeni kelime	Aujourd'hui : %d nouveaux mots
+Bugün: %d yeni kelime + %d tekrar	Aujourd'hui : %d nouveaux mots + %d révisions
+Bugünlük tekrar bitti. Yeni kelimeler için derse devam et.	Plus de révisions aujourd'hui. Continue la leçon pour de nouveaux mots.
+Bunu zaten biliyorum ★	Je le connais déjà ★
+Derse başla ▶	Commencer la leçon ▶
+Derslere başla ▶	Commencer les leçons ▶
+Derste yeni kelime:	Nouveaux mots par leçon :
+Devam ▶	Continuer ▶
+Fiiller %d	Verbes %d
+Günlük şeyler	Choses du quotidien
+Henüz öğretilmedi	Pas encore vu
+Her derste önce yeni kelimeler öğretilir, sonra alıştırma yapılır.	Chaque leçon présente d'abord de nouveaux mots, puis on s'entraîne.
+Hiç bilmiyorum	Je ne connais rien
+Küçük kelimeler %d	Petits mots %d
+Kısa seviye testi: her seviyeden 5 kelime	Court test de niveau : 5 mots par niveau
+Sayılar	Nombres
+Sayılar %d	Nombres %d
+Selamlaşma	Salutations
+Seri: %d gün · %ld XP · bugün %d/%d XP	Série : %d jours · %ld XP · aujourd'hui %d/%d XP
+Seviye testi	Test de niveau
+Sonraki ders ▶	Leçon suivante ▶
+Sözlük	Dictionnaire
+Sözlüğe bak	Voir le dictionnaire
+Sıfatlar %d	Adjectifs %d
+Sıfırdan başla: selamlaşma, sayılar, temel fiiller…	Partir de zéro : salutations, nombres, verbes de base…
+TEKRAR BAKALIM	REVOYONS-LE
+Tekrar zamanı	C'est l'heure de réviser
+Temel fiiller	Verbes de base
+Temel sıfatlar	Adjectifs de base
+Tüm kelimeler öğretildi	Tous les mots ont été vus
+YENİ KELİME	NOUVEAU MOT
+Yanlış — kartına bir daha bakalım	Faux — revoyons sa carte
+Yeni kelime %d / %d	Nouveau mot %d / %d
+Yeni tekrar	Nouvelle révision
+dişil	féminin
+eril	masculin
+nötr	neutre
+okunuşu: %s	prononciation : %s
+Önce kelimeler öğretilir, sonra yalnızca öğrendiklerin sorulur.	Les mots sont d'abord présentés ; ensuite, seuls les mots appris sont demandés.
+Örnek cümle	Exemple
+Öğretildi · tekrar kutusu %d / %d	Vu · boîte de révision %d / %d
+Ünite %d: %s	Unité %d : %s
+İng.	angl.
+İnsanlar	Les gens
+İsimler %d	Noms %d
+↻ yanlış bilinenler bir sonraki derste yine sorulur	↻ les mots ratés reviennent à la prochaine leçon
+★ Biliyorum olarak işaretli	★ Marqué comme connu

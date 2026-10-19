@@ -1124,7 +1124,6 @@ deyim	выражение
 Diller	Языки
 Öğrendiğim dil	Я изучаю
 Ana dilim	Мой язык
-Sorular öğrendiğin dilde, açıklamalar iki dilde gelir.	Вопросы на изучаемом языке, пояснения на обоих языках.
 %d kelime, A1'den C2'ye	%d слов, от A1 до C2
 Bu kelime ne demek?	Что значит это слово?
 %s karşılığı hangisi?	Какое это слово (%s)?
@@ -1137,31 +1136,21 @@ Sonuç	Итог
 Ders bitti	Урок окончен
 %d sorudan %d doğru	%d вопросов, %d верно
 +%d XP	+%d XP
-+%d XP (hatasız ders: +%d)	+%d XP (без ошибок: +%d)
 Seri: %d gün · bugün %d/%d XP	Серия: %d дн. · сегодня %d/%d XP
 Tekrar edilecek kelimeler	Слова для повторения
 Hiç hata yok, harika!	Без ошибок, отлично!
-Yeni ders	Новый урок
 Ana ekran	Главная
 Tekrar	Повторение
 Tekrar (%d)	Повторение (%d)
-Bu seviyede soru yok	На этом уровне нет вопросов
 Tekrar edilecek kelime yok	Нечего повторять
-Bu dil ikilisinde bu seviyede sorulacak kelime bulunamadı.	Для этой пары языков на этом уровне нет слов.
-Önce birkaç ders yapın; yanlış bildiğiniz kelimeler burada tekrar sorulur.	Сначала пройдите несколько уроков; слова с ошибками повторяются здесь.
 %s öğreniyorum · ana dilim %s	Изучаю: %s · мой язык: %s
 Toplam: %ld XP · bugün %d XP	Всего: %ld XP · сегодня %d XP
 Seri: %d gün · en uzun %d gün	Серия: %d дн. · рекорд %d дн.
 %d ders · %d cevap · %%%d doğru	%d уроков · %d ответов · %d%% верно
-%d kelime görüldü · %d öğrenildi · %d tekrar bekliyor	%d слов встречено · %d выучено · %d ждут повторения
-Seviyeler	Уровни
 Tekrar kutuları	Карточные ящики
-1: yeni kaçırılan · 5: iyice öğrenildi (aralık 1, 2, 4, 8, 21 gün)	1: только что ошибка · 5: хорошо выучено (через 1, 2, 4, 8, 21 дн.)
 Değiştir	Изменить
-Seri: %d gün · %ld XP · bugün %d/%d	Серия: %d дн. · %ld XP · сегодня %d/%d
 Kaynak: Vikisözlük (CC BY-SA), Tatoeba (CC BY), CEFR-J; seviyeler sıklığa göre	Источники: Викисловарь (CC BY-SA), Tatoeba (CC BY), CEFR-J; уровни по частотности
 Kelime listeleri yüklenemedi.	Не удалось загрузить списки слов.
-%d / %d öğrenildi	%d / %d выучено
 Görev Yöneticisi	Диспетчер задач
 Arka planda çalışan programlar	Программы в фоне
 Arka planda başka program yok.	Других программ в фоне нет.
@@ -1186,3 +1175,72 @@ Sistem servisleri, SSH ve Kindle Apps hiçbir zaman durdurulmaz.	Системн�
 Arka planda program var	В фоне работает программа
 Arkada açık program: %s. Ekranı ve dokunmayı kullanabilir.	Открыто в фоне: %s. Может использовать экран и касания.
 Arkada açık programlar: %s. Ekranı ve dokunmayı kullanabilirler.	Открыты в фоне: %s. Могут использовать экран и касания.
+%d / %d kelime öğretildi · ✓ öğrenildi · • öğretildi · ★ biliyorum · ○ sırada	%d / %d слов пройдено · ✓ выучено · • пройдено · ★ знаю · ○ дальше
+%d kelime öğretildi · %d öğrenildi · %d tekrar bekliyor	%d слов пройдено · %d выучено · %d ждут повторения
+%d sorudan %d doğru · +%d XP	%d вопросов, %d верно · +%d XP
+%d yeni kelime öğrendin!	Ты выучил %d новых слов!
+%s anlamı	Значение (%s)
+%s tanımı	Определение (%s)
+%s · kelime %d / %d	%s · слово %d / %d
+%s öğrenmeye nereden başlayalım?	С чего начнём? (%s)
+%s: %d / %d doğru	%s: %d / %d верно
+0: yeni öğretildi · 1: yeni kaçırılan · 5: iyice öğrenildi (aralık 1, 2, 4, 8, 21 gün)	0: только что пройдено · 1: недавно ошибка · 5: хорошо выучено (интервалы 1, 2, 4, 8, 21 день)
+Anladım ▶	Понятно ▶
+BUGÜNÜN DERSİ	УРОК НА СЕГОДНЯ
+Başlangıç seviyen	Твой начальный уровень
+Ben, sen, o	Я, ты, он/она
+Bildiğin %d kelime "biliyorum" olarak işaretlendi; ara sıra tekrar sorulur.	%d знакомых слов отмечены как «знаю»; иногда они будут повторяться.
+Bilmiyorum	Не знаю
+Bilmiyorum, bana öğret	Не знаю, научи
+Biraz biliyorum	Немного знаю
+Bu dersin kelimeleri	Слова этого урока
+Bu dil ikilisinin bütün kelimelerini gördün. Tekrarlarla devam et.	Ты увидел все слова этой языковой пары. Продолжай повторять.
+Bu kelimeyi tekrar çalışalım	Повторим это слово
+Bugün: %d tekrar	Сегодня: %d повторений
+Bugün: %d yeni kelime	Сегодня: %d новых слов
+Bugün: %d yeni kelime + %d tekrar	Сегодня: %d новых слов + %d повторений
+Bugünlük tekrar bitti. Yeni kelimeler için derse devam et.	На сегодня повторений больше нет. Продолжай урок, чтобы узнать новые слова.
+Bunu zaten biliyorum ★	Уже знаю ★
+Derse başla ▶	Начать урок ▶
+Derslere başla ▶	К урокам ▶
+Derste yeni kelime:	Новых слов за урок:
+Devam ▶	Дальше ▶
+Fiiller %d	Глаголы %d
+Günlük şeyler	Повседневные вещи
+Henüz öğretilmedi	Ещё не пройдено
+Her derste önce yeni kelimeler öğretilir, sonra alıştırma yapılır.	Каждый урок сначала знакомит с новыми словами, потом идёт практика.
+Hiç bilmiyorum	Совсем не знаю
+Küçük kelimeler %d	Служебные слова %d
+Kısa seviye testi: her seviyeden 5 kelime	Короткий тест уровня: 5 слов на уровень
+Sayılar	Числа
+Sayılar %d	Числа %d
+Selamlaşma	Приветствия
+Seri: %d gün · %ld XP · bugün %d/%d XP	Серия: %d дн. · %ld XP · сегодня %d/%d XP
+Seviye testi	Тест уровня
+Sonraki ders ▶	Следующий урок ▶
+Sözlük	Словарь
+Sözlüğe bak	Открыть словарь
+Sıfatlar %d	Прилагательные %d
+Sıfırdan başla: selamlaşma, sayılar, temel fiiller…	С нуля: приветствия, числа, основные глаголы…
+TEKRAR BAKALIM	ПОСМОТРИМ ЕЩЁ РАЗ
+Tekrar zamanı	Время повторить
+Temel fiiller	Основные глаголы
+Temel sıfatlar	Основные прилагательные
+Tüm kelimeler öğretildi	Все слова пройдены
+YENİ KELİME	НОВОЕ СЛОВО
+Yanlış — kartına bir daha bakalım	Неверно — посмотрим карточку ещё раз
+Yeni kelime %d / %d	Новое слово %d / %d
+Yeni tekrar	Ещё повторение
+dişil	женский род
+eril	мужской род
+nötr	средний род
+okunuşu: %s	произношение: %s
+Önce kelimeler öğretilir, sonra yalnızca öğrendiklerin sorulur.	Сначала слова объясняются, потом спрашиваются только выученные.
+Örnek cümle	Пример
+Öğretildi · tekrar kutusu %d / %d	Пройдено · ячейка повторения %d / %d
+Ünite %d: %s	Раздел %d: %s
+İng.	англ.
+İnsanlar	Люди
+İsimler %d	Существительные %d
+↻ yanlış bilinenler bir sonraki derste yine sorulur	↻ ошибки вернутся на следующем уроке
+★ Biliyorum olarak işaretli	★ Отмечено как знакомое

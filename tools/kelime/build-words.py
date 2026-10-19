@@ -16,11 +16,17 @@ For every language L in LANGS:
      English glosses of en.wiktionary, and as a last resort a pivot through English that needs two paths.
   6. Example: a short Tatoeba sentence containing the word, with its Tatoeba translations; else a Wiktionary
      usage example (with en.wiktionary's English translation). The word is marked {like this}.
+  7. Pronunciation: an IPA transcription from English Wiktionary ("sounds", fetched as ipa_<lang>) and, derived
+     from it by fixed rules, a reading guide in Turkish letters with the stressed syllable in capitals
+     ("haben" /ˈhaːbən/ → "HAA-ben"); no guide when a symbol has no rule.
+  8. A beginner's course starts with STARTER: a few themed words per language (greetings, pronouns, numbers, basic
+     verbs, people, things, adjectives), always A1, with a checked Turkish (for Turkish: English) translation.
   Vulgar, offensive and derogatory words or senses, proper names and abbreviations are left out.
 
-Output (UTF-8; '#' header lines, then one word per line, 8 tab-separated fields):
-  word  article  pos  level(1-6)  definition  example  translations  example-translations
+Output (UTF-8; '#' header lines, then one word per line, 11 tab-separated fields):
+  word  article  pos  level(1-6)  definition  example  translations  example-translations  ipa  reading  theme
   translations / example-translations: "tr=köpek|en=dog|…" (one text per native language)
+  theme: the STARTER theme (greet, pron, num, verb, people, things, adj) or empty
 
 Usage: tools/kelime/build-words.py <cache dir> [outdir]   (outdir default apps/kelime/data)
 """
@@ -33,7 +39,87 @@ POS_MAP = {"noun": "noun", "verb": "verb", "adj": "adj", "adv": "adv", "pron": "
            "conj": "conj", "num": "num", "det": "det", "article": "det", "intj": "intj", "phrase": "phrase"}
 POS_PREF = ["noun", "verb", "adj", "adv", "pron", "prep", "conj", "num", "det", "intj", "phrase"]
 CEFRJ_POS = {"noun": "noun", "verb": "verb", "adjective": "adj", "adverb": "adv", "pronoun": "pron", "preposition": "prep",
-             "conjunction": "conj", "number": "num", "determiner": "det", "interjection": "intj"}
+             "conjunction": "conj", "number": "num", "determiner": "det", "interjection": "intj", "be-verb": "verb",
+             "do-verb": "verb", "have-verb": "verb", "modal auxiliary": "verb"}
+# The first words of a beginner's course, in themes (the app shows them as the first units of A1). Every language gets
+# the same themes; "word=gloss" sets the Turkish translation (English for Turkish words), because the general rules
+# give poor or no translations for some of these most important words. Words missing from the sources are skipped.
+THEME_POS = {"greet": "intj", "pron": "pron", "num": "num", "verb": "verb", "people": "noun", "things": "noun", "adj": "adj"}
+STARTER = {
+    "en": {
+        "greet": "hello=merhaba; goodbye=hoşça kal; thanks=teşekkürler; please=lütfen; yes=evet; no=hayır; sorry=özür dilerim",
+        "pron": "I=ben; you=sen, siz; he=o (erkek); she=o (kadın); we=biz; they=onlar",
+        "num": "one=bir; two=iki; three=üç; four=dört; five=beş; six=altı; seven=yedi; eight=sekiz; nine=dokuz; ten=on",
+        "verb": "be=olmak; have=sahip olmak; go=gitmek; come=gelmek; do=yapmak; want=istemek; eat=yemek; drink=içmek; speak=konuşmak; see=görmek",
+        "people": "man=adam; woman=kadın; child=çocuk; mother=anne; father=baba; friend=arkadaş; name=ad, isim",
+        "things": "water=su; bread=ekmek; house=ev; day=gün; time=zaman",
+        "adj": "good=iyi; big=büyük; small=küçük; new=yeni; old=eski, yaşlı",
+    },
+    "de": {
+        "greet": "hallo=merhaba; tschüss=hoşça kal; danke=teşekkürler; bitte=lütfen; ja=evet; nein=hayır",
+        "pron": "ich=ben; du=sen; er=o (erkek); sie=o (kadın), onlar; wir=biz",
+        "num": "eins=bir; zwei=iki; drei=üç; vier=dört; fünf=beş; sechs=altı; sieben=yedi; acht=sekiz; neun=dokuz; zehn=on",
+        "verb": "sein=olmak; haben=sahip olmak; gehen=gitmek; kommen=gelmek; machen=yapmak; wollen=istemek; essen=yemek; trinken=içmek; sprechen=konuşmak; sehen=görmek",
+        "people": "Mann=adam; Frau=kadın; Kind=çocuk; Mutter=anne; Vater=baba; Freund=arkadaş; Name=ad, isim",
+        "things": "Wasser=su; Brot=ekmek; Haus=ev; Tag=gün; Zeit=zaman",
+        "adj": "gut=iyi; groß=büyük; klein=küçük; neu=yeni; alt=eski, yaşlı",
+    },
+    "fr": {
+        "greet": "bonjour=merhaba, günaydın; salut=selam; merci=teşekkürler; oui=evet; non=hayır; pardon=pardon, özür dilerim",
+        "pron": "je=ben; tu=sen; il=o (erkek); elle=o (kadın); nous=biz; vous=siz; ils=onlar",
+        "num": "un=bir; deux=iki; trois=üç; quatre=dört; cinq=beş; six=altı; sept=yedi; huit=sekiz; neuf=dokuz; dix=on",
+        "verb": "être=olmak; avoir=sahip olmak; aller=gitmek; venir=gelmek; faire=yapmak; vouloir=istemek; manger=yemek; boire=içmek; parler=konuşmak; voir=görmek",
+        "people": "homme=adam; femme=kadın; enfant=çocuk; mère=anne; père=baba; ami=arkadaş; nom=ad, isim",
+        "things": "eau=su; pain=ekmek; maison=ev; jour=gün; temps=zaman",
+        "adj": "bon=iyi; grand=büyük; petit=küçük; nouveau=yeni; vieux=eski, yaşlı",
+    },
+    "es": {
+        "greet": "hola=merhaba; adiós=hoşça kal; gracias=teşekkürler; sí=evet; no=hayır; perdón=pardon, özür dilerim",
+        "pron": "yo=ben; tú=sen; él=o (erkek); ella=o (kadın); nosotros=biz; ellos=onlar",
+        "num": "uno=bir; dos=iki; tres=üç; cuatro=dört; cinco=beş; seis=altı; siete=yedi; ocho=sekiz; nueve=dokuz; diez=on",
+        "verb": "ser=olmak (kalıcı); estar=olmak (geçici), bulunmak; tener=sahip olmak; ir=gitmek; venir=gelmek; hacer=yapmak; querer=istemek; comer=yemek; beber=içmek; hablar=konuşmak; ver=görmek",
+        "people": "hombre=adam; mujer=kadın; niño=çocuk; madre=anne; padre=baba; amigo=arkadaş; nombre=ad, isim",
+        "things": "agua=su; pan=ekmek; casa=ev; día=gün; tiempo=zaman",
+        "adj": "bueno=iyi; grande=büyük; pequeño=küçük; nuevo=yeni; viejo=eski, yaşlı",
+    },
+    "it": {
+        "greet": "ciao=merhaba, hoşça kal; grazie=teşekkürler; sì=evet; no=hayır; scusa=pardon, özür dilerim",
+        "pron": "io=ben; tu=sen; lui=o (erkek); lei=o (kadın); noi=biz; voi=siz; loro=onlar",
+        "num": "uno=bir; due=iki; tre=üç; quattro=dört; cinque=beş; sei=altı; sette=yedi; otto=sekiz; nove=dokuz; dieci=on",
+        "verb": "essere=olmak; avere=sahip olmak; andare=gitmek; venire=gelmek; fare=yapmak; volere=istemek; mangiare=yemek; bere=içmek; parlare=konuşmak; vedere=görmek",
+        "people": "uomo=adam; donna=kadın; bambino=çocuk; madre=anne; padre=baba; amico=arkadaş; nome=ad, isim",
+        "things": "acqua=su; pane=ekmek; casa=ev; giorno=gün; tempo=zaman",
+        "adj": "buono=iyi; grande=büyük; piccolo=küçük; nuovo=yeni; vecchio=eski, yaşlı",
+    },
+    "pt": {
+        "greet": "olá=merhaba; tchau=hoşça kal; obrigado=teşekkürler; sim=evet; não=hayır; desculpa=pardon, özür dilerim",
+        "pron": "eu=ben; você=sen; ele=o (erkek); ela=o (kadın); nós=biz; eles=onlar",
+        "num": "um=bir; dois=iki; três=üç; quatro=dört; cinco=beş; seis=altı; sete=yedi; oito=sekiz; nove=dokuz; dez=on",
+        "verb": "ser=olmak (kalıcı); estar=olmak (geçici), bulunmak; ter=sahip olmak; ir=gitmek; vir=gelmek; fazer=yapmak; querer=istemek; comer=yemek; beber=içmek; falar=konuşmak; ver=görmek",
+        "people": "homem=adam; mulher=kadın; criança=çocuk; mãe=anne; pai=baba; amigo=arkadaş; nome=ad, isim",
+        "things": "água=su; pão=ekmek; casa=ev; dia=gün; tempo=zaman",
+        "adj": "bom=iyi; grande=büyük; pequeno=küçük; novo=yeni; velho=eski, yaşlı",
+    },
+    "tr": {
+        "greet": "merhaba=hello; evet=yes; hayır=no; lütfen=please; teşekkür=thanks",
+        "pron": "ben=I; sen=you; o=he, she, it; biz=we; siz=you (plural); onlar=they",
+        "num": "bir=one; iki=two; üç=three; dört=four; beş=five; altı=six; yedi=seven; sekiz=eight; dokuz=nine; on=ten",
+        "verb": "olmak=to be; gitmek=to go; gelmek=to come; yapmak=to do, to make; istemek=to want; yemek=to eat; içmek=to drink; konuşmak=to speak; görmek=to see",
+        "people": "adam=man; kadın=woman; çocuk=child; anne=mother; baba=father; arkadaş=friend; ad=name",
+        "things": "su=water; ekmek=bread; ev=house; gün=day; zaman=time",
+        "adj": "iyi=good; büyük=big; küçük=small; yeni=new; eski=old",
+    },
+}
+
+
+def starters(lang):
+    """[(lower word, word, theme, gloss)] in course order"""
+    out = []
+    for theme, text in STARTER.get(lang, {}).items():
+        for item in text.split(";"):
+            w, _, g = item.strip().partition("=")
+            out.append((low(w.strip(), lang), w.strip(), theme, g.strip()))
+    return out
 BAD_TAGS = {"vulgar", "offensive", "derogatory", "slur", "pejorative", "ethnic", "obscene", "sexual"}
 SKIP_SENSE_TAGS = BAD_TAGS | {"form-of", "obsolete", "archaic", "dated", "rare", "historical", "abbreviation", "initialism",
                               "acronym", "alt-of", "misspelling", "nonstandard", "dialectal", "regional", "slang"}
@@ -405,10 +491,10 @@ def aligned_tokens(L, lw, sidx, sents, links, langs):
 
 # ---------------------------------------------------------------- per word
 
-def pos_groups(L, lw, want_pos):
+def pos_groups(L, lw, want_pos, starter=False):
     """{pos: (own entries, en.wiktionary entries)}; None when the word as a whole is vulgar or offensive"""
     fp = L.first_pos.get(lw)
-    if fp and not POS_MAP.get(fp) and fp not in ("name",):
+    if fp and not POS_MAP.get(fp) and fp not in ("name", "particle") and not starter:  # English "I" is first a letter
         return None  # first of all a particle, suffix, abbreviation …
     own_all, en_all = L.entries.get(lw, []), L.en_entries.get(lw, [])
     own = [e for e in own_all if not entry_bad(e)]
@@ -487,6 +573,17 @@ def article(lang, pos, g, word):
         return {"m": "el", "f": "la"}.get(g, "")
     if lang == "pt":
         return {"m": "o", "f": "a"}.get(g, "")
+    if lang == "it":  # l'acqua, lo studente, lo zio, lo gnomo, lo psicologo; il libro, la casa
+        w = word.lower()
+        if g not in ("m", "f"):
+            return ""
+        if w[:1] in "aeiouàèéìòù":
+            return "l'"
+        if g == "f":
+            return "la"
+        if (w[:1] == "s" and w[1:2] and w[1:2] not in "aeiouàèéìòù") or w[:1] in "zxy" or w[:2] in ("gn", "ps", "pn"):
+            return "lo"
+        return "il"
     return ""
 
 
@@ -503,6 +600,148 @@ def wiki_example(L, word, lw, entries):
                         tr = {"en": cut(clean(x["en"]), MAX_EX + 20)} if x.get("en") and L.code != "en" else {}
                         return m, tr
     return "", {}
+
+
+# ---------------------------------------------------------------- pronunciation
+
+def load_ipa(cache, code):
+    """lower word -> [(part of speech, [(ipa, tags)])] from English Wiktionary (fetch.py ipa_<lang>)"""
+    out = collections.defaultdict(list)
+    for e in jl(cache, f"ipa_{code}") or ():
+        out[low(e["w"], code)].append((POS_MAP.get(e["pos"], ""), e["ipa"]))
+    return out
+
+
+IPA_PREF = {"en": ("UK", "Received-Pronunciation"), "pt": ("Brazil",), "es": (), "fr": (), "de": (), "it": (), "tr": ()}
+AVOID_TAGS = {"colloquial", "dialectal", "obsolete", "archaic", "rare", "Louisiana", "Quebec", "Switzerland", "Austria"}
+
+
+def pick_ipa(table, lw, pos, lang):
+    """one phonemic transcription (/…/) of the word, preferring its part of speech and the usual accent"""
+    best = None
+    for p, ipas in table.get(lw, []):
+        for k, (ipa, tags) in enumerate(ipas):
+            if not ipa.startswith("/") or set(tags) & AVOID_TAGS or len(ipa) > 40:
+                continue
+            key = (p == pos, any(t in tags for t in IPA_PREF.get(lang, ())), not tags, -k)
+            if best is None or key > best[0]:
+                best = (key, ipa)
+    return best[1] if best else ""
+
+
+# IPA -> Turkish letters (a reading guide for Turkish speakers: "haben" /ˈhaːbn̩/ -> "HAA-ben")
+TR_VOWELS = {"a": "a", "ɑ": "a", "ɐ": "a", "ä": "a", "æ": "e", "ʌ": "a", "ɒ": "o", "ɔ": "o", "o": "o", "e": "e", "ɛ": "e",
+             "ɜ": "ö", "ə": "ı", "ɪ": "i", "i": "i", "ɨ": "ı", "ɯ": "ı", "u": "u", "ʊ": "u", "y": "ü", "ʏ": "ü", "ø": "ö",
+             "œ": "ö", "ɵ": "ö", "ɤ": "ı", "ɘ": "ı", "ɞ": "ö", "ɶ": "ö"}
+TR_CONS = {"p": "p", "b": "b", "t": "t", "d": "d", "k": "k", "g": "g", "ɡ": "g", "f": "f", "v": "v", "s": "s", "z": "z",
+           "m": "m", "n": "n", "l": "l", "ɫ": "l", "h": "h", "ɦ": "h", "ʃ": "ş", "ʒ": "j", "x": "h", "χ": "h", "ħ": "h",
+           "ç": "h", "ʁ": "r", "ʀ": "r", "r": "r", "ɾ": "r", "ɹ": "r", "ɻ": "r", "ŋ": "ng", "ɲ": "ny", "ʎ": "ly", "j": "y",
+           "w": "w", "β": "b", "ɣ": "g", "ð": "d", "ʋ": "v", "c": "k", "ɟ": "g", "ʝ": "y", "ɕ": "ş", "ʑ": "j", "ɱ": "m",
+           "ɰ": "ğ", "ʔ": "", "θ": "t", "ʍ": "w"}
+TR_LANG = {"de": {"ə": "e", "ɐ": "a"}, "fr": {"ə": "ö"}, "es": {"θ": "s"}, "pt": {"ɐ": "a", "ɨ": "ı"}, "it": {}, "en": {}}
+STOPS = set("pbtdkgɡfvc")
+COMBINING = re.compile(r"[̀-ͯ]")
+
+
+def tr_reading(ipa, lang):
+    """A Turkish-letter reading of an IPA transcription, the stressed syllable in capitals; "" when a symbol is not
+    known (then no guide is better than a wrong one)."""
+    s = unicodedata.normalize("NFD", ipa.strip("/[]"))
+    s = re.sub(r"\([^)]*\)", "", s).replace("‿", "").replace("͡", "").replace("ʲ", "").replace("ʰ", "").replace("ˀ", "")
+    s = s.replace("tʃ", "ʧ").replace("dʒ", "ʤ").replace("ɡ", "g")
+    if lang == "en":
+        s = s.replace("əʊ", "oʊ")
+    if not s or " " in s.strip() or "," in s:
+        return ""
+    vow = dict(TR_VOWELS, **{k: v for k, v in TR_LANG.get(lang, {}).items() if k in TR_VOWELS})
+    cons = dict(TR_CONS, ʧ="ç", ʤ="c", **{k: v for k, v in TR_LANG.get(lang, {}).items() if k in TR_CONS})
+    units = []  # [kind, text]: V vowel, C consonant, | syllable break, ' stress (a break too)
+    i = 0
+    while i < len(s):
+        ch = s[i]
+        i += 1
+        marks = ""
+        while i < len(s) and (COMBINING.match(s[i]) or s[i] in "ːˑ"):
+            marks += s[i]
+            i += 1
+        if ch in "ˈ":
+            units.append(["'", ""])
+        elif ch in "ˌ.":
+            units.append(["|", ""])
+        elif ch in vow:
+            t = vow[ch]
+            nasal = "ⁿ" if "̃" in marks else ""
+            if "̯" in marks:  # non-syllabic: a glide
+                units.append(["C", {"i": "y", "ɪ": "y", "y": "y", "ʏ": "y", "u": "u", "ʊ": "u", "o": "u", "ɐ": "r", "e": "y"}.get(ch, "") + nasal])
+                continue
+            if "ː" in marks:
+                t += t
+            units.append(["V", t + nasal])
+        elif ch == "c" and "̧" in marks:  # German ich-Laut
+            units.append(["C", "h"])
+        elif ch in cons:
+            t = cons[ch]
+            if "̩" in marks:  # syllabic n, l, m
+                units.append(["V", ("e" if lang == "de" else "ı") + t])
+                continue
+            if ch in "wj":
+                t = {"w": "u", "j": "y"}[ch] if (units and units[-1][0] == "V") else t
+                t += "ⁿ" if "̃" in marks else ""
+            units.append(["C", t])
+        elif ch in "-":
+            continue
+        else:
+            return ""
+    # English diphthongs are written without a glide mark: aɪ eɪ ɔɪ aʊ oʊ əʊ
+    for k in range(1, len(units)):
+        if units[k][0] == "V" and units[k - 1][0] == "V" and lang == "en" and units[k][1] in ("i", "u", "ı"):
+            units[k] = ["C", {"i": "y", "u": "u", "ı": ""}[units[k][1]]]
+    # syllables: an explicit break, else the last consonant before a vowel starts the syllable (a stop plus r/l both)
+    sylls, cur, stressed, has_vowel = [], [], -1, False
+    pend_stress = False
+    idx = [k for k, u in enumerate(units) if u[0] == "V"]
+    if not idx:
+        return ""
+    breaks = set()
+    explicit = any(u[0] in "|'" for u in units[1:])
+    for a, b in zip(idx, idx[1:]):
+        between = [k for k in range(a + 1, b)]
+        if any(units[k][0] in "|'" for k in between):
+            continue
+        cs = [k for k in between if units[k][0] == "C"]
+        if not cs:
+            breaks.add(b)
+        elif len(cs) >= 2 and units[cs[-2]][1] in ("p", "b", "t", "d", "k", "g", "f", "v") and units[cs[-1]][1] in ("r", "l") and not explicit:
+            breaks.add(cs[-2])
+        else:
+            breaks.add(cs[-1])
+    for k, (kind, t) in enumerate(units):
+        if kind in "|'" or k in breaks:
+            if cur and has_vowel:
+                sylls.append("".join(cur))
+                cur, has_vowel = [], False
+            if kind == "'":
+                pend_stress = True
+            if kind in "|'":
+                continue
+        if pend_stress and kind == "V":
+            stressed = len(sylls)
+            pend_stress = False
+        cur.append(t)
+        has_vowel |= kind == "V"
+    if cur:
+        if has_vowel or not sylls:
+            sylls.append("".join(cur))
+        else:
+            sylls[-1] += "".join(cur)
+    out = []
+    for k, sy in enumerate(sylls):
+        sy = re.sub(r"ⁿ([uy])ⁿ?", r"\1n", sy).replace("ⁿ", "n")  # nasal vowels: ão -> aun, õ -> on
+        if k == stressed and len(sylls) > 1:
+            sy = sy.replace("i", "İ").replace("ı", "I").upper()
+        out.append(sy)
+    r = "-".join(out)
+    return r if re.fullmatch(r"[a-zçğıöşüA-ZÇĞİIÖŞÜ-]+", r) else ""
 
 
 def english_levels(cache):
@@ -545,7 +784,8 @@ def write_sources(outdir, cache, stats):
         "  Wiktextract (Tatu Ylonen, \"Wiktextract: Wiktionary as Machine-Readable Structured Data\", LREC 2022) and",
         "  published at https://kaikki.org: definitions, translations, parts of speech, genders, inflected forms and",
         "  usage examples, from the English, Simple English, German, French, Spanish, Italian, Portuguese and Turkish",
-        "  editions. Texts were shortened and the word itself is marked {like this}.",
+        "  editions, and the IPA pronunciations of English Wiktionary. Texts were shortened and the word itself is",
+        "  marked {like this}. The Turkish-letter reading guides are derived from the IPA by fixed rules.",
         "* Tatoeba (https://tatoeba.org), CC BY 2.0 FR: example sentences and their translations (per-language exports).",
         "* FrequencyWords by Hermit Dave (https://github.com/hermitdave/FrequencyWords), OpenSubtitles 2018 frequency",
         "  lists, content CC BY-SA 4.0: which words are taught and in which order.",
@@ -558,6 +798,8 @@ def write_sources(outdir, cache, stats):
         "Portuguese no open CEFR-graded list exists, so their levels are an APPROXIMATION from word frequency: the",
         f"most frequent {BANDS[0]} usable lemmas are A1, then up to rank {BANDS[1]} A2, {BANDS[2]} B1, {BANDS[3]} B2,",
         f"{BANDS[4]} C1 and {BANDS[5]} C2. Vulgar, offensive and derogatory words and senses were left out.",
+        "Every list starts with a small hand-picked set of beginner words (greetings, pronouns, numbers, basic verbs,",
+        "people, things, adjectives; tools/kelime/build-words.py STARTER) with checked Turkish translations.",
         "",
         "Downloads:",
     ]
@@ -568,7 +810,8 @@ def write_sources(outdir, cache, stats):
         lv = " ".join(str(st["levels"].get(str(i), st["levels"].get(i, 0))) for i in range(1, 7))
         tr = " ".join(f"{n}:{c}" for n, c in st["translations"].items())
         lines.append(f"  {l}.txt: {st['words']} words ({lv}); definitions {st['definitions']}; examples {st['examples']}"
-                     f" ({st['cloze']} with a blank); translations {tr}")
+                     f" ({st['cloze']} with a blank); IPA {st.get('ipa', 0)} (reading guides {st.get('readings', 0)});"
+                     f" starter words {st.get('starter', 0)}; translations {tr}")
     with open(os.path.join(outdir, "SOURCES"), "w", encoding="utf-8") as f:
         f.write("\n".join(lines) + "\n")
 
@@ -585,6 +828,9 @@ def main():
         print("loading", l, flush=True)
         langs[l] = load_lang(cache, l)
     rev = build_reverse(langs)
+    # words that are only vulgar or offensive in any of the languages (to be safe: a word spelt like an insult in
+    # another language is left out too; the hand-checked STARTER words are exempt, e.g. English "water", Italian
+    # "donna", Turkish "baba")
     bad_words = set()
     for Ln in langs.values():
         for table in (Ln.entries, Ln.en_entries):
@@ -597,22 +843,33 @@ def main():
     stats = {}
     for l in only:
         L = langs[l]
+        ipa_table = load_ipa(cache, l)
+        start = {s[0]: s for s in starters(l)}
         ranking = lemma_ranking(L)
         if l == "en":
             pool = [lw for lw in ranking if any((lw, p) in en_lv for p in POS_PREF)]
         else:
             pool = ranking[: BANDS[-1] * 3]
         pool = [lw for lw in pool if lw not in bad_words and len(lw) >= 2 and WORD_RE.fullmatch(lw) and not SENSITIVE.search(lw)]
-        sidx = index_sentences(L, sents, links, set(pool), bad_words)
+        pool = list(start) + [lw for lw in pool if lw not in start]  # the starter words first, in their order
+        sidx = index_sentences(L, sents, links, set(pool), bad_words - set(start))
         used_sent, rows, per_level = set(), [], collections.Counter()
+        missing_start = []
         for lw in pool:
             level, want = None, None
-            if l == "en":
+            st = start.get(lw)
+            if st:
+                level, want = 1, THEME_POS[st[2]]
+            elif l == "en":
                 level, _, want = min((en_lv[(lw, p)], POS_PREF.index(p), p) for p in POS_PREF if (lw, p) in en_lv)
                 if per_level[level] >= ENGLISH_MAX[level]:
                     continue
-            groups = pos_groups(L, lw, want)
+            groups = pos_groups(L, lw, want, bool(st))
+            if st and not groups:
+                groups = pos_groups(L, lw, None, True)  # "deux" may be listed as a noun only: still taught as a number
             if not groups:
+                if st:
+                    missing_start.append(st[1])
                 continue
             al = aligned_tokens(L, lw, sidx, sents, links, langs)
             best = None
@@ -624,6 +881,8 @@ def main():
                     best = (key, pos, own, ens, cands)
             _, pos, own, ens, cands = best
             word = next((e["w"] for e in own + ens if low(e["w"], l) == lw), lw)
+            if st:
+                word, pos = st[1], THEME_POS[st[2]]
             if l == "de" and pos == "noun":
                 word = word[:1].upper() + word[1:]
             trs = {}
@@ -631,8 +890,12 @@ def main():
                 t = pick_translation(c, al.get(n, []), langs[n], n, pos)
                 if t and not SENSITIVE.search(t):
                     trs[n] = t
+            if st and st[3]:  # the starter list's own translation
+                trs["en" if l == "tr" else "tr"] = st[3]
             defn = definition(L, lw, word, pos, own)
             if not trs or (not defn and len(trs) < 2):
+                if st:
+                    missing_start.append(st[1])
                 continue
             ex, extr = "", {}
             meant = {n: [w.strip() for w in t.split(",")] for n, t in trs.items()}
@@ -662,9 +925,13 @@ def main():
                 if not level:
                     break
             art = article(l, pos, gender(own + ens), word)
+            ipa = pick_ipa(ipa_table, lw, pos, l)
+            reading = tr_reading(ipa, l) if ipa and l != "tr" else ""
             per_level[level] += 1
             rows.append((level, word, art, pos, defn, ex, "|".join(f"{n}={trs[n]}" for n in LANGS if n in trs),
-                         "|".join(f"{n}={extr[n]}" for n in LANGS if n in extr and n != l)))
+                         "|".join(f"{n}={extr[n]}" for n in LANGS if n in extr and n != l), ipa, reading, st[2] if st else ""))
+        if missing_start:
+            print(l, "starter words not in the sources:", " ".join(missing_start), flush=True)
         rows.sort(key=lambda r: r[0])  # stable: by level, most frequent first
         path = os.path.join(outdir, f"{l}.txt")
         with open(path, "w", encoding="utf-8") as f:
@@ -672,11 +939,13 @@ def main():
             f.write("# Sources: Wiktionary via kaikki.org (CC BY-SA 4.0), Tatoeba (CC BY 2.0 FR), FrequencyWords (CC BY-SA 4.0)"
                     + (", CEFR-J Wordlist 1.5 and Octanove C1/C2 (CC BY-SA 4.0)" if l == "en" else "; levels approximated from frequency")
                     + ". See SOURCES.\n")
-            f.write("# word\tarticle\tpos\tlevel\tdefinition\texample\ttranslations\texample-translations\n")
+            f.write("# word\tarticle\tpos\tlevel\tdefinition\texample\ttranslations\texample-translations\tipa\treading\ttheme\n")
             for r in rows:
-                f.write("\t".join([r[1], r[2], r[3], str(r[0]), r[4], r[5], r[6], r[7]]) + "\n")
+                f.write("\t".join([r[1], r[2], r[3], str(r[0]), r[4], r[5], r[6], r[7], r[8], r[9], r[10]]) + "\n")
         stats[l] = {"levels": dict(sorted(per_level.items())), "words": len(rows), "definitions": sum(1 for r in rows if r[4]),
                     "cloze": sum(1 for r in rows if "{" in r[5]), "examples": sum(1 for r in rows if r[5]),
+                    "ipa": sum(1 for r in rows if r[8]), "readings": sum(1 for r in rows if r[9]),
+                    "starter": sum(1 for r in rows if r[10]),
                     "translations": {n: sum(1 for r in rows if f"{n}=" in r[6]) for n in LANGS if n != l}, "bytes": os.path.getsize(path)}
         print(l, json.dumps(stats[l]), flush=True)
     with open(os.path.join(cache, "BUILD_STATS.json"), "w") as f:

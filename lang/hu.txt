@@ -1124,7 +1124,6 @@ deyim	kifejezés
 Diller	Nyelvek
 Öğrendiğim dil	Ezt tanulom
 Ana dilim	Anyanyelvem
-Sorular öğrendiğin dilde, açıklamalar iki dilde gelir.	A kérdések a tanult nyelven, a magyarázatok mindkét nyelven.
 %d kelime, A1'den C2'ye	%d szó, A1-től C2-ig
 Bu kelime ne demek?	Mit jelent ez a szó?
 %s karşılığı hangisi?	Melyik a szó (%s)?
@@ -1137,31 +1136,21 @@ Sonuç	Eredmény
 Ders bitti	Lecke kész
 %d sorudan %d doğru	%d kérdés, %d helyes
 +%d XP	+%d XP
-+%d XP (hatasız ders: +%d)	+%d XP (hibátlan: +%d)
 Seri: %d gün · bugün %d/%d XP	Sorozat: %d nap · ma %d/%d XP
 Tekrar edilecek kelimeler	Ismétlendő szavak
 Hiç hata yok, harika!	Hibátlan, nagyszerű!
-Yeni ders	Új lecke
 Ana ekran	Kezdőlap
 Tekrar	Ismétlés
 Tekrar (%d)	Ismétlés (%d)
-Bu seviyede soru yok	Ezen a szinten nincs kérdés
 Tekrar edilecek kelime yok	Nincs mit ismételni
-Bu dil ikilisinde bu seviyede sorulacak kelime bulunamadı.	Ennél a nyelvpárnál ezen a szinten nincs szó.
-Önce birkaç ders yapın; yanlış bildiğiniz kelimeler burada tekrar sorulur.	Előbb végezzen el néhány leckét; az elrontott szavak itt jönnek újra.
 %s öğreniyorum · ana dilim %s	Tanult nyelv: %s · anyanyelv: %s
 Toplam: %ld XP · bugün %d XP	Összesen: %ld XP · ma %d XP
 Seri: %d gün · en uzun %d gün	Sorozat: %d nap · leghosszabb %d nap
 %d ders · %d cevap · %%%d doğru	%d lecke · %d válasz · %d%% helyes
-%d kelime görüldü · %d öğrenildi · %d tekrar bekliyor	%d szó látva · %d megtanulva · %d ismétlésre vár
-Seviyeler	Szintek
 Tekrar kutuları	Ismétlődobozok
-1: yeni kaçırılan · 5: iyice öğrenildi (aralık 1, 2, 4, 8, 21 gün)	1: épp elrontott · 5: jól megtanult (1, 2, 4, 8, 21 naponta)
 Değiştir	Módosít
-Seri: %d gün · %ld XP · bugün %d/%d	Sorozat: %d nap · %ld XP · ma %d/%d
 Kaynak: Vikisözlük (CC BY-SA), Tatoeba (CC BY), CEFR-J; seviyeler sıklığa göre	Források: Wikiszótár (CC BY-SA), Tatoeba (CC BY), CEFR-J; szintek gyakoriság szerint
 Kelime listeleri yüklenemedi.	A szólisták nem tölthetők be.
-%d / %d öğrenildi	%d / %d megtanulva
 Görev Yöneticisi	Feladatkezelő
 Arka planda çalışan programlar	A háttérben futó programok
 Arka planda başka program yok.	Nincs más program a háttérben.
@@ -1186,3 +1175,72 @@ Sistem servisleri, SSH ve Kindle Apps hiçbir zaman durdurulmaz.	A rendszerszolg
 Arka planda program var	Egy program fut a háttérben
 Arkada açık program: %s. Ekranı ve dokunmayı kullanabilir.	A háttérben nyitva: %s. Használhatja a képernyőt és az érintést.
 Arkada açık programlar: %s. Ekranı ve dokunmayı kullanabilirler.	A háttérben nyitva: %s. Használhatják a képernyőt és az érintést.
+%d / %d kelime öğretildi · ✓ öğrenildi · • öğretildi · ★ biliyorum · ○ sırada	%d / %d szó tanítva · ✓ megtanult · • tanított · ★ ismert · ○ következik
+%d kelime öğretildi · %d öğrenildi · %d tekrar bekliyor	%d szó tanítva · %d megtanulva · %d ismétlésre vár
+%d sorudan %d doğru · +%d XP	%d kérdés, %d helyes · +%d XP
+%d yeni kelime öğrendin!	%d új szót tanultál!
+%s anlamı	Jelentés (%s)
+%s tanımı	Meghatározás (%s)
+%s · kelime %d / %d	%s · szó %d / %d
+%s öğrenmeye nereden başlayalım?	Honnan kezdjük? (%s)
+%s: %d / %d doğru	%s: %d / %d helyes
+0: yeni öğretildi · 1: yeni kaçırılan · 5: iyice öğrenildi (aralık 1, 2, 4, 8, 21 gün)	0: most tanított · 1: nemrég elrontott · 5: jól megtanult (időköz 1, 2, 4, 8, 21 nap)
+Anladım ▶	Értem ▶
+BUGÜNÜN DERSİ	MAI LECKE
+Başlangıç seviyen	Kezdő szinted
+Ben, sen, o	Én, te, ő
+Bildiğin %d kelime "biliyorum" olarak işaretlendi; ara sıra tekrar sorulur.	A %d ismert szót „ismerem” jelöléssel láttuk el; időnként visszatérnek.
+Bilmiyorum	Nem tudom
+Bilmiyorum, bana öğret	Nem tudom, tanítsd meg
+Biraz biliyorum	Tudok egy kicsit
+Bu dersin kelimeleri	A lecke szavai
+Bu dil ikilisinin bütün kelimelerini gördün. Tekrarlarla devam et.	Ennek a nyelvpárnak minden szavát láttad. Folytasd az ismétlésekkel.
+Bu kelimeyi tekrar çalışalım	Nézzük át újra ezt a szót
+Bugün: %d tekrar	Ma: %d ismétlés
+Bugün: %d yeni kelime	Ma: %d új szó
+Bugün: %d yeni kelime + %d tekrar	Ma: %d új szó + %d ismétlés
+Bugünlük tekrar bitti. Yeni kelimeler için derse devam et.	Mára nincs több ismétlés. Új szavakért folytasd a leckét.
+Bunu zaten biliyorum ★	Ezt már tudom ★
+Derse başla ▶	Lecke indítása ▶
+Derslere başla ▶	Leckék indítása ▶
+Derste yeni kelime:	Új szó leckénként:
+Devam ▶	Tovább ▶
+Fiiller %d	Igék %d
+Günlük şeyler	Mindennapi dolgok
+Henüz öğretilmedi	Még nem tanított
+Her derste önce yeni kelimeler öğretilir, sonra alıştırma yapılır.	Minden lecke először új szavakat tanít, utána gyakorolsz.
+Hiç bilmiyorum	Semmit sem tudok
+Küçük kelimeler %d	Kis szavak %d
+Kısa seviye testi: her seviyeden 5 kelime	Rövid szintfelmérő: szintenként 5 szó
+Sayılar	Számok
+Sayılar %d	Számok %d
+Selamlaşma	Köszönés
+Seri: %d gün · %ld XP · bugün %d/%d XP	Sorozat: %d nap · %ld XP · ma %d/%d XP
+Seviye testi	Szintfelmérő
+Sonraki ders ▶	Következő lecke ▶
+Sözlük	Szótár
+Sözlüğe bak	Szótár megnyitása
+Sıfatlar %d	Melléknevek %d
+Sıfırdan başla: selamlaşma, sayılar, temel fiiller…	Nulláról: köszönés, számok, alapigék…
+TEKRAR BAKALIM	NÉZZÜK MEG ÚJRA
+Tekrar zamanı	Ideje ismételni
+Temel fiiller	Alapigék
+Temel sıfatlar	Alapmelléknevek
+Tüm kelimeler öğretildi	Minden szó tanítva
+YENİ KELİME	ÚJ SZÓ
+Yanlış — kartına bir daha bakalım	Rossz — nézzük meg újra a kártyáját
+Yeni kelime %d / %d	Új szó %d / %d
+Yeni tekrar	Újabb ismétlés
+dişil	nőnemű
+eril	hímnemű
+nötr	semlegesnemű
+okunuşu: %s	kiejtés: %s
+Önce kelimeler öğretilir, sonra yalnızca öğrendiklerin sorulur.	Előbb megtanulod a szavakat, utána csak a tanultakat kérdezzük.
+Örnek cümle	Példamondat
+Öğretildi · tekrar kutusu %d / %d	Tanított · ismétlődoboz %d / %d
+Ünite %d: %s	%d. egység: %s
+İng.	angol
+İnsanlar	Emberek
+İsimler %d	Főnevek %d
+↻ yanlış bilinenler bir sonraki derste yine sorulur	↻ a rontott szavak a következő leckében visszajönnek
+★ Biliyorum olarak işaretli	★ Ismertként megjelölve

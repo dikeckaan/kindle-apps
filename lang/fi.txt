@@ -1124,7 +1124,6 @@ deyim	fraasi
 Diller	Kielet
 Öğrendiğim dil	Opiskelen
 Ana dilim	Oma kieleni
-Sorular öğrendiğin dilde, açıklamalar iki dilde gelir.	Kysymykset opiskeltavalla kielellä, selitykset molemmilla kielillä.
 %d kelime, A1'den C2'ye	%d sanaa, A1:stä C2:een
 Bu kelime ne demek?	Mitä tämä sana tarkoittaa?
 %s karşılığı hangisi?	Mikä on sana (%s)?
@@ -1137,31 +1136,21 @@ Sonuç	Tulos
 Ders bitti	Oppitunti valmis
 %d sorudan %d doğru	%d kysymystä, %d oikein
 +%d XP	+%d XP
-+%d XP (hatasız ders: +%d)	+%d XP (virheetön: +%d)
 Seri: %d gün · bugün %d/%d XP	Putki: %d päivää · tänään %d/%d XP
 Tekrar edilecek kelimeler	Kerrattavat sanat
 Hiç hata yok, harika!	Ei virheitä, hienoa!
-Yeni ders	Uusi oppitunti
 Ana ekran	Alku
 Tekrar	Kertaus
 Tekrar (%d)	Kertaus (%d)
-Bu seviyede soru yok	Tällä tasolla ei ole kysymyksiä
 Tekrar edilecek kelime yok	Ei kerrattavaa
-Bu dil ikilisinde bu seviyede sorulacak kelime bulunamadı.	Tälle kieliparille ei ole sanoja tällä tasolla.
-Önce birkaç ders yapın; yanlış bildiğiniz kelimeler burada tekrar sorulur.	Tee ensin muutama oppitunti; väärin menneet sanat kysytään täällä uudelleen.
 %s öğreniyorum · ana dilim %s	Opiskelen: %s · oma kieli: %s
 Toplam: %ld XP · bugün %d XP	Yhteensä: %ld XP · tänään %d XP
 Seri: %d gün · en uzun %d gün	Putki: %d päivää · pisin %d päivää
 %d ders · %d cevap · %%%d doğru	%d oppituntia · %d vastausta · %d %% oikein
-%d kelime görüldü · %d öğrenildi · %d tekrar bekliyor	%d sanaa nähty · %d opittu · %d kerrattavana
-Seviyeler	Tasot
 Tekrar kutuları	Kertauslaatikot
-1: yeni kaçırılan · 5: iyice öğrenildi (aralık 1, 2, 4, 8, 21 gün)	1: juuri väärin · 5: hyvin opittu (1, 2, 4, 8, 21 päivän välein)
 Değiştir	Vaihda
-Seri: %d gün · %ld XP · bugün %d/%d	Putki: %d päivää · %ld XP · tänään %d/%d
 Kaynak: Vikisözlük (CC BY-SA), Tatoeba (CC BY), CEFR-J; seviyeler sıklığa göre	Lähteet: Wikisanakirja (CC BY-SA), Tatoeba (CC BY), CEFR-J; tasot yleisyyden mukaan
 Kelime listeleri yüklenemedi.	Sanalistoja ei voitu ladata.
-%d / %d öğrenildi	%d / %d opittu
 Görev Yöneticisi	Tehtävienhallinta
 Arka planda çalışan programlar	Taustalla käynnissä olevat ohjelmat
 Arka planda başka program yok.	Taustalla ei ole muita ohjelmia.
@@ -1186,3 +1175,72 @@ Sistem servisleri, SSH ve Kindle Apps hiçbir zaman durdurulmaz.	Järjestelmäpa
 Arka planda program var	Taustalla on ohjelma käynnissä
 Arkada açık program: %s. Ekranı ve dokunmayı kullanabilir.	Auki taustalla: %s. Se voi käyttää näyttöä ja kosketusta.
 Arkada açık programlar: %s. Ekranı ve dokunmayı kullanabilirler.	Auki taustalla: %s. Ne voivat käyttää näyttöä ja kosketusta.
+%d / %d kelime öğretildi · ✓ öğrenildi · • öğretildi · ★ biliyorum · ○ sırada	%d / %d sanaa opetettu · ✓ opittu · • opetettu · ★ osaan · ○ seuraavana
+%d kelime öğretildi · %d öğrenildi · %d tekrar bekliyor	%d sanaa opetettu · %d opittu · %d odottaa kertausta
+%d sorudan %d doğru · +%d XP	%d kysymystä, %d oikein · +%d XP
+%d yeni kelime öğrendin!	Opit %d uutta sanaa!
+%s anlamı	Merkitys (%s)
+%s tanımı	Määritelmä (%s)
+%s · kelime %d / %d	%s · sana %d / %d
+%s öğrenmeye nereden başlayalım?	Mistä aloitetaan? (%s)
+%s: %d / %d doğru	%s: %d / %d oikein
+0: yeni öğretildi · 1: yeni kaçırılan · 5: iyice öğrenildi (aralık 1, 2, 4, 8, 21 gün)	0: juuri opetettu · 1: juuri väärin · 5: hyvin opittu (välit 1, 2, 4, 8, 21 päivää)
+Anladım ▶	Selvä ▶
+BUGÜNÜN DERSİ	PÄIVÄN OPPITUNTI
+Başlangıç seviyen	Aloitustasosi
+Ben, sen, o	Minä, sinä, hän
+Bildiğin %d kelime "biliyorum" olarak işaretlendi; ara sıra tekrar sorulur.	Osaamasi %d sanaa merkittiin osatuiksi; ne palaavat silloin tällöin.
+Bilmiyorum	En tiedä
+Bilmiyorum, bana öğret	En osaa, opeta minulle
+Biraz biliyorum	Osaan vähän
+Bu dersin kelimeleri	Oppitunnin sanat
+Bu dil ikilisinin bütün kelimelerini gördün. Tekrarlarla devam et.	Olet nähnyt tämän kieliparin kaikki sanat. Jatka kertauksilla.
+Bu kelimeyi tekrar çalışalım	Kerrataan tämä sana
+Bugün: %d tekrar	Tänään: %d kertausta
+Bugün: %d yeni kelime	Tänään: %d uutta sanaa
+Bugün: %d yeni kelime + %d tekrar	Tänään: %d uutta sanaa + %d kertausta
+Bugünlük tekrar bitti. Yeni kelimeler için derse devam et.	Tämän päivän kertaukset on tehty. Jatka oppituntia oppiaksesi uusia sanoja.
+Bunu zaten biliyorum ★	Osaan jo ★
+Derse başla ▶	Aloita oppitunti ▶
+Derslere başla ▶	Aloita oppitunnit ▶
+Derste yeni kelime:	Uusia sanoja / oppitunti:
+Devam ▶	Jatka ▶
+Fiiller %d	Verbit %d
+Günlük şeyler	Arjen asiat
+Henüz öğretilmedi	Ei vielä opetettu
+Her derste önce yeni kelimeler öğretilir, sonra alıştırma yapılır.	Jokainen oppitunti opettaa ensin uudet sanat, sitten harjoitellaan.
+Hiç bilmiyorum	En osaa yhtään
+Küçük kelimeler %d	Pikkusanat %d
+Kısa seviye testi: her seviyeden 5 kelime	Lyhyt tasotesti: 5 sanaa joka tasolta
+Sayılar	Numerot
+Sayılar %d	Numerot %d
+Selamlaşma	Tervehdykset
+Seri: %d gün · %ld XP · bugün %d/%d XP	Putki: %d päivää · %ld XP · tänään %d/%d XP
+Seviye testi	Tasotesti
+Sonraki ders ▶	Seuraava oppitunti ▶
+Sözlük	Sanasto
+Sözlüğe bak	Avaa sanasto
+Sıfatlar %d	Adjektiivit %d
+Sıfırdan başla: selamlaşma, sayılar, temel fiiller…	Alusta: tervehdykset, numerot, perusverbit…
+TEKRAR BAKALIM	KATSOTAAN UUDELLEEN
+Tekrar zamanı	Kertauksen aika
+Temel fiiller	Perusverbit
+Temel sıfatlar	Perusadjektiivit
+Tüm kelimeler öğretildi	Kaikki sanat opetettu
+YENİ KELİME	UUSI SANA
+Yanlış — kartına bir daha bakalım	Väärin — katsotaan kortti uudelleen
+Yeni kelime %d / %d	Uusi sana %d / %d
+Yeni tekrar	Uusi kertaus
+dişil	feminiini
+eril	maskuliini
+nötr	neutri
+okunuşu: %s	ääntäminen: %s
+Önce kelimeler öğretilir, sonra yalnızca öğrendiklerin sorulur.	Ensin sanat opetetaan, sitten kysytään vain opittuja.
+Örnek cümle	Esimerkkilause
+Öğretildi · tekrar kutusu %d / %d	Opetettu · kertauslaatikko %d / %d
+Ünite %d: %s	Jakso %d: %s
+İng.	engl.
+İnsanlar	Ihmiset
+İsimler %d	Substantiivit %d
+↻ yanlış bilinenler bir sonraki derste yine sorulur	↻ väärin menneet sanat palaavat seuraavalla oppitunnilla
+★ Biliyorum olarak işaretli	★ Merkitty osatuksi
