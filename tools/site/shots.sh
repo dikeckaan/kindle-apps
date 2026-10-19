@@ -43,7 +43,7 @@ shot news news "none"
 shot currency currency "none"
 shot deprem deprem "none"
 shot deprem-list deprem "none tap 990 60 none"
-shot puzzle puzzle "none" _full
+shot puzzle chess "tap 536 625 none" _full # Satranç → Bulmacalar (no saved game)
 SKY_TIME=1792432800 shot sky sky "none" _full
 shot siir siir "none"
 shot ajanda ajanda "none" _full

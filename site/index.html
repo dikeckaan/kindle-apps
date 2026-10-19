@@ -420,8 +420,7 @@ const APPS = [
 	["sky", "Gökyüzü", "kultur", "İnternetsiz canlı yıldız haritası: takımyıldızlar, gezegenler, Ay.", "yeni"],
 	["siir", "Şiir Defteri", "kultur", "Yunus Emre'den Orhan Veli'ye 399 şiir; her gün bir şiir.", "yeni"],
 	["ebooks", "E-Kitap", "kultur", "Project Gutenberg'den telifsiz kitap arama ve indirme."],
-	["puzzle", "Satranç Bulmacası", "oyun", "Lichess'in günün bulmacası, ipucu ve seri.", "yeni"],
-	["chess", "Satranç", "oyun", "Stockfish'e karşı 6 zorluk ya da iki kişilik."],
+	["chess", "Satranç", "oyun", "Stockfish'e karşı 6 zorluk ya da iki kişilik; Lichess bulmacaları, ipucu ve seri."],
 	["wordle", "Kelime Oyunu", "oyun", "Türkçe Wordle: 5 harf, kök kelimeler, sınırsız."],
 	["sudoku", "Sudoku", "oyun", "Tek çözümlü bulmacalar, not kipi ve ipucu."],
 	["mines", "Mayın Tarlası", "oyun", "Üç zorluk ve bayrak kipi."],
@@ -460,7 +459,7 @@ document.querySelectorAll(".copy").forEach(b => b.addEventListener("click", () =
 }));
 
 /* the hero Kindle turns its pages like e-ink: a short full-refresh flash, then the next screen */
-const HERO = [["pano", "Masa Panosu"], ["sky", "Gökyüzü"], ["news", "Gazete"], ["siir", "Şiir Defteri"], ["deprem", "Son Depremler"], ["ajanda", "Ajanda"], ["puzzle", "Satranç Bulmacası"]];
+const HERO = [["pano", "Masa Panosu"], ["sky", "Gökyüzü"], ["news", "Gazete"], ["siir", "Şiir Defteri"], ["deprem", "Son Depremler"], ["ajanda", "Ajanda"], ["puzzle", "Satranç Bulmacaları"]];
 const scr = document.getElementById("hero-screen"), cap = document.getElementById("hero-cap");
 HERO.forEach(([id, name], i) => {
 	const img = new Image();

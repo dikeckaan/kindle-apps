@@ -3,8 +3,8 @@
   "id": "kindle-apps-chess",
   "name": "Satranç",
   "author": "Kaan Dikeç",
-  "description": "Stockfish'e karşı 6 seviye veya iki kişilik satranç",
-  "version": [2026, 10, 19],
+  "description": "Stockfish'e karşı 6 seviye veya iki kişilik satranç; Lichess bulmacaları (günün bulmacası, seri takibi)",
+  "version": [2026, 10, 20],
   "dependencies": [],
   "supported_platforms": ["kindlehf"]
 }

@@ -1,6 +1,6 @@
 #include <stdlib.h>
 #include "chess/chess_game.h"
-#include "puzzle/san.h"
+#include "chess/san.h"
 #include "t.h"
 
 static Board fen(const char *f)

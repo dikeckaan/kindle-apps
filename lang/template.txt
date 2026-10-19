@@ -89,13 +89,13 @@
 +1 sa	
 # apps/odak/main.c
 +5 dk	
-# apps/puzzle/puzzle.c
+# apps/chess/puzzle.c
 1 hamlede mat	
 # apps/sleep/sleep_opts.c
 1 saat	
 # apps/sleep/sleep_opts.c
 10 dakika	
-# apps/puzzle/puzzle.c
+# apps/chess/puzzle.c
 2 hamlede mat	
 # apps/sleep/sleep_opts.c
 2 saat	
@@ -105,17 +105,17 @@
 2048'e ulaştın.	
 # apps/deprem/main.c
 24 saat	
-# apps/puzzle/puzzle.c
+# apps/chess/puzzle.c
 3 hamlede mat	
 # apps/sleep/sleep_opts.c
 30 dakika	
-# apps/puzzle/puzzle.c
+# apps/chess/puzzle.c
 4 hamlede mat	
 # apps/sleep/sleep_opts.c
 5 dakika	
 # apps/wordle/main.c
 5 harf girin	
-# apps/puzzle/puzzle.c
+# apps/chess/puzzle.c
 5+ hamlede mat	
 # apps/chess/chess_game.c
 50 hamle kuralı — berabere	
@@ -147,7 +147,7 @@ Alındı: %s (KOReader ile açın)
 Alınıyor: %s	
 # apps/currency/main.c
 Alış	
-# apps/puzzle/puzzle.c
+# apps/chess/puzzle.c
 Anastasia matı	
 # apps/sky/skydata.c
 Andromeda	
@@ -157,7 +157,7 @@ Anneler Günü
 Antares	
 # apps/ebooks/main.c
 Ara	
-# apps/puzzle/puzzle.c
+# apps/chess/puzzle.c
 Ara hamle	
 # apps/sky/skydata.c
 Arabacı	
@@ -165,9 +165,9 @@ Arabacı
 Aralık	
 # apps/ebooks/main.c
 Aranıyor…	
-# apps/puzzle/puzzle.c
+# apps/chess/puzzle.c
 Arap matı	
-# apps/puzzle/puzzle.c
+# apps/chess/puzzle.c
 Araya girme	
 # apps/sky/skydata.c
 Arktürüs	
@@ -175,7 +175,7 @@ Arktürüs
 Aslan	
 # apps/chess/main.c
 At	
-# apps/puzzle/puzzle.c
+# apps/chess/puzzle.c
 At oyun sonu	
 # apps/ajanda/agenda.c
 Atatürk'ü Anma Günü	
@@ -199,11 +199,11 @@ Az bulutlu
 AÇIK	
 # apps/firewall/main.c
 Aç	
-# apps/puzzle/puzzle.c
+# apps/chess/puzzle.c
 Açarak saldırı	
-# apps/puzzle/puzzle.c
+# apps/chess/puzzle.c
 Açarak şah	
-# apps/puzzle/puzzle.c
+# apps/chess/puzzle.c
 Açmaz	
 # apps/weather/wx.c
 Açık	
@@ -211,11 +211,11 @@ Açık
 Açık (gelen bağlantılar engelli)	
 # apps/sysinfo/main.c
 Açık kalma süresi	
-# apps/puzzle/puzzle.c
+# apps/chess/puzzle.c
 Açıkta şah	
 # apps/firewall/main.c
 Açıldı. Gelen bağlantılar engelleniyor.	
-# apps/puzzle/puzzle.c
+# apps/chess/puzzle.c
 Açılış	
 # core/kui/trfmt.c
 Ağustos	
@@ -241,11 +241,11 @@ Bağlantı yok, kurlar alınamadı
 Bağlantı yok, veri alınamadı	
 # apps/sky/skydata.c
 Başak	
-# apps/puzzle/main.c
+# apps/chess/puzzle_ui.c
 Başka bulmaca	
 # apps/odak/main.c
 Başla	
-# apps/puzzle/main.c
+# apps/chess/puzzle_ui.c
 Baştan başla	
 # apps/sysinfo/main.c
 Bellek	
@@ -255,7 +255,7 @@ Berat Kandili
 Betelgöz	
 # apps/chess/main.c
 Beyaz	
-# apps/puzzle/main.c
+# apps/chess/puzzle_ui.c
 Beyaz oynar	
 # apps/news/news.c
 Bilim	
@@ -265,11 +265,11 @@ Bitir
 Biçim:	
 # apps/ebooks/main.c
 Biçim: %s	
-# apps/puzzle/puzzle.c
+# apps/chess/puzzle.c
 Boden matı	
 # apps/sky/skydata.c
 Boğa	
-# apps/puzzle/puzzle.c
+# apps/chess/puzzle.c
 Boğmaca mat	
 # apps/sky/main.c
 Bu gece görünen gezegenler: %s	
@@ -297,16 +297,18 @@ Bugün  en yüksek %s · en düşük %s · ☼ %s – %s
 Bugün %d oturum	
 # apps/odak/main.c
 Bugün %s · %d oturum · Seri %d gün	
-# apps/puzzle/main.c
+# apps/chess/puzzle_ui.c
 Bulmaca alınamadı	
-# apps/puzzle/main.c
+# apps/chess/puzzle_ui.c
 Bulmaca alınamadı.\nWi-Fi bağlantısını kontrol edin.	
-# apps/puzzle/main.c
+# apps/chess/puzzle_ui.c
 Bulmaca: lichess.org	
-# apps/puzzle/main.c
+# apps/chess/puzzle_ui.c
 Bulmaca: lichess.org · güncellendi %s	
-# apps/puzzle/main.c
+# apps/chess/puzzle_ui.c
 Bulmaca: lichess.org · çevrimdışı, son veri %s	
+# apps/chess/main.c
+Bulmacalar	
 # apps/sudoku/main.c
 Bulmacayı çözdünüz.	
 # apps/solitaire/main.c
@@ -343,7 +345,7 @@ D
 DURAKLATILDI	
 # apps/ebooks/main.c
 Daha fazla	
-# apps/puzzle/main.c
+# apps/chess/puzzle_ui.c
 Daha önce çözüldü · Seri: %d	
 # apps/ajanda/agenda.c
 Demokrasi ve Millî Birlik Günü	
@@ -391,13 +393,13 @@ Donan yağmur
 Donan çisenti	
 # apps/upload/main.c
 Dosya bekleniyor…	
-# apps/puzzle/main.c
+# apps/chess/puzzle_ui.c
 Doğru değil, tekrar dene	
-# apps/puzzle/main.c
+# apps/chess/puzzle_ui.c
 Doğru!	
-# apps/puzzle/main.c
+# apps/chess/puzzle_ui.c
 Doğru! Devam edin	
-# apps/puzzle/main.c
+# apps/chess/puzzle_ui.c
 Doğru! Çözüldü · Seri: %d	
 # apps/sky/main.c
 Doğuş %s · batış %s	
@@ -449,17 +451,17 @@ Etiketsiz
 Evet	
 # core/kui/trfmt.c
 Eylül	
-# apps/puzzle/puzzle.c
+# apps/chess/puzzle.c
 Ezici üstünlük	
-# apps/puzzle/puzzle.c
+# apps/chess/puzzle.c
 Eşitlik	
 # apps/siir/main.c
 Favoriler	
-# apps/puzzle/puzzle.c
+# apps/chess/puzzle.c
 Fedâ	
 # apps/chess/main.c
 Fil	
-# apps/puzzle/puzzle.c
+# apps/chess/puzzle.c
 Fil oyun sonu	
 # apps/sky/skydata.c
 Fomalhaut	
@@ -479,9 +481,9 @@ Gece · gün batımı %s, gün doğumu %s
 Geri al	
 # apps/sky/main.c
 Gezegen · parlaklık %s kadir	
-# apps/puzzle/puzzle.c
+# apps/chess/puzzle.c
 Geçerken alma	
-# apps/puzzle/main.c
+# apps/chess/puzzle_ui.c
 Geçmiş	
 # apps/currency/fx.c
 Gram altın	
@@ -513,7 +515,7 @@ Gündüz · Güneş batınca yıldızlar görünür (gün batımı %s)
 Gündüz · Güneş bugün batmıyor	
 # apps/pano/pano.c
 Güneş	
-# apps/puzzle/main.c
+# apps/chess/puzzle_ui.c
 Günün bulmacası	
 # apps/siir/main.c
 Günün şiiri	
@@ -535,7 +537,7 @@ Haber ve döviz: %d saatte bir
 Haberler alınamadı.\nWi-Fi bağlantısını kontrol edin.	
 # apps/ajanda/main.c
 Hafta %d · Gün %d	
-# apps/puzzle/main.c
+# apps/chess/puzzle_ui.c
 Hamlenizi yapın · Seri: %d	
 # apps/wordle/main.c
 Harika!	
@@ -547,7 +549,7 @@ Hata
 Hataları göster: Açık	
 # apps/sudoku/main.c
 Hataları göster: Kapalı	
-# apps/puzzle/main.c
+# apps/chess/puzzle_ui.c
 Hatalı çözüldü	
 # apps/weather/main.c
 Hava Durumu	
@@ -573,7 +575,7 @@ Henüz kitap indirilmedi.
 Henüz oturum yok	
 # apps/ssh/main.c
 Henüz parola yok	
-# apps/puzzle/main.c
+# apps/chess/puzzle_ui.c
 Henüz çözülen bulmaca yok.	
 # apps/chess/main.c
 Her hamlede tahtayı çevir	
@@ -619,11 +621,11 @@ Kaldırılamadı: %s
 Kaldırınca ayarlar ve kayıtlar (data/) korunur.	
 # apps/chess/main.c
 Kale	
-# apps/puzzle/puzzle.c
+# apps/chess/puzzle.c
 Kale oyun sonu	
 # apps/sky/skydata.c
 Kanatlı At	
-# apps/puzzle/puzzle.c
+# apps/chess/puzzle.c
 Kanca matı	
 # apps/ajanda/main.c
 Kandil	
@@ -631,7 +633,7 @@ Kandil
 Kapalı	
 # apps/sysinfo/main.c
 Kapalı (gelen bağlantılara açık)	
-# apps/puzzle/puzzle.c
+# apps/chess/puzzle.c
 Kapana kısılan taş	
 # apps/chess/main.c
 Kapat	
@@ -703,7 +705,7 @@ Kolay okuma: Kapalı
 Kolay okuma: bütün yazılar büyük, kalın ve siyah olur.\nBasit mod: menüde dört büyük düğme; panoda yalnızca saat, hava ve üç haber. Teknik uygulamalar gizlenir; bu ekrandan her zaman geri açılabilir.	
 # apps/deprem/main.c
 Koordinatlar	
-# apps/puzzle/puzzle.c
+# apps/chess/puzzle.c
 Korumasız taş	
 # apps/sky/skydata.c
 Kova	
@@ -743,17 +745,17 @@ Kuruluyor…
 Kutup Yıldızı	
 # apps/sky/skydata.c
 Kuğu	
-# apps/puzzle/puzzle.c
+# apps/chess/puzzle.c
 Köşe matı	
 # apps/news/news.c
 Kültür	
-# apps/puzzle/puzzle.c
+# apps/chess/puzzle.c
 Küçük terfi	
 # apps/sky/skydata.c
 Küçükayı	
 # apps/sky/skydata.c
 Küçükköpek	
-# apps/puzzle/puzzle.c
+# apps/chess/puzzle.c
 Kırlangıç matı	
 # apps/deprem/main.c
 Liste	
@@ -767,7 +769,7 @@ Mart
 Masa Panosu	
 # apps/clock/pkg/app.ini
 Masa Saati	
-# apps/puzzle/puzzle.c
+# apps/chess/puzzle.c
 Mat	
 # apps/mines/main.c
 Mayın Tarlası	
@@ -853,9 +855,9 @@ Oturum bitti
 Oynanan	
 # apps/chess/main.c
 Oyun bitti	
-# apps/puzzle/puzzle.c
+# apps/chess/puzzle.c
 Oyun ortası	
-# apps/puzzle/puzzle.c
+# apps/chess/puzzle.c
 Oyun sonu	
 # apps/sky/skydata.c
 Oğlak	
@@ -905,7 +907,7 @@ Pil ve ekran
 Pil ve ekran…	
 # apps/chess/main.c
 Piyon hangi taşa dönüşsün?	
-# apps/puzzle/puzzle.c
+# apps/chess/puzzle.c
 Piyon oyun sonu	
 # apps/sky/skydata.c
 Polluks	
@@ -915,7 +917,7 @@ Pomodoro · 25 / 5 dk (4. mola 15)
 Project Gutenberg'deki telifsiz kitaplar	
 # apps/sky/skydata.c
 Prokyon	
-# apps/puzzle/main.c
+# apps/chess/puzzle_ui.c
 Puan %d	
 # core/kui/trfmt.c
 Pzt	
@@ -949,9 +951,9 @@ Renginiz
 Resmi tatil	
 # apps/sky/skydata.c
 Rigel	
-# apps/puzzle/puzzle.c
+# apps/chess/puzzle.c
 Rok	
-# apps/puzzle/puzzle.c
+# apps/chess/puzzle.c
 Röntgen saldırısı	
 # apps/weather/main.c
 Rüzgâr %ld km/s %s	
@@ -969,19 +971,19 @@ Safer
 Sal	
 # core/kui/trfmt.c
 Salı	
-# apps/puzzle/puzzle.c
+# apps/chess/puzzle.c
 Saptırma	
 # apps/chess/main.c
 Satranç	
-# apps/puzzle/main.c
+# apps/chess/puzzle_ui.c
 Satranç Bulmacası	
 # apps/chess/main.c
 Satranç motoru çalışmadı.	
 # apps/currency/main.c
 Satış	
-# apps/puzzle/puzzle.c
+# apps/chess/puzzle.c
 Savunanı alma	
-# apps/puzzle/puzzle.c
+# apps/chess/puzzle.c
 Savunma hamlesi	
 # apps/deprem/main.c
 Sayfa %d/%d	
@@ -991,9 +993,9 @@ Sağanak
 Sağlık	
 # apps/odak/main.c
 Seri	
-# apps/puzzle/main.c
+# apps/chess/puzzle_ui.c
 Seri: %d · En iyi seri: %d	
-# apps/puzzle/puzzle.c
+# apps/chess/puzzle.c
 Sessiz hamle	
 # apps/ajanda/main.c
 Sil	
@@ -1005,7 +1007,7 @@ Sisli
 Sistem Bilgisi	
 # apps/chess/main.c
 Siyah	
-# apps/puzzle/main.c
+# apps/chess/puzzle_ui.c
 Siyah oynar	
 # apps/game2048/main.c
 Skor	
@@ -1025,13 +1027,13 @@ Son dakika
 Son dakika haberleri	
 # apps/pano/pano.c
 Son dördün	
-# apps/puzzle/puzzle.c
+# apps/chess/puzzle.c
 Son sıra matı	
 # core/hub/main.c
 Sonraki	
 # apps/odak/main.c
 Sonraki aşama kendiliğinden başlasın	
-# apps/puzzle/main.c
+# apps/chess/puzzle_ui.c
 Sonraki hamle	
 # apps/weather/main.c
 Sonuç bulunamadı	
@@ -1161,13 +1163,13 @@ Vazgeç
 Vega	
 # apps/chess/main.c
 Vezir	
-# apps/puzzle/puzzle.c
+# apps/chess/puzzle.c
 Vezir kanadı saldırısı	
-# apps/puzzle/puzzle.c
+# apps/chess/puzzle.c
 Vezir oyun sonu	
-# apps/puzzle/puzzle.c
+# apps/chess/puzzle.c
 Vezir ve kale oyun sonu	
-# apps/puzzle/main.c
+# apps/chess/puzzle_ui.c
 Wi-Fi bağlantısını kontrol edin.	
 # apps/upload/main.c
 Wi-Fi ile Yükle	
@@ -1215,15 +1217,15 @@ Yeni oyun
 Yeniden dene	
 # core/hub/upd_ui.c
 Yeniden kur	
-# apps/currency/main.c
+# apps/chess/puzzle_ui.c
 Yenile	
 # apps/chess/chess_game.c
 Yetersiz taş — berabere	
-# apps/puzzle/puzzle.c
+# apps/chess/puzzle.c
 Yol açma	
 # apps/weather/wx.c
 Yoğun kar	
-# apps/currency/main.c
+# apps/chess/puzzle_ui.c
 Yükleniyor…	
 # apps/sky/main.c
 Yükseklik %d° · yön %s (%d°)	
@@ -1249,7 +1251,7 @@ Zor
 Zorluk	
 # apps/sudoku/main.c
 Zorluk seçin	
-# apps/puzzle/puzzle.c
+# apps/chess/puzzle.c
 Zugzwang	
 # apps/deprem/deprem.c
 az önce	
@@ -1263,7 +1265,7 @@ daha eski
 derinlik %s km	
 # apps/odak/main.c
 dk	
-# apps/puzzle/puzzle.c
+# apps/chess/puzzle.c
 f2/f7 saldırısı	
 # apps/news/main.c
 güncellendi %02d:%02d	
@@ -1281,11 +1283,11 @@ yarım gün
 Çar	
 # core/kui/trfmt.c
 Çarşamba	
-# apps/puzzle/puzzle.c
+# apps/chess/puzzle.c
 Çatal	
 # apps/sysinfo/main.c
 Çekirdek	
-# apps/puzzle/puzzle.c
+# apps/chess/puzzle.c
 Çekme	
 # apps/currency/main.c
 Çevirici	
@@ -1297,9 +1299,9 @@ yarım gün
 Çevrimdışı — son veri %s · Open-Meteo	
 # apps/currency/fx.c
 Çeyrek altın	
-# apps/puzzle/puzzle.c
+# apps/chess/puzzle.c
 Çifte fil matı	
-# apps/puzzle/puzzle.c
+# apps/chess/puzzle.c
 Çifte şah	
 # apps/weather/wx.c
 Çisenti	
@@ -1311,19 +1313,19 @@ yarım gün
 Çok fazla yanlış PIN denendi.\nGüvenlik için yükleme durduruldu.	
 # apps/wordle/main.c
 Çok iyi!	
-# apps/puzzle/main.c
+# apps/chess/puzzle_ui.c
 Çözüldü	
-# apps/puzzle/main.c
+# apps/chess/puzzle_ui.c
 Çözüldü (hatalı) · Seri: %d	
-# apps/puzzle/main.c
+# apps/chess/puzzle_ui.c
 Çözülen: %d / %d	
-# apps/puzzle/main.c
+# apps/chess/puzzle_ui.c
 Çözüm gösterildi	
-# apps/puzzle/main.c
+# apps/chess/puzzle_ui.c
 Çözüm: %s (%d/%d)	
-# apps/puzzle/main.c
+# apps/chess/puzzle_ui.c
 Çözüm: %s · bitti	
-# apps/puzzle/main.c
+# apps/chess/puzzle_ui.c
 Çözümü göster	
 # apps/mines/main.c
 Çıkış	
@@ -1345,7 +1347,7 @@ yarım gün
 Öğle	
 # apps/ajanda/agenda.c
 Öğretmenler Günü	
-# apps/puzzle/puzzle.c
+# apps/chess/puzzle.c
 Üstünlük	
 # apps/solitaire/main.c
 Üç kart çek	
@@ -1361,7 +1363,7 @@ yarım gün
 İkindi	
 # apps/sky/skydata.c
 İkizler	
-# apps/puzzle/puzzle.c
+# apps/chess/puzzle.c
 İlerlemiş piyon	
 # apps/pano/pano.c
 İlk dördün	
@@ -1377,9 +1379,9 @@ yarım gün
 İndiriliyor…	
 # apps/ebooks/main.c
 İndiriliyor…\nGutenberg yavaş olabilir, lütfen bekleyin.	
-# apps/puzzle/main.c
+# apps/chess/puzzle_ui.c
 İpucu	
-# apps/puzzle/main.c
+# apps/chess/puzzle_ui.c
 İpucu: işaretli taşı oynayın	
 # apps/odak/main.c
 İstatistik	
@@ -1391,7 +1393,7 @@ yarım gün
 İşlem başarısız oldu.	
 # apps/ajanda/agenda.c
 Şaban	
-# apps/puzzle/puzzle.c
+# apps/chess/puzzle.c
 Şah kanadı saldırısı	
 # apps/chess/chess_game.c
 Şah mat — Beyaz kazandı	
@@ -1425,7 +1427,7 @@ yarım gün
 Şiirler yüklenemedi.	
 # apps/sky/main.c
 Şimdi	
-# apps/puzzle/puzzle.c
+# apps/chess/puzzle.c
 Şiş	
 # apps/pano/pano.c
 Şişkin ay (büyüyen)	

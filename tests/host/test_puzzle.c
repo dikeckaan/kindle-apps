@@ -1,6 +1,6 @@
 #include <stdlib.h>
 #include "chess/chess_game.h"
-#include "puzzle/puzzle.h"
+#include "chess/puzzle.h"
 #include "t.h"
 
 static char *slurp(const char *path)

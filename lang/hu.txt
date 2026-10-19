@@ -740,3 +740,4 @@ Kolay okuma: Kapalı	Könnyű olvasás: Ki
 Basit mod: Açık	Egyszerű mód: Be
 Basit mod: Kapalı	Egyszerű mód: Ki
 Kolay okuma: bütün yazılar büyük, kalın ve siyah olur.\nBasit mod: menüde dört büyük düğme; panoda yalnızca saat, hava ve üç haber. Teknik uygulamalar gizlenir; bu ekrandan her zaman geri açılabilir.	Könnyű olvasás: minden szöveg nagy, félkövér és fekete lesz.\nEgyszerű mód: négy nagy gomb a menüben; az áttekintő csak az órát, az időjárást és három hírt mutatja. A technikai alkalmazások elrejtődnek; ezen a képernyőn bármikor visszakapcsolhatók.
+Bulmacalar	Feladványok

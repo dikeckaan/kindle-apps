@@ -1,16 +1,18 @@
-/* Satranç Bulmacası: Lichess's daily puzzle (and random ones) on e-ink. The day's puzzle and every puzzle opened are
- * cached, so they work offline; solved puzzles and the streak are kept in a history. Each square remembers what was
- * last drawn on it: a move redraws only the squares whose look changed (partial refresh). Puzzles: lichess.org, CC0. */
+/* Satranç Bulmacası (Satranç → Menü → Bulmacalar): Lichess's daily puzzle (and random ones) on e-ink. The day's puzzle
+ * and every puzzle opened are cached, so they work offline; solved puzzles and the streak are kept in a history. Each
+ * square remembers what was last drawn on it: a move redraws only the squares whose look changed (partial refresh).
+ * Puzzles: lichess.org, CC0. Until 2026-10 this was its own app; its data moves to data/chess/puzzle on first use. */
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <sys/stat.h>
 #include <time.h>
 #include <unistd.h>
-#include "chess/chess_rules.h"
+#include "chess_rules.h"
 #include "kui.h"
 #include "net/net.h"
 #include "puzzle.h"
+#include "puzzle_ui.h"
 #include "san.h"
 
 #define SQ 120
@@ -37,12 +39,24 @@ static int n_hist;
 
 /* ---- files ---- */
 
+/* the standalone app kept its files in data/puzzle: move them once, unless data/chess/puzzle already exists */
+static void migrate_old_data(void)
+{
+	const char *root = getenv("KUI_ROOT");
+	char old[300], dir[300];
+	struct stat st;
+	snprintf(old, sizeof old, "%s/data/puzzle", root && *root ? root : "/mnt/us/kindle-apps");
+	snprintf(dir, sizeof dir, "%s/puzzle", kui_data_dir("chess"));
+	if (stat(old, &st) != 0 || !S_ISDIR(st.st_mode) || stat(dir, &st) == 0) return;
+	rename(old, dir);
+}
+
 static const char *data_path(const char *name)
 {
 	static char p[2][300];
 	static int k;
 	char *o = p[k++ & 1];
-	snprintf(o, sizeof p[0], "%s/%s", kui_data_dir("puzzle"), name);
+	snprintf(o, sizeof p[0], "%s/%s", kui_data_dir("chess/puzzle"), name);
 	return o;
 }
 
@@ -562,7 +576,7 @@ static int history_screen(void)
 
 /* ---- main ---- */
 
-/* 0 = a puzzle is on screen, -1 = quit */
+/* 0 = a puzzle is on screen, -1 = ✕ (back to chess), -2 = quit */
 static int first_puzzle(void)
 {
 	for (;;) {
@@ -571,7 +585,7 @@ static int first_puzzle(void)
 		message_screen(T("Bulmaca alınamadı.\nWi-Fi bağlantısını kontrol edin."), 1, &retry);
 		for (int again = 0; !again;) {
 			KuiEvent e = kui_next_event(-1);
-			if (e.type == KUI_EV_QUIT) return -1;
+			if (e.type == KUI_EV_QUIT) return -2;
 			if (e.type != KUI_EV_TAP) continue;
 			if (kui_topbar_hit(kui_width(), 0, e.x, e.y) == KUI_BTN_EXIT) return -1;
 			if (kui_buttons_hit(&retry, 1, e.x, e.y)) again = 1;
@@ -607,15 +621,14 @@ static int menu(void)
 	return 0;
 }
 
-int main(void)
+int puzzle_run(void)
 {
-	if (kui_init("puzzle") != 0) return 1;
+	migrate_old_data();
 	load_history();
-	if (first_puzzle() != 0) {
-		kui_quit();
-		return 0;
-	}
-	for (int quit = 0; !quit;) {
+	int f = first_puzzle();
+	if (f != 0) return f == -2;
+	int quit = 0;
+	for (int back = 0; !quit && !back;) {
 		KuiEvent e = kui_next_event(pending ? PAUSE_MS : -1);
 		if (pending && e.type != KUI_EV_QUIT) run_pending(); /* the pause is over, or a tap ends it at once */
 		switch (e.type) {
@@ -624,7 +637,7 @@ int main(void)
 		case KUI_EV_TAP: {
 			int t = kui_topbar_hit(kui_width(), 1, e.x, e.y);
 			if (t == KUI_BTN_EXIT) {
-				quit = 1;
+				back = 1;
 				break;
 			}
 			if (t == KUI_BTN_MENU) {
@@ -656,6 +669,5 @@ int main(void)
 		default: break;
 		}
 	}
-	kui_quit();
-	return 0;
+	return quit;
 }
