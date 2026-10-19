@@ -1014,3 +1014,88 @@ Yukarıdan aşağıya	По вертикали
 harf	букв
 Çözülen	Решено
 Şimdilik doğru, %d boş kare	Пока верно, пустых клеток: %d
+Süre doldu!	Время вышло!
+Kapatmak için dokunun	Нажмите, чтобы закрыть
+Çorba	Суп
+Ana yemek	Основное блюдо
+Tatlı	Десерт
+Salata, meze	Салат, мезе
+Hamur işi	Выпечка
+Kahvaltılık	Завтрак
+İçecek	Напиток
+Vegan	Веганское
+Vejetaryen	Вегетарианское
+İngilizce	Английский
+%d/%d malzeme	%d/%d ингредиентов
+İngilizce tarif	Английский рецепт
+Malzemeler (%d kişilik)	Ингредиенты (%d порц.)
+Malzemeler (%d kişilik, tahmini)	Ингредиенты (%d порц., примерно)
+Hazırlanışı	Приготовление
+Kaynak: %s · %s · %s	Источник: %s · %s · %s
+ — Wikibooks katkıcılarının metni, biçimi değiştirildi; aynı lisansla paylaşılır.	 — текст участников Wikibooks, оформление изменено; распространяется по той же лицензии.
+Kişi:	Порции:
+Pişirme modu ▶	Режим готовки ▶
+Tarif	Рецепт
+Hazırlık · %d kişilik	Подготовка · %d порц.
+Adım %d / %d	Шаг %d / %d
+◀ Önceki	◀ Назад
+Pişirme modu	Режим готовки
+Süreler	Таймеры
+%d sn	%d с
+Zamanlayıcı kur: %s	Таймер: %s
+Bitti ✓	Готово ✓
+Adım %d · %s	Шаг %d · %s
+Zamanlayıcılar	Таймеры
+En çok 6 zamanlayıcı kurulabilir.	Можно установить не больше 6 таймеров.
+Ad ver	Назвать
+Zamanlayıcı %d	Таймер %d
+Kurulu zamanlayıcı yok.	Таймеров нет.
+Yeni: %s	Новый: %s
+Süre dolunca ekrandaki kutu yanıp söner (Kindle'da hoparlör yok). Zamanlayıcılar Tarifler açıkken çalışır.	Когда время выходит, рамка на экране мигает (у Kindle нет динамика). Таймеры работают, пока открыты Рецепты.
+Zamanlayıcının adı	Название таймера
+Türkçe	Турецкий
+ · çevrimdışı kayıtlı	 · сохранён офлайн
+Çevrimiçi aranıyor…	Поиск в сети…
+“%s” · %d sonuç · seçilen tarif çevrimdışı için saklanır	«%s» · результатов: %d · выбранный рецепт сохранится офлайн
+Çevrimiçi sonuçlar	Результаты из сети
+Sonuç yok ya da bağlantı kurulamadı.\nWi-Fi bağlantısını kontrol edin.	Нет результатов или нет соединения.\nПроверьте подключение Wi-Fi.
+Tarif açılamadı	Не удалось открыть рецепт
+Bu sayfada malzeme listesi bulunamadı ya da bağlantı kesildi.	На этой странице нет списка ингредиентов, или соединение прервалось.
+Elinizdeki malzemeler (ör. domates, yumurta)	Ваши продукты (напр. помидор, яйцо)
+Tarif ara (ad ya da ülke)	Поиск рецепта (название или страна)
+“%s” · %d tarif	«%s» · рецептов: %d
+Elimde ne var?	Что у меня есть?
+Arama	Поиск
+Çevrimiçi ara	Искать в сети
+Çevrimdışı tariflerde bulunamadı.\nAşağıdan çevrimiçi arayabilirsiniz.	В офлайн-рецептах не найдено.\nНиже можно поискать в сети.
+%d tarif	Рецептов: %d
+%d tarif · %d Türkçe, %d İngilizce	Рецептов: %d · на турецком %d, на английском %d
+Dünya mutfağı	Мировая кухня
+Ülkeler, tarif sayısına göre	Страны по числу рецептов
+Anahtar gir	Ввести ключ
+Anahtarı sil	Удалить ключ
+Çevrimdışı: %d tarif (%d Türkçe, %d İngilizce) · kaydedilen: %d	Офлайн: рецептов %d (на турецком %d, на английском %d) · сохранено: %d
+Vikikitap Yemek Kitabı (tr.wikibooks.org) ve Wikibooks Cookbook (en.wikibooks.org): Wikibooks katkıcılarının metinleri, CC BY-SA 4.0 lisansıyla. Biçim sadeleştirildi; her tarifin altında sayfa adresi var. İnternette de bu iki kaynakta aranır.	Vikikitap Yemek Kitabı (кулинарная книга турецкого Wikibooks, tr.wikibooks.org) и Wikibooks Cookbook (en.wikibooks.org): тексты участников Wikibooks по лицензии CC BY-SA 4.0. Оформление упрощено; под каждым рецептом указан адрес страницы. Поиск в сети тоже идёт по этим двум источникам.
+TheMealDB (themealdb.com) isteğe bağlıdır: ücretsiz deneme anahtarı "1" yalnızca geliştirme ve eğitim içindir, herkese açık uygulamalar destekçi anahtarı ister. Kendi anahtarınızı girerseniz çevrimiçi aramada TheMealDB de kullanılır (veri ve görseller: TheMealDB).	TheMealDB (themealdb.com) — по желанию: бесплатный тестовый ключ "1" предназначен только для разработки и обучения; публичным приложениям нужен ключ спонсора. Если ввести свой ключ, поиск в сети будет использовать и TheMealDB (данные и изображения: TheMealDB).
+Miktarlar kişi sayısına göre yaklaşık ölçeklenir; vegan/vejetaryen etiketleri malzemelerden çıkarılır, alerjiler için tarifi kontrol edin.	Количества пересчитываются по числу порций приблизительно; метки «веганское/вегетарианское» выводятся из ингредиентов, при аллергии проверяйте рецепт.
+TheMealDB anahtarı: %s	Ключ TheMealDB: %s
+yok	нет
+TheMealDB API anahtarı	API-ключ TheMealDB
+Türk mutfağı	Турецкая кухня
+Çorbalar	Супы
+Ana yemekler	Основные блюда
+Tatlılar	Десерты
+Salata ve mezeler	Салаты и мезе
+Hamur işleri	Выпечка и хлеб
+Tarifler	Рецепты
+Tarif ara	Поиск рецепта
+%d ülke	Стран: %d
+★ Favoriler (%d)	★ Избранное (%d)
+Son bakılanlar (%d)	Недавние (%d)
+Zamanlayıcılar (%d)	Таймеры (%d)
+%d tarif çevrimdışı (%d Türkçe) · Vikikitap, Wikibooks · CC BY-SA 4.0	Рецептов офлайн: %d (на турецком %d) · Vikikitap, Wikibooks · CC BY-SA 4.0
+Kaynaklar ve ayarlar	Источники и настройки
+Henüz favori tarif yok.\nBir tarifte ☆ düğmesine dokunun.	Избранных рецептов пока нет.\nНажмите ☆ в рецепте.
+Son bakılanlar	Недавние
+Henüz tarif açılmadı.	Вы ещё не открывали рецепты.
+Tarifler yüklenemedi.	Не удалось загрузить рецепты.

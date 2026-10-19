@@ -1014,3 +1014,88 @@ Yukarıdan aşağıya	Lodret
 harf	bogstaver
 Çözülen	Løst
 Şimdilik doğru, %d boş kare	Rigtigt indtil videre, %d tomme felter
+Süre doldu!	Tiden er gået!
+Kapatmak için dokunun	Tryk for at lukke
+Çorba	Suppe
+Ana yemek	Hovedret
+Tatlı	Dessert
+Salata, meze	Salat, meze
+Hamur işi	Bagværk
+Kahvaltılık	Morgenmad
+İçecek	Drikke
+Vegan	Vegansk
+Vejetaryen	Vegetarisk
+İngilizce	Engelsk
+%d/%d malzeme	%d/%d ingredienser
+İngilizce tarif	Engelsk opskrift
+Malzemeler (%d kişilik)	Ingredienser (%d personer)
+Malzemeler (%d kişilik, tahmini)	Ingredienser (%d personer, anslået)
+Hazırlanışı	Fremgangsmåde
+Kaynak: %s · %s · %s	Kilde: %s · %s · %s
+ — Wikibooks katkıcılarının metni, biçimi değiştirildi; aynı lisansla paylaşılır.	 — tekst af Wikibooks-bidragydere, ændret formatering; delt under samme licens.
+Kişi:	Personer:
+Pişirme modu ▶	Madlavningstilstand ▶
+Tarif	Opskrift
+Hazırlık · %d kişilik	Forberedelse · %d personer
+Adım %d / %d	Trin %d / %d
+◀ Önceki	◀ Forrige
+Pişirme modu	Madlavningstilstand
+Süreler	Timere
+%d sn	%d s
+Zamanlayıcı kur: %s	Sæt timer: %s
+Bitti ✓	Færdig ✓
+Adım %d · %s	Trin %d · %s
+Zamanlayıcılar	Timere
+En çok 6 zamanlayıcı kurulabilir.	Højst 6 timere kan sættes.
+Ad ver	Giv navn
+Zamanlayıcı %d	Timer %d
+Kurulu zamanlayıcı yok.	Ingen timere sat.
+Yeni: %s	Ny: %s
+Süre dolunca ekrandaki kutu yanıp söner (Kindle'da hoparlör yok). Zamanlayıcılar Tarifler açıkken çalışır.	Når tiden er gået, blinker feltet på skærmen (Kindle har ingen højttaler). Timerne kører, mens Opskrifter er åben.
+Zamanlayıcının adı	Timerens navn
+Türkçe	Tyrkisk
+ · çevrimdışı kayıtlı	 · gemt offline
+Çevrimiçi aranıyor…	Søger online…
+“%s” · %d sonuç · seçilen tarif çevrimdışı için saklanır	“%s” · %d resultater · den valgte opskrift gemmes offline
+Çevrimiçi sonuçlar	Onlineresultater
+Sonuç yok ya da bağlantı kurulamadı.\nWi-Fi bağlantısını kontrol edin.	Ingen resultater eller ingen forbindelse.\nTjek Wi-Fi-forbindelsen.
+Tarif açılamadı	Opskriften kunne ikke åbnes
+Bu sayfada malzeme listesi bulunamadı ya da bağlantı kesildi.	Der blev ikke fundet en ingrediensliste på siden, eller forbindelsen blev afbrudt.
+Elinizdeki malzemeler (ör. domates, yumurta)	Ingredienser du har (f.eks. tomat, æg)
+Tarif ara (ad ya da ülke)	Søg opskrift (navn eller land)
+“%s” · %d tarif	“%s” · %d opskrifter
+Elimde ne var?	Hvad har jeg?
+Arama	Søgning
+Çevrimiçi ara	Søg online
+Çevrimdışı tariflerde bulunamadı.\nAşağıdan çevrimiçi arayabilirsiniz.	Ikke fundet i offlineopskrifterne.\nDu kan søge online nedenfor.
+%d tarif	%d opskrifter
+%d tarif · %d Türkçe, %d İngilizce	%d opskrifter · %d tyrkiske, %d engelske
+Dünya mutfağı	Verdens køkken
+Ülkeler, tarif sayısına göre	Lande efter antal opskrifter
+Anahtar gir	Indtast nøgle
+Anahtarı sil	Slet nøgle
+Çevrimdışı: %d tarif (%d Türkçe, %d İngilizce) · kaydedilen: %d	Offline: %d opskrifter (%d tyrkiske, %d engelske) · gemt: %d
+Vikikitap Yemek Kitabı (tr.wikibooks.org) ve Wikibooks Cookbook (en.wikibooks.org): Wikibooks katkıcılarının metinleri, CC BY-SA 4.0 lisansıyla. Biçim sadeleştirildi; her tarifin altında sayfa adresi var. İnternette de bu iki kaynakta aranır.	Vikikitap Yemek Kitabı (tyrkisk Wikibooks-kogebog, tr.wikibooks.org) og Wikibooks Cookbook (en.wikibooks.org): tekster af Wikibooks-bidragydere under CC BY-SA 4.0. Formateringen er forenklet; under hver opskrift står sidens adresse. Onlinesøgning bruger også disse to kilder.
+TheMealDB (themealdb.com) isteğe bağlıdır: ücretsiz deneme anahtarı "1" yalnızca geliştirme ve eğitim içindir, herkese açık uygulamalar destekçi anahtarı ister. Kendi anahtarınızı girerseniz çevrimiçi aramada TheMealDB de kullanılır (veri ve görseller: TheMealDB).	TheMealDB (themealdb.com) er valgfrit: den gratis testnøgle "1" er kun til udvikling og undervisning; offentlige apps kræver en supporternøgle. Hvis du indtaster din egen nøgle, bruger onlinesøgning også TheMealDB (data og billeder: TheMealDB).
+Miktarlar kişi sayısına göre yaklaşık ölçeklenir; vegan/vejetaryen etiketleri malzemelerden çıkarılır, alerjiler için tarifi kontrol edin.	Mængderne skaleres omtrentligt efter antal personer; vegansk/vegetarisk udledes af ingredienserne, tjek opskriften ved allergier.
+TheMealDB anahtarı: %s	TheMealDB-nøgle: %s
+yok	ingen
+TheMealDB API anahtarı	TheMealDB API-nøgle
+Türk mutfağı	Tyrkisk køkken
+Çorbalar	Supper
+Ana yemekler	Hovedretter
+Tatlılar	Desserter
+Salata ve mezeler	Salater og meze
+Hamur işleri	Bagværk og brød
+Tarifler	Opskrifter
+Tarif ara	Søg opskrift
+%d ülke	%d lande
+★ Favoriler (%d)	★ Favoritter (%d)
+Son bakılanlar (%d)	Senest set (%d)
+Zamanlayıcılar (%d)	Timere (%d)
+%d tarif çevrimdışı (%d Türkçe) · Vikikitap, Wikibooks · CC BY-SA 4.0	%d opskrifter offline (%d tyrkiske) · Vikikitap, Wikibooks · CC BY-SA 4.0
+Kaynaklar ve ayarlar	Kilder og indstillinger
+Henüz favori tarif yok.\nBir tarifte ☆ düğmesine dokunun.	Ingen favoritopskrifter endnu.\nTryk på ☆ i en opskrift.
+Son bakılanlar	Senest set
+Henüz tarif açılmadı.	Ingen opskrifter åbnet endnu.
+Tarifler yüklenemedi.	Opskrifterne kunne ikke indlæses.

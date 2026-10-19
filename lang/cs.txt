@@ -1014,3 +1014,88 @@ Yukarıdan aşağıya	Svisle
 harf	písmen
 Çözülen	Vyřešeno
 Şimdilik doğru, %d boş kare	Zatím správně, prázdná pole: %d
+Süre doldu!	Čas vypršel!
+Kapatmak için dokunun	Klepnutím zavřete
+Çorba	Polévka
+Ana yemek	Hlavní jídlo
+Tatlı	Dezert
+Salata, meze	Salát, meze
+Hamur işi	Pečivo
+Kahvaltılık	Snídaně
+İçecek	Nápoj
+Vegan	Veganské
+Vejetaryen	Vegetariánské
+İngilizce	Angličtina
+%d/%d malzeme	%d/%d surovin
+İngilizce tarif	Anglický recept
+Malzemeler (%d kişilik)	Suroviny (%d porcí)
+Malzemeler (%d kişilik, tahmini)	Suroviny (%d porcí, odhad)
+Hazırlanışı	Postup
+Kaynak: %s · %s · %s	Zdroj: %s · %s · %s
+ — Wikibooks katkıcılarının metni, biçimi değiştirildi; aynı lisansla paylaşılır.	 — text přispěvatelů Wikibooks, upravené formátování; sdíleno pod stejnou licencí.
+Kişi:	Porce:
+Pişirme modu ▶	Režim vaření ▶
+Tarif	Recept
+Hazırlık · %d kişilik	Příprava · %d porcí
+Adım %d / %d	Krok %d / %d
+◀ Önceki	◀ Předchozí
+Pişirme modu	Režim vaření
+Süreler	Časovače
+%d sn	%d s
+Zamanlayıcı kur: %s	Nastavit časovač: %s
+Bitti ✓	Hotovo ✓
+Adım %d · %s	Krok %d · %s
+Zamanlayıcılar	Časovače
+En çok 6 zamanlayıcı kurulabilir.	Nejvýše 6 časovačů.
+Ad ver	Pojmenovat
+Zamanlayıcı %d	Časovač %d
+Kurulu zamanlayıcı yok.	Žádné časovače.
+Yeni: %s	Nový: %s
+Süre dolunca ekrandaki kutu yanıp söner (Kindle'da hoparlör yok). Zamanlayıcılar Tarifler açıkken çalışır.	Po vypršení času bliká rámeček na obrazovce (Kindle nemá reproduktor). Časovače běží, dokud jsou Recepty otevřené.
+Zamanlayıcının adı	Název časovače
+Türkçe	Turečtina
+ · çevrimdışı kayıtlı	 · uloženo offline
+Çevrimiçi aranıyor…	Hledání online…
+“%s” · %d sonuç · seçilen tarif çevrimdışı için saklanır	„%s“ · %d výsledků · vybraný recept se uloží offline
+Çevrimiçi sonuçlar	Výsledky online
+Sonuç yok ya da bağlantı kurulamadı.\nWi-Fi bağlantısını kontrol edin.	Žádné výsledky nebo bez připojení.\nZkontrolujte připojení Wi-Fi.
+Tarif açılamadı	Recept nelze otevřít
+Bu sayfada malzeme listesi bulunamadı ya da bağlantı kesildi.	Na této stránce nebyl nalezen seznam surovin nebo se přerušilo připojení.
+Elinizdeki malzemeler (ör. domates, yumurta)	Suroviny, které máte (např. rajče, vejce)
+Tarif ara (ad ya da ülke)	Hledat recept (název nebo země)
+“%s” · %d tarif	„%s“ · %d receptů
+Elimde ne var?	Co mám doma?
+Arama	Hledání
+Çevrimiçi ara	Hledat online
+Çevrimdışı tariflerde bulunamadı.\nAşağıdan çevrimiçi arayabilirsiniz.	V offline receptech nenalezeno.\nNíže můžete hledat online.
+%d tarif	%d receptů
+%d tarif · %d Türkçe, %d İngilizce	%d receptů · %d turecky, %d anglicky
+Dünya mutfağı	Světová kuchyně
+Ülkeler, tarif sayısına göre	Země podle počtu receptů
+Anahtar gir	Zadat klíč
+Anahtarı sil	Smazat klíč
+Çevrimdışı: %d tarif (%d Türkçe, %d İngilizce) · kaydedilen: %d	Offline: %d receptů (%d turecky, %d anglicky) · uloženo: %d
+Vikikitap Yemek Kitabı (tr.wikibooks.org) ve Wikibooks Cookbook (en.wikibooks.org): Wikibooks katkıcılarının metinleri, CC BY-SA 4.0 lisansıyla. Biçim sadeleştirildi; her tarifin altında sayfa adresi var. İnternette de bu iki kaynakta aranır.	Vikikitap Yemek Kitabı (turecká kuchařka Wikibooks, tr.wikibooks.org) a Wikibooks Cookbook (en.wikibooks.org): texty přispěvatelů Wikibooks pod licencí CC BY-SA 4.0. Formátování zjednodušeno; pod každým receptem je adresa stránky. Hledání online používá také tyto dva zdroje.
+TheMealDB (themealdb.com) isteğe bağlıdır: ücretsiz deneme anahtarı "1" yalnızca geliştirme ve eğitim içindir, herkese açık uygulamalar destekçi anahtarı ister. Kendi anahtarınızı girerseniz çevrimiçi aramada TheMealDB de kullanılır (veri ve görseller: TheMealDB).	TheMealDB (themealdb.com) je volitelná: bezplatný testovací klíč "1" je jen pro vývoj a výuku; veřejné aplikace potřebují klíč podporovatele. Zadáte-li vlastní klíč, hledání online použije i TheMealDB (data a obrázky: TheMealDB).
+Miktarlar kişi sayısına göre yaklaşık ölçeklenir; vegan/vejetaryen etiketleri malzemelerden çıkarılır, alerjiler için tarifi kontrol edin.	Množství se přibližně přepočítávají podle počtu porcí; štítky veganské/vegetariánské se odvozují ze surovin, při alergiích recept zkontrolujte.
+TheMealDB anahtarı: %s	Klíč TheMealDB: %s
+yok	není
+TheMealDB API anahtarı	API klíč TheMealDB
+Türk mutfağı	Turecká kuchyně
+Çorbalar	Polévky
+Ana yemekler	Hlavní jídla
+Tatlılar	Dezerty
+Salata ve mezeler	Saláty a meze
+Hamur işleri	Pečivo a chléb
+Tarifler	Recepty
+Tarif ara	Hledat recept
+%d ülke	%d zemí
+★ Favoriler (%d)	★ Oblíbené (%d)
+Son bakılanlar (%d)	Naposledy zobrazené (%d)
+Zamanlayıcılar (%d)	Časovače (%d)
+%d tarif çevrimdışı (%d Türkçe) · Vikikitap, Wikibooks · CC BY-SA 4.0	%d receptů offline (%d turecky) · Vikikitap, Wikibooks · CC BY-SA 4.0
+Kaynaklar ve ayarlar	Zdroje a nastavení
+Henüz favori tarif yok.\nBir tarifte ☆ düğmesine dokunun.	Zatím žádné oblíbené recepty.\nKlepněte v receptu na ☆.
+Son bakılanlar	Naposledy zobrazené
+Henüz tarif açılmadı.	Zatím nebyl otevřen žádný recept.
+Tarifler yüklenemedi.	Recepty nelze načíst.

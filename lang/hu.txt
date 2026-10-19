@@ -1014,3 +1014,88 @@ Yukarıdan aşağıya	Függőleges
 harf	betű
 Çözülen	Megfejtve
 Şimdilik doğru, %d boş kare	Eddig jó, %d üres mező
+Süre doldu!	Lejárt az idő!
+Kapatmak için dokunun	Koppintson a bezáráshoz
+Çorba	Leves
+Ana yemek	Főétel
+Tatlı	Desszert
+Salata, meze	Saláta, meze
+Hamur işi	Tészta
+Kahvaltılık	Reggeli
+İçecek	Ital
+Vegan	Vegán
+Vejetaryen	Vegetáriánus
+İngilizce	Angol
+%d/%d malzeme	%d/%d hozzávaló
+İngilizce tarif	Angol recept
+Malzemeler (%d kişilik)	Hozzávalók (%d adag)
+Malzemeler (%d kişilik, tahmini)	Hozzávalók (%d adag, becsült)
+Hazırlanışı	Elkészítés
+Kaynak: %s · %s · %s	Forrás: %s · %s · %s
+ — Wikibooks katkıcılarının metni, biçimi değiştirildi; aynı lisansla paylaşılır.	 — a Wikibooks közreműködőinek szövege, módosított formázással; azonos licenccel megosztva.
+Kişi:	Adag:
+Pişirme modu ▶	Főzési mód ▶
+Tarif	Recept
+Hazırlık · %d kişilik	Előkészítés · %d adag
+Adım %d / %d	%d. lépés / %d
+◀ Önceki	◀ Előző
+Pişirme modu	Főzési mód
+Süreler	Időzítők
+%d sn	%d mp
+Zamanlayıcı kur: %s	Időzítő: %s
+Bitti ✓	Kész ✓
+Adım %d · %s	%d. lépés · %s
+Zamanlayıcılar	Időzítők
+En çok 6 zamanlayıcı kurulabilir.	Legfeljebb 6 időzítő állítható be.
+Ad ver	Elnevezés
+Zamanlayıcı %d	%d. időzítő
+Kurulu zamanlayıcı yok.	Nincs beállított időzítő.
+Yeni: %s	Új: %s
+Süre dolunca ekrandaki kutu yanıp söner (Kindle'da hoparlör yok). Zamanlayıcılar Tarifler açıkken çalışır.	Ha lejár az idő, a képernyőn villog a mező (a Kindle-nek nincs hangszórója). Az időzítők addig futnak, amíg a Receptek nyitva van.
+Zamanlayıcının adı	Az időzítő neve
+Türkçe	Török
+ · çevrimdışı kayıtlı	 · offline mentve
+Çevrimiçi aranıyor…	Keresés online…
+“%s” · %d sonuç · seçilen tarif çevrimdışı için saklanır	„%s” · %d találat · a kiválasztott recept offline mentésre kerül
+Çevrimiçi sonuçlar	Online találatok
+Sonuç yok ya da bağlantı kurulamadı.\nWi-Fi bağlantısını kontrol edin.	Nincs találat vagy nincs kapcsolat.\nEllenőrizze a Wi-Fi-kapcsolatot.
+Tarif açılamadı	A recept nem nyitható meg
+Bu sayfada malzeme listesi bulunamadı ya da bağlantı kesildi.	Ezen az oldalon nincs hozzávalólista, vagy megszakadt a kapcsolat.
+Elinizdeki malzemeler (ör. domates, yumurta)	Meglévő hozzávalók (pl. paradicsom, tojás)
+Tarif ara (ad ya da ülke)	Recept keresése (név vagy ország)
+“%s” · %d tarif	„%s” · %d recept
+Elimde ne var?	Mi van otthon?
+Arama	Keresés
+Çevrimiçi ara	Online keresés
+Çevrimdışı tariflerde bulunamadı.\nAşağıdan çevrimiçi arayabilirsiniz.	Nem található az offline receptek között.\nLent kereshet online.
+%d tarif	%d recept
+%d tarif · %d Türkçe, %d İngilizce	%d recept · %d török, %d angol
+Dünya mutfağı	Világkonyha
+Ülkeler, tarif sayısına göre	Országok, receptszám szerint
+Anahtar gir	Kulcs megadása
+Anahtarı sil	Kulcs törlése
+Çevrimdışı: %d tarif (%d Türkçe, %d İngilizce) · kaydedilen: %d	Offline: %d recept (%d török, %d angol) · mentve: %d
+Vikikitap Yemek Kitabı (tr.wikibooks.org) ve Wikibooks Cookbook (en.wikibooks.org): Wikibooks katkıcılarının metinleri, CC BY-SA 4.0 lisansıyla. Biçim sadeleştirildi; her tarifin altında sayfa adresi var. İnternette de bu iki kaynakta aranır.	Vikikitap Yemek Kitabı (a török Wikibooks szakácskönyve, tr.wikibooks.org) és Wikibooks Cookbook (en.wikibooks.org): a Wikibooks közreműködőinek szövegei, CC BY-SA 4.0 licenccel. Egyszerűsített formázás; minden recept alatt ott az oldal címe. Az online keresés is ezt a két forrást használja.
+TheMealDB (themealdb.com) isteğe bağlıdır: ücretsiz deneme anahtarı "1" yalnızca geliştirme ve eğitim içindir, herkese açık uygulamalar destekçi anahtarı ister. Kendi anahtarınızı girerseniz çevrimiçi aramada TheMealDB de kullanılır (veri ve görseller: TheMealDB).	A TheMealDB (themealdb.com) opcionális: az ingyenes "1" tesztkulcs csak fejlesztésre és oktatásra való; nyilvános alkalmazásokhoz támogatói kulcs kell. Ha saját kulcsot ad meg, az online keresés a TheMealDB-t is használja (adatok és képek: TheMealDB).
+Miktarlar kişi sayısına göre yaklaşık ölçeklenir; vegan/vejetaryen etiketleri malzemelerden çıkarılır, alerjiler için tarifi kontrol edin.	A mennyiségek az adagszámhoz igazodnak, közelítőleg; a vegán/vegetáriánus címkék a hozzávalókból származnak, allergia esetén ellenőrizze a receptet.
+TheMealDB anahtarı: %s	TheMealDB-kulcs: %s
+yok	nincs
+TheMealDB API anahtarı	TheMealDB API-kulcs
+Türk mutfağı	Török konyha
+Çorbalar	Levesek
+Ana yemekler	Főételek
+Tatlılar	Desszertek
+Salata ve mezeler	Saláták és mezék
+Hamur işleri	Tészták és kenyerek
+Tarifler	Receptek
+Tarif ara	Recept keresése
+%d ülke	%d ország
+★ Favoriler (%d)	★ Kedvencek (%d)
+Son bakılanlar (%d)	Legutóbb megnézett (%d)
+Zamanlayıcılar (%d)	Időzítők (%d)
+%d tarif çevrimdışı (%d Türkçe) · Vikikitap, Wikibooks · CC BY-SA 4.0	%d recept offline (%d török) · Vikikitap, Wikibooks · CC BY-SA 4.0
+Kaynaklar ve ayarlar	Források és beállítások
+Henüz favori tarif yok.\nBir tarifte ☆ düğmesine dokunun.	Még nincs kedvenc recept.\nKoppintson egy receptben a ☆ gombra.
+Son bakılanlar	Legutóbb megnézett
+Henüz tarif açılmadı.	Még nem nyitott meg receptet.
+Tarifler yüklenemedi.	A receptek nem tölthetők be.

@@ -1014,3 +1014,88 @@ Yukarıdan aşağıya	Vertical
 harf	litere
 Çözülen	Rezolvate
 Şimdilik doğru, %d boş kare	Corect până acum, %d pătrățele goale
+Süre doldu!	Timpul a expirat!
+Kapatmak için dokunun	Atingeți pentru a închide
+Çorba	Supă
+Ana yemek	Fel principal
+Tatlı	Desert
+Salata, meze	Salată, meze
+Hamur işi	Patiserie
+Kahvaltılık	Mic dejun
+İçecek	Băutură
+Vegan	Vegan
+Vejetaryen	Vegetarian
+İngilizce	Engleză
+%d/%d malzeme	%d/%d ingrediente
+İngilizce tarif	Rețetă în engleză
+Malzemeler (%d kişilik)	Ingrediente (%d porții)
+Malzemeler (%d kişilik, tahmini)	Ingrediente (%d porții, estimat)
+Hazırlanışı	Preparare
+Kaynak: %s · %s · %s	Sursa: %s · %s · %s
+ — Wikibooks katkıcılarının metni, biçimi değiştirildi; aynı lisansla paylaşılır.	 — text al contributorilor Wikibooks, formatare modificată; distribuit sub aceeași licență.
+Kişi:	Porții:
+Pişirme modu ▶	Mod gătit ▶
+Tarif	Rețetă
+Hazırlık · %d kişilik	Pregătire · %d porții
+Adım %d / %d	Pasul %d / %d
+◀ Önceki	◀ Înapoi
+Pişirme modu	Mod gătit
+Süreler	Cronometre
+%d sn	%d s
+Zamanlayıcı kur: %s	Setează cronometru: %s
+Bitti ✓	Gata ✓
+Adım %d · %s	Pasul %d · %s
+Zamanlayıcılar	Cronometre
+En çok 6 zamanlayıcı kurulabilir.	Se pot seta cel mult 6 cronometre.
+Ad ver	Denumește
+Zamanlayıcı %d	Cronometru %d
+Kurulu zamanlayıcı yok.	Niciun cronometru setat.
+Yeni: %s	Nou: %s
+Süre dolunca ekrandaki kutu yanıp söner (Kindle'da hoparlör yok). Zamanlayıcılar Tarifler açıkken çalışır.	Când expiră timpul, caseta de pe ecran clipește (Kindle nu are difuzor). Cronometrele merg cât timp Rețete este deschis.
+Zamanlayıcının adı	Numele cronometrului
+Türkçe	Turcă
+ · çevrimdışı kayıtlı	 · salvată offline
+Çevrimiçi aranıyor…	Se caută online…
+“%s” · %d sonuç · seçilen tarif çevrimdışı için saklanır	„%s” · %d rezultate · rețeta aleasă se salvează offline
+Çevrimiçi sonuçlar	Rezultate online
+Sonuç yok ya da bağlantı kurulamadı.\nWi-Fi bağlantısını kontrol edin.	Niciun rezultat sau fără conexiune.\nVerificați conexiunea Wi-Fi.
+Tarif açılamadı	Rețeta nu a putut fi deschisă
+Bu sayfada malzeme listesi bulunamadı ya da bağlantı kesildi.	Pe această pagină nu s-a găsit lista de ingrediente sau conexiunea s-a întrerupt.
+Elinizdeki malzemeler (ör. domates, yumurta)	Ingredientele pe care le aveți (ex. roșie, ou)
+Tarif ara (ad ya da ülke)	Caută rețetă (nume sau țară)
+“%s” · %d tarif	„%s” · %d rețete
+Elimde ne var?	Ce am în casă?
+Arama	Căutare
+Çevrimiçi ara	Caută online
+Çevrimdışı tariflerde bulunamadı.\nAşağıdan çevrimiçi arayabilirsiniz.	Nu s-a găsit în rețetele offline.\nPuteți căuta online mai jos.
+%d tarif	%d rețete
+%d tarif · %d Türkçe, %d İngilizce	%d rețete · %d în turcă, %d în engleză
+Dünya mutfağı	Bucătăria lumii
+Ülkeler, tarif sayısına göre	Țări, după numărul de rețete
+Anahtar gir	Introdu cheia
+Anahtarı sil	Șterge cheia
+Çevrimdışı: %d tarif (%d Türkçe, %d İngilizce) · kaydedilen: %d	Offline: %d rețete (%d în turcă, %d în engleză) · salvate: %d
+Vikikitap Yemek Kitabı (tr.wikibooks.org) ve Wikibooks Cookbook (en.wikibooks.org): Wikibooks katkıcılarının metinleri, CC BY-SA 4.0 lisansıyla. Biçim sadeleştirildi; her tarifin altında sayfa adresi var. İnternette de bu iki kaynakta aranır.	Vikikitap Yemek Kitabı (cartea de bucate a Wikibooks turc, tr.wikibooks.org) și Wikibooks Cookbook (en.wikibooks.org): texte ale contributorilor Wikibooks, sub licența CC BY-SA 4.0. Formatare simplificată; sub fiecare rețetă se află adresa paginii. Căutarea online folosește și aceste două surse.
+TheMealDB (themealdb.com) isteğe bağlıdır: ücretsiz deneme anahtarı "1" yalnızca geliştirme ve eğitim içindir, herkese açık uygulamalar destekçi anahtarı ister. Kendi anahtarınızı girerseniz çevrimiçi aramada TheMealDB de kullanılır (veri ve görseller: TheMealDB).	TheMealDB (themealdb.com) este opțional: cheia de test gratuită "1" este doar pentru dezvoltare și educație; aplicațiile publice necesită o cheie de susținător. Dacă introduceți propria cheie, căutarea online folosește și TheMealDB (date și imagini: TheMealDB).
+Miktarlar kişi sayısına göre yaklaşık ölçeklenir; vegan/vejetaryen etiketleri malzemelerden çıkarılır, alerjiler için tarifi kontrol edin.	Cantitățile se ajustează aproximativ după numărul de porții; etichetele vegan/vegetarian sunt deduse din ingrediente, verificați rețeta în caz de alergii.
+TheMealDB anahtarı: %s	Cheie TheMealDB: %s
+yok	niciuna
+TheMealDB API anahtarı	Cheie API TheMealDB
+Türk mutfağı	Bucătăria turcească
+Çorbalar	Supe
+Ana yemekler	Feluri principale
+Tatlılar	Deserturi
+Salata ve mezeler	Salate și meze
+Hamur işleri	Patiserie și pâine
+Tarifler	Rețete
+Tarif ara	Caută rețetă
+%d ülke	%d țări
+★ Favoriler (%d)	★ Favorite (%d)
+Son bakılanlar (%d)	Văzute recent (%d)
+Zamanlayıcılar (%d)	Cronometre (%d)
+%d tarif çevrimdışı (%d Türkçe) · Vikikitap, Wikibooks · CC BY-SA 4.0	%d rețete offline (%d în turcă) · Vikikitap, Wikibooks · CC BY-SA 4.0
+Kaynaklar ve ayarlar	Surse și setări
+Henüz favori tarif yok.\nBir tarifte ☆ düğmesine dokunun.	Încă nu aveți rețete favorite.\nAtingeți ☆ într-o rețetă.
+Son bakılanlar	Văzute recent
+Henüz tarif açılmadı.	Încă nu ați deschis nicio rețetă.
+Tarifler yüklenemedi.	Rețetele nu au putut fi încărcate.

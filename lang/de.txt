@@ -1014,3 +1014,88 @@ Yukarıdan aşağıya	Senkrecht
 harf	Buchstaben
 Çözülen	Gelöst
 Şimdilik doğru, %d boş kare	Bisher richtig, %d leere Felder
+Süre doldu!	Zeit ist um!
+Kapatmak için dokunun	Zum Schließen tippen
+Çorba	Suppe
+Ana yemek	Hauptgericht
+Tatlı	Dessert
+Salata, meze	Salat, Meze
+Hamur işi	Gebäck
+Kahvaltılık	Frühstück
+İçecek	Getränk
+Vegan	Vegan
+Vejetaryen	Vegetarisch
+İngilizce	Englisch
+%d/%d malzeme	%d/%d Zutaten
+İngilizce tarif	Englisches Rezept
+Malzemeler (%d kişilik)	Zutaten (für %d Personen)
+Malzemeler (%d kişilik, tahmini)	Zutaten (für %d Personen, geschätzt)
+Hazırlanışı	Zubereitung
+Kaynak: %s · %s · %s	Quelle: %s · %s · %s
+ — Wikibooks katkıcılarının metni, biçimi değiştirildi; aynı lisansla paylaşılır.	 — Text von Wikibooks-Autoren, Format geändert; unter derselben Lizenz geteilt.
+Kişi:	Personen:
+Pişirme modu ▶	Kochmodus ▶
+Tarif	Rezept
+Hazırlık · %d kişilik	Vorbereitung · für %d Personen
+Adım %d / %d	Schritt %d / %d
+◀ Önceki	◀ Zurück
+Pişirme modu	Kochmodus
+Süreler	Timer
+%d sn	%d s
+Zamanlayıcı kur: %s	Timer stellen: %s
+Bitti ✓	Fertig ✓
+Adım %d · %s	Schritt %d · %s
+Zamanlayıcılar	Timer
+En çok 6 zamanlayıcı kurulabilir.	Höchstens 6 Timer möglich.
+Ad ver	Benennen
+Zamanlayıcı %d	Timer %d
+Kurulu zamanlayıcı yok.	Keine Timer gestellt.
+Yeni: %s	Neu: %s
+Süre dolunca ekrandaki kutu yanıp söner (Kindle'da hoparlör yok). Zamanlayıcılar Tarifler açıkken çalışır.	Wenn die Zeit um ist, blinkt das Feld auf dem Bildschirm (der Kindle hat keinen Lautsprecher). Timer laufen, solange Rezepte geöffnet ist.
+Zamanlayıcının adı	Name des Timers
+Türkçe	Türkisch
+ · çevrimdışı kayıtlı	 · offline gespeichert
+Çevrimiçi aranıyor…	Online-Suche…
+“%s” · %d sonuç · seçilen tarif çevrimdışı için saklanır	„%s“ · %d Treffer · das gewählte Rezept wird offline gespeichert
+Çevrimiçi sonuçlar	Online-Ergebnisse
+Sonuç yok ya da bağlantı kurulamadı.\nWi-Fi bağlantısını kontrol edin.	Keine Ergebnisse oder keine Verbindung.\nWLAN-Verbindung prüfen.
+Tarif açılamadı	Rezept konnte nicht geöffnet werden
+Bu sayfada malzeme listesi bulunamadı ya da bağlantı kesildi.	Auf dieser Seite wurde keine Zutatenliste gefunden, oder die Verbindung brach ab.
+Elinizdeki malzemeler (ör. domates, yumurta)	Vorhandene Zutaten (z. B. Tomate, Ei)
+Tarif ara (ad ya da ülke)	Rezept suchen (Name oder Land)
+“%s” · %d tarif	„%s“ · %d Rezepte
+Elimde ne var?	Was habe ich da?
+Arama	Suche
+Çevrimiçi ara	Online suchen
+Çevrimdışı tariflerde bulunamadı.\nAşağıdan çevrimiçi arayabilirsiniz.	In den Offline-Rezepten nicht gefunden.\nUnten können Sie online suchen.
+%d tarif	%d Rezepte
+%d tarif · %d Türkçe, %d İngilizce	%d Rezepte · %d Türkisch, %d Englisch
+Dünya mutfağı	Weltküche
+Ülkeler, tarif sayısına göre	Länder nach Anzahl der Rezepte
+Anahtar gir	Schlüssel eingeben
+Anahtarı sil	Schlüssel löschen
+Çevrimdışı: %d tarif (%d Türkçe, %d İngilizce) · kaydedilen: %d	Offline: %d Rezepte (%d Türkisch, %d Englisch) · gespeichert: %d
+Vikikitap Yemek Kitabı (tr.wikibooks.org) ve Wikibooks Cookbook (en.wikibooks.org): Wikibooks katkıcılarının metinleri, CC BY-SA 4.0 lisansıyla. Biçim sadeleştirildi; her tarifin altında sayfa adresi var. İnternette de bu iki kaynakta aranır.	Vikikitap Yemek Kitabı (türkisches Wikibooks-Kochbuch, tr.wikibooks.org) und Wikibooks Cookbook (en.wikibooks.org): Texte von Wikibooks-Autoren unter CC BY-SA 4.0. Format vereinfacht; unter jedem Rezept steht die Seitenadresse. Die Online-Suche nutzt ebenfalls diese beiden Quellen.
+TheMealDB (themealdb.com) isteğe bağlıdır: ücretsiz deneme anahtarı "1" yalnızca geliştirme ve eğitim içindir, herkese açık uygulamalar destekçi anahtarı ister. Kendi anahtarınızı girerseniz çevrimiçi aramada TheMealDB de kullanılır (veri ve görseller: TheMealDB).	TheMealDB (themealdb.com) ist optional: Der kostenlose Testschlüssel "1" ist nur für Entwicklung und Lernzwecke; öffentliche Apps brauchen einen Unterstützerschlüssel. Wenn Sie Ihren eigenen Schlüssel eingeben, nutzt die Online-Suche auch TheMealDB (Daten und Bilder: TheMealDB).
+Miktarlar kişi sayısına göre yaklaşık ölçeklenir; vegan/vejetaryen etiketleri malzemelerden çıkarılır, alerjiler için tarifi kontrol edin.	Mengen werden ungefähr nach Personenzahl skaliert; vegan/vegetarisch wird aus den Zutaten abgeleitet, bei Allergien bitte das Rezept prüfen.
+TheMealDB anahtarı: %s	TheMealDB-Schlüssel: %s
+yok	keiner
+TheMealDB API anahtarı	TheMealDB-API-Schlüssel
+Türk mutfağı	Türkische Küche
+Çorbalar	Suppen
+Ana yemekler	Hauptgerichte
+Tatlılar	Desserts
+Salata ve mezeler	Salate und Meze
+Hamur işleri	Gebäck und Brot
+Tarifler	Rezepte
+Tarif ara	Rezept suchen
+%d ülke	%d Länder
+★ Favoriler (%d)	★ Favoriten (%d)
+Son bakılanlar (%d)	Zuletzt angesehen (%d)
+Zamanlayıcılar (%d)	Timer (%d)
+%d tarif çevrimdışı (%d Türkçe) · Vikikitap, Wikibooks · CC BY-SA 4.0	%d Rezepte offline (%d Türkisch) · Vikikitap, Wikibooks · CC BY-SA 4.0
+Kaynaklar ve ayarlar	Quellen und Einstellungen
+Henüz favori tarif yok.\nBir tarifte ☆ düğmesine dokunun.	Noch keine Lieblingsrezepte.\nTippen Sie in einem Rezept auf ☆.
+Son bakılanlar	Zuletzt angesehen
+Henüz tarif açılmadı.	Noch kein Rezept geöffnet.
+Tarifler yüklenemedi.	Rezepte konnten nicht geladen werden.
