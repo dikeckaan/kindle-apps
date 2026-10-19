@@ -6,6 +6,7 @@
 
 int kui_fit_px(const char *text, KuiFont f, int px, int max_w)
 {
+	if (!text || !*text) return px; /* FBInk warns about measuring an empty string */
 	while (px > 20 && kui_text_width(text, f, px) > max_w) px -= 2;
 	return px;
 }
