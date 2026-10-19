@@ -749,3 +749,69 @@ Uzaklıklar ve haritadaki ▣ işareti bu konuma göre gösterilir.	Le distanze 
 %s yakını	vicino a %s
 Seçilen yer	Luogo scelto
 Konumunuza dokunun (yakınlaştırabilirsiniz)	Tocca la tua posizione (puoi ingrandire)
+ · Hanefi ikindi	 · Asr hanafita
+ · yüksek enlem kuralı	 · regola delle alte latitudini
+%s vakti %s	%s alle %s
+Akşama %s	%s al Maghrib
+Asr-ı evvel (Şafii)	Asr anticipato (sciafeita)
+Asr-ı sani (Hanefi)	Asr posticipato (hanafita)
+Bugün Güneş kıble yönünden geçmiyor.	Oggi il Sole non passa nella direzione della qibla.
+Bugün vakit hesaplanamıyor	Oggi non si possono calcolare gli orari
+Büyüyen ay	Gibbosa crescente
+Büyüyen hilal	Falce crescente
+Diyanet (Türkiye)	Diyanet (Turchia)
+Diyanet: imsak güneş ufkun 18° altındayken, yatsı 17°. Temkin: güneş −7, öğle +5, ikindi +4, akşam +7 dk. Diyanet'in yayımladığı vakitlerle en çok 1 dk fark.	Diyanet: Fajr con il Sole 18° sotto l'orizzonte, Isha a 17°. Margini (temkin): alba −7, Dhuhr +5, Asr +4, Maghrib +7 min. Al massimo 1 min di scarto dagli orari pubblicati dalla Diyanet.
+Diğer	Altro
+Enlem ve boylam gir	Inserisci latitudine e longitudine
+Enlem −90…90, boylam −180…180 olmalı, ör. 41.01, 28.98	Latitudine −90…90 e longitudine −180…180, ad es. 41.01, 28.98
+Enlem, boylam (ör. 41.01, 28.98)	Latitudine, longitudine (ad es. 41.01, 28.98)
+Fransa (UOIF)	Francia (UOIF)
+Gri satırlar: Ramazan (imsak ve iftar kalın)	Righe grigie: Ramadan (Fajr e iftar in grassetto)
+Gün	Giorno
+Güneş doğuşu %s · batışı %s · gün %d sa %d dk	Alba %s · tramonto %s · giorno %d h %d min
+Güneş şu an ufkun altında	Il Sole è sotto l'orizzonte
+Güneşe %s	%s all'alba
+Hava Durumu şehri: %s	Città meteo: %s
+Hesaplama yöntemi	Metodo di calcolo
+Hicri	Egira
+Hicri tarih: 2016 Hicri Takvim Birliği ölçütüyle (Diyanet'in kullandığı) hesaplanır; nadiren bir gün farklı olabilir.	Data dell'egira: calcolata con il criterio dell'Unione del calendario egiriano del 2016 (quello della Diyanet); raramente un giorno di scarto.
+Hicri: %s	Egira: %s
+Hicri: %s – %s	Egira: %s – %s
+Karaçi (İslami İlimler Üniv.)	Karachi (Univ. di scienze islamiche)
+Kindle saati	Orologio del Kindle
+Kindle'da pusula yok: cihazı, ☀ işareti gökteki Güneş'i gösterecek biçimde çevirin; ok o zaman kıbleyi gösterir.	Il Kindle non ha bussola: giralo finché il segno ☀ indica il Sole nel cielo; la freccia indica allora la qibla.
+Koordinat	Coordinate
+Kuzey Amerika (ISNA)	Nord America (ISNA)
+Kâbe'ye uzaklık: %s km · gerçek kuzeye göre	Distanza dalla Kaaba: %s km · rispetto al nord geografico
+Küçülen ay	Gibbosa calante
+Küçülen hilal	Falce calante
+Kıble	Qibla
+Kıble %.0f° %s · %s	Qibla %.0f° %s · %s
+Kıble saati %s: Güneş o an tam kıble yönündedir.	Ora della qibla %s: il Sole è allora esattamente nella direzione della qibla.
+Müslüman Dünya Birliği (MWL)	Lega musulmana mondiale (MWL)
+Mısır (Genel Etüt Kurumu)	Egitto (Autorità generale del catasto)
+Recep	Rajab
+Saat dilimi	Fuso orario
+Sayfa %d / %d	Pagina %d / %d
+Seçilen yer Vakitler'e kaydedilir (data/vakit/place); Hava Durumu'nun şehir listesi değişmez.	Il luogo scelto viene salvato per gli orari (data/vakit/place); l'elenco città del meteo non cambia.
+Türkiye (81 il)	Turchia (81 province)
+Türkiye (UTC+3)	Turchia (UTC+3)
+UTC farkı (saat, ör. 3 veya -5 ya da 5,5)	Scarto UTC (ore, ad es. 3, -5 o 5.5)
+UTC farkı gir	Inserisci scarto UTC
+Vakitler	Orari di preghiera
+Vakitler hangi saate göre gösterilsin?	Secondo quale orologio mostrare gli orari?
+Yarın %s %s	Domani %s %s
+Yatsıya %s	%s all'Isha
+Yeni Ay	Luna nuova
+Yerin adı	Nome del luogo
+Zeval %s · Ay: %s, %%%d aydınlık	Mezzogiorno solare %s · Luna: %s, illuminata al %d%%
+Öğleye %s	%s al Dhuhr
+Ümmü'l-Kurâ (Mekke)	Umm al-Qura (La Mecca)
+İkindiye %s	%s all'Asr
+İmsak %s°, yatsı %s°; temkin yok.	Fajr %s°, Isha %s°; senza temkin.
+İmsak %s°, yatsı akşamdan %d dk sonra (Ramazan'da %d dk); temkin yok.	Fajr %s°, Isha %d min dopo il Maghrib (%d min nel Ramadan); senza temkin.
+İmsaka %s	%s al Fajr
+İmsakiye	Calendario mensile
+Şehir	Città
+Şu an: %s (%.2f, %.2f)	Ora: %s (%.2f, %.2f)
+☀ Güneş şu an %.0f° %s yönünde, %.0f° yüksekte	☀ Il Sole è ora a %.0f° %s, alto %.0f°

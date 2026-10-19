@@ -749,3 +749,69 @@ Uzaklıklar ve haritadaki ▣ işareti bu konuma göre gösterilir.	Odległości
 %s yakını	w pobliżu: %s
 Seçilen yer	Wybrane miejsce
 Konumunuza dokunun (yakınlaştırabilirsiniz)	Dotknij swojej lokalizacji (można przybliżyć)
+ · Hanefi ikindi	 · Asr hanaficki
+ · yüksek enlem kuralı	 · reguła dużych szerokości
+%s vakti %s	%s o %s
+Akşama %s	%s do Maghrib
+Asr-ı evvel (Şafii)	Wczesny Asr (szafi'icki)
+Asr-ı sani (Hanefi)	Późny Asr (hanaficki)
+Bugün Güneş kıble yönünden geçmiyor.	Dziś Słońce nie przechodzi przez kierunek kibli.
+Bugün vakit hesaplanamıyor	Dziś nie da się obliczyć czasów modlitw
+Büyüyen ay	Garbaty przybywający
+Büyüyen hilal	Przybywający sierp
+Diyanet (Türkiye)	Diyanet (Turcja)
+Diyanet: imsak güneş ufkun 18° altındayken, yatsı 17°. Temkin: güneş −7, öğle +5, ikindi +4, akşam +7 dk. Diyanet'in yayımladığı vakitlerle en çok 1 dk fark.	Diyanet: Fadżr przy Słońcu 18° pod horyzontem, Isza przy 17°. Zapasy (temkin): wschód −7, Zuhr +5, Asr +4, Maghrib +7 min. Najwyżej 1 min różnicy od czasów publikowanych przez Diyanet.
+Diğer	Inne
+Enlem ve boylam gir	Wpisz szerokość i długość
+Enlem −90…90, boylam −180…180 olmalı, ör. 41.01, 28.98	Szerokość −90…90, długość −180…180, np. 41.01, 28.98
+Enlem, boylam (ör. 41.01, 28.98)	Szerokość, długość (np. 41.01, 28.98)
+Fransa (UOIF)	Francja (UOIF)
+Gri satırlar: Ramazan (imsak ve iftar kalın)	Szare wiersze: ramadan (Fadżr i iftar pogrubione)
+Gün	Dzień
+Güneş doğuşu %s · batışı %s · gün %d sa %d dk	Wschód %s · zachód %s · dzień %d h %d min
+Güneş şu an ufkun altında	Słońce jest pod horyzontem
+Güneşe %s	%s do wschodu
+Hava Durumu şehri: %s	Miasto pogody: %s
+Hesaplama yöntemi	Metoda obliczeń
+Hicri	Hidżra
+Hicri tarih: 2016 Hicri Takvim Birliği ölçütüyle (Diyanet'in kullandığı) hesaplanır; nadiren bir gün farklı olabilir.	Data hidżry: według kryterium Unii Kalendarza Hidżry z 2016 r. (stosowanego przez Diyanet); rzadko różni się o dzień.
+Hicri: %s	Hidżra: %s
+Hicri: %s – %s	Hidżra: %s – %s
+Karaçi (İslami İlimler Üniv.)	Karaczi (Uniw. Nauk Islamskich)
+Kindle saati	Zegar Kindle
+Kindle'da pusula yok: cihazı, ☀ işareti gökteki Güneş'i gösterecek biçimde çevirin; ok o zaman kıbleyi gösterir.	Kindle nie ma kompasu: obróć go, aż znak ☀ wskaże Słońce na niebie; strzałka wskaże wtedy kiblę.
+Koordinat	Współrzędne
+Kuzey Amerika (ISNA)	Ameryka Północna (ISNA)
+Kâbe'ye uzaklık: %s km · gerçek kuzeye göre	Odległość do Kaaby: %s km · względem północy geograficznej
+Küçülen ay	Garbaty ubywający
+Küçülen hilal	Ubywający sierp
+Kıble	Kibla
+Kıble %.0f° %s · %s	Kibla %.0f° %s · %s
+Kıble saati %s: Güneş o an tam kıble yönündedir.	Godzina kibli %s: Słońce stoi wtedy dokładnie w kierunku kibli.
+Müslüman Dünya Birliği (MWL)	Liga Świata Muzułmańskiego (MWL)
+Mısır (Genel Etüt Kurumu)	Egipt (Generalny Urząd Geodezji)
+Recep	Radżab
+Saat dilimi	Strefa czasowa
+Sayfa %d / %d	Strona %d / %d
+Seçilen yer Vakitler'e kaydedilir (data/vakit/place); Hava Durumu'nun şehir listesi değişmez.	Wybrane miejsce zapisuje się dla Czasów modlitw (data/vakit/place); lista miast pogody się nie zmienia.
+Türkiye (81 il)	Turcja (81 prowincji)
+Türkiye (UTC+3)	Turcja (UTC+3)
+UTC farkı (saat, ör. 3 veya -5 ya da 5,5)	Różnica UTC (godziny, np. 3, -5 lub 5.5)
+UTC farkı gir	Wpisz różnicę UTC
+Vakitler	Czasy modlitw
+Vakitler hangi saate göre gösterilsin?	Według którego zegara pokazywać czasy?
+Yarın %s %s	Jutro %s %s
+Yatsıya %s	%s do Iszy
+Yeni Ay	Nów
+Yerin adı	Nazwa miejsca
+Zeval %s · Ay: %s, %%%d aydınlık	Południe słoneczne %s · Księżyc: %s, oświetlony w %d%%
+Öğleye %s	%s do Zuhr
+Ümmü'l-Kurâ (Mekke)	Umm al-Kura (Mekka)
+İkindiye %s	%s do Asr
+İmsak %s°, yatsı %s°; temkin yok.	Fadżr %s°, Isza %s°; bez temkin.
+İmsak %s°, yatsı akşamdan %d dk sonra (Ramazan'da %d dk); temkin yok.	Fadżr %s°, Isza %d min po Maghrib (w ramadanie %d min); bez temkin.
+İmsaka %s	%s do Fadżr
+İmsakiye	Kalendarz miesięczny
+Şehir	Miasto
+Şu an: %s (%.2f, %.2f)	Teraz: %s (%.2f, %.2f)
+☀ Güneş şu an %.0f° %s yönünde, %.0f° yüksekte	☀ Słońce jest teraz na %.0f° %s, %.0f° nad horyzontem

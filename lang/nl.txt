@@ -749,3 +749,69 @@ Uzaklıklar ve haritadaki ▣ işareti bu konuma göre gösterilir.	Afstanden en
 %s yakını	bij %s
 Seçilen yer	Gekozen plek
 Konumunuza dokunun (yakınlaştırabilirsiniz)	Tik op uw locatie (inzoomen kan)
+ · Hanefi ikindi	 · hanafitische Asr
+ · yüksek enlem kuralı	 · regel voor hoge breedte
+%s vakti %s	%s om %s
+Akşama %s	%s tot Maghrib
+Asr-ı evvel (Şafii)	Vroege Asr (sjafiitisch)
+Asr-ı sani (Hanefi)	Late Asr (hanafitisch)
+Bugün Güneş kıble yönünden geçmiyor.	Vandaag staat de zon niet in de qiblarichting.
+Bugün vakit hesaplanamıyor	Vandaag zijn geen gebedstijden te berekenen
+Büyüyen ay	Wassende maan
+Büyüyen hilal	Wassende sikkel
+Diyanet (Türkiye)	Diyanet (Turkije)
+Diyanet: imsak güneş ufkun 18° altındayken, yatsı 17°. Temkin: güneş −7, öğle +5, ikindi +4, akşam +7 dk. Diyanet'in yayımladığı vakitlerle en çok 1 dk fark.	Diyanet: Fadjr bij een zonsdiepte van 18°, Isja bij 17°. Marges (temkin): zonsopkomst −7, Dhoehr +5, Asr +4, Maghrib +7 min. Hooguit 1 min verschil met de door Diyanet gepubliceerde tijden.
+Diğer	Overig
+Enlem ve boylam gir	Breedte- en lengtegraad invoeren
+Enlem −90…90, boylam −180…180 olmalı, ör. 41.01, 28.98	Breedte −90…90 en lengte −180…180, bijv. 41.01, 28.98
+Enlem, boylam (ör. 41.01, 28.98)	Breedte, lengte (bijv. 41.01, 28.98)
+Fransa (UOIF)	Frankrijk (UOIF)
+Gri satırlar: Ramazan (imsak ve iftar kalın)	Grijze rijen: ramadan (Fadjr en iftar vet)
+Gün	Dag
+Güneş doğuşu %s · batışı %s · gün %d sa %d dk	Zonsopkomst %s · ondergang %s · dag %d u %d min
+Güneş şu an ufkun altında	De zon staat onder de horizon
+Güneşe %s	%s tot zonsopkomst
+Hava Durumu şehri: %s	Weerstad: %s
+Hesaplama yöntemi	Rekenmethode
+Hicri	Hidjri
+Hicri tarih: 2016 Hicri Takvim Birliği ölçütüyle (Diyanet'in kullandığı) hesaplanır; nadiren bir gün farklı olabilir.	Hidjri-datum: berekend met het criterium van de Hidjri-kalenderunie van 2016 (dat Diyanet gebruikt); soms een dag verschil.
+Hicri: %s	Hidjri: %s
+Hicri: %s – %s	Hidjri: %s – %s
+Karaçi (İslami İlimler Üniv.)	Karachi (Univ. voor Islamitische Wet.)
+Kindle saati	Klok van de Kindle
+Kindle'da pusula yok: cihazı, ☀ işareti gökteki Güneş'i gösterecek biçimde çevirin; ok o zaman kıbleyi gösterir.	De Kindle heeft geen kompas: draai hem tot het ☀-teken naar de zon aan de hemel wijst; de pijl wijst dan naar de qibla.
+Koordinat	Coördinaten
+Kuzey Amerika (ISNA)	Noord-Amerika (ISNA)
+Kâbe'ye uzaklık: %s km · gerçek kuzeye göre	Afstand tot de Kaäba: %s km · ten opzichte van het ware noorden
+Küçülen ay	Afnemende maan
+Küçülen hilal	Afnemende sikkel
+Kıble	Qibla
+Kıble %.0f° %s · %s	Qibla %.0f° %s · %s
+Kıble saati %s: Güneş o an tam kıble yönündedir.	Qibla-tijd %s: de zon staat dan precies in de qiblarichting.
+Müslüman Dünya Birliği (MWL)	Islamitische Wereldliga (MWL)
+Mısır (Genel Etüt Kurumu)	Egypte (Algemene Landmeetdienst)
+Recep	Rajab
+Saat dilimi	Tijdzone
+Sayfa %d / %d	Pagina %d / %d
+Seçilen yer Vakitler'e kaydedilir (data/vakit/place); Hava Durumu'nun şehir listesi değişmez.	De gekozen plaats wordt voor Gebedstijden bewaard (data/vakit/place); de stedenlijst van het weer verandert niet.
+Türkiye (81 il)	Turkije (81 provincies)
+Türkiye (UTC+3)	Turkije (UTC+3)
+UTC farkı (saat, ör. 3 veya -5 ya da 5,5)	UTC-verschil (uren, bijv. 3, -5 of 5.5)
+UTC farkı gir	UTC-verschil invoeren
+Vakitler	Gebedstijden
+Vakitler hangi saate göre gösterilsin?	Naar welke klok moeten de tijden gaan?
+Yarın %s %s	Morgen %s %s
+Yatsıya %s	%s tot Isja
+Yeni Ay	Nieuwe maan
+Yerin adı	Naam van de plaats
+Zeval %s · Ay: %s, %%%d aydınlık	Zonnemiddag %s · Maan: %s, %d%% verlicht
+Öğleye %s	%s tot Dhoehr
+Ümmü'l-Kurâ (Mekke)	Umm al-Qura (Mekka)
+İkindiye %s	%s tot Asr
+İmsak %s°, yatsı %s°; temkin yok.	Fadjr %s°, Isja %s°; zonder temkin.
+İmsak %s°, yatsı akşamdan %d dk sonra (Ramazan'da %d dk); temkin yok.	Fadjr %s°, Isja %d min na Maghrib (%d min in de ramadan); zonder temkin.
+İmsaka %s	%s tot Fadjr
+İmsakiye	Maandrooster
+Şehir	Stad
+Şu an: %s (%.2f, %.2f)	Nu: %s (%.2f, %.2f)
+☀ Güneş şu an %.0f° %s yönünde, %.0f° yüksekte	☀ De zon staat nu op %.0f° %s, %.0f° hoog

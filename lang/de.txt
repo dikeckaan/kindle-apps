@@ -749,3 +749,69 @@ Uzaklıklar ve haritadaki ▣ işareti bu konuma göre gösterilir.	Entfernungen
 %s yakını	bei %s
 Seçilen yer	Gewählter Ort
 Konumunuza dokunun (yakınlaştırabilirsiniz)	Tippen Sie auf Ihren Standort (Zoomen möglich)
+ · Hanefi ikindi	 · hanafitisches Asr
+ · yüksek enlem kuralı	 · Regel für hohe Breiten
+%s vakti %s	%s um %s
+Akşama %s	%s bis Maghrib
+Asr-ı evvel (Şafii)	Frühes Asr (Schafiiten)
+Asr-ı sani (Hanefi)	Spätes Asr (Hanafiten)
+Bugün Güneş kıble yönünden geçmiyor.	Heute steht die Sonne nicht in Qibla-Richtung.
+Bugün vakit hesaplanamıyor	Heute lassen sich keine Gebetszeiten berechnen
+Büyüyen ay	Zunehmender Mond
+Büyüyen hilal	Zunehmende Sichel
+Diyanet (Türkiye)	Diyanet (Türkei)
+Diyanet: imsak güneş ufkun 18° altındayken, yatsı 17°. Temkin: güneş −7, öğle +5, ikindi +4, akşam +7 dk. Diyanet'in yayımladığı vakitlerle en çok 1 dk fark.	Diyanet: Fadschr bei 18° Sonnentiefe, Ischa bei 17°. Sicherheitszuschläge (Temkin): Sonnenaufgang −7, Dhuhr +5, Asr +4, Maghrib +7 Min. Höchstens 1 Min. Abweichung von Diyanets veröffentlichten Zeiten.
+Diğer	Andere
+Enlem ve boylam gir	Breite und Länge eingeben
+Enlem −90…90, boylam −180…180 olmalı, ör. 41.01, 28.98	Breite −90…90 und Länge −180…180, z. B. 41.01, 28.98
+Enlem, boylam (ör. 41.01, 28.98)	Breite, Länge (z. B. 41.01, 28.98)
+Fransa (UOIF)	Frankreich (UOIF)
+Gri satırlar: Ramazan (imsak ve iftar kalın)	Graue Zeilen: Ramadan (Fadschr und Iftar fett)
+Gün	Tag
+Güneş doğuşu %s · batışı %s · gün %d sa %d dk	Sonnenaufgang %s · -untergang %s · Tag %d h %d min
+Güneş şu an ufkun altında	Die Sonne steht jetzt unter dem Horizont
+Güneşe %s	%s bis Sonnenaufgang
+Hava Durumu şehri: %s	Wetter-Stadt: %s
+Hesaplama yöntemi	Berechnungsmethode
+Hicri	Hidschri
+Hicri tarih: 2016 Hicri Takvim Birliği ölçütüyle (Diyanet'in kullandığı) hesaplanır; nadiren bir gün farklı olabilir.	Hidschri-Datum: nach dem Kriterium der Hidschri-Kalender-Union 2016 (wie bei Diyanet); selten um einen Tag verschieden.
+Hicri: %s	Hidschri: %s
+Hicri: %s – %s	Hidschri: %s – %s
+Karaçi (İslami İlimler Üniv.)	Karatschi (Univ. für Islamwiss.)
+Kindle saati	Uhr des Kindle
+Kindle'da pusula yok: cihazı, ☀ işareti gökteki Güneş'i gösterecek biçimde çevirin; ok o zaman kıbleyi gösterir.	Der Kindle hat keinen Kompass: Drehen Sie ihn, bis das ☀-Zeichen zur Sonne am Himmel zeigt; dann zeigt der Pfeil die Qibla.
+Koordinat	Koordinaten
+Kuzey Amerika (ISNA)	Nordamerika (ISNA)
+Kâbe'ye uzaklık: %s km · gerçek kuzeye göre	Entfernung zur Kaaba: %s km · bezogen auf geografisch Nord
+Küçülen ay	Abnehmender Mond
+Küçülen hilal	Abnehmende Sichel
+Kıble	Qibla
+Kıble %.0f° %s · %s	Qibla %.0f° %s · %s
+Kıble saati %s: Güneş o an tam kıble yönündedir.	Qibla-Zeit %s: Dann steht die Sonne genau in Qibla-Richtung.
+Müslüman Dünya Birliği (MWL)	Islamische Weltliga (MWL)
+Mısır (Genel Etüt Kurumu)	Ägypten (Vermessungsbehörde)
+Recep	Radschab
+Saat dilimi	Zeitzone
+Sayfa %d / %d	Seite %d / %d
+Seçilen yer Vakitler'e kaydedilir (data/vakit/place); Hava Durumu'nun şehir listesi değişmez.	Der gewählte Ort wird für Gebetszeiten gespeichert (data/vakit/place); die Städteliste der Wetter-App bleibt unverändert.
+Türkiye (81 il)	Türkei (81 Provinzen)
+Türkiye (UTC+3)	Türkei (UTC+3)
+UTC farkı (saat, ör. 3 veya -5 ya da 5,5)	UTC-Abstand (Stunden, z. B. 3, -5 oder 5.5)
+UTC farkı gir	UTC-Abstand eingeben
+Vakitler	Gebetszeiten
+Vakitler hangi saate göre gösterilsin?	Nach welcher Uhr sollen die Zeiten gelten?
+Yarın %s %s	Morgen %s %s
+Yatsıya %s	%s bis Ischa
+Yeni Ay	Neumond
+Yerin adı	Name des Ortes
+Zeval %s · Ay: %s, %%%d aydınlık	Sonnenhöchststand %s · Mond: %s, %d%% beleuchtet
+Öğleye %s	%s bis Dhuhr
+Ümmü'l-Kurâ (Mekke)	Umm al-Qura (Mekka)
+İkindiye %s	%s bis Asr
+İmsak %s°, yatsı %s°; temkin yok.	Fadschr %s°, Ischa %s°; ohne Temkin.
+İmsak %s°, yatsı akşamdan %d dk sonra (Ramazan'da %d dk); temkin yok.	Fadschr %s°, Ischa %d Min. nach Maghrib (im Ramadan %d Min.); ohne Temkin.
+İmsaka %s	%s bis Fadschr
+İmsakiye	Monatstabelle
+Şehir	Stadt
+Şu an: %s (%.2f, %.2f)	Jetzt: %s (%.2f, %.2f)
+☀ Güneş şu an %.0f° %s yönünde, %.0f° yüksekte	☀ Die Sonne steht jetzt bei %.0f° %s, %.0f° hoch
