@@ -327,11 +327,8 @@ KuiEvent kui_next_event(int timeout_ms)
 				if (strstr(buf, "outOfScreenSaver")) {
 					asleep = 0;
 					memset(&gesture, 0, sizeof gesture);
-<<<<<<< HEAD
 					kui_screen_woke(); /* the app's redraw after this event flashes once, with no change in the app */
-=======
 					drag_reset();
->>>>>>> worktree-agent-af5e7b1b370639756
 					return (KuiEvent){ KUI_EV_WAKE, 0, 0, KUI_DIR_NONE };
 				}
 			} else if (r == 0 || (r < 0 && errno != EAGAIN)) {

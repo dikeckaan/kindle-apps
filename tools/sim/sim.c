@@ -29,9 +29,7 @@ static int shot, asleep;
 static const char *script;
 static KuiDirty dirty;
 static char app_name[64];
-<<<<<<< HEAD
 static KuiRefreshPolicy policy;
-=======
 static int drag_mode;
 #define QN 4096
 static KuiEvent queue[QN];
@@ -74,7 +72,6 @@ static KuiEvent sim_touch(const int *pts, int n, long hold_ms)
 	sim_t += 50;
 	return gest;
 }
->>>>>>> worktree-agent-af5e7b1b370639756
 
 static unsigned char *slurp(const char *path)
 {

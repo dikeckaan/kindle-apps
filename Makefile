@@ -57,21 +57,12 @@ TEST_test_astro_SRCS := apps/sky/astro.c
 TEST_test_odak_SRCS := apps/odak/odak.c
 TEST_test_agenda_SRCS := apps/ajanda/agenda.c core/kui/store.c
 TEST_test_siir_SRCS := apps/siir/siir.c
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 TEST_test_vakit_SRCS := apps/vakit/vakit.c apps/vakit/cities.c apps/sky/astro.c
-=======
 TEST_test_drag_SRCS := core/kui/drag.c core/kui/gesture.c
 TEST_test_notlar_SRCS := apps/notlar/notlar.c core/kui/layout.c core/kui/store.c
->>>>>>> worktree-agent-af5e7b1b370639756
-=======
 TEST_test_masa_SRCS := apps/masa/reversi.c apps/masa/dama.c apps/masa/go.c
->>>>>>> worktree-agent-a5d58a31f5b721fb3
-=======
 TEST_test_akis_SRCS := apps/akis/akis.c core/net/xml.c core/kui/utf8tr.c
 TEST_test_uyku_SRCS := apps/uyku/uyku.c
->>>>>>> worktree-agent-ae1fb42a01da4dcec
 
 TESTS := $(patsubst tests/host/%.c,%,$(wildcard tests/host/test_*.c))
 
@@ -123,12 +114,11 @@ APP_sky_SRCS := apps/sky/main.c apps/sky/astro.c apps/sky/canvas.c apps/sky/skyd
 APP_odak_SRCS := apps/odak/main.c apps/odak/odak.c
 APP_ajanda_SRCS := apps/ajanda/main.c apps/ajanda/agenda.c
 APP_siir_SRCS := apps/siir/main.c apps/siir/siir.c
-<<<<<<< HEAD
-APP_vakit_SRCS := apps/vakit/main.c apps/vakit/vakit.c apps/vakit/cities.c apps/sky/astro.c APP_notlar_SRCS apps/notlar/main.c apps/notlar/notlar.c APP_masa_SRCS apps/masa/main.c apps/masa/rv_ui.c apps/masa/dm_ui.c apps/masa/go_ui.c apps/masa/reversi.c apps/masa/dama.c apps/masa/go.c
-=======
+APP_vakit_SRCS := apps/vakit/main.c apps/vakit/vakit.c apps/vakit/cities.c apps/sky/astro.c
+APP_notlar_SRCS := apps/notlar/main.c apps/notlar/notlar.c
+APP_masa_SRCS := apps/masa/main.c apps/masa/rv_ui.c apps/masa/dm_ui.c apps/masa/go_ui.c apps/masa/reversi.c apps/masa/dama.c apps/masa/go.c
 APP_akis_SRCS := apps/akis/main.c apps/akis/akis.c apps/news/news.c $(NET_SRCS)
 APP_uyku_SRCS := apps/uyku/main.c apps/uyku/uyku.c apps/weather/wx.c apps/weather/wxdraw.c apps/ajanda/agenda.c apps/siir/siir.c apps/pano/pano.c $(NET_SRCS)
->>>>>>> worktree-agent-ae1fb42a01da4dcec
 
 $(OUT)/%: $$(APP_$$*_SRCS) $(FBINK_A) $(KUI_SRCS) $(wildcard core/kui/*.h)
 	@mkdir -p $(dir $@)
@@ -178,12 +168,11 @@ PKG_sky_FILES := $(OUT)/sky apps/sky/data/LICENSE
 PKG_odak_FILES := $(OUT)/odak
 PKG_ajanda_FILES := $(OUT)/ajanda
 PKG_siir_FILES := $(OUT)/siir apps/siir/data/poems.txt apps/siir/data/SOURCES
-<<<<<<< HEAD
-PKG_vakit_FILES := $(OUT)/vakit PKG_notlar_FILES $(OUT)/notlar PKG_masa_FILES $(OUT)/masa
-=======
+PKG_vakit_FILES := $(OUT)/vakit
+PKG_notlar_FILES := $(OUT)/notlar
+PKG_masa_FILES := $(OUT)/masa
 PKG_akis_FILES := $(OUT)/akis
 PKG_uyku_FILES := $(OUT)/uyku
->>>>>>> worktree-agent-ae1fb42a01da4dcec
 
 dist:
 	@for f in $(OUT)/hub $(foreach p,$(PKGS),$(PKG_$(p)_FILES)); do [ -f $$f ] || { echo "missing $$f: run make build first"; exit 1; }; done

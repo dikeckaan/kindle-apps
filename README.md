@@ -29,12 +29,9 @@ Kitaplıkta tek bir **"Uygulamalar"** girişi olur; açınca bütün uygulamalar
 | Sistem Bilgisi (pil, depolama, bellek, Wi-Fi, sürüm, güvenlik) | ✅ |
 | Wi-Fi ile Yükle (tarayıcıdan PIN'li kitap gönderme) | ✅ |
 | E-Kitap (Project Gutenberg'den telifsiz kitap arama ve indirme, AZW3/EPUB) | ✅ |
-<<<<<<< HEAD
 | Masa Oyunları (Reversi, Türk daması, Go 9×9/13×13: Kindle'a karşı 3 zorluk ya da iki kişilik) | ✅ |
-=======
 | Akış (kendi RSS/Atom akışlarınız: klasörler, okunmamışlar, çevrimdışı okuma, popüler akışlar kataloğu, OPML) | ✅ |
 | Uyku Ekranı (tarih, hava, ajanda, günün şiiri; Kindle aralarda derin uykuda, 30/60/120 dk'da bir tazelenir) | ✅ |
->>>>>>> worktree-agent-ae1fb42a01da4dcec
 
 ## Gereksinimler
 
