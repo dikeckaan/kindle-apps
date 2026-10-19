@@ -740,3 +740,68 @@ Kolay okuma: Kapalı	Лёгкое чтение: выкл
 Basit mod: Açık	Простой режим: вкл
 Basit mod: Kapalı	Простой режим: выкл
 Kolay okuma: bütün yazılar büyük, kalın ve siyah olur.\nBasit mod: menüde dört büyük düğme; panoda yalnızca saat, hava ve üç haber. Teknik uygulamalar gizlenir; bu ekrandan her zaman geri açılabilir.	Лёгкое чтение: весь текст становится крупным, жирным и чёрным.\nПростой режим: четыре большие кнопки в меню; на панели только часы, погода и три новости. Технические приложения скрываются; их всегда можно вернуть на этом экране.
+Kelime Öğren	Учим слова
+Türkçe	Турецкий
+İngilizce	Английский
+Almanca	Немецкий
+Fransızca	Французский
+İspanyolca	Испанский
+İtalyanca	Итальянский
+Portekizce	Португальский
+Başlangıç	Начальный
+Temel	Элементарный
+Orta üstü	Выше среднего
+İleri	Продвинутый
+Ustalık	В совершенстве
+isim	существительное
+fiil	глагол
+sıfat	прилагательное
+zarf	наречие
+zamir	местоимение
+edat	предлог
+bağlaç	союз
+sayı	числительное
+belirleyici	определитель
+ünlem	междометие
+deyim	выражение
+Diller	Языки
+Öğrendiğim dil	Я изучаю
+Ana dilim	Мой язык
+Sorular öğrendiğin dilde, açıklamalar iki dilde gelir.	Вопросы на изучаемом языке, пояснения на обоих языках.
+%d kelime, A1'den C2'ye	%d слов, от A1 до C2
+Bu kelime ne demek?	Что значит это слово?
+%s karşılığı hangisi?	Какое это слово (%s)?
+Bu tanım hangi kelimenin? (%s)	Какое слово здесь объясняется? (%s)
+Boşluğa hangi kelime gelir?	Какое слово пропущено?
+Bu çeviri doğru mu?	Этот перевод верный?
+Doğru	Верно
+Yanlış	Неверно
+Sonuç	Итог
+Ders bitti	Урок окончен
+%d sorudan %d doğru	%d вопросов, %d верно
++%d XP	+%d XP
++%d XP (hatasız ders: +%d)	+%d XP (без ошибок: +%d)
+Seri: %d gün · bugün %d/%d XP	Серия: %d дн. · сегодня %d/%d XP
+Tekrar edilecek kelimeler	Слова для повторения
+Hiç hata yok, harika!	Без ошибок, отлично!
+Yeni ders	Новый урок
+Ana ekran	Главная
+Tekrar	Повторение
+Tekrar (%d)	Повторение (%d)
+Bu seviyede soru yok	На этом уровне нет вопросов
+Tekrar edilecek kelime yok	Нечего повторять
+Bu dil ikilisinde bu seviyede sorulacak kelime bulunamadı.	Для этой пары языков на этом уровне нет слов.
+Önce birkaç ders yapın; yanlış bildiğiniz kelimeler burada tekrar sorulur.	Сначала пройдите несколько уроков; слова с ошибками повторяются здесь.
+%s öğreniyorum · ana dilim %s	Изучаю: %s · мой язык: %s
+Toplam: %ld XP · bugün %d XP	Всего: %ld XP · сегодня %d XP
+Seri: %d gün · en uzun %d gün	Серия: %d дн. · рекорд %d дн.
+%d ders · %d cevap · %%%d doğru	%d уроков · %d ответов · %d%% верно
+%d kelime görüldü · %d öğrenildi · %d tekrar bekliyor	%d слов встречено · %d выучено · %d ждут повторения
+Seviyeler	Уровни
+Tekrar kutuları	Карточные ящики
+1: yeni kaçırılan · 5: iyice öğrenildi (aralık 1, 2, 4, 8, 21 gün)	1: только что ошибка · 5: хорошо выучено (через 1, 2, 4, 8, 21 дн.)
+Değiştir	Изменить
+Seri: %d gün · %ld XP · bugün %d/%d	Серия: %d дн. · %ld XP · сегодня %d/%d
+Kaynak: Vikisözlük (CC BY-SA), Tatoeba (CC BY), CEFR-J; seviyeler sıklığa göre	Источники: Викисловарь (CC BY-SA), Tatoeba (CC BY), CEFR-J; уровни по частотности
+Kelime listeleri yüklenemedi.	Не удалось загрузить списки слов.
+%d / %d öğrenildi	%d / %d выучено

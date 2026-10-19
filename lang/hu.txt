@@ -740,3 +740,68 @@ Kolay okuma: Kapalı	Könnyű olvasás: Ki
 Basit mod: Açık	Egyszerű mód: Be
 Basit mod: Kapalı	Egyszerű mód: Ki
 Kolay okuma: bütün yazılar büyük, kalın ve siyah olur.\nBasit mod: menüde dört büyük düğme; panoda yalnızca saat, hava ve üç haber. Teknik uygulamalar gizlenir; bu ekrandan her zaman geri açılabilir.	Könnyű olvasás: minden szöveg nagy, félkövér és fekete lesz.\nEgyszerű mód: négy nagy gomb a menüben; az áttekintő csak az órát, az időjárást és három hírt mutatja. A technikai alkalmazások elrejtődnek; ezen a képernyőn bármikor visszakapcsolhatók.
+Kelime Öğren	Szótanuló
+Türkçe	Török
+İngilizce	Angol
+Almanca	Német
+Fransızca	Francia
+İspanyolca	Spanyol
+İtalyanca	Olasz
+Portekizce	Portugál
+Başlangıç	Kezdő
+Temel	Alapfok
+Orta üstü	Középfok felső
+İleri	Haladó
+Ustalık	Mesterfok
+isim	főnév
+fiil	ige
+sıfat	melléknév
+zarf	határozószó
+zamir	névmás
+edat	elöljárószó
+bağlaç	kötőszó
+sayı	számnév
+belirleyici	determináns
+ünlem	indulatszó
+deyim	kifejezés
+Diller	Nyelvek
+Öğrendiğim dil	Ezt tanulom
+Ana dilim	Anyanyelvem
+Sorular öğrendiğin dilde, açıklamalar iki dilde gelir.	A kérdések a tanult nyelven, a magyarázatok mindkét nyelven.
+%d kelime, A1'den C2'ye	%d szó, A1-től C2-ig
+Bu kelime ne demek?	Mit jelent ez a szó?
+%s karşılığı hangisi?	Melyik a szó (%s)?
+Bu tanım hangi kelimenin? (%s)	Melyik szó meghatározása? (%s)
+Boşluğa hangi kelime gelir?	Melyik szó illik a hiányzó helyre?
+Bu çeviri doğru mu?	Helyes ez a fordítás?
+Doğru	Igaz
+Yanlış	Hamis
+Sonuç	Eredmény
+Ders bitti	Lecke kész
+%d sorudan %d doğru	%d kérdés, %d helyes
++%d XP	+%d XP
++%d XP (hatasız ders: +%d)	+%d XP (hibátlan: +%d)
+Seri: %d gün · bugün %d/%d XP	Sorozat: %d nap · ma %d/%d XP
+Tekrar edilecek kelimeler	Ismétlendő szavak
+Hiç hata yok, harika!	Hibátlan, nagyszerű!
+Yeni ders	Új lecke
+Ana ekran	Kezdőlap
+Tekrar	Ismétlés
+Tekrar (%d)	Ismétlés (%d)
+Bu seviyede soru yok	Ezen a szinten nincs kérdés
+Tekrar edilecek kelime yok	Nincs mit ismételni
+Bu dil ikilisinde bu seviyede sorulacak kelime bulunamadı.	Ennél a nyelvpárnál ezen a szinten nincs szó.
+Önce birkaç ders yapın; yanlış bildiğiniz kelimeler burada tekrar sorulur.	Előbb végezzen el néhány leckét; az elrontott szavak itt jönnek újra.
+%s öğreniyorum · ana dilim %s	Tanult nyelv: %s · anyanyelv: %s
+Toplam: %ld XP · bugün %d XP	Összesen: %ld XP · ma %d XP
+Seri: %d gün · en uzun %d gün	Sorozat: %d nap · leghosszabb %d nap
+%d ders · %d cevap · %%%d doğru	%d lecke · %d válasz · %d%% helyes
+%d kelime görüldü · %d öğrenildi · %d tekrar bekliyor	%d szó látva · %d megtanulva · %d ismétlésre vár
+Seviyeler	Szintek
+Tekrar kutuları	Ismétlődobozok
+1: yeni kaçırılan · 5: iyice öğrenildi (aralık 1, 2, 4, 8, 21 gün)	1: épp elrontott · 5: jól megtanult (1, 2, 4, 8, 21 naponta)
+Değiştir	Módosít
+Seri: %d gün · %ld XP · bugün %d/%d	Sorozat: %d nap · %ld XP · ma %d/%d
+Kaynak: Vikisözlük (CC BY-SA), Tatoeba (CC BY), CEFR-J; seviyeler sıklığa göre	Források: Wikiszótár (CC BY-SA), Tatoeba (CC BY), CEFR-J; szintek gyakoriság szerint
+Kelime listeleri yüklenemedi.	A szólisták nem tölthetők be.
+%d / %d öğrenildi	%d / %d megtanulva

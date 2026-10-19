@@ -740,3 +740,68 @@ Kolay okuma: Kapalı	Leitura fácil: Não
 Basit mod: Açık	Modo simples: Sim
 Basit mod: Kapalı	Modo simples: Não
 Kolay okuma: bütün yazılar büyük, kalın ve siyah olur.\nBasit mod: menüde dört büyük düğme; panoda yalnızca saat, hava ve üç haber. Teknik uygulamalar gizlenir; bu ekrandan her zaman geri açılabilir.	Leitura fácil: todo o texto fica grande, em negrito e preto.\nModo simples: quatro botões grandes no menu; o painel mostra só a hora, o tempo e três notícias. As apps técnicas ficam ocultas; pode sempre reativá-las neste ecrã.
+Kelime Öğren	Aprender palavras
+Türkçe	Turco
+İngilizce	Inglês
+Almanca	Alemão
+Fransızca	Francês
+İspanyolca	Espanhol
+İtalyanca	Italiano
+Portekizce	Português
+Başlangıç	Iniciante
+Temel	Básico
+Orta üstü	Intermediário superior
+İleri	Avançado
+Ustalık	Domínio
+isim	substantivo
+fiil	verbo
+sıfat	adjetivo
+zarf	advérbio
+zamir	pronome
+edat	preposição
+bağlaç	conjunção
+sayı	numeral
+belirleyici	determinante
+ünlem	interjeição
+deyim	locução
+Diller	Idiomas
+Öğrendiğim dil	Estou aprendendo
+Ana dilim	Minha língua
+Sorular öğrendiğin dilde, açıklamalar iki dilde gelir.	Perguntas na língua que aprende, explicações nas duas línguas.
+%d kelime, A1'den C2'ye	%d palavras, de A1 a C2
+Bu kelime ne demek?	O que significa esta palavra?
+%s karşılığı hangisi?	Qual é a palavra em %s?
+Bu tanım hangi kelimenin? (%s)	Que palavra é definida aqui? (%s)
+Boşluğa hangi kelime gelir?	Que palavra preenche a lacuna?
+Bu çeviri doğru mu?	Esta tradução está certa?
+Doğru	Verdadeiro
+Yanlış	Falso
+Sonuç	Resultado
+Ders bitti	Lição concluída
+%d sorudan %d doğru	%d perguntas, %d certas
++%d XP	+%d XP
++%d XP (hatasız ders: +%d)	+%d XP (sem erros: +%d)
+Seri: %d gün · bugün %d/%d XP	Sequência: %d dias · hoje %d/%d XP
+Tekrar edilecek kelimeler	Palavras para rever
+Hiç hata yok, harika!	Nenhum erro, ótimo!
+Yeni ders	Nova lição
+Ana ekran	Início
+Tekrar	Revisão
+Tekrar (%d)	Revisão (%d)
+Bu seviyede soru yok	Sem perguntas neste nível
+Tekrar edilecek kelime yok	Nada para rever
+Bu dil ikilisinde bu seviyede sorulacak kelime bulunamadı.	Não há palavras deste nível para este par de línguas.
+Önce birkaç ders yapın; yanlış bildiğiniz kelimeler burada tekrar sorulur.	Faça primeiro algumas lições; as palavras erradas voltam aqui.
+%s öğreniyorum · ana dilim %s	Aprendo %s · minha língua %s
+Toplam: %ld XP · bugün %d XP	Total: %ld XP · hoje %d XP
+Seri: %d gün · en uzun %d gün	Sequência: %d dias · recorde %d dias
+%d ders · %d cevap · %%%d doğru	%d lições · %d respostas · %d%% certas
+%d kelime görüldü · %d öğrenildi · %d tekrar bekliyor	%d palavras vistas · %d aprendidas · %d para rever
+Seviyeler	Níveis
+Tekrar kutuları	Caixas de revisão
+1: yeni kaçırılan · 5: iyice öğrenildi (aralık 1, 2, 4, 8, 21 gün)	1: errada há pouco · 5: bem aprendida (a cada 1, 2, 4, 8, 21 dias)
+Değiştir	Mudar
+Seri: %d gün · %ld XP · bugün %d/%d	Sequência: %d dias · %ld XP · hoje %d/%d
+Kaynak: Vikisözlük (CC BY-SA), Tatoeba (CC BY), CEFR-J; seviyeler sıklığa göre	Fontes: Wikcionário (CC BY-SA), Tatoeba (CC BY), CEFR-J; níveis por frequência
+Kelime listeleri yüklenemedi.	Não foi possível carregar as listas de palavras.
+%d / %d öğrenildi	%d / %d aprendidas

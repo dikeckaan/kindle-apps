@@ -740,3 +740,68 @@ Kolay okuma: Kapalı	Makkelijk lezen: Uit
 Basit mod: Açık	Eenvoudige modus: Aan
 Basit mod: Kapalı	Eenvoudige modus: Uit
 Kolay okuma: bütün yazılar büyük, kalın ve siyah olur.\nBasit mod: menüde dört büyük düğme; panoda yalnızca saat, hava ve üç haber. Teknik uygulamalar gizlenir; bu ekrandan her zaman geri açılabilir.	Makkelijk lezen: alle tekst wordt groot, vet en zwart.\nEenvoudige modus: vier grote knoppen in het menu; het overzicht toont alleen klok, weer en drie nieuwsberichten. Technische apps worden verborgen; via dit scherm altijd weer aan te zetten.
+Kelime Öğren	Woorden leren
+Türkçe	Turks
+İngilizce	Engels
+Almanca	Duits
+Fransızca	Frans
+İspanyolca	Spaans
+İtalyanca	Italiaans
+Portekizce	Portugees
+Başlangıç	Beginner
+Temel	Basis
+Orta üstü	Hoger gevorderd
+İleri	Gevorderd
+Ustalık	Meesterschap
+isim	zelfstandig nw.
+fiil	werkwoord
+sıfat	bijvoeglijk nw.
+zarf	bijwoord
+zamir	voornaamwoord
+edat	voorzetsel
+bağlaç	voegwoord
+sayı	telwoord
+belirleyici	lidwoord
+ünlem	tussenwerpsel
+deyim	uitdrukking
+Diller	Talen
+Öğrendiğim dil	Ik leer
+Ana dilim	Mijn taal
+Sorular öğrendiğin dilde, açıklamalar iki dilde gelir.	Vragen in de taal die je leert, uitleg in beide talen.
+%d kelime, A1'den C2'ye	%d woorden, van A1 tot C2
+Bu kelime ne demek?	Wat betekent dit woord?
+%s karşılığı hangisi?	Welk woord is het in het %s?
+Bu tanım hangi kelimenin? (%s)	Welk woord wordt hier uitgelegd? (%s)
+Boşluğa hangi kelime gelir?	Welk woord past in de open plek?
+Bu çeviri doğru mu?	Klopt deze vertaling?
+Doğru	Waar
+Yanlış	Fout
+Sonuç	Resultaat
+Ders bitti	Les klaar
+%d sorudan %d doğru	%d vragen, %d goed
++%d XP	+%d XP
++%d XP (hatasız ders: +%d)	+%d XP (foutloos: +%d)
+Seri: %d gün · bugün %d/%d XP	Reeks: %d dagen · vandaag %d/%d XP
+Tekrar edilecek kelimeler	Woorden om te herhalen
+Hiç hata yok, harika!	Geen fouten, top!
+Yeni ders	Nieuwe les
+Ana ekran	Start
+Tekrar	Herhalen
+Tekrar (%d)	Herhalen (%d)
+Bu seviyede soru yok	Geen vragen op dit niveau
+Tekrar edilecek kelime yok	Niets te herhalen
+Bu dil ikilisinde bu seviyede sorulacak kelime bulunamadı.	Geen woorden op dit niveau voor dit talenpaar.
+Önce birkaç ders yapın; yanlış bildiğiniz kelimeler burada tekrar sorulur.	Doe eerst een paar lessen; gemiste woorden komen hier terug.
+%s öğreniyorum · ana dilim %s	Ik leer %s · mijn taal %s
+Toplam: %ld XP · bugün %d XP	Totaal: %ld XP · vandaag %d XP
+Seri: %d gün · en uzun %d gün	Reeks: %d dagen · langste %d dagen
+%d ders · %d cevap · %%%d doğru	%d lessen · %d antwoorden · %d%% goed
+%d kelime görüldü · %d öğrenildi · %d tekrar bekliyor	%d woorden gezien · %d geleerd · %d te herhalen
+Seviyeler	Niveaus
+Tekrar kutuları	Herhaalbakjes
+1: yeni kaçırılan · 5: iyice öğrenildi (aralık 1, 2, 4, 8, 21 gün)	1: net gemist · 5: goed geleerd (elke 1, 2, 4, 8, 21 dagen)
+Değiştir	Wijzigen
+Seri: %d gün · %ld XP · bugün %d/%d	Reeks: %d dagen · %ld XP · vandaag %d/%d
+Kaynak: Vikisözlük (CC BY-SA), Tatoeba (CC BY), CEFR-J; seviyeler sıklığa göre	Bronnen: WikiWoordenboek (CC BY-SA), Tatoeba (CC BY), CEFR-J; niveaus naar frequentie
+Kelime listeleri yüklenemedi.	De woordenlijsten konden niet worden geladen.
+%d / %d öğrenildi	%d / %d geleerd

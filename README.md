@@ -29,6 +29,7 @@ Kitaplıkta tek bir **"Uygulamalar"** girişi olur; açınca bütün uygulamalar
 | Sistem Bilgisi (pil, depolama, bellek, Wi-Fi, sürüm, güvenlik) | ✅ |
 | Wi-Fi ile Yükle (tarayıcıdan PIN'li kitap gönderme) | ✅ |
 | E-Kitap (Project Gutenberg'den telifsiz kitap arama ve indirme, AZW3/EPUB) | ✅ |
+| Kelime Öğren (Duolingo gibi kelime oyunu: 7 dil arasında her ikili, A1–C2, tanım + örnek cümle, aralıklı tekrar, seri; Vikisözlük + Tatoeba, çevrimdışı) | ✅ |
 
 ## Gereksinimler
 

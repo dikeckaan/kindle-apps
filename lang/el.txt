@@ -740,3 +740,68 @@ Kolay okuma: Kapalı	Εύκολη ανάγνωση: Όχι
 Basit mod: Açık	Απλή λειτουργία: Ναι
 Basit mod: Kapalı	Απλή λειτουργία: Όχι
 Kolay okuma: bütün yazılar büyük, kalın ve siyah olur.\nBasit mod: menüde dört büyük düğme; panoda yalnızca saat, hava ve üç haber. Teknik uygulamalar gizlenir; bu ekrandan her zaman geri açılabilir.	Εύκολη ανάγνωση: όλα τα κείμενα γίνονται μεγάλα, έντονα και μαύρα.\nΑπλή λειτουργία: τέσσερα μεγάλα κουμπιά στο μενού· ο πίνακας δείχνει μόνο ώρα, καιρό και τρεις ειδήσεις. Οι τεχνικές εφαρμογές κρύβονται· μπορούν πάντα να ενεργοποιηθούν ξανά από αυτή την οθόνη.
+Kelime Öğren	Λεξιλόγιο
+Türkçe	Τουρκικά
+İngilizce	Αγγλικά
+Almanca	Γερμανικά
+Fransızca	Γαλλικά
+İspanyolca	Ισπανικά
+İtalyanca	Ιταλικά
+Portekizce	Πορτογαλικά
+Başlangıç	Αρχάριος
+Temel	Βασικό
+Orta üstü	Ανώτερο μέσο
+İleri	Προχωρημένο
+Ustalık	Άριστο
+isim	ουσιαστικό
+fiil	ρήμα
+sıfat	επίθετο
+zarf	επίρρημα
+zamir	αντωνυμία
+edat	πρόθεση
+bağlaç	σύνδεσμος
+sayı	αριθμητικό
+belirleyici	προσδιοριστής
+ünlem	επιφώνημα
+deyim	φράση
+Diller	Γλώσσες
+Öğrendiğim dil	Μαθαίνω
+Ana dilim	Η γλώσσα μου
+Sorular öğrendiğin dilde, açıklamalar iki dilde gelir.	Ερωτήσεις στη γλώσσα που μαθαίνεις, εξηγήσεις και στις δύο γλώσσες.
+%d kelime, A1'den C2'ye	%d λέξεις, από A1 έως C2
+Bu kelime ne demek?	Τι σημαίνει αυτή η λέξη;
+%s karşılığı hangisi?	Ποια είναι η λέξη στα %s;
+Bu tanım hangi kelimenin? (%s)	Ποια λέξη ορίζεται εδώ; (%s)
+Boşluğa hangi kelime gelir?	Ποια λέξη συμπληρώνει το κενό;
+Bu çeviri doğru mu?	Είναι σωστή αυτή η μετάφραση;
+Doğru	Σωστό
+Yanlış	Λάθος
+Sonuç	Αποτέλεσμα
+Ders bitti	Το μάθημα τελείωσε
+%d sorudan %d doğru	%d ερωτήσεις, %d σωστές
++%d XP	+%d XP
++%d XP (hatasız ders: +%d)	+%d XP (χωρίς λάθη: +%d)
+Seri: %d gün · bugün %d/%d XP	Σερί: %d ημέρες · σήμερα %d/%d XP
+Tekrar edilecek kelimeler	Λέξεις για επανάληψη
+Hiç hata yok, harika!	Κανένα λάθος, τέλεια!
+Yeni ders	Νέο μάθημα
+Ana ekran	Αρχική
+Tekrar	Επανάληψη
+Tekrar (%d)	Επανάληψη (%d)
+Bu seviyede soru yok	Δεν υπάρχουν ερωτήσεις σε αυτό το επίπεδο
+Tekrar edilecek kelime yok	Τίποτα για επανάληψη
+Bu dil ikilisinde bu seviyede sorulacak kelime bulunamadı.	Δεν υπάρχουν λέξεις σε αυτό το επίπεδο για αυτό το ζεύγος γλωσσών.
+Önce birkaç ders yapın; yanlış bildiğiniz kelimeler burada tekrar sorulur.	Κάνε πρώτα μερικά μαθήματα· οι λέξεις που έχασες επανέρχονται εδώ.
+%s öğreniyorum · ana dilim %s	Μαθαίνω %s · η γλώσσα μου %s
+Toplam: %ld XP · bugün %d XP	Σύνολο: %ld XP · σήμερα %d XP
+Seri: %d gün · en uzun %d gün	Σερί: %d ημέρες · μέγιστο %d ημέρες
+%d ders · %d cevap · %%%d doğru	%d μαθήματα · %d απαντήσεις · %d%% σωστές
+%d kelime görüldü · %d öğrenildi · %d tekrar bekliyor	%d λέξεις είδες · %d έμαθες · %d για επανάληψη
+Seviyeler	Επίπεδα
+Tekrar kutuları	Κουτιά επανάληψης
+1: yeni kaçırılan · 5: iyice öğrenildi (aralık 1, 2, 4, 8, 21 gün)	1: μόλις λάθος · 5: καλά μαθημένη (κάθε 1, 2, 4, 8, 21 ημέρες)
+Değiştir	Αλλαγή
+Seri: %d gün · %ld XP · bugün %d/%d	Σερί: %d ημέρες · %ld XP · σήμερα %d/%d
+Kaynak: Vikisözlük (CC BY-SA), Tatoeba (CC BY), CEFR-J; seviyeler sıklığa göre	Πηγές: Βικιλεξικό (CC BY-SA), Tatoeba (CC BY), CEFR-J· επίπεδα κατά συχνότητα
+Kelime listeleri yüklenemedi.	Δεν ήταν δυνατή η φόρτωση των λιστών λέξεων.
+%d / %d öğrenildi	%d / %d μαθημένες

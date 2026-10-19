@@ -740,3 +740,68 @@ Kolay okuma: Kapalı	Asan oxu: Bağlı
 Basit mod: Açık	Sadə rejim: Açıq
 Basit mod: Kapalı	Sadə rejim: Bağlı
 Kolay okuma: bütün yazılar büyük, kalın ve siyah olur.\nBasit mod: menüde dört büyük düğme; panoda yalnızca saat, hava ve üç haber. Teknik uygulamalar gizlenir; bu ekrandan her zaman geri açılabilir.	Asan oxu: bütün yazılar böyük, qalın və qara olur.\nSadə rejim: menyuda dörd böyük düymə; paneldə yalnız saat, hava və üç xəbər. Texniki tətbiqlər gizlədilir; bu ekrandan həmişə geri açıla bilər.
+Kelime Öğren	Söz öyrən
+Türkçe	Türk dili
+İngilizce	İngilis dili
+Almanca	Alman dili
+Fransızca	Fransız dili
+İspanyolca	İspan dili
+İtalyanca	İtalyan dili
+Portekizce	Portuqal dili
+Başlangıç	Başlanğıc
+Temel	Əsas
+Orta üstü	Ortadan yuxarı
+İleri	İrəli
+Ustalık	Ustalıq
+isim	isim
+fiil	feil
+sıfat	sifət
+zarf	zərf
+zamir	əvəzlik
+edat	qoşma
+bağlaç	bağlayıcı
+sayı	say
+belirleyici	təyinedici
+ünlem	nida
+deyim	ifadə
+Diller	Dillər
+Öğrendiğim dil	Öyrəndiyim dil
+Ana dilim	Ana dilim
+Sorular öğrendiğin dilde, açıklamalar iki dilde gelir.	Suallar öyrəndiyin dildə, izahlar iki dildə gəlir.
+%d kelime, A1'den C2'ye	%d söz, A1-dən C2-yə
+Bu kelime ne demek?	Bu söz nə deməkdir?
+%s karşılığı hangisi?	%s qarşılığı hansıdır?
+Bu tanım hangi kelimenin? (%s)	Bu tərif hansı sözündür? (%s)
+Boşluğa hangi kelime gelir?	Boşluğa hansı söz gəlir?
+Bu çeviri doğru mu?	Bu tərcümə düzgündürmü?
+Doğru	Düzgün
+Yanlış	Səhv
+Sonuç	Nəticə
+Ders bitti	Dərs bitdi
+%d sorudan %d doğru	%d sualdan %d düzgün
++%d XP	+%d XP
++%d XP (hatasız ders: +%d)	+%d XP (səhvsiz dərs: +%d)
+Seri: %d gün · bugün %d/%d XP	Seriya: %d gün · bu gün %d/%d XP
+Tekrar edilecek kelimeler	Təkrar ediləcək sözlər
+Hiç hata yok, harika!	Heç bir səhv yoxdur, əla!
+Yeni ders	Yeni dərs
+Ana ekran	Ana ekran
+Tekrar	Təkrar
+Tekrar (%d)	Təkrar (%d)
+Bu seviyede soru yok	Bu səviyyədə sual yoxdur
+Tekrar edilecek kelime yok	Təkrar ediləcək söz yoxdur
+Bu dil ikilisinde bu seviyede sorulacak kelime bulunamadı.	Bu dil cütü üçün bu səviyyədə söz tapılmadı.
+Önce birkaç ders yapın; yanlış bildiğiniz kelimeler burada tekrar sorulur.	Əvvəlcə bir neçə dərs keçin; səhv etdiyiniz sözlər burada yenidən soruşulur.
+%s öğreniyorum · ana dilim %s	%s öyrənirəm · ana dilim %s
+Toplam: %ld XP · bugün %d XP	Cəmi: %ld XP · bu gün %d XP
+Seri: %d gün · en uzun %d gün	Seriya: %d gün · ən uzun %d gün
+%d ders · %d cevap · %%%d doğru	%d dərs · %d cavab · %%%d düzgün
+%d kelime görüldü · %d öğrenildi · %d tekrar bekliyor	%d söz görüldü · %d öyrənildi · %d təkrar gözləyir
+Seviyeler	Səviyyələr
+Tekrar kutuları	Təkrar qutuları
+1: yeni kaçırılan · 5: iyice öğrenildi (aralık 1, 2, 4, 8, 21 gün)	1: yeni səhv · 5: yaxşı öyrənildi (hər 1, 2, 4, 8, 21 gün)
+Değiştir	Dəyiş
+Seri: %d gün · %ld XP · bugün %d/%d	Seriya: %d gün · %ld XP · bu gün %d/%d
+Kaynak: Vikisözlük (CC BY-SA), Tatoeba (CC BY), CEFR-J; seviyeler sıklığa göre	Mənbə: Vikilüğət (CC BY-SA), Tatoeba (CC BY), CEFR-J; səviyyələr tezliyə görə
+Kelime listeleri yüklenemedi.	Söz siyahıları yüklənmədi.
+%d / %d öğrenildi	%d / %d öyrənildi

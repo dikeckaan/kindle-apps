@@ -740,3 +740,68 @@ Kolay okuma: Kapalı	Easy reading: Off
 Basit mod: Açık	Simple mode: On
 Basit mod: Kapalı	Simple mode: Off
 Kolay okuma: bütün yazılar büyük, kalın ve siyah olur.\nBasit mod: menüde dört büyük düğme; panoda yalnızca saat, hava ve üç haber. Teknik uygulamalar gizlenir; bu ekrandan her zaman geri açılabilir.	Easy reading: all text becomes large, bold and black.\nSimple mode: four big buttons in the menu; the dashboard shows only the clock, weather and three news items. Technical apps are hidden; you can always turn them back on from this screen.
+Kelime Öğren	Learn Words
+Türkçe	Turkish
+İngilizce	English
+Almanca	German
+Fransızca	French
+İspanyolca	Spanish
+İtalyanca	Italian
+Portekizce	Portuguese
+Başlangıç	Beginner
+Temel	Elementary
+Orta üstü	Upper intermediate
+İleri	Advanced
+Ustalık	Proficient
+isim	noun
+fiil	verb
+sıfat	adjective
+zarf	adverb
+zamir	pronoun
+edat	preposition
+bağlaç	conjunction
+sayı	number
+belirleyici	determiner
+ünlem	interjection
+deyim	phrase
+Diller	Languages
+Öğrendiğim dil	I am learning
+Ana dilim	My language
+Sorular öğrendiğin dilde, açıklamalar iki dilde gelir.	Questions are in the language you learn; explanations come in both languages.
+%d kelime, A1'den C2'ye	%d words, from A1 to C2
+Bu kelime ne demek?	What does this word mean?
+%s karşılığı hangisi?	Which is the %s word?
+Bu tanım hangi kelimenin? (%s)	Which word is defined here? (%s)
+Boşluğa hangi kelime gelir?	Which word fills the gap?
+Bu çeviri doğru mu?	Is this translation right?
+Doğru	True
+Yanlış	Wrong
+Sonuç	Results
+Ders bitti	Lesson complete
+%d sorudan %d doğru	%d questions, %d right
++%d XP	+%d XP
++%d XP (hatasız ders: +%d)	+%d XP (perfect lesson: +%d)
+Seri: %d gün · bugün %d/%d XP	Streak: %d days · today %d/%d XP
+Tekrar edilecek kelimeler	Words to review
+Hiç hata yok, harika!	No mistakes, great!
+Yeni ders	New lesson
+Ana ekran	Home
+Tekrar	Review
+Tekrar (%d)	Review (%d)
+Bu seviyede soru yok	No questions at this level
+Tekrar edilecek kelime yok	Nothing to review
+Bu dil ikilisinde bu seviyede sorulacak kelime bulunamadı.	No words to ask at this level for this language pair.
+Önce birkaç ders yapın; yanlış bildiğiniz kelimeler burada tekrar sorulur.	Do a few lessons first; the words you miss are asked again here.
+%s öğreniyorum · ana dilim %s	Learning %s · my language %s
+Toplam: %ld XP · bugün %d XP	Total: %ld XP · today %d XP
+Seri: %d gün · en uzun %d gün	Streak: %d days · longest %d days
+%d ders · %d cevap · %%%d doğru	%d lessons · %d answers · %d%% right
+%d kelime görüldü · %d öğrenildi · %d tekrar bekliyor	%d words seen · %d learned · %d due for review
+Seviyeler	Levels
+Tekrar kutuları	Review boxes
+1: yeni kaçırılan · 5: iyice öğrenildi (aralık 1, 2, 4, 8, 21 gün)	1: just missed · 5: well learned (every 1, 2, 4, 8, 21 days)
+Değiştir	Change
+Seri: %d gün · %ld XP · bugün %d/%d	Streak: %d days · %ld XP · today %d/%d
+Kaynak: Vikisözlük (CC BY-SA), Tatoeba (CC BY), CEFR-J; seviyeler sıklığa göre	Sources: Wiktionary (CC BY-SA), Tatoeba (CC BY), CEFR-J; levels by frequency
+Kelime listeleri yüklenemedi.	The word lists could not be loaded.
+%d / %d öğrenildi	%d / %d learned

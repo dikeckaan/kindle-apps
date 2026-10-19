@@ -740,3 +740,68 @@ Kolay okuma: Kapalı	Lättläst: Av
 Basit mod: Açık	Enkelt läge: På
 Basit mod: Kapalı	Enkelt läge: Av
 Kolay okuma: bütün yazılar büyük, kalın ve siyah olur.\nBasit mod: menüde dört büyük düğme; panoda yalnızca saat, hava ve üç haber. Teknik uygulamalar gizlenir; bu ekrandan her zaman geri açılabilir.	Lättläst: all text blir stor, fet och svart.\nEnkelt läge: fyra stora knappar i menyn; översikten visar bara klocka, väder och tre nyheter. Tekniska appar döljs; de kan alltid slås på igen från den här skärmen.
+Kelime Öğren	Glosor
+Türkçe	Turkiska
+İngilizce	Engelska
+Almanca	Tyska
+Fransızca	Franska
+İspanyolca	Spanska
+İtalyanca	Italienska
+Portekizce	Portugisiska
+Başlangıç	Nybörjare
+Temel	Grundläggande
+Orta üstü	Övre mellannivå
+İleri	Avancerad
+Ustalık	Mästare
+isim	substantiv
+fiil	verb
+sıfat	adjektiv
+zarf	adverb
+zamir	pronomen
+edat	preposition
+bağlaç	konjunktion
+sayı	räkneord
+belirleyici	determinativ
+ünlem	interjektion
+deyim	fras
+Diller	Språk
+Öğrendiğim dil	Jag lär mig
+Ana dilim	Mitt språk
+Sorular öğrendiğin dilde, açıklamalar iki dilde gelir.	Frågor på språket du lär dig, förklaringar på båda språken.
+%d kelime, A1'den C2'ye	%d ord, från A1 till C2
+Bu kelime ne demek?	Vad betyder ordet?
+%s karşılığı hangisi?	Vilket är ordet på %s?
+Bu tanım hangi kelimenin? (%s)	Vilket ord förklaras här? (%s)
+Boşluğa hangi kelime gelir?	Vilket ord passar i luckan?
+Bu çeviri doğru mu?	Stämmer översättningen?
+Doğru	Sant
+Yanlış	Fel
+Sonuç	Resultat
+Ders bitti	Lektionen klar
+%d sorudan %d doğru	%d frågor, %d rätt
++%d XP	+%d XP
++%d XP (hatasız ders: +%d)	+%d XP (felfritt: +%d)
+Seri: %d gün · bugün %d/%d XP	Svit: %d dagar · i dag %d/%d XP
+Tekrar edilecek kelimeler	Ord att repetera
+Hiç hata yok, harika!	Inga fel, toppen!
+Yeni ders	Ny lektion
+Ana ekran	Start
+Tekrar	Repetition
+Tekrar (%d)	Repetition (%d)
+Bu seviyede soru yok	Inga frågor på den här nivån
+Tekrar edilecek kelime yok	Inget att repetera
+Bu dil ikilisinde bu seviyede sorulacak kelime bulunamadı.	Inga ord på den här nivån för språkparet.
+Önce birkaç ders yapın; yanlış bildiğiniz kelimeler burada tekrar sorulur.	Gör först några lektioner; ord du missar kommer tillbaka här.
+%s öğreniyorum · ana dilim %s	Jag lär mig %s · mitt språk %s
+Toplam: %ld XP · bugün %d XP	Totalt: %ld XP · i dag %d XP
+Seri: %d gün · en uzun %d gün	Svit: %d dagar · längsta %d dagar
+%d ders · %d cevap · %%%d doğru	%d lektioner · %d svar · %d %% rätt
+%d kelime görüldü · %d öğrenildi · %d tekrar bekliyor	%d ord sedda · %d inlärda · %d att repetera
+Seviyeler	Nivåer
+Tekrar kutuları	Repetitionslådor
+1: yeni kaçırılan · 5: iyice öğrenildi (aralık 1, 2, 4, 8, 21 gün)	1: nyss fel · 5: väl inlärt (var 1, 2, 4, 8, 21 dag)
+Değiştir	Ändra
+Seri: %d gün · %ld XP · bugün %d/%d	Svit: %d dagar · %ld XP · i dag %d/%d
+Kaynak: Vikisözlük (CC BY-SA), Tatoeba (CC BY), CEFR-J; seviyeler sıklığa göre	Källor: Wiktionary (CC BY-SA), Tatoeba (CC BY), CEFR-J; nivåer efter frekvens
+Kelime listeleri yüklenemedi.	Ordlistorna kunde inte läsas in.
+%d / %d öğrenildi	%d / %d inlärda

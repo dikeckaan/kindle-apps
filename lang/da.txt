@@ -740,3 +740,68 @@ Kolay okuma: Kapalı	Let læsning: Fra
 Basit mod: Açık	Enkel tilstand: Til
 Basit mod: Kapalı	Enkel tilstand: Fra
 Kolay okuma: bütün yazılar büyük, kalın ve siyah olur.\nBasit mod: menüde dört büyük düğme; panoda yalnızca saat, hava ve üç haber. Teknik uygulamalar gizlenir; bu ekrandan her zaman geri açılabilir.	Let læsning: al tekst bliver stor, fed og sort.\nEnkel tilstand: fire store knapper i menuen; oversigten viser kun ur, vejr og tre nyheder. Tekniske apps skjules; de kan altid slås til igen fra denne skærm.
+Kelime Öğren	Gloser
+Türkçe	Tyrkisk
+İngilizce	Engelsk
+Almanca	Tysk
+Fransızca	Fransk
+İspanyolca	Spansk
+İtalyanca	Italiensk
+Portekizce	Portugisisk
+Başlangıç	Begynder
+Temel	Grundlæggende
+Orta üstü	Øvre mellemniveau
+İleri	Avanceret
+Ustalık	Mester
+isim	substantiv
+fiil	verbum
+sıfat	adjektiv
+zarf	adverbium
+zamir	pronomen
+edat	præposition
+bağlaç	konjunktion
+sayı	talord
+belirleyici	determinativ
+ünlem	interjektion
+deyim	udtryk
+Diller	Sprog
+Öğrendiğim dil	Jeg lærer
+Ana dilim	Mit sprog
+Sorular öğrendiğin dilde, açıklamalar iki dilde gelir.	Spørgsmål på det sprog, du lærer, forklaringer på begge sprog.
+%d kelime, A1'den C2'ye	%d ord, fra A1 til C2
+Bu kelime ne demek?	Hvad betyder dette ord?
+%s karşılığı hangisi?	Hvilket er ordet på %s?
+Bu tanım hangi kelimenin? (%s)	Hvilket ord forklares her? (%s)
+Boşluğa hangi kelime gelir?	Hvilket ord passer i hullet?
+Bu çeviri doğru mu?	Er denne oversættelse rigtig?
+Doğru	Sandt
+Yanlış	Forkert
+Sonuç	Resultat
+Ders bitti	Lektionen er færdig
+%d sorudan %d doğru	%d spørgsmål, %d rigtige
++%d XP	+%d XP
++%d XP (hatasız ders: +%d)	+%d XP (fejlfrit: +%d)
+Seri: %d gün · bugün %d/%d XP	Stime: %d dage · i dag %d/%d XP
+Tekrar edilecek kelimeler	Ord at gentage
+Hiç hata yok, harika!	Ingen fejl, flot!
+Yeni ders	Ny lektion
+Ana ekran	Start
+Tekrar	Repetition
+Tekrar (%d)	Repetition (%d)
+Bu seviyede soru yok	Ingen spørgsmål på dette niveau
+Tekrar edilecek kelime yok	Intet at gentage
+Bu dil ikilisinde bu seviyede sorulacak kelime bulunamadı.	Ingen ord på dette niveau for dette sprogpar.
+Önce birkaç ders yapın; yanlış bildiğiniz kelimeler burada tekrar sorulur.	Tag først et par lektioner; ord du fejler, kommer igen her.
+%s öğreniyorum · ana dilim %s	Jeg lærer %s · mit sprog %s
+Toplam: %ld XP · bugün %d XP	I alt: %ld XP · i dag %d XP
+Seri: %d gün · en uzun %d gün	Stime: %d dage · længste %d dage
+%d ders · %d cevap · %%%d doğru	%d lektioner · %d svar · %d %% rigtige
+%d kelime görüldü · %d öğrenildi · %d tekrar bekliyor	%d ord set · %d lært · %d til gentagelse
+Seviyeler	Niveauer
+Tekrar kutuları	Gentagelsesbokse
+1: yeni kaçırılan · 5: iyice öğrenildi (aralık 1, 2, 4, 8, 21 gün)	1: lige fejlet · 5: godt lært (hver 1, 2, 4, 8, 21 dag)
+Değiştir	Skift
+Seri: %d gün · %ld XP · bugün %d/%d	Stime: %d dage · %ld XP · i dag %d/%d
+Kaynak: Vikisözlük (CC BY-SA), Tatoeba (CC BY), CEFR-J; seviyeler sıklığa göre	Kilder: Wiktionary (CC BY-SA), Tatoeba (CC BY), CEFR-J; niveauer efter hyppighed
+Kelime listeleri yüklenemedi.	Ordlisterne kunne ikke indlæses.
+%d / %d öğrenildi	%d / %d lært
