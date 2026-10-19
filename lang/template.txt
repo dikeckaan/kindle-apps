@@ -123,6 +123,8 @@
 %s kazandı	
 # core/hub/upd_ui.c
 %s kuruldu	
+# apps/masa/main.c
+%s oyununu ilk kez açıyorsunuz. Nasıl oynandığını resimlerle kısaca gösterelim mi?	
 # apps/masa/rv_ui.c
 %s pas geçti	
 # apps/weather/main.c
@@ -255,16 +257,18 @@ Akışın adı
 Akşam	
 # apps/vakit/vakit.c
 Akşama %s	
+# apps/masa/dama.c
+Alabiliyorsanız almak zorunludur ve en çok taşı alan yol seçilmelidir. Uygulama oynayabilecek taşları çerçeveyle gösterir: c3 tek taş alabilirdi, f3 ise iki taş alıyor; bu yüzden yalnızca f3 oynayabilir.	
 # apps/sky/skydata.c
 Aldebaran	
 # apps/sky/skydata.c
 Algol	
-# apps/masa/dm_ui.c
-Almak zorunlu (%d taş) · %s	
+# apps/masa/dama.c
+Almak zorunlu	
 # apps/kelime/main.c
 Almanca	
 # apps/masa/dm_ui.c
-Almaya devam: sıradaki kareye dokunun	
+Almaya devam: sıradaki noktalı kareye dokunun	
 # apps/sky/skydata.c
 Altair	
 # apps/currency/main.c
@@ -277,6 +281,8 @@ Alındı: %s (KOReader ile açın)
 Alınıyor: %s	
 # apps/currency/main.c
 Alış	
+# apps/masa/dama.c
+Amaç	
 # apps/kelime/main.c
 Ana dilim	
 # apps/kelime/main.c
@@ -409,14 +415,20 @@ Bağlantı yok, veri alınamadı
 Başak	
 # apps/chess/puzzle_ui.c
 Başka bulmaca	
+# apps/masa/dm_ui.c
+Başka taş seçmek için ona dokunun	
 # apps/kelime/main.c
 Başla	
 # apps/kelime/main.c
 Başlangıç	
 # apps/notlar/main.c
 Başlık	
+# apps/masa/main.c
+Baştan	
 # apps/chess/puzzle_ui.c
 Baştan başla	
+# apps/masa/dm_ui.c
+Baştan seçmek için taşın kendisine dokunun	
 # apps/sysinfo/main.c
 Bellek	
 # apps/masa/dm_ui.c
@@ -428,13 +440,45 @@ Betelgöz
 # apps/chess/main.c
 Beyaz	
 # apps/masa/dm_ui.c
+Beyaz %d – Siyah %d	
+# apps/masa/dm_ui.c
 Beyaz %d – Siyah %d · %s	
 # apps/masa/dm_ui.c
 Beyaz (ilk hamle)	
+# apps/masa/go.c
+Beyaz A2'ye uzayarak kaçmaya çalıştı. A2 ile B2 artık bir zincir; özgürlükleri birlikte sayılır: A1 ve A3.	
+# apps/masa/go.c
+Beyaz B2'ye oynadı. Bu taşın 4 özgürlüğü (boş komşusu) var: A2, B1, C2 ve B3.	
+# apps/masa/go.c
+Beyaz G3 ile sağ tarafı genişletti.	
+# apps/masa/reversi.c
+Beyaz c3'e oynadı ve üç yönde birden çevirdi: c4, d4 ve d3. Durum: Siyah 5 – Beyaz 9. Oyun tahta dolana kadar böyle sürer.	
+# apps/masa/reversi.c
+Beyaz c5'e oynadı: d5'teki siyah taşı e5 ile sıkıştırıp beyaza çevirdi.	
+# apps/masa/dama.c
+Beyaz d3'ten d4'ün üzerinden d5'e atladı ve siyah taşı aldı. Almak zorunludur.	
+# apps/masa/reversi.c
+Beyaz e3'e oynadı: d4'ü çaprazda c5 ile sıkıştırdı.	
+# apps/masa/dama.c
+Beyaz e3'ten e4'e çıktı.	
+# apps/masa/dama.c
+Beyaz e5'i ve e7'yi art arda aldı ve son sıraya, e8'e ulaşıp dama oldu (♛). d5'ten tek taş almak yasaktı: en çok alan yol zorunludur.	
+# apps/masa/reversi.c
+Beyaz e7'ye oynadı: e6, e5 ve e4'ü aşağıdaki e3 ile sıkıştırdı. Aynı sırada üç taş birden döndü.	
+# apps/masa/reversi.c
+Beyaz f5'e oynadı: e5'i yatayda d5 ile sıkıştırıp geri aldı. Bir taş defalarca renk değiştirebilir.	
+# apps/masa/dama.c
+Beyaz h3'teki taşını bir kare ileri, h4'e sürdü. Beyaz yukarı, Siyah aşağı doğru ilerler.	
 # apps/masa/dm_ui.c
 Beyaz kazandı	
 # apps/chess/puzzle_ui.c
 Beyaz oynar	
+# apps/masa/go.c
+Beyaz sağ tarafta, G7'de kendine alan kurmaya başladı.	
+# apps/masa/go.c
+Beyaz zinciri kurtaramayacağını görüp G5'e oynadı.	
+# apps/masa/dama.c
+Beyaz'ın başka seçeneği yok, almak zorunlu: d5'teki taş yana atlayıp c5'i aldı ve b5'e kondu.	
 # apps/news/news.c
 Bilim	
 # apps/akis/akis.c
@@ -447,6 +491,8 @@ Bir dakika içinde seçilmezse uykuya devam eder.
 Bir kareye dokunun	
 # apps/akis/main.c
 Bir sitenin RSS / Atom adresi	
+# apps/masa/go.c
+Bir taşın yukarı, aşağı, sağ ve soldaki boş komşuları onun özgürlükleridir (halkalar). Yan yana duran aynı renk taşlar bir zincirdir ve özgürlüklerini paylaşır: beyaz taşın 4, siyah zincirin 6 özgürlüğü var.	
 # apps/odak/main.c
 Bitir	
 # apps/bulmaca/main.c
@@ -605,6 +651,8 @@ Daha önce çözüldü · Seri: %d
 Dama	
 # apps/masa/main.c
 Dama (Türk daması)	
+# apps/masa/dama.c
+Dama olmak	
 # apps/ajanda/agenda.c
 Demokrasi ve Millî Birlik Günü	
 # apps/sky/skydata.c
@@ -735,12 +783,18 @@ En kısa süre
 En parlak yıldızı: %s	
 # apps/tarif/main.c
 En çok 6 zamanlayıcı kurulabilir.	
+# apps/masa/dm_ui.c
+En çok taş alan yol zorunlu: %d taş	
 # apps/vakit/main.c
 Enlem ve boylam gir	
 # apps/vakit/main.c
 Enlem −90…90, boylam −180…180 olmalı, ör. 41.01, 28.98	
 # apps/vakit/main.c
 Enlem, boylam (ör. 41.01, 28.98)	
+# apps/masa/go.c
+Esir alma	
+# apps/masa/go_ui.c
+Esir: Siyah %d, Beyaz %d	
 # apps/odak/main.c
 Etiket (silmek için basılı tutun)	
 # apps/odak/main.c
@@ -785,6 +839,8 @@ Gece · Güneş bugün doğmuyor
 Gece · gün batımı %s, gün doğumu %s	
 # apps/akis/main.c
 Genel	
+# apps/masa/main.c
+Gerek yok	
 # apps/chess/main.c
 Geri al	
 # apps/sky/main.c
@@ -813,6 +869,8 @@ Gökyüzü
 Gönder	
 # apps/gorev/main.c
 Görev Yöneticisi	
+# apps/masa/main.c
+Göster	
 # apps/vakit/main.c
 Gün	
 # apps/news/news.c
@@ -869,6 +927,10 @@ Haber ve döviz: %d saatte bir
 Haberler alınamadı.\nWi-Fi bağlantısını kontrol edin.	
 # apps/ajanda/main.c
 Hafta %d · Gün %d	
+# apps/masa/main.c
+Hamle %d / %d	
+# apps/masa/go.c
+Hamle nasıl yapılır?	
 # apps/chess/puzzle_ui.c
 Hamlenizi yapın · Seri: %d	
 # apps/tarif/main.c
@@ -949,6 +1011,8 @@ Hepsini okundu say
 Hepsini yenile	
 # apps/chess/main.c
 Her hamlede tahtayı çevir	
+# apps/masa/dama.c
+Her oyuncunun 16 taşı vardır. Beyaz aşağıdadır ve ilk hamleyi yapar. Rakibin bütün taşlarını alan ya da onu hiç hamle yapamaz hâle getiren kazanır.	
 # apps/ajanda/main.c
 Her yıl	
 # apps/sky/skydata.c
@@ -979,6 +1043,8 @@ Hissedilen %s
 Hiç hata yok, harika!	
 # apps/odak/main.c
 Hiç mola yok: oturum tamam.	
+# apps/masa/reversi.c
+Hiç oynayacak yeri olmayan pas geçer; uygulama bunu kendiliğinden yapar ve durum satırında yazar. Burada Beyaz hiçbir siyah taşı sıkıştıramıyor, bu yüzden sıra yine Siyah'ta (nokta: d1).	
 # apps/sleep/sleep_opts.c
 Hiç uyuma	
 # apps/gorev/main.c
@@ -1103,12 +1169,18 @@ Kendiliğinden başladı. Zamanlayıcı için dokunun.
 Kilidi aç (yeni PIN)	
 # apps/sleep/main.c
 Kindle bu süre dokunulmadan kalınca uyur.\n"Hiç uyuma" pili hızlı tüketir.\nYeniden başlatınca varsayılana dönebilir.	
-# apps/masa/main.c
+# apps/masa/dm_ui.c
 Kindle düşünüyor…	
 # apps/uyku/main.c
 Kindle her %d dakikada bir birkaç saniyeliğine uyanır, ekranı sessizce tazeler ve yeniden derin uykuya geçer; Wi-Fi yalnızca hava durumu için birkaç saatte bir açılır. Güç tuşuna basınca normal Kindle'a dönülür.	
 # apps/masa/dm_ui.c
 Kindle kazandı	
+# apps/masa/go_ui.c
+Kindle kısa bir oyun oynayacak. Her dokunuşta bir hamle yapılır ve burada anlatılır. Son konan taşın ortasında halka olur, alınan taşların yeri çarpı ile gösterilir.	
+# apps/masa/dm_ui.c
+Kindle kısa bir oyun oynayacak. Her dokunuşta bir hamle yapılır ve burada anlatılır. Taşın çıktığı ve vardığı kare çerçeveli, alınan taşların yeri çarpı ile gösterilir.	
+# apps/masa/rv_ui.c
+Kindle kısa bir oyun oynayacak. Her dokunuşta bir hamle yapılır ve burada anlatılır. Yeni konan taşın ortasında nokta, çevrilen taşların çevresinde çerçeve olur.	
 # apps/masa/main.c
 Kindle ne kadar iyi oynasın?	
 # apps/masa/go_ui.c
@@ -1143,6 +1215,8 @@ Klasör adı
 Klasör seçin	
 # apps/akis/main.c
 Klasörünü değiştir	
+# apps/masa/go.c
+Ko	
 # apps/chess/levels.c
 Kolay	
 # core/hub/main.c
@@ -1299,6 +1373,8 @@ Mısır (Genel Etüt Kurumu)
 Namaz vakitleri	
 # apps/pano/main.c
 Namaz vakitleri alınamadı	
+# apps/masa/dm_ui.c
+Nasıl oynanır?	
 # apps/weather/main.c
 Nem %s	
 # core/kui/trfmt.c
@@ -1367,6 +1443,10 @@ Oyun sonu
 Oyuna dön	
 # apps/masa/go_ui.c
 Oyunu bırakıp teslim olunsun mu?	
+# apps/masa/dama.c
+Oyunun sonu	
+# apps/masa/go.c
+Oyunun sonu ve sayım	
 # apps/sky/skydata.c
 Oğlak	
 # apps/gorev/main.c
@@ -1443,6 +1523,10 @@ Prokyon
 Puan %d	
 # core/kui/trfmt.c
 Pzt	
+# apps/masa/dama.c
+Rakip taş hemen önünüzde ya da yanınızdaysa ve arkasındaki kare boşsa, üzerinden atlayıp onu alırsınız. Atladıktan sonra yine alabiliyorsanız devam edersiniz: e4 önce e5'i, sonra f6'yı alıp g6'ya konuyor.	
+# apps/masa/go.c
+Rakip taşın son özgürlüğünü de kapatırsanız taş tahtadan alınır ve esiriniz olur. Bu beyaz taşın tek özgürlüğü kaldı (atari): Siyah E4'e oynarsa onu alır. Hiç özgürlüğü kalmayacak bir yere, bir şey almıyorsa, taş konamaz.	
 # apps/ajanda/agenda.c
 Ramazan	
 # apps/ajanda/agenda.c
@@ -1543,6 +1627,8 @@ Sayımı onayla
 Sağanak	
 # apps/news/news.c
 Sağlık	
+# apps/masa/reversi.c
+Sekiz yön	
 # apps/bulmaca/main.c
 Seri	
 # apps/kelime/main.c
@@ -1577,6 +1663,8 @@ Sistem Bilgisi
 Sistem servisleri, SSH ve Kindle Apps hiçbir zaman durdurulmaz.	
 # apps/chess/main.c
 Siyah	
+# apps/masa/rv_ui.c
+Siyah %d – Beyaz %d	
 # apps/masa/go_ui.c
 Siyah %d – Beyaz %d + %s · %s %s puanla önde	
 # apps/masa/go_ui.c
@@ -1585,12 +1673,50 @@ Siyah %d – Beyaz %d + %s · %s puan fark · %s
 Siyah %d – Beyaz %d · %s	
 # apps/masa/go_ui.c
 Siyah (ilk hamle)	
+# apps/masa/go.c
+Siyah A1'e oynadı: zincirin son özgürlüğü kapandı, A2 ve B2 tahtadan alındı (×). Siyah'ın 2 esiri var. Sol alt köşe Siyah'ın, sağ taraf Beyaz'ın alanı oluyor.	
+# apps/masa/go.c
+Siyah A3 ile zinciri yine atariye düşürdü. Beyaz A1'e oynayamaz: orada taşlarının hiç özgürlüğü kalmazdı.	
+# apps/masa/go.c
+Siyah B1'e oynadı: B2'nin tek özgürlüğü kaldı (A2). Buna atari denir: bir sonraki hamlede alınabilir.	
+# apps/masa/go.c
+Siyah B3'e oynadı: B2'nin artık yalnızca 2 özgürlüğü var (A2 ve B1).	
+# apps/masa/go.c
+Siyah C2 ile bir özgürlüğü kapattı: B2'nin 3 özgürlüğü kaldı.	
+# apps/masa/go.c
+Siyah C3'e taş koydu. Taşlar çizgilerin kesiştiği noktalara konur ve bir daha oynamaz.	
+# apps/masa/go.c
+Siyah F5'e oynayıp E5'teki beyaz taşı aldı. Beyaz hemen E5'e oynayıp geri alamaz (×); önce başka bir yere oynamalı. Buna ko denir: aynı durumun sonsuza dek tekrarlanmasını önler.	
+# apps/masa/dama.c
+Siyah b6'dan b4'e atlayıp b5'i geri aldı. Durum: Beyaz 15 taş (biri dama), Siyah 12 taş.	
 # apps/masa/rv_ui.c
 Siyah başlar · köşeler değerlidir	
+# apps/masa/reversi.c
+Siyah c4'e oynadı ve iki yönde birden sıkıştırdı: d4 (yatay) ve d5 (çapraz) siyah oldu.	
+# apps/masa/dama.c
+Siyah c5'e oynadı ve d5'teki beyaz taşa yandan saldırdı.	
+# apps/masa/reversi.c
+Siyah d3'e oynadı: d4'teki beyaz taşı d5'teki kendi taşıyla sıkıştırdı ve çevirdi.	
+# apps/masa/dama.c
+Siyah d4'e indi. Önünde d3'teki beyaz taş var ve arkası (d5) boş: alınabilir!	
+# apps/masa/dama.c
+Siyah d6'dan d5'e ilerledi.	
+# apps/masa/dama.c
+Siyah e5'e oynadı. Bu bir hata: e4'teki beyaz taş şimdi art arda iki taş alabilir.	
+# apps/masa/reversi.c
+Siyah e6'ya oynadı: e5'i dikeyde e4 ile sıkıştırdı.	
+# apps/masa/reversi.c
+Siyah f4'e oynadı: f5'i dikeyde, e4'ü yatayda sıkıştırdı.	
+# apps/masa/reversi.c
+Siyah f6'ya oynadı: e5'i çaprazda d4 ile sıkıştırıp çevirdi.	
 # apps/masa/dm_ui.c
 Siyah kazandı	
 # apps/chess/puzzle_ui.c
 Siyah oynar	
+# apps/masa/go.c
+Siyah ve Beyaz sırayla boş noktalara taş koyar; Siyah başlar. Konan taş bir daha yerinden oynamaz. Amaç, taşlarınızla tahtanın rakibinizden daha büyük bir bölümünü çevirmektir.	
+# apps/masa/reversi.c
+Siyah ve Beyaz sırayla tahtaya taş koyar; Siyah başlar. Oyun bitince tahtada daha çok taşı olan kazanır. Başlangıçta ortada ikişer taş vardır.	
 # apps/game2048/main.c
 Skor	
 # apps/game2048/main.c
@@ -1617,6 +1743,8 @@ Son dakika haberleri
 Son dördün	
 # apps/chess/puzzle.c
 Son sıra matı	
+# apps/masa/dama.c
+Son sıraya ulaşan taş dama olur (♛). Dama, düz çizgilerde istediği kadar kare gider. Uzaktaki bir taşı, arası boşsa atlayıp arkasındaki herhangi bir boş kareye konarak alır: b2'deki dama b6'yı alabilir.	
 # apps/akis/main.c
 Sonra	
 # core/hub/main.c
@@ -1625,6 +1753,8 @@ Sonraki
 Sonraki aşama kendiliğinden başlasın	
 # apps/chess/puzzle_ui.c
 Sonraki hamle	
+# apps/masa/main.c
+Sonraki hamle ▶	
 # apps/akis/main.c
 Sonraki ▶	
 # apps/kelime/main.c
@@ -1665,14 +1795,20 @@ Süre: %ld:%02ld
 Süreler	
 # apps/bulmaca/main.c
 Sıfırla	
+# apps/masa/reversi.c
+Sıkıştır ve çevir	
+# apps/masa/reversi.c
+Sıkıştırma düz, yan ve çapraz, sekiz yönde de olur; bir hamle birkaç yönde birden çevirebilir. Siyah d4'e oynadı ve beş beyaz taşı çevirdi. c5 çevrilmedi: arkasında siyah taş yok.	
+# apps/masa/main.c
+Sıra Beyaz'da	
+# apps/masa/main.c
+Sıra Siyah'ta	
+# apps/masa/main.c
+Sıra sizde (%s)	
+# apps/masa/reversi.c
+Sıra sizdeyken noktalı karelerden birine dokunun; taşınız oraya konur. Noktalar oynayabileceğiniz kareleri gösterir (İpucu düğmesiyle açılıp kapanır). Burada Siyah d3'e dokunuyor.	
 # apps/chess/main.c
 Sıra: %s	
-# apps/masa/dm_ui.c
-Sıra: %s · Beyaz %d – Siyah %d	
-# apps/masa/rv_ui.c
-Sıra: %s · Siyah %d – Beyaz %d	
-# apps/masa/go_ui.c
-Sıra: %s · esir: Siyah %d, Beyaz %d	
 # apps/pano/main.c
 Sıradaki: %s %s · %d sa %d dk	
 # core/hub/upd_ui.c
@@ -1729,6 +1865,14 @@ Tarihte bugün · %d
 Tatlı	
 # apps/tarif/main.c
 Tatlılar	
+# apps/masa/dama.c
+Taş alma	
+# apps/masa/dama.c
+Taş nasıl oynanır?	
+# apps/masa/dm_ui.c
+Taş seçildi: gideceği noktalı kareye dokunun	
+# apps/masa/dama.c
+Taşı kalmayan ya da hiç hamle yapamayan kaybeder. Burada Siyah'ın a2'deki taşı hiçbir yere gidemez: Beyaz kazandı. İki tarafın da yalnızca birer taşı kalırsa oyun berabere biter.	
 # apps/bulmaca/main.c
 Tebrikler!	
 # apps/solitaire/main.c
@@ -1947,6 +2091,8 @@ Yeni not
 Yeni oyun	
 # apps/notlar/main.c
 Yeni satır	
+# apps/masa/reversi.c
+Yeni taş, rakip taşları sizin iki taşınızın arasında sıkıştırmalı. Aradaki rakip taşlar sizin renginize döner: d4'teki beyaz taş d3 ile d5 arasında kaldı ve siyah oldu (çerçeveli). Sıkıştırmayan bir kareye oynanamaz.	
 # apps/tarif/main.c
 Yeni: %s	
 # apps/ebooks/main.c
@@ -2009,6 +2155,8 @@ Zor
 Zorluk	
 # apps/sudoku/main.c
 Zorluk seçin	
+# apps/masa/dm_ui.c
+Zorunlu alma var: çerçeveli taşlardan birini seçin	
 # apps/chess/puzzle.c
 Zugzwang	
 # apps/akis/main.c
@@ -2023,6 +2171,10 @@ bağlaç
 bağlı değil	
 # apps/kelime/main.c
 belirleyici	
+# apps/masa/dm_ui.c
+bir taş seçin	
+# apps/masa/go_ui.c
+boş bir kesişime dokunun	
 # core/kui/keyboard.c
 boşluk	
 # apps/deprem/main.c
@@ -2055,6 +2207,10 @@ henüz indirilmedi
 isim	
 # apps/gorev/main.c
 korunuyor	
+# apps/masa/rv_ui.c
+noktalı bir kareye dokunun	
+# apps/masa/rv_ui.c
+rakibi sıkıştıran bir kareye dokunun	
 # apps/notlar/main.c
 sayfa	
 # apps/kelime/main.c
@@ -2063,6 +2219,8 @@ sayı
 son 24 saat	
 # apps/kelime/main.c
 sıfat	
+# apps/masa/go_ui.c
+sıra geçmek için Pas	
 # apps/ajanda/main.c
 yarım gün	
 # apps/tarif/main.c
@@ -2115,6 +2273,8 @@ zarf
 Çin kuralları: alan sayımı, komi 7,5	
 # apps/weather/wx.c
 Çisenti	
+# apps/masa/go.c
+Çizgilerin kesiştiği boş bir noktaya dokunun; taşınız oraya konur. Son konan taşın ortasında halka vardır. Sıranızı geçmek için alttaki Pas düğmesine dokunun.	
 # apps/notlar/main.c
 Çizgili	
 # apps/notlar/main.c
@@ -2155,6 +2315,8 @@ zarf
 Çıkış	
 # apps/masa/go_ui.c
 Ölü taşlar hesaplanıyor…	
+# apps/masa/go_ui.c
+Ölü taşları değiştirmek için zincire dokunun, sonra Sayımı onayla	
 # apps/news/main.c
 Ön sayfada kaynak yok.\nKaynaklar'dan seçin.	
 # core/kui/powerui.c
@@ -2163,14 +2325,20 @@ zarf
 Önce birkaç ders yapın; yanlış bildiğiniz kelimeler burada tekrar sorulur.	
 # apps/sudoku/main.c
 Önce boş bir hücre seçin.	
+# apps/masa/dama.c
+Önce oynatacağınız taşa dokunun: kalın çerçeveyle seçilir, gidebileceği kareler noktayla gösterilir. Sonra noktalı kareye dokunun. Taş bir kare ileri ya da yana gider; geri (×) ve çapraz gidemez.	
 # core/hub/main.c
 Önceki	
 # apps/ajanda/main.c
 Önümüzdeki 7 günde not ya da özel gün yok.	
+# apps/masa/dm_ui.c
+Örnek oyun	
 # apps/ajanda/main.c
 Özel gün	
 # apps/odak/main.c
 Özel · %d / %d dk	
+# apps/masa/go.c
+Özgürlük	
 # apps/pano/pano.c
 Öğle	
 # apps/vakit/vakit.c
@@ -2193,12 +2361,16 @@ zarf
 çevrimdışı, son veri %02d:%02d	
 # apps/kelime/main.c
 ünlem	
+# apps/masa/go.c
+İki oyuncu art arda pas geçince oyun biter. Puanınız: taşlarınız ve çevirdiğiniz boş noktalar (kareler); Beyaz'a 7,5 komi eklenir. Burada Siyah 47, Beyaz 34 + 7,5: Siyah kazandı. Ölü taşları Kindle önerir; değiştirmek için zincire dokunun.	
 # apps/chess/main.c
 İki oyunculu	
 # apps/chess/main.c
 İki oyunculu devam	
 # apps/masa/go_ui.c
 İki pas: oyun bitti.\nSoluk taşlar ölü sayıldı; değiştirmek için bir zincire dokunun.	
+# apps/masa/reversi.c
+İki taraf da oynayamayınca (çoğu zaman tahta dolunca) oyun biter ve taşlar sayılır. Burada Siyah 40 – Beyaz 24: Siyah kazandı. Köşedeki taş hiç çevrilemez; bu yüzden köşeler çok değerlidir.	
 # apps/pano/pano.c
 İkindi	
 # apps/vakit/vakit.c
@@ -2351,6 +2523,8 @@ zarf
 ≈ %d gün %d sa	
 # core/kui/battest.c
 ≈ %d sa %d dk	
+# apps/masa/main.c
+◀ Geri	
 # apps/gorev/main.c
 ◀ Programlara dön	
 # apps/tarif/main.c

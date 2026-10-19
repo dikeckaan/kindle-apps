@@ -856,8 +856,6 @@ Not silinsin mi?	Cancellare questa nota?
 %s teslim oldu	%s ha abbandonato
 13×13	13×13
 9×9 (kısa oyun)	9×9 (partita breve)
-Almak zorunlu (%d taş) · %s	Presa obbligatoria (%d pezzi) · %s
-Almaya devam: sıradaki kareye dokunun	Continua la presa: tocca la casella successiva
 Berabere	Patta
 Beyaz %d – Siyah %d · %s	Bianco %d – Nero %d · %s
 Beyaz (ilk hamle)	Bianco (muove per primo)
@@ -890,9 +888,6 @@ Siyah %d – Beyaz %d · %s	Nero %d – Bianco %d · %s
 Siyah (ilk hamle)	Nero (muove per primo)
 Siyah başlar · köşeler değerlidir	Inizia il Nero · gli angoli valgono molto
 Siyah kazandı	Vince il Nero
-Sıra: %s · Beyaz %d – Siyah %d	Tocca a: %s · Bianco %d – Nero %d
-Sıra: %s · Siyah %d – Beyaz %d	Tocca a: %s · Nero %d – Bianco %d
-Sıra: %s · esir: Siyah %d, Beyaz %d	Tocca a: %s · prigionieri: Nero %d, Bianco %d
 Tahta	Tavoliere
 Teslim ol	Abbandona
 Teslim oldunuz · Kindle kazandı	Hai abbandonato · Ha vinto il Kindle
@@ -1192,3 +1187,95 @@ Açmak için güç tuşuna basın	Premi il tasto di accensione per riattivare
 İpuçları: Açık	Suggerimenti: Sì
 İpuçları: Kapalı	Suggerimenti: No
 İpuçları: seçtiğiniz taşın gidebileceği kareler	Suggerimenti: le case dove può andare il pezzo scelto
+Amaç	Obiettivo
+Her oyuncunun 16 taşı vardır. Beyaz aşağıdadır ve ilk hamleyi yapar. Rakibin bütün taşlarını alan ya da onu hiç hamle yapamaz hâle getiren kazanır.	Ogni giocatore ha 16 pedine. Il Bianco sta in basso e muove per primo. Vince chi cattura tutte le pedine avversarie o lascia l'avversario senza mosse.
+Taş nasıl oynanır?	Come si muove una pedina?
+Önce oynatacağınız taşa dokunun: kalın çerçeveyle seçilir, gidebileceği kareler noktayla gösterilir. Sonra noktalı kareye dokunun. Taş bir kare ileri ya da yana gider; geri (×) ve çapraz gidemez.	Tocca prima la pedina da muovere: viene evidenziata da un bordo spesso e le sue caselle possibili da un punto. Poi tocca una casella col punto. La pedina avanza di una casella in avanti o di lato; mai indietro (×) né in diagonale.
+Taş alma	La presa
+Rakip taş hemen önünüzde ya da yanınızdaysa ve arkasındaki kare boşsa, üzerinden atlayıp onu alırsınız. Atladıktan sonra yine alabiliyorsanız devam edersiniz: e4 önce e5'i, sonra f6'yı alıp g6'ya konuyor.	Se una pedina avversaria è subito davanti o accanto alla tua e la casella dietro è libera, la scavalchi e la catturi. Se dopo il salto puoi catturare ancora, continui: e4 prende e5, poi f6, e arriva in g6.
+Almak zorunlu	Presa obbligatoria
+Alabiliyorsanız almak zorunludur ve en çok taşı alan yol seçilmelidir. Uygulama oynayabilecek taşları çerçeveyle gösterir: c3 tek taş alabilirdi, f3 ise iki taş alıyor; bu yüzden yalnızca f3 oynayabilir.	Se puoi catturare devi farlo, scegliendo il percorso che prende più pedine. L'app incornicia le pedine che possono muovere: c3 prenderebbe una pedina, f3 invece due; quindi può muovere solo f3.
+Dama olmak	Diventare dama
+Son sıraya ulaşan taş dama olur (♛). Dama, düz çizgilerde istediği kadar kare gider. Uzaktaki bir taşı, arası boşsa atlayıp arkasındaki herhangi bir boş kareye konarak alır: b2'deki dama b6'yı alabilir.	La pedina che raggiunge l'ultima riga diventa dama (♛). La dama si muove di quante caselle vuole in linea retta. Cattura una pedina lontana se la via è libera, posandosi su qualsiasi casella libera oltre: la dama in b2 può prendere b6.
+Oyunun sonu	Fine della partita
+Taşı kalmayan ya da hiç hamle yapamayan kaybeder. Burada Siyah'ın a2'deki taşı hiçbir yere gidemez: Beyaz kazandı. İki tarafın da yalnızca birer taşı kalırsa oyun berabere biter.	Perde chi resta senza pedine o senza mosse. Qui la pedina nera in a2 non può andare da nessuna parte: ha vinto il Bianco. Se a entrambi resta una sola pedina, la partita è patta.
+Beyaz h3'teki taşını bir kare ileri, h4'e sürdü. Beyaz yukarı, Siyah aşağı doğru ilerler.	Il Bianco ha spostato la pedina in h3 di una casella in avanti, in h4. Il Bianco sale, il Nero scende.
+Siyah d6'dan d5'e ilerledi.	Il Nero è avanzato da d6 a d5.
+Beyaz e3'ten e4'e çıktı.	Il Bianco è salito da e3 a e4.
+Siyah d4'e indi. Önünde d3'teki beyaz taş var ve arkası (d5) boş: alınabilir!	Il Nero è sceso in d4. Davanti ha la pedina bianca in d3 e dietro (d5) è libero: si può catturare!
+Beyaz d3'ten d4'ün üzerinden d5'e atladı ve siyah taşı aldı. Almak zorunludur.	Il Bianco è saltato da d3 sopra d4 fino a d5 e ha catturato la pedina nera. La presa è obbligatoria.
+Siyah e5'e oynadı. Bu bir hata: e4'teki beyaz taş şimdi art arda iki taş alabilir.	Il Nero ha giocato e5. Un errore: la pedina bianca in e4 ora può prendere due pedine di fila.
+Beyaz e5'i ve e7'yi art arda aldı ve son sıraya, e8'e ulaşıp dama oldu (♛). d5'ten tek taş almak yasaktı: en çok alan yol zorunludur.	Il Bianco ha preso e5 ed e7 di fila, ha raggiunto l'ultima riga in e8 ed è diventato dama (♛). Prendere una sola pedina da d5 era vietato: la presa più lunga è obbligatoria.
+Siyah c5'e oynadı ve d5'teki beyaz taşa yandan saldırdı.	Il Nero ha giocato c5 e attaccato di lato la pedina bianca in d5.
+Beyaz'ın başka seçeneği yok, almak zorunlu: d5'teki taş yana atlayıp c5'i aldı ve b5'e kondu.	Il Bianco non ha scelta, la presa è obbligatoria: la pedina in d5 è saltata di lato sopra c5 e si è posata in b5.
+Siyah b6'dan b4'e atlayıp b5'i geri aldı. Durum: Beyaz 15 taş (biri dama), Siyah 12 taş.	Il Nero è saltato da b6 a b4 riprendendo b5. Situazione: Bianco 15 pedine (una dama), Nero 12.
+Beyaz %d – Siyah %d	Bianco %d – Nero %d
+Almaya devam: sıradaki noktalı kareye dokunun	Continua la presa: tocca la casella col punto successiva
+Baştan seçmek için taşın kendisine dokunun	Tocca la pedina stessa per rifare la scelta
+Taş seçildi: gideceği noktalı kareye dokunun	Pedina scelta: tocca una casella col punto
+Başka taş seçmek için ona dokunun	Tocca un'altra pedina per sceglierla
+En çok taş alan yol zorunlu: %d taş	Presa più lunga obbligatoria: %d pedine
+Zorunlu alma var: çerçeveli taşlardan birini seçin	Presa obbligatoria: scegli una pedina incorniciata
+bir taş seçin	scegli una pedina
+Kindle kısa bir oyun oynayacak. Her dokunuşta bir hamle yapılır ve burada anlatılır. Taşın çıktığı ve vardığı kare çerçeveli, alınan taşların yeri çarpı ile gösterilir.	Il Kindle giocherà una breve partita. A ogni tocco fa una mossa, spiegata qui. Le caselle di partenza e di arrivo sono incorniciate, le pedine catturate segnate da una croce.
+Nasıl oynanır?	Come si gioca?
+Örnek oyun	Partita di esempio
+Siyah ve Beyaz sırayla boş noktalara taş koyar; Siyah başlar. Konan taş bir daha yerinden oynamaz. Amaç, taşlarınızla tahtanın rakibinizden daha büyük bir bölümünü çevirmektir.	Nero e Bianco posano a turno pietre sui punti liberi; inizia il Nero. Una pietra posata non si muove più. Lo scopo è circondare con le tue pietre una parte del goban più grande dell'avversario.
+Hamle nasıl yapılır?	Come si fa una mossa?
+Çizgilerin kesiştiği boş bir noktaya dokunun; taşınız oraya konur. Son konan taşın ortasında halka vardır. Sıranızı geçmek için alttaki Pas düğmesine dokunun.	Tocca un punto libero dove le linee si incrociano; la tua pietra viene posata lì. L'ultima pietra posata ha un anello al centro. Per passare il turno, tocca il pulsante Passa in basso.
+Özgürlük	Libertà
+Bir taşın yukarı, aşağı, sağ ve soldaki boş komşuları onun özgürlükleridir (halkalar). Yan yana duran aynı renk taşlar bir zincirdir ve özgürlüklerini paylaşır: beyaz taşın 4, siyah zincirin 6 özgürlüğü var.	I punti liberi adiacenti a una pietra, sopra, sotto, a destra e a sinistra, sono le sue libertà (anelli). Pietre vicine dello stesso colore formano una catena e condividono le libertà: la pietra bianca ne ha 4, la catena nera 6.
+Esir alma	Cattura
+Rakip taşın son özgürlüğünü de kapatırsanız taş tahtadan alınır ve esiriniz olur. Bu beyaz taşın tek özgürlüğü kaldı (atari): Siyah E4'e oynarsa onu alır. Hiç özgürlüğü kalmayacak bir yere, bir şey almıyorsa, taş konamaz.	Se chiudi l'ultima libertà di una pietra avversaria, questa viene tolta e diventa tua prigioniera. Questa pietra bianca ha una sola libertà (atari): se il Nero gioca E4, la cattura. Non si può posare una pietra dove non avrebbe libertà, a meno che catturi.
+Ko	Ko
+Siyah F5'e oynayıp E5'teki beyaz taşı aldı. Beyaz hemen E5'e oynayıp geri alamaz (×); önce başka bir yere oynamalı. Buna ko denir: aynı durumun sonsuza dek tekrarlanmasını önler.	Il Nero ha giocato F5 e catturato la pietra bianca in E5. Il Bianco non può ricatturare subito in E5 (×); prima deve giocare altrove. Questo è il ko: impedisce che la stessa posizione si ripeta all'infinito.
+Oyunun sonu ve sayım	Fine della partita e conteggio
+İki oyuncu art arda pas geçince oyun biter. Puanınız: taşlarınız ve çevirdiğiniz boş noktalar (kareler); Beyaz'a 7,5 komi eklenir. Burada Siyah 47, Beyaz 34 + 7,5: Siyah kazandı. Ölü taşları Kindle önerir; değiştirmek için zincire dokunun.	La partita finisce quando entrambi passano di seguito. Il tuo punteggio: le tue pietre e i punti liberi che circondi (quadrati); il Bianco riceve 7,5 di komi. Qui Nero 47, Bianco 34 + 7,5: vince il Nero. Le pietre morte le propone il Kindle; tocca una catena per cambiarle.
+Siyah C3'e taş koydu. Taşlar çizgilerin kesiştiği noktalara konur ve bir daha oynamaz.	Il Nero ha posato una pietra in C3. Le pietre vanno sulle intersezioni e non si muovono più.
+Beyaz B2'ye oynadı. Bu taşın 4 özgürlüğü (boş komşusu) var: A2, B1, C2 ve B3.	Il Bianco ha giocato B2. Questa pietra ha 4 libertà (vicini liberi): A2, B1, C2 e B3.
+Siyah C2 ile bir özgürlüğü kapattı: B2'nin 3 özgürlüğü kaldı.	Il Nero ha chiuso una libertà con C2: a B2 ne restano 3.
+Beyaz sağ tarafta, G7'de kendine alan kurmaya başladı.	Il Bianco ha iniziato a costruirsi un territorio a destra, in G7.
+Siyah B3'e oynadı: B2'nin artık yalnızca 2 özgürlüğü var (A2 ve B1).	Il Nero ha giocato B3: B2 ha ormai solo 2 libertà (A2 e B1).
+Beyaz G3 ile sağ tarafı genişletti.	Il Bianco ha allargato il lato destro con G3.
+Siyah B1'e oynadı: B2'nin tek özgürlüğü kaldı (A2). Buna atari denir: bir sonraki hamlede alınabilir.	Il Nero ha giocato B1: a B2 resta una sola libertà (A2). Si chiama atari: può essere catturata alla mossa successiva.
+Beyaz A2'ye uzayarak kaçmaya çalıştı. A2 ile B2 artık bir zincir; özgürlükleri birlikte sayılır: A1 ve A3.	Il Bianco ha tentato la fuga allungandosi in A2. A2 e B2 ora sono una catena; le libertà si contano insieme: A1 e A3.
+Siyah A3 ile zinciri yine atariye düşürdü. Beyaz A1'e oynayamaz: orada taşlarının hiç özgürlüğü kalmazdı.	Con A3 il Nero ha rimesso la catena in atari. Il Bianco non può giocare A1: lì le sue pietre non avrebbero libertà.
+Beyaz zinciri kurtaramayacağını görüp G5'e oynadı.	Visto che la catena non si può salvare, il Bianco ha giocato G5.
+Siyah A1'e oynadı: zincirin son özgürlüğü kapandı, A2 ve B2 tahtadan alındı (×). Siyah'ın 2 esiri var. Sol alt köşe Siyah'ın, sağ taraf Beyaz'ın alanı oluyor.	Il Nero ha giocato A1: l'ultima libertà della catena è chiusa, A2 e B2 sono state tolte (×). Il Nero ha 2 prigionieri. L'angolo in basso a sinistra diventa territorio nero, il lato destro bianco.
+Ölü taşları değiştirmek için zincire dokunun, sonra Sayımı onayla	Tocca una catena per cambiare le pietre morte, poi Conferma il conteggio
+Esir: Siyah %d, Beyaz %d	Prigionieri: Nero %d, Bianco %d
+sıra geçmek için Pas	Passa per cedere il turno
+boş bir kesişime dokunun	tocca un'intersezione libera
+Kindle kısa bir oyun oynayacak. Her dokunuşta bir hamle yapılır ve burada anlatılır. Son konan taşın ortasında halka olur, alınan taşların yeri çarpı ile gösterilir.	Il Kindle giocherà una breve partita. A ogni tocco fa una mossa, spiegata qui. L'ultima pietra posata ha un anello, le pietre catturate sono segnate da una croce.
+Sıra sizde (%s)	Tocca a te (%s)
+Sıra Siyah'ta	Tocca al Nero
+Sıra Beyaz'da	Tocca al Bianco
+Hamle %d / %d	Mossa %d / %d
+Baştan	Da capo
+Sonraki hamle ▶	Mossa successiva ▶
+◀ Geri	◀ Indietro
+%s oyununu ilk kez açıyorsunuz. Nasıl oynandığını resimlerle kısaca gösterelim mi?	Apri %s per la prima volta. Vuoi vedere in breve, con immagini, come si gioca?
+Göster	Mostra
+Gerek yok	No, grazie
+Siyah ve Beyaz sırayla tahtaya taş koyar; Siyah başlar. Oyun bitince tahtada daha çok taşı olan kazanır. Başlangıçta ortada ikişer taş vardır.	Nero e Bianco posano a turno pedine sulla scacchiera; inizia il Nero. A fine partita vince chi ha più pedine sulla scacchiera. All'inizio al centro ci sono due pedine per colore.
+Sıra sizdeyken noktalı karelerden birine dokunun; taşınız oraya konur. Noktalar oynayabileceğiniz kareleri gösterir (İpucu düğmesiyle açılıp kapanır). Burada Siyah d3'e dokunuyor.	Al tuo turno tocca una casella col punto; la tua pedina viene posata lì. I punti indicano dove puoi giocare (si attivano col pulsante Suggerimenti). Qui il Nero tocca d3.
+Sıkıştır ve çevir	Chiudi e gira
+Yeni taş, rakip taşları sizin iki taşınızın arasında sıkıştırmalı. Aradaki rakip taşlar sizin renginize döner: d4'teki beyaz taş d3 ile d5 arasında kaldı ve siyah oldu (çerçeveli). Sıkıştırmayan bir kareye oynanamaz.	La nuova pedina deve chiudere pedine avversarie tra due tue. Le pedine chiuse prendono il tuo colore: la pedina bianca in d4, finita tra d3 e d5, è diventata nera (incorniciata). Non si può giocare dove non si chiude nulla.
+Sekiz yön	Otto direzioni
+Sıkıştırma düz, yan ve çapraz, sekiz yönde de olur; bir hamle birkaç yönde birden çevirebilir. Siyah d4'e oynadı ve beş beyaz taşı çevirdi. c5 çevrilmedi: arkasında siyah taş yok.	Si chiude in tutte e otto le direzioni: dritto, di lato e in diagonale; una mossa può girare in più direzioni insieme. Il Nero ha giocato d4 e girato cinque pedine bianche. c5 no: dietro non c'è una pedina nera.
+Hiç oynayacak yeri olmayan pas geçer; uygulama bunu kendiliğinden yapar ve durum satırında yazar. Burada Beyaz hiçbir siyah taşı sıkıştıramıyor, bu yüzden sıra yine Siyah'ta (nokta: d1).	Chi non ha mosse possibili passa; l'app lo fa da sola e lo scrive nella riga di stato. Qui il Bianco non può chiudere nessuna pedina nera, quindi tocca di nuovo al Nero (punto: d1).
+İki taraf da oynayamayınca (çoğu zaman tahta dolunca) oyun biter ve taşlar sayılır. Burada Siyah 40 – Beyaz 24: Siyah kazandı. Köşedeki taş hiç çevrilemez; bu yüzden köşeler çok değerlidir.	Quando nessuno può muovere (di solito a scacchiera piena), la partita finisce e si contano le pedine. Qui Nero 40 – Bianco 24: vince il Nero. Una pedina d'angolo non si può mai girare: per questo gli angoli valgono molto.
+Siyah d3'e oynadı: d4'teki beyaz taşı d5'teki kendi taşıyla sıkıştırdı ve çevirdi.	Il Nero ha giocato d3: ha chiuso la pedina bianca in d4 con la sua in d5 e l'ha girata.
+Beyaz c5'e oynadı: d5'teki siyah taşı e5 ile sıkıştırıp beyaza çevirdi.	Il Bianco ha giocato c5: ha chiuso la pedina nera in d5 con e5 e l'ha resa bianca.
+Siyah f6'ya oynadı: e5'i çaprazda d4 ile sıkıştırıp çevirdi.	Il Nero ha giocato f6: ha chiuso e5 in diagonale con d4 e l'ha girata.
+Beyaz f5'e oynadı: e5'i yatayda d5 ile sıkıştırıp geri aldı. Bir taş defalarca renk değiştirebilir.	Il Bianco ha giocato f5: ha chiuso e5 in orizzontale con d5 e l'ha ripresa. Una pedina può cambiare colore molte volte.
+Siyah e6'ya oynadı: e5'i dikeyde e4 ile sıkıştırdı.	Il Nero ha giocato e6: ha chiuso e5 in verticale con e4.
+Beyaz e3'e oynadı: d4'ü çaprazda c5 ile sıkıştırdı.	Il Bianco ha giocato e3: ha chiuso d4 in diagonale con c5.
+Siyah c4'e oynadı ve iki yönde birden sıkıştırdı: d4 (yatay) ve d5 (çapraz) siyah oldu.	Il Nero ha giocato c4 chiudendo in due direzioni insieme: d4 (orizzontale) e d5 (diagonale) sono diventate nere.
+Beyaz e7'ye oynadı: e6, e5 ve e4'ü aşağıdaki e3 ile sıkıştırdı. Aynı sırada üç taş birden döndü.	Il Bianco ha giocato e7: ha chiuso e6, e5 ed e4 con e3 in basso. Tre pedine della stessa fila girate in un colpo.
+Siyah f4'e oynadı: f5'i dikeyde, e4'ü yatayda sıkıştırdı.	Il Nero ha giocato f4: ha chiuso f5 in verticale ed e4 in orizzontale.
+Beyaz c3'e oynadı ve üç yönde birden çevirdi: c4, d4 ve d3. Durum: Siyah 5 – Beyaz 9. Oyun tahta dolana kadar böyle sürer.	Il Bianco ha giocato c3 girando in tre direzioni insieme: c4, d4 e d3. Situazione: Nero 5 – Bianco 9. Si va avanti così finché la scacchiera è piena.
+noktalı bir kareye dokunun	tocca una casella col punto
+rakibi sıkıştıran bir kareye dokunun	tocca una casella che chiude l'avversario
+Siyah %d – Beyaz %d	Nero %d – Bianco %d
+Kindle kısa bir oyun oynayacak. Her dokunuşta bir hamle yapılır ve burada anlatılır. Yeni konan taşın ortasında nokta, çevrilen taşların çevresinde çerçeve olur.	Il Kindle giocherà una breve partita. A ogni tocco fa una mossa, spiegata qui. La nuova pedina ha un punto al centro, quelle girate una cornice.

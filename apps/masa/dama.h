@@ -53,6 +53,16 @@ int  dm_eval(const Dm *d);      /* heuristic for the side to move */
 /* best move for the side to move; -1 when there is none */
 int  dm_ai(const Dm *d, const MasaLimits *lim, DmMove *best, MasaStats *st);
 
+/* lessons: board rows 'w'/'W' white man/king, 'b'/'B' black man/king; moves as "d3-d4" or, capturing,
+ * "d3xd5xf5" (start square, then every landing square; files a–h, rank 1 at the bottom = white's side) */
+void dm_sq_name(int sq, char out[3]);
+int  dm_parse_move(const Dm *d, const char *s, DmMove *out); /* 0 when s names a legal move */
+void dm_from_rows(Dm *d, const char *const *rows, int side);
+extern const MasaPage dm_pages[];
+extern const int dm_npages;
+extern const MasaStep dm_demo[]; /* from the start position */
+extern const int dm_ndemo;
+
 typedef struct {
 	Dm pos;
 	DmMove hist[DM_MAX_PLIES];

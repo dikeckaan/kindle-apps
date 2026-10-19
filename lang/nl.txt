@@ -856,8 +856,6 @@ Not silinsin mi?	Deze notitie wissen?
 %s teslim oldu	%s heeft opgegeven
 13×13	13×13
 9×9 (kısa oyun)	9×9 (korte partij)
-Almak zorunlu (%d taş) · %s	Slaan verplicht (%d stukken) · %s
-Almaya devam: sıradaki kareye dokunun	Verder slaan: tik op het volgende veld
 Berabere	Remise
 Beyaz %d – Siyah %d · %s	Wit %d – Zwart %d · %s
 Beyaz (ilk hamle)	Wit (begint)
@@ -890,9 +888,6 @@ Siyah %d – Beyaz %d · %s	Zwart %d – Wit %d · %s
 Siyah (ilk hamle)	Zwart (begint)
 Siyah başlar · köşeler değerlidir	Zwart begint · hoeken zijn waardevol
 Siyah kazandı	Zwart wint
-Sıra: %s · Beyaz %d – Siyah %d	Aan zet: %s · Wit %d – Zwart %d
-Sıra: %s · Siyah %d – Beyaz %d	Aan zet: %s · Zwart %d – Wit %d
-Sıra: %s · esir: Siyah %d, Beyaz %d	Aan zet: %s · gevangen: Zwart %d, Wit %d
 Tahta	Bord
 Teslim ol	Opgeven
 Teslim oldunuz · Kindle kazandı	Je hebt opgegeven · De Kindle heeft gewonnen
@@ -1192,3 +1187,95 @@ Açmak için güç tuşuna basın	Druk op de aan/uit-knop om te wekken
 İpuçları: Açık	Hints: Aan
 İpuçları: Kapalı	Hints: Uit
 İpuçları: seçtiğiniz taşın gidebileceği kareler	Hints: velden waar het gekozen stuk heen kan
+Amaç	Doel
+Her oyuncunun 16 taşı vardır. Beyaz aşağıdadır ve ilk hamleyi yapar. Rakibin bütün taşlarını alan ya da onu hiç hamle yapamaz hâle getiren kazanır.	Elke speler heeft 16 stukken. Wit staat onderaan en begint. Wie alle stukken van de tegenstander slaat of hem zonder zetten laat, wint.
+Taş nasıl oynanır?	Hoe zet je een stuk?
+Önce oynatacağınız taşa dokunun: kalın çerçeveyle seçilir, gidebileceği kareler noktayla gösterilir. Sonra noktalı kareye dokunun. Taş bir kare ileri ya da yana gider; geri (×) ve çapraz gidemez.	Tik eerst op het stuk dat je wilt zetten: het krijgt een dikke rand en de velden waar het heen kan krijgen een stip. Tik dan op een veld met een stip. Een stuk gaat één veld vooruit of opzij; niet terug (×) en niet schuin.
+Taş alma	Slaan
+Rakip taş hemen önünüzde ya da yanınızdaysa ve arkasındaki kare boşsa, üzerinden atlayıp onu alırsınız. Atladıktan sonra yine alabiliyorsanız devam edersiniz: e4 önce e5'i, sonra f6'yı alıp g6'ya konuyor.	Staat een stuk van de tegenstander direct voor of naast je en is het veld erachter leeg, dan spring je eroverheen en sla je het. Kun je na de sprong weer slaan, dan ga je door: e4 slaat eerst e5, dan f6 en landt op g6.
+Almak zorunlu	Slaan is verplicht
+Alabiliyorsanız almak zorunludur ve en çok taşı alan yol seçilmelidir. Uygulama oynayabilecek taşları çerçeveyle gösterir: c3 tek taş alabilirdi, f3 ise iki taş alıyor; bu yüzden yalnızca f3 oynayabilir.	Kun je slaan, dan moet je slaan, en wel langs de weg die de meeste stukken slaat. De app geeft de stukken die mogen spelen een rand: c3 zou één stuk slaan, f3 slaat er twee; daarom mag alleen f3 spelen.
+Dama olmak	Dam halen
+Son sıraya ulaşan taş dama olur (♛). Dama, düz çizgilerde istediği kadar kare gider. Uzaktaki bir taşı, arası boşsa atlayıp arkasındaki herhangi bir boş kareye konarak alır: b2'deki dama b6'yı alabilir.	Een stuk dat de laatste rij haalt, wordt dam (♛). Een dam gaat in rechte lijnen zo ver als hij wil. Hij slaat een stuk op afstand als de weg vrij is en landt op een willekeurig leeg veld erachter: de dam op b2 kan b6 slaan.
+Oyunun sonu	Einde van de partij
+Taşı kalmayan ya da hiç hamle yapamayan kaybeder. Burada Siyah'ın a2'deki taşı hiçbir yere gidemez: Beyaz kazandı. İki tarafın da yalnızca birer taşı kalırsa oyun berabere biter.	Wie geen stukken of geen zetten meer heeft, verliest. Hier kan het zwarte stuk op a2 nergens heen: Wit wint. Hebben beide kanten nog maar één stuk, dan is het remise.
+Beyaz h3'teki taşını bir kare ileri, h4'e sürdü. Beyaz yukarı, Siyah aşağı doğru ilerler.	Wit zette het stuk van h3 één veld vooruit, naar h4. Wit gaat omhoog, Zwart omlaag.
+Siyah d6'dan d5'e ilerledi.	Zwart ging van d6 naar d5.
+Beyaz e3'ten e4'e çıktı.	Wit ging van e3 naar e4.
+Siyah d4'e indi. Önünde d3'teki beyaz taş var ve arkası (d5) boş: alınabilir!	Zwart ging naar d4. Ervoor staat het witte stuk op d3 en erachter (d5) is het leeg: het kan geslagen worden!
+Beyaz d3'ten d4'ün üzerinden d5'e atladı ve siyah taşı aldı. Almak zorunludur.	Wit sprong van d3 over d4 naar d5 en sloeg het zwarte stuk. Slaan is verplicht.
+Siyah e5'e oynadı. Bu bir hata: e4'teki beyaz taş şimdi art arda iki taş alabilir.	Zwart speelde e5. Een fout: het witte stuk op e4 kan nu twee stukken achter elkaar slaan.
+Beyaz e5'i ve e7'yi art arda aldı ve son sıraya, e8'e ulaşıp dama oldu (♛). d5'ten tek taş almak yasaktı: en çok alan yol zorunludur.	Wit sloeg e5 en e7 achter elkaar, bereikte op e8 de laatste rij en werd dam (♛). Vanaf d5 één stuk slaan mocht niet: de langste slag is verplicht.
+Siyah c5'e oynadı ve d5'teki beyaz taşa yandan saldırdı.	Zwart speelde c5 en viel het witte stuk op d5 van opzij aan.
+Beyaz'ın başka seçeneği yok, almak zorunlu: d5'teki taş yana atlayıp c5'i aldı ve b5'e kondu.	Wit heeft geen keus, slaan is verplicht: het stuk op d5 sprong opzij, sloeg c5 en landde op b5.
+Siyah b6'dan b4'e atlayıp b5'i geri aldı. Durum: Beyaz 15 taş (biri dama), Siyah 12 taş.	Zwart sprong van b6 naar b4 en sloeg b5 terug. Stand: Wit 15 stukken (één dam), Zwart 12.
+Beyaz %d – Siyah %d	Wit %d – Zwart %d
+Almaya devam: sıradaki noktalı kareye dokunun	Verder slaan: tik op het volgende veld met een stip
+Baştan seçmek için taşın kendisine dokunun	Tik op het stuk zelf om opnieuw te kiezen
+Taş seçildi: gideceği noktalı kareye dokunun	Stuk gekozen: tik op een veld met een stip
+Başka taş seçmek için ona dokunun	Tik op een ander stuk om dat te kiezen
+En çok taş alan yol zorunlu: %d taş	Langste slag verplicht: %d stukken
+Zorunlu alma var: çerçeveli taşlardan birini seçin	Slaan verplicht: kies een stuk met een rand
+bir taş seçin	kies een stuk
+Kindle kısa bir oyun oynayacak. Her dokunuşta bir hamle yapılır ve burada anlatılır. Taşın çıktığı ve vardığı kare çerçeveli, alınan taşların yeri çarpı ile gösterilir.	De Kindle speelt een korte partij. Elke tik doet één zet, die hier wordt uitgelegd. Begin- en eindveld krijgen een rand; geslagen stukken worden met een kruis aangegeven.
+Nasıl oynanır?	Hoe speel je?
+Örnek oyun	Voorbeeldpartij
+Siyah ve Beyaz sırayla boş noktalara taş koyar; Siyah başlar. Konan taş bir daha yerinden oynamaz. Amaç, taşlarınızla tahtanın rakibinizden daha büyük bir bölümünü çevirmektir.	Zwart en Wit leggen om beurten een steen op een leeg punt; Zwart begint. Een gelegde steen verplaatst nooit meer. Het doel is met je stenen een groter deel van het bord te omsluiten dan je tegenstander.
+Hamle nasıl yapılır?	Hoe doe je een zet?
+Çizgilerin kesiştiği boş bir noktaya dokunun; taşınız oraya konur. Son konan taşın ortasında halka vardır. Sıranızı geçmek için alttaki Pas düğmesine dokunun.	Tik op een leeg punt waar lijnen kruisen; je steen komt daar te liggen. De laatst gelegde steen heeft een ring in het midden. Tik op de knop Passen onderaan om je beurt over te slaan.
+Özgürlük	Vrijheden
+Bir taşın yukarı, aşağı, sağ ve soldaki boş komşuları onun özgürlükleridir (halkalar). Yan yana duran aynı renk taşlar bir zincirdir ve özgürlüklerini paylaşır: beyaz taşın 4, siyah zincirin 6 özgürlüğü var.	De lege buurpunten van een steen (boven, onder, links en rechts) zijn zijn vrijheden (ringen). Aangrenzende stenen van dezelfde kleur vormen een groep en delen hun vrijheden: de witte steen heeft er 4, de zwarte groep 6.
+Esir alma	Slaan
+Rakip taşın son özgürlüğünü de kapatırsanız taş tahtadan alınır ve esiriniz olur. Bu beyaz taşın tek özgürlüğü kaldı (atari): Siyah E4'e oynarsa onu alır. Hiç özgürlüğü kalmayacak bir yere, bir şey almıyorsa, taş konamaz.	Sluit je de laatste vrijheid van een steen van de tegenstander af, dan gaat hij van het bord en wordt hij je gevangene. Deze witte steen heeft nog maar één vrijheid (atari): speelt Zwart E4, dan slaat hij hem. Een steen zonder vrijheden mag je niet leggen, tenzij hij iets slaat.
+Ko	Ko
+Siyah F5'e oynayıp E5'teki beyaz taşı aldı. Beyaz hemen E5'e oynayıp geri alamaz (×); önce başka bir yere oynamalı. Buna ko denir: aynı durumun sonsuza dek tekrarlanmasını önler.	Zwart speelde F5 en sloeg de witte steen op E5. Wit mag niet meteen op E5 terugslaan (×); eerst moet hij elders spelen. Dit heet ko: zo herhaalt dezelfde stelling zich niet eindeloos.
+Oyunun sonu ve sayım	Einde en telling
+İki oyuncu art arda pas geçince oyun biter. Puanınız: taşlarınız ve çevirdiğiniz boş noktalar (kareler); Beyaz'a 7,5 komi eklenir. Burada Siyah 47, Beyaz 34 + 7,5: Siyah kazandı. Ölü taşları Kindle önerir; değiştirmek için zincire dokunun.	Passen beide spelers na elkaar, dan is de partij voorbij. Je punten: je stenen plus de lege punten die je omsluit (vierkantjes); Wit krijgt 7,5 komi. Hier Zwart 47, Wit 34 + 7,5: Zwart wint. De Kindle stelt dode stenen voor; tik op een groep om dat te wijzigen.
+Siyah C3'e taş koydu. Taşlar çizgilerin kesiştiği noktalara konur ve bir daha oynamaz.	Zwart legde een steen op C3. Stenen komen op de kruispunten van de lijnen en verplaatsen niet meer.
+Beyaz B2'ye oynadı. Bu taşın 4 özgürlüğü (boş komşusu) var: A2, B1, C2 ve B3.	Wit speelde B2. Deze steen heeft 4 vrijheden (lege buren): A2, B1, C2 en B3.
+Siyah C2 ile bir özgürlüğü kapattı: B2'nin 3 özgürlüğü kaldı.	Zwart nam met C2 een vrijheid af: B2 heeft er nog 3.
+Beyaz sağ tarafta, G7'de kendine alan kurmaya başladı.	Wit begon rechts, op G7, gebied op te bouwen.
+Siyah B3'e oynadı: B2'nin artık yalnızca 2 özgürlüğü var (A2 ve B1).	Zwart speelde B3: B2 heeft nu nog maar 2 vrijheden (A2 en B1).
+Beyaz G3 ile sağ tarafı genişletti.	Wit breidde de rechterkant uit met G3.
+Siyah B1'e oynadı: B2'nin tek özgürlüğü kaldı (A2). Buna atari denir: bir sonraki hamlede alınabilir.	Zwart speelde B1: B2 heeft nog één vrijheid (A2). Dit heet atari: de steen kan bij de volgende zet geslagen worden.
+Beyaz A2'ye uzayarak kaçmaya çalıştı. A2 ile B2 artık bir zincir; özgürlükleri birlikte sayılır: A1 ve A3.	Wit probeerde te ontsnappen met A2. A2 en B2 vormen nu een groep; hun vrijheden tellen samen: A1 en A3.
+Siyah A3 ile zinciri yine atariye düşürdü. Beyaz A1'e oynayamaz: orada taşlarının hiç özgürlüğü kalmazdı.	Met A3 zette Zwart de groep weer in atari. Wit kan niet op A1 spelen: daar zouden zijn stenen geen vrijheden hebben.
+Beyaz zinciri kurtaramayacağını görüp G5'e oynadı.	Wit zag dat de groep niet te redden was en speelde G5.
+Siyah A1'e oynadı: zincirin son özgürlüğü kapandı, A2 ve B2 tahtadan alındı (×). Siyah'ın 2 esiri var. Sol alt köşe Siyah'ın, sağ taraf Beyaz'ın alanı oluyor.	Zwart speelde A1: de laatste vrijheid is weg, A2 en B2 gaan van het bord (×). Zwart heeft 2 gevangenen. De linkerbenedenhoek wordt van Zwart, de rechterkant van Wit.
+Ölü taşları değiştirmek için zincire dokunun, sonra Sayımı onayla	Tik op een groep om dode stenen te wijzigen, daarna op Telling bevestigen
+Esir: Siyah %d, Beyaz %d	Gevangen: Zwart %d, Wit %d
+sıra geçmek için Pas	met Passen sla je over
+boş bir kesişime dokunun	tik op een leeg kruispunt
+Kindle kısa bir oyun oynayacak. Her dokunuşta bir hamle yapılır ve burada anlatılır. Son konan taşın ortasında halka olur, alınan taşların yeri çarpı ile gösterilir.	De Kindle speelt een korte partij. Elke tik doet één zet, die hier wordt uitgelegd. De laatst gelegde steen heeft een ring in het midden; geslagen stenen worden met een kruis aangegeven.
+Sıra sizde (%s)	Jij bent aan zet (%s)
+Sıra Siyah'ta	Zwart aan zet
+Sıra Beyaz'da	Wit aan zet
+Hamle %d / %d	Zet %d / %d
+Baştan	Opnieuw
+Sonraki hamle ▶	Volgende zet ▶
+◀ Geri	◀ Terug
+%s oyununu ilk kez açıyorsunuz. Nasıl oynandığını resimlerle kısaca gösterelim mi?	Je opent %s voor het eerst. Zullen we met plaatjes kort laten zien hoe het werkt?
+Göster	Tonen
+Gerek yok	Nee, bedankt
+Siyah ve Beyaz sırayla tahtaya taş koyar; Siyah başlar. Oyun bitince tahtada daha çok taşı olan kazanır. Başlangıçta ortada ikişer taş vardır.	Zwart en Wit leggen om beurten een schijf op het bord; Zwart begint. Aan het eind wint wie de meeste schijven op het bord heeft. In het begin liggen er in het midden twee van elke kleur.
+Sıra sizdeyken noktalı karelerden birine dokunun; taşınız oraya konur. Noktalar oynayabileceğiniz kareleri gösterir (İpucu düğmesiyle açılıp kapanır). Burada Siyah d3'e dokunuyor.	Tik als je aan zet bent op een veld met een stip; je schijf komt daar te liggen. De stippen tonen waar je kunt spelen (aan/uit met de knop Hints). Hier tikt Zwart op d3.
+Sıkıştır ve çevir	Insluiten en omdraaien
+Yeni taş, rakip taşları sizin iki taşınızın arasında sıkıştırmalı. Aradaki rakip taşlar sizin renginize döner: d4'teki beyaz taş d3 ile d5 arasında kaldı ve siyah oldu (çerçeveli). Sıkıştırmayan bir kareye oynanamaz.	De nieuwe schijf moet schijven van de tegenstander tussen twee van jouw schijven insluiten. Die krijgen dan jouw kleur: de witte schijf op d4 zat tussen d3 en d5 en werd zwart (met rand). Op een veld dat niets insluit mag je niet spelen.
+Sekiz yön	Acht richtingen
+Sıkıştırma düz, yan ve çapraz, sekiz yönde de olur; bir hamle birkaç yönde birden çevirebilir. Siyah d4'e oynadı ve beş beyaz taşı çevirdi. c5 çevrilmedi: arkasında siyah taş yok.	Insluiten kan recht, opzij en schuin, in alle acht richtingen; één zet kan in meerdere richtingen tegelijk omdraaien. Zwart speelde d4 en draaide vijf witte schijven om. c5 niet: daarachter ligt geen zwarte schijf.
+Hiç oynayacak yeri olmayan pas geçer; uygulama bunu kendiliğinden yapar ve durum satırında yazar. Burada Beyaz hiçbir siyah taşı sıkıştıramıyor, bu yüzden sıra yine Siyah'ta (nokta: d1).	Wie nergens kan spelen, past; de app doet dat vanzelf en meldt het in de statusregel. Hier kan Wit geen enkele zwarte schijf insluiten, dus is Zwart weer aan zet (stip: d1).
+İki taraf da oynayamayınca (çoğu zaman tahta dolunca) oyun biter ve taşlar sayılır. Burada Siyah 40 – Beyaz 24: Siyah kazandı. Köşedeki taş hiç çevrilemez; bu yüzden köşeler çok değerlidir.	Kan niemand meer spelen (meestal als het bord vol is), dan is de partij voorbij en worden de schijven geteld. Hier Zwart 40 – Wit 24: Zwart wint. Een schijf in de hoek kan nooit worden omgedraaid; daarom zijn hoeken zo waardevol.
+Siyah d3'e oynadı: d4'teki beyaz taşı d5'teki kendi taşıyla sıkıştırdı ve çevirdi.	Zwart speelde d3: sloot de witte schijf op d4 in met de eigen schijf op d5 en draaide hem om.
+Beyaz c5'e oynadı: d5'teki siyah taşı e5 ile sıkıştırıp beyaza çevirdi.	Wit speelde c5: sloot de zwarte schijf op d5 in met e5 en maakte hem wit.
+Siyah f6'ya oynadı: e5'i çaprazda d4 ile sıkıştırıp çevirdi.	Zwart speelde f6: sloot e5 schuin in met d4 en draaide hem om.
+Beyaz f5'e oynadı: e5'i yatayda d5 ile sıkıştırıp geri aldı. Bir taş defalarca renk değiştirebilir.	Wit speelde f5: sloot e5 horizontaal in met d5 en won hem terug. Een schijf kan vaak van kleur wisselen.
+Siyah e6'ya oynadı: e5'i dikeyde e4 ile sıkıştırdı.	Zwart speelde e6: sloot e5 verticaal in met e4.
+Beyaz e3'e oynadı: d4'ü çaprazda c5 ile sıkıştırdı.	Wit speelde e3: sloot d4 schuin in met c5.
+Siyah c4'e oynadı ve iki yönde birden sıkıştırdı: d4 (yatay) ve d5 (çapraz) siyah oldu.	Zwart speelde c4 en sloot in twee richtingen tegelijk in: d4 (horizontaal) en d5 (schuin) werden zwart.
+Beyaz e7'ye oynadı: e6, e5 ve e4'ü aşağıdaki e3 ile sıkıştırdı. Aynı sırada üç taş birden döndü.	Wit speelde e7: sloot e6, e5 en e4 in met e3 eronder. Drie schijven op één lijn draaiden tegelijk om.
+Siyah f4'e oynadı: f5'i dikeyde, e4'ü yatayda sıkıştırdı.	Zwart speelde f4: sloot f5 verticaal en e4 horizontaal in.
+Beyaz c3'e oynadı ve üç yönde birden çevirdi: c4, d4 ve d3. Durum: Siyah 5 – Beyaz 9. Oyun tahta dolana kadar böyle sürer.	Wit speelde c3 en draaide in drie richtingen tegelijk om: c4, d4 en d3. Stand: Zwart 5 – Wit 9. Zo gaat het door tot het bord vol is.
+noktalı bir kareye dokunun	tik op een veld met een stip
+rakibi sıkıştıran bir kareye dokunun	tik op een veld dat de tegenstander insluit
+Siyah %d – Beyaz %d	Zwart %d – Wit %d
+Kindle kısa bir oyun oynayacak. Her dokunuşta bir hamle yapılır ve burada anlatılır. Yeni konan taşın ortasında nokta, çevrilen taşların çevresinde çerçeve olur.	De Kindle speelt een korte partij. Elke tik doet één zet, die hier wordt uitgelegd. De nieuwe schijf heeft een stip in het midden; omgedraaide schijven krijgen een rand.

@@ -41,20 +41,27 @@ static int look(int sq)
 	return d | hint << 2 | (sq == last_move()) << 3;
 }
 
-static void draw_cell(int sq)
+/* one square: disc (-1 none, 0 black, 1 white) and UM_* marks; shared by the game and the lessons */
+static void draw_square(KuiRect r, int d, int marks)
 {
-	KuiRect r = cell_rect(sq);
-	int cx = r.x + CELL / 2, cy = r.y + CELL / 2, d = rv_at(&game.pos, sq);
+	int cx = r.x + r.w / 2, cy = r.y + r.h / 2;
 	kui_fill(r, UI_BOARD_GRAY);
 	kui_frame(r, 1, 0x44);
 	if (d >= 0) {
-		ui_disc(cx, cy, CELL / 2 - 10, d == 1);
-		if (sq == last_move()) ui_dot(cx, cy, 11, d == 1 ? 0 : 255);
-	} else if (look(sq) & 4) {
-		ui_dot(cx, cy, 11, 0x44);
+		ui_disc(cx, cy, r.w / 2 - r.w / 12, d == 1);
+		if (marks & UM_LAST) ui_dot(cx, cy, r.w / 11, d == 1 ? 0 : 255);
+	} else if (marks & UM_DOT) {
+		ui_dot(cx, cy, r.w / 11, 0x44);
 	}
-	kui_mark_dirty(r);
-	drawn[sq] = look(sq);
+	ui_cell_marks(r, marks & ~UM_DOT, d < 0 ? -1 : d == 1 ? 255 : 0);
+}
+
+static void draw_cell(int sq)
+{
+	int l = look(sq);
+	draw_square(cell_rect(sq), rv_at(&game.pos, sq), (l & 4 ? UM_DOT : 0) | (l & 8 ? UM_LAST : 0));
+	kui_mark_dirty(cell_rect(sq));
+	drawn[sq] = l;
 }
 
 static const char *side_name(int s) { return s ? T("Beyaz") : T("Siyah"); }
@@ -70,15 +77,20 @@ static void status_text(char *out, int cap)
 		snprintf(out, (size_t) cap, T("Siyah %d – Beyaz %d · %s"), b, w, res);
 		return;
 	}
-	char base[110];
-	snprintf(base, sizeof base, T("Sıra: %s · Siyah %d – Beyaz %d"), side_name(game.pos.side), b, w);
-	if (note[0]) snprintf(out, (size_t) cap, "%s · %s", note, base);
-	else snprintf(out, (size_t) cap, "%s", base);
+	char line1[160], line2[160];
+	if (human_turn())
+		snprintf(line1, sizeof line1, "%s: %s", ui_turn_text(game.mode == 1, game.pos.side == 0),
+			 hints ? T("noktalı bir kareye dokunun") : T("rakibi sıkıştıran bir kareye dokunun"));
+	else
+		snprintf(line1, sizeof line1, "%s", T("Kindle düşünüyor…"));
+	snprintf(line2, sizeof line2, T("Siyah %d – Beyaz %d"), b, w);
+	if (note[0]) snprintf(out, (size_t) cap, "%s\n%s · %s", line1, note, line2);
+	else snprintf(out, (size_t) cap, "%s\n%s", line1, line2);
 }
 
 static void draw_status(int force)
 {
-	char s[200];
+	char s[512];
 	status_text(s, sizeof s);
 	ui_status(s, force);
 }
@@ -103,7 +115,7 @@ static void draw_all(void)
 {
 	int w = kui_width(), h = kui_height();
 	kui_fill((KuiRect){ 0, 0, w, h }, 255);
-	kui_topbar(T("Reversi"), NULL);
+	kui_topbar(T("Reversi"), T("Menü"));
 	kui_frame((KuiRect){ UI_BOARD_X - 5, UI_BOARD_Y - 5, UI_BOARD_W + 10, UI_BOARD_W + 10 }, 5, 0);
 	for (int sq = 0; sq < 64; sq++) draw_cell(sq);
 	draw_buttons();
@@ -141,7 +153,7 @@ static int check_end(void)
 		ui_stats_record("reversi", game.level, mine > theirs ? 1 : mine < theirs ? -1 : 0);
 		counted = 1;
 	}
-	char s[200];
+	char s[512];
 	status_text(s, sizeof s);
 	const char *ch[] = { T("Yeni oyun"), T("Tahtaya bak") };
 	int k = kui_dialog(T("Oyun bitti"), s, ch, 2, draw_all);
@@ -192,19 +204,76 @@ static void undo(void)
 	ai_turn();
 }
 
+/* ---- lessons: "Nasıl oynanır?" pages and the scripted "Örnek oyun" ---- */
+
+static int lesson_piece(char c) { return c == 'B' ? 1 : c == 'W' ? 2 : 0; }
+
+static void lesson_cell(const UiPic *pic, int i, KuiRect r) { draw_square(r, pic->piece[i] - 1, pic->marks[i]); }
+
+static void howto_page(int k, UiPic *pic) { ui_pic_from_page(&rv_pages[k], 8, lesson_piece, pic); }
+
+/* the position after k scripted moves: the last disc placed is dotted, the ones it turned are framed */
+static void demo_page(int k, UiPic *pic)
+{
+	Rv r;
+	uint64_t turned = 0;
+	int sq = -1;
+	rv_init(&r);
+	for (int i = 0; i < k && i < rv_ndemo; i++) {
+		sq = rv_parse_sq(rv_demo[i].move);
+		turned = sq == RV_PASS ? 0 : rv_flips(&r, sq);
+		rv_play(&r, sq);
+	}
+	memset(pic, 0, sizeof *pic);
+	for (int q = 0; q < 64; q++) {
+		pic->piece[q] = (unsigned char) (rv_at(&r, q) + 1);
+		pic->marks[q] = (unsigned short) ((q == sq ? UM_LAST : 0) | (turned >> q & 1 ? UM_HL : 0));
+	}
+	snprintf(pic->head, sizeof pic->head, T("Siyah %d – Beyaz %d"), rv_count(&r, 0), rv_count(&r, 1));
+	snprintf(pic->text, sizeof pic->text, "%s",
+		 k == 0 ? T("Kindle kısa bir oyun oynayacak. Her dokunuşta bir hamle yapılır ve burada anlatılır. Yeni konan "
+			    "taşın ortasında nokta, çevrilen taşların çevresinde çerçeve olur.")
+			: T(rv_demo[k - 1].caption));
+}
+
+static const UiLesson *howto(void)
+{
+	static char title[80];
+	static UiLesson l;
+	snprintf(title, sizeof title, "%s · %s", T("Reversi"), T("Nasıl oynanır?"));
+	l = (UiLesson){ title, 8, 0, rv_npages, 0, howto_page, lesson_cell };
+	return &l;
+}
+
+static const UiLesson *demo(void)
+{
+	static char title[80];
+	static UiLesson l;
+	snprintf(title, sizeof title, "%s · %s", T("Reversi"), T("Örnek oyun"));
+	l = (UiLesson){ title, 8, 0, rv_ndemo + 1, 1, demo_page, lesson_cell };
+	return &l;
+}
+
 /* returns 1 when a game is ready, 0 back, UI_QUIT */
 static int setup(int can_resume)
 {
 	for (;;) {
-		const char *opts[3];
+		const char *opts[5];
 		int n = 0, resume = -1;
 		if (can_resume) { resume = n; opts[n++] = T("Devam et"); }
 		int one = n;
 		opts[n++] = T("Kindle'a karşı");
 		opts[n++] = T("İki oyunculu");
+		int learn = n;
+		opts[n++] = T("Nasıl oynanır?");
+		opts[n++] = T("Örnek oyun");
 		int k = ui_choose(T("Reversi"), T("Siyah başlar · köşeler değerlidir"), opts, n);
 		if (k < 0) return k == UI_QUIT ? UI_QUIT : 0;
 		if (k == resume) return 1;
+		if (k >= learn) {
+			if (ui_lesson(k == learn ? howto() : demo()) == UI_QUIT) return UI_QUIT;
+			continue;
+		}
 		if (k != one) {
 			rv_game_new(&game, 2, 2, 0);
 			return 1;
@@ -241,6 +310,7 @@ int reversi_screen(void)
 	hints = kui_cfg_get_int(cfg_path(), "hints", 1);
 	int can_resume = kui_read_file(ui_save_path("reversi"), buf, sizeof buf) > 0 && rv_game_load(&game, buf) == 0 &&
 			 !rv_over(&game.pos);
+	if (ui_offer_howto("reversi", T("Reversi"), howto()) == UI_QUIT) return UI_QUIT;
 	int s = setup(can_resume);
 	if (s != 1) return s;
 	start();
@@ -259,7 +329,14 @@ int reversi_screen(void)
 			draw_all();
 			break;
 		case KUI_EV_TAP: {
-			if (kui_topbar_hit(kui_width(), 0, e.x, e.y) == KUI_BTN_EXIT) { save(); return 0; }
+			int top = kui_topbar_hit(kui_width(), 1, e.x, e.y);
+			if (top == KUI_BTN_EXIT) { save(); return 0; }
+			if (top == KUI_BTN_MENU) {
+				if (ui_game_menu(howto(), demo()) == UI_QUIT) { save(); return UI_QUIT; }
+				for (int i = 0; i < 64; i++) drawn[i] = -1;
+				draw_all();
+				break;
+			}
 			int id = kui_buttons_hit(buttons, 3, e.x, e.y);
 			if (id == BTN_UNDO) {
 				undo();

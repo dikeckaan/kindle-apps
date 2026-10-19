@@ -856,8 +856,6 @@ Not silinsin mi?	Smazat tuto poznámku?
 %s teslim oldu	%s se vzdává
 13×13	13×13
 9×9 (kısa oyun)	9×9 (krátká partie)
-Almak zorunlu (%d taş) · %s	Povinné braní (%d kamenů) · %s
-Almaya devam: sıradaki kareye dokunun	Pokračujte v braní: klepněte na další pole
 Berabere	Remíza
 Beyaz %d – Siyah %d · %s	Bílý %d – Černý %d · %s
 Beyaz (ilk hamle)	Bílý (začíná)
@@ -890,9 +888,6 @@ Siyah %d – Beyaz %d · %s	Černý %d – Bílý %d · %s
 Siyah (ilk hamle)	Černý (začíná)
 Siyah başlar · köşeler değerlidir	Začíná černý · rohy jsou cenné
 Siyah kazandı	Vyhrává černý
-Sıra: %s · Beyaz %d – Siyah %d	Na tahu: %s · Bílý %d – Černý %d
-Sıra: %s · Siyah %d – Beyaz %d	Na tahu: %s · Černý %d – Bílý %d
-Sıra: %s · esir: Siyah %d, Beyaz %d	Na tahu: %s · zajatci: Černý %d, Bílý %d
 Tahta	Deska
 Teslim ol	Vzdát se
 Teslim oldunuz · Kindle kazandı	Vzdali jste se · Kindle vyhrál
@@ -1192,3 +1187,95 @@ Açmak için güç tuşuna basın	Probuďte stisknutím vypínače
 İpuçları: Açık	Nápověda: Zap.
 İpuçları: Kapalı	Nápověda: Vyp.
 İpuçları: seçtiğiniz taşın gidebileceği kareler	Nápověda: pole, kam může vybraná figura táhnout
+Amaç	Cíl hry
+Her oyuncunun 16 taşı vardır. Beyaz aşağıdadır ve ilk hamleyi yapar. Rakibin bütün taşlarını alan ya da onu hiç hamle yapamaz hâle getiren kazanır.	Každý hráč má 16 kamenů. Bílý je dole a táhne první. Vyhrává ten, kdo sebere všechny soupeřovy kameny, nebo ho připraví o všechny tahy.
+Taş nasıl oynanır?	Jak táhnout kamenem?
+Önce oynatacağınız taşa dokunun: kalın çerçeveyle seçilir, gidebileceği kareler noktayla gösterilir. Sonra noktalı kareye dokunun. Taş bir kare ileri ya da yana gider; geri (×) ve çapraz gidemez.	Nejprve klepněte na kámen, kterým chcete táhnout: dostane silný rámeček a pole, kam může jít, se označí tečkou. Pak klepněte na pole s tečkou. Kámen jde o pole vpřed nebo do strany; ne zpět (×) ani šikmo.
+Taş alma	Braní
+Rakip taş hemen önünüzde ya da yanınızdaysa ve arkasındaki kare boşsa, üzerinden atlayıp onu alırsınız. Atladıktan sonra yine alabiliyorsanız devam edersiniz: e4 önce e5'i, sonra f6'yı alıp g6'ya konuyor.	Stojí-li soupeřův kámen těsně před vaším nebo vedle něj a pole za ním je volné, přeskočíte ho a seberete. Můžete-li po skoku brát dál, pokračujete: e4 bere nejprve e5, pak f6 a skončí na g6.
+Almak zorunlu	Braní je povinné
+Alabiliyorsanız almak zorunludur ve en çok taşı alan yol seçilmelidir. Uygulama oynayabilecek taşları çerçeveyle gösterir: c3 tek taş alabilirdi, f3 ise iki taş alıyor; bu yüzden yalnızca f3 oynayabilir.	Můžete-li brát, musíte, a to cestou, která sebere nejvíc kamenů. Aplikace orámuje kameny, které smějí táhnout: c3 by vzal jeden kámen, f3 bere dva; proto smí táhnout jen f3.
+Dama olmak	Proměna v dámu
+Son sıraya ulaşan taş dama olur (♛). Dama, düz çizgilerde istediği kadar kare gider. Uzaktaki bir taşı, arası boşsa atlayıp arkasındaki herhangi bir boş kareye konarak alır: b2'deki dama b6'yı alabilir.	Kámen, který dojde na poslední řadu, se stane dámou (♛). Dáma jde po přímkách o libovolný počet polí. Vzdálený kámen bere, je-li cesta volná, a přistane na kterémkoli volném poli za ním: dáma na b2 může vzít b6.
+Oyunun sonu	Konec hry
+Taşı kalmayan ya da hiç hamle yapamayan kaybeder. Burada Siyah'ın a2'deki taşı hiçbir yere gidemez: Beyaz kazandı. İki tarafın da yalnızca birer taşı kalırsa oyun berabere biter.	Prohrává ten, komu nezbudou kameny nebo tahy. Zde černý kámen na a2 nemůže nikam: vyhrává bílý. Zbude-li oběma stranám jen po jednom kameni, je to remíza.
+Beyaz h3'teki taşını bir kare ileri, h4'e sürdü. Beyaz yukarı, Siyah aşağı doğru ilerler.	Bílý posunul kámen z h3 o pole vpřed, na h4. Bílý postupuje nahoru, černý dolů.
+Siyah d6'dan d5'e ilerledi.	Černý postoupil z d6 na d5.
+Beyaz e3'ten e4'e çıktı.	Bílý šel z e3 na e4.
+Siyah d4'e indi. Önünde d3'teki beyaz taş var ve arkası (d5) boş: alınabilir!	Černý sestoupil na d4. Před ním stojí bílý kámen z d3 a za ním (d5) je volno: lze ho vzít!
+Beyaz d3'ten d4'ün üzerinden d5'e atladı ve siyah taşı aldı. Almak zorunludur.	Bílý skočil z d3 přes d4 na d5 a vzal černý kámen. Braní je povinné.
+Siyah e5'e oynadı. Bu bir hata: e4'teki beyaz taş şimdi art arda iki taş alabilir.	Černý zahrál e5. To je chyba: bílý kámen na e4 teď může vzít dva kameny za sebou.
+Beyaz e5'i ve e7'yi art arda aldı ve son sıraya, e8'e ulaşıp dama oldu (♛). d5'ten tek taş almak yasaktı: en çok alan yol zorunludur.	Bílý vzal za sebou e5 a e7, došel na e8 na poslední řadu a stal se dámou (♛). Vzít z d5 jen jeden kámen bylo zakázáno: povinné je nejdelší braní.
+Siyah c5'e oynadı ve d5'teki beyaz taşa yandan saldırdı.	Černý zahrál c5 a napadl bílý kámen na d5 ze strany.
+Beyaz'ın başka seçeneği yok, almak zorunlu: d5'teki taş yana atlayıp c5'i aldı ve b5'e kondu.	Bílý nemá na výběr, braní je povinné: kámen z d5 skočil do strany, vzal c5 a přistál na b5.
+Siyah b6'dan b4'e atlayıp b5'i geri aldı. Durum: Beyaz 15 taş (biri dama), Siyah 12 taş.	Černý skočil z b6 na b4 a vzal zpět b5. Stav: bílý 15 kamenů (z toho dáma), černý 12.
+Beyaz %d – Siyah %d	Bílý %d – Černý %d
+Almaya devam: sıradaki noktalı kareye dokunun	Pokračujte v braní: klepněte na další pole s tečkou
+Baştan seçmek için taşın kendisine dokunun	Klepnutím na samotný kámen vyberete znovu
+Taş seçildi: gideceği noktalı kareye dokunun	Kámen vybrán: klepněte na pole s tečkou
+Başka taş seçmek için ona dokunun	Jiný kámen vyberete klepnutím na něj
+En çok taş alan yol zorunlu: %d taş	Povinné nejdelší braní: %d kamenů
+Zorunlu alma var: çerçeveli taşlardan birini seçin	Braní je povinné: vyberte orámovaný kámen
+bir taş seçin	vyberte kámen
+Kindle kısa bir oyun oynayacak. Her dokunuşta bir hamle yapılır ve burada anlatılır. Taşın çıktığı ve vardığı kare çerçeveli, alınan taşların yeri çarpı ile gösterilir.	Kindle odehraje krátkou partii. Každé klepnutí provede jeden tah, který se zde vysvětlí. Výchozí a cílové pole mají rámeček, místa sebraných kamenů označuje křížek.
+Nasıl oynanır?	Jak se hraje?
+Örnek oyun	Ukázková partie
+Siyah ve Beyaz sırayla boş noktalara taş koyar; Siyah başlar. Konan taş bir daha yerinden oynamaz. Amaç, taşlarınızla tahtanın rakibinizden daha büyük bir bölümünü çevirmektir.	Černý a bílý střídavě kladou kameny na volné body; začíná černý. Položený kámen se už nehýbe. Cílem je ohradit svými kameny větší část desky než soupeř.
+Hamle nasıl yapılır?	Jak táhnout?
+Çizgilerin kesiştiği boş bir noktaya dokunun; taşınız oraya konur. Son konan taşın ortasında halka vardır. Sıranızı geçmek için alttaki Pas düğmesine dokunun.	Klepněte na volný bod, kde se kříží čáry; váš kámen se tam položí. Poslední položený kámen má uprostřed kroužek. Tah vynecháte klepnutím na tlačítko Pas dole.
+Özgürlük	Svobody
+Bir taşın yukarı, aşağı, sağ ve soldaki boş komşuları onun özgürlükleridir (halkalar). Yan yana duran aynı renk taşlar bir zincirdir ve özgürlüklerini paylaşır: beyaz taşın 4, siyah zincirin 6 özgürlüğü var.	Volné sousední body kamene (nahoře, dole, vpravo a vlevo) jsou jeho svobody (kroužky). Sousedící kameny stejné barvy tvoří skupinu a sdílejí svobody: bílý kámen má 4, černá skupina 6.
+Esir alma	Zajímání
+Rakip taşın son özgürlüğünü de kapatırsanız taş tahtadan alınır ve esiriniz olur. Bu beyaz taşın tek özgürlüğü kaldı (atari): Siyah E4'e oynarsa onu alır. Hiç özgürlüğü kalmayacak bir yere, bir şey almıyorsa, taş konamaz.	Uzavřete-li soupeřovu kameni poslední svobodu, kámen zmizí z desky a stane se vaším zajatcem. Tento bílý kámen má jen jednu svobodu (atari): zahraje-li černý E4, vezme ho. Kámen nelze položit tam, kde by neměl žádnou svobodu, pokud přitom nic nebere.
+Ko	Ko
+Siyah F5'e oynayıp E5'teki beyaz taşı aldı. Beyaz hemen E5'e oynayıp geri alamaz (×); önce başka bir yere oynamalı. Buna ko denir: aynı durumun sonsuza dek tekrarlanmasını önler.	Černý zahrál F5 a vzal bílý kámen na E5. Bílý ho nemůže hned vzít zpět na E5 (×); nejdřív musí hrát jinam. Tomu se říká ko: brání nekonečnému opakování stejné pozice.
+Oyunun sonu ve sayım	Konec hry a počítání
+İki oyuncu art arda pas geçince oyun biter. Puanınız: taşlarınız ve çevirdiğiniz boş noktalar (kareler); Beyaz'a 7,5 komi eklenir. Burada Siyah 47, Beyaz 34 + 7,5: Siyah kazandı. Ölü taşları Kindle önerir; değiştirmek için zincire dokunun.	Hra končí, když oba hráči pasují po sobě. Vaše body: vaše kameny a volné body, které ohradíte (čtverečky); bílý dostává komi 7,5. Zde černý 47, bílý 34 + 7,5: vyhrává černý. Mrtvé kameny navrhne Kindle; klepnutím na skupinu to změníte.
+Siyah C3'e taş koydu. Taşlar çizgilerin kesiştiği noktalara konur ve bir daha oynamaz.	Černý položil kámen na C3. Kameny se kladou na průsečíky čar a už se nehýbou.
+Beyaz B2'ye oynadı. Bu taşın 4 özgürlüğü (boş komşusu) var: A2, B1, C2 ve B3.	Bílý zahrál B2. Tento kámen má 4 svobody (volné sousedy): A2, B1, C2 a B3.
+Siyah C2 ile bir özgürlüğü kapattı: B2'nin 3 özgürlüğü kaldı.	Černý tahem C2 uzavřel jednu svobodu: B2 zbyly 3.
+Beyaz sağ tarafta, G7'de kendine alan kurmaya başladı.	Bílý začal vpravo, na G7, budovat území.
+Siyah B3'e oynadı: B2'nin artık yalnızca 2 özgürlüğü var (A2 ve B1).	Černý zahrál B3: B2 má teď jen 2 svobody (A2 a B1).
+Beyaz G3 ile sağ tarafı genişletti.	Bílý rozšířil pravou stranu tahem G3.
+Siyah B1'e oynadı: B2'nin tek özgürlüğü kaldı (A2). Buna atari denir: bir sonraki hamlede alınabilir.	Černý zahrál B1: B2 zbyla jediná svoboda (A2). Tomu se říká atari: v příštím tahu může být vzat.
+Beyaz A2'ye uzayarak kaçmaya çalıştı. A2 ile B2 artık bir zincir; özgürlükleri birlikte sayılır: A1 ve A3.	Bílý se pokusil utéct prodloužením na A2. A2 a B2 jsou teď skupina; svobody se počítají společně: A1 a A3.
+Siyah A3 ile zinciri yine atariye düşürdü. Beyaz A1'e oynayamaz: orada taşlarının hiç özgürlüğü kalmazdı.	Tahem A3 dal černý skupině znovu atari. Bílý nemůže hrát A1: jeho kameny by tam neměly žádnou svobodu.
+Beyaz zinciri kurtaramayacağını görüp G5'e oynadı.	Bílý viděl, že skupinu nezachrání, a zahrál G5.
+Siyah A1'e oynadı: zincirin son özgürlüğü kapandı, A2 ve B2 tahtadan alındı (×). Siyah'ın 2 esiri var. Sol alt köşe Siyah'ın, sağ taraf Beyaz'ın alanı oluyor.	Černý zahrál A1: skupině se uzavřela poslední svoboda, A2 a B2 zmizely z desky (×). Černý má 2 zajatce. Levý dolní roh patří černému, pravá strana bílému.
+Ölü taşları değiştirmek için zincire dokunun, sonra Sayımı onayla	Klepnutím na skupinu změňte mrtvé kameny, pak Potvrdit počítání
+Esir: Siyah %d, Beyaz %d	Zajatci: Černý %d, Bílý %d
+sıra geçmek için Pas	tlačítkem Pas vynecháte tah
+boş bir kesişime dokunun	klepněte na volný průsečík
+Kindle kısa bir oyun oynayacak. Her dokunuşta bir hamle yapılır ve burada anlatılır. Son konan taşın ortasında halka olur, alınan taşların yeri çarpı ile gösterilir.	Kindle odehraje krátkou partii. Každé klepnutí provede jeden tah, který se zde vysvětlí. Poslední položený kámen má uprostřed kroužek, místa sebraných kamenů označuje křížek.
+Sıra sizde (%s)	Jste na tahu (%s)
+Sıra Siyah'ta	Na tahu je černý
+Sıra Beyaz'da	Na tahu je bílý
+Hamle %d / %d	Tah %d / %d
+Baştan	Od začátku
+Sonraki hamle ▶	Další tah ▶
+◀ Geri	◀ Zpět
+%s oyununu ilk kez açıyorsunuz. Nasıl oynandığını resimlerle kısaca gösterelim mi?	Otevíráte %s poprvé. Máme vám v obrázcích krátce ukázat, jak se hraje?
+Göster	Ukázat
+Gerek yok	Není třeba
+Siyah ve Beyaz sırayla tahtaya taş koyar; Siyah başlar. Oyun bitince tahtada daha çok taşı olan kazanır. Başlangıçta ortada ikişer taş vardır.	Černý a bílý střídavě kladou kameny na desku; začíná černý. Na konci vyhrává ten, kdo má na desce víc kamenů. Na začátku jsou uprostřed dva kameny od každé barvy.
+Sıra sizdeyken noktalı karelerden birine dokunun; taşınız oraya konur. Noktalar oynayabileceğiniz kareleri gösterir (İpucu düğmesiyle açılıp kapanır). Burada Siyah d3'e dokunuyor.	Když jste na tahu, klepněte na jedno z polí s tečkou; váš kámen se tam položí. Tečky ukazují, kam můžete hrát (zapínají a vypínají se tlačítkem Nápověda). Zde černý klepe na d3.
+Sıkıştır ve çevir	Sevření a otočení
+Yeni taş, rakip taşları sizin iki taşınızın arasında sıkıştırmalı. Aradaki rakip taşlar sizin renginize döner: d4'teki beyaz taş d3 ile d5 arasında kaldı ve siyah oldu (çerçeveli). Sıkıştırmayan bir kareye oynanamaz.	Nový kámen musí sevřít soupeřovy kameny mezi dvěma vašimi. Sevřené kameny změní barvu na vaši: bílý kámen na d4 se ocitl mezi d3 a d5 a zčernal (orámovaný). Na pole, které nic nesevře, hrát nelze.
+Sekiz yön	Osm směrů
+Sıkıştırma düz, yan ve çapraz, sekiz yönde de olur; bir hamle birkaç yönde birden çevirebilir. Siyah d4'e oynadı ve beş beyaz taşı çevirdi. c5 çevrilmedi: arkasında siyah taş yok.	Svírat lze svisle, vodorovně i šikmo, ve všech osmi směrech; jeden tah může otáčet v několika směrech najednou. Černý zahrál d4 a otočil pět bílých kamenů. c5 se neotočil: za ním není černý kámen.
+Hiç oynayacak yeri olmayan pas geçer; uygulama bunu kendiliğinden yapar ve durum satırında yazar. Burada Beyaz hiçbir siyah taşı sıkıştıramıyor, bu yüzden sıra yine Siyah'ta (nokta: d1).	Kdo nemá kam hrát, pasuje; aplikace to udělá sama a napíše to do stavového řádku. Zde bílý nemůže sevřít žádný černý kámen, a tak je znovu na tahu černý (tečka: d1).
+İki taraf da oynayamayınca (çoğu zaman tahta dolunca) oyun biter ve taşlar sayılır. Burada Siyah 40 – Beyaz 24: Siyah kazandı. Köşedeki taş hiç çevrilemez; bu yüzden köşeler çok değerlidir.	Když nemůže hrát ani jedna strana (většinou na plné desce), hra končí a kameny se sečtou. Zde černý 40 – bílý 24: vyhrává černý. Kámen v rohu nelze nikdy otočit; proto jsou rohy tak cenné.
+Siyah d3'e oynadı: d4'teki beyaz taşı d5'teki kendi taşıyla sıkıştırdı ve çevirdi.	Černý zahrál d3: sevřel bílý kámen na d4 svým kamenem na d5 a otočil ho.
+Beyaz c5'e oynadı: d5'teki siyah taşı e5 ile sıkıştırıp beyaza çevirdi.	Bílý zahrál c5: sevřel černý kámen na d5 s e5 a otočil ho na bílý.
+Siyah f6'ya oynadı: e5'i çaprazda d4 ile sıkıştırıp çevirdi.	Černý zahrál f6: sevřel e5 šikmo s d4 a otočil ho.
+Beyaz f5'e oynadı: e5'i yatayda d5 ile sıkıştırıp geri aldı. Bir taş defalarca renk değiştirebilir.	Bílý zahrál f5: sevřel e5 vodorovně s d5 a získal ho zpět. Kámen může barvu měnit mnohokrát.
+Siyah e6'ya oynadı: e5'i dikeyde e4 ile sıkıştırdı.	Černý zahrál e6: sevřel e5 svisle s e4.
+Beyaz e3'e oynadı: d4'ü çaprazda c5 ile sıkıştırdı.	Bílý zahrál e3: sevřel d4 šikmo s c5.
+Siyah c4'e oynadı ve iki yönde birden sıkıştırdı: d4 (yatay) ve d5 (çapraz) siyah oldu.	Černý zahrál c4 a sevřel ve dvou směrech najednou: d4 (vodorovně) a d5 (šikmo) zčernaly.
+Beyaz e7'ye oynadı: e6, e5 ve e4'ü aşağıdaki e3 ile sıkıştırdı. Aynı sırada üç taş birden döndü.	Bílý zahrál e7: sevřel e6, e5 a e4 s e3 dole. Tři kameny v jedné řadě se otočily najednou.
+Siyah f4'e oynadı: f5'i dikeyde, e4'ü yatayda sıkıştırdı.	Černý zahrál f4: sevřel f5 svisle a e4 vodorovně.
+Beyaz c3'e oynadı ve üç yönde birden çevirdi: c4, d4 ve d3. Durum: Siyah 5 – Beyaz 9. Oyun tahta dolana kadar böyle sürer.	Bílý zahrál c3 a otočil ve třech směrech najednou: c4, d4 a d3. Stav: černý 5 – bílý 9. Tak hra pokračuje, dokud se deska nezaplní.
+noktalı bir kareye dokunun	klepněte na pole s tečkou
+rakibi sıkıştıran bir kareye dokunun	klepněte na pole, které sevře soupeře
+Siyah %d – Beyaz %d	Černý %d – Bílý %d
+Kindle kısa bir oyun oynayacak. Her dokunuşta bir hamle yapılır ve burada anlatılır. Yeni konan taşın ortasında nokta, çevrilen taşların çevresinde çerçeve olur.	Kindle odehraje krátkou partii. Každé klepnutí provede jeden tah, který se zde vysvětlí. Nový kámen má uprostřed tečku, otočené kameny mají rámeček.

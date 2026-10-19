@@ -624,3 +624,111 @@ int go_game_load(GoGame *g, const char *buf)
 	*g = t;
 	return 0;
 }
+
+/* ---- lessons ---- */
+
+static const char go_letters[] = "ABCDEFGHJKLMN"; /* no I, as on real Go boards */
+
+int go_parse_pt(const Go *g, const char *s)
+{
+	if (!s) return -1;
+	if (strcmp(s, "pas") == 0) return GO_PASS;
+	const char *l = s[0] ? strchr(go_letters, s[0]) : NULL;
+	char *end;
+	long row = strtol(s + 1, &end, 10);
+	if (!l || *end || end == s + 1 || l - go_letters >= g->n || row < 1 || row > g->n) return -1;
+	return go_pt(g, g->n - (int) row, (int) (l - go_letters));
+}
+
+void go_pt_name(const Go *g, int p, char out[4])
+{
+	snprintf(out, 4, "%c%d", go_letters[go_col(g, p)], g->n - go_row(g, p));
+}
+
+void go_from_rows(Go *g, int n, const char *const *rows, int side)
+{
+	go_init(g, n);
+	for (int r = 0; r < n; r++)
+		for (int c = 0; c < n && rows[r] && rows[r][c]; c++) {
+			char ch = rows[r][c];
+			if (ch != 'B' && ch != 'W') continue;
+			g->side = ch == 'B' ? GO_BLACK : GO_WHITE;
+			go_play(g, go_pt(g, r, c));
+		}
+	g->side = side;
+	g->ko = 0;
+	g->passes = 0;
+	g->last = -2;
+	g->caps[GO_BLACK] = g->caps[GO_WHITE] = 0;
+}
+
+const MasaPage go_pages[] = {
+	{ N_("Amaç"),
+	  N_("Siyah ve Beyaz sırayla boş noktalara taş koyar; Siyah başlar. Konan taş bir daha yerinden oynamaz. Amaç, "
+	     "taşlarınızla tahtanın rakibinizden daha büyük bir bölümünü çevirmektir."),
+	  GO_BLACK,
+	  { ".........", ".........", "..B...W..", ".........", "...B.W...", ".........", "..B...W..", ".........",
+	    "........." },
+	  { NULL } },
+	{ N_("Hamle nasıl yapılır?"),
+	  N_("Çizgilerin kesiştiği boş bir noktaya dokunun; taşınız oraya konur. Son konan taşın ortasında halka vardır. "
+	     "Sıranızı geçmek için alttaki Pas düğmesine dokunun."),
+	  GO_BLACK,
+	  { ".........", ".........", "..B...W..", ".........", "...B.W...", ".........", "..B...W..", ".........",
+	    "........." },
+	  { ".........", ".........", ".........", ".........", ".....n...", "...@.....", ".........", ".........",
+	    "........." } },
+	{ N_("Özgürlük"),
+	  N_("Bir taşın yukarı, aşağı, sağ ve soldaki boş komşuları onun özgürlükleridir (halkalar). Yan yana duran aynı "
+	     "renk taşlar bir zincirdir ve özgürlüklerini paylaşır: beyaz taşın 4, siyah zincirin 6 özgürlüğü var."),
+	  GO_BLACK,
+	  { ".........", ".........", "..W......", ".........", ".........", "....BB...", ".........", ".........",
+	    "........." },
+	  { ".........", "..l......", ".l.l.....", "..l......", "....ll...", "...l..l..", "....ll...", ".........",
+	    "........." } },
+	{ N_("Esir alma"),
+	  N_("Rakip taşın son özgürlüğünü de kapatırsanız taş tahtadan alınır ve esiriniz olur. Bu beyaz taşın tek "
+	     "özgürlüğü kaldı (atari): Siyah E4'e oynarsa onu alır. Hiç özgürlüğü kalmayacak bir yere, bir şey almıyorsa, "
+	     "taş konamaz."),
+	  GO_BLACK,
+	  { ".........", ".........", ".........", "....B....", "...BWB...", ".........", ".........", ".........",
+	    "........." },
+	  { ".........", ".........", ".........", ".........", ".........", "....@....", ".........", ".........",
+	    "........." } },
+	{ N_("Ko"),
+	  N_("Siyah F5'e oynayıp E5'teki beyaz taşı aldı. Beyaz hemen E5'e oynayıp geri alamaz (×); önce başka bir yere "
+	     "oynamalı. Buna ko denir: aynı durumun sonsuza dek tekrarlanmasını önler."),
+	  GO_WHITE,
+	  { ".........", ".........", ".........", "....BW...", "...B.BW..", "....BW...", ".........", ".........",
+	    "........." },
+	  { ".........", ".........", ".........", ".........", "....xn...", ".........", ".........", ".........",
+	    "........." } },
+	{ N_("Oyunun sonu ve sayım"),
+	  N_("İki oyuncu art arda pas geçince oyun biter. Puanınız: taşlarınız ve çevirdiğiniz boş noktalar (kareler); "
+	     "Beyaz'a 7,5 komi eklenir. Burada Siyah 47, Beyaz 34 + 7,5: Siyah kazandı. Ölü taşları Kindle önerir; "
+	     "değiştirmek için zincire dokunun."),
+	  GO_BLACK,
+	  { "....BW...", "....BW...", "....BW...", ".....BW..", ".....BW..", "....BW...", "....BW...", "....BW...",
+	    "....BW..." },
+	  { "tttt..uuu", "tttt..uuu", "tttt..uuu", "ttttt..uu", "ttttt..uu", "tttt..uuu", "tttt..uuu", "tttt..uuu",
+	    "tttt..uuu" } },
+};
+const int go_npages = (int) (sizeof go_pages / sizeof go_pages[0]);
+
+const MasaStep go_demo[] = {
+	{ "C3", N_("Siyah C3'e taş koydu. Taşlar çizgilerin kesiştiği noktalara konur ve bir daha oynamaz.") },
+	{ "B2", N_("Beyaz B2'ye oynadı. Bu taşın 4 özgürlüğü (boş komşusu) var: A2, B1, C2 ve B3.") },
+	{ "C2", N_("Siyah C2 ile bir özgürlüğü kapattı: B2'nin 3 özgürlüğü kaldı.") },
+	{ "G7", N_("Beyaz sağ tarafta, G7'de kendine alan kurmaya başladı.") },
+	{ "B3", N_("Siyah B3'e oynadı: B2'nin artık yalnızca 2 özgürlüğü var (A2 ve B1).") },
+	{ "G3", N_("Beyaz G3 ile sağ tarafı genişletti.") },
+	{ "B1", N_("Siyah B1'e oynadı: B2'nin tek özgürlüğü kaldı (A2). Buna atari denir: bir sonraki hamlede alınabilir.") },
+	{ "A2", N_("Beyaz A2'ye uzayarak kaçmaya çalıştı. A2 ile B2 artık bir zincir; özgürlükleri birlikte sayılır: A1 ve "
+		   "A3.") },
+	{ "A3", N_("Siyah A3 ile zinciri yine atariye düşürdü. Beyaz A1'e oynayamaz: orada taşlarının hiç özgürlüğü "
+		   "kalmazdı.") },
+	{ "G5", N_("Beyaz zinciri kurtaramayacağını görüp G5'e oynadı.") },
+	{ "A1", N_("Siyah A1'e oynadı: zincirin son özgürlüğü kapandı, A2 ve B2 tahtadan alındı (×). Siyah'ın 2 esiri var. "
+		   "Sol alt köşe Siyah'ın, sağ taraf Beyaz'ın alanı oluyor.") },
+};
+const int go_ndemo = (int) (sizeof go_demo / sizeof go_demo[0]);

@@ -856,8 +856,6 @@ Not silinsin mi?	Стерти цю нотатку?
 %s teslim oldu	%s здається
 13×13	13×13
 9×9 (kısa oyun)	9×9 (коротка партія)
-Almak zorunlu (%d taş) · %s	Бити обов'язково (%d шашок) · %s
-Almaya devam: sıradaki kareye dokunun	Бийте далі: торкніться наступної клітинки
 Berabere	Нічия
 Beyaz %d – Siyah %d · %s	Білі %d – Чорні %d · %s
 Beyaz (ilk hamle)	Білі (ходять першими)
@@ -890,9 +888,6 @@ Siyah %d – Beyaz %d · %s	Чорні %d – Білі %d · %s
 Siyah (ilk hamle)	Чорні (ходять першими)
 Siyah başlar · köşeler değerlidir	Чорні починають · кути цінні
 Siyah kazandı	Чорні перемогли
-Sıra: %s · Beyaz %d – Siyah %d	Хід: %s · Білі %d – Чорні %d
-Sıra: %s · Siyah %d – Beyaz %d	Хід: %s · Чорні %d – Білі %d
-Sıra: %s · esir: Siyah %d, Beyaz %d	Хід: %s · полонені: Чорні %d, Білі %d
 Tahta	Дошка
 Teslim ol	Здатися
 Teslim oldunuz · Kindle kazandı	Ви здалися · Kindle переміг
@@ -1192,3 +1187,95 @@ Açmak için güç tuşuna basın	Натисніть кнопку живленн
 İpuçları: Açık	Підказки: увімк.
 İpuçları: Kapalı	Підказки: вимк.
 İpuçları: seçtiğiniz taşın gidebileceği kareler	Підказки: поля, куди може піти вибрана фігура
+Amaç	Мета
+Her oyuncunun 16 taşı vardır. Beyaz aşağıdadır ve ilk hamleyi yapar. Rakibin bütün taşlarını alan ya da onu hiç hamle yapamaz hâle getiren kazanır.	Кожен гравець має 16 шашок. Білі внизу й ходять першими. Перемагає той, хто візьме всі шашки суперника або позбавить його ходів.
+Taş nasıl oynanır?	Як ходить шашка?
+Önce oynatacağınız taşa dokunun: kalın çerçeveyle seçilir, gidebileceği kareler noktayla gösterilir. Sonra noktalı kareye dokunun. Taş bir kare ileri ya da yana gider; geri (×) ve çapraz gidemez.	Спершу торкніться шашки, якою ходитимете: її виділить жирна рамка, а доступні клітинки — точки. Потім торкніться клітинки з точкою. Шашка ходить на клітинку вперед або вбік; назад (×) і по діагоналі не можна.
+Taş alma	Взяття
+Rakip taş hemen önünüzde ya da yanınızdaysa ve arkasındaki kare boşsa, üzerinden atlayıp onu alırsınız. Atladıktan sonra yine alabiliyorsanız devam edersiniz: e4 önce e5'i, sonra f6'yı alıp g6'ya konuyor.	Якщо шашка суперника стоїть прямо перед вами чи збоку, а клітинка за нею вільна, перестрибніть через неї та візьміть її. Якщо після стрибка можна бити ще, продовжуйте: e4 бере спершу e5, потім f6 і стає на g6.
+Almak zorunlu	Бити обов'язково
+Alabiliyorsanız almak zorunludur ve en çok taşı alan yol seçilmelidir. Uygulama oynayabilecek taşları çerçeveyle gösterir: c3 tek taş alabilirdi, f3 ise iki taş alıyor; bu yüzden yalnızca f3 oynayabilir.	Якщо можна бити, бити обов'язково, і обирається шлях, де береться найбільше шашок. Застосунок обводить шашки, якими можна ходити: c3 взяла б одну шашку, а f3 бере дві, тож ходить лише f3.
+Dama olmak	Дамка
+Son sıraya ulaşan taş dama olur (♛). Dama, düz çizgilerde istediği kadar kare gider. Uzaktaki bir taşı, arası boşsa atlayıp arkasındaki herhangi bir boş kareye konarak alır: b2'deki dama b6'yı alabilir.	Шашка, що дійшла до останнього ряду, стає дамкою (♛). Дамка ходить по прямій на будь-яку кількість клітинок. Далеку шашку вона б'є, якщо шлях вільний, стаючи на будь-яку порожню клітинку за нею: дамка на b2 може взяти b6.
+Oyunun sonu	Кінець гри
+Taşı kalmayan ya da hiç hamle yapamayan kaybeder. Burada Siyah'ın a2'deki taşı hiçbir yere gidemez: Beyaz kazandı. İki tarafın da yalnızca birer taşı kalırsa oyun berabere biter.	Програє той, у кого не лишилося шашок або ходів. Тут чорній шашці на a2 нікуди йти: білі перемогли. Якщо в обох сторін лишилося по одній шашці, партія закінчується внічию.
+Beyaz h3'teki taşını bir kare ileri, h4'e sürdü. Beyaz yukarı, Siyah aşağı doğru ilerler.	Білі пересунули шашку з h3 на клітинку вперед, на h4. Білі йдуть угору, чорні — вниз.
+Siyah d6'dan d5'e ilerledi.	Чорні пішли з d6 на d5.
+Beyaz e3'ten e4'e çıktı.	Білі піднялися з e3 на e4.
+Siyah d4'e indi. Önünde d3'teki beyaz taş var ve arkası (d5) boş: alınabilir!	Чорні спустилися на d4. Перед ними біла шашка на d3, а за нею (d5) порожньо: її можна взяти!
+Beyaz d3'ten d4'ün üzerinden d5'e atladı ve siyah taşı aldı. Almak zorunludur.	Білі стрибнули з d3 через d4 на d5 і взяли чорну шашку. Бити обов'язково.
+Siyah e5'e oynadı. Bu bir hata: e4'teki beyaz taş şimdi art arda iki taş alabilir.	Чорні зіграли e5. Це помилка: біла шашка на e4 тепер може взяти дві шашки поспіль.
+Beyaz e5'i ve e7'yi art arda aldı ve son sıraya, e8'e ulaşıp dama oldu (♛). d5'ten tek taş almak yasaktı: en çok alan yol zorunludur.	Білі взяли поспіль e5 і e7, дійшли до останнього ряду (e8) і стали дамкою (♛). Бити одну шашку з d5 було не можна: обов'язковий шлях із найбільшим взяттям.
+Siyah c5'e oynadı ve d5'teki beyaz taşa yandan saldırdı.	Чорні зіграли c5 і атакували збоку білу шашку на d5.
+Beyaz'ın başka seçeneği yok, almak zorunlu: d5'teki taş yana atlayıp c5'i aldı ve b5'e kondu.	Білі не мають вибору, бити обов'язково: шашка з d5 стрибнула вбік, взяла c5 і стала на b5.
+Siyah b6'dan b4'e atlayıp b5'i geri aldı. Durum: Beyaz 15 taş (biri dama), Siyah 12 taş.	Чорні стрибнули з b6 на b4 і відіграли b5. Підсумок: у білих 15 шашок (одна дамка), у чорних 12.
+Beyaz %d – Siyah %d	Білі %d – Чорні %d
+Almaya devam: sıradaki noktalı kareye dokunun	Бийте далі: торкніться наступної клітинки з точкою
+Baştan seçmek için taşın kendisine dokunun	Торкніться самої шашки, щоб вибрати заново
+Taş seçildi: gideceği noktalı kareye dokunun	Шашку вибрано: торкніться клітинки з точкою
+Başka taş seçmek için ona dokunun	Щоб вибрати іншу шашку, торкніться її
+En çok taş alan yol zorunlu: %d taş	Обов'язково бити найбільше: %d шашок
+Zorunlu alma var: çerçeveli taşlardan birini seçin	Взяття обов'язкове: виберіть шашку в рамці
+bir taş seçin	виберіть шашку
+Kindle kısa bir oyun oynayacak. Her dokunuşta bir hamle yapılır ve burada anlatılır. Taşın çıktığı ve vardığı kare çerçeveli, alınan taşların yeri çarpı ile gösterilir.	Kindle зіграє коротку партію. Кожен дотик — один хід із поясненням тут. Клітинки, звідки й куди пішла шашка, у рамці, місця взятих шашок позначено хрестиком.
+Nasıl oynanır?	Як грати?
+Örnek oyun	Приклад партії
+Siyah ve Beyaz sırayla boş noktalara taş koyar; Siyah başlar. Konan taş bir daha yerinden oynamaz. Amaç, taşlarınızla tahtanın rakibinizden daha büyük bir bölümünü çevirmektir.	Чорні й білі по черзі ставлять камені на вільні пункти; починають чорні. Поставлений камінь більше не рухається. Мета — оточити своїми каменями більшу частину дошки, ніж суперник.
+Hamle nasıl yapılır?	Як зробити хід?
+Çizgilerin kesiştiği boş bir noktaya dokunun; taşınız oraya konur. Son konan taşın ortasında halka vardır. Sıranızı geçmek için alttaki Pas düğmesine dokunun.	Торкніться вільного перетину ліній — туди стане ваш камінь. На останньому камені є кружечок. Щоб пропустити хід, натисніть унизу кнопку «Пас».
+Özgürlük	Дихання
+Bir taşın yukarı, aşağı, sağ ve soldaki boş komşuları onun özgürlükleridir (halkalar). Yan yana duran aynı renk taşlar bir zincirdir ve özgürlüklerini paylaşır: beyaz taşın 4, siyah zincirin 6 özgürlüğü var.	Вільні сусідні пункти каменя згори, знизу, праворуч і ліворуч — його дихання (кружечки). Сусідні камені одного кольору утворюють групу зі спільними диханнями: у білого каменя їх 4, у чорної групи 6.
+Esir alma	Захоплення
+Rakip taşın son özgürlüğünü de kapatırsanız taş tahtadan alınır ve esiriniz olur. Bu beyaz taşın tek özgürlüğü kaldı (atari): Siyah E4'e oynarsa onu alır. Hiç özgürlüğü kalmayacak bir yere, bir şey almıyorsa, taş konamaz.	Якщо закрити останнє дихання каменя суперника, його знімають з дошки і він стає вашим полоненим. У цього білого каменя одне дихання (атарі): зігравши E4, чорні його візьмуть. Не можна ставити камінь туди, де в нього не буде дихань, якщо він нічого не захоплює.
+Ko	Ко
+Siyah F5'e oynayıp E5'teki beyaz taşı aldı. Beyaz hemen E5'e oynayıp geri alamaz (×); önce başka bir yere oynamalı. Buna ko denir: aynı durumun sonsuza dek tekrarlanmasını önler.	Чорні зіграли F5 і взяли білий камінь на E5. Білі не можуть одразу відіграти його ходом на E5 (×); спершу треба зіграти деінде. Це ко: правило не дає позиції повторюватися безкінечно.
+Oyunun sonu ve sayım	Кінець гри та підрахунок
+İki oyuncu art arda pas geçince oyun biter. Puanınız: taşlarınız ve çevirdiğiniz boş noktalar (kareler); Beyaz'a 7,5 komi eklenir. Burada Siyah 47, Beyaz 34 + 7,5: Siyah kazandı. Ölü taşları Kindle önerir; değiştirmek için zincire dokunun.	Гра закінчується, коли обидва гравці пасують поспіль. Ваші очки — ваші камені й оточені порожні пункти (квадратики); білим додається комі 7,5. Тут чорні 47, білі 34 + 7,5: чорні перемогли. Мертві камені пропонує Kindle; щоб змінити, торкніться групи.
+Siyah C3'e taş koydu. Taşlar çizgilerin kesiştiği noktalara konur ve bir daha oynamaz.	Чорні поставили камінь на C3. Камені ставлять на перетини ліній, і вони більше не рухаються.
+Beyaz B2'ye oynadı. Bu taşın 4 özgürlüğü (boş komşusu) var: A2, B1, C2 ve B3.	Білі зіграли B2. У цього каменя 4 дихання (вільні сусіди): A2, B1, C2 і B3.
+Siyah C2 ile bir özgürlüğü kapattı: B2'nin 3 özgürlüğü kaldı.	Чорні ходом C2 закрили одне дихання: у B2 лишилося 3.
+Beyaz sağ tarafta, G7'de kendine alan kurmaya başladı.	Білі почали будувати територію праворуч, на G7.
+Siyah B3'e oynadı: B2'nin artık yalnızca 2 özgürlüğü var (A2 ve B1).	Чорні зіграли B3: у B2 тепер лише 2 дихання (A2 і B1).
+Beyaz G3 ile sağ tarafı genişletti.	Білі розширили праву сторону ходом G3.
+Siyah B1'e oynadı: B2'nin tek özgürlüğü kaldı (A2). Buna atari denir: bir sonraki hamlede alınabilir.	Чорні зіграли B1: у B2 лишилося одне дихання (A2). Це атарі: камінь можна взяти наступним ходом.
+Beyaz A2'ye uzayarak kaçmaya çalıştı. A2 ile B2 artık bir zincir; özgürlükleri birlikte sayılır: A1 ve A3.	Білі спробували втекти, витягнувшись на A2. A2 і B2 тепер група, їхні дихання рахуються разом: A1 і A3.
+Siyah A3 ile zinciri yine atariye düşürdü. Beyaz A1'e oynayamaz: orada taşlarının hiç özgürlüğü kalmazdı.	Чорні ходом A3 знову поставили групу в атарі. Білі не можуть зіграти A1: там у їхніх каменів не лишилося б дихань.
+Beyaz zinciri kurtaramayacağını görüp G5'e oynadı.	Білі зрозуміли, що групу не врятувати, і зіграли G5.
+Siyah A1'e oynadı: zincirin son özgürlüğü kapandı, A2 ve B2 tahtadan alındı (×). Siyah'ın 2 esiri var. Sol alt köşe Siyah'ın, sağ taraf Beyaz'ın alanı oluyor.	Чорні зіграли A1: останнє дихання групи закрито, A2 і B2 знято з дошки (×). У чорних 2 полонені. Лівий нижній кут стає територією чорних, права сторона — білих.
+Ölü taşları değiştirmek için zincire dokunun, sonra Sayımı onayla	Торкніться групи, щоб змінити мертві камені, потім «Підтвердити підрахунок»
+Esir: Siyah %d, Beyaz %d	Полонені: Чорні %d, Білі %d
+sıra geçmek için Pas	«Пас» — пропустити хід
+boş bir kesişime dokunun	торкніться вільного перетину
+Kindle kısa bir oyun oynayacak. Her dokunuşta bir hamle yapılır ve burada anlatılır. Son konan taşın ortasında halka olur, alınan taşların yeri çarpı ile gösterilir.	Kindle зіграє коротку партію. Кожен дотик — один хід із поясненням тут. На останньому камені є кружечок, місця знятих каменів позначено хрестиком.
+Sıra sizde (%s)	Ваш хід (%s)
+Sıra Siyah'ta	Хід чорних
+Sıra Beyaz'da	Хід білих
+Hamle %d / %d	Хід %d / %d
+Baştan	Спочатку
+Sonraki hamle ▶	Наступний хід ▶
+◀ Geri	◀ Назад
+%s oyununu ilk kez açıyorsunuz. Nasıl oynandığını resimlerle kısaca gösterelim mi?	Ви вперше відкриваєте гру «%s». Показати на малюнках, як у неї грати?
+Göster	Показати
+Gerek yok	Не треба
+Siyah ve Beyaz sırayla tahtaya taş koyar; Siyah başlar. Oyun bitince tahtada daha çok taşı olan kazanır. Başlangıçta ortada ikişer taş vardır.	Чорні й білі по черзі ставлять фішки на дошку; починають чорні. Наприкінці перемагає той, у кого більше фішок. На початку в центрі стоїть по дві фішки кожного кольору.
+Sıra sizdeyken noktalı karelerden birine dokunun; taşınız oraya konur. Noktalar oynayabileceğiniz kareleri gösterir (İpucu düğmesiyle açılıp kapanır). Burada Siyah d3'e dokunuyor.	У свій хід торкніться клітинки з точкою — туди стане ваша фішка. Точки показують, куди можна ходити (вмикаються й вимикаються кнопкою «Підказки»). Тут чорні торкаються d3.
+Sıkıştır ve çevir	Затисни й переверни
+Yeni taş, rakip taşları sizin iki taşınızın arasında sıkıştırmalı. Aradaki rakip taşlar sizin renginize döner: d4'teki beyaz taş d3 ile d5 arasında kaldı ve siyah oldu (çerçeveli). Sıkıştırmayan bir kareye oynanamaz.	Нова фішка має затиснути фішки суперника між двома вашими. Затиснуті фішки стають вашого кольору: біла на d4 опинилася між d3 і d5 і стала чорною (у рамці). Ходити туди, де нічого не затискається, не можна.
+Sekiz yön	Вісім напрямків
+Sıkıştırma düz, yan ve çapraz, sekiz yönde de olur; bir hamle birkaç yönde birden çevirebilir. Siyah d4'e oynadı ve beş beyaz taşı çevirdi. c5 çevrilmedi: arkasında siyah taş yok.	Затискати можна по вертикалі, горизонталі й діагоналі — у всіх восьми напрямках; один хід може перевертати одразу в кількох. Чорні зіграли d4 і перевернули п'ять білих фішок. c5 не перевернулася: за нею немає чорної фішки.
+Hiç oynayacak yeri olmayan pas geçer; uygulama bunu kendiliğinden yapar ve durum satırında yazar. Burada Beyaz hiçbir siyah taşı sıkıştıramıyor, bu yüzden sıra yine Siyah'ta (nokta: d1).	Кому нікуди ходити, той пасує; застосунок робить це сам і пише про це в рядку стану. Тут білі не можуть затиснути жодної чорної фішки, тож знову ходять чорні (точка: d1).
+İki taraf da oynayamayınca (çoğu zaman tahta dolunca) oyun biter ve taşlar sayılır. Burada Siyah 40 – Beyaz 24: Siyah kazandı. Köşedeki taş hiç çevrilemez; bu yüzden köşeler çok değerlidir.	Коли ніхто не може ходити (зазвичай дошка заповнена), гра закінчується й фішки рахують. Тут чорні 40 – білі 24: чорні перемогли. Кутову фішку перевернути неможливо, тому кути дуже цінні.
+Siyah d3'e oynadı: d4'teki beyaz taşı d5'teki kendi taşıyla sıkıştırdı ve çevirdi.	Чорні зіграли d3: затиснули білу фішку на d4 своєю на d5 і перевернули її.
+Beyaz c5'e oynadı: d5'teki siyah taşı e5 ile sıkıştırıp beyaza çevirdi.	Білі зіграли c5: затиснули чорну фішку на d5 за допомогою e5 і зробили її білою.
+Siyah f6'ya oynadı: e5'i çaprazda d4 ile sıkıştırıp çevirdi.	Чорні зіграли f6: затиснули e5 по діагоналі з d4 і перевернули.
+Beyaz f5'e oynadı: e5'i yatayda d5 ile sıkıştırıp geri aldı. Bir taş defalarca renk değiştirebilir.	Білі зіграли f5: затиснули e5 по горизонталі з d5 і відіграли її. Фішка може змінювати колір багато разів.
+Siyah e6'ya oynadı: e5'i dikeyde e4 ile sıkıştırdı.	Чорні зіграли e6: затиснули e5 по вертикалі з e4.
+Beyaz e3'e oynadı: d4'ü çaprazda c5 ile sıkıştırdı.	Білі зіграли e3: затиснули d4 по діагоналі з c5.
+Siyah c4'e oynadı ve iki yönde birden sıkıştırdı: d4 (yatay) ve d5 (çapraz) siyah oldu.	Чорні зіграли c4 і затиснули одразу у двох напрямках: d4 (по горизонталі) і d5 (по діагоналі) стали чорними.
+Beyaz e7'ye oynadı: e6, e5 ve e4'ü aşağıdaki e3 ile sıkıştırdı. Aynı sırada üç taş birden döndü.	Білі зіграли e7: затиснули e6, e5 і e4 з e3 унизу. Одразу три фішки в одному ряду перевернулися.
+Siyah f4'e oynadı: f5'i dikeyde, e4'ü yatayda sıkıştırdı.	Чорні зіграли f4: затиснули f5 по вертикалі та e4 по горизонталі.
+Beyaz c3'e oynadı ve üç yönde birden çevirdi: c4, d4 ve d3. Durum: Siyah 5 – Beyaz 9. Oyun tahta dolana kadar böyle sürer.	Білі зіграли c3 і перевернули у трьох напрямках: c4, d4 і d3. Рахунок: чорні 5 – білі 9. Так гра триває, доки дошка не заповниться.
+noktalı bir kareye dokunun	торкніться клітинки з точкою
+rakibi sıkıştıran bir kareye dokunun	торкніться клітинки, що затискає суперника
+Siyah %d – Beyaz %d	Чорні %d – Білі %d
+Kindle kısa bir oyun oynayacak. Her dokunuşta bir hamle yapılır ve burada anlatılır. Yeni konan taşın ortasında nokta, çevrilen taşların çevresinde çerçeve olur.	Kindle зіграє коротку партію. Кожен дотик — один хід із поясненням тут. На новій фішці точка, перевернуті фішки обведено рамкою.

@@ -34,6 +34,15 @@ typedef struct {
 	int human; /* side the human plays in mode 1 */
 } RvGame;
 
+/* lessons: board rows 'B' black, 'W' white; squares as "d3" (file a–h, rank 1 at the bottom), "pas" = RV_PASS */
+int  rv_parse_sq(const char *s);          /* -1 when not a square */
+void rv_sq_name(int sq, char out[3]);
+void rv_from_rows(Rv *r, const char *const *rows, int side);
+extern const MasaPage rv_pages[];
+extern const int rv_npages;
+extern const MasaStep rv_demo[]; /* from the start position */
+extern const int rv_ndemo;
+
 void rv_game_new(RvGame *g, int mode, int level, int human);
 int  rv_game_play(RvGame *g, int sq);  /* 0 ok */
 int  rv_game_undo(RvGame *g, int plies); /* plies undone */

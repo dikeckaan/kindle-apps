@@ -856,8 +856,6 @@ Not silinsin mi?	Diese Notiz löschen?
 %s teslim oldu	%s hat aufgegeben
 13×13	13×13
 9×9 (kısa oyun)	9×9 (kurze Partie)
-Almak zorunlu (%d taş) · %s	Schlagzwang (%d Steine) · %s
-Almaya devam: sıradaki kareye dokunun	Weiter schlagen: nächstes Feld antippen
 Berabere	Remis
 Beyaz %d – Siyah %d · %s	Weiß %d – Schwarz %d · %s
 Beyaz (ilk hamle)	Weiß (zieht zuerst)
@@ -890,9 +888,6 @@ Siyah %d – Beyaz %d · %s	Schwarz %d – Weiß %d · %s
 Siyah (ilk hamle)	Schwarz (zieht zuerst)
 Siyah başlar · köşeler değerlidir	Schwarz beginnt · Ecken sind wertvoll
 Siyah kazandı	Schwarz gewinnt
-Sıra: %s · Beyaz %d – Siyah %d	Am Zug: %s · Weiß %d – Schwarz %d
-Sıra: %s · Siyah %d – Beyaz %d	Am Zug: %s · Schwarz %d – Weiß %d
-Sıra: %s · esir: Siyah %d, Beyaz %d	Am Zug: %s · Gefangene: Schwarz %d, Weiß %d
 Tahta	Brett
 Teslim ol	Aufgeben
 Teslim oldunuz · Kindle kazandı	Sie haben aufgegeben · Der Kindle hat gewonnen
@@ -1192,3 +1187,95 @@ Açmak için güç tuşuna basın	Zum Aufwecken Ein/Aus-Taste drücken
 İpuçları: Açık	Hinweise: An
 İpuçları: Kapalı	Hinweise: Aus
 İpuçları: seçtiğiniz taşın gidebileceği kareler	Hinweise: Felder, auf die die gewählte Figur ziehen kann
+Amaç	Ziel
+Her oyuncunun 16 taşı vardır. Beyaz aşağıdadır ve ilk hamleyi yapar. Rakibin bütün taşlarını alan ya da onu hiç hamle yapamaz hâle getiren kazanır.	Jeder Spieler hat 16 Steine. Weiß steht unten und zieht zuerst. Wer alle gegnerischen Steine schlägt oder den Gegner zugunfähig macht, gewinnt.
+Taş nasıl oynanır?	Wie zieht ein Stein?
+Önce oynatacağınız taşa dokunun: kalın çerçeveyle seçilir, gidebileceği kareler noktayla gösterilir. Sonra noktalı kareye dokunun. Taş bir kare ileri ya da yana gider; geri (×) ve çapraz gidemez.	Tippen Sie zuerst den Stein an, den Sie ziehen möchten: Er wird dick umrahmt, seine Zielfelder erhalten einen Punkt. Tippen Sie dann ein Feld mit Punkt an. Ein Stein zieht ein Feld vorwärts oder seitwärts; nie rückwärts (×) oder diagonal.
+Taş alma	Schlagen
+Rakip taş hemen önünüzde ya da yanınızdaysa ve arkasındaki kare boşsa, üzerinden atlayıp onu alırsınız. Atladıktan sonra yine alabiliyorsanız devam edersiniz: e4 önce e5'i, sonra f6'yı alıp g6'ya konuyor.	Steht ein gegnerischer Stein direkt vor oder neben Ihrem und ist das Feld dahinter frei, überspringen und schlagen Sie ihn. Können Sie danach erneut schlagen, machen Sie weiter: e4 schlägt erst e5, dann f6 und landet auf g6.
+Almak zorunlu	Schlagzwang
+Alabiliyorsanız almak zorunludur ve en çok taşı alan yol seçilmelidir. Uygulama oynayabilecek taşları çerçeveyle gösterir: c3 tek taş alabilirdi, f3 ise iki taş alıyor; bu yüzden yalnızca f3 oynayabilir.	Wenn Sie schlagen können, müssen Sie es, und zwar auf dem Weg mit den meisten Steinen. Die App umrahmt die Steine, die ziehen dürfen: c3 könnte einen Stein schlagen, f3 schlägt zwei; daher darf nur f3 ziehen.
+Dama olmak	Dame werden
+Son sıraya ulaşan taş dama olur (♛). Dama, düz çizgilerde istediği kadar kare gider. Uzaktaki bir taşı, arası boşsa atlayıp arkasındaki herhangi bir boş kareye konarak alır: b2'deki dama b6'yı alabilir.	Ein Stein, der die letzte Reihe erreicht, wird Dame (♛). Die Dame zieht beliebig weit auf geraden Linien. Sie schlägt einen entfernten Stein, wenn der Weg frei ist, und landet auf einem beliebigen freien Feld dahinter: Die Dame auf b2 kann b6 schlagen.
+Oyunun sonu	Spielende
+Taşı kalmayan ya da hiç hamle yapamayan kaybeder. Burada Siyah'ın a2'deki taşı hiçbir yere gidemez: Beyaz kazandı. İki tarafın da yalnızca birer taşı kalırsa oyun berabere biter.	Wer keine Steine oder keinen Zug mehr hat, verliert. Hier kann der schwarze Stein auf a2 nirgendwohin: Weiß hat gewonnen. Hat jede Seite nur noch einen Stein, endet das Spiel unentschieden.
+Beyaz h3'teki taşını bir kare ileri, h4'e sürdü. Beyaz yukarı, Siyah aşağı doğru ilerler.	Weiß zog den Stein auf h3 ein Feld vorwärts nach h4. Weiß zieht nach oben, Schwarz nach unten.
+Siyah d6'dan d5'e ilerledi.	Schwarz zog von d6 nach d5.
+Beyaz e3'ten e4'e çıktı.	Weiß rückte von e3 nach e4 vor.
+Siyah d4'e indi. Önünde d3'teki beyaz taş var ve arkası (d5) boş: alınabilir!	Schwarz zog hinunter nach d4. Davor steht der weiße Stein auf d3, und dahinter (d5) ist frei: Er kann geschlagen werden!
+Beyaz d3'ten d4'ün üzerinden d5'e atladı ve siyah taşı aldı. Almak zorunludur.	Weiß sprang von d3 über d4 nach d5 und schlug den schwarzen Stein. Schlagen ist Pflicht.
+Siyah e5'e oynadı. Bu bir hata: e4'teki beyaz taş şimdi art arda iki taş alabilir.	Schwarz zog nach e5. Ein Fehler: Der weiße Stein auf e4 kann jetzt zwei Steine nacheinander schlagen.
+Beyaz e5'i ve e7'yi art arda aldı ve son sıraya, e8'e ulaşıp dama oldu (♛). d5'ten tek taş almak yasaktı: en çok alan yol zorunludur.	Weiß schlug nacheinander e5 und e7, erreichte auf e8 die letzte Reihe und wurde Dame (♛). Von d5 nur einen Stein zu schlagen war verboten: Der längste Schlag ist Pflicht.
+Siyah c5'e oynadı ve d5'teki beyaz taşa yandan saldırdı.	Schwarz zog nach c5 und griff den weißen Stein auf d5 von der Seite an.
+Beyaz'ın başka seçeneği yok, almak zorunlu: d5'teki taş yana atlayıp c5'i aldı ve b5'e kondu.	Weiß hat keine Wahl, Schlagen ist Pflicht: Der Stein auf d5 sprang seitwärts über c5 und landete auf b5.
+Siyah b6'dan b4'e atlayıp b5'i geri aldı. Durum: Beyaz 15 taş (biri dama), Siyah 12 taş.	Schwarz sprang von b6 nach b4 und schlug b5 zurück. Stand: Weiß 15 Steine (eine Dame), Schwarz 12.
+Beyaz %d – Siyah %d	Weiß %d – Schwarz %d
+Almaya devam: sıradaki noktalı kareye dokunun	Weiter schlagen: nächstes Feld mit Punkt antippen
+Baştan seçmek için taşın kendisine dokunun	Stein selbst antippen, um neu zu wählen
+Taş seçildi: gideceği noktalı kareye dokunun	Stein gewählt: Zielfeld mit Punkt antippen
+Başka taş seçmek için ona dokunun	Anderen Stein antippen, um ihn zu wählen
+En çok taş alan yol zorunlu: %d taş	Längster Schlag ist Pflicht: %d Steine
+Zorunlu alma var: çerçeveli taşlardan birini seçin	Schlagzwang: einen umrahmten Stein wählen
+bir taş seçin	Stein wählen
+Kindle kısa bir oyun oynayacak. Her dokunuşta bir hamle yapılır ve burada anlatılır. Taşın çıktığı ve vardığı kare çerçeveli, alınan taşların yeri çarpı ile gösterilir.	Der Kindle spielt eine kurze Partie. Jedes Tippen macht einen Zug, der hier erklärt wird. Start- und Zielfeld sind umrahmt, geschlagene Steine mit einem Kreuz markiert.
+Nasıl oynanır?	Wie spielt man?
+Örnek oyun	Beispielpartie
+Siyah ve Beyaz sırayla boş noktalara taş koyar; Siyah başlar. Konan taş bir daha yerinden oynamaz. Amaç, taşlarınızla tahtanın rakibinizden daha büyük bir bölümünü çevirmektir.	Schwarz und Weiß setzen abwechselnd Steine auf freie Punkte; Schwarz beginnt. Ein gesetzter Stein bewegt sich nie mehr. Ziel ist, mit Ihren Steinen einen größeren Teil des Bretts zu umschließen als der Gegner.
+Hamle nasıl yapılır?	Wie zieht man?
+Çizgilerin kesiştiği boş bir noktaya dokunun; taşınız oraya konur. Son konan taşın ortasında halka vardır. Sıranızı geçmek için alttaki Pas düğmesine dokunun.	Tippen Sie auf einen freien Schnittpunkt der Linien; Ihr Stein wird dort gesetzt. Der zuletzt gesetzte Stein hat in der Mitte einen Ring. Zum Passen tippen Sie unten auf Passen.
+Özgürlük	Freiheiten
+Bir taşın yukarı, aşağı, sağ ve soldaki boş komşuları onun özgürlükleridir (halkalar). Yan yana duran aynı renk taşlar bir zincirdir ve özgürlüklerini paylaşır: beyaz taşın 4, siyah zincirin 6 özgürlüğü var.	Die freien Nachbarpunkte eines Steins oben, unten, links und rechts sind seine Freiheiten (Ringe). Benachbarte Steine gleicher Farbe bilden eine Kette und teilen ihre Freiheiten: Der weiße Stein hat 4, die schwarze Kette 6.
+Esir alma	Schlagen
+Rakip taşın son özgürlüğünü de kapatırsanız taş tahtadan alınır ve esiriniz olur. Bu beyaz taşın tek özgürlüğü kaldı (atari): Siyah E4'e oynarsa onu alır. Hiç özgürlüğü kalmayacak bir yere, bir şey almıyorsa, taş konamaz.	Besetzen Sie die letzte Freiheit eines gegnerischen Steins, wird er vom Brett genommen und Ihr Gefangener. Dieser weiße Stein hat nur noch eine Freiheit (Atari): Spielt Schwarz E4, ist er geschlagen. Ohne Freiheit darf kein Stein gesetzt werden, außer er schlägt etwas.
+Ko	Ko
+Siyah F5'e oynayıp E5'teki beyaz taşı aldı. Beyaz hemen E5'e oynayıp geri alamaz (×); önce başka bir yere oynamalı. Buna ko denir: aynı durumun sonsuza dek tekrarlanmasını önler.	Schwarz spielte F5 und schlug den weißen Stein auf E5. Weiß darf nicht sofort auf E5 zurückschlagen (×), sondern muss erst woanders spielen. Das heißt Ko: Es verhindert, dass sich dieselbe Stellung endlos wiederholt.
+Oyunun sonu ve sayım	Spielende und Zählung
+İki oyuncu art arda pas geçince oyun biter. Puanınız: taşlarınız ve çevirdiğiniz boş noktalar (kareler); Beyaz'a 7,5 komi eklenir. Burada Siyah 47, Beyaz 34 + 7,5: Siyah kazandı. Ölü taşları Kindle önerir; değiştirmek için zincire dokunun.	Passen beide Spieler nacheinander, endet das Spiel. Ihre Punkte: Ihre Steine plus die umschlossenen freien Punkte (Quadrate); Weiß erhält 7,5 Komi. Hier Schwarz 47, Weiß 34 + 7,5: Schwarz gewinnt. Tote Steine schlägt der Kindle vor; zum Ändern eine Kette antippen.
+Siyah C3'e taş koydu. Taşlar çizgilerin kesiştiği noktalara konur ve bir daha oynamaz.	Schwarz setzte einen Stein auf C3. Steine stehen auf den Schnittpunkten und bewegen sich nie mehr.
+Beyaz B2'ye oynadı. Bu taşın 4 özgürlüğü (boş komşusu) var: A2, B1, C2 ve B3.	Weiß spielte B2. Dieser Stein hat 4 Freiheiten (freie Nachbarn): A2, B1, C2 und B3.
+Siyah C2 ile bir özgürlüğü kapattı: B2'nin 3 özgürlüğü kaldı.	Schwarz besetzte mit C2 eine Freiheit: B2 hat noch 3 Freiheiten.
+Beyaz sağ tarafta, G7'de kendine alan kurmaya başladı.	Weiß begann mit G7, rechts Gebiet aufzubauen.
+Siyah B3'e oynadı: B2'nin artık yalnızca 2 özgürlüğü var (A2 ve B1).	Schwarz spielte B3: B2 hat nur noch 2 Freiheiten (A2 und B1).
+Beyaz G3 ile sağ tarafı genişletti.	Weiß erweiterte mit G3 die rechte Seite.
+Siyah B1'e oynadı: B2'nin tek özgürlüğü kaldı (A2). Buna atari denir: bir sonraki hamlede alınabilir.	Schwarz spielte B1: B2 hat nur noch eine Freiheit (A2). Das heißt Atari: Er kann im nächsten Zug geschlagen werden.
+Beyaz A2'ye uzayarak kaçmaya çalıştı. A2 ile B2 artık bir zincir; özgürlükleri birlikte sayılır: A1 ve A3.	Weiß versuchte, mit A2 zu entkommen. A2 und B2 sind jetzt eine Kette; ihre Freiheiten zählen gemeinsam: A1 und A3.
+Siyah A3 ile zinciri yine atariye düşürdü. Beyaz A1'e oynayamaz: orada taşlarının hiç özgürlüğü kalmazdı.	Schwarz setzte die Kette mit A3 erneut ins Atari. Weiß kann nicht A1 spielen: Dort hätten seine Steine keine Freiheit mehr.
+Beyaz zinciri kurtaramayacağını görüp G5'e oynadı.	Weiß sah, dass die Kette nicht zu retten ist, und spielte G5.
+Siyah A1'e oynadı: zincirin son özgürlüğü kapandı, A2 ve B2 tahtadan alındı (×). Siyah'ın 2 esiri var. Sol alt köşe Siyah'ın, sağ taraf Beyaz'ın alanı oluyor.	Schwarz spielte A1: Die letzte Freiheit der Kette ist besetzt, A2 und B2 sind vom Brett (×). Schwarz hat 2 Gefangene. Die linke untere Ecke wird schwarzes Gebiet, die rechte Seite weißes.
+Ölü taşları değiştirmek için zincire dokunun, sonra Sayımı onayla	Kette antippen, um tote Steine zu ändern, dann Zählung bestätigen
+Esir: Siyah %d, Beyaz %d	Gefangene: Schwarz %d, Weiß %d
+sıra geçmek için Pas	mit Passen aussetzen
+boş bir kesişime dokunun	freien Schnittpunkt antippen
+Kindle kısa bir oyun oynayacak. Her dokunuşta bir hamle yapılır ve burada anlatılır. Son konan taşın ortasında halka olur, alınan taşların yeri çarpı ile gösterilir.	Der Kindle spielt eine kurze Partie. Jedes Tippen macht einen Zug, der hier erklärt wird. Der zuletzt gesetzte Stein hat einen Ring, geschlagene Steine sind mit einem Kreuz markiert.
+Sıra sizde (%s)	Sie sind am Zug (%s)
+Sıra Siyah'ta	Schwarz am Zug
+Sıra Beyaz'da	Weiß am Zug
+Hamle %d / %d	Zug %d / %d
+Baştan	Von vorn
+Sonraki hamle ▶	Nächster Zug ▶
+◀ Geri	◀ Zurück
+%s oyununu ilk kez açıyorsunuz. Nasıl oynandığını resimlerle kısaca gösterelim mi?	Sie öffnen %s zum ersten Mal. Sollen wir kurz mit Bildern zeigen, wie man spielt?
+Göster	Zeigen
+Gerek yok	Nein, danke
+Siyah ve Beyaz sırayla tahtaya taş koyar; Siyah başlar. Oyun bitince tahtada daha çok taşı olan kazanır. Başlangıçta ortada ikişer taş vardır.	Schwarz und Weiß setzen abwechselnd Steine aufs Brett; Schwarz beginnt. Am Ende gewinnt, wer mehr Steine auf dem Brett hat. Zu Beginn stehen in der Mitte je zwei Steine.
+Sıra sizdeyken noktalı karelerden birine dokunun; taşınız oraya konur. Noktalar oynayabileceğiniz kareleri gösterir (İpucu düğmesiyle açılıp kapanır). Burada Siyah d3'e dokunuyor.	Tippen Sie am Zug auf ein Feld mit Punkt; Ihr Stein wird dort gesetzt. Die Punkte zeigen mögliche Züge (ein- und ausschalten mit der Taste Hinweise). Hier tippt Schwarz auf d3.
+Sıkıştır ve çevir	Einschließen und umdrehen
+Yeni taş, rakip taşları sizin iki taşınızın arasında sıkıştırmalı. Aradaki rakip taşlar sizin renginize döner: d4'teki beyaz taş d3 ile d5 arasında kaldı ve siyah oldu (çerçeveli). Sıkıştırmayan bir kareye oynanamaz.	Der neue Stein muss gegnerische Steine zwischen zwei eigenen einschließen. Diese nehmen Ihre Farbe an: Der weiße Stein auf d4 lag zwischen d3 und d5 und wurde schwarz (umrahmt). Felder ohne Einschluss sind nicht spielbar.
+Sekiz yön	Acht Richtungen
+Sıkıştırma düz, yan ve çapraz, sekiz yönde de olur; bir hamle birkaç yönde birden çevirebilir. Siyah d4'e oynadı ve beş beyaz taşı çevirdi. c5 çevrilmedi: arkasında siyah taş yok.	Eingeschlossen wird in alle acht Richtungen: gerade, seitlich und diagonal; ein Zug kann in mehreren Richtungen zugleich umdrehen. Schwarz spielte d4 und drehte fünf weiße Steine um. c5 nicht: Dahinter liegt kein schwarzer Stein.
+Hiç oynayacak yeri olmayan pas geçer; uygulama bunu kendiliğinden yapar ve durum satırında yazar. Burada Beyaz hiçbir siyah taşı sıkıştıramıyor, bu yüzden sıra yine Siyah'ta (nokta: d1).	Wer keinen Zug hat, passt; die App tut das automatisch und meldet es in der Statuszeile. Hier kann Weiß keinen schwarzen Stein einschließen, daher ist wieder Schwarz am Zug (Punkt: d1).
+İki taraf da oynayamayınca (çoğu zaman tahta dolunca) oyun biter ve taşlar sayılır. Burada Siyah 40 – Beyaz 24: Siyah kazandı. Köşedeki taş hiç çevrilemez; bu yüzden köşeler çok değerlidir.	Kann keine Seite mehr ziehen (meist bei vollem Brett), endet das Spiel und die Steine werden gezählt. Hier Schwarz 40 – Weiß 24: Schwarz gewinnt. Ecksteine sind nie umdrehbar; daher sind Ecken sehr wertvoll.
+Siyah d3'e oynadı: d4'teki beyaz taşı d5'teki kendi taşıyla sıkıştırdı ve çevirdi.	Schwarz spielte d3: schloss den weißen Stein auf d4 mit dem eigenen auf d5 ein und drehte ihn um.
+Beyaz c5'e oynadı: d5'teki siyah taşı e5 ile sıkıştırıp beyaza çevirdi.	Weiß spielte c5: schloss den schwarzen Stein auf d5 mit e5 ein und machte ihn weiß.
+Siyah f6'ya oynadı: e5'i çaprazda d4 ile sıkıştırıp çevirdi.	Schwarz spielte f6: schloss e5 diagonal mit d4 ein und drehte ihn um.
+Beyaz f5'e oynadı: e5'i yatayda d5 ile sıkıştırıp geri aldı. Bir taş defalarca renk değiştirebilir.	Weiß spielte f5: schloss e5 waagerecht mit d5 ein und holte ihn zurück. Ein Stein kann oft die Farbe wechseln.
+Siyah e6'ya oynadı: e5'i dikeyde e4 ile sıkıştırdı.	Schwarz spielte e6: schloss e5 senkrecht mit e4 ein.
+Beyaz e3'e oynadı: d4'ü çaprazda c5 ile sıkıştırdı.	Weiß spielte e3: schloss d4 diagonal mit c5 ein.
+Siyah c4'e oynadı ve iki yönde birden sıkıştırdı: d4 (yatay) ve d5 (çapraz) siyah oldu.	Schwarz spielte c4 und schloss in zwei Richtungen zugleich ein: d4 (waagerecht) und d5 (diagonal) wurden schwarz.
+Beyaz e7'ye oynadı: e6, e5 ve e4'ü aşağıdaki e3 ile sıkıştırdı. Aynı sırada üç taş birden döndü.	Weiß spielte e7: schloss e6, e5 und e4 mit e3 darunter ein. Drei Steine einer Linie drehten sich auf einmal.
+Siyah f4'e oynadı: f5'i dikeyde, e4'ü yatayda sıkıştırdı.	Schwarz spielte f4: schloss f5 senkrecht und e4 waagerecht ein.
+Beyaz c3'e oynadı ve üç yönde birden çevirdi: c4, d4 ve d3. Durum: Siyah 5 – Beyaz 9. Oyun tahta dolana kadar böyle sürer.	Weiß spielte c3 und drehte in drei Richtungen zugleich um: c4, d4 und d3. Stand: Schwarz 5 – Weiß 9. So geht es weiter, bis das Brett voll ist.
+noktalı bir kareye dokunun	Feld mit Punkt antippen
+rakibi sıkıştıran bir kareye dokunun	Feld antippen, das Gegner einschließt
+Siyah %d – Beyaz %d	Schwarz %d – Weiß %d
+Kindle kısa bir oyun oynayacak. Her dokunuşta bir hamle yapılır ve burada anlatılır. Yeni konan taşın ortasında nokta, çevrilen taşların çevresinde çerçeve olur.	Der Kindle spielt eine kurze Partie. Jedes Tippen macht einen Zug, der hier erklärt wird. Neue Steine haben einen Punkt in der Mitte, umgedrehte einen Rahmen.

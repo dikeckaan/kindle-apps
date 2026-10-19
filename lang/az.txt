@@ -856,8 +856,6 @@ Not silinsin mi?	Qeyd silinsin?
 %s teslim oldu	%s təslim oldu
 13×13	13×13
 9×9 (kısa oyun)	9×9 (qısa oyun)
-Almak zorunlu (%d taş) · %s	Daş almaq məcburidir (%d daş) · %s
-Almaya devam: sıradaki kareye dokunun	Almağa davam: növbəti xanaya toxunun
 Berabere	Heç-heçə
 Beyaz %d – Siyah %d · %s	Ağ %d – Qara %d · %s
 Beyaz (ilk hamle)	Ağ (ilk gediş)
@@ -890,9 +888,6 @@ Siyah %d – Beyaz %d · %s	Qara %d – Ağ %d · %s
 Siyah (ilk hamle)	Qara (ilk gediş)
 Siyah başlar · köşeler değerlidir	Qara başlayır · künclər dəyərlidir
 Siyah kazandı	Qara qalib gəldi
-Sıra: %s · Beyaz %d – Siyah %d	Növbə: %s · Ağ %d – Qara %d
-Sıra: %s · Siyah %d – Beyaz %d	Növbə: %s · Qara %d – Ağ %d
-Sıra: %s · esir: Siyah %d, Beyaz %d	Növbə: %s · əsir: Qara %d, Ağ %d
 Tahta	Lövhə
 Teslim ol	Təslim ol
 Teslim oldunuz · Kindle kazandı	Təslim oldunuz · Kindle qalib gəldi
@@ -1192,3 +1187,95 @@ Açmak için güç tuşuna basın	Oyatmaq üçün güc düyməsini basın
 İpuçları: Açık	İpucları: Açıq
 İpuçları: Kapalı	İpucları: Bağlı
 İpuçları: seçtiğiniz taşın gidebileceği kareler	İpucları: seçdiyiniz fiqurun gedə biləcəyi xanalar
+Amaç	Məqsəd
+Her oyuncunun 16 taşı vardır. Beyaz aşağıdadır ve ilk hamleyi yapar. Rakibin bütün taşlarını alan ya da onu hiç hamle yapamaz hâle getiren kazanır.	Hər oyunçunun 16 daşı var. Ağ aşağıdadır və ilk gedişi edir. Rəqibin bütün daşlarını alan və ya onu gedişsiz qoyan qalib gəlir.
+Taş nasıl oynanır?	Daş necə oynayır?
+Önce oynatacağınız taşa dokunun: kalın çerçeveyle seçilir, gidebileceği kareler noktayla gösterilir. Sonra noktalı kareye dokunun. Taş bir kare ileri ya da yana gider; geri (×) ve çapraz gidemez.	Əvvəlcə oynadacağınız daşa toxunun: qalın çərçivə ilə seçilir, gedə biləcəyi xanalar nöqtə ilə göstərilir. Sonra nöqtəli xanaya toxunun. Daş bir xana irəli və ya yana gedir; geri (×) və çəp gedə bilməz.
+Taş alma	Daş almaq
+Rakip taş hemen önünüzde ya da yanınızdaysa ve arkasındaki kare boşsa, üzerinden atlayıp onu alırsınız. Atladıktan sonra yine alabiliyorsanız devam edersiniz: e4 önce e5'i, sonra f6'yı alıp g6'ya konuyor.	Rəqib daşı düz qarşınızda və ya yanınızdadırsa və arxasındakı xana boşdursa, üstündən tullanıb onu alırsınız. Tullandıqdan sonra yenə ala bilirsinizsə, davam edirsiniz: e4 əvvəl e5-i, sonra f6-nı alıb g6-ya qonur.
+Almak zorunlu	Almaq məcburidir
+Alabiliyorsanız almak zorunludur ve en çok taşı alan yol seçilmelidir. Uygulama oynayabilecek taşları çerçeveyle gösterir: c3 tek taş alabilirdi, f3 ise iki taş alıyor; bu yüzden yalnızca f3 oynayabilir.	Ala bilirsinizsə, almaq məcburidir və ən çox daş alan yol seçilməlidir. Tətbiq oynaya biləcək daşları çərçivə ilə göstərir: c3 bir daş ala bilərdi, f3 isə iki daş alır; buna görə yalnız f3 oynaya bilər.
+Dama olmak	Dama olmaq
+Son sıraya ulaşan taş dama olur (♛). Dama, düz çizgilerde istediği kadar kare gider. Uzaktaki bir taşı, arası boşsa atlayıp arkasındaki herhangi bir boş kareye konarak alır: b2'deki dama b6'yı alabilir.	Son sıraya çatan daş dama olur (♛). Dama düz xətlər üzrə istədiyi qədər xana gedir. Uzaqdakı daşı, arası boşdursa, üstündən tullanıb arxasındakı istənilən boş xanaya qonaraq alır: b2-dəki dama b6-nı ala bilər.
+Oyunun sonu	Oyunun sonu
+Taşı kalmayan ya da hiç hamle yapamayan kaybeder. Burada Siyah'ın a2'deki taşı hiçbir yere gidemez: Beyaz kazandı. İki tarafın da yalnızca birer taşı kalırsa oyun berabere biter.	Daşı qalmayan və ya heç bir gediş edə bilməyən uduzur. Burada Qaranın a2-dəki daşı heç yerə gedə bilmir: Ağ qalib gəldi. İki tərəfin də yalnız bir daşı qalarsa, oyun heç-heçə bitir.
+Beyaz h3'teki taşını bir kare ileri, h4'e sürdü. Beyaz yukarı, Siyah aşağı doğru ilerler.	Ağ h3-dəki daşını bir xana irəli, h4-ə sürdü. Ağ yuxarı, Qara aşağı doğru irəliləyir.
+Siyah d6'dan d5'e ilerledi.	Qara d6-dan d5-ə irəlilədi.
+Beyaz e3'ten e4'e çıktı.	Ağ e3-dən e4-ə çıxdı.
+Siyah d4'e indi. Önünde d3'teki beyaz taş var ve arkası (d5) boş: alınabilir!	Qara d4-ə endi. Qarşısında d3-dəki ağ daş var və arxası (d5) boşdur: alına bilər!
+Beyaz d3'ten d4'ün üzerinden d5'e atladı ve siyah taşı aldı. Almak zorunludur.	Ağ d3-dən d4-ün üstündən d5-ə tullandı və qara daşı aldı. Almaq məcburidir.
+Siyah e5'e oynadı. Bu bir hata: e4'teki beyaz taş şimdi art arda iki taş alabilir.	Qara e5-ə oynadı. Bu səhvdir: e4-dəki ağ daş indi ard-arda iki daş ala bilər.
+Beyaz e5'i ve e7'yi art arda aldı ve son sıraya, e8'e ulaşıp dama oldu (♛). d5'ten tek taş almak yasaktı: en çok alan yol zorunludur.	Ağ e5-i və e7-ni ard-arda aldı, son sıraya, e8-ə çatıb dama oldu (♛). d5-dən tək daş almaq qadağan idi: ən çox alan yol məcburidir.
+Siyah c5'e oynadı ve d5'teki beyaz taşa yandan saldırdı.	Qara c5-ə oynadı və d5-dəki ağ daşa yandan hücum etdi.
+Beyaz'ın başka seçeneği yok, almak zorunlu: d5'teki taş yana atlayıp c5'i aldı ve b5'e kondu.	Ağın başqa seçimi yoxdur, almaq məcburidir: d5-dəki daş yana tullanıb c5-i aldı və b5-ə qondu.
+Siyah b6'dan b4'e atlayıp b5'i geri aldı. Durum: Beyaz 15 taş (biri dama), Siyah 12 taş.	Qara b6-dan b4-ə tullanıb b5-i geri aldı. Vəziyyət: Ağ 15 daş (biri dama), Qara 12 daş.
+Beyaz %d – Siyah %d	Ağ %d – Qara %d
+Almaya devam: sıradaki noktalı kareye dokunun	Almağa davam: növbəti nöqtəli xanaya toxunun
+Baştan seçmek için taşın kendisine dokunun	Yenidən seçmək üçün daşın özünə toxunun
+Taş seçildi: gideceği noktalı kareye dokunun	Daş seçildi: gedəcəyi nöqtəli xanaya toxunun
+Başka taş seçmek için ona dokunun	Başqa daş seçmək üçün ona toxunun
+En çok taş alan yol zorunlu: %d taş	Ən çox daş alan yol məcburidir: %d daş
+Zorunlu alma var: çerçeveli taşlardan birini seçin	Məcburi alma var: çərçivəli daşlardan birini seçin
+bir taş seçin	bir daş seçin
+Kindle kısa bir oyun oynayacak. Her dokunuşta bir hamle yapılır ve burada anlatılır. Taşın çıktığı ve vardığı kare çerçeveli, alınan taşların yeri çarpı ile gösterilir.	Kindle qısa bir oyun oynayacaq. Hər toxunuşda bir gediş edilir və burada izah olunur. Daşın çıxdığı və çatdığı xana çərçivəli, alınan daşların yeri çarpı ilə göstərilir.
+Nasıl oynanır?	Necə oynanır?
+Örnek oyun	Nümunə oyun
+Siyah ve Beyaz sırayla boş noktalara taş koyar; Siyah başlar. Konan taş bir daha yerinden oynamaz. Amaç, taşlarınızla tahtanın rakibinizden daha büyük bir bölümünü çevirmektir.	Qara və Ağ növbə ilə boş nöqtələrə daş qoyur; Qara başlayır. Qoyulan daş bir daha yerindən tərpənmir. Məqsəd daşlarınızla taxtanın rəqibinizdən daha böyük hissəsini əhatə etməkdir.
+Hamle nasıl yapılır?	Gediş necə edilir?
+Çizgilerin kesiştiği boş bir noktaya dokunun; taşınız oraya konur. Son konan taşın ortasında halka vardır. Sıranızı geçmek için alttaki Pas düğmesine dokunun.	Xətlərin kəsişdiyi boş nöqtəyə toxunun; daşınız ora qoyulur. Son qoyulan daşın ortasında halqa olur. Növbəni ötürmək üçün aşağıdakı Pas düyməsinə toxunun.
+Özgürlük	Azadlıq
+Bir taşın yukarı, aşağı, sağ ve soldaki boş komşuları onun özgürlükleridir (halkalar). Yan yana duran aynı renk taşlar bir zincirdir ve özgürlüklerini paylaşır: beyaz taşın 4, siyah zincirin 6 özgürlüğü var.	Daşın yuxarı, aşağı, sağ və soldakı boş qonşuları onun azadlıqlarıdır (halqalar). Yan-yana duran eyni rəngli daşlar zəncirdir və azadlıqları ortaqdır: ağ daşın 4, qara zəncirin 6 azadlığı var.
+Esir alma	Əsir almaq
+Rakip taşın son özgürlüğünü de kapatırsanız taş tahtadan alınır ve esiriniz olur. Bu beyaz taşın tek özgürlüğü kaldı (atari): Siyah E4'e oynarsa onu alır. Hiç özgürlüğü kalmayacak bir yere, bir şey almıyorsa, taş konamaz.	Rəqib daşın son azadlığını da bağlasanız, daş taxtadan götürülür və əsiriniz olur. Bu ağ daşın bir azadlığı qalıb (atari): Qara E4-ə oynasa, onu alar. Heç bir azadlığı qalmayacaq yerə, nəsə almırsa, daş qoymaq olmaz.
+Ko	Ko
+Siyah F5'e oynayıp E5'teki beyaz taşı aldı. Beyaz hemen E5'e oynayıp geri alamaz (×); önce başka bir yere oynamalı. Buna ko denir: aynı durumun sonsuza dek tekrarlanmasını önler.	Qara F5-ə oynayıb E5-dəki ağ daşı aldı. Ağ dərhal E5-ə oynayıb geri ala bilməz (×); əvvəlcə başqa yerə oynamalıdır. Buna ko deyilir: eyni vəziyyətin sonsuz təkrarının qarşısını alır.
+Oyunun sonu ve sayım	Oyunun sonu və hesablama
+İki oyuncu art arda pas geçince oyun biter. Puanınız: taşlarınız ve çevirdiğiniz boş noktalar (kareler); Beyaz'a 7,5 komi eklenir. Burada Siyah 47, Beyaz 34 + 7,5: Siyah kazandı. Ölü taşları Kindle önerir; değiştirmek için zincire dokunun.	İki oyunçu ard-arda pas verəndə oyun bitir. Xalınız: daşlarınız və əhatə etdiyiniz boş nöqtələr (kvadratlar); Ağa 7,5 komi əlavə olunur. Burada Qara 47, Ağ 34 + 7,5: Qara qalib gəldi. Ölü daşları Kindle təklif edir; dəyişmək üçün zəncirə toxunun.
+Siyah C3'e taş koydu. Taşlar çizgilerin kesiştiği noktalara konur ve bir daha oynamaz.	Qara C3-ə daş qoydu. Daşlar xətlərin kəsişdiyi nöqtələrə qoyulur və bir daha tərpənmir.
+Beyaz B2'ye oynadı. Bu taşın 4 özgürlüğü (boş komşusu) var: A2, B1, C2 ve B3.	Ağ B2-yə oynadı. Bu daşın 4 azadlığı (boş qonşusu) var: A2, B1, C2 və B3.
+Siyah C2 ile bir özgürlüğü kapattı: B2'nin 3 özgürlüğü kaldı.	Qara C2 ilə bir azadlığı bağladı: B2-nin 3 azadlığı qaldı.
+Beyaz sağ tarafta, G7'de kendine alan kurmaya başladı.	Ağ sağ tərəfdə, G7-də özünə ərazi qurmağa başladı.
+Siyah B3'e oynadı: B2'nin artık yalnızca 2 özgürlüğü var (A2 ve B1).	Qara B3-ə oynadı: B2-nin artıq yalnız 2 azadlığı var (A2 və B1).
+Beyaz G3 ile sağ tarafı genişletti.	Ağ G3 ilə sağ tərəfi genişləndirdi.
+Siyah B1'e oynadı: B2'nin tek özgürlüğü kaldı (A2). Buna atari denir: bir sonraki hamlede alınabilir.	Qara B1-ə oynadı: B2-nin bir azadlığı qaldı (A2). Buna atari deyilir: növbəti gedişdə alına bilər.
+Beyaz A2'ye uzayarak kaçmaya çalıştı. A2 ile B2 artık bir zincir; özgürlükleri birlikte sayılır: A1 ve A3.	Ağ A2-yə uzanaraq qaçmağa çalışdı. A2 ilə B2 artıq zəncirdir; azadlıqları birlikdə sayılır: A1 və A3.
+Siyah A3 ile zinciri yine atariye düşürdü. Beyaz A1'e oynayamaz: orada taşlarının hiç özgürlüğü kalmazdı.	Qara A3 ilə zənciri yenə atariyə saldı. Ağ A1-ə oynaya bilməz: orada daşlarının heç bir azadlığı qalmazdı.
+Beyaz zinciri kurtaramayacağını görüp G5'e oynadı.	Ağ zənciri xilas edə bilməyəcəyini görüb G5-ə oynadı.
+Siyah A1'e oynadı: zincirin son özgürlüğü kapandı, A2 ve B2 tahtadan alındı (×). Siyah'ın 2 esiri var. Sol alt köşe Siyah'ın, sağ taraf Beyaz'ın alanı oluyor.	Qara A1-ə oynadı: zəncirin son azadlığı bağlandı, A2 və B2 taxtadan götürüldü (×). Qaranın 2 əsiri var. Sol alt künc Qaranın, sağ tərəf Ağın ərazisi olur.
+Ölü taşları değiştirmek için zincire dokunun, sonra Sayımı onayla	Ölü daşları dəyişmək üçün zəncirə toxunun, sonra Hesablamanı təsdiqlə
+Esir: Siyah %d, Beyaz %d	Əsir: Qara %d, Ağ %d
+sıra geçmek için Pas	növbəni ötürmək üçün Pas
+boş bir kesişime dokunun	boş bir kəsişməyə toxunun
+Kindle kısa bir oyun oynayacak. Her dokunuşta bir hamle yapılır ve burada anlatılır. Son konan taşın ortasında halka olur, alınan taşların yeri çarpı ile gösterilir.	Kindle qısa bir oyun oynayacaq. Hər toxunuşda bir gediş edilir və burada izah olunur. Son qoyulan daşın ortasında halqa olur, alınan daşların yeri çarpı ilə göstərilir.
+Sıra sizde (%s)	Növbə sizdədir (%s)
+Sıra Siyah'ta	Növbə Qaradadır
+Sıra Beyaz'da	Növbə Ağdadır
+Hamle %d / %d	Gediş %d / %d
+Baştan	Başdan
+Sonraki hamle ▶	Növbəti gediş ▶
+◀ Geri	◀ Geri
+%s oyununu ilk kez açıyorsunuz. Nasıl oynandığını resimlerle kısaca gösterelim mi?	%s oyununu ilk dəfə açırsınız. Necə oynandığını şəkillərlə qısaca göstərək?
+Göster	Göstər
+Gerek yok	Lazım deyil
+Siyah ve Beyaz sırayla tahtaya taş koyar; Siyah başlar. Oyun bitince tahtada daha çok taşı olan kazanır. Başlangıçta ortada ikişer taş vardır.	Qara və Ağ növbə ilə taxtaya daş qoyur; Qara başlayır. Oyun bitəndə taxtada daha çox daşı olan qalib gəlir. Başlanğıcda ortada hərəsinin iki daşı olur.
+Sıra sizdeyken noktalı karelerden birine dokunun; taşınız oraya konur. Noktalar oynayabileceğiniz kareleri gösterir (İpucu düğmesiyle açılıp kapanır). Burada Siyah d3'e dokunuyor.	Növbə sizdə olanda nöqtəli xanalardan birinə toxunun; daşınız ora qoyulur. Nöqtələr oynaya biləcəyiniz xanaları göstərir (İpucu düyməsi ilə açılıb bağlanır). Burada Qara d3-ə toxunur.
+Sıkıştır ve çevir	Sıxışdır və çevir
+Yeni taş, rakip taşları sizin iki taşınızın arasında sıkıştırmalı. Aradaki rakip taşlar sizin renginize döner: d4'teki beyaz taş d3 ile d5 arasında kaldı ve siyah oldu (çerçeveli). Sıkıştırmayan bir kareye oynanamaz.	Yeni daş rəqib daşlarını sizin iki daşınızın arasında sıxışdırmalıdır. Aradakı rəqib daşları sizin rənginizə dönür: d4-dəki ağ daş d3 ilə d5 arasında qaldı və qara oldu (çərçivəli). Sıxışdırmayan xanaya oynamaq olmaz.
+Sekiz yön	Səkkiz istiqamət
+Sıkıştırma düz, yan ve çapraz, sekiz yönde de olur; bir hamle birkaç yönde birden çevirebilir. Siyah d4'e oynadı ve beş beyaz taşı çevirdi. c5 çevrilmedi: arkasında siyah taş yok.	Sıxışdırma şaquli, üfüqi və çəp, səkkiz istiqamətdə olur; bir gediş bir neçə istiqamətdə birdən çevirə bilər. Qara d4-ə oynadı və beş ağ daşı çevirdi. c5 çevrilmədi: arxasında qara daş yoxdur.
+Hiç oynayacak yeri olmayan pas geçer; uygulama bunu kendiliğinden yapar ve durum satırında yazar. Burada Beyaz hiçbir siyah taşı sıkıştıramıyor, bu yüzden sıra yine Siyah'ta (nokta: d1).	Oynamağa yeri olmayan pas verir; tətbiq bunu özü edir və vəziyyət sətrində yazır. Burada Ağ heç bir qara daşı sıxışdıra bilmir, buna görə növbə yenə Qaradadır (nöqtə: d1).
+İki taraf da oynayamayınca (çoğu zaman tahta dolunca) oyun biter ve taşlar sayılır. Burada Siyah 40 – Beyaz 24: Siyah kazandı. Köşedeki taş hiç çevrilemez; bu yüzden köşeler çok değerlidir.	İki tərəf də oynaya bilməyəndə (çox vaxt taxta dolanda) oyun bitir və daşlar sayılır. Burada Qara 40 – Ağ 24: Qara qalib gəldi. Küncdəki daş heç vaxt çevrilmir; buna görə künclər çox dəyərlidir.
+Siyah d3'e oynadı: d4'teki beyaz taşı d5'teki kendi taşıyla sıkıştırdı ve çevirdi.	Qara d3-ə oynadı: d4-dəki ağ daşı d5-dəki öz daşı ilə sıxışdırıb çevirdi.
+Beyaz c5'e oynadı: d5'teki siyah taşı e5 ile sıkıştırıp beyaza çevirdi.	Ağ c5-ə oynadı: d5-dəki qara daşı e5 ilə sıxışdırıb ağa çevirdi.
+Siyah f6'ya oynadı: e5'i çaprazda d4 ile sıkıştırıp çevirdi.	Qara f6-ya oynadı: e5-i çəpinə d4 ilə sıxışdırıb çevirdi.
+Beyaz f5'e oynadı: e5'i yatayda d5 ile sıkıştırıp geri aldı. Bir taş defalarca renk değiştirebilir.	Ağ f5-ə oynadı: e5-i üfüqi d5 ilə sıxışdırıb geri aldı. Bir daş dəfələrlə rəng dəyişə bilər.
+Siyah e6'ya oynadı: e5'i dikeyde e4 ile sıkıştırdı.	Qara e6-ya oynadı: e5-i şaquli e4 ilə sıxışdırdı.
+Beyaz e3'e oynadı: d4'ü çaprazda c5 ile sıkıştırdı.	Ağ e3-ə oynadı: d4-ü çəpinə c5 ilə sıxışdırdı.
+Siyah c4'e oynadı ve iki yönde birden sıkıştırdı: d4 (yatay) ve d5 (çapraz) siyah oldu.	Qara c4-ə oynadı və iki istiqamətdə birdən sıxışdırdı: d4 (üfüqi) və d5 (çəp) qara oldu.
+Beyaz e7'ye oynadı: e6, e5 ve e4'ü aşağıdaki e3 ile sıkıştırdı. Aynı sırada üç taş birden döndü.	Ağ e7-yə oynadı: e6, e5 və e4-ü aşağıdakı e3 ilə sıxışdırdı. Eyni sırada üç daş birdən döndü.
+Siyah f4'e oynadı: f5'i dikeyde, e4'ü yatayda sıkıştırdı.	Qara f4-ə oynadı: f5-i şaquli, e4-ü üfüqi sıxışdırdı.
+Beyaz c3'e oynadı ve üç yönde birden çevirdi: c4, d4 ve d3. Durum: Siyah 5 – Beyaz 9. Oyun tahta dolana kadar böyle sürer.	Ağ c3-ə oynadı və üç istiqamətdə birdən çevirdi: c4, d4 və d3. Vəziyyət: Qara 5 – Ağ 9. Oyun taxta dolana qədər belə davam edir.
+noktalı bir kareye dokunun	nöqtəli bir xanaya toxunun
+rakibi sıkıştıran bir kareye dokunun	rəqibi sıxışdıran bir xanaya toxunun
+Siyah %d – Beyaz %d	Qara %d – Ağ %d
+Kindle kısa bir oyun oynayacak. Her dokunuşta bir hamle yapılır ve burada anlatılır. Yeni konan taşın ortasında nokta, çevrilen taşların çevresinde çerçeve olur.	Kindle qısa bir oyun oynayacaq. Hər toxunuşda bir gediş edilir və burada izah olunur. Yeni qoyulan daşın ortasında nöqtə, çevrilən daşların ətrafında çərçivə olur.

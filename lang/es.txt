@@ -856,8 +856,6 @@ Not silinsin mi?	¿Borrar esta nota?
 %s teslim oldu	%s se ha rendido
 13×13	13×13
 9×9 (kısa oyun)	9×9 (partida corta)
-Almak zorunlu (%d taş) · %s	Captura obligatoria (%d fichas) · %s
-Almaya devam: sıradaki kareye dokunun	Sigue capturando: toca la casilla siguiente
 Berabere	Tablas
 Beyaz %d – Siyah %d · %s	Blancas %d – Negras %d · %s
 Beyaz (ilk hamle)	Blancas (salen primero)
@@ -890,9 +888,6 @@ Siyah %d – Beyaz %d · %s	Negras %d – Blancas %d · %s
 Siyah (ilk hamle)	Negras (salen primero)
 Siyah başlar · köşeler değerlidir	Empiezan las negras · las esquinas valen mucho
 Siyah kazandı	Ganan las negras
-Sıra: %s · Beyaz %d – Siyah %d	Turno: %s · Blancas %d – Negras %d
-Sıra: %s · Siyah %d – Beyaz %d	Turno: %s · Negras %d – Blancas %d
-Sıra: %s · esir: Siyah %d, Beyaz %d	Turno: %s · capturas: Negras %d, Blancas %d
 Tahta	Tablero
 Teslim ol	Rendirse
 Teslim oldunuz · Kindle kazandı	Te has rendido · Ha ganado el Kindle
@@ -1192,3 +1187,95 @@ Açmak için güç tuşuna basın	Pulse el botón de encendido para activar
 İpuçları: Açık	Pistas: Sí
 İpuçları: Kapalı	Pistas: No
 İpuçları: seçtiğiniz taşın gidebileceği kareler	Pistas: casillas a las que puede ir la pieza elegida
+Amaç	Objetivo
+Her oyuncunun 16 taşı vardır. Beyaz aşağıdadır ve ilk hamleyi yapar. Rakibin bütün taşlarını alan ya da onu hiç hamle yapamaz hâle getiren kazanır.	Cada jugador tiene 16 fichas. Las blancas están abajo y empiezan. Gana quien captura todas las fichas rivales o deja al rival sin movimientos.
+Taş nasıl oynanır?	¿Cómo se mueve una ficha?
+Önce oynatacağınız taşa dokunun: kalın çerçeveyle seçilir, gidebileceği kareler noktayla gösterilir. Sonra noktalı kareye dokunun. Taş bir kare ileri ya da yana gider; geri (×) ve çapraz gidemez.	Primero toca la ficha que quieres mover: se marca con un borde grueso y sus casillas posibles con puntos. Luego toca una casilla con punto. La ficha avanza una casilla hacia delante o de lado; nunca hacia atrás (×) ni en diagonal.
+Taş alma	Capturar
+Rakip taş hemen önünüzde ya da yanınızdaysa ve arkasındaki kare boşsa, üzerinden atlayıp onu alırsınız. Atladıktan sonra yine alabiliyorsanız devam edersiniz: e4 önce e5'i, sonra f6'yı alıp g6'ya konuyor.	Si una ficha rival está justo delante o al lado de la tuya y la casilla de detrás está libre, sáltala para capturarla. Si tras el salto puedes volver a capturar, sigue: e4 captura e5, luego f6, y cae en g6.
+Almak zorunlu	Captura obligatoria
+Alabiliyorsanız almak zorunludur ve en çok taşı alan yol seçilmelidir. Uygulama oynayabilecek taşları çerçeveyle gösterir: c3 tek taş alabilirdi, f3 ise iki taş alıyor; bu yüzden yalnızca f3 oynayabilir.	Si puedes capturar, debes hacerlo, por el camino que captura más fichas. La app enmarca las fichas que pueden jugar: c3 capturaría una ficha, pero f3 captura dos; por eso solo puede jugar f3.
+Dama olmak	Coronar dama
+Son sıraya ulaşan taş dama olur (♛). Dama, düz çizgilerde istediği kadar kare gider. Uzaktaki bir taşı, arası boşsa atlayıp arkasındaki herhangi bir boş kareye konarak alır: b2'deki dama b6'yı alabilir.	La ficha que llega a la última fila se convierte en dama (♛). La dama avanza cuantas casillas quiera en línea recta. Captura una ficha lejana si el camino está libre, cayendo en cualquier casilla libre detrás: la dama de b2 puede capturar b6.
+Oyunun sonu	Fin de la partida
+Taşı kalmayan ya da hiç hamle yapamayan kaybeder. Burada Siyah'ın a2'deki taşı hiçbir yere gidemez: Beyaz kazandı. İki tarafın da yalnızca birer taşı kalırsa oyun berabere biter.	Pierde quien se queda sin fichas o sin movimientos. Aquí la ficha negra de a2 no puede moverse: ganan las blancas. Si a cada bando le queda una sola ficha, la partida acaba en tablas.
+Beyaz h3'teki taşını bir kare ileri, h4'e sürdü. Beyaz yukarı, Siyah aşağı doğru ilerler.	Las blancas movieron la ficha de h3 una casilla adelante, a h4. Las blancas suben y las negras bajan.
+Siyah d6'dan d5'e ilerledi.	Las negras avanzaron de d6 a d5.
+Beyaz e3'ten e4'e çıktı.	Las blancas subieron de e3 a e4.
+Siyah d4'e indi. Önünde d3'teki beyaz taş var ve arkası (d5) boş: alınabilir!	Las negras bajaron a d4. Delante está la ficha blanca de d3 y detrás (d5) está libre: ¡se puede capturar!
+Beyaz d3'ten d4'ün üzerinden d5'e atladı ve siyah taşı aldı. Almak zorunludur.	Las blancas saltaron de d3 sobre d4 a d5 y capturaron la ficha negra. Capturar es obligatorio.
+Siyah e5'e oynadı. Bu bir hata: e4'teki beyaz taş şimdi art arda iki taş alabilir.	Las negras jugaron e5. Un error: la ficha blanca de e4 ahora puede capturar dos fichas seguidas.
+Beyaz e5'i ve e7'yi art arda aldı ve son sıraya, e8'e ulaşıp dama oldu (♛). d5'ten tek taş almak yasaktı: en çok alan yol zorunludur.	Las blancas capturaron e5 y e7 seguidas, llegaron a la última fila en e8 y coronaron dama (♛). Capturar solo una ficha desde d5 no estaba permitido: la captura más larga es obligatoria.
+Siyah c5'e oynadı ve d5'teki beyaz taşa yandan saldırdı.	Las negras jugaron c5 y atacaron de lado la ficha blanca de d5.
+Beyaz'ın başka seçeneği yok, almak zorunlu: d5'teki taş yana atlayıp c5'i aldı ve b5'e kondu.	Las blancas no tienen opción, capturar es obligatorio: la ficha de d5 saltó de lado sobre c5 y cayó en b5.
+Siyah b6'dan b4'e atlayıp b5'i geri aldı. Durum: Beyaz 15 taş (biri dama), Siyah 12 taş.	Las negras saltaron de b6 a b4 y recapturaron b5. Marcador: blancas 15 fichas (una dama), negras 12.
+Beyaz %d – Siyah %d	Blancas %d – Negras %d
+Almaya devam: sıradaki noktalı kareye dokunun	Sigue capturando: toca la siguiente casilla con punto
+Baştan seçmek için taşın kendisine dokunun	Toca la misma ficha para volver a elegir
+Taş seçildi: gideceği noktalı kareye dokunun	Ficha elegida: toca una casilla con punto
+Başka taş seçmek için ona dokunun	Toca otra ficha para elegirla
+En çok taş alan yol zorunlu: %d taş	La captura más larga es obligatoria: %d fichas
+Zorunlu alma var: çerçeveli taşlardan birini seçin	Captura obligatoria: elige una ficha enmarcada
+bir taş seçin	elige una ficha
+Kindle kısa bir oyun oynayacak. Her dokunuşta bir hamle yapılır ve burada anlatılır. Taşın çıktığı ve vardığı kare çerçeveli, alınan taşların yeri çarpı ile gösterilir.	El Kindle jugará una partida corta. Cada toque hace una jugada, explicada aquí. Las casillas de salida y llegada se enmarcan; las fichas capturadas se marcan con una cruz.
+Nasıl oynanır?	¿Cómo se juega?
+Örnek oyun	Partida de ejemplo
+Siyah ve Beyaz sırayla boş noktalara taş koyar; Siyah başlar. Konan taş bir daha yerinden oynamaz. Amaç, taşlarınızla tahtanın rakibinizden daha büyük bir bölümünü çevirmektir.	Negras y blancas colocan piedras por turnos en puntos libres; empiezan las negras. Una piedra colocada ya no se mueve. El objetivo es rodear con tus piedras más tablero que tu rival.
+Hamle nasıl yapılır?	¿Cómo se hace una jugada?
+Çizgilerin kesiştiği boş bir noktaya dokunun; taşınız oraya konur. Son konan taşın ortasında halka vardır. Sıranızı geçmek için alttaki Pas düğmesine dokunun.	Toca un punto libre donde se cruzan las líneas; tu piedra se coloca allí. La última piedra colocada tiene un anillo en el centro. Para pasar el turno, toca el botón Pasar de abajo.
+Özgürlük	Libertades
+Bir taşın yukarı, aşağı, sağ ve soldaki boş komşuları onun özgürlükleridir (halkalar). Yan yana duran aynı renk taşlar bir zincirdir ve özgürlüklerini paylaşır: beyaz taşın 4, siyah zincirin 6 özgürlüğü var.	Los puntos libres vecinos de una piedra, arriba, abajo, a izquierda y derecha, son sus libertades (anillos). Las piedras contiguas del mismo color forman una cadena y comparten libertades: la piedra blanca tiene 4, la cadena negra 6.
+Esir alma	Capturar
+Rakip taşın son özgürlüğünü de kapatırsanız taş tahtadan alınır ve esiriniz olur. Bu beyaz taşın tek özgürlüğü kaldı (atari): Siyah E4'e oynarsa onu alır. Hiç özgürlüğü kalmayacak bir yere, bir şey almıyorsa, taş konamaz.	Si ocupas la última libertad de una piedra rival, se retira del tablero y pasa a ser tu prisionera. Esta piedra blanca solo tiene una libertad (atari): si las negras juegan E4, la capturan. No se puede jugar donde tu piedra no tendría libertades, salvo que capture.
+Ko	Ko
+Siyah F5'e oynayıp E5'teki beyaz taşı aldı. Beyaz hemen E5'e oynayıp geri alamaz (×); önce başka bir yere oynamalı. Buna ko denir: aynı durumun sonsuza dek tekrarlanmasını önler.	Las negras jugaron F5 y capturaron la piedra blanca de E5. Las blancas no pueden recapturar enseguida en E5 (×); antes deben jugar en otro sitio. Esto es el ko: evita que la misma posición se repita sin fin.
+Oyunun sonu ve sayım	Fin de la partida y recuento
+İki oyuncu art arda pas geçince oyun biter. Puanınız: taşlarınız ve çevirdiğiniz boş noktalar (kareler); Beyaz'a 7,5 komi eklenir. Burada Siyah 47, Beyaz 34 + 7,5: Siyah kazandı. Ölü taşları Kindle önerir; değiştirmek için zincire dokunun.	La partida termina cuando ambos jugadores pasan seguidos. Tus puntos: tus piedras y los puntos libres que rodeas (cuadrados); las blancas reciben 7,5 de komi. Aquí negras 47, blancas 34 + 7,5: ganan las negras. El Kindle propone las piedras muertas; toca una cadena para cambiarlas.
+Siyah C3'e taş koydu. Taşlar çizgilerin kesiştiği noktalara konur ve bir daha oynamaz.	Las negras colocaron una piedra en C3. Las piedras van en las intersecciones y ya no se mueven.
+Beyaz B2'ye oynadı. Bu taşın 4 özgürlüğü (boş komşusu) var: A2, B1, C2 ve B3.	Las blancas jugaron B2. Esta piedra tiene 4 libertades (vecinos libres): A2, B1, C2 y B3.
+Siyah C2 ile bir özgürlüğü kapattı: B2'nin 3 özgürlüğü kaldı.	Las negras ocuparon una libertad con C2: a B2 le quedan 3.
+Beyaz sağ tarafta, G7'de kendine alan kurmaya başladı.	Las blancas empezaron a formar territorio a la derecha, en G7.
+Siyah B3'e oynadı: B2'nin artık yalnızca 2 özgürlüğü var (A2 ve B1).	Las negras jugaron B3: B2 ya solo tiene 2 libertades (A2 y B1).
+Beyaz G3 ile sağ tarafı genişletti.	Las blancas ampliaron el lado derecho con G3.
+Siyah B1'e oynadı: B2'nin tek özgürlüğü kaldı (A2). Buna atari denir: bir sonraki hamlede alınabilir.	Las negras jugaron B1: a B2 le queda una libertad (A2). Esto se llama atari: puede ser capturada en la siguiente jugada.
+Beyaz A2'ye uzayarak kaçmaya çalıştı. A2 ile B2 artık bir zincir; özgürlükleri birlikte sayılır: A1 ve A3.	Las blancas intentaron escapar extendiéndose a A2. A2 y B2 son ahora una cadena; sus libertades cuentan juntas: A1 y A3.
+Siyah A3 ile zinciri yine atariye düşürdü. Beyaz A1'e oynayamaz: orada taşlarının hiç özgürlüğü kalmazdı.	Las negras volvieron a poner la cadena en atari con A3. Las blancas no pueden jugar A1: allí sus piedras no tendrían libertades.
+Beyaz zinciri kurtaramayacağını görüp G5'e oynadı.	Viendo que no podían salvar la cadena, las blancas jugaron G5.
+Siyah A1'e oynadı: zincirin son özgürlüğü kapandı, A2 ve B2 tahtadan alındı (×). Siyah'ın 2 esiri var. Sol alt köşe Siyah'ın, sağ taraf Beyaz'ın alanı oluyor.	Las negras jugaron A1: la última libertad de la cadena se cerró y A2 y B2 salieron del tablero (×). Las negras tienen 2 prisioneras. La esquina inferior izquierda es territorio negro; el lado derecho, blanco.
+Ölü taşları değiştirmek için zincire dokunun, sonra Sayımı onayla	Toca una cadena para cambiar las piedras muertas y luego Confirmar el recuento
+Esir: Siyah %d, Beyaz %d	Capturas: Negras %d, Blancas %d
+sıra geçmek için Pas	Pasar para ceder el turno
+boş bir kesişime dokunun	toca una intersección libre
+Kindle kısa bir oyun oynayacak. Her dokunuşta bir hamle yapılır ve burada anlatılır. Son konan taşın ortasında halka olur, alınan taşların yeri çarpı ile gösterilir.	El Kindle jugará una partida corta. Cada toque hace una jugada, explicada aquí. La última piedra colocada tiene un anillo; las capturadas se marcan con una cruz.
+Sıra sizde (%s)	Tu turno (%s)
+Sıra Siyah'ta	Juegan las negras
+Sıra Beyaz'da	Juegan las blancas
+Hamle %d / %d	Jugada %d / %d
+Baştan	Reiniciar
+Sonraki hamle ▶	Siguiente jugada ▶
+◀ Geri	◀ Atrás
+%s oyununu ilk kez açıyorsunuz. Nasıl oynandığını resimlerle kısaca gösterelim mi?	Abres %s por primera vez. ¿Te mostramos brevemente con imágenes cómo se juega?
+Göster	Mostrar
+Gerek yok	No, gracias
+Siyah ve Beyaz sırayla tahtaya taş koyar; Siyah başlar. Oyun bitince tahtada daha çok taşı olan kazanır. Başlangıçta ortada ikişer taş vardır.	Negras y blancas colocan fichas por turnos en el tablero; empiezan las negras. Al final gana quien tenga más fichas en el tablero. Al principio hay dos de cada color en el centro.
+Sıra sizdeyken noktalı karelerden birine dokunun; taşınız oraya konur. Noktalar oynayabileceğiniz kareleri gösterir (İpucu düğmesiyle açılıp kapanır). Burada Siyah d3'e dokunuyor.	En tu turno, toca una casilla con punto; tu ficha se coloca allí. Los puntos muestran dónde puedes jugar (se activan y desactivan con el botón Pistas). Aquí las negras tocan d3.
+Sıkıştır ve çevir	Encerrar y voltear
+Yeni taş, rakip taşları sizin iki taşınızın arasında sıkıştırmalı. Aradaki rakip taşlar sizin renginize döner: d4'teki beyaz taş d3 ile d5 arasında kaldı ve siyah oldu (çerçeveli). Sıkıştırmayan bir kareye oynanamaz.	La ficha nueva debe encerrar fichas rivales entre dos tuyas. Las encerradas cambian a tu color: la ficha blanca de d4 quedó entre d3 y d5 y se volvió negra (enmarcada). No se puede jugar en una casilla que no encierre.
+Sekiz yön	Ocho direcciones
+Sıkıştırma düz, yan ve çapraz, sekiz yönde de olur; bir hamle birkaç yönde birden çevirebilir. Siyah d4'e oynadı ve beş beyaz taşı çevirdi. c5 çevrilmedi: arkasında siyah taş yok.	Se encierra en las ocho direcciones: recto, de lado y en diagonal; una jugada puede voltear en varias a la vez. Las negras jugaron d4 y voltearon cinco fichas blancas. c5 no: no hay ficha negra detrás.
+Hiç oynayacak yeri olmayan pas geçer; uygulama bunu kendiliğinden yapar ve durum satırında yazar. Burada Beyaz hiçbir siyah taşı sıkıştıramıyor, bu yüzden sıra yine Siyah'ta (nokta: d1).	Quien no tiene jugada pasa; la app lo hace sola y lo indica en la línea de estado. Aquí las blancas no pueden encerrar ninguna ficha negra, así que vuelven a jugar las negras (punto: d1).
+İki taraf da oynayamayınca (çoğu zaman tahta dolunca) oyun biter ve taşlar sayılır. Burada Siyah 40 – Beyaz 24: Siyah kazandı. Köşedeki taş hiç çevrilemez; bu yüzden köşeler çok değerlidir.	Cuando nadie puede jugar (casi siempre con el tablero lleno), la partida termina y se cuentan las fichas. Aquí negras 40 – blancas 24: ganan las negras. Una ficha de esquina nunca se voltea; por eso las esquinas valen mucho.
+Siyah d3'e oynadı: d4'teki beyaz taşı d5'teki kendi taşıyla sıkıştırdı ve çevirdi.	Las negras jugaron d3: encerraron la ficha blanca de d4 con su ficha de d5 y la voltearon.
+Beyaz c5'e oynadı: d5'teki siyah taşı e5 ile sıkıştırıp beyaza çevirdi.	Las blancas jugaron c5: encerraron la ficha negra de d5 con e5 y la volvieron blanca.
+Siyah f6'ya oynadı: e5'i çaprazda d4 ile sıkıştırıp çevirdi.	Las negras jugaron f6: encerraron e5 en diagonal con d4 y la voltearon.
+Beyaz f5'e oynadı: e5'i yatayda d5 ile sıkıştırıp geri aldı. Bir taş defalarca renk değiştirebilir.	Las blancas jugaron f5: encerraron e5 en horizontal con d5 y la recuperaron. Una ficha puede cambiar de color muchas veces.
+Siyah e6'ya oynadı: e5'i dikeyde e4 ile sıkıştırdı.	Las negras jugaron e6: encerraron e5 en vertical con e4.
+Beyaz e3'e oynadı: d4'ü çaprazda c5 ile sıkıştırdı.	Las blancas jugaron e3: encerraron d4 en diagonal con c5.
+Siyah c4'e oynadı ve iki yönde birden sıkıştırdı: d4 (yatay) ve d5 (çapraz) siyah oldu.	Las negras jugaron c4 y encerraron en dos direcciones a la vez: d4 (horizontal) y d5 (diagonal) se volvieron negras.
+Beyaz e7'ye oynadı: e6, e5 ve e4'ü aşağıdaki e3 ile sıkıştırdı. Aynı sırada üç taş birden döndü.	Las blancas jugaron e7: encerraron e6, e5 y e4 con e3 abajo. Tres fichas de una línea se voltearon a la vez.
+Siyah f4'e oynadı: f5'i dikeyde, e4'ü yatayda sıkıştırdı.	Las negras jugaron f4: encerraron f5 en vertical y e4 en horizontal.
+Beyaz c3'e oynadı ve üç yönde birden çevirdi: c4, d4 ve d3. Durum: Siyah 5 – Beyaz 9. Oyun tahta dolana kadar böyle sürer.	Las blancas jugaron c3 y voltearon en tres direcciones a la vez: c4, d4 y d3. Marcador: negras 5 – blancas 9. Así sigue hasta llenar el tablero.
+noktalı bir kareye dokunun	toca una casilla con punto
+rakibi sıkıştıran bir kareye dokunun	toca una casilla que encierre al rival
+Siyah %d – Beyaz %d	Negras %d – Blancas %d
+Kindle kısa bir oyun oynayacak. Her dokunuşta bir hamle yapılır ve burada anlatılır. Yeni konan taşın ortasında nokta, çevrilen taşların çevresinde çerçeve olur.	El Kindle jugará una partida corta. Cada toque hace una jugada, explicada aquí. La ficha nueva tiene un punto en el centro; las volteadas, un marco.

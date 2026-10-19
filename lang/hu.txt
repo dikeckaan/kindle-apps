@@ -856,8 +856,6 @@ Not silinsin mi?	Törli ezt a jegyzetet?
 %s teslim oldu	%s feladta
 13×13	13×13
 9×9 (kısa oyun)	9×9 (rövid játszma)
-Almak zorunlu (%d taş) · %s	Ütéskényszer (%d korong) · %s
-Almaya devam: sıradaki kareye dokunun	Üss tovább: érintsd meg a következő mezőt
 Berabere	Döntetlen
 Beyaz %d – Siyah %d · %s	Világos %d – Sötét %d · %s
 Beyaz (ilk hamle)	Világos (kezd)
@@ -890,9 +888,6 @@ Siyah %d – Beyaz %d · %s	Sötét %d – Világos %d · %s
 Siyah (ilk hamle)	Sötét (kezd)
 Siyah başlar · köşeler değerlidir	Sötét kezd · a sarkok értékesek
 Siyah kazandı	Sötét nyer
-Sıra: %s · Beyaz %d – Siyah %d	Lép: %s · Világos %d – Sötét %d
-Sıra: %s · Siyah %d – Beyaz %d	Lép: %s · Sötét %d – Világos %d
-Sıra: %s · esir: Siyah %d, Beyaz %d	Lép: %s · foglyok: Sötét %d, Világos %d
 Tahta	Tábla
 Teslim ol	Feladás
 Teslim oldunuz · Kindle kazandı	Feladtad · A Kindle nyert
@@ -1192,3 +1187,95 @@ Açmak için güç tuşuna basın	Ébresztéshez nyomja meg a bekapcsológombot
 İpuçları: Açık	Tippek: Be
 İpuçları: Kapalı	Tippek: Ki
 İpuçları: seçtiğiniz taşın gidebileceği kareler	Tippek: a mezők, ahová a kiválasztott bábu léphet
+Amaç	Cél
+Her oyuncunun 16 taşı vardır. Beyaz aşağıdadır ve ilk hamleyi yapar. Rakibin bütün taşlarını alan ya da onu hiç hamle yapamaz hâle getiren kazanır.	Mindkét játékosnak 16 korongja van. Világos van alul, és ő lép először. Az nyer, aki leüti az ellenfél összes korongját, vagy lépésképtelenné teszi.
+Taş nasıl oynanır?	Hogyan lép a korong?
+Önce oynatacağınız taşa dokunun: kalın çerçeveyle seçilir, gidebileceği kareler noktayla gösterilir. Sonra noktalı kareye dokunun. Taş bir kare ileri ya da yana gider; geri (×) ve çapraz gidemez.	Először érintsd meg a mozgatni kívánt korongot: vastag keretet kap, a lehetséges mezőit pöttyök jelzik. Aztán érints meg egy pöttyös mezőt. A korong egy mezőt lép előre vagy oldalra; hátra (×) és átlósan nem.
+Taş alma	Ütés
+Rakip taş hemen önünüzde ya da yanınızdaysa ve arkasındaki kare boşsa, üzerinden atlayıp onu alırsınız. Atladıktan sonra yine alabiliyorsanız devam edersiniz: e4 önce e5'i, sonra f6'yı alıp g6'ya konuyor.	Ha ellenfél korongja áll közvetlenül előtted vagy melletted, és mögötte üres a mező, átugrod és leütöd. Ha az ugrás után ismét üthetsz, folytatod: e4 előbb e5-öt, majd f6-ot üti, és g6-ra érkezik.
+Almak zorunlu	Ütéskényszer
+Alabiliyorsanız almak zorunludur ve en çok taşı alan yol seçilmelidir. Uygulama oynayabilecek taşları çerçeveyle gösterir: c3 tek taş alabilirdi, f3 ise iki taş alıyor; bu yüzden yalnızca f3 oynayabilir.	Ha üthetsz, kötelező ütni, és a legtöbb korongot ütő utat kell választani. Az alkalmazás bekeretezi a lépni képes korongokat: c3 egyet üthetne, f3 kettőt üt, ezért csak f3 léphet.
+Dama olmak	Dámává válás
+Son sıraya ulaşan taş dama olur (♛). Dama, düz çizgilerde istediği kadar kare gider. Uzaktaki bir taşı, arası boşsa atlayıp arkasındaki herhangi bir boş kareye konarak alır: b2'deki dama b6'yı alabilir.	Az utolsó sorba érő korong dáma lesz (♛). A dáma egyenes vonalban akárhány mezőt léphet. Távoli korongot is leüthet, ha köztük üres, és mögötte bármely üres mezőre érkezhet: a b2-es dáma leütheti b6-ot.
+Oyunun sonu	A játszma vége
+Taşı kalmayan ya da hiç hamle yapamayan kaybeder. Burada Siyah'ın a2'deki taşı hiçbir yere gidemez: Beyaz kazandı. İki tarafın da yalnızca birer taşı kalırsa oyun berabere biter.	Az veszít, akinek nem maradt korongja vagy lépése. Itt Sötét a2-es korongja sehova sem léphet: Világos nyert. Ha mindkét félnek csak egy korongja marad, a játszma döntetlen.
+Beyaz h3'teki taşını bir kare ileri, h4'e sürdü. Beyaz yukarı, Siyah aşağı doğru ilerler.	Világos a h3-as korongját egy mezővel előre, h4-re lépte. Világos felfelé, Sötét lefelé halad.
+Siyah d6'dan d5'e ilerledi.	Sötét d6-ról d5-re lépett.
+Beyaz e3'ten e4'e çıktı.	Világos e3-ról e4-re lépett.
+Siyah d4'e indi. Önünde d3'teki beyaz taş var ve arkası (d5) boş: alınabilir!	Sötét lelépett d4-re. Előtte áll a d3-as világos korong, mögötte (d5) üres: leüthető!
+Beyaz d3'ten d4'ün üzerinden d5'e atladı ve siyah taşı aldı. Almak zorunludur.	Világos d3-ról d4 fölött átugorva d5-re lépett, és leütötte a sötét korongot. Az ütés kötelező.
+Siyah e5'e oynadı. Bu bir hata: e4'teki beyaz taş şimdi art arda iki taş alabilir.	Sötét e5-re lépett. Hiba: az e4-es világos korong most két korongot üthet egymás után.
+Beyaz e5'i ve e7'yi art arda aldı ve son sıraya, e8'e ulaşıp dama oldu (♛). d5'ten tek taş almak yasaktı: en çok alan yol zorunludur.	Világos egymás után leütötte e5-öt és e7-et, elérte az utolsó sort e8-on, és dáma lett (♛). d5-ről egy korongot ütni tilos volt: a leghosszabb ütés kötelező.
+Siyah c5'e oynadı ve d5'teki beyaz taşa yandan saldırdı.	Sötét c5-re lépett, és oldalról támadta a d5-ös világos korongot.
+Beyaz'ın başka seçeneği yok, almak zorunlu: d5'teki taş yana atlayıp c5'i aldı ve b5'e kondu.	Világosnak nincs más választása, ütni kötelező: a d5-ös korong oldalra ugrott, leütötte c5-öt, és b5-re érkezett.
+Siyah b6'dan b4'e atlayıp b5'i geri aldı. Durum: Beyaz 15 taş (biri dama), Siyah 12 taş.	Sötét b6-ról b4-re ugrott, és visszaütötte b5-öt. Állás: Világos 15 korong (egy dáma), Sötét 12 korong.
+Beyaz %d – Siyah %d	Világos %d – Sötét %d
+Almaya devam: sıradaki noktalı kareye dokunun	Üss tovább: érintsd meg a következő pöttyös mezőt
+Baştan seçmek için taşın kendisine dokunun	Az újraválasztáshoz érintsd meg magát a korongot
+Taş seçildi: gideceği noktalı kareye dokunun	Korong kiválasztva: érints meg egy pöttyös mezőt
+Başka taş seçmek için ona dokunun	Másik korong választásához érintsd meg azt
+En çok taş alan yol zorunlu: %d taş	A leghosszabb ütés kötelező: %d korong
+Zorunlu alma var: çerçeveli taşlardan birini seçin	Ütéskényszer: válassz egy bekeretezett korongot
+bir taş seçin	válassz egy korongot
+Kindle kısa bir oyun oynayacak. Her dokunuşta bir hamle yapılır ve burada anlatılır. Taşın çıktığı ve vardığı kare çerçeveli, alınan taşların yeri çarpı ile gösterilir.	A Kindle lejátszik egy rövid játszmát. Minden érintés egy lépést tesz, amit itt elmagyaráz. A korong kiinduló és célmezője keretes, a leütött korongok helyét kereszt jelzi.
+Nasıl oynanır?	Hogyan kell játszani?
+Örnek oyun	Mintajátszma
+Siyah ve Beyaz sırayla boş noktalara taş koyar; Siyah başlar. Konan taş bir daha yerinden oynamaz. Amaç, taşlarınızla tahtanın rakibinizden daha büyük bir bölümünü çevirmektir.	Sötét és Világos felváltva tesz köveket az üres pontokra; Sötét kezd. A lerakott kő többé nem mozdul. A cél, hogy köveiddel nagyobb területet keríts be a táblán, mint az ellenfeled.
+Hamle nasıl yapılır?	Hogyan kell lépni?
+Çizgilerin kesiştiği boş bir noktaya dokunun; taşınız oraya konur. Son konan taşın ortasında halka vardır. Sıranızı geçmek için alttaki Pas düğmesine dokunun.	Érints meg egy üres pontot, ahol a vonalak keresztezik egymást; oda kerül a köved. Az utoljára lerakott kő közepén gyűrű van. Passzoláshoz érintsd meg alul a Passz gombot.
+Özgürlük	Szabadságok
+Bir taşın yukarı, aşağı, sağ ve soldaki boş komşuları onun özgürlükleridir (halkalar). Yan yana duran aynı renk taşlar bir zincirdir ve özgürlüklerini paylaşır: beyaz taşın 4, siyah zincirin 6 özgürlüğü var.	Egy kő fölötti, alatti, jobb és bal oldali üres szomszédai a szabadságai (gyűrűk). Az egymás melletti azonos színű kövek láncot alkotnak, és közösek a szabadságaik: a világos kőnek 4, a sötét láncnak 6 szabadsága van.
+Esir alma	Foglyul ejtés
+Rakip taşın son özgürlüğünü de kapatırsanız taş tahtadan alınır ve esiriniz olur. Bu beyaz taşın tek özgürlüğü kaldı (atari): Siyah E4'e oynarsa onu alır. Hiç özgürlüğü kalmayacak bir yere, bir şey almıyorsa, taş konamaz.	Ha elzárod az ellenfél kövének utolsó szabadságát, lekerül a tábláról, és a foglyod lesz. Ennek a világos kőnek egy szabadsága maradt (atari): ha Sötét E4-re lép, leüti. Olyan helyre, ahol nem maradna szabadsága, csak akkor tehetsz követ, ha azzal ütsz.
+Ko	Ko
+Siyah F5'e oynayıp E5'teki beyaz taşı aldı. Beyaz hemen E5'e oynayıp geri alamaz (×); önce başka bir yere oynamalı. Buna ko denir: aynı durumun sonsuza dek tekrarlanmasını önler.	Sötét F5-re lépett, és leütötte az E5-ös világos követ. Világos nem léphet azonnal E5-re visszaütni (×); előbb máshová kell lépnie. Ez a ko: megakadályozza, hogy ugyanaz az állás a végtelenségig ismétlődjön.
+Oyunun sonu ve sayım	Játszma vége és számolás
+İki oyuncu art arda pas geçince oyun biter. Puanınız: taşlarınız ve çevirdiğiniz boş noktalar (kareler); Beyaz'a 7,5 komi eklenir. Burada Siyah 47, Beyaz 34 + 7,5: Siyah kazandı. Ölü taşları Kindle önerir; değiştirmek için zincire dokunun.	A játszma akkor ér véget, ha mindkét játékos egymás után passzol. Pontjaid: a köveid és a bekerített üres pontok (négyzetek); Világos 7,5 komit kap. Itt Sötét 47, Világos 34 + 7,5: Sötét nyert. A halott köveket a Kindle javasolja; módosításhoz érints meg egy láncot.
+Siyah C3'e taş koydu. Taşlar çizgilerin kesiştiği noktalara konur ve bir daha oynamaz.	Sötét követ tett C3-ra. A kövek a vonalak metszéspontjaira kerülnek, és többé nem mozdulnak.
+Beyaz B2'ye oynadı. Bu taşın 4 özgürlüğü (boş komşusu) var: A2, B1, C2 ve B3.	Világos B2-re lépett. Ennek a kőnek 4 szabadsága (üres szomszédja) van: A2, B1, C2 és B3.
+Siyah C2 ile bir özgürlüğü kapattı: B2'nin 3 özgürlüğü kaldı.	Sötét C2-vel elzárt egy szabadságot: B2-nek 3 szabadsága maradt.
+Beyaz sağ tarafta, G7'de kendine alan kurmaya başladı.	Világos a jobb oldalon, G7-en kezdett területet építeni.
+Siyah B3'e oynadı: B2'nin artık yalnızca 2 özgürlüğü var (A2 ve B1).	Sötét B3-ra lépett: B2-nek már csak 2 szabadsága van (A2 és B1).
+Beyaz G3 ile sağ tarafı genişletti.	Világos G3-mal bővítette a jobb oldalt.
+Siyah B1'e oynadı: B2'nin tek özgürlüğü kaldı (A2). Buna atari denir: bir sonraki hamlede alınabilir.	Sötét B1-re lépett: B2-nek egy szabadsága maradt (A2). Ez az atari: a következő lépésben leüthető.
+Beyaz A2'ye uzayarak kaçmaya çalıştı. A2 ile B2 artık bir zincir; özgürlükleri birlikte sayılır: A1 ve A3.	Világos A2-re nyújtózva próbált menekülni. A2 és B2 most egy lánc; szabadságaikat együtt számoljuk: A1 és A3.
+Siyah A3 ile zinciri yine atariye düşürdü. Beyaz A1'e oynayamaz: orada taşlarının hiç özgürlüğü kalmazdı.	Sötét A3-mal ismét atariba hozta a láncot. Világos nem léphet A1-re: ott a köveinek nem maradna szabadsága.
+Beyaz zinciri kurtaramayacağını görüp G5'e oynadı.	Világos látta, hogy a láncot nem mentheti meg, és G5-re lépett.
+Siyah A1'e oynadı: zincirin son özgürlüğü kapandı, A2 ve B2 tahtadan alındı (×). Siyah'ın 2 esiri var. Sol alt köşe Siyah'ın, sağ taraf Beyaz'ın alanı oluyor.	Sötét A1-re lépett: a lánc utolsó szabadsága is elzárult, A2 és B2 lekerült a tábláról (×). Sötétnek 2 foglya van. A bal alsó sarok Sötét, a jobb oldal Világos területe lesz.
+Ölü taşları değiştirmek için zincire dokunun, sonra Sayımı onayla	Halott kövek módosításához érints meg egy láncot, majd Számolás jóváhagyása
+Esir: Siyah %d, Beyaz %d	Foglyok: Sötét %d, Világos %d
+sıra geçmek için Pas	passzoláshoz Passz
+boş bir kesişime dokunun	érints meg egy üres metszéspontot
+Kindle kısa bir oyun oynayacak. Her dokunuşta bir hamle yapılır ve burada anlatılır. Son konan taşın ortasında halka olur, alınan taşların yeri çarpı ile gösterilir.	A Kindle lejátszik egy rövid játszmát. Minden érintés egy lépést tesz, amit itt elmagyaráz. Az utoljára lerakott kő közepén gyűrű van, a leütött kövek helyét kereszt jelzi.
+Sıra sizde (%s)	Te lépsz (%s)
+Sıra Siyah'ta	Sötét lép
+Sıra Beyaz'da	Világos lép
+Hamle %d / %d	Lépés %d / %d
+Baştan	Elölről
+Sonraki hamle ▶	Következő lépés ▶
+◀ Geri	◀ Vissza
+%s oyununu ilk kez açıyorsunuz. Nasıl oynandığını resimlerle kısaca gösterelim mi?	Először nyitod meg: %s. Megmutassuk röviden képekkel, hogyan kell játszani?
+Göster	Mutasd
+Gerek yok	Nem kell
+Siyah ve Beyaz sırayla tahtaya taş koyar; Siyah başlar. Oyun bitince tahtada daha çok taşı olan kazanır. Başlangıçta ortada ikişer taş vardır.	Sötét és Világos felváltva tesz korongokat a táblára; Sötét kezd. A játszma végén az nyer, akinek több korongja van a táblán. Kezdéskor középen mindkét színből két korong áll.
+Sıra sizdeyken noktalı karelerden birine dokunun; taşınız oraya konur. Noktalar oynayabileceğiniz kareleri gösterir (İpucu düğmesiyle açılıp kapanır). Burada Siyah d3'e dokunuyor.	Amikor te lépsz, érints meg egy pöttyös mezőt; oda kerül a korongod. A pöttyök mutatják, hová léphetsz (a Tipp gombbal ki-be kapcsolható). Itt Sötét d3-at érinti meg.
+Sıkıştır ve çevir	Fogd közre és fordítsd
+Yeni taş, rakip taşları sizin iki taşınızın arasında sıkıştırmalı. Aradaki rakip taşlar sizin renginize döner: d4'teki beyaz taş d3 ile d5 arasında kaldı ve siyah oldu (çerçeveli). Sıkıştırmayan bir kareye oynanamaz.	Az új korongnak két saját korongod közé kell zárnia ellenfél korongokat. A közrezárt korongok a te színedre fordulnak: a d4-es világos korong d3 és d5 közé került, és sötét lett (keretes). Olyan mezőre nem léphetsz, amely semmit sem zár közre.
+Sekiz yön	Nyolc irány
+Sıkıştırma düz, yan ve çapraz, sekiz yönde de olur; bir hamle birkaç yönde birden çevirebilir. Siyah d4'e oynadı ve beş beyaz taşı çevirdi. c5 çevrilmedi: arkasında siyah taş yok.	A közrezárás mind a nyolc irányban működik: függőlegesen, vízszintesen és átlósan; egy lépés több irányban is fordíthat. Sötét d4-re lépett, és öt világos korongot fordított meg. c5 nem fordult: mögötte nincs sötét korong.
+Hiç oynayacak yeri olmayan pas geçer; uygulama bunu kendiliğinden yapar ve durum satırında yazar. Burada Beyaz hiçbir siyah taşı sıkıştıramıyor, bu yüzden sıra yine Siyah'ta (nokta: d1).	Akinek nincs szabályos lépése, passzol; az alkalmazás ezt magától megteszi, és kiírja az állapotsorba. Itt Világos egy sötét korongot sem tud közrezárni, ezért ismét Sötét lép (pötty: d1).
+İki taraf da oynayamayınca (çoğu zaman tahta dolunca) oyun biter ve taşlar sayılır. Burada Siyah 40 – Beyaz 24: Siyah kazandı. Köşedeki taş hiç çevrilemez; bu yüzden köşeler çok değerlidir.	Ha egyik fél sem tud lépni (többnyire tele a tábla), a játszma véget ér, és megszámoljuk a korongokat. Itt Sötét 40 – Világos 24: Sötét nyert. A sarokkorong sosem fordítható meg, ezért a sarkok nagyon értékesek.
+Siyah d3'e oynadı: d4'teki beyaz taşı d5'teki kendi taşıyla sıkıştırdı ve çevirdi.	Sötét d3-ra lépett: a d4-es világos korongot d5-ös korongjával közrezárta és megfordította.
+Beyaz c5'e oynadı: d5'teki siyah taşı e5 ile sıkıştırıp beyaza çevirdi.	Világos c5-re lépett: a d5-ös sötét korongot e5-tel közrezárta és világosra fordította.
+Siyah f6'ya oynadı: e5'i çaprazda d4 ile sıkıştırıp çevirdi.	Sötét f6-ra lépett: e5-öt átlósan d4-gyel közrezárta és megfordította.
+Beyaz f5'e oynadı: e5'i yatayda d5 ile sıkıştırıp geri aldı. Bir taş defalarca renk değiştirebilir.	Világos f5-re lépett: e5-öt vízszintesen d5-tel közrezárta és visszafordította. Egy korong sokszor színt válthat.
+Siyah e6'ya oynadı: e5'i dikeyde e4 ile sıkıştırdı.	Sötét e6-ra lépett: e5-öt függőlegesen e4-gyel zárta közre.
+Beyaz e3'e oynadı: d4'ü çaprazda c5 ile sıkıştırdı.	Világos e3-ra lépett: d4-et átlósan c5-tel zárta közre.
+Siyah c4'e oynadı ve iki yönde birden sıkıştırdı: d4 (yatay) ve d5 (çapraz) siyah oldu.	Sötét c4-re lépett, és egyszerre két irányban zárt közre: d4 (vízszintes) és d5 (átlós) sötét lett.
+Beyaz e7'ye oynadı: e6, e5 ve e4'ü aşağıdaki e3 ile sıkıştırdı. Aynı sırada üç taş birden döndü.	Világos e7-re lépett: e6-ot, e5-öt és e4-et az alatta lévő e3-mal zárta közre. Egy vonalban három korong fordult meg egyszerre.
+Siyah f4'e oynadı: f5'i dikeyde, e4'ü yatayda sıkıştırdı.	Sötét f4-re lépett: f5-öt függőlegesen, e4-et vízszintesen zárta közre.
+Beyaz c3'e oynadı ve üç yönde birden çevirdi: c4, d4 ve d3. Durum: Siyah 5 – Beyaz 9. Oyun tahta dolana kadar böyle sürer.	Világos c3-ra lépett, és egyszerre három irányban fordított: c4, d4 és d3. Állás: Sötét 5 – Világos 9. Így megy tovább, amíg a tábla meg nem telik.
+noktalı bir kareye dokunun	érints meg egy pöttyös mezőt
+rakibi sıkıştıran bir kareye dokunun	érints meg egy ellenfelet közrezáró mezőt
+Siyah %d – Beyaz %d	Sötét %d – Világos %d
+Kindle kısa bir oyun oynayacak. Her dokunuşta bir hamle yapılır ve burada anlatılır. Yeni konan taşın ortasında nokta, çevrilen taşların çevresinde çerçeve olur.	A Kindle lejátszik egy rövid játszmát. Minden érintés egy lépést tesz, amit itt elmagyaráz. Az új korong közepén pötty van, a megfordított korongok keretet kapnak.

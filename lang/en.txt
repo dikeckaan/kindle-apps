@@ -856,8 +856,6 @@ Not silinsin mi?	Delete this note?
 %s teslim oldu	%s resigned
 13×13	13×13
 9×9 (kısa oyun)	9×9 (short game)
-Almak zorunlu (%d taş) · %s	Capture required (%d pieces) · %s
-Almaya devam: sıradaki kareye dokunun	Keep capturing: tap the next square
 Berabere	Draw
 Beyaz %d – Siyah %d · %s	White %d – Black %d · %s
 Beyaz (ilk hamle)	White (moves first)
@@ -890,9 +888,6 @@ Siyah %d – Beyaz %d · %s	Black %d – White %d · %s
 Siyah (ilk hamle)	Black (moves first)
 Siyah başlar · köşeler değerlidir	Black starts · corners are valuable
 Siyah kazandı	Black wins
-Sıra: %s · Beyaz %d – Siyah %d	Turn: %s · White %d – Black %d
-Sıra: %s · Siyah %d – Beyaz %d	Turn: %s · Black %d – White %d
-Sıra: %s · esir: Siyah %d, Beyaz %d	Turn: %s · captures: Black %d, White %d
 Tahta	Board
 Teslim ol	Resign
 Teslim oldunuz · Kindle kazandı	You resigned · The Kindle won
@@ -1192,3 +1187,95 @@ Açmak için güç tuşuna basın	Press the power button to wake
 İpuçları: Açık	Hints: On
 İpuçları: Kapalı	Hints: Off
 İpuçları: seçtiğiniz taşın gidebileceği kareler	Hints: the squares the selected piece can move to
+Amaç	Goal
+Her oyuncunun 16 taşı vardır. Beyaz aşağıdadır ve ilk hamleyi yapar. Rakibin bütün taşlarını alan ya da onu hiç hamle yapamaz hâle getiren kazanır.	Each player has 16 men. White is at the bottom and moves first. You win by capturing all your opponent's men or leaving them with no move.
+Taş nasıl oynanır?	How does a man move?
+Önce oynatacağınız taşa dokunun: kalın çerçeveyle seçilir, gidebileceği kareler noktayla gösterilir. Sonra noktalı kareye dokunun. Taş bir kare ileri ya da yana gider; geri (×) ve çapraz gidemez.	First tap the man you want to move: it gets a thick frame and its possible squares are marked with dots. Then tap a dotted square. A man moves one square forward or sideways; never backward (×) or diagonally.
+Taş alma	Capturing
+Rakip taş hemen önünüzde ya da yanınızdaysa ve arkasındaki kare boşsa, üzerinden atlayıp onu alırsınız. Atladıktan sonra yine alabiliyorsanız devam edersiniz: e4 önce e5'i, sonra f6'yı alıp g6'ya konuyor.	If an enemy man is right in front of or beside yours and the square behind it is empty, jump over it to capture it. If you can capture again after the jump, keep going: e4 takes e5, then f6, and lands on g6.
+Almak zorunlu	Capturing is compulsory
+Alabiliyorsanız almak zorunludur ve en çok taşı alan yol seçilmelidir. Uygulama oynayabilecek taşları çerçeveyle gösterir: c3 tek taş alabilirdi, f3 ise iki taş alıyor; bu yüzden yalnızca f3 oynayabilir.	If you can capture, you must, taking the route that captures the most men. The app frames the men that may move: c3 could take one man, but f3 takes two, so only f3 may move.
+Dama olmak	Becoming a king
+Son sıraya ulaşan taş dama olur (♛). Dama, düz çizgilerde istediği kadar kare gider. Uzaktaki bir taşı, arası boşsa atlayıp arkasındaki herhangi bir boş kareye konarak alır: b2'deki dama b6'yı alabilir.	A man reaching the last row becomes a king (♛). A king moves any number of squares along straight lines. It captures a distant man if the way is clear, landing on any empty square beyond it: the king on b2 can take b6.
+Oyunun sonu	End of the game
+Taşı kalmayan ya da hiç hamle yapamayan kaybeder. Burada Siyah'ın a2'deki taşı hiçbir yere gidemez: Beyaz kazandı. İki tarafın da yalnızca birer taşı kalırsa oyun berabere biter.	A player with no men or no moves loses. Here Black's man on a2 cannot go anywhere: White has won. If each side has only one man left, the game is a draw.
+Beyaz h3'teki taşını bir kare ileri, h4'e sürdü. Beyaz yukarı, Siyah aşağı doğru ilerler.	White moved the man on h3 one square forward to h4. White moves up, Black moves down.
+Siyah d6'dan d5'e ilerledi.	Black advanced from d6 to d5.
+Beyaz e3'ten e4'e çıktı.	White moved up from e3 to e4.
+Siyah d4'e indi. Önünde d3'teki beyaz taş var ve arkası (d5) boş: alınabilir!	Black moved down to d4. The white man on d3 is in front of it and the square behind (d5) is empty: it can be captured!
+Beyaz d3'ten d4'ün üzerinden d5'e atladı ve siyah taşı aldı. Almak zorunludur.	White jumped from d3 over d4 to d5 and captured the black man. Capturing is compulsory.
+Siyah e5'e oynadı. Bu bir hata: e4'teki beyaz taş şimdi art arda iki taş alabilir.	Black played e5. A mistake: the white man on e4 can now capture two men in a row.
+Beyaz e5'i ve e7'yi art arda aldı ve son sıraya, e8'e ulaşıp dama oldu (♛). d5'ten tek taş almak yasaktı: en çok alan yol zorunludur.	White captured e5 and e7 in a row, reached the last row on e8 and became a king (♛). Taking just one man from d5 was not allowed: the longest capture is compulsory.
+Siyah c5'e oynadı ve d5'teki beyaz taşa yandan saldırdı.	Black played c5 and attacked the white man on d5 from the side.
+Beyaz'ın başka seçeneği yok, almak zorunlu: d5'teki taş yana atlayıp c5'i aldı ve b5'e kondu.	White has no choice, capturing is compulsory: the man on d5 jumped sideways over c5 and landed on b5.
+Siyah b6'dan b4'e atlayıp b5'i geri aldı. Durum: Beyaz 15 taş (biri dama), Siyah 12 taş.	Black jumped from b6 to b4, recapturing b5. Score: White 15 men (one king), Black 12.
+Beyaz %d – Siyah %d	White %d – Black %d
+Almaya devam: sıradaki noktalı kareye dokunun	Keep capturing: tap the next dotted square
+Baştan seçmek için taşın kendisine dokunun	Tap the man itself to choose again
+Taş seçildi: gideceği noktalı kareye dokunun	Man selected: tap a dotted square to move it
+Başka taş seçmek için ona dokunun	To select another man, tap it
+En çok taş alan yol zorunlu: %d taş	Longest capture is compulsory: %d men
+Zorunlu alma var: çerçeveli taşlardan birini seçin	You must capture: select a framed man
+bir taş seçin	select a man
+Kindle kısa bir oyun oynayacak. Her dokunuşta bir hamle yapılır ve burada anlatılır. Taşın çıktığı ve vardığı kare çerçeveli, alınan taşların yeri çarpı ile gösterilir.	The Kindle will play a short game. Each tap makes one move, explained here. The from and to squares are framed; captured men are marked with a cross.
+Nasıl oynanır?	How to play?
+Örnek oyun	Sample game
+Siyah ve Beyaz sırayla boş noktalara taş koyar; Siyah başlar. Konan taş bir daha yerinden oynamaz. Amaç, taşlarınızla tahtanın rakibinizden daha büyük bir bölümünü çevirmektir.	Black and White take turns placing stones on empty points; Black starts. A placed stone never moves. The goal is to surround a larger part of the board with your stones than your opponent.
+Hamle nasıl yapılır?	How to make a move?
+Çizgilerin kesiştiği boş bir noktaya dokunun; taşınız oraya konur. Son konan taşın ortasında halka vardır. Sıranızı geçmek için alttaki Pas düğmesine dokunun.	Tap an empty point where the lines cross; your stone is placed there. The last stone placed has a ring in its centre. To pass your turn, tap the Pass button at the bottom.
+Özgürlük	Liberties
+Bir taşın yukarı, aşağı, sağ ve soldaki boş komşuları onun özgürlükleridir (halkalar). Yan yana duran aynı renk taşlar bir zincirdir ve özgürlüklerini paylaşır: beyaz taşın 4, siyah zincirin 6 özgürlüğü var.	The empty points above, below, left and right of a stone are its liberties (rings). Adjacent stones of the same colour form a chain and share their liberties: the white stone has 4, the black chain 6.
+Esir alma	Capturing
+Rakip taşın son özgürlüğünü de kapatırsanız taş tahtadan alınır ve esiriniz olur. Bu beyaz taşın tek özgürlüğü kaldı (atari): Siyah E4'e oynarsa onu alır. Hiç özgürlüğü kalmayacak bir yere, bir şey almıyorsa, taş konamaz.	If you fill the last liberty of an enemy stone, it is removed and becomes your prisoner. This white stone has only one liberty left (atari): if Black plays E4, it is captured. You may not play where your stone would have no liberties, unless it captures.
+Ko	Ko
+Siyah F5'e oynayıp E5'teki beyaz taşı aldı. Beyaz hemen E5'e oynayıp geri alamaz (×); önce başka bir yere oynamalı. Buna ko denir: aynı durumun sonsuza dek tekrarlanmasını önler.	Black played F5 and captured the white stone on E5. White cannot recapture at E5 right away (×); White must play elsewhere first. This is called ko: it stops the same position repeating forever.
+Oyunun sonu ve sayım	End of the game and scoring
+İki oyuncu art arda pas geçince oyun biter. Puanınız: taşlarınız ve çevirdiğiniz boş noktalar (kareler); Beyaz'a 7,5 komi eklenir. Burada Siyah 47, Beyaz 34 + 7,5: Siyah kazandı. Ölü taşları Kindle önerir; değiştirmek için zincire dokunun.	The game ends when both players pass in a row. Your score: your stones plus the empty points you surround (squares); White gets 7.5 komi. Here Black 47, White 34 + 7.5: Black wins. The Kindle suggests dead stones; tap a chain to change it.
+Siyah C3'e taş koydu. Taşlar çizgilerin kesiştiği noktalara konur ve bir daha oynamaz.	Black placed a stone on C3. Stones go on the intersections of the lines and never move again.
+Beyaz B2'ye oynadı. Bu taşın 4 özgürlüğü (boş komşusu) var: A2, B1, C2 ve B3.	White played B2. This stone has 4 liberties (empty neighbours): A2, B1, C2 and B3.
+Siyah C2 ile bir özgürlüğü kapattı: B2'nin 3 özgürlüğü kaldı.	Black filled one liberty with C2: B2 has 3 liberties left.
+Beyaz sağ tarafta, G7'de kendine alan kurmaya başladı.	White started building territory on the right side with G7.
+Siyah B3'e oynadı: B2'nin artık yalnızca 2 özgürlüğü var (A2 ve B1).	Black played B3: B2 now has only 2 liberties (A2 and B1).
+Beyaz G3 ile sağ tarafı genişletti.	White extended the right side with G3.
+Siyah B1'e oynadı: B2'nin tek özgürlüğü kaldı (A2). Buna atari denir: bir sonraki hamlede alınabilir.	Black played B1: B2 has one liberty left (A2). This is called atari: it can be captured next move.
+Beyaz A2'ye uzayarak kaçmaya çalıştı. A2 ile B2 artık bir zincir; özgürlükleri birlikte sayılır: A1 ve A3.	White tried to escape by extending to A2. A2 and B2 are now a chain; their liberties count together: A1 and A3.
+Siyah A3 ile zinciri yine atariye düşürdü. Beyaz A1'e oynayamaz: orada taşlarının hiç özgürlüğü kalmazdı.	Black put the chain in atari again with A3. White cannot play A1: its stones would have no liberties there.
+Beyaz zinciri kurtaramayacağını görüp G5'e oynadı.	Seeing that the chain cannot be saved, White played G5.
+Siyah A1'e oynadı: zincirin son özgürlüğü kapandı, A2 ve B2 tahtadan alındı (×). Siyah'ın 2 esiri var. Sol alt köşe Siyah'ın, sağ taraf Beyaz'ın alanı oluyor.	Black played A1: the chain's last liberty is filled, A2 and B2 are removed (×). Black has 2 prisoners. The lower left corner becomes Black's territory, the right side White's.
+Ölü taşları değiştirmek için zincire dokunun, sonra Sayımı onayla	Tap a chain to change dead stones, then Confirm the count
+Esir: Siyah %d, Beyaz %d	Prisoners: Black %d, White %d
+sıra geçmek için Pas	tap Pass to skip your turn
+boş bir kesişime dokunun	tap an empty intersection
+Kindle kısa bir oyun oynayacak. Her dokunuşta bir hamle yapılır ve burada anlatılır. Son konan taşın ortasında halka olur, alınan taşların yeri çarpı ile gösterilir.	The Kindle will play a short game. Each tap makes one move, explained here. The last stone placed has a ring in its centre; captured stones are marked with a cross.
+Sıra sizde (%s)	Your turn (%s)
+Sıra Siyah'ta	Black to move
+Sıra Beyaz'da	White to move
+Hamle %d / %d	Move %d / %d
+Baştan	Restart
+Sonraki hamle ▶	Next move ▶
+◀ Geri	◀ Back
+%s oyununu ilk kez açıyorsunuz. Nasıl oynandığını resimlerle kısaca gösterelim mi?	You are opening %s for the first time. Shall we briefly show you how to play, with pictures?
+Göster	Show
+Gerek yok	No thanks
+Siyah ve Beyaz sırayla tahtaya taş koyar; Siyah başlar. Oyun bitince tahtada daha çok taşı olan kazanır. Başlangıçta ortada ikişer taş vardır.	Black and White take turns placing discs on the board; Black starts. When the game ends, the player with more discs on the board wins. At the start there are two of each in the centre.
+Sıra sizdeyken noktalı karelerden birine dokunun; taşınız oraya konur. Noktalar oynayabileceğiniz kareleri gösterir (İpucu düğmesiyle açılıp kapanır). Burada Siyah d3'e dokunuyor.	On your turn, tap one of the dotted squares; your disc is placed there. The dots show where you can play (turned on and off with the Hints button). Here Black taps d3.
+Sıkıştır ve çevir	Outflank and flip
+Yeni taş, rakip taşları sizin iki taşınızın arasında sıkıştırmalı. Aradaki rakip taşlar sizin renginize döner: d4'teki beyaz taş d3 ile d5 arasında kaldı ve siyah oldu (çerçeveli). Sıkıştırmayan bir kareye oynanamaz.	A new disc must sandwich enemy discs between two of yours. The discs in between turn to your colour: the white disc on d4 was caught between d3 and d5 and turned black (framed). You cannot play on a square that does not outflank.
+Sekiz yön	Eight directions
+Sıkıştırma düz, yan ve çapraz, sekiz yönde de olur; bir hamle birkaç yönde birden çevirebilir. Siyah d4'e oynadı ve beş beyaz taşı çevirdi. c5 çevrilmedi: arkasında siyah taş yok.	Outflanking works in all eight directions: straight, sideways and diagonally; one move can flip in several directions at once. Black played d4 and flipped five white discs. c5 was not flipped: there is no black disc behind it.
+Hiç oynayacak yeri olmayan pas geçer; uygulama bunu kendiliğinden yapar ve durum satırında yazar. Burada Beyaz hiçbir siyah taşı sıkıştıramıyor, bu yüzden sıra yine Siyah'ta (nokta: d1).	A player with nowhere to play passes; the app does this automatically and says so in the status line. Here White cannot outflank any black disc, so it is Black's turn again (dot: d1).
+İki taraf da oynayamayınca (çoğu zaman tahta dolunca) oyun biter ve taşlar sayılır. Burada Siyah 40 – Beyaz 24: Siyah kazandı. Köşedeki taş hiç çevrilemez; bu yüzden köşeler çok değerlidir.	When neither side can play (usually when the board is full), the game ends and the discs are counted. Here Black 40 – White 24: Black wins. A corner disc can never be flipped, so corners are very valuable.
+Siyah d3'e oynadı: d4'teki beyaz taşı d5'teki kendi taşıyla sıkıştırdı ve çevirdi.	Black played d3: sandwiched the white disc on d4 against its own disc on d5 and flipped it.
+Beyaz c5'e oynadı: d5'teki siyah taşı e5 ile sıkıştırıp beyaza çevirdi.	White played c5: sandwiched the black disc on d5 against e5 and turned it white.
+Siyah f6'ya oynadı: e5'i çaprazda d4 ile sıkıştırıp çevirdi.	Black played f6: sandwiched e5 diagonally against d4 and flipped it.
+Beyaz f5'e oynadı: e5'i yatayda d5 ile sıkıştırıp geri aldı. Bir taş defalarca renk değiştirebilir.	White played f5: sandwiched e5 horizontally against d5 and took it back. A disc can change colour many times.
+Siyah e6'ya oynadı: e5'i dikeyde e4 ile sıkıştırdı.	Black played e6: sandwiched e5 vertically against e4.
+Beyaz e3'e oynadı: d4'ü çaprazda c5 ile sıkıştırdı.	White played e3: sandwiched d4 diagonally against c5.
+Siyah c4'e oynadı ve iki yönde birden sıkıştırdı: d4 (yatay) ve d5 (çapraz) siyah oldu.	Black played c4, sandwiching in two directions at once: d4 (horizontal) and d5 (diagonal) turned black.
+Beyaz e7'ye oynadı: e6, e5 ve e4'ü aşağıdaki e3 ile sıkıştırdı. Aynı sırada üç taş birden döndü.	White played e7: sandwiched e6, e5 and e4 against e3 below. Three discs in one line flipped at once.
+Siyah f4'e oynadı: f5'i dikeyde, e4'ü yatayda sıkıştırdı.	Black played f4: sandwiched f5 vertically and e4 horizontally.
+Beyaz c3'e oynadı ve üç yönde birden çevirdi: c4, d4 ve d3. Durum: Siyah 5 – Beyaz 9. Oyun tahta dolana kadar böyle sürer.	White played c3 and flipped in three directions at once: c4, d4 and d3. Score: Black 5 – White 9. The game goes on like this until the board is full.
+noktalı bir kareye dokunun	tap a dotted square
+rakibi sıkıştıran bir kareye dokunun	tap a square that outflanks your opponent
+Siyah %d – Beyaz %d	Black %d – White %d
+Kindle kısa bir oyun oynayacak. Her dokunuşta bir hamle yapılır ve burada anlatılır. Yeni konan taşın ortasında nokta, çevrilen taşların çevresinde çerçeve olur.	The Kindle will play a short game. Each tap makes one move, explained here. A new disc has a dot in its centre; flipped discs get a frame.

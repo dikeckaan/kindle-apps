@@ -766,6 +766,286 @@ static void test_go_ai_selfplay(void)
 	fprintf(stderr, "go self-play ended after %d moves\n", moves);
 }
 
+/* ================= lessons: tutorial pictures and scripted demo games ================= */
+
+static char mark_at(const MasaPage *p, int n, int i)
+{
+	return p->marks[0] ? p->marks[i / n][i % n] : '.';
+}
+
+static void check_page_shape(const MasaPage *p, int n, const char *pieces)
+{
+	T_ASSERT(p->head && *p->head && p->text && *p->text);
+	for (int r = 0; r < n; r++) {
+		T_ASSERT(p->board[r] && (int) strlen(p->board[r]) == n);
+		if (p->marks[0]) T_ASSERT(p->marks[r] && (int) strlen(p->marks[r]) == n);
+		for (int c = 0; c < n; c++) {
+			T_ASSERT(p->board[r][c] == '.' || strchr(pieces, p->board[r][c]));
+			if (p->marks[0]) T_ASSERT(strchr(".*@oncx#vltu", p->marks[r][c]) != NULL);
+		}
+	}
+}
+
+static uint64_t rv_marked(const MasaPage *p, const char *which)
+{
+	uint64_t b = 0;
+	for (int i = 0; i < 64; i++)
+		if (strchr(which, mark_at(p, 8, i))) b |= 1ULL << i;
+	return b;
+}
+
+static void test_rv_lessons(void)
+{
+	T_ASSERT(rv_npages >= 3 && rv_npages <= 6);
+	T_EQ_INT(rv_parse_sq("a8"), 0);
+	T_EQ_INT(rv_parse_sq("h1"), 63);
+	T_EQ_INT(rv_parse_sq("pas"), RV_PASS);
+	T_EQ_INT(rv_parse_sq("i1"), -1);
+	for (int k = 0; k < rv_npages; k++) {
+		const MasaPage *p = &rv_pages[k];
+		Rv r;
+		check_page_shape(p, 8, "BW");
+		rv_from_rows(&r, p->board, p->side);
+		uint64_t dots = rv_marked(p, "o@"), last = rv_marked(p, "n"), turned = rv_marked(p, "c");
+		if (dots) { /* the dots are exactly the legal moves (after a forced pass) */
+			Rv t = r;
+			if (!rv_moves(&t)) T_EQ_INT(rv_play(&t, RV_PASS), 0);
+			T_ASSERT(rv_moves(&t) == dots);
+		}
+		if (last) { /* the picture is the position right after the marked move, which turned the 'c' discs */
+			T_EQ_INT(__builtin_popcountll(last), 1);
+			int sq = __builtin_ctzll(last), mover = rv_at(&r, sq);
+			Rv before = r;
+			before.disc[mover] &= ~(last | turned);
+			before.disc[!mover] |= turned;
+			before.side = mover;
+			T_ASSERT(rv_flips(&before, sq) == turned);
+			T_EQ_INT(rv_play(&before, sq), 0);
+			T_ASSERT(before.disc[0] == r.disc[0] && before.disc[1] == r.disc[1]);
+		}
+	}
+	Rv end;
+	rv_from_rows(&end, rv_pages[rv_npages - 1].board, 0);
+	T_ASSERT(rv_over(&end));
+	T_EQ_INT(rv_count(&end, 0), 40); /* as the text says */
+	T_EQ_INT(rv_count(&end, 1), 24);
+
+	T_ASSERT(rv_ndemo >= 6 && rv_ndemo <= 12);
+	Rv r;
+	rv_init(&r);
+	for (int i = 0; i < rv_ndemo; i++) {
+		int sq = rv_parse_sq(rv_demo[i].move);
+		T_ASSERT(sq >= 0);
+		T_ASSERT(strstr(rv_demo[i].caption, rv_demo[i].move) != NULL);
+		T_ASSERT(strstr(rv_demo[i].caption, r.side ? "Beyaz" : "Siyah") == rv_demo[i].caption);
+		/* every square the caption names as turned really turns */
+		uint64_t f = rv_flips(&r, sq);
+		for (int q = 0; q < 64; q++) {
+			char nm[3];
+			rv_sq_name(q, nm);
+			if (q == sq || !strstr(rv_demo[i].caption, nm)) continue;
+			int was = rv_at(&r, q);
+			T_ASSERT(was >= 0); /* only discs on the board are named */
+		}
+		T_ASSERT(f != 0);
+		T_EQ_INT(rv_play(&r, sq), 0);
+	}
+	T_EQ_INT(rv_count(&r, 0), 5); /* "Siyah 5 – Beyaz 9" */
+	T_EQ_INT(rv_count(&r, 1), 9);
+}
+
+static int dm_has_move(const DmMove *ms, int n, int from, int to)
+{
+	for (int i = 0; i < n; i++)
+		if (ms[i].from == from && ms[i].path[ms[i].n - 1] == to) return 1;
+	return 0;
+}
+
+static void test_dm_lessons(void)
+{
+	static DmMove ms[DM_MAX_MOVES];
+	T_ASSERT(dm_npages >= 3 && dm_npages <= 6);
+	for (int k = 0; k < dm_npages; k++) {
+		const MasaPage *p = &dm_pages[k];
+		Dm d;
+		check_page_shape(p, 8, "wWbB");
+		dm_from_rows(&d, p->board, p->side);
+		int n = dm_moves(&d, ms, DM_MAX_MOVES);
+		int sel = -1, must = 0;
+		for (int i = 0; i < 64; i++) {
+			if (mark_at(p, 8, i) == '*') sel = i;
+			if (mark_at(p, 8, i) == '#') must = 1;
+		}
+		for (int i = 0; i < 64; i++) {
+			char m = mark_at(p, 8, i);
+			int piece = d.b[i], own = piece && dm_color(piece) == d.side;
+			if (m == '#') { /* only the framed pieces may move */
+				for (int j = 0; j < n; j++) T_ASSERT(mark_at(p, 8, ms[j].from) == '#');
+				T_ASSERT(own);
+			}
+			if (m == 'o') T_ASSERT(dm_has_move(ms, n, sel >= 0 ? sel : -1, i) || must);
+			if (m == 'x') {
+				int taken = 0, used = 0;
+				for (int j = 0; j < n; j++) {
+					/* with a selected piece the cross is about that piece's moves */
+					if ((sel < 0 || ms[j].from == sel) && (ms[j].from == i || ms[j].path[ms[j].n - 1] == i)) used = 1;
+					for (int c = 0; c < ms[j].ncap; c++)
+						if (ms[j].cap[c] == i) taken = 1;
+				}
+				if (piece && !own) T_ASSERT(taken); /* a cross on an enemy piece: it is taken */
+				else T_ASSERT(!used && !taken);      /* elsewhere: nothing may go there or move from there */
+			}
+		}
+		if (sel >= 0) { /* the dots are exactly where the selected piece can end its move */
+			T_EQ_INT(dm_color(d.b[sel]), d.side);
+			for (int j = 0; j < n; j++)
+				if (ms[j].from == sel) T_EQ_INT(mark_at(p, 8, ms[j].path[ms[j].n - 1]), 'o');
+		}
+		if (must) {
+			T_ASSERT(n > 0 && ms[0].ncap > 0);
+			for (int j = 0; j < n; j++) T_EQ_INT(mark_at(p, 8, ms[j].path[ms[j].n - 1]), 'o');
+		}
+		for (int i = 0; i < 64; i++) /* 'v': a landing square on the way of some legal move */
+			if (mark_at(p, 8, i) == 'v') {
+				int on = 0;
+				for (int j = 0; j < n; j++)
+					for (int s = 0; s + 1 < ms[j].n; s++)
+						if (ms[j].path[s] == i) on = 1;
+				T_ASSERT(on);
+			}
+	}
+	Dm end;
+	dm_from_rows(&end, dm_pages[dm_npages - 1].board, dm_pages[dm_npages - 1].side);
+	T_EQ_INT(dm_result(&end), DM_WHITE_WINS);
+
+	T_ASSERT(dm_ndemo >= 6 && dm_ndemo <= 12);
+	Dm d;
+	dm_init(&d);
+	DmMove m;
+	T_EQ_INT(dm_parse_move(&d, "a3-a5", &m), -1);
+	T_EQ_INT(dm_parse_move(&d, "a3", &m), -1);
+	for (int i = 0; i < dm_ndemo; i++) {
+		T_EQ_INT(dm_parse_move(&d, dm_demo[i].move, &m), 0);
+		char to[3];
+		dm_sq_name(m.path[m.n - 1], to);
+		T_ASSERT(strstr(dm_demo[i].caption, to) != NULL);
+		T_ASSERT(strstr(dm_demo[i].caption, d.side ? "Siyah" : "Beyaz") == dm_demo[i].caption);
+		for (int c = 0; c < m.ncap; c++) { /* captions name the pieces taken */
+			char nm[3];
+			dm_sq_name(m.cap[c], nm);
+			if (m.ncap > 1) T_ASSERT(strstr(dm_demo[i].caption, nm) != NULL);
+		}
+		dm_apply(&d, &m);
+	}
+	int cnt[2] = { 0, 0 }, kings = 0;
+	for (int s = 0; s < 64; s++)
+		if (d.b[s]) {
+			cnt[dm_color(d.b[s])]++;
+			kings += d.b[s] == DM_WKING;
+		}
+	T_EQ_INT(cnt[0], 15); /* "Beyaz 15 taş (biri dama), Siyah 12 taş" */
+	T_EQ_INT(cnt[1], 12);
+	T_EQ_INT(kings, 1);
+}
+
+static void test_go_lessons(void)
+{
+	static Go g;
+	T_ASSERT(go_npages >= 3 && go_npages <= 6);
+	go_init(&g, 9);
+	T_EQ_INT(go_parse_pt(&g, "A9"), go_pt(&g, 0, 0));
+	T_EQ_INT(go_parse_pt(&g, "J1"), go_pt(&g, 8, 8));
+	T_EQ_INT(go_parse_pt(&g, "I5"), -1);
+	T_EQ_INT(go_parse_pt(&g, "A10"), -1);
+	T_EQ_INT(go_parse_pt(&g, "pas"), GO_PASS);
+	char nm[4];
+	go_pt_name(&g, go_pt(&g, 2, 8), nm);
+	T_EQ_STR(nm, "J7");
+	for (int k = 0; k < go_npages; k++) {
+		const MasaPage *p = &go_pages[k];
+		check_page_shape(p, 9, "BW");
+		go_from_rows(&g, 9, p->board, p->side);
+		int lib_marks = 0, last = -1, crosses = 0, terr = 0;
+		for (int i = 0; i < 81; i++) { /* every stone is on the board as drawn (nothing captured while setting up) */
+			int pt = go_pt(&g, i / 9, i % 9), ch = p->board[i / 9][i % 9];
+			T_EQ_INT(g.c[pt], ch == 'B' ? GO_BLACK : ch == 'W' ? GO_WHITE : GO_EMPTY);
+			char m = mark_at(p, 9, i);
+			if (m == 'l') lib_marks++;
+			if (m == 'n') last = pt;
+			if (m == 'x') crosses++;
+			if (m == 't' || m == 'u') terr = 1;
+			if (m == '@') T_ASSERT(go_legal(&g, pt));
+		}
+		if (lib_marks) { /* the rings are exactly the liberties of the stones on the board */
+			int libs = 0;
+			for (int i = 0; i < 81; i++) {
+				int pt = go_pt(&g, i / 9, i % 9), nb = 0;
+				if (g.c[pt] != GO_EMPTY) continue;
+				const int d[4] = { -g.W, -1, 1, g.W };
+				for (int j = 0; j < 4; j++)
+					if (g.c[pt + d[j]] == GO_BLACK || g.c[pt + d[j]] == GO_WHITE) nb = 1;
+				T_EQ_INT(mark_at(p, 9, i) == 'l', nb);
+				libs += nb;
+			}
+			T_EQ_INT(libs, lib_marks);
+		}
+		if (last >= 0) { /* the picture is right after the 'n' stone took the 'x' stones */
+			int me = g.c[last];
+			static Go before;
+			char rows[9][10];
+			const char *rp[9];
+			for (int r = 0; r < 9; r++) {
+				for (int c = 0; c < 9; c++) {
+					char m = mark_at(p, 9, r * 9 + c);
+					rows[r][c] = m == 'n' ? '.' : m == 'x' ? (me == GO_BLACK ? 'W' : 'B') : p->board[r][c];
+				}
+				rows[r][9] = '\0';
+				rp[r] = rows[r];
+			}
+			go_from_rows(&before, 9, rp, me);
+			T_EQ_INT(go_play(&before, last), crosses);
+			T_ASSERT(memcmp(before.c, g.c, sizeof g.c) == 0);
+			if (crosses == 1) { /* ko: the stone cannot be taken back at once */
+				for (int i = 0; i < 81; i++)
+					if (mark_at(p, 9, i) == 'x') T_ASSERT(!go_legal(&before, go_pt(&g, i / 9, i % 9)));
+			}
+		}
+		if (terr) { /* the squares are each side's area */
+			static unsigned char owner[GO_MAXP];
+			int b, w;
+			go_area(&g, NULL, &b, &w, owner);
+			for (int i = 0; i < 81; i++) {
+				int pt = go_pt(&g, i / 9, i % 9);
+				char m = mark_at(p, 9, i);
+				if (g.c[pt] == GO_EMPTY) T_EQ_INT(m, owner[pt] == GO_BLACK ? 't' : owner[pt] == GO_WHITE ? 'u' : '.');
+			}
+			T_EQ_INT(b, 47); /* "Siyah 47, Beyaz 34 + 7,5" */
+			T_EQ_INT(w, 34);
+		}
+	}
+	/* "Esir alma": the tap takes the stone */
+	go_from_rows(&g, 9, go_pages[3].board, go_pages[3].side);
+	T_EQ_INT(go_play(&g, go_parse_pt(&g, "E4")), 1);
+
+	T_ASSERT(go_ndemo >= 6 && go_ndemo <= 12);
+	static GoGame gg;
+	go_game_new(&gg, 9, 2, 2, GO_BLACK);
+	for (int i = 0; i < go_ndemo; i++) {
+		int pt = go_parse_pt(&gg.pos, go_demo[i].move);
+		T_ASSERT(pt > 0);
+		T_ASSERT(strstr(go_demo[i].caption, go_demo[i].move) != NULL);
+		T_ASSERT(strstr(go_demo[i].caption, gg.pos.side == GO_BLACK ? "Siyah" : "Beyaz") == go_demo[i].caption);
+		T_ASSERT(go_game_legal(&gg, pt));
+		T_EQ_INT(go_game_play(&gg, pt), 0);
+	}
+	T_EQ_INT(gg.pos.caps[GO_BLACK], 2); /* "Siyah'ın 2 esiri var" */
+	T_EQ_INT(gg.pos.caps[GO_WHITE], 0);
+	/* step 9's claim: White cannot play A1 there (no liberty) */
+	go_game_new(&gg, 9, 2, 2, GO_BLACK);
+	for (int i = 0; i < 9; i++) go_game_play(&gg, go_parse_pt(&gg.pos, go_demo[i].move));
+	T_ASSERT(gg.pos.side == GO_WHITE && !go_game_legal(&gg, go_parse_pt(&gg.pos, "A1")));
+}
+
 int main(void)
 {
 	T_RUN(test_rv_start);
@@ -796,5 +1076,8 @@ int main(void)
 	T_RUN(test_go_game_flow);
 	T_RUN(test_go_ai);
 	T_RUN(test_go_ai_selfplay);
+	T_RUN(test_rv_lessons);
+	T_RUN(test_dm_lessons);
+	T_RUN(test_go_lessons);
 	return T_DONE();
 }
