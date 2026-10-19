@@ -756,8 +756,8 @@ static int search_city(void)
 			kui_fill((KuiRect){ 0, 0, w, kui_height() }, 255);
 			kui_topbar(T("Sonuçlar"), NULL);
 			for (int i = 0; i < n; i++) {
-				if (found[i].admin[0]) snprintf(lbl[i], sizeof lbl[i], "%s, %s", found[i].name, found[i].admin);
-				else snprintf(lbl[i], sizeof lbl[i], "%s", found[i].name);
+				if (found[i].admin[0]) snprintf(lbl[i], sizeof lbl[i], "%.63s, %.63s", found[i].name, found[i].admin);
+				else snprintf(lbl[i], sizeof lbl[i], "%.63s", found[i].name);
 				b[i] = (KuiButton){ { 40, KUI_TOPBAR_H + 40 + i * 170, w - 80, 140 }, lbl[i], i + 1 };
 				kui_button(&b[i], 0);
 			}
