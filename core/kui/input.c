@@ -18,6 +18,7 @@
 int  kui_input_open(void);
 void kui_input_close(void);
 int  kui_input_asleep(void);
+void kui_screen_woke(void); /* screen.c: the next refresh flashes (the screensaver covered the panel) */
 
 
 static int touch_fd = -1, lipc_fd = -1, power_fd = -1;
@@ -231,6 +232,7 @@ KuiEvent kui_next_event(int timeout_ms)
 				if (strstr(buf, "outOfScreenSaver")) {
 					asleep = 0;
 					memset(&gesture, 0, sizeof gesture);
+					kui_screen_woke(); /* the app's redraw after this event flashes once, with no change in the app */
 					return (KuiEvent){ KUI_EV_WAKE, 0, 0, KUI_DIR_NONE };
 				}
 			} else if (r == 0 || (r < 0 && errno != EAGAIN)) {
