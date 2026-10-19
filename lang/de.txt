@@ -815,3 +815,38 @@ Zeval %s · Ay: %s, %%%d aydınlık	Sonnenhöchststand %s · Mond: %s, %d%% bele
 Şehir	Stadt
 Şu an: %s (%.2f, %.2f)	Jetzt: %s (%.2f, %.2f)
 ☀ Güneş şu an %.0f° %s yönünde, %.0f° yüksekte	☀ Die Sonne steht jetzt bei %.0f° %s, %.0f° hoch
+Not Defteri	Notizbuch
+Adsız çizim	Unbenannte Zeichnung
+İnce	Dünn
+Kalın	Dick
+Silgi	Radierer
+sayfa	Seite
+Sayfa resim olarak kaydedildi:\ndocuments/Notlar\n%s	Seite als Bild gespeichert:\ndocuments/Notlar\n%s
+Resim kaydedilemedi.	Das Bild konnte nicht gespeichert werden.
+Dışa aktar	Exportieren
+Sayfa %d	Seite %d
+Temizle	Leeren
+Temizle: sayfadaki çizimler silinir.\nSil: sayfa nottan çıkarılır.	Leeren: Die Zeichnung auf dieser Seite wird gelöscht.\nLöschen: Die Seite wird aus der Notiz entfernt.
+Arka plan	Hintergrund
+Başlık	Titel
+Sayfa	Seite
+Sayfa %d / %d · %d çizgi	Seite %d / %d · %d Striche
+Düz	Leer
+Kareli	Kariert
+Çizgili	Liniert
+Bütün sayfalar için	Für alle Seiten
+Yazı notu	Textnotiz
+Ekle	Hinzufügen
+Boş not.\n“Ekle” ile bir satır yazın.	Leere Notiz.\nMit „Hinzufügen“ eine Zeile schreiben.
+%d–%d / %d · kaydırın	%d–%d / %d · wischen
+Dokunun: düzenle · basılı tutun: sil	Tippen: bearbeiten · halten: löschen
+Yeni satır	Neue Zeile
+Satır silinsin mi?	Diese Zeile löschen?
+Satırı düzenle	Zeile bearbeiten
+Henüz not yok.\n“Yeni” ile bir çizim ya da yazı notu başlatın.	Noch keine Notizen.\nMit „Neu“ eine Zeichnung oder Textnotiz beginnen.
+Boş yazı notu	Leere Textnotiz
+Çizim · %d sayfa	Zeichnung · %d Seiten
+Yazı · %d satır	Text · %d Zeilen
+Çizim	Zeichnung
+Parmakla çizim mi, klavyeyle yazı mı?	Mit dem Finger zeichnen oder mit der Tastatur schreiben?
+Not silinsin mi?	Diese Notiz löschen?

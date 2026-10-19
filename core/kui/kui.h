@@ -83,7 +83,9 @@ void kui_tr_date(const struct tm *tm, char *out, int cap); /* "18 Ekim 2026, Paz
 void kui_fmt_num(double v, int decimals, char *out, int cap); /* 6632.39 → "6.632,39" */
 
 /* ---- events and gestures ---- */
-typedef enum { KUI_EV_NONE, KUI_EV_TAP, KUI_EV_LONGPRESS, KUI_EV_SWIPE, KUI_EV_WAKE, KUI_EV_QUIT, KUI_EV_POWER } KuiEvType;
+typedef enum { KUI_EV_NONE, KUI_EV_TAP, KUI_EV_LONGPRESS, KUI_EV_SWIPE, KUI_EV_WAKE, KUI_EV_QUIT, KUI_EV_POWER,
+	       KUI_EV_DOWN, KUI_EV_MOVE, KUI_EV_UP } KuiEvType;
+/* KUI_EV_DOWN / MOVE / UP: raw finger positions, only while kui_set_drag_events(1) is on (see below) */
 /* KUI_EV_POWER: the power button was pressed (only while kui_grab_power_key(1) is on) */
 typedef enum { KUI_DIR_NONE, KUI_DIR_LEFT, KUI_DIR_RIGHT, KUI_DIR_UP, KUI_DIR_DOWN } KuiDir;
 typedef struct { KuiEvType type; int x, y; KuiDir dir; } KuiEvent;
@@ -93,6 +95,21 @@ typedef struct { int down, x0, y0, x, y; long t0_ms; } KuiGesture;
 #define KUI_LONGPRESS_SLOP 40
 /* Feed screen-space samples (down = 1 press/drag, 0 release); events are emitted on release only. */
 KuiEvent kui_gesture_feed(KuiGesture *g, int down, int x, int y, long t_ms);
+/* Drag stream (drag.c, pure): one contact's samples → KUI_EV_DOWN at the first sample, KUI_EV_MOVE for every
+ * later sample at a new position, KUI_EV_UP (last position) on release, followed by the gesture event
+ * (tap / long press / swipe) of the whole touch, so taps still work while drawing. contact: the touch's tracking
+ * id (>= 0) while down, -1 when released; a new id without a release in between ends the old touch first.
+ * Writes at most KUI_DRAG_MAX_OUT events to out; returns their number. */
+#define KUI_DRAG_MAX_OUT 4
+typedef struct { KuiGesture g; int down, id, x, y; } KuiDrag;
+int kui_drag_feed(KuiDrag *d, int contact, int x, int y, long t_ms, KuiEvent *out);
+/* Opt-in (default off, so other apps see only taps and swipes): kui_next_event also returns KUI_EV_DOWN/MOVE/UP
+ * with screen coordinates. Slot 0 (the first finger) only; other fingers and palms are ignored. */
+void kui_set_drag_events(int on);
+/* Fast ink (fastink.c): refreshes r at once with the direct black/white waveform (DU, ~4× faster than GL16; no
+ * flash). For black strokes on white only: grays in r are left as they are on the panel. Not part of kui_flush's
+ * dirty list; skipped while the screensaver is up. */
+void kui_flush_fast(KuiRect r);
 
 /* ---- on-screen keyboard (pure layout + hit-test) ---- */
 typedef enum { KUI_KB_TR_LETTERS, KUI_KB_SYMBOLS } KuiKbPage;

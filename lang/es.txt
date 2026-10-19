@@ -815,3 +815,38 @@ Zeval %s · Ay: %s, %%%d aydınlık	Mediodía solar %s · Luna: %s, %d %% ilumin
 Şehir	Ciudad
 Şu an: %s (%.2f, %.2f)	Ahora: %s (%.2f, %.2f)
 ☀ Güneş şu an %.0f° %s yönünde, %.0f° yüksekte	☀ El Sol está ahora a %.0f° %s, a %.0f° de altura
+Not Defteri	Cuaderno
+Adsız çizim	Dibujo sin título
+İnce	Fino
+Kalın	Grueso
+Silgi	Goma
+sayfa	página
+Sayfa resim olarak kaydedildi:\ndocuments/Notlar\n%s	Página guardada como imagen:\ndocuments/Notlar\n%s
+Resim kaydedilemedi.	No se pudo guardar la imagen.
+Dışa aktar	Exportar
+Sayfa %d	Página %d
+Temizle	Vaciar
+Temizle: sayfadaki çizimler silinir.\nSil: sayfa nottan çıkarılır.	Vaciar: se borra el dibujo de esta página.\nBorrar: se quita la página de la nota.
+Arka plan	Fondo
+Başlık	Título
+Sayfa	Página
+Sayfa %d / %d · %d çizgi	Página %d / %d · %d trazos
+Düz	Liso
+Kareli	Cuadriculado
+Çizgili	Rayado
+Bütün sayfalar için	Para todas las páginas
+Yazı notu	Nota de texto
+Ekle	Añadir
+Boş not.\n“Ekle” ile bir satır yazın.	Nota vacía.\nEscribe una línea con «Añadir».
+%d–%d / %d · kaydırın	%d–%d / %d · desliza
+Dokunun: düzenle · basılı tutun: sil	Toca: editar · mantén: borrar
+Yeni satır	Nueva línea
+Satır silinsin mi?	¿Borrar esta línea?
+Satırı düzenle	Editar línea
+Henüz not yok.\n“Yeni” ile bir çizim ya da yazı notu başlatın.	Aún no hay notas.\nEmpieza un dibujo o una nota de texto con «Nueva».
+Boş yazı notu	Nota de texto vacía
+Çizim · %d sayfa	Dibujo · %d páginas
+Yazı · %d satır	Texto · %d líneas
+Çizim	Dibujo
+Parmakla çizim mi, klavyeyle yazı mı?	¿Dibujar con el dedo o escribir con el teclado?
+Not silinsin mi?	¿Borrar esta nota?

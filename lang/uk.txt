@@ -815,3 +815,38 @@ Zeval %s · Ay: %s, %%%d aydınlık	Справжній полудень %s · М
 Şehir	Місто
 Şu an: %s (%.2f, %.2f)	Зараз: %s (%.2f, %.2f)
 ☀ Güneş şu an %.0f° %s yönünde, %.0f° yüksekte	☀ Сонце зараз на %.0f° %s, висота %.0f°
+Not Defteri	Блокнот
+Adsız çizim	Малюнок без назви
+İnce	Тонкий
+Kalın	Товстий
+Silgi	Гумка
+sayfa	стор.
+Sayfa resim olarak kaydedildi:\ndocuments/Notlar\n%s	Сторінку збережено як зображення:\ndocuments/Notlar\n%s
+Resim kaydedilemedi.	Не вдалося зберегти зображення.
+Dışa aktar	Експорт
+Sayfa %d	Сторінка %d
+Temizle	Очистити
+Temizle: sayfadaki çizimler silinir.\nSil: sayfa nottan çıkarılır.	Очистити: малюнок на сторінці стирається.\nСтерти: сторінку вилучено з нотатки.
+Arka plan	Тло
+Başlık	Заголовок
+Sayfa	Сторінка
+Sayfa %d / %d · %d çizgi	Сторінка %d / %d · штрихів: %d
+Düz	Чисте
+Kareli	У клітинку
+Çizgili	У лінійку
+Bütün sayfalar için	Для всіх сторінок
+Yazı notu	Текстова нотатка
+Ekle	Додати
+Boş not.\n“Ekle” ile bir satır yazın.	Порожня нотатка.\nНапишіть рядок кнопкою «Додати».
+%d–%d / %d · kaydırın	%d–%d / %d · гортайте
+Dokunun: düzenle · basılı tutun: sil	Дотик: змінити · утримання: стерти
+Yeni satır	Новий рядок
+Satır silinsin mi?	Стерти цей рядок?
+Satırı düzenle	Змінити рядок
+Henüz not yok.\n“Yeni” ile bir çizim ya da yazı notu başlatın.	Нотаток поки немає.\nПочніть малюнок або текстову нотатку кнопкою «Нова».
+Boş yazı notu	Порожня текстова нотатка
+Çizim · %d sayfa	Малюнок · сторінок: %d
+Yazı · %d satır	Текст · рядків: %d
+Çizim	Малюнок
+Parmakla çizim mi, klavyeyle yazı mı?	Малювати пальцем чи друкувати на клавіатурі?
+Not silinsin mi?	Стерти цю нотатку?

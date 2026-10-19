@@ -815,3 +815,38 @@ Zeval %s · Ay: %s, %%%d aydınlık	Zeval %s · Ay: %s, %d%% işıqlı
 Şehir	Şəhər
 Şu an: %s (%.2f, %.2f)	İndi: %s (%.2f, %.2f)
 ☀ Güneş şu an %.0f° %s yönünde, %.0f° yüksekte	☀ Günəş indi %.0f° %s istiqamətində, %.0f° hündürlükdə
+Not Defteri	Qeyd dəftəri
+Adsız çizim	Adsız rəsm
+İnce	Nazik
+Kalın	Qalın
+Silgi	Pozan
+sayfa	səhifə
+Sayfa resim olarak kaydedildi:\ndocuments/Notlar\n%s	Səhifə şəkil kimi saxlanıldı:\ndocuments/Notlar\n%s
+Resim kaydedilemedi.	Şəkil saxlanıla bilmədi.
+Dışa aktar	İxrac et
+Sayfa %d	Səhifə %d
+Temizle	Təmizlə
+Temizle: sayfadaki çizimler silinir.\nSil: sayfa nottan çıkarılır.	Təmizlə: səhifədəki rəsm silinir.\nSil: səhifə qeyddən çıxarılır.
+Arka plan	Fon
+Başlık	Başlıq
+Sayfa	Səhifə
+Sayfa %d / %d · %d çizgi	Səhifə %d / %d · %d xətt
+Düz	Sadə
+Kareli	Damalı
+Çizgili	Xətli
+Bütün sayfalar için	Bütün səhifələr üçün
+Yazı notu	Mətn qeydi
+Ekle	Əlavə et
+Boş not.\n“Ekle” ile bir satır yazın.	Boş qeyd.\n“Əlavə et” ilə bir sətir yazın.
+%d–%d / %d · kaydırın	%d–%d / %d · sürüşdürün
+Dokunun: düzenle · basılı tutun: sil	Toxunun: redaktə · basılı saxlayın: sil
+Yeni satır	Yeni sətir
+Satır silinsin mi?	Sətir silinsin?
+Satırı düzenle	Sətiri redaktə et
+Henüz not yok.\n“Yeni” ile bir çizim ya da yazı notu başlatın.	Hələ qeyd yoxdur.\n“Yeni” ilə rəsm və ya mətn qeydi başladın.
+Boş yazı notu	Boş mətn qeydi
+Çizim · %d sayfa	Rəsm · %d səhifə
+Yazı · %d satır	Mətn · %d sətir
+Çizim	Rəsm
+Parmakla çizim mi, klavyeyle yazı mı?	Barmaqla rəsm, yoxsa klaviatura ilə mətn?
+Not silinsin mi?	Qeyd silinsin?

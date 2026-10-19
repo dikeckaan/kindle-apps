@@ -815,3 +815,38 @@ Zeval %s · Ay: %s, %%%d aydınlık	Middagshøjde %s · Månen: %s, %d %% belyst
 Şehir	By
 Şu an: %s (%.2f, %.2f)	Nu: %s (%.2f, %.2f)
 ☀ Güneş şu an %.0f° %s yönünde, %.0f° yüksekte	☀ Solen står nu på %.0f° %s, %.0f° højt
+Not Defteri	Notesbog
+Adsız çizim	Unavngiven tegning
+İnce	Tynd
+Kalın	Tyk
+Silgi	Viskelæder
+sayfa	side
+Sayfa resim olarak kaydedildi:\ndocuments/Notlar\n%s	Siden er gemt som billede:\ndocuments/Notlar\n%s
+Resim kaydedilemedi.	Billedet kunne ikke gemmes.
+Dışa aktar	Eksportér
+Sayfa %d	Side %d
+Temizle	Ryd
+Temizle: sayfadaki çizimler silinir.\nSil: sayfa nottan çıkarılır.	Ryd: tegningen på siden slettes.\nSlet: siden fjernes fra noten.
+Arka plan	Baggrund
+Başlık	Titel
+Sayfa	Side
+Sayfa %d / %d · %d çizgi	Side %d / %d · %d streger
+Düz	Blank
+Kareli	Ternet
+Çizgili	Linjeret
+Bütün sayfalar için	For alle sider
+Yazı notu	Tekstnote
+Ekle	Tilføj
+Boş not.\n“Ekle” ile bir satır yazın.	Tom note.\nSkriv en linje med »Tilføj«.
+%d–%d / %d · kaydırın	%d–%d / %d · stryg
+Dokunun: düzenle · basılı tutun: sil	Tryk: redigér · hold: slet
+Yeni satır	Ny linje
+Satır silinsin mi?	Slet linjen?
+Satırı düzenle	Redigér linje
+Henüz not yok.\n“Yeni” ile bir çizim ya da yazı notu başlatın.	Ingen noter endnu.\nStart en tegning eller en tekstnote med »Nyt«.
+Boş yazı notu	Tom tekstnote
+Çizim · %d sayfa	Tegning · %d sider
+Yazı · %d satır	Tekst · %d linjer
+Çizim	Tegning
+Parmakla çizim mi, klavyeyle yazı mı?	Tegne med fingeren eller skrive på tastaturet?
+Not silinsin mi?	Slet noten?

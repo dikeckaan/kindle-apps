@@ -815,3 +815,38 @@ Zeval %s · Ay: %s, %%%d aydınlık	Ηλιακό μεσημέρι %s · Σελή
 Şehir	Πόλη
 Şu an: %s (%.2f, %.2f)	Τώρα: %s (%.2f, %.2f)
 ☀ Güneş şu an %.0f° %s yönünde, %.0f° yüksekte	☀ Ο Ήλιος είναι τώρα στις %.0f° %s, σε ύψος %.0f°
+Not Defteri	Σημειωματάριο
+Adsız çizim	Σχέδιο χωρίς τίτλο
+İnce	Λεπτό
+Kalın	Χοντρό
+Silgi	Γόμα
+sayfa	σελίδα
+Sayfa resim olarak kaydedildi:\ndocuments/Notlar\n%s	Η σελίδα αποθηκεύτηκε ως εικόνα:\ndocuments/Notlar\n%s
+Resim kaydedilemedi.	Η εικόνα δεν αποθηκεύτηκε.
+Dışa aktar	Εξαγωγή
+Sayfa %d	Σελίδα %d
+Temizle	Καθαρισμός
+Temizle: sayfadaki çizimler silinir.\nSil: sayfa nottan çıkarılır.	Καθαρισμός: το σχέδιο της σελίδας σβήνεται.\nΔιαγραφή: η σελίδα αφαιρείται από τη σημείωση.
+Arka plan	Φόντο
+Başlık	Τίτλος
+Sayfa	Σελίδα
+Sayfa %d / %d · %d çizgi	Σελίδα %d / %d · %d γραμμές
+Düz	Λευκό
+Kareli	Τετραγωνισμένο
+Çizgili	Με γραμμές
+Bütün sayfalar için	Για όλες τις σελίδες
+Yazı notu	Σημείωση κειμένου
+Ekle	Προσθήκη
+Boş not.\n“Ekle” ile bir satır yazın.	Κενή σημείωση.\nΓράψτε μια γραμμή με «Προσθήκη».
+%d–%d / %d · kaydırın	%d–%d / %d · σύρετε
+Dokunun: düzenle · basılı tutun: sil	Πάτημα: επεξεργασία · κράτημα: διαγραφή
+Yeni satır	Νέα γραμμή
+Satır silinsin mi?	Διαγραφή αυτής της γραμμής;
+Satırı düzenle	Επεξεργασία γραμμής
+Henüz not yok.\n“Yeni” ile bir çizim ya da yazı notu başlatın.	Δεν υπάρχουν ακόμη σημειώσεις.\nΞεκινήστε ένα σχέδιο ή μια σημείωση κειμένου με «Νέο».
+Boş yazı notu	Κενή σημείωση κειμένου
+Çizim · %d sayfa	Σχέδιο · %d σελίδες
+Yazı · %d satır	Κείμενο · %d γραμμές
+Çizim	Σχέδιο
+Parmakla çizim mi, klavyeyle yazı mı?	Σχέδιο με το δάχτυλο ή γράψιμο με το πληκτρολόγιο;
+Not silinsin mi?	Διαγραφή αυτής της σημείωσης;

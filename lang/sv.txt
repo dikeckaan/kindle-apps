@@ -815,3 +815,38 @@ Zeval %s · Ay: %s, %%%d aydınlık	Soltopp %s · Månen: %s, %d %% belyst
 Şehir	Stad
 Şu an: %s (%.2f, %.2f)	Nu: %s (%.2f, %.2f)
 ☀ Güneş şu an %.0f° %s yönünde, %.0f° yüksekte	☀ Solen står nu på %.0f° %s, %.0f° högt
+Not Defteri	Anteckningsbok
+Adsız çizim	Namnlös teckning
+İnce	Tunn
+Kalın	Tjock
+Silgi	Suddgummi
+sayfa	sida
+Sayfa resim olarak kaydedildi:\ndocuments/Notlar\n%s	Sidan sparad som bild:\ndocuments/Notlar\n%s
+Resim kaydedilemedi.	Bilden kunde inte sparas.
+Dışa aktar	Exportera
+Sayfa %d	Sida %d
+Temizle	Töm
+Temizle: sayfadaki çizimler silinir.\nSil: sayfa nottan çıkarılır.	Töm: teckningen på sidan raderas.\nRadera: sidan tas bort från anteckningen.
+Arka plan	Bakgrund
+Başlık	Rubrik
+Sayfa	Sida
+Sayfa %d / %d · %d çizgi	Sida %d / %d · %d streck
+Düz	Blank
+Kareli	Rutad
+Çizgili	Linjerad
+Bütün sayfalar için	För alla sidor
+Yazı notu	Textanteckning
+Ekle	Lägg till
+Boş not.\n“Ekle” ile bir satır yazın.	Tom anteckning.\nSkriv en rad med ”Lägg till”.
+%d–%d / %d · kaydırın	%d–%d / %d · svep
+Dokunun: düzenle · basılı tutun: sil	Tryck: redigera · håll: radera
+Yeni satır	Ny rad
+Satır silinsin mi?	Radera raden?
+Satırı düzenle	Redigera rad
+Henüz not yok.\n“Yeni” ile bir çizim ya da yazı notu başlatın.	Inga anteckningar än.\nBörja en teckning eller textanteckning med ”Nytt”.
+Boş yazı notu	Tom textanteckning
+Çizim · %d sayfa	Teckning · %d sidor
+Yazı · %d satır	Text · %d rader
+Çizim	Teckning
+Parmakla çizim mi, klavyeyle yazı mı?	Rita med fingret eller skriva med tangentbordet?
+Not silinsin mi?	Radera anteckningen?

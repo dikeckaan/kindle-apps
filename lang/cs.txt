@@ -815,3 +815,38 @@ Zeval %s · Ay: %s, %%%d aydınlık	Sluneční poledne %s · Měsíc: %s, osvět
 Şehir	Město
 Şu an: %s (%.2f, %.2f)	Nyní: %s (%.2f, %.2f)
 ☀ Güneş şu an %.0f° %s yönünde, %.0f° yüksekte	☀ Slunce je teď na %.0f° %s, %.0f° vysoko
+Not Defteri	Poznámkový blok
+Adsız çizim	Kresba bez názvu
+İnce	Tenké
+Kalın	Silné
+Silgi	Guma
+sayfa	strana
+Sayfa resim olarak kaydedildi:\ndocuments/Notlar\n%s	Strana uložena jako obrázek:\ndocuments/Notlar\n%s
+Resim kaydedilemedi.	Obrázek se nepodařilo uložit.
+Dışa aktar	Exportovat
+Sayfa %d	Strana %d
+Temizle	Vyčistit
+Temizle: sayfadaki çizimler silinir.\nSil: sayfa nottan çıkarılır.	Vyčistit: kresba na této straně se smaže.\nSmazat: strana se z poznámky odstraní.
+Arka plan	Pozadí
+Başlık	Název
+Sayfa	Strana
+Sayfa %d / %d · %d çizgi	Strana %d / %d · tahů: %d
+Düz	Čisté
+Kareli	Čtverečkované
+Çizgili	Linkované
+Bütün sayfalar için	Pro všechny strany
+Yazı notu	Textová poznámka
+Ekle	Přidat
+Boş not.\n“Ekle” ile bir satır yazın.	Prázdná poznámka.\nNapište řádek tlačítkem „Přidat“.
+%d–%d / %d · kaydırın	%d–%d / %d · přejeďte
+Dokunun: düzenle · basılı tutun: sil	Klepnutí: upravit · podržení: smazat
+Yeni satır	Nový řádek
+Satır silinsin mi?	Smazat tento řádek?
+Satırı düzenle	Upravit řádek
+Henüz not yok.\n“Yeni” ile bir çizim ya da yazı notu başlatın.	Zatím žádné poznámky.\nZačněte kresbu nebo textovou poznámku tlačítkem „Nová“.
+Boş yazı notu	Prázdná textová poznámka
+Çizim · %d sayfa	Kresba · stran: %d
+Yazı · %d satır	Text · řádků: %d
+Çizim	Kresba
+Parmakla çizim mi, klavyeyle yazı mı?	Kreslit prstem, nebo psát na klávesnici?
+Not silinsin mi?	Smazat tuto poznámku?

@@ -815,3 +815,38 @@ Zeval %s · Ay: %s, %%%d aydınlık	Amiază solară %s · Luna: %s, %d%% luminat
 Şehir	Oraș
 Şu an: %s (%.2f, %.2f)	Acum: %s (%.2f, %.2f)
 ☀ Güneş şu an %.0f° %s yönünde, %.0f° yüksekte	☀ Soarele este acum la %.0f° %s, la %.0f° înălțime
+Not Defteri	Caiet de notițe
+Adsız çizim	Desen fără titlu
+İnce	Subțire
+Kalın	Gros
+Silgi	Radieră
+sayfa	pagina
+Sayfa resim olarak kaydedildi:\ndocuments/Notlar\n%s	Pagina a fost salvată ca imagine:\ndocuments/Notlar\n%s
+Resim kaydedilemedi.	Imaginea nu a putut fi salvată.
+Dışa aktar	Exportă
+Sayfa %d	Pagina %d
+Temizle	Golește
+Temizle: sayfadaki çizimler silinir.\nSil: sayfa nottan çıkarılır.	Golește: desenul de pe această pagină se șterge.\nȘterge: pagina este scoasă din notiță.
+Arka plan	Fundal
+Başlık	Titlu
+Sayfa	Pagina
+Sayfa %d / %d · %d çizgi	Pagina %d / %d · %d linii
+Düz	Simplu
+Kareli	Cu pătrățele
+Çizgili	Cu linii
+Bütün sayfalar için	Pentru toate paginile
+Yazı notu	Notiță text
+Ekle	Adaugă
+Boş not.\n“Ekle” ile bir satır yazın.	Notiță goală.\nScrieți un rând cu „Adaugă”.
+%d–%d / %d · kaydırın	%d–%d / %d · glisați
+Dokunun: düzenle · basılı tutun: sil	Atingeți: editare · țineți apăsat: ștergere
+Yeni satır	Rând nou
+Satır silinsin mi?	Ștergeți acest rând?
+Satırı düzenle	Editează rândul
+Henüz not yok.\n“Yeni” ile bir çizim ya da yazı notu başlatın.	Încă nu există notițe.\nÎncepeți un desen sau o notiță text cu „Nou”.
+Boş yazı notu	Notiță text goală
+Çizim · %d sayfa	Desen · %d pagini
+Yazı · %d satır	Text · %d rânduri
+Çizim	Desen
+Parmakla çizim mi, klavyeyle yazı mı?	Desenați cu degetul sau scrieți cu tastatura?
+Not silinsin mi?	Ștergeți această notiță?

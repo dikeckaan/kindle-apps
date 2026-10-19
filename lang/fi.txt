@@ -815,3 +815,38 @@ Zeval %s · Ay: %s, %%%d aydınlık	Keskipäivä %s · Kuu: %s, %d %% valaistu
 Şehir	Kaupunki
 Şu an: %s (%.2f, %.2f)	Nyt: %s (%.2f, %.2f)
 ☀ Güneş şu an %.0f° %s yönünde, %.0f° yüksekte	☀ Aurinko on nyt %.0f° %s, %.0f° korkeudella
+Not Defteri	Muistikirja
+Adsız çizim	Nimetön piirros
+İnce	Ohut
+Kalın	Paksu
+Silgi	Pyyhekumi
+sayfa	sivu
+Sayfa resim olarak kaydedildi:\ndocuments/Notlar\n%s	Sivu tallennettiin kuvana:\ndocuments/Notlar\n%s
+Resim kaydedilemedi.	Kuvaa ei voitu tallentaa.
+Dışa aktar	Vie
+Sayfa %d	Sivu %d
+Temizle	Tyhjennä
+Temizle: sayfadaki çizimler silinir.\nSil: sayfa nottan çıkarılır.	Tyhjennä: sivun piirros poistetaan.\nPoista: sivu poistetaan muistiinpanosta.
+Arka plan	Tausta
+Başlık	Otsikko
+Sayfa	Sivu
+Sayfa %d / %d · %d çizgi	Sivu %d / %d · %d vetoa
+Düz	Tyhjä
+Kareli	Ruudutettu
+Çizgili	Viivoitettu
+Bütün sayfalar için	Kaikille sivuille
+Yazı notu	Tekstimuistiinpano
+Ekle	Lisää
+Boş not.\n“Ekle” ile bir satır yazın.	Tyhjä muistiinpano.\nKirjoita rivi painikkeella ”Lisää”.
+%d–%d / %d · kaydırın	%d–%d / %d · pyyhkäise
+Dokunun: düzenle · basılı tutun: sil	Napauta: muokkaa · pidä: poista
+Yeni satır	Uusi rivi
+Satır silinsin mi?	Poistetaanko rivi?
+Satırı düzenle	Muokkaa riviä
+Henüz not yok.\n“Yeni” ile bir çizim ya da yazı notu başlatın.	Ei vielä muistiinpanoja.\nAloita piirros tai tekstimuistiinpano painikkeella ”Uusi”.
+Boş yazı notu	Tyhjä tekstimuistiinpano
+Çizim · %d sayfa	Piirros · %d sivua
+Yazı · %d satır	Teksti · %d riviä
+Çizim	Piirros
+Parmakla çizim mi, klavyeyle yazı mı?	Piirretäänkö sormella vai kirjoitetaanko näppäimistöllä?
+Not silinsin mi?	Poistetaanko muistiinpano?
