@@ -732,3 +732,11 @@ Bütün şiirlerden biri	Un poema cualquiera
 %d şiir · %d şair · kaynak: Vikikaynak (kamu malı)	%d poemas · %d poetas · fuente: Wikisource (dominio público)
 Şiirler yüklenemedi.	No se pudieron cargar los poemas.
 Henüz favori şiir yok.\nBir şiirde ☆ düğmesine dokunun.	Aún no hay poemas favoritos.\nToque ☆ en un poema.
+Önceki	Anterior
+Sonraki	Siguiente
+Dil: %s	Idioma: %s
+Kolay okuma: Açık	Lectura fácil: Sí
+Kolay okuma: Kapalı	Lectura fácil: No
+Basit mod: Açık	Modo sencillo: Sí
+Basit mod: Kapalı	Modo sencillo: No
+Kolay okuma: bütün yazılar büyük, kalın ve siyah olur.\nBasit mod: menüde dört büyük düğme; panoda yalnızca saat, hava ve üç haber. Teknik uygulamalar gizlenir; bu ekrandan her zaman geri açılabilir.	Lectura fácil: todo el texto se vuelve grande, en negrita y negro.\nModo sencillo: cuatro botones grandes en el menú; el panel muestra solo la hora, el tiempo y tres noticias. Las apps técnicas se ocultan; siempre se pueden volver a activar desde esta pantalla.

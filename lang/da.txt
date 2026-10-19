@@ -732,3 +732,11 @@ Bütün şiirlerden biri	Et hvilket som helst digt
 %d şiir · %d şair · kaynak: Vikikaynak (kamu malı)	%d digte · %d digtere · kilde: Wikisource (offentligt domæne)
 Şiirler yüklenemedi.	Digtene kunne ikke indlæses.
 Henüz favori şiir yok.\nBir şiirde ☆ düğmesine dokunun.	Ingen yndlingsdigte endnu.\nTryk på ☆ ved et digt.
+Önceki	Forrige
+Sonraki	Næste
+Dil: %s	Sprog: %s
+Kolay okuma: Açık	Let læsning: Til
+Kolay okuma: Kapalı	Let læsning: Fra
+Basit mod: Açık	Enkel tilstand: Til
+Basit mod: Kapalı	Enkel tilstand: Fra
+Kolay okuma: bütün yazılar büyük, kalın ve siyah olur.\nBasit mod: menüde dört büyük düğme; panoda yalnızca saat, hava ve üç haber. Teknik uygulamalar gizlenir; bu ekrandan her zaman geri açılabilir.	Let læsning: al tekst bliver stor, fed og sort.\nEnkel tilstand: fire store knapper i menuen; oversigten viser kun ur, vejr og tre nyheder. Tekniske apps skjules; de kan altid slås til igen fra denne skærm.

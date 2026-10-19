@@ -732,3 +732,11 @@ Bütün şiirlerden biri	Будь-який вірш
 %d şiir · %d şair · kaynak: Vikikaynak (kamu malı)	Віршів: %d · поетів: %d · джерело: Вікіджерела (суспільне надбання)
 Şiirler yüklenemedi.	Не вдалося завантажити вірші.
 Henüz favori şiir yok.\nBir şiirde ☆ düğmesine dokunun.	Вибраних віршів поки немає.\nТоркніться ☆ біля вірша.
+Önceki	Назад
+Sonraki	Далі
+Dil: %s	Мова: %s
+Kolay okuma: Açık	Легке читання: увімк
+Kolay okuma: Kapalı	Легке читання: вимк
+Basit mod: Açık	Простий режим: увімк
+Basit mod: Kapalı	Простий режим: вимк
+Kolay okuma: bütün yazılar büyük, kalın ve siyah olur.\nBasit mod: menüde dört büyük düğme; panoda yalnızca saat, hava ve üç haber. Teknik uygulamalar gizlenir; bu ekrandan her zaman geri açılabilir.	Легке читання: увесь текст стає великим, жирним і чорним.\nПростий режим: чотири великі кнопки в меню; на панелі лише годинник, погода і три новини. Технічні застосунки приховуються; їх завжди можна повернути на цьому екрані.

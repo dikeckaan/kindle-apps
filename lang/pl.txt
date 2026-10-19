@@ -732,3 +732,11 @@ Bütün şiirlerden biri	Dowolny wiersz
 %d şiir · %d şair · kaynak: Vikikaynak (kamu malı)	Wiersze: %d · poeci: %d · źródło: Wikiźródła (domena publiczna)
 Şiirler yüklenemedi.	Nie udało się wczytać wierszy.
 Henüz favori şiir yok.\nBir şiirde ☆ düğmesine dokunun.	Nie ma jeszcze ulubionych wierszy.\nDotknij ☆ przy wierszu.
+Önceki	Wstecz
+Sonraki	Dalej
+Dil: %s	Język: %s
+Kolay okuma: Açık	Łatwe czytanie: Tak
+Kolay okuma: Kapalı	Łatwe czytanie: Nie
+Basit mod: Açık	Tryb prosty: Tak
+Basit mod: Kapalı	Tryb prosty: Nie
+Kolay okuma: bütün yazılar büyük, kalın ve siyah olur.\nBasit mod: menüde dört büyük düğme; panoda yalnızca saat, hava ve üç haber. Teknik uygulamalar gizlenir; bu ekrandan her zaman geri açılabilir.	Łatwe czytanie: cały tekst staje się duży, pogrubiony i czarny.\nTryb prosty: cztery duże przyciski w menu; panel pokazuje tylko zegar, pogodę i trzy wiadomości. Aplikacje techniczne są ukryte; zawsze można je przywrócić na tym ekranie.

@@ -732,3 +732,11 @@ Bütün şiirlerden biri	Any poem at all
 %d şiir · %d şair · kaynak: Vikikaynak (kamu malı)	%d poems · %d poets · source: Wikisource (public domain)
 Şiirler yüklenemedi.	The poems could not be loaded.
 Henüz favori şiir yok.\nBir şiirde ☆ düğmesine dokunun.	No favourite poems yet.\nTap ☆ on a poem.
+Önceki	Previous
+Sonraki	Next
+Dil: %s	Language: %s
+Kolay okuma: Açık	Easy reading: On
+Kolay okuma: Kapalı	Easy reading: Off
+Basit mod: Açık	Simple mode: On
+Basit mod: Kapalı	Simple mode: Off
+Kolay okuma: bütün yazılar büyük, kalın ve siyah olur.\nBasit mod: menüde dört büyük düğme; panoda yalnızca saat, hava ve üç haber. Teknik uygulamalar gizlenir; bu ekrandan her zaman geri açılabilir.	Easy reading: all text becomes large, bold and black.\nSimple mode: four big buttons in the menu; the dashboard shows only the clock, weather and three news items. Technical apps are hidden; you can always turn them back on from this screen.

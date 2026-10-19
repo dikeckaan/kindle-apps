@@ -12,8 +12,9 @@
 #include "kui.h"
 #include "upd_ui.h"
 
-#define COLS 3
-#define ROWS 3
+/* 3×3 tiles; Basit mod: 2×2 bigger ones */
+#define COLS (kui_simple() ? 2 : 3)
+#define ROWS (kui_simple() ? 2 : 3)
 #define PER_PAGE (COLS * ROWS)
 #define MAX_APPS 32
 
@@ -33,8 +34,17 @@ static void scan(void)
 {
 	n_apps = hub_scan_apps(root(), apps, MAX_APPS - 1);
 	hub_apply_order(root(), apps, n_apps); /* the user's order from Dikeç Store → Sırala */
-	apps[n_apps] = (HubApp){ "store", N_("Dikeç Store"), "", 1 << 30 };
-	n_apps++;
+	if (kui_simple()) { /* Basit mod: the technical apps (and the store) stay out of the way */
+		static const char *const hidden[] = { "ssh", "firewall", "sysinfo", "sleep", "upload" };
+		int k = 0;
+		for (int i = 0; i < n_apps; i++) {
+			int hide = 0;
+			for (size_t j = 0; j < sizeof hidden / sizeof *hidden; j++) hide |= !strcmp(apps[i].id, hidden[j]);
+			if (!hide) apps[k++] = apps[i];
+		}
+		n_apps = k;
+	}
+	if (!kui_simple()) apps[n_apps++] = (HubApp){ "store", N_("Dikeç Store"), "", 1 << 30 };
 }
 
 /* 2 connected, 1 on but not connected, 0 off */
@@ -106,8 +116,8 @@ static void draw_body(void)
 	}
 	if (pages() > 1) {
 		int y = h - 150;
-		nav[0] = (KuiButton){ { 40, y, 260, 120 }, "◀", 1 };
-		nav[1] = (KuiButton){ { w - 300, y, 260, 120 }, "▶", 2 };
+		nav[0] = (KuiButton){ { 40, y, 260, 120 }, kui_simple() ? T("Önceki") : "◀", 1 };
+		nav[1] = (KuiButton){ { w - 300, y, 260, 120 }, kui_simple() ? T("Sonraki") : "▶", 2 };
 		kui_button(&nav[0], 0);
 		kui_button(&nav[1], 0);
 		char s[32];
@@ -121,7 +131,7 @@ static void draw(void)
 {
 	int w = kui_width(), h = kui_height();
 	kui_fill((KuiRect){ 0, 0, w, h }, 255);
-	kui_topbar(T("Uygulamalar"), T("Dil"));
+	kui_topbar(T("Uygulamalar"), T("Ayarlar"));
 	draw_body();
 	draw_wifi(1);
 	draw_battery(1);
@@ -166,6 +176,46 @@ static void choose_language(void)
 			kui_i18n_set(l[id - 1].code);
 			return;
 		}
+	}
+}
+
+/* Ayarlar: language, Kolay okuma, Basit mod — big buttons, also reachable in Basit mod (the way back) */
+static void settings(void)
+{
+	int w = kui_width(), h = kui_height();
+	for (int full = 1;;) {
+		int n;
+		const KuiLang *l = kui_languages(&n);
+		const char *lang = kui_lang();
+		for (int i = 0; i < n; i++)
+			if (!strcmp(l[i].code, lang)) lang = l[i].name;
+		char s0[96], s1[96], s2[96];
+		snprintf(s0, sizeof s0, T("Dil: %s"), lang);
+		snprintf(s1, sizeof s1, "%s", kui_easy() ? T("Kolay okuma: Açık") : T("Kolay okuma: Kapalı"));
+		snprintf(s2, sizeof s2, "%s", kui_simple() ? T("Basit mod: Açık") : T("Basit mod: Kapalı"));
+		KuiButton b[3] = { { { 40, KUI_TOPBAR_H + 60, w - 80, 170 }, s0, 1 },
+				   { { 40, KUI_TOPBAR_H + 290, w - 80, 170 }, s1, 2 },
+				   { { 40, KUI_TOPBAR_H + 520, w - 80, 170 }, s2, 3 } };
+		kui_fill((KuiRect){ 0, 0, w, h }, 255);
+		kui_topbar(T("Ayarlar"), NULL);
+		kui_button(&b[0], 0);
+		kui_button(&b[1], kui_easy());
+		kui_button(&b[2], kui_simple());
+		kui_text((KuiRect){ 60, KUI_TOPBAR_H + 740, w - 120, 360 },
+			 T("Kolay okuma: bütün yazılar büyük, kalın ve siyah olur.\nBasit mod: menüde dört büyük düğme; panoda yalnızca saat, hava ve üç "
+			   "haber. Teknik uygulamalar gizlenir; bu ekrandan her zaman geri açılabilir."),
+			 KUI_FONT_REG, 34, KUI_ALIGN_LEFT, 0);
+		kui_flush(1); /* the whole look may change: a full refresh */
+		full = 0;
+		KuiEvent e = kui_next_event(-1);
+		if (e.type == KUI_EV_QUIT) return;
+		if (e.type != KUI_EV_TAP) continue;
+		if (kui_topbar_hit(w, 0, e.x, e.y) == KUI_BTN_EXIT) return;
+		int id = kui_buttons_hit(b, 3, e.x, e.y);
+		if (id == 1) choose_language();
+		else if (id == 2) kui_ui_set("easy", !kui_easy());
+		else if (id == 3) kui_ui_set("simple", !kui_simple());
+		(void) full;
 	}
 }
 
@@ -232,7 +282,9 @@ int main(void)
 		int hit = kui_topbar_hit(kui_width(), 1, e.x, e.y);
 		if (hit == KUI_BTN_EXIT) break;
 		if (hit == KUI_BTN_MENU) {
-			choose_language();
+			settings();
+			scan(); /* Basit mod shows fewer apps */
+			page = 0;
 			draw();
 			continue;
 		}

@@ -4,7 +4,7 @@
   "name": "Gazete",
   "author": "Kaan Dikeç",
   "description": "20 Türk haber kaynağından gazete tadında manşetler: AA, TRT, Hürriyet, Sözcü, NTV, CNN Türk, BBC Türkçe…",
-  "version": [2026, 10, 16],
+  "version": [2026, 10, 18],
   "dependencies": [],
   "supported_platforms": ["kindlehf"]
 }

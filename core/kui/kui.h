@@ -170,6 +170,13 @@ int  kui_battery_charging(void); /* cached like the level */
 int  kui_battery_level(void);    /* cached; -1 unknown */
 long kui_batt_estimate_s(const char *path, long now, int level);
 void kui_fmt_duration(long s, char *out, int cap); /* "≈ 3 gün 4 sa", "≈ 5 sa 20 dk", "≈ 42 dk" */
+/* Kolay okuma (Uygulamalar → Ayarlar): bold, black and about 1.3× larger text that still fits its box; applied by
+ * kui_text / kui_text_on to every string. light: the text is drawn on a dark background (its colour is kept). */
+void kui_a11y_adjust(int easy, const char *s, int box_w, int box_h, KuiFont *f, int *px, unsigned char *fg, int light,
+		     int (*width)(const char *s, KuiFont f, int px, void *ctx), void *ctx);
+int  kui_easy(void);   /* Kolay okuma on */
+int  kui_simple(void); /* Basit mod on */
+void kui_ui_set(const char *key, int v); /* "easy" / "simple", saved in data/ui; this process sees it at once */
 /* drops touches for ms (the tap that woke the device, or the rest of a tap that closed another app) */
 void kui_drain_input(int ms);
 void kui_topbar(const char *title, const char *right_label); /* right_label may be NULL */

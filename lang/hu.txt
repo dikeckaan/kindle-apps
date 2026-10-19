@@ -732,3 +732,11 @@ Bütün şiirlerden biri	Bármelyik vers
 %d şiir · %d şair · kaynak: Vikikaynak (kamu malı)	%d vers · %d költő · forrás: Wikiforrás (közkincs)
 Şiirler yüklenemedi.	A verseket nem sikerült betölteni.
 Henüz favori şiir yok.\nBir şiirde ☆ düğmesine dokunun.	Még nincs kedvenc vers.\nKoppintson egy versnél a ☆ gombra.
+Önceki	Előző
+Sonraki	Következő
+Dil: %s	Nyelv: %s
+Kolay okuma: Açık	Könnyű olvasás: Be
+Kolay okuma: Kapalı	Könnyű olvasás: Ki
+Basit mod: Açık	Egyszerű mód: Be
+Basit mod: Kapalı	Egyszerű mód: Ki
+Kolay okuma: bütün yazılar büyük, kalın ve siyah olur.\nBasit mod: menüde dört büyük düğme; panoda yalnızca saat, hava ve üç haber. Teknik uygulamalar gizlenir; bu ekrandan her zaman geri açılabilir.	Könnyű olvasás: minden szöveg nagy, félkövér és fekete lesz.\nEgyszerű mód: négy nagy gomb a menüben; az áttekintő csak az órát, az időjárást és három hírt mutatja. A technikai alkalmazások elrejtődnek; ezen a képernyőn bármikor visszakapcsolhatók.

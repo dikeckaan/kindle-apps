@@ -732,3 +732,11 @@ Bütün şiirlerden biri	Mikä tahansa runo
 %d şiir · %d şair · kaynak: Vikikaynak (kamu malı)	Runoja: %d · runoilijoita: %d · lähde: Wikiaineisto (vapaa)
 Şiirler yüklenemedi.	Runoja ei voitu ladata.
 Henüz favori şiir yok.\nBir şiirde ☆ düğmesine dokunun.	Ei vielä suosikkirunoja.\nNapauta runon kohdalla ☆.
+Önceki	Edellinen
+Sonraki	Seuraava
+Dil: %s	Kieli: %s
+Kolay okuma: Açık	Helppo lukea: Päällä
+Kolay okuma: Kapalı	Helppo lukea: Pois
+Basit mod: Açık	Yksinkertainen tila: Päällä
+Basit mod: Kapalı	Yksinkertainen tila: Pois
+Kolay okuma: bütün yazılar büyük, kalın ve siyah olur.\nBasit mod: menüde dört büyük düğme; panoda yalnızca saat, hava ve üç haber. Teknik uygulamalar gizlenir; bu ekrandan her zaman geri açılabilir.	Helppo lukea: kaikki teksti muuttuu suureksi, lihavoiduksi ja mustaksi.\nYksinkertainen tila: valikossa neljä isoa painiketta; näkymässä vain kello, sää ja kolme uutista. Tekniset sovellukset piilotetaan; ne voi aina palauttaa tästä näkymästä.

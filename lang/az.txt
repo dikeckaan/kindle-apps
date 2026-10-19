@@ -732,3 +732,11 @@ Bütün şiirlerden biri	İstənilən bir şeir
 %d şiir · %d şair · kaynak: Vikikaynak (kamu malı)	%d şeir · %d şair · mənbə: Vikimənbə (ictimai mülkiyyət)
 Şiirler yüklenemedi.	Şeirləri yükləmək mümkün olmadı.
 Henüz favori şiir yok.\nBir şiirde ☆ düğmesine dokunun.	Hələ seçilmiş şeir yoxdur.\nŞeirdə ☆ düyməsinə toxunun.
+Önceki	Əvvəlki
+Sonraki	Növbəti
+Dil: %s	Dil: %s
+Kolay okuma: Açık	Asan oxu: Açıq
+Kolay okuma: Kapalı	Asan oxu: Bağlı
+Basit mod: Açık	Sadə rejim: Açıq
+Basit mod: Kapalı	Sadə rejim: Bağlı
+Kolay okuma: bütün yazılar büyük, kalın ve siyah olur.\nBasit mod: menüde dört büyük düğme; panoda yalnızca saat, hava ve üç haber. Teknik uygulamalar gizlenir; bu ekrandan her zaman geri açılabilir.	Asan oxu: bütün yazılar böyük, qalın və qara olur.\nSadə rejim: menyuda dörd böyük düymə; paneldə yalnız saat, hava və üç xəbər. Texniki tətbiqlər gizlədilir; bu ekrandan həmişə geri açıla bilər.

@@ -70,7 +70,12 @@ static const char *settings(void)
 	return p;
 }
 
-static int opt(int i) { return kui_cfg_get_int(settings(), opt_key[i], opt_default[i]); }
+/* Basit mod: only the clock, the weather and three headlines */
+static int opt(int i)
+{
+	if (kui_simple() && (i == OPT_FX || i == OPT_HISTORY || i == OPT_PRAYER || i == OPT_MOON)) return 0;
+	return kui_cfg_get_int(settings(), opt_key[i], opt_default[i]);
+}
 
 static int idle_min(void) { return kui_saver_get(settings(), KUI_SAVER_IDLE_MIN); }
 static int data_hours(void) { return kui_saver_get(settings(), KUI_SAVER_DATA_HOURS); }
@@ -363,25 +368,26 @@ static void draw_news(void)
 	if (!n_news) {
 		kui_text((KuiRect){ 30, r.y + 60, w - 60, 60 }, T("Haber alınamadı."), KUI_FONT_SERIF, 32, KUI_ALIGN_LEFT, 0);
 	}
-	/* as many headlines as fit, each up to two lines, packed by their real height */
-	int y = r.y + 50, lh = kui_line_height(KUI_FONT_SERIF_BOLD, 32), shown = 0;
+	/* as many headlines as fit, each up to two (Kolay okuma / Basit mod: three, larger) lines, packed by their height */
+	int big = kui_easy() || kui_simple(), hp = big ? 44 : 32, tw = big ? 150 : 100, maxl = big ? 3 : 2;
+	int y = r.y + (big ? 64 : 50), lh = kui_line_height(KUI_FONT_SERIF_BOLD, hp), shown = 0;
 	n_head = 0;
 	static KuiLine tmp[64];
-	for (int k = 0; k < n_news && k < 8; k++) {
+	for (int k = 0; k < n_news && k < (kui_simple() ? 3 : 8); k++) {
 		const NewsItem *it = &news[(news_first + k) % n_news];
-		int lines = kui_wrap_text(it->title, w - 160, KUI_FONT_SERIF_BOLD, 32, tmp, 64);
-		if (lines > 2) lines = 2;
+		int lines = kui_wrap_text(it->title, w - 60 - tw, KUI_FONT_SERIF_BOLD, hp, tmp, 64);
+		if (lines > maxl) lines = maxl;
 		if (y + lines * lh > r.y + r.h) break;
 		char d[32];
 		news_date_local(it->date, (long) time(NULL), local_off(), d, sizeof d);
 		const char *hh = strchr(d, ':') ? strchr(d, ':') - 2 : d; /* only the time */
-		kui_text((KuiRect){ 30, y + 4, 100, 40 }, hh, KUI_FONT_BOLD, 28, KUI_ALIGN_LEFT, 0);
-		int used = draw_wrapped((KuiRect){ 130, y, w - 160, 0 }, it->title, KUI_FONT_SERIF_BOLD, 32, 2);
+		kui_text((KuiRect){ 30, y + 4, tw - 10, big ? 54 : 40 }, hh, KUI_FONT_BOLD, big ? 36 : 28, KUI_ALIGN_LEFT, 0);
+		int used = draw_wrapped((KuiRect){ 30 + tw, y, w - 60 - tw, 0 }, it->title, KUI_FONT_SERIF_BOLD, hp, maxl);
 		if (n_head < 8) {
 			r_head[n_head] = (KuiRect){ 0, y - 6, w, used + 16 };
 			head_idx[n_head++] = (news_first + k) % n_news;
 		}
-		y += used + 16;
+		y += used + (big ? 26 : 16);
 		shown++;
 	}
 	news_shown = shown ? shown : 1;

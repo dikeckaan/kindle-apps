@@ -732,3 +732,11 @@ Bütün şiirlerden biri	Ένα οποιοδήποτε ποίημα
 %d şiir · %d şair · kaynak: Vikikaynak (kamu malı)	%d ποιήματα · %d ποιητές · πηγή: Βικιθήκη (κοινό κτήμα)
 Şiirler yüklenemedi.	Δεν ήταν δυνατή η φόρτωση των ποιημάτων.
 Henüz favori şiir yok.\nBir şiirde ☆ düğmesine dokunun.	Δεν υπάρχουν ακόμη αγαπημένα ποιήματα.\nΠατήστε ☆ σε ένα ποίημα.
+Önceki	Προηγ.
+Sonraki	Επόμ.
+Dil: %s	Γλώσσα: %s
+Kolay okuma: Açık	Εύκολη ανάγνωση: Ναι
+Kolay okuma: Kapalı	Εύκολη ανάγνωση: Όχι
+Basit mod: Açık	Απλή λειτουργία: Ναι
+Basit mod: Kapalı	Απλή λειτουργία: Όχι
+Kolay okuma: bütün yazılar büyük, kalın ve siyah olur.\nBasit mod: menüde dört büyük düğme; panoda yalnızca saat, hava ve üç haber. Teknik uygulamalar gizlenir; bu ekrandan her zaman geri açılabilir.	Εύκολη ανάγνωση: όλα τα κείμενα γίνονται μεγάλα, έντονα και μαύρα.\nΑπλή λειτουργία: τέσσερα μεγάλα κουμπιά στο μενού· ο πίνακας δείχνει μόνο ώρα, καιρό και τρεις ειδήσεις. Οι τεχνικές εφαρμογές κρύβονται· μπορούν πάντα να ενεργοποιηθούν ξανά από αυτή την οθόνη.

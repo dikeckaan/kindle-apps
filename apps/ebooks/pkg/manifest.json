@@ -4,7 +4,7 @@
   "name": "E-Kitap",
   "author": "Kaan Dikeç",
   "description": "Project Gutenberg'den telifsiz e-kitap arama ve indirme",
-  "version": [2026, 10, 16],
+  "version": [2026, 10, 18],
   "dependencies": [],
   "supported_platforms": ["kindlehf"]
 }

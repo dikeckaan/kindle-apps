@@ -732,3 +732,11 @@ Bütün şiirlerden biri	O poezie oarecare
 %d şiir · %d şair · kaynak: Vikikaynak (kamu malı)	%d poezii · %d poeți · sursa: Wikisource (domeniu public)
 Şiirler yüklenemedi.	Poeziile nu au putut fi încărcate.
 Henüz favori şiir yok.\nBir şiirde ☆ düğmesine dokunun.	Încă nu aveți poezii favorite.\nAtingeți ☆ la o poezie.
+Önceki	Înapoi
+Sonraki	Înainte
+Dil: %s	Limbă: %s
+Kolay okuma: Açık	Citire ușoară: Da
+Kolay okuma: Kapalı	Citire ușoară: Nu
+Basit mod: Açık	Mod simplu: Da
+Basit mod: Kapalı	Mod simplu: Nu
+Kolay okuma: bütün yazılar büyük, kalın ve siyah olur.\nBasit mod: menüde dört büyük düğme; panoda yalnızca saat, hava ve üç haber. Teknik uygulamalar gizlenir; bu ekrandan her zaman geri açılabilir.	Citire ușoară: tot textul devine mare, îngroșat și negru.\nMod simplu: patru butoane mari în meniu; panoul arată doar ora, vremea și trei știri. Aplicațiile tehnice sunt ascunse; le puteți reactiva oricând din acest ecran.

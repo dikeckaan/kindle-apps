@@ -225,6 +225,10 @@ B
 Babalar Günü	
 # apps/sky/skydata.c
 Balıklar	
+# core/hub/main.c
+Basit mod: Açık	
+# core/hub/main.c
+Basit mod: Kapalı	
 # core/hub/upd_ui.c
 Bazı güncellemeler kurulamadı	
 # apps/weather/main.c
@@ -369,6 +373,8 @@ Devam et
 Dikeç Store	
 # core/hub/main.c
 Dil	
+# core/hub/main.c
+Dil: %s	
 # apps/mines/main.c
 Dokun: aç	
 # apps/mines/main.c
@@ -689,6 +695,12 @@ Kitap ara (başlık veya yazar)
 Kitaplığa eklendi:\n%s	
 # apps/chess/levels.c
 Kolay	
+# core/hub/main.c
+Kolay okuma: Açık	
+# core/hub/main.c
+Kolay okuma: Kapalı	
+# core/hub/main.c
+Kolay okuma: bütün yazılar büyük, kalın ve siyah olur.\nBasit mod: menüde dört büyük düğme; panoda yalnızca saat, hava ve üç haber. Teknik uygulamalar gizlenir; bu ekrandan her zaman geri açılabilir.	
 # apps/deprem/main.c
 Koordinatlar	
 # apps/puzzle/puzzle.c
@@ -1015,6 +1027,8 @@ Son dakika haberleri
 Son dördün	
 # apps/puzzle/puzzle.c
 Son sıra matı	
+# core/hub/main.c
+Sonraki	
 # apps/odak/main.c
 Sonraki aşama kendiliğinden başlasın	
 # apps/puzzle/main.c
@@ -1319,6 +1333,8 @@ yarım gün
 Ön ışık	
 # apps/sudoku/main.c
 Önce boş bir hücre seçin.	
+# core/hub/main.c
+Önceki	
 # apps/ajanda/main.c
 Önümüzdeki 7 günde not ya da özel gün yok.	
 # apps/ajanda/main.c

@@ -129,9 +129,17 @@ int kui_text_width(const char *utf8, KuiFont f, int px)
 	return w;
 }
 
+static int a11y_width(const char *s, KuiFont f, int px, void *ctx)
+{
+	(void) ctx;
+	return kui_text_width(s, f, px);
+}
+
 static void draw_text(KuiRect box, const char *utf8, KuiFont f, int px, KuiAlign a, unsigned char fg, int bg)
 {
 	if (!utf8 || !*utf8) return;
+	/* Kolay okuma: bold, black, larger — still fitting the box (light text on dark keeps its colour) */
+	kui_a11y_adjust(kui_easy(), utf8, box.w, box.h, &f, &px, &fg, fg >= 200 || (bg >= 0 && bg < 128), a11y_width, NULL);
 	int w, h;
 	measure(utf8, f, px, &w, &h);
 	int left = box.x;

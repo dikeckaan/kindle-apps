@@ -732,3 +732,11 @@ Bütün şiirlerden biri	Et hvilket som helst dikt
 %d şiir · %d şair · kaynak: Vikikaynak (kamu malı)	%d dikt · %d diktere · kilde: Wikisource (falt i det fri)
 Şiirler yüklenemedi.	Diktene kunne ikke lastes inn.
 Henüz favori şiir yok.\nBir şiirde ☆ düğmesine dokunun.	Ingen favorittdikt ennå.\nTrykk på ☆ ved et dikt.
+Önceki	Forrige
+Sonraki	Neste
+Dil: %s	Språk: %s
+Kolay okuma: Açık	Lettlest: På
+Kolay okuma: Kapalı	Lettlest: Av
+Basit mod: Açık	Enkel modus: På
+Basit mod: Kapalı	Enkel modus: Av
+Kolay okuma: bütün yazılar büyük, kalın ve siyah olur.\nBasit mod: menüde dört büyük düğme; panoda yalnızca saat, hava ve üç haber. Teknik uygulamalar gizlenir; bu ekrandan her zaman geri açılabilir.	Lettlest: all tekst blir stor, fet og svart.\nEnkel modus: fire store knapper i menyen; oversikten viser bare klokke, vær og tre nyheter. Tekniske apper skjules; de kan alltid slås på igjen fra denne skjermen.

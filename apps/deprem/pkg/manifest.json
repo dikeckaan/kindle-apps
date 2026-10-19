@@ -4,7 +4,7 @@
   "name": "Son Depremler",
   "author": "Kaan Dikeç",
   "description": "Türkiye ve yakın çevresindeki son depremler: harita, liste ve ayrıntılar (Kandilli Rasathanesi, EMSC)",
-  "version": [2026, 10, 16],
+  "version": [2026, 10, 18],
   "dependencies": [],
   "supported_platforms": ["kindlehf"]
 }
