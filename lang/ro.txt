@@ -850,3 +850,56 @@ Yazı · %d satır	Text · %d rânduri
 Çizim	Desen
 Parmakla çizim mi, klavyeyle yazı mı?	Desenați cu degetul sau scrieți cu tastatura?
 Not silinsin mi?	Ștergeți această notiță?
+%d kazanma · %d kaybetme · %d berabere	%d câștigate · %d pierdute · %d remize
+%s kazandı	%s câștigă
+%s pas geçti	%s a pasat
+%s teslim oldu	%s a abandonat
+13×13	13×13
+9×9 (kısa oyun)	9×9 (partidă scurtă)
+Almak zorunlu (%d taş) · %s	Captură obligatorie (%d piese) · %s
+Almaya devam: sıradaki kareye dokunun	Continuați captura: atingeți căsuța următoare
+Berabere	Remiză
+Beyaz %d – Siyah %d · %s	Albul %d – Negrul %d · %s
+Beyaz (ilk hamle)	Albul (mută primul)
+Beyaz kazandı	Câștigă albul
+Buraya oynanamaz (ko ya da intihar)	Nu se poate juca aici (ko sau sinucidere)
+Dama	Dame
+Dama (Türk daması)	Dame (turcești)
+Go	Go
+Go 13×13	Go 13×13
+Go 9×9	Go 9×9
+Kazandınız!	Ați câștigat!
+Kindle düşünüyor…	Kindle se gândește…
+Kindle kazandı	Kindle a câștigat
+Kindle ne kadar iyi oynasın?	Cât de bine să joace Kindle?
+Kindle pas geçti	Kindle a pasat
+Kindle teslim oldu · Kazandınız!	Kindle a abandonat · Ați câștigat!
+Kindle'a karşı	Contra lui Kindle
+Kindle'a karşı ya da iki kişi aynı cihazda	Contra lui Kindle sau doi jucători pe același aparat
+Kindle'a karşı: kazanma · kaybetme · beraberlik	Contra lui Kindle: victorii · înfrângeri · remize
+Masa Oyunları	Jocuri de masă
+Oyuna dön	Înapoi la joc
+Oyunu bırakıp teslim olunsun mu?	Abandonați această partidă?
+Pas	Pas
+Reversi	Reversi
+Sayım	Numărare
+Sayımı onayla	Confirmați numărarea
+Siyah %d – Beyaz %d + %s · %s %s puanla önde	Negrul %d – Albul %d + %s · %s conduce cu %s
+Siyah %d – Beyaz %d + %s · %s puan fark · %s	Negrul %d – Albul %d + %s · diferență %s · %s
+Siyah %d – Beyaz %d · %s	Negrul %d – Albul %d · %s
+Siyah (ilk hamle)	Negrul (mută primul)
+Siyah başlar · köşeler değerlidir	Începe negrul · colțurile sunt valoroase
+Siyah kazandı	Câștigă negrul
+Sıra: %s · Beyaz %d – Siyah %d	La mutare: %s · Albul %d – Negrul %d
+Sıra: %s · Siyah %d – Beyaz %d	La mutare: %s · Negrul %d – Albul %d
+Sıra: %s · esir: Siyah %d, Beyaz %d	La mutare: %s · capturi: Negrul %d, Albul %d
+Tahta	Tablă
+Teslim ol	Abandonați
+Teslim oldunuz · Kindle kazandı	Ați abandonat · Kindle a câștigat
+Türk daması · almak zorunlu, en çok taşı alan yol seçilir	Dame turcești · captura e obligatorie, se alege captura cea mai lungă
+Çin kuralları: alan sayımı, komi 7,5	Reguli chinezești: numărarea zonei, komi 7,5
+Ölü taşlar hesaplanıyor…	Se caută pietrele moarte…
+İki pas: oyun bitti.\nSoluk taşlar ölü sayıldı; değiştirmek için bir zincire dokunun.	Două pase: jocul s-a terminat.\nPietrele estompate sunt socotite moarte; atingeți un lanț pentru a schimba.
+İpucu: açık	Indicii: da
+İpucu: kapalı	Indicii: nu
+İstatistikler	Statistici

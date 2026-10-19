@@ -850,3 +850,56 @@ Yazı · %d satır	Text · %d Zeilen
 Çizim	Zeichnung
 Parmakla çizim mi, klavyeyle yazı mı?	Mit dem Finger zeichnen oder mit der Tastatur schreiben?
 Not silinsin mi?	Diese Notiz löschen?
+%d kazanma · %d kaybetme · %d berabere	%d gewonnen · %d verloren · %d remis
+%s kazandı	%s gewinnt
+%s pas geçti	%s hat gepasst
+%s teslim oldu	%s hat aufgegeben
+13×13	13×13
+9×9 (kısa oyun)	9×9 (kurze Partie)
+Almak zorunlu (%d taş) · %s	Schlagzwang (%d Steine) · %s
+Almaya devam: sıradaki kareye dokunun	Weiter schlagen: nächstes Feld antippen
+Berabere	Remis
+Beyaz %d – Siyah %d · %s	Weiß %d – Schwarz %d · %s
+Beyaz (ilk hamle)	Weiß (zieht zuerst)
+Beyaz kazandı	Weiß gewinnt
+Buraya oynanamaz (ko ya da intihar)	Hier nicht erlaubt (Ko oder Selbstmord)
+Dama	Dame
+Dama (Türk daması)	Dame (türkisch)
+Go	Go
+Go 13×13	Go 13×13
+Go 9×9	Go 9×9
+Kazandınız!	Sie haben gewonnen!
+Kindle düşünüyor…	Der Kindle denkt nach…
+Kindle kazandı	Der Kindle hat gewonnen
+Kindle ne kadar iyi oynasın?	Wie gut soll der Kindle spielen?
+Kindle pas geçti	Der Kindle hat gepasst
+Kindle teslim oldu · Kazandınız!	Der Kindle hat aufgegeben · Sie haben gewonnen!
+Kindle'a karşı	Gegen den Kindle
+Kindle'a karşı ya da iki kişi aynı cihazda	Gegen den Kindle oder zu zweit an einem Gerät
+Kindle'a karşı: kazanma · kaybetme · beraberlik	Gegen den Kindle: Siege · Niederlagen · Remis
+Masa Oyunları	Brettspiele
+Oyuna dön	Zurück zur Partie
+Oyunu bırakıp teslim olunsun mu?	Aufgeben und die Partie beenden?
+Pas	Passen
+Reversi	Reversi
+Sayım	Zählung
+Sayımı onayla	Zählung bestätigen
+Siyah %d – Beyaz %d + %s · %s %s puanla önde	Schwarz %d – Weiß %d + %s · %s führt mit %s
+Siyah %d – Beyaz %d + %s · %s puan fark · %s	Schwarz %d – Weiß %d + %s · Abstand %s · %s
+Siyah %d – Beyaz %d · %s	Schwarz %d – Weiß %d · %s
+Siyah (ilk hamle)	Schwarz (zieht zuerst)
+Siyah başlar · köşeler değerlidir	Schwarz beginnt · Ecken sind wertvoll
+Siyah kazandı	Schwarz gewinnt
+Sıra: %s · Beyaz %d – Siyah %d	Am Zug: %s · Weiß %d – Schwarz %d
+Sıra: %s · Siyah %d – Beyaz %d	Am Zug: %s · Schwarz %d – Weiß %d
+Sıra: %s · esir: Siyah %d, Beyaz %d	Am Zug: %s · Gefangene: Schwarz %d, Weiß %d
+Tahta	Brett
+Teslim ol	Aufgeben
+Teslim oldunuz · Kindle kazandı	Sie haben aufgegeben · Der Kindle hat gewonnen
+Türk daması · almak zorunlu, en çok taşı alan yol seçilir	Türkische Dame · Schlagzwang, der längste Schlag muss gewählt werden
+Çin kuralları: alan sayımı, komi 7,5	Chinesische Regeln: Gebietswertung, Komi 7,5
+Ölü taşlar hesaplanıyor…	Tote Steine werden gesucht…
+İki pas: oyun bitti.\nSoluk taşlar ölü sayıldı; değiştirmek için bir zincire dokunun.	Zweimal gepasst: Die Partie ist vorbei.\nBlasse Steine gelten als tot; zum Ändern eine Kette antippen.
+İpucu: açık	Hinweise: an
+İpucu: kapalı	Hinweise: aus
+İstatistikler	Statistik

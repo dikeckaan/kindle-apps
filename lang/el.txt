@@ -850,3 +850,56 @@ Yazı · %d satır	Κείμενο · %d γραμμές
 Çizim	Σχέδιο
 Parmakla çizim mi, klavyeyle yazı mı?	Σχέδιο με το δάχτυλο ή γράψιμο με το πληκτρολόγιο;
 Not silinsin mi?	Διαγραφή αυτής της σημείωσης;
+%d kazanma · %d kaybetme · %d berabere	%d νίκες · %d ήττες · %d ισοπαλίες
+%s kazandı	%s κερδίζει
+%s pas geçti	%s πάσο
+%s teslim oldu	%s παραιτήθηκε
+13×13	13×13
+9×9 (kısa oyun)	9×9 (σύντομη παρτίδα)
+Almak zorunlu (%d taş) · %s	Υποχρεωτικό πάρσιμο (%d πούλια) · %s
+Almaya devam: sıradaki kareye dokunun	Συνεχίστε το πάρσιμο: πατήστε το επόμενο τετράγωνο
+Berabere	Ισοπαλία
+Beyaz %d – Siyah %d · %s	Λευκά %d – Μαύρα %d · %s
+Beyaz (ilk hamle)	Λευκά (παίζουν πρώτα)
+Beyaz kazandı	Κερδίζουν τα λευκά
+Buraya oynanamaz (ko ya da intihar)	Δεν επιτρέπεται εδώ (κο ή αυτοκτονία)
+Dama	Ντάμα
+Dama (Türk daması)	Ντάμα (τουρκική)
+Go	Γκο
+Go 13×13	Γκο 13×13
+Go 9×9	Γκο 9×9
+Kazandınız!	Κερδίσατε!
+Kindle düşünüyor…	Το Kindle σκέφτεται…
+Kindle kazandı	Κέρδισε το Kindle
+Kindle ne kadar iyi oynasın?	Πόσο καλά να παίζει το Kindle;
+Kindle pas geçti	Το Kindle πάσο
+Kindle teslim oldu · Kazandınız!	Το Kindle παραιτήθηκε · Κερδίσατε!
+Kindle'a karşı	Εναντίον του Kindle
+Kindle'a karşı ya da iki kişi aynı cihazda	Εναντίον του Kindle ή δύο παίκτες στην ίδια συσκευή
+Kindle'a karşı: kazanma · kaybetme · beraberlik	Εναντίον του Kindle: νίκες · ήττες · ισοπαλίες
+Masa Oyunları	Επιτραπέζια
+Oyuna dön	Πίσω στην παρτίδα
+Oyunu bırakıp teslim olunsun mu?	Παραίτηση από αυτή την παρτίδα;
+Pas	Πάσο
+Reversi	Reversi
+Sayım	Μέτρηση
+Sayımı onayla	Επιβεβαίωση μέτρησης
+Siyah %d – Beyaz %d + %s · %s %s puanla önde	Μαύρα %d – Λευκά %d + %s · %s προηγείται κατά %s
+Siyah %d – Beyaz %d + %s · %s puan fark · %s	Μαύρα %d – Λευκά %d + %s · διαφορά %s · %s
+Siyah %d – Beyaz %d · %s	Μαύρα %d – Λευκά %d · %s
+Siyah (ilk hamle)	Μαύρα (παίζουν πρώτα)
+Siyah başlar · köşeler değerlidir	Ξεκινούν τα μαύρα · οι γωνίες έχουν αξία
+Siyah kazandı	Κερδίζουν τα μαύρα
+Sıra: %s · Beyaz %d – Siyah %d	Σειρά: %s · Λευκά %d – Μαύρα %d
+Sıra: %s · Siyah %d – Beyaz %d	Σειρά: %s · Μαύρα %d – Λευκά %d
+Sıra: %s · esir: Siyah %d, Beyaz %d	Σειρά: %s · αιχμάλωτοι: Μαύρα %d, Λευκά %d
+Tahta	Ταμπλό
+Teslim ol	Παραίτηση
+Teslim oldunuz · Kindle kazandı	Παραιτηθήκατε · Κέρδισε το Kindle
+Türk daması · almak zorunlu, en çok taşı alan yol seçilir	Τουρκική ντάμα · το πάρσιμο είναι υποχρεωτικό, επιλέγεται το μεγαλύτερο
+Çin kuralları: alan sayımı, komi 7,5	Κινεζικοί κανόνες: μέτρηση περιοχής, κόμι 7,5
+Ölü taşlar hesaplanıyor…	Αναζήτηση νεκρών πετρών…
+İki pas: oyun bitti.\nSoluk taşlar ölü sayıldı; değiştirmek için bir zincire dokunun.	Δύο πάσο: η παρτίδα τελείωσε.\nΟι αχνές πέτρες μετρούν ως νεκρές· πατήστε μια αλυσίδα για αλλαγή.
+İpucu: açık	Υποδείξεις: ναι
+İpucu: kapalı	Υποδείξεις: όχι
+İstatistikler	Στατιστικά

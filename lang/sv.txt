@@ -850,3 +850,56 @@ Yazı · %d satır	Text · %d rader
 Çizim	Teckning
 Parmakla çizim mi, klavyeyle yazı mı?	Rita med fingret eller skriva med tangentbordet?
 Not silinsin mi?	Radera anteckningen?
+%d kazanma · %d kaybetme · %d berabere	%d vinster · %d förluster · %d remi
+%s kazandı	%s vinner
+%s pas geçti	%s passade
+%s teslim oldu	%s gav upp
+13×13	13×13
+9×9 (kısa oyun)	9×9 (kort parti)
+Almak zorunlu (%d taş) · %s	Slagtvång (%d pjäser) · %s
+Almaya devam: sıradaki kareye dokunun	Fortsätt slå: tryck på nästa ruta
+Berabere	Remi
+Beyaz %d – Siyah %d · %s	Vit %d – Svart %d · %s
+Beyaz (ilk hamle)	Vit (börjar)
+Beyaz kazandı	Vit vinner
+Buraya oynanamaz (ko ya da intihar)	Här får du inte spela (ko eller självmord)
+Dama	Dam
+Dama (Türk daması)	Dam (turkisk)
+Go	Go
+Go 13×13	Go 13×13
+Go 9×9	Go 9×9
+Kazandınız!	Du vann!
+Kindle düşünüyor…	Kindlen tänker…
+Kindle kazandı	Kindlen vann
+Kindle ne kadar iyi oynasın?	Hur bra ska Kindlen spela?
+Kindle pas geçti	Kindlen passade
+Kindle teslim oldu · Kazandınız!	Kindlen gav upp · Du vann!
+Kindle'a karşı	Mot Kindlen
+Kindle'a karşı ya da iki kişi aynı cihazda	Mot Kindlen eller två spelare på samma enhet
+Kindle'a karşı: kazanma · kaybetme · beraberlik	Mot Kindlen: vinster · förluster · remier
+Masa Oyunları	Brädspel
+Oyuna dön	Tillbaka till partiet
+Oyunu bırakıp teslim olunsun mu?	Ge upp det här partiet?
+Pas	Passa
+Reversi	Reversi
+Sayım	Räkning
+Sayımı onayla	Bekräfta räkningen
+Siyah %d – Beyaz %d + %s · %s %s puanla önde	Svart %d – Vit %d + %s · %s leder med %s
+Siyah %d – Beyaz %d + %s · %s puan fark · %s	Svart %d – Vit %d + %s · marginal %s · %s
+Siyah %d – Beyaz %d · %s	Svart %d – Vit %d · %s
+Siyah (ilk hamle)	Svart (börjar)
+Siyah başlar · köşeler değerlidir	Svart börjar · hörnen är värdefulla
+Siyah kazandı	Svart vinner
+Sıra: %s · Beyaz %d – Siyah %d	Tur: %s · Vit %d – Svart %d
+Sıra: %s · Siyah %d – Beyaz %d	Tur: %s · Svart %d – Vit %d
+Sıra: %s · esir: Siyah %d, Beyaz %d	Tur: %s · fångar: Svart %d, Vit %d
+Tahta	Bräde
+Teslim ol	Ge upp
+Teslim oldunuz · Kindle kazandı	Du gav upp · Kindlen vann
+Türk daması · almak zorunlu, en çok taşı alan yol seçilir	Turkiskt dam · slag är tvingande, det längsta slaget måste väljas
+Çin kuralları: alan sayımı, komi 7,5	Kinesiska regler: områdesräkning, komi 7,5
+Ölü taşlar hesaplanıyor…	Letar efter döda stenar…
+İki pas: oyun bitti.\nSoluk taşlar ölü sayıldı; değiştirmek için bir zincire dokunun.	Två pass: partiet är slut.\nBleka stenar räknas som döda; tryck på en kedja för att ändra.
+İpucu: açık	Tips: på
+İpucu: kapalı	Tips: av
+İstatistikler	Statistik

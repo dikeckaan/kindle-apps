@@ -850,3 +850,56 @@ Yazı · %d satır	Szöveg · %d sor
 Çizim	Rajz
 Parmakla çizim mi, klavyeyle yazı mı?	Ujjal rajzol, vagy billentyűzettel ír?
 Not silinsin mi?	Törli ezt a jegyzetet?
+%d kazanma · %d kaybetme · %d berabere	%d győzelem · %d vereség · %d döntetlen
+%s kazandı	%s nyer
+%s pas geçti	%s passzolt
+%s teslim oldu	%s feladta
+13×13	13×13
+9×9 (kısa oyun)	9×9 (rövid játszma)
+Almak zorunlu (%d taş) · %s	Ütéskényszer (%d korong) · %s
+Almaya devam: sıradaki kareye dokunun	Üss tovább: érintsd meg a következő mezőt
+Berabere	Döntetlen
+Beyaz %d – Siyah %d · %s	Világos %d – Sötét %d · %s
+Beyaz (ilk hamle)	Világos (kezd)
+Beyaz kazandı	Világos nyer
+Buraya oynanamaz (ko ya da intihar)	Ide nem lehet lépni (ko vagy öngyilkosság)
+Dama	Dáma
+Dama (Türk daması)	Dáma (török)
+Go	Go
+Go 13×13	Go 13×13
+Go 9×9	Go 9×9
+Kazandınız!	Nyertél!
+Kindle düşünüyor…	A Kindle gondolkodik…
+Kindle kazandı	A Kindle nyert
+Kindle ne kadar iyi oynasın?	Milyen jól játsszon a Kindle?
+Kindle pas geçti	A Kindle passzolt
+Kindle teslim oldu · Kazandınız!	A Kindle feladta · Nyertél!
+Kindle'a karşı	A Kindle ellen
+Kindle'a karşı ya da iki kişi aynı cihazda	A Kindle ellen vagy ketten egy eszközön
+Kindle'a karşı: kazanma · kaybetme · beraberlik	A Kindle ellen: győzelem · vereség · döntetlen
+Masa Oyunları	Táblajátékok
+Oyuna dön	Vissza a játékhoz
+Oyunu bırakıp teslim olunsun mu?	Feladod ezt a játszmát?
+Pas	Passz
+Reversi	Reversi
+Sayım	Számolás
+Sayımı onayla	Számolás jóváhagyása
+Siyah %d – Beyaz %d + %s · %s %s puanla önde	Sötét %d – Világos %d + %s · %s vezet %s ponttal
+Siyah %d – Beyaz %d + %s · %s puan fark · %s	Sötét %d – Világos %d + %s · különbség %s · %s
+Siyah %d – Beyaz %d · %s	Sötét %d – Világos %d · %s
+Siyah (ilk hamle)	Sötét (kezd)
+Siyah başlar · köşeler değerlidir	Sötét kezd · a sarkok értékesek
+Siyah kazandı	Sötét nyer
+Sıra: %s · Beyaz %d – Siyah %d	Lép: %s · Világos %d – Sötét %d
+Sıra: %s · Siyah %d – Beyaz %d	Lép: %s · Sötét %d – Világos %d
+Sıra: %s · esir: Siyah %d, Beyaz %d	Lép: %s · foglyok: Sötét %d, Világos %d
+Tahta	Tábla
+Teslim ol	Feladás
+Teslim oldunuz · Kindle kazandı	Feladtad · A Kindle nyert
+Türk daması · almak zorunlu, en çok taşı alan yol seçilir	Török dáma · az ütés kötelező, a leghosszabb ütést kell választani
+Çin kuralları: alan sayımı, komi 7,5	Kínai szabályok: területszámolás, komi 7,5
+Ölü taşlar hesaplanıyor…	Halott kövek keresése…
+İki pas: oyun bitti.\nSoluk taşlar ölü sayıldı; değiştirmek için bir zincire dokunun.	Két passz: vége a játszmának.\nA halvány kövek halottnak számítanak; egy láncot megérintve módosíthatod.
+İpucu: açık	Tippek: be
+İpucu: kapalı	Tippek: ki
+İstatistikler	Statisztika

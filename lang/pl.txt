@@ -850,3 +850,56 @@ Yazı · %d satır	Tekst · wierszy: %d
 Çizim	Rysunek
 Parmakla çizim mi, klavyeyle yazı mı?	Rysować palcem czy pisać na klawiaturze?
 Not silinsin mi?	Usunąć tę notatkę?
+%d kazanma · %d kaybetme · %d berabere	%d wygrane · %d przegrane · %d remisy
+%s kazandı	%s wygrywa
+%s pas geçti	%s pasuje
+%s teslim oldu	%s poddaje się
+13×13	13×13
+9×9 (kısa oyun)	9×9 (krótka partia)
+Almak zorunlu (%d taş) · %s	Bicie obowiązkowe (%d piony) · %s
+Almaya devam: sıradaki kareye dokunun	Bij dalej: dotknij następnego pola
+Berabere	Remis
+Beyaz %d – Siyah %d · %s	Białe %d – Czarne %d · %s
+Beyaz (ilk hamle)	Białe (zaczynają)
+Beyaz kazandı	Wygrywają białe
+Buraya oynanamaz (ko ya da intihar)	Tu nie wolno grać (ko lub samobójstwo)
+Dama	Warcaby
+Dama (Türk daması)	Warcaby (tureckie)
+Go	Go
+Go 13×13	Go 13×13
+Go 9×9	Go 9×9
+Kazandınız!	Wygrałeś!
+Kindle düşünüyor…	Kindle myśli…
+Kindle kazandı	Kindle wygrał
+Kindle ne kadar iyi oynasın?	Jak dobrze ma grać Kindle?
+Kindle pas geçti	Kindle spasował
+Kindle teslim oldu · Kazandınız!	Kindle się poddał · Wygrałeś!
+Kindle'a karşı	Przeciw Kindle
+Kindle'a karşı ya da iki kişi aynı cihazda	Przeciw Kindle albo we dwoje na jednym urządzeniu
+Kindle'a karşı: kazanma · kaybetme · beraberlik	Przeciw Kindle: wygrane · przegrane · remisy
+Masa Oyunları	Gry planszowe
+Oyuna dön	Wróć do gry
+Oyunu bırakıp teslim olunsun mu?	Poddać tę partię?
+Pas	Pas
+Reversi	Reversi
+Sayım	Liczenie
+Sayımı onayla	Zatwierdź liczenie
+Siyah %d – Beyaz %d + %s · %s %s puanla önde	Czarne %d – Białe %d + %s · %s prowadzi o %s
+Siyah %d – Beyaz %d + %s · %s puan fark · %s	Czarne %d – Białe %d + %s · różnica %s · %s
+Siyah %d – Beyaz %d · %s	Czarne %d – Białe %d · %s
+Siyah (ilk hamle)	Czarne (zaczynają)
+Siyah başlar · köşeler değerlidir	Zaczynają czarne · rogi są cenne
+Siyah kazandı	Wygrywają czarne
+Sıra: %s · Beyaz %d – Siyah %d	Ruch: %s · Białe %d – Czarne %d
+Sıra: %s · Siyah %d – Beyaz %d	Ruch: %s · Czarne %d – Białe %d
+Sıra: %s · esir: Siyah %d, Beyaz %d	Ruch: %s · jeńcy: Czarne %d, Białe %d
+Tahta	Plansza
+Teslim ol	Poddaj się
+Teslim oldunuz · Kindle kazandı	Poddałeś się · Kindle wygrał
+Türk daması · almak zorunlu, en çok taşı alan yol seçilir	Warcaby tureckie · bicie jest obowiązkowe, trzeba wybrać najdłuższe
+Çin kuralları: alan sayımı, komi 7,5	Zasady chińskie: liczenie obszaru, komi 7,5
+Ölü taşlar hesaplanıyor…	Szukanie martwych kamieni…
+İki pas: oyun bitti.\nSoluk taşlar ölü sayıldı; değiştirmek için bir zincire dokunun.	Dwa pasy: koniec partii.\nBlade kamienie liczą się jako martwe; dotknij łańcucha, aby to zmienić.
+İpucu: açık	Podpowiedzi: wł.
+İpucu: kapalı	Podpowiedzi: wył.
+İstatistikler	Statystyki

@@ -19,6 +19,8 @@
 %d gün	
 # apps/deprem/deprem.c
 %d gün önce	
+# apps/masa/main.c
+%d kazanma · %d kaybetme · %d berabere	
 # apps/upload/main.c
 %d kez yanlış PIN girildi: yeni PIN üretildi.	
 # apps/deprem/main.c
@@ -63,10 +65,16 @@
 %s kaldırıldı	
 # core/hub/upd_ui.c
 %s kaldırılsın mı?	
+# apps/masa/go_ui.c
+%s kazandı	
 # core/hub/upd_ui.c
 %s kuruldu	
+# apps/masa/rv_ui.c
+%s pas geçti	
 # apps/weather/main.c
 %s silinsin mi?	
+# apps/masa/go_ui.c
+%s teslim oldu	
 # apps/vakit/main.c
 %s vakti %s	
 # apps/deprem/main.c
@@ -105,6 +113,8 @@
 1 saat	
 # apps/sleep/sleep_opts.c
 10 dakika	
+# apps/masa/go_ui.c
+13×13	
 # apps/chess/puzzle.c
 2 hamlede mat	
 # apps/sleep/sleep_opts.c
@@ -133,6 +143,8 @@
 7 gün	
 # apps/ebooks/main.c
 70.000'den fazla ücretsiz e-kitap. Arama İngilizce başlık ve yazar adlarıyla en iyi sonucu verir.	
+# apps/masa/go_ui.c
+9×9 (kısa oyun)	
 # apps/ebooks/main.c
 AZW3 Kindle'ın kendi okuyucusunda, EPUB KOReader'da açılır.	
 # apps/notlar/main.c
@@ -149,6 +161,10 @@ Akşama %s
 Aldebaran	
 # apps/sky/skydata.c
 Algol	
+# apps/masa/dm_ui.c
+Almak zorunlu (%d taş) · %s	
+# apps/masa/dm_ui.c
+Almaya devam: sıradaki kareye dokunun	
 # apps/sky/skydata.c
 Altair	
 # apps/currency/main.c
@@ -271,12 +287,20 @@ Başlık
 Baştan başla	
 # apps/sysinfo/main.c
 Bellek	
+# apps/masa/dm_ui.c
+Berabere	
 # apps/ajanda/agenda.c
 Berat Kandili	
 # apps/sky/skydata.c
 Betelgöz	
 # apps/chess/main.c
 Beyaz	
+# apps/masa/dm_ui.c
+Beyaz %d – Siyah %d · %s	
+# apps/masa/dm_ui.c
+Beyaz (ilk hamle)	
+# apps/masa/dm_ui.c
+Beyaz kazandı	
 # apps/chess/puzzle_ui.c
 Beyaz oynar	
 # apps/news/news.c
@@ -341,6 +365,8 @@ Bulmaca: lichess.org · çevrimdışı, son veri %s
 Bulmacalar	
 # apps/sudoku/main.c
 Bulmacayı çözdünüz.	
+# apps/masa/go_ui.c
+Buraya oynanamaz (ko ya da intihar)	
 # apps/solitaire/main.c
 Bütün kartlar açık. Oyun tamamlansın mı?	
 # apps/solitaire/main.c
@@ -383,6 +409,10 @@ DURAKLATILDI
 Daha fazla	
 # apps/chess/puzzle_ui.c
 Daha önce çözüldü · Seri: %d	
+# apps/masa/dm_ui.c
+Dama	
+# apps/masa/main.c
+Dama (Türk daması)	
 # apps/ajanda/agenda.c
 Demokrasi ve Millî Birlik Günü	
 # apps/sky/skydata.c
@@ -543,6 +573,12 @@ Gezegen · parlaklık %s kadir
 Geçerken alma	
 # apps/chess/puzzle_ui.c
 Geçmiş	
+# apps/masa/go_ui.c
+Go	
+# apps/masa/go_ui.c
+Go 13×13	
+# apps/masa/go_ui.c
+Go 9×9	
 # apps/currency/fx.c
 Gram altın	
 # apps/vakit/main.c
@@ -765,6 +801,8 @@ Kaynaklar
 Kaynağa dokunun: haberlerini açar. ☑ / ☐: ön sayfada gösterilsin mi.	
 # apps/mines/main.c
 Kazandın!	
+# apps/masa/dm_ui.c
+Kazandınız!	
 # apps/wordle/main.c
 Kazanma %	
 # apps/wordle/main.c
@@ -779,8 +817,24 @@ Kendiliğinden başladı. Zamanlayıcı için dokunun.
 Kilidi aç (yeni PIN)	
 # apps/sleep/main.c
 Kindle bu süre dokunulmadan kalınca uyur.\n"Hiç uyuma" pili hızlı tüketir.\nYeniden başlatınca varsayılana dönebilir.	
+# apps/masa/main.c
+Kindle düşünüyor…	
+# apps/masa/dm_ui.c
+Kindle kazandı	
+# apps/masa/main.c
+Kindle ne kadar iyi oynasın?	
+# apps/masa/go_ui.c
+Kindle pas geçti	
 # apps/vakit/main.c
 Kindle saati	
+# apps/masa/go_ui.c
+Kindle teslim oldu · Kazandınız!	
+# apps/masa/dm_ui.c
+Kindle'a karşı	
+# apps/masa/main.c
+Kindle'a karşı ya da iki kişi aynı cihazda	
+# apps/masa/main.c
+Kindle'a karşı: kazanma · kaybetme · beraberlik	
 # apps/vakit/main.c
 Kindle'da pusula yok: cihazı, ☀ işareti gökteki Güneş'i gösterecek biçimde çevirin; ok o zaman kıbleyi gösterir.	
 # apps/ebooks/main.c
@@ -881,6 +935,8 @@ MOLA
 Manşet	
 # core/kui/trfmt.c
 Mart	
+# apps/masa/main.c
+Masa Oyunları	
 # apps/pano/pkg/app.ini
 Masa Panosu	
 # apps/clock/pkg/app.ini
@@ -983,6 +1039,10 @@ Oyun bitti
 Oyun ortası	
 # apps/chess/puzzle.c
 Oyun sonu	
+# apps/masa/go_ui.c
+Oyuna dön	
+# apps/masa/go_ui.c
+Oyunu bırakıp teslim olunsun mu?	
 # apps/sky/skydata.c
 Oğlak	
 # apps/sky/main.c
@@ -1007,6 +1067,8 @@ Parolayı değiştir
 Parolayı tekrar girin	
 # apps/weather/wx.c
 Parçalı bulutlu	
+# apps/masa/go_ui.c
+Pas	
 # apps/chess/chess_game.c
 Pat — berabere	
 # core/kui/trfmt.c
@@ -1079,6 +1141,8 @@ Renginiz
 Resim kaydedilemedi.	
 # apps/ajanda/main.c
 Resmi tatil	
+# apps/masa/main.c
+Reversi	
 # apps/sky/skydata.c
 Rigel	
 # apps/chess/puzzle.c
@@ -1133,6 +1197,10 @@ Sayfa %d / %d · %d çizgi
 Sayfa %d/%d	
 # apps/notlar/main.c
 Sayfa resim olarak kaydedildi:\ndocuments/Notlar\n%s	
+# apps/masa/go_ui.c
+Sayım	
+# apps/masa/go_ui.c
+Sayımı onayla	
 # apps/weather/wx.c
 Sağanak	
 # apps/news/news.c
@@ -1159,6 +1227,18 @@ Sisli
 Sistem Bilgisi	
 # apps/chess/main.c
 Siyah	
+# apps/masa/go_ui.c
+Siyah %d – Beyaz %d + %s · %s %s puanla önde	
+# apps/masa/go_ui.c
+Siyah %d – Beyaz %d + %s · %s puan fark · %s	
+# apps/masa/rv_ui.c
+Siyah %d – Beyaz %d · %s	
+# apps/masa/go_ui.c
+Siyah (ilk hamle)	
+# apps/masa/rv_ui.c
+Siyah başlar · köşeler değerlidir	
+# apps/masa/dm_ui.c
+Siyah kazandı	
 # apps/chess/puzzle_ui.c
 Siyah oynar	
 # apps/game2048/main.c
@@ -1213,6 +1293,12 @@ Süre
 Süre: %ld:%02ld	
 # apps/chess/main.c
 Sıra: %s	
+# apps/masa/dm_ui.c
+Sıra: %s · Beyaz %d – Siyah %d	
+# apps/masa/rv_ui.c
+Sıra: %s · Siyah %d – Beyaz %d	
+# apps/masa/go_ui.c
+Sıra: %s · esir: Siyah %d, Beyaz %d	
 # apps/pano/main.c
 Sıradaki: %s %s · %d sa %d dk	
 # core/hub/upd_ui.c
@@ -1227,6 +1313,8 @@ TCMB · güncellendi %d %s %02d:%02d
 Tahmin dağılımı	
 # core/kui/powerui.c
 Tahmini kalan: %s	
+# apps/masa/go_ui.c
+Tahta	
 # apps/chess/main.c
 Tahta sabit	
 # apps/chess/main.c
@@ -1273,6 +1361,10 @@ Temmuz
 Terazi	
 # apps/chess/main.c
 Terfi	
+# apps/masa/go_ui.c
+Teslim ol	
+# apps/masa/go_ui.c
+Teslim oldunuz · Kindle kazandı	
 # apps/currency/main.c
 Tüm kurlar	
 # core/hub/upd_ui.c
@@ -1281,6 +1373,8 @@ Tüm uygulamalar güncel
 Tümü	
 # core/hub/upd_ui.c
 Tümünü güncelle	
+# apps/masa/dm_ui.c
+Türk daması · almak zorunlu, en çok taşı alan yol seçilir	
 # apps/deprem/main.c
 Türkiye	
 # apps/vakit/main.c
@@ -1491,6 +1585,8 @@ yarım gün
 Çifte fil matı	
 # apps/chess/puzzle.c
 Çifte şah	
+# apps/masa/go_ui.c
+Çin kuralları: alan sayımı, komi 7,5	
 # apps/weather/wx.c
 Çisenti	
 # apps/notlar/main.c
@@ -1523,6 +1619,8 @@ yarım gün
 Çözümü göster	
 # apps/mines/main.c
 Çıkış	
+# apps/masa/go_ui.c
+Ölü taşlar hesaplanıyor…	
 # apps/news/main.c
 Ön sayfada kaynak yok.\nKaynaklar'dan seçin.	
 # core/kui/powerui.c
@@ -1557,6 +1655,8 @@ yarım gün
 İki oyunculu	
 # apps/chess/main.c
 İki oyunculu devam	
+# apps/masa/go_ui.c
+İki pas: oyun bitti.\nSoluk taşlar ölü sayıldı; değiştirmek için bir zincire dokunun.	
 # apps/pano/pano.c
 İkindi	
 # apps/vakit/vakit.c
@@ -1591,10 +1691,16 @@ yarım gün
 İndiriliyor…\nGutenberg yavaş olabilir, lütfen bekleyin.	
 # apps/chess/puzzle_ui.c
 İpucu	
+# apps/masa/rv_ui.c
+İpucu: açık	
 # apps/chess/puzzle_ui.c
 İpucu: işaretli taşı oynayın	
+# apps/masa/rv_ui.c
+İpucu: kapalı	
 # apps/odak/main.c
 İstatistik	
+# apps/masa/main.c
+İstatistikler	
 # apps/chess/levels.c
 İyi	
 # apps/odak/odak.c

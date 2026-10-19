@@ -850,3 +850,56 @@ Yazı · %d satır	Testo · %d righe
 Çizim	Disegno
 Parmakla çizim mi, klavyeyle yazı mı?	Disegnare con il dito o scrivere con la tastiera?
 Not silinsin mi?	Cancellare questa nota?
+%d kazanma · %d kaybetme · %d berabere	%d vinte · %d perse · %d patte
+%s kazandı	%s vince
+%s pas geçti	%s ha passato
+%s teslim oldu	%s ha abbandonato
+13×13	13×13
+9×9 (kısa oyun)	9×9 (partita breve)
+Almak zorunlu (%d taş) · %s	Presa obbligatoria (%d pezzi) · %s
+Almaya devam: sıradaki kareye dokunun	Continua la presa: tocca la casella successiva
+Berabere	Patta
+Beyaz %d – Siyah %d · %s	Bianco %d – Nero %d · %s
+Beyaz (ilk hamle)	Bianco (muove per primo)
+Beyaz kazandı	Vince il Bianco
+Buraya oynanamaz (ko ya da intihar)	Qui non si può giocare (ko o suicidio)
+Dama	Dama
+Dama (Türk daması)	Dama (turca)
+Go	Go
+Go 13×13	Go 13×13
+Go 9×9	Go 9×9
+Kazandınız!	Hai vinto!
+Kindle düşünüyor…	Il Kindle sta pensando…
+Kindle kazandı	Ha vinto il Kindle
+Kindle ne kadar iyi oynasın?	Quanto bene deve giocare il Kindle?
+Kindle pas geçti	Il Kindle ha passato
+Kindle teslim oldu · Kazandınız!	Il Kindle ha abbandonato · Hai vinto!
+Kindle'a karşı	Contro il Kindle
+Kindle'a karşı ya da iki kişi aynı cihazda	Contro il Kindle o in due sullo stesso dispositivo
+Kindle'a karşı: kazanma · kaybetme · beraberlik	Contro il Kindle: vittorie · sconfitte · patte
+Masa Oyunları	Giochi da tavolo
+Oyuna dön	Torna alla partita
+Oyunu bırakıp teslim olunsun mu?	Abbandonare questa partita?
+Pas	Passa
+Reversi	Reversi
+Sayım	Conteggio
+Sayımı onayla	Conferma il conteggio
+Siyah %d – Beyaz %d + %s · %s %s puanla önde	Nero %d – Bianco %d + %s · %s avanti di %s
+Siyah %d – Beyaz %d + %s · %s puan fark · %s	Nero %d – Bianco %d + %s · scarto %s · %s
+Siyah %d – Beyaz %d · %s	Nero %d – Bianco %d · %s
+Siyah (ilk hamle)	Nero (muove per primo)
+Siyah başlar · köşeler değerlidir	Inizia il Nero · gli angoli valgono molto
+Siyah kazandı	Vince il Nero
+Sıra: %s · Beyaz %d – Siyah %d	Tocca a: %s · Bianco %d – Nero %d
+Sıra: %s · Siyah %d – Beyaz %d	Tocca a: %s · Nero %d – Bianco %d
+Sıra: %s · esir: Siyah %d, Beyaz %d	Tocca a: %s · prigionieri: Nero %d, Bianco %d
+Tahta	Tavoliere
+Teslim ol	Abbandona
+Teslim oldunuz · Kindle kazandı	Hai abbandonato · Ha vinto il Kindle
+Türk daması · almak zorunlu, en çok taşı alan yol seçilir	Dama turca · la presa è obbligatoria, si sceglie quella più lunga
+Çin kuralları: alan sayımı, komi 7,5	Regole cinesi: conteggio per area, komi 7,5
+Ölü taşlar hesaplanıyor…	Ricerca delle pietre morte…
+İki pas: oyun bitti.\nSoluk taşlar ölü sayıldı; değiştirmek için bir zincire dokunun.	Due passaggi: la partita è finita.\nLe pietre sbiadite contano come morte; tocca una catena per cambiarla.
+İpucu: açık	Suggerimenti: sì
+İpucu: kapalı	Suggerimenti: no
+İstatistikler	Statistiche

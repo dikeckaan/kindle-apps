@@ -850,3 +850,56 @@ Yazı · %d satır	Text · řádků: %d
 Çizim	Kresba
 Parmakla çizim mi, klavyeyle yazı mı?	Kreslit prstem, nebo psát na klávesnici?
 Not silinsin mi?	Smazat tuto poznámku?
+%d kazanma · %d kaybetme · %d berabere	%d výher · %d proher · %d remíz
+%s kazandı	%s vyhrává
+%s pas geçti	%s pasuje
+%s teslim oldu	%s se vzdává
+13×13	13×13
+9×9 (kısa oyun)	9×9 (krátká partie)
+Almak zorunlu (%d taş) · %s	Povinné braní (%d kamenů) · %s
+Almaya devam: sıradaki kareye dokunun	Pokračujte v braní: klepněte na další pole
+Berabere	Remíza
+Beyaz %d – Siyah %d · %s	Bílý %d – Černý %d · %s
+Beyaz (ilk hamle)	Bílý (začíná)
+Beyaz kazandı	Vyhrává bílý
+Buraya oynanamaz (ko ya da intihar)	Sem nelze hrát (ko nebo sebevražda)
+Dama	Dáma
+Dama (Türk daması)	Dáma (turecká)
+Go	Go
+Go 13×13	Go 13×13
+Go 9×9	Go 9×9
+Kazandınız!	Vyhráli jste!
+Kindle düşünüyor…	Kindle přemýšlí…
+Kindle kazandı	Kindle vyhrál
+Kindle ne kadar iyi oynasın?	Jak dobře má Kindle hrát?
+Kindle pas geçti	Kindle pasoval
+Kindle teslim oldu · Kazandınız!	Kindle se vzdal · Vyhráli jste!
+Kindle'a karşı	Proti Kindlu
+Kindle'a karşı ya da iki kişi aynı cihazda	Proti Kindlu nebo ve dvou na jednom zařízení
+Kindle'a karşı: kazanma · kaybetme · beraberlik	Proti Kindlu: výhry · prohry · remízy
+Masa Oyunları	Deskové hry
+Oyuna dön	Zpět do hry
+Oyunu bırakıp teslim olunsun mu?	Vzdát tuto partii?
+Pas	Pas
+Reversi	Reversi
+Sayım	Počítání
+Sayımı onayla	Potvrdit počítání
+Siyah %d – Beyaz %d + %s · %s %s puanla önde	Černý %d – Bílý %d + %s · %s vede o %s
+Siyah %d – Beyaz %d + %s · %s puan fark · %s	Černý %d – Bílý %d + %s · rozdíl %s · %s
+Siyah %d – Beyaz %d · %s	Černý %d – Bílý %d · %s
+Siyah (ilk hamle)	Černý (začíná)
+Siyah başlar · köşeler değerlidir	Začíná černý · rohy jsou cenné
+Siyah kazandı	Vyhrává černý
+Sıra: %s · Beyaz %d – Siyah %d	Na tahu: %s · Bílý %d – Černý %d
+Sıra: %s · Siyah %d – Beyaz %d	Na tahu: %s · Černý %d – Bílý %d
+Sıra: %s · esir: Siyah %d, Beyaz %d	Na tahu: %s · zajatci: Černý %d, Bílý %d
+Tahta	Deska
+Teslim ol	Vzdát se
+Teslim oldunuz · Kindle kazandı	Vzdali jste se · Kindle vyhrál
+Türk daması · almak zorunlu, en çok taşı alan yol seçilir	Turecká dáma · braní je povinné, volí se nejdelší braní
+Çin kuralları: alan sayımı, komi 7,5	Čínská pravidla: počítání území, komi 7,5
+Ölü taşlar hesaplanıyor…	Hledání mrtvých kamenů…
+İki pas: oyun bitti.\nSoluk taşlar ölü sayıldı; değiştirmek için bir zincire dokunun.	Dva pasy: hra skončila.\nBledé kameny se počítají jako mrtvé; klepnutím na skupinu to změníte.
+İpucu: açık	Nápověda: zap.
+İpucu: kapalı	Nápověda: vyp.
+İstatistikler	Statistiky

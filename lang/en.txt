@@ -850,3 +850,56 @@ Yazı · %d satır	Text · %d lines
 Çizim	Drawing
 Parmakla çizim mi, klavyeyle yazı mı?	Draw with your finger or type with the keyboard?
 Not silinsin mi?	Delete this note?
+%d kazanma · %d kaybetme · %d berabere	%d won · %d lost · %d drawn
+%s kazandı	%s wins
+%s pas geçti	%s passed
+%s teslim oldu	%s resigned
+13×13	13×13
+9×9 (kısa oyun)	9×9 (short game)
+Almak zorunlu (%d taş) · %s	Capture required (%d pieces) · %s
+Almaya devam: sıradaki kareye dokunun	Keep capturing: tap the next square
+Berabere	Draw
+Beyaz %d – Siyah %d · %s	White %d – Black %d · %s
+Beyaz (ilk hamle)	White (moves first)
+Beyaz kazandı	White wins
+Buraya oynanamaz (ko ya da intihar)	You can't play here (ko or suicide)
+Dama	Draughts
+Dama (Türk daması)	Draughts (Turkish)
+Go	Go
+Go 13×13	Go 13×13
+Go 9×9	Go 9×9
+Kazandınız!	You won!
+Kindle düşünüyor…	The Kindle is thinking…
+Kindle kazandı	The Kindle won
+Kindle ne kadar iyi oynasın?	How well should the Kindle play?
+Kindle pas geçti	The Kindle passed
+Kindle teslim oldu · Kazandınız!	The Kindle resigned · You won!
+Kindle'a karşı	Against the Kindle
+Kindle'a karşı ya da iki kişi aynı cihazda	Against the Kindle, or two players on one device
+Kindle'a karşı: kazanma · kaybetme · beraberlik	Against the Kindle: wins · losses · draws
+Masa Oyunları	Board Games
+Oyuna dön	Back to the game
+Oyunu bırakıp teslim olunsun mu?	Give up and resign this game?
+Pas	Pass
+Reversi	Reversi
+Sayım	Counting
+Sayımı onayla	Confirm the count
+Siyah %d – Beyaz %d + %s · %s %s puanla önde	Black %d – White %d + %s · %s ahead by %s
+Siyah %d – Beyaz %d + %s · %s puan fark · %s	Black %d – White %d + %s · margin %s · %s
+Siyah %d – Beyaz %d · %s	Black %d – White %d · %s
+Siyah (ilk hamle)	Black (moves first)
+Siyah başlar · köşeler değerlidir	Black starts · corners are valuable
+Siyah kazandı	Black wins
+Sıra: %s · Beyaz %d – Siyah %d	Turn: %s · White %d – Black %d
+Sıra: %s · Siyah %d – Beyaz %d	Turn: %s · Black %d – White %d
+Sıra: %s · esir: Siyah %d, Beyaz %d	Turn: %s · captures: Black %d, White %d
+Tahta	Board
+Teslim ol	Resign
+Teslim oldunuz · Kindle kazandı	You resigned · The Kindle won
+Türk daması · almak zorunlu, en çok taşı alan yol seçilir	Turkish draughts · capturing is compulsory, the longest capture must be taken
+Çin kuralları: alan sayımı, komi 7,5	Chinese rules: area scoring, komi 7.5
+Ölü taşlar hesaplanıyor…	Finding dead stones…
+İki pas: oyun bitti.\nSoluk taşlar ölü sayıldı; değiştirmek için bir zincire dokunun.	Two passes: the game is over.\nFaded stones count as dead; tap a chain to change it.
+İpucu: açık	Hints: on
+İpucu: kapalı	Hints: off
+İstatistikler	Statistics

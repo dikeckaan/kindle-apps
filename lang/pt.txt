@@ -850,3 +850,56 @@ Yazı · %d satır	Texto · %d linhas
 Çizim	Desenho
 Parmakla çizim mi, klavyeyle yazı mı?	Desenhar com o dedo ou escrever com o teclado?
 Not silinsin mi?	Apagar esta nota?
+%d kazanma · %d kaybetme · %d berabere	%d vitórias · %d derrotas · %d empates
+%s kazandı	%s vence
+%s pas geçti	%s passou
+%s teslim oldu	%s desistiu
+13×13	13×13
+9×9 (kısa oyun)	9×9 (partida curta)
+Almak zorunlu (%d taş) · %s	Captura obrigatória (%d peças) · %s
+Almaya devam: sıradaki kareye dokunun	Continue a capturar: toque na casa seguinte
+Berabere	Empate
+Beyaz %d – Siyah %d · %s	Brancas %d – Pretas %d · %s
+Beyaz (ilk hamle)	Brancas (jogam primeiro)
+Beyaz kazandı	As brancas vencem
+Buraya oynanamaz (ko ya da intihar)	Não se pode jogar aqui (ko ou suicídio)
+Dama	Damas
+Dama (Türk daması)	Damas (turcas)
+Go	Go
+Go 13×13	Go 13×13
+Go 9×9	Go 9×9
+Kazandınız!	Você venceu!
+Kindle düşünüyor…	O Kindle está a pensar…
+Kindle kazandı	O Kindle venceu
+Kindle ne kadar iyi oynasın?	Quão bem deve o Kindle jogar?
+Kindle pas geçti	O Kindle passou
+Kindle teslim oldu · Kazandınız!	O Kindle desistiu · Você venceu!
+Kindle'a karşı	Contra o Kindle
+Kindle'a karşı ya da iki kişi aynı cihazda	Contra o Kindle ou dois jogadores no mesmo aparelho
+Kindle'a karşı: kazanma · kaybetme · beraberlik	Contra o Kindle: vitórias · derrotas · empates
+Masa Oyunları	Jogos de tabuleiro
+Oyuna dön	Voltar ao jogo
+Oyunu bırakıp teslim olunsun mu?	Desistir deste jogo?
+Pas	Passar
+Reversi	Reversi
+Sayım	Contagem
+Sayımı onayla	Confirmar a contagem
+Siyah %d – Beyaz %d + %s · %s %s puanla önde	Pretas %d – Brancas %d + %s · %s à frente por %s
+Siyah %d – Beyaz %d + %s · %s puan fark · %s	Pretas %d – Brancas %d + %s · diferença %s · %s
+Siyah %d – Beyaz %d · %s	Pretas %d – Brancas %d · %s
+Siyah (ilk hamle)	Pretas (jogam primeiro)
+Siyah başlar · köşeler değerlidir	As pretas começam · os cantos valem muito
+Siyah kazandı	As pretas vencem
+Sıra: %s · Beyaz %d – Siyah %d	Vez: %s · Brancas %d – Pretas %d
+Sıra: %s · Siyah %d – Beyaz %d	Vez: %s · Pretas %d – Brancas %d
+Sıra: %s · esir: Siyah %d, Beyaz %d	Vez: %s · capturas: Pretas %d, Brancas %d
+Tahta	Tabuleiro
+Teslim ol	Desistir
+Teslim oldunuz · Kindle kazandı	Você desistiu · O Kindle venceu
+Türk daması · almak zorunlu, en çok taşı alan yol seçilir	Damas turcas · capturar é obrigatório, escolhe-se a captura mais longa
+Çin kuralları: alan sayımı, komi 7,5	Regras chinesas: contagem por área, komi 7,5
+Ölü taşlar hesaplanıyor…	A procurar pedras mortas…
+İki pas: oyun bitti.\nSoluk taşlar ölü sayıldı; değiştirmek için bir zincire dokunun.	Dois passes: o jogo terminou.\nAs pedras esbatidas contam como mortas; toque numa cadeia para mudar.
+İpucu: açık	Dicas: sim
+İpucu: kapalı	Dicas: não
+İstatistikler	Estatísticas

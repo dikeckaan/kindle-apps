@@ -1,0 +1,10 @@
+{
+  "manifest_version": 2,
+  "id": "kindle-apps-masa",
+  "name": "Masa Oyunları",
+  "author": "Kaan Dikeç",
+  "description": "Reversi, Türk daması ve Go (9×9, 13×13): Kindle'a karşı üç zorlukta ya da iki kişi aynı cihazda; geri al, kayıt, istatistik, yanıp sönmeyen ekran",
+  "version": [2026, 10, 19],
+  "dependencies": [],
+  "supported_platforms": ["kindlehf"]
+}
