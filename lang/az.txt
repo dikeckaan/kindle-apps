@@ -740,3 +740,86 @@ Kolay okuma: Kapalı	Asan oxu: Bağlı
 Basit mod: Açık	Sadə rejim: Açıq
 Basit mod: Kapalı	Sadə rejim: Bağlı
 Kolay okuma: bütün yazılar büyük, kalın ve siyah olur.\nBasit mod: menüde dört büyük düğme; panoda yalnızca saat, hava ve üç haber. Teknik uygulamalar gizlenir; bu ekrandan her zaman geri açılabilir.	Asan oxu: bütün yazılar böyük, qalın və qara olur.\nSadə rejim: menyuda dörd böyük düymə; paneldə yalnız saat, hava və üç xəbər. Texniki tətbiqlər gizlədilir; bu ekrandan həmişə geri açıla bilər.
+%d akış	%d lent
+%d akış alınamadı.\nWi-Fi bağlantısını kontrol edin.	%d lent alınmadı.\nWi-Fi bağlantısını yoxlayın.
+%d akış eklendi (%d akış dosyada).	%d lent əlavə edildi (faylda %d).
+%d dakika	%d dəqiqə
+%d yazı · %s	%d yazı · %s
+%s (+%d)	%s (+%d)
+%s / %s · yağış %%%d	%s / %s · yağış %%%d
+Adres yaz	Ünvan yazın
+Adını değiştir	Adını dəyişin
+Ajanda'daki notlar, bayramlar ve özel günler	Gündəlikdəki qeydlər, bayramlar və xüsusi günlər
+Ajanda: bugün ve yarın	Gündəlik: bu gün və sabah
+Akış	Lentlər
+Akış adresi (RSS / Atom)	Lent ünvanı (RSS / Atom)
+Akış ekle	Lent əlavə et
+Akış ekle'ye dokunun: katalogdan popüler bir akış seçin, bir sitenin RSS adresini yazın ya da documents klasörüne attığınız bir .opml dosyasını içe aktarın.	Lent əlavə et düyməsinə toxunun: kataloqdan populyar lent seçin, saytın RSS ünvanını yazın və ya documents qovluğuna qoyduğunuz .opml faylını idxal edin.
+Akış eklenemedi	Lent əlavə edilmədi
+Akış kontrol ediliyor…	Lent yoxlanılır…
+Akış listesi dolu.	Lent siyahısı doludur.
+Akışlar %s dosyasına yazıldı.	Lentlər %s faylına yazıldı.
+Akışları indirmek için Wi-Fi açılsın mı?	Lentləri yükləmək üçün Wi-Fi açılsın?
+Akışı sil	Lenti sil
+Akışın adı	Lentin adı
+Atasözü	Atalar sözü
+Bilim (Türkçe)	Elm (türkcə)
+Bilim (dünya)	Elm (dünya)
+Bir dakika içinde seçilmezse uykuya devam eder.	Bir dəqiqə ərzində seçilməsə, yuxuya davam edir.
+Bir sitenin RSS / Atom adresi	Saytın RSS / Atom ünvanı
+Bloglar (dünya)	Bloqlar (dünya)
+Bu adreste RSS ya da Atom akışı bulunamadı.	Bu ünvanda RSS və ya Atom lenti tapılmadı.
+Bu akış zaten listede.	Bu lent artıq siyahıdadır.
+Bu akışın kayıtlı yazısı yok.\nYenile'ye dokunun.	Bu lentin saxlanmış yazısı yoxdur.\nYenilə düyməsinə toxunun.
+Bu bir web adresi değil.	Bu veb ünvan deyil.
+Bu yazının akışta metni yok; tamamı kaynağında.	Lentdə bu yazının mətni yoxdur; tamamı mənbədədir.
+Dosya yazılamadı.	Fayl yazılmadı.
+Genel	Ümumi
+Günün sözü	Günün sözü
+Güç tuşu: Kindle'a dön	Güc düyməsi: Kindle-a qayıt
+Haber (dünya)	Xəbərlər (dünya)
+Hava Durumu'ndaki ilk şehir; Wi-Fi üç saatte bir kısa süre açılır	Hava tətbiqindəki ilk şəhər; Wi-Fi üç saatdan bir qısa müddətə açılır
+Hava durumu yok: Hava Durumu'nda bir şehir seçin; Wi-Fi ile güncellenir.	Hava yoxdur: Hava tətbiqində şəhər seçin; Wi-Fi ilə yenilənir.
+Henüz akış yok	Hələ lent yoxdur
+Hepsini okundu say	Hamısını oxunmuş say
+Hepsini yenile	Hamısını yenilə
+Katalog	Kataloq
+Katalogdan seç	Kataloqdan seç
+Kayıtlı bir şey yok.	Heç nə qeyd olunmayıb.
+Kindle her %d dakikada bir birkaç saniyeliğine uyanır, ekranı sessizce tazeler ve yeniden derin uykuya geçer; Wi-Fi yalnızca hava durumu için birkaç saatte bir açılır. Güç tuşuna basınca normal Kindle'a dönülür.	Kindle hər %d dəqiqədən bir neçə saniyəlik oyanır, ekranı səssizcə yeniləyir və yenidən dərin yuxuya keçir; Wi-Fi yalnız hava üçün bir neçə saatdan bir açılır. Güc düyməsi adi Kindle-a qaytarır.
+Kindle'a dön	Kindle-a qayıt
+Klasör adı	Qovluğun adı
+Klasör seçin	Qovluq seçin
+Klasörünü değiştir	Qovluğunu dəyiş
+Kültür ve blog (Türkçe)	Mədəniyyət və bloqlar (türkcə)
+OPML dışa aktar	OPML ixrac et
+OPML içe aktar	OPML idxal et
+Sonra	Sonra
+Sonraki ▶	Növbəti ▶
+Teknoloji (Türkçe)	Texnologiya (türkcə)
+Teknoloji (dünya)	Texnologiya (dünya)
+Tümü okundu	Hamısı oxundu
+Tümünü okundu say	Hamısını oxunmuş say
+Türkçe ve dünyadan teknoloji, bilim, blog ve haber akışları	Türkcə və dünyadan texnologiya, elm, bloq və xəbər lentləri
+Uyku Ekranı	Yuxu ekranı
+Uyku ekranı duraklatıldı	Yuxu ekranı dayandırıldı
+Uyku ekranını başlat	Yuxu ekranını başlat
+Uykudayken ön ışığı kapat	Yuxuda işığı söndür
+Uykuya devam	Yuxuya davam
+Wi-Fi bağlanıyor…	Wi-Fi qoşulur…
+Wi-Fi'ı aç	Wi-Fi-ı aç
+Yarın	Sabah
+Yeni klasör…	Yeni qovluq…
+Yenileme	Yeniləmə
+Yenileme aralığı	Yeniləmə aralığı
+Yenileniyor %d / %d\n%s\n\nDurdurmak için dokunun	Yenilənir %d / %d\n%s\n\nDayandırmaq üçün toxunun
+alınamadı	alınmadı
+alınamadı · kayıtlı: %s	alınmadı · saxlanılıb: %s
+documents klasöründe .opml dosyası yok. Wi-Fi ile Yükle ya da USB ile gönderin.	documents qovluğunda .opml faylı yoxdur. Wi-Fi ilə yüklə və ya USB ilə göndərin.
+documents klasöründeki .opml dosyası	documents qovluğundakı .opml faylı
+documents/akis.opml: yedek ya da başka bir okuyucu için	documents/akis.opml: ehtiyat nüsxə və ya başqa oxuyucu üçün
+henüz indirilmedi	hələ yüklənməyib
+Çıkınca ışık eski düzeyine döner	Çıxanda işıq əvvəlki səviyyəsinə qayıdır
+Şiir Defteri kuruluysa onun günün şiiri, değilse bir atasözü	Şeir dəftəri qurulubsa günün şeiri, yoxsa atalar sözü
+Şimdi indir	İndi yüklə
+☾ %02d:%02d'de güncellendi · sonraki %02d:%02d	☾ %02d:%02d-də yeniləndi · növbəti %02d:%02d

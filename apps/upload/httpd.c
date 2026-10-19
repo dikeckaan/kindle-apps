@@ -302,7 +302,7 @@ int httpd_sanitize_name(const char *in, size_t len, char *out, size_t cap)
 int httpd_ext_allowed(const char *name)
 {
 	static const char *const exts[] = { "epub", "pdf", "mobi", "azw", "azw3", "kfx", "txt", "cbz", "cbr",
-					    "djvu", "fb2", "rtf", "doc", "docx", "html", "htm" };
+					    "djvu", "fb2", "rtf", "doc", "docx", "html", "htm", "opml" }; /* opml: feed lists for Akış */
 	const char *dot = strrchr(name, '.');
 	if (!dot || dot == name) return 0;
 	size_t el = strlen(dot + 1);
@@ -371,7 +371,7 @@ static const char PAGE_FORM[] =
 	"autocomplete=\"off\" required>"
 	"<label for=\"file\">Dosyalar</label>"
 	"<input type=\"file\" id=\"file\" name=\"file\" multiple required "
-	"accept=\".epub,.pdf,.mobi,.azw,.azw3,.kfx,.txt,.cbz,.cbr,.djvu,.fb2,.rtf,.doc,.docx,.html,.htm\">"
+	"accept=\".epub,.pdf,.mobi,.azw,.azw3,.kfx,.txt,.cbz,.cbr,.djvu,.fb2,.rtf,.doc,.docx,.html,.htm,.opml\">"
 	"<button type=\"submit\">Gönder</button></form>"
 	"<p><small>EPUB, PDF, MOBI, AZW3, KFX, TXT, CBZ, CBR, DJVU, FB2, RTF, DOC, DOCX, HTML. "
 	"Kindle'ın kendi kitaplığı AZW3, MOBI, KFX, PDF ve TXT'yi gösterir; EPUB ve diğerleri KOReader ile açılır. "

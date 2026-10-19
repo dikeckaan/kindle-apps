@@ -740,3 +740,86 @@ Kolay okuma: Kapalı	Легке читання: вимк
 Basit mod: Açık	Простий режим: увімк
 Basit mod: Kapalı	Простий режим: вимк
 Kolay okuma: bütün yazılar büyük, kalın ve siyah olur.\nBasit mod: menüde dört büyük düğme; panoda yalnızca saat, hava ve üç haber. Teknik uygulamalar gizlenir; bu ekrandan her zaman geri açılabilir.	Легке читання: увесь текст стає великим, жирним і чорним.\nПростий режим: чотири великі кнопки в меню; на панелі лише годинник, погода і три новини. Технічні застосунки приховуються; їх завжди можна повернути на цьому екрані.
+%d akış	Стрічок: %d
+%d akış alınamadı.\nWi-Fi bağlantısını kontrol edin.	Не вдалося завантажити стрічки: %d.\nПеревірте з'єднання Wi-Fi.
+%d akış eklendi (%d akış dosyada).	Додано стрічок: %d (у файлі: %d).
+%d dakika	%d хвилин
+%d yazı · %s	Дописів: %d · %s
+%s (+%d)	%s (+%d)
+%s / %s · yağış %%%d	%s / %s · опади %d%%
+Adres yaz	Ввести адресу
+Adını değiştir	Перейменувати
+Ajanda'daki notlar, bayramlar ve özel günler	Нотатки, свята й особливі дні зі Щоденника
+Ajanda: bugün ve yarın	Щоденник: сьогодні й завтра
+Akış	Стрічки
+Akış adresi (RSS / Atom)	Адреса стрічки (RSS / Atom)
+Akış ekle	Додати стрічку
+Akış ekle'ye dokunun: katalogdan popüler bir akış seçin, bir sitenin RSS adresini yazın ya da documents klasörüne attığınız bir .opml dosyasını içe aktarın.	Натисніть «Додати стрічку»: виберіть популярну стрічку з каталогу, введіть RSS-адресу сайту або імпортуйте файл .opml з теки documents.
+Akış eklenemedi	Не вдалося додати стрічку
+Akış kontrol ediliyor…	Перевірка стрічки…
+Akış listesi dolu.	Список стрічок заповнений.
+Akışlar %s dosyasına yazıldı.	Стрічки збережено в %s.
+Akışları indirmek için Wi-Fi açılsın mı?	Увімкнути Wi-Fi, щоб завантажити стрічки?
+Akışı sil	Видалити стрічку
+Akışın adı	Назва стрічки
+Atasözü	Турецьке прислів'я
+Bilim (Türkçe)	Наука (турецькою)
+Bilim (dünya)	Наука (світ)
+Bir dakika içinde seçilmezse uykuya devam eder.	Знову засне, якщо протягом хвилини нічого не вибрати.
+Bir sitenin RSS / Atom adresi	RSS / Atom-адреса сайту
+Bloglar (dünya)	Блоги (світ)
+Bu adreste RSS ya da Atom akışı bulunamadı.	За цією адресою не знайдено стрічки RSS чи Atom.
+Bu akış zaten listede.	Ця стрічка вже у списку.
+Bu akışın kayıtlı yazısı yok.\nYenile'ye dokunun.	У цій стрічці немає збережених дописів.\nНатисніть «Оновити».
+Bu bir web adresi değil.	Це не вебадреса.
+Bu yazının akışta metni yok; tamamı kaynağında.	У стрічці немає тексту цього допису; повністю він у джерелі.
+Dosya yazılamadı.	Не вдалося записати файл.
+Genel	Загальне
+Günün sözü	Прислів'я дня
+Güç tuşu: Kindle'a dön	Кнопка живлення: назад до Kindle
+Haber (dünya)	Новини (світ)
+Hava Durumu'ndaki ilk şehir; Wi-Fi üç saatte bir kısa süre açılır	Перше місто з Погоди; Wi-Fi ненадовго вмикається раз на три години
+Hava durumu yok: Hava Durumu'nda bir şehir seçin; Wi-Fi ile güncellenir.	Немає погоди: виберіть місто в Погоді; оновлюється через Wi-Fi.
+Henüz akış yok	Стрічок поки немає
+Hepsini okundu say	Позначити все як прочитане
+Hepsini yenile	Оновити всі
+Katalog	Каталог
+Katalogdan seç	Вибрати з каталогу
+Kayıtlı bir şey yok.	Нічого не заплановано.
+Kindle her %d dakikada bir birkaç saniyeliğine uyanır, ekranı sessizce tazeler ve yeniden derin uykuya geçer; Wi-Fi yalnızca hava durumu için birkaç saatte bir açılır. Güç tuşuna basınca normal Kindle'a dönülür.	Кожні %d хвилин Kindle прокидається на кілька секунд, тихо оновлює екран і знову поринає в глибокий сон; Wi-Fi вмикається лише для погоди, раз на кілька годин. Кнопка живлення повертає до звичайного Kindle.
+Kindle'a dön	До Kindle
+Klasör adı	Назва теки
+Klasör seçin	Виберіть теку
+Klasörünü değiştir	Перемістити до іншої теки
+Kültür ve blog (Türkçe)	Культура й блоги (турецькою)
+OPML dışa aktar	Експорт OPML
+OPML içe aktar	Імпорт OPML
+Sonra	Пізніше
+Sonraki ▶	Далі ▶
+Teknoloji (Türkçe)	Технології (турецькою)
+Teknoloji (dünya)	Технології (світ)
+Tümü okundu	Усе прочитано
+Tümünü okundu say	Позначити все як прочитане
+Türkçe ve dünyadan teknoloji, bilim, blog ve haber akışları	Стрічки про технології, науку, блоги й новини, турецькі та з усього світу
+Uyku Ekranı	Нічний екран
+Uyku ekranı duraklatıldı	Нічний екран призупинено
+Uyku ekranını başlat	Запустити нічний екран
+Uykudayken ön ışığı kapat	Вимикати підсвітку уві сні
+Uykuya devam	Спати далі
+Wi-Fi bağlanıyor…	Підключення до Wi-Fi…
+Wi-Fi'ı aç	Увімкнути Wi-Fi
+Yarın	Завтра
+Yeni klasör…	Нова тека…
+Yenileme	Оновлення
+Yenileme aralığı	Інтервал оновлення
+Yenileniyor %d / %d\n%s\n\nDurdurmak için dokunun	Оновлення %d / %d\n%s\n\nНатисніть, щоб зупинити
+alınamadı	не завантажено
+alınamadı · kayıtlı: %s	не завантажено · збережено: %s
+documents klasöründe .opml dosyası yok. Wi-Fi ile Yükle ya da USB ile gönderin.	У теці documents немає файлу .opml. Надішліть його через «Завантаження через Wi-Fi» або USB.
+documents klasöründeki .opml dosyası	Файл .opml з теки documents
+documents/akis.opml: yedek ya da başka bir okuyucu için	documents/akis.opml: резервна копія або для іншої читалки
+henüz indirilmedi	ще не завантажено
+Çıkınca ışık eski düzeyine döner	Під час виходу підсвітка повернеться
+Şiir Defteri kuruluysa onun günün şiiri, değilse bir atasözü	Вірш дня із «Зошита віршів», якщо його встановлено, інакше прислів'я
+Şimdi indir	Завантажити зараз
+☾ %02d:%02d'de güncellendi · sonraki %02d:%02d	☾ оновлено о %02d:%02d · наступне %02d:%02d

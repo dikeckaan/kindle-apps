@@ -5,6 +5,14 @@
 %%%d · şarj oluyor	
 # core/kui/trfmt.c
 %d %s %d, %s	
+# apps/akis/main.c
+%d akış	
+# apps/akis/main.c
+%d akış alınamadı.\nWi-Fi bağlantısını kontrol edin.	
+# apps/akis/main.c
+%d akış eklendi (%d akış dosyada).	
+# apps/uyku/main.c
+%d dakika	
 # apps/deprem/main.c
 %d deprem	
 # apps/odak/main.c
@@ -25,6 +33,8 @@
 %d sa %d dk	
 # apps/deprem/deprem.c
 %d sa önce	
+# apps/akis/main.c
+%d yazı · %s	
 # apps/siir/main.c
 %d şair, yüzyıllara göre	
 # apps/siir/main.c
@@ -47,8 +57,12 @@
 %ld sa %ld dk	
 # apps/wordle/main.c
 %s %d/6 tahminde bildin.	
+# apps/uyku/main.c
+%s (+%d)	
 # apps/upload/main.c
 %s / %s  (%%%d)	
+# apps/uyku/main.c
+%s / %s · yağış %%%d	
 # core/hub/main.c
 %s beklenmedik şekilde kapandı	
 # apps/sysinfo/main.c
@@ -125,10 +139,40 @@
 70.000'den fazla ücretsiz e-kitap. Arama İngilizce başlık ve yazar adlarıyla en iyi sonucu verir.	
 # apps/ebooks/main.c
 AZW3 Kindle'ın kendi okuyucusunda, EPUB KOReader'da açılır.	
+# apps/akis/main.c
+Adres yaz	
+# apps/akis/main.c
+Adını değiştir	
 # apps/ajanda/main.c
 Ajanda	
+# apps/uyku/main.c
+Ajanda'daki notlar, bayramlar ve özel günler	
+# apps/uyku/main.c
+Ajanda: bugün ve yarın	
 # apps/sky/skydata.c
 Akrep	
+# apps/akis/main.c
+Akış	
+# apps/akis/main.c
+Akış adresi (RSS / Atom)	
+# apps/akis/main.c
+Akış ekle	
+# apps/akis/main.c
+Akış ekle'ye dokunun: katalogdan popüler bir akış seçin, bir sitenin RSS adresini yazın ya da documents klasörüne attığınız bir .opml dosyasını içe aktarın.	
+# apps/akis/main.c
+Akış eklenemedi	
+# apps/akis/main.c
+Akış kontrol ediliyor…	
+# apps/akis/main.c
+Akış listesi dolu.	
+# apps/akis/main.c
+Akışlar %s dosyasına yazıldı.	
+# apps/akis/main.c
+Akışları indirmek için Wi-Fi açılsın mı?	
+# apps/akis/main.c
+Akışı sil	
+# apps/akis/main.c
+Akışın adı	
 # apps/pano/pano.c
 Akşam	
 # apps/sky/skydata.c
@@ -177,6 +221,8 @@ Aslan
 At	
 # apps/puzzle/puzzle.c
 At oyun sonu	
+# apps/uyku/main.c
+Atasözü	
 # apps/ajanda/agenda.c
 Atatürk'ü Anma Günü	
 # apps/ajanda/agenda.c
@@ -259,18 +305,36 @@ Beyaz
 Beyaz oynar	
 # apps/news/news.c
 Bilim	
+# apps/akis/akis.c
+Bilim (Türkçe)	
+# apps/akis/akis.c
+Bilim (dünya)	
+# apps/uyku/main.c
+Bir dakika içinde seçilmezse uykuya devam eder.	
+# apps/akis/main.c
+Bir sitenin RSS / Atom adresi	
 # apps/odak/main.c
 Bitir	
 # apps/ebooks/main.c
 Biçim:	
 # apps/ebooks/main.c
 Biçim: %s	
+# apps/akis/akis.c
+Bloglar (dünya)	
 # apps/puzzle/puzzle.c
 Boden matı	
 # apps/sky/skydata.c
 Boğa	
 # apps/puzzle/puzzle.c
 Boğmaca mat	
+# apps/akis/main.c
+Bu adreste RSS ya da Atom akışı bulunamadı.	
+# apps/akis/main.c
+Bu akış zaten listede.	
+# apps/akis/main.c
+Bu akışın kayıtlı yazısı yok.\nYenile'ye dokunun.	
+# apps/akis/main.c
+Bu bir web adresi değil.	
 # apps/sky/main.c
 Bu gece görünen gezegenler: %s	
 # apps/sky/main.c
@@ -289,6 +353,8 @@ Bu oyun bitirilsin mi?
 Bu sefer olmadı	
 # apps/deprem/main.c
 Bu süzgeçle deprem yok.	
+# apps/akis/main.c
+Bu yazının akışta metni yok; tamamı kaynağında.	
 # apps/ajanda/main.c
 Bugün	
 # apps/weather/main.c
@@ -391,6 +457,8 @@ Donan yağmur
 Donan çisenti	
 # apps/upload/main.c
 Dosya bekleniyor…	
+# apps/akis/main.c
+Dosya yazılamadı.	
 # apps/puzzle/main.c
 Doğru değil, tekrar dene	
 # apps/puzzle/main.c
@@ -475,6 +543,8 @@ Gazete
 Gece · Güneş bugün doğmuyor	
 # apps/sky/main.c
 Gece · gün batımı %s, gün doğumu %s	
+# apps/akis/main.c
+Genel	
 # apps/chess/main.c
 Geri al	
 # apps/sky/main.c
@@ -515,6 +585,8 @@ Gündüz · Güneş bugün batmıyor
 Güneş	
 # apps/puzzle/main.c
 Günün bulmacası	
+# apps/uyku/main.c
+Günün sözü	
 # apps/siir/main.c
 Günün şiiri	
 # apps/firewall/main.c
@@ -523,6 +595,10 @@ Güvenlik Duvarı
 Güvenlik duvarı	
 # apps/wordle/main.c
 Güzel!	
+# apps/uyku/main.c
+Güç tuşu: Kindle'a dön	
+# apps/akis/akis.c
+Haber (dünya)	
 # apps/pano/main.c
 Haber alınamadı.	
 # apps/pano/main.c
@@ -551,12 +627,16 @@ Hataları göster: Kapalı
 Hatalı çözüldü	
 # apps/weather/main.c
 Hava Durumu	
+# apps/uyku/main.c
+Hava Durumu'ndaki ilk şehir; Wi-Fi üç saatte bir kısa süre açılır	
 # apps/pano/main.c
 Hava durumu	
 # apps/weather/main.c
 Hava durumu alınamadı.\nWi-Fi bağlantısını kontrol edip Yenile'ye basın.	
 # apps/clock/main.c
 Hava durumu yok (Wi-Fi kapalı olabilir)	
+# apps/uyku/main.c
+Hava durumu yok: Hava Durumu'nda bir şehir seçin; Wi-Fi ile güncellenir.	
 # core/kui/powerui.c
 Hava durumu: %d saatte bir	
 # apps/chess/main.c
@@ -565,6 +645,8 @@ Hayır
 Haziran	
 # apps/currency/main.c
 Hedef para	
+# apps/akis/main.c
+Henüz akış yok	
 # apps/siir/main.c
 Henüz favori şiir yok.\nBir şiirde ☆ düğmesine dokunun.	
 # apps/ebooks/main.c
@@ -575,6 +657,10 @@ Henüz oturum yok
 Henüz parola yok	
 # apps/puzzle/main.c
 Henüz çözülen bulmaca yok.	
+# apps/akis/main.c
+Hepsini okundu say	
+# apps/akis/main.c
+Hepsini yenile	
 # apps/chess/main.c
 Her hamlede tahtayı çevir	
 # apps/ajanda/main.c
@@ -651,13 +737,17 @@ Kartal
 Kastor	
 # core/kui/trfmt.c
 Kasım	
+# apps/akis/main.c
+Katalog	
+# apps/akis/main.c
+Katalogdan seç	
 # apps/weather/main.c
 Kaydedilemedi.	
 # apps/deprem/main.c
 Kaynak	
 # apps/currency/main.c
 Kaynak para	
-# apps/news/reader.c
+# apps/akis/main.c
 Kaynak: %s	
 # apps/deprem/main.c
 Kaynak: Boğaziçi Üni. Kandilli Rasathanesi (KRDAE)	
@@ -669,6 +759,8 @@ Kaynak: gutenberg.org/ebooks/%d
 Kaynaklar	
 # apps/news/main.c
 Kaynağa dokunun: haberlerini açar. ☑ / ☐: ön sayfada gösterilsin mi.	
+# apps/uyku/main.c
+Kayıtlı bir şey yok.	
 # apps/mines/main.c
 Kazandın!	
 # apps/wordle/main.c
@@ -685,6 +777,10 @@ Kendiliğinden başladı. Zamanlayıcı için dokunun.
 Kilidi aç (yeni PIN)	
 # apps/sleep/main.c
 Kindle bu süre dokunulmadan kalınca uyur.\n"Hiç uyuma" pili hızlı tüketir.\nYeniden başlatınca varsayılana dönebilir.	
+# apps/uyku/main.c
+Kindle her %d dakikada bir birkaç saniyeliğine uyanır, ekranı sessizce tazeler ve yeniden derin uykuya geçer; Wi-Fi yalnızca hava durumu için birkaç saatte bir açılır. Güç tuşuna basınca normal Kindle'a dönülür.	
+# apps/uyku/main.c
+Kindle'a dön	
 # apps/ebooks/main.c
 Kitap	
 # apps/ebooks/main.c
@@ -693,6 +789,12 @@ Kitap ara
 Kitap ara (başlık veya yazar)	
 # apps/ebooks/main.c
 Kitaplığa eklendi:\n%s	
+# apps/akis/main.c
+Klasör adı	
+# apps/akis/main.c
+Klasör seçin	
+# apps/akis/main.c
+Klasörünü değiştir	
 # apps/chess/levels.c
 Kolay	
 # core/hub/main.c
@@ -747,6 +849,8 @@ Kuğu
 Köşe matı	
 # apps/news/news.c
 Kültür	
+# apps/akis/akis.c
+Kültür ve blog (Türkçe)	
 # apps/puzzle/puzzle.c
 Küçük terfi	
 # apps/sky/skydata.c
@@ -777,7 +881,7 @@ Mayın: %d
 Mayına bastın	
 # core/kui/trfmt.c
 Mayıs	
-# apps/chess/main.c
+# apps/akis/main.c
 Menü	
 # core/hub/upd_ui.c
 Menü sırası	
@@ -827,6 +931,10 @@ Notlar %d–%d / %d · kaydırın
 Notu düzenle	
 # apps/odak/main.c
 ODAK	
+# apps/akis/main.c
+OPML dışa aktar	
+# apps/akis/main.c
+OPML içe aktar	
 # core/kui/trfmt.c
 Ocak	
 # apps/odak/main.c
@@ -1027,12 +1135,16 @@ Son dakika haberleri
 Son dördün	
 # apps/puzzle/puzzle.c
 Son sıra matı	
+# apps/akis/main.c
+Sonra	
 # core/hub/main.c
 Sonraki	
 # apps/odak/main.c
 Sonraki aşama kendiliğinden başlasın	
 # apps/puzzle/main.c
 Sonraki hamle	
+# apps/akis/main.c
+Sonraki ▶	
 # apps/weather/main.c
 Sonuç bulunamadı	
 # apps/ebooks/main.c
@@ -1105,6 +1217,10 @@ Tek kart çek
 Tek oyunculu	
 # apps/news/news.c
 Teknoloji	
+# apps/akis/akis.c
+Teknoloji (Türkçe)	
+# apps/akis/akis.c
+Teknoloji (dünya)	
 # apps/chess/main.c
 Tekrar dene	
 # apps/upload/main.c
@@ -1121,12 +1237,18 @@ Tüm kurlar
 Tüm uygulamalar güncel	
 # apps/deprem/main.c
 Tümü	
+# apps/akis/main.c
+Tümü okundu	
 # core/hub/upd_ui.c
 Tümünü güncelle	
+# apps/akis/main.c
+Tümünü okundu say	
 # apps/news/news.c
 Türkiye	
 # apps/deprem/main.c
 Türkiye saati	
+# apps/akis/main.c
+Türkçe ve dünyadan teknoloji, bilim, blog ve haber akışları	
 # apps/odak/main.c
 UZUN MOLA	
 # apps/ajanda/agenda.c
@@ -1137,6 +1259,12 @@ Usta
 Uygulamalar	
 # apps/sleep/main.c
 Uyku Ayarı	
+# apps/uyku/main.c
+Uyku Ekranı	
+# apps/uyku/main.c
+Uyku ekranı duraklatıldı	
+# apps/uyku/main.c
+Uyku ekranını başlat	
 # core/kui/powerui.c
 Uykuda saat: %d dakikada bir	
 # core/kui/powerui.c
@@ -1145,6 +1273,10 @@ Uykuda saat: her dakika
 Uykuda ön ışık: açık	
 # core/kui/powerui.c
 Uykuda ön ışık: kapalı	
+# apps/uyku/main.c
+Uykudayken ön ışığı kapat	
+# apps/uyku/main.c
+Uykuya devam	
 # core/kui/powerui.c
 Uykuya geçiş: %d dk dokunulmazsa	
 # apps/deprem/main.c
@@ -1169,12 +1301,16 @@ Vezir oyun sonu
 Vezir ve kale oyun sonu	
 # apps/puzzle/main.c
 Wi-Fi bağlantısını kontrol edin.	
+# apps/akis/main.c
+Wi-Fi bağlanıyor…	
 # apps/upload/main.c
 Wi-Fi ile Yükle	
-# apps/upload/main.c
+# apps/akis/main.c
 Wi-Fi kapalı	
 # apps/upload/main.c
 Wi-Fi'yi açın; adres burada görünecek.	
+# apps/akis/main.c
+Wi-Fi'ı aç	
 # apps/ajanda/main.c
 Yaklaşanlar	
 # core/kui/powerui.c
@@ -1183,6 +1319,8 @@ Yarım
 Yarım altın	
 # apps/ajanda/main.c
 Yarım gün	
+# apps/uyku/main.c
+Yarın	
 # apps/pano/pano.c
 Yatsı	
 # apps/sky/skydata.c
@@ -1207,6 +1345,8 @@ Yeni SSH parolası (en az 6)
 Yeni ay	
 # apps/odak/main.c
 Yeni etiket	
+# apps/akis/main.c
+Yeni klasör…	
 # apps/ajanda/main.c
 Yeni not	
 # apps/chess/main.c
@@ -1215,8 +1355,14 @@ Yeni oyun
 Yeniden dene	
 # core/hub/upd_ui.c
 Yeniden kur	
-# apps/currency/main.c
+# apps/akis/main.c
 Yenile	
+# apps/akis/main.c
+Yenileme	
+# apps/uyku/main.c
+Yenileme aralığı	
+# apps/akis/main.c
+Yenileniyor %d / %d\n%s\n\nDurdurmak için dokunun	
 # apps/chess/chess_game.c
 Yetersiz taş — berabere	
 # apps/puzzle/puzzle.c
@@ -1251,6 +1397,10 @@ Zorluk
 Zorluk seçin	
 # apps/puzzle/puzzle.c
 Zugzwang	
+# apps/akis/main.c
+alınamadı	
+# apps/akis/main.c
+alınamadı · kayıtlı: %s	
 # apps/deprem/deprem.c
 az önce	
 # apps/sysinfo/main.c
@@ -1263,10 +1413,18 @@ daha eski
 derinlik %s km	
 # apps/odak/main.c
 dk	
+# apps/akis/main.c
+documents klasöründe .opml dosyası yok. Wi-Fi ile Yükle ya da USB ile gönderin.	
+# apps/akis/main.c
+documents klasöründeki .opml dosyası	
+# apps/akis/main.c
+documents/akis.opml: yedek ya da başka bir okuyucu için	
 # apps/puzzle/puzzle.c
 f2/f7 saldırısı	
 # apps/news/main.c
 güncellendi %02d:%02d	
+# apps/akis/main.c
+henüz indirilmedi	
 # apps/deprem/main.c
 son 24 saat	
 # apps/ajanda/main.c
@@ -1325,6 +1483,8 @@ yarım gün
 Çözüm: %s · bitti	
 # apps/puzzle/main.c
 Çözümü göster	
+# apps/uyku/main.c
+Çıkınca ışık eski düzeyine döner	
 # apps/mines/main.c
 Çıkış	
 # apps/news/main.c
@@ -1421,10 +1581,14 @@ yarım gün
 Şiddetli yağmur	
 # apps/siir/main.c
 Şiir Defteri	
+# apps/uyku/main.c
+Şiir Defteri kuruluysa onun günün şiiri, değilse bir atasözü	
 # apps/siir/main.c
 Şiirler yüklenemedi.	
 # apps/sky/main.c
 Şimdi	
+# apps/akis/main.c
+Şimdi indir	
 # apps/puzzle/puzzle.c
 Şiş	
 # apps/pano/pano.c
@@ -1459,6 +1623,8 @@ yarım gün
 ≈ %d sa %d dk	
 # apps/sky/main.c
 ☉ Güneş	
+# apps/uyku/main.c
+☾ %02d:%02d'de güncellendi · sonraki %02d:%02d	
 # apps/sky/main.c
 ☾ Ay	
 # apps/odak/main.c

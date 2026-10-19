@@ -740,3 +740,86 @@ Kolay okuma: Kapalı	Lettura facile: No
 Basit mod: Açık	Modo semplice: Sì
 Basit mod: Kapalı	Modo semplice: No
 Kolay okuma: bütün yazılar büyük, kalın ve siyah olur.\nBasit mod: menüde dört büyük düğme; panoda yalnızca saat, hava ve üç haber. Teknik uygulamalar gizlenir; bu ekrandan her zaman geri açılabilir.	Lettura facile: tutti i testi diventano grandi, in grassetto e neri.\nModo semplice: quattro grandi pulsanti nel menu; il pannello mostra solo ora, meteo e tre notizie. Le app tecniche vengono nascoste; si possono sempre riattivare da questa schermata.
+%d akış	%d feed
+%d akış alınamadı.\nWi-Fi bağlantısını kontrol edin.	Impossibile scaricare %d feed.\nControlla la connessione Wi-Fi.
+%d akış eklendi (%d akış dosyada).	%d feed aggiunti (%d nel file).
+%d dakika	%d minuti
+%d yazı · %s	%d articoli · %s
+%s (+%d)	%s (+%d)
+%s / %s · yağış %%%d	%s / %s · pioggia %d%%
+Adres yaz	Scrivi un indirizzo
+Adını değiştir	Rinomina
+Ajanda'daki notlar, bayramlar ve özel günler	Note, festività e giornate speciali dell'Agenda
+Ajanda: bugün ve yarın	Agenda: oggi e domani
+Akış	Feed
+Akış adresi (RSS / Atom)	Indirizzo del feed (RSS / Atom)
+Akış ekle	Aggiungi feed
+Akış ekle'ye dokunun: katalogdan popüler bir akış seçin, bir sitenin RSS adresini yazın ya da documents klasörüne attığınız bir .opml dosyasını içe aktarın.	Tocca Aggiungi feed: scegli un feed popolare dal catalogo, scrivi l'indirizzo RSS di un sito o importa un file .opml messo nella cartella documents.
+Akış eklenemedi	Impossibile aggiungere il feed
+Akış kontrol ediliyor…	Controllo del feed…
+Akış listesi dolu.	L'elenco dei feed è pieno.
+Akışlar %s dosyasına yazıldı.	I feed sono stati salvati in %s.
+Akışları indirmek için Wi-Fi açılsın mı?	Attivare il Wi-Fi per scaricare i feed?
+Akışı sil	Elimina il feed
+Akışın adı	Nome del feed
+Atasözü	Proverbio turco
+Bilim (Türkçe)	Scienza (turco)
+Bilim (dünya)	Scienza (mondo)
+Bir dakika içinde seçilmezse uykuya devam eder.	Torna a dormire se entro un minuto non si sceglie nulla.
+Bir sitenin RSS / Atom adresi	L'indirizzo RSS / Atom di un sito
+Bloglar (dünya)	Blog (mondo)
+Bu adreste RSS ya da Atom akışı bulunamadı.	Nessun feed RSS o Atom trovato a questo indirizzo.
+Bu akış zaten listede.	Questo feed è già nell'elenco.
+Bu akışın kayıtlı yazısı yok.\nYenile'ye dokunun.	Questo feed non ha articoli salvati.\nTocca Aggiorna.
+Bu bir web adresi değil.	Questo non è un indirizzo web.
+Bu yazının akışta metni yok; tamamı kaynağında.	Il feed non contiene il testo di questo articolo; è tutto alla fonte.
+Dosya yazılamadı.	Impossibile scrivere il file.
+Genel	Generale
+Günün sözü	Detto del giorno
+Güç tuşu: Kindle'a dön	Tasto di accensione: torna al Kindle
+Haber (dünya)	Notizie (mondo)
+Hava Durumu'ndaki ilk şehir; Wi-Fi üç saatte bir kısa süre açılır	La prima città di Meteo; il Wi-Fi si accende brevemente ogni tre ore
+Hava durumu yok: Hava Durumu'nda bir şehir seçin; Wi-Fi ile güncellenir.	Nessun meteo: scegli una città in Meteo; si aggiorna via Wi-Fi.
+Henüz akış yok	Ancora nessun feed
+Hepsini okundu say	Segna tutto come letto
+Hepsini yenile	Aggiorna tutto
+Katalog	Catalogo
+Katalogdan seç	Scegli dal catalogo
+Kayıtlı bir şey yok.	Niente in programma.
+Kindle her %d dakikada bir birkaç saniyeliğine uyanır, ekranı sessizce tazeler ve yeniden derin uykuya geçer; Wi-Fi yalnızca hava durumu için birkaç saatte bir açılır. Güç tuşuna basınca normal Kindle'a dönülür.	Ogni %d minuti il Kindle si sveglia per qualche secondo, aggiorna lo schermo in silenzio e torna in sospensione profonda; il Wi-Fi si accende solo per il meteo, ogni qualche ora. Il tasto di accensione riporta al Kindle normale.
+Kindle'a dön	Torna al Kindle
+Klasör adı	Nome della cartella
+Klasör seçin	Scegli una cartella
+Klasörünü değiştir	Cambia cartella
+Kültür ve blog (Türkçe)	Cultura e blog (turco)
+OPML dışa aktar	Esporta OPML
+OPML içe aktar	Importa OPML
+Sonra	Più tardi
+Sonraki ▶	Successivo ▶
+Teknoloji (Türkçe)	Tecnologia (turco)
+Teknoloji (dünya)	Tecnologia (mondo)
+Tümü okundu	Tutto letto
+Tümünü okundu say	Segna tutto come letto
+Türkçe ve dünyadan teknoloji, bilim, blog ve haber akışları	Feed di tecnologia, scienza, blog e notizie, turchi e da tutto il mondo
+Uyku Ekranı	Schermo notte
+Uyku ekranı duraklatıldı	Schermo notte in pausa
+Uyku ekranını başlat	Avvia lo schermo notte
+Uykudayken ön ışığı kapat	Spegni la luce durante il sonno
+Uykuya devam	Continua a dormire
+Wi-Fi bağlanıyor…	Connessione al Wi-Fi…
+Wi-Fi'ı aç	Attiva Wi-Fi
+Yarın	Domani
+Yeni klasör…	Nuova cartella…
+Yenileme	Aggiornamento
+Yenileme aralığı	Intervallo di aggiornamento
+Yenileniyor %d / %d\n%s\n\nDurdurmak için dokunun	Aggiornamento %d / %d\n%s\n\nTocca per fermare
+alınamadı	non scaricato
+alınamadı · kayıtlı: %s	non scaricato · salvato: %s
+documents klasöründe .opml dosyası yok. Wi-Fi ile Yükle ya da USB ile gönderin.	Nessun file .opml nella cartella documents. Invialo con Carica via Wi-Fi o tramite USB.
+documents klasöründeki .opml dosyası	Un file .opml nella cartella documents
+documents/akis.opml: yedek ya da başka bir okuyucu için	documents/akis.opml: backup o per un altro lettore
+henüz indirilmedi	non ancora scaricato
+Çıkınca ışık eski düzeyine döner	All'uscita la luce torna al suo livello
+Şiir Defteri kuruluysa onun günün şiiri, değilse bir atasözü	La poesia del giorno del Quaderno di poesie se installato, altrimenti un proverbio
+Şimdi indir	Scarica ora
+☾ %02d:%02d'de güncellendi · sonraki %02d:%02d	☾ aggiornato alle %02d:%02d · prossimo %02d:%02d

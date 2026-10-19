@@ -740,3 +740,86 @@ Kolay okuma: Kapalı	Let læsning: Fra
 Basit mod: Açık	Enkel tilstand: Til
 Basit mod: Kapalı	Enkel tilstand: Fra
 Kolay okuma: bütün yazılar büyük, kalın ve siyah olur.\nBasit mod: menüde dört büyük düğme; panoda yalnızca saat, hava ve üç haber. Teknik uygulamalar gizlenir; bu ekrandan her zaman geri açılabilir.	Let læsning: al tekst bliver stor, fed og sort.\nEnkel tilstand: fire store knapper i menuen; oversigten viser kun ur, vejr og tre nyheder. Tekniske apps skjules; de kan altid slås til igen fra denne skærm.
+%d akış	%d feeds
+%d akış alınamadı.\nWi-Fi bağlantısını kontrol edin.	%d feeds kunne ikke hentes.\nTjek wi-fi-forbindelsen.
+%d akış eklendi (%d akış dosyada).	%d feeds tilføjet (%d i filen).
+%d dakika	%d minutter
+%d yazı · %s	%d indlæg · %s
+%s (+%d)	%s (+%d)
+%s / %s · yağış %%%d	%s / %s · regn %d%%
+Adres yaz	Skriv en adresse
+Adını değiştir	Omdøb
+Ajanda'daki notlar, bayramlar ve özel günler	Noter, helligdage og særlige dage fra Kalenderen
+Ajanda: bugün ve yarın	Kalender: i dag og i morgen
+Akış	Feeds
+Akış adresi (RSS / Atom)	Feedadresse (RSS / Atom)
+Akış ekle	Tilføj feed
+Akış ekle'ye dokunun: katalogdan popüler bir akış seçin, bir sitenin RSS adresini yazın ya da documents klasörüne attığınız bir .opml dosyasını içe aktarın.	Tryk på Tilføj feed: vælg et populært feed i kataloget, skriv et websteds RSS-adresse, eller importer en .opml-fil, du har lagt i mappen documents.
+Akış eklenemedi	Feedet kunne ikke tilføjes
+Akış kontrol ediliyor…	Kontrollerer feedet…
+Akış listesi dolu.	Feedlisten er fuld.
+Akışlar %s dosyasına yazıldı.	Feedene blev gemt i %s.
+Akışları indirmek için Wi-Fi açılsın mı?	Slå wi-fi til for at hente feedene?
+Akışı sil	Slet feedet
+Akışın adı	Feedets navn
+Atasözü	Tyrkisk ordsprog
+Bilim (Türkçe)	Videnskab (tyrkisk)
+Bilim (dünya)	Videnskab (verden)
+Bir dakika içinde seçilmezse uykuya devam eder.	Falder i søvn igen, hvis intet vælges inden for et minut.
+Bir sitenin RSS / Atom adresi	Et websteds RSS- / Atom-adresse
+Bloglar (dünya)	Blogs (verden)
+Bu adreste RSS ya da Atom akışı bulunamadı.	Der blev ikke fundet noget RSS- eller Atom-feed på adressen.
+Bu akış zaten listede.	Feedet er allerede på listen.
+Bu akışın kayıtlı yazısı yok.\nYenile'ye dokunun.	Feedet har ingen gemte indlæg.\nTryk på Opdater.
+Bu bir web adresi değil.	Det er ikke en webadresse.
+Bu yazının akışta metni yok; tamamı kaynağında.	Feedet har ingen tekst til indlægget; det hele ligger hos kilden.
+Dosya yazılamadı.	Filen kunne ikke skrives.
+Genel	Generelt
+Günün sözü	Dagens ordsprog
+Güç tuşu: Kindle'a dön	Tænd/sluk-knappen: tilbage til Kindle
+Haber (dünya)	Nyheder (verden)
+Hava Durumu'ndaki ilk şehir; Wi-Fi üç saatte bir kısa süre açılır	Den første by i Vejret; wi-fi tændes kort hver tredje time
+Hava durumu yok: Hava Durumu'nda bir şehir seçin; Wi-Fi ile güncellenir.	Intet vejr: vælg en by i Vejret; det opdateres via wi-fi.
+Henüz akış yok	Ingen feeds endnu
+Hepsini okundu say	Markér alt som læst
+Hepsini yenile	Opdater alle
+Katalog	Katalog
+Katalogdan seç	Vælg fra kataloget
+Kayıtlı bir şey yok.	Intet planlagt.
+Kindle her %d dakikada bir birkaç saniyeliğine uyanır, ekranı sessizce tazeler ve yeniden derin uykuya geçer; Wi-Fi yalnızca hava durumu için birkaç saatte bir açılır. Güç tuşuna basınca normal Kindle'a dönülür.	Hvert %d. minut vågner Kindle et par sekunder, opdaterer skærmen stille og går i dyb søvn igen; wi-fi tændes kun for vejret, med nogle timers mellemrum. Tænd/sluk-knappen fører tilbage til den normale Kindle.
+Kindle'a dön	Til Kindle
+Klasör adı	Mappenavn
+Klasör seçin	Vælg en mappe
+Klasörünü değiştir	Flyt til en anden mappe
+Kültür ve blog (Türkçe)	Kultur og blogs (tyrkisk)
+OPML dışa aktar	Eksportér OPML
+OPML içe aktar	Importér OPML
+Sonra	Senere
+Sonraki ▶	Næste ▶
+Teknoloji (Türkçe)	Teknologi (tyrkisk)
+Teknoloji (dünya)	Teknologi (verden)
+Tümü okundu	Alt læst
+Tümünü okundu say	Markér alt som læst
+Türkçe ve dünyadan teknoloji, bilim, blog ve haber akışları	Feeds om teknologi, videnskab, blogs og nyheder, tyrkiske og fra hele verden
+Uyku Ekranı	Hvileskærm
+Uyku ekranı duraklatıldı	Hvileskærmen er sat på pause
+Uyku ekranını başlat	Start hvileskærmen
+Uykudayken ön ışığı kapat	Sluk lyset i hvile
+Uykuya devam	Sov videre
+Wi-Fi bağlanıyor…	Forbinder til wi-fi…
+Wi-Fi'ı aç	Slå wi-fi til
+Yarın	I morgen
+Yeni klasör…	Ny mappe…
+Yenileme	Opdatering
+Yenileme aralığı	Opdateringsinterval
+Yenileniyor %d / %d\n%s\n\nDurdurmak için dokunun	Opdaterer %d / %d\n%s\n\nTryk for at stoppe
+alınamadı	kunne ikke hentes
+alınamadı · kayıtlı: %s	kunne ikke hentes · gemt: %s
+documents klasöründe .opml dosyası yok. Wi-Fi ile Yükle ya da USB ile gönderin.	Der er ingen .opml-fil i mappen documents. Send en med Upload via Wi-Fi eller via USB.
+documents klasöründeki .opml dosyası	En .opml-fil i mappen documents
+documents/akis.opml: yedek ya da başka bir okuyucu için	documents/akis.opml: sikkerhedskopi eller til en anden læser
+henüz indirilmedi	ikke hentet endnu
+Çıkınca ışık eski düzeyine döner	Lyset vender tilbage, når du afslutter
+Şiir Defteri kuruluysa onun günün şiiri, değilse bir atasözü	Dagens digt fra Digtbog, hvis den er installeret, ellers et ordsprog
+Şimdi indir	Hent nu
+☾ %02d:%02d'de güncellendi · sonraki %02d:%02d	☾ opdateret %02d:%02d · næste %02d:%02d

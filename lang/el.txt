@@ -740,3 +740,86 @@ Kolay okuma: Kapalı	Εύκολη ανάγνωση: Όχι
 Basit mod: Açık	Απλή λειτουργία: Ναι
 Basit mod: Kapalı	Απλή λειτουργία: Όχι
 Kolay okuma: bütün yazılar büyük, kalın ve siyah olur.\nBasit mod: menüde dört büyük düğme; panoda yalnızca saat, hava ve üç haber. Teknik uygulamalar gizlenir; bu ekrandan her zaman geri açılabilir.	Εύκολη ανάγνωση: όλα τα κείμενα γίνονται μεγάλα, έντονα και μαύρα.\nΑπλή λειτουργία: τέσσερα μεγάλα κουμπιά στο μενού· ο πίνακας δείχνει μόνο ώρα, καιρό και τρεις ειδήσεις. Οι τεχνικές εφαρμογές κρύβονται· μπορούν πάντα να ενεργοποιηθούν ξανά από αυτή την οθόνη.
+%d akış	%d ροές
+%d akış alınamadı.\nWi-Fi bağlantısını kontrol edin.	Δεν ήταν δυνατή η λήψη %d ροών.\nΕλέγξτε τη σύνδεση Wi-Fi.
+%d akış eklendi (%d akış dosyada).	Προστέθηκαν %d ροές (%d στο αρχείο).
+%d dakika	%d λεπτά
+%d yazı · %s	%d άρθρα · %s
+%s (+%d)	%s (+%d)
+%s / %s · yağış %%%d	%s / %s · βροχή %d%%
+Adres yaz	Πληκτρολόγηση διεύθυνσης
+Adını değiştir	Μετονομασία
+Ajanda'daki notlar, bayramlar ve özel günler	Σημειώσεις, αργίες και ξεχωριστές μέρες από την Ατζέντα
+Ajanda: bugün ve yarın	Ατζέντα: σήμερα και αύριο
+Akış	Ροές
+Akış adresi (RSS / Atom)	Διεύθυνση ροής (RSS / Atom)
+Akış ekle	Προσθήκη ροής
+Akış ekle'ye dokunun: katalogdan popüler bir akış seçin, bir sitenin RSS adresini yazın ya da documents klasörüne attığınız bir .opml dosyasını içe aktarın.	Πατήστε Προσθήκη ροής: διαλέξτε μια δημοφιλή ροή από τον κατάλογο, γράψτε τη διεύθυνση RSS ενός ιστότοπου ή εισαγάγετε ένα αρχείο .opml από τον φάκελο documents.
+Akış eklenemedi	Δεν ήταν δυνατή η προσθήκη της ροής
+Akış kontrol ediliyor…	Έλεγχος ροής…
+Akış listesi dolu.	Η λίστα ροών είναι πλήρης.
+Akışlar %s dosyasına yazıldı.	Οι ροές αποθηκεύτηκαν στο %s.
+Akışları indirmek için Wi-Fi açılsın mı?	Ενεργοποίηση Wi-Fi για λήψη των ροών;
+Akışı sil	Διαγραφή ροής
+Akışın adı	Όνομα ροής
+Atasözü	Τουρκική παροιμία
+Bilim (Türkçe)	Επιστήμη (τουρκικά)
+Bilim (dünya)	Επιστήμη (κόσμος)
+Bir dakika içinde seçilmezse uykuya devam eder.	Επιστρέφει σε ύπνο αν δεν επιλεγεί κάτι μέσα σε ένα λεπτό.
+Bir sitenin RSS / Atom adresi	Η διεύθυνση RSS / Atom ενός ιστότοπου
+Bloglar (dünya)	Ιστολόγια (κόσμος)
+Bu adreste RSS ya da Atom akışı bulunamadı.	Δεν βρέθηκε ροή RSS ή Atom σε αυτή τη διεύθυνση.
+Bu akış zaten listede.	Αυτή η ροή υπάρχει ήδη στη λίστα.
+Bu akışın kayıtlı yazısı yok.\nYenile'ye dokunun.	Η ροή δεν έχει αποθηκευμένα άρθρα.\nΠατήστε Ανανέωση.
+Bu bir web adresi değil.	Αυτή δεν είναι διεύθυνση ιστού.
+Bu yazının akışta metni yok; tamamı kaynağında.	Η ροή δεν έχει κείμενο για αυτό το άρθρο· είναι ολόκληρο στην πηγή.
+Dosya yazılamadı.	Δεν ήταν δυνατή η εγγραφή του αρχείου.
+Genel	Γενικά
+Günün sözü	Η ρήση της ημέρας
+Güç tuşu: Kindle'a dön	Κουμπί λειτουργίας: επιστροφή στο Kindle
+Haber (dünya)	Ειδήσεις (κόσμος)
+Hava Durumu'ndaki ilk şehir; Wi-Fi üç saatte bir kısa süre açılır	Η πρώτη πόλη του Καιρού· το Wi-Fi ανοίγει για λίγο κάθε τρεις ώρες
+Hava durumu yok: Hava Durumu'nda bir şehir seçin; Wi-Fi ile güncellenir.	Χωρίς καιρό: διαλέξτε πόλη στον Καιρό· ενημερώνεται μέσω Wi-Fi.
+Henüz akış yok	Δεν υπάρχουν ακόμα ροές
+Hepsini okundu say	Σήμανση όλων ως αναγνωσμένα
+Hepsini yenile	Ανανέωση όλων
+Katalog	Κατάλογος
+Katalogdan seç	Επιλογή από τον κατάλογο
+Kayıtlı bir şey yok.	Τίποτα προγραμματισμένο.
+Kindle her %d dakikada bir birkaç saniyeliğine uyanır, ekranı sessizce tazeler ve yeniden derin uykuya geçer; Wi-Fi yalnızca hava durumu için birkaç saatte bir açılır. Güç tuşuna basınca normal Kindle'a dönülür.	Κάθε %d λεπτά το Kindle ξυπνά για λίγα δευτερόλεπτα, ανανεώνει αθόρυβα την οθόνη και ξαναπέφτει σε βαθύ ύπνο· το Wi-Fi ανοίγει μόνο για τον καιρό, κάθε λίγες ώρες. Το κουμπί λειτουργίας επιστρέφει στο κανονικό Kindle.
+Kindle'a dön	Πίσω στο Kindle
+Klasör adı	Όνομα φακέλου
+Klasör seçin	Επιλέξτε φάκελο
+Klasörünü değiştir	Μετακίνηση σε άλλο φάκελο
+Kültür ve blog (Türkçe)	Πολιτισμός και ιστολόγια (τουρκικά)
+OPML dışa aktar	Εξαγωγή OPML
+OPML içe aktar	Εισαγωγή OPML
+Sonra	Αργότερα
+Sonraki ▶	Επόμενο ▶
+Teknoloji (Türkçe)	Τεχνολογία (τουρκικά)
+Teknoloji (dünya)	Τεχνολογία (κόσμος)
+Tümü okundu	Όλα αναγνωσμένα
+Tümünü okundu say	Σήμανση όλων ως αναγνωσμένα
+Türkçe ve dünyadan teknoloji, bilim, blog ve haber akışları	Ροές τεχνολογίας, επιστήμης, ιστολογίων και ειδήσεων, τουρκικές και από όλο τον κόσμο
+Uyku Ekranı	Οθόνη ύπνου
+Uyku ekranı duraklatıldı	Η οθόνη ύπνου σε παύση
+Uyku ekranını başlat	Έναρξη οθόνης ύπνου
+Uykudayken ön ışığı kapat	Σβήσιμο φωτισμού στον ύπνο
+Uykuya devam	Συνέχεια ύπνου
+Wi-Fi bağlanıyor…	Σύνδεση στο Wi-Fi…
+Wi-Fi'ı aç	Ενεργοποίηση Wi-Fi
+Yarın	Αύριο
+Yeni klasör…	Νέος φάκελος…
+Yenileme	Ανανέωση
+Yenileme aralığı	Διάστημα ανανέωσης
+Yenileniyor %d / %d\n%s\n\nDurdurmak için dokunun	Ανανέωση %d / %d\n%s\n\nΠατήστε για διακοπή
+alınamadı	αποτυχία λήψης
+alınamadı · kayıtlı: %s	αποτυχία λήψης · αποθηκεύτηκε: %s
+documents klasöründe .opml dosyası yok. Wi-Fi ile Yükle ya da USB ile gönderin.	Δεν υπάρχει αρχείο .opml στον φάκελο documents. Στείλτε ένα με τη Μεταφόρτωση μέσω Wi-Fi ή μέσω USB.
+documents klasöründeki .opml dosyası	Ένα αρχείο .opml στον φάκελο documents
+documents/akis.opml: yedek ya da başka bir okuyucu için	documents/akis.opml: αντίγραφο ασφαλείας ή για άλλο πρόγραμμα
+henüz indirilmedi	δεν έχει γίνει λήψη ακόμα
+Çıkınca ışık eski düzeyine döner	Ο φωτισμός επανέρχεται κατά την έξοδο
+Şiir Defteri kuruluysa onun günün şiiri, değilse bir atasözü	Το ποίημα της ημέρας από το Τετράδιο ποιημάτων αν είναι εγκατεστημένο, αλλιώς μια παροιμία
+Şimdi indir	Λήψη τώρα
+☾ %02d:%02d'de güncellendi · sonraki %02d:%02d	☾ ενημέρωση %02d:%02d · επόμενη %02d:%02d

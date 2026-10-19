@@ -740,3 +740,86 @@ Kolay okuma: Kapalı	Snadné čtení: Ne
 Basit mod: Açık	Jednoduchý režim: Ano
 Basit mod: Kapalı	Jednoduchý režim: Ne
 Kolay okuma: bütün yazılar büyük, kalın ve siyah olur.\nBasit mod: menüde dört büyük düğme; panoda yalnızca saat, hava ve üç haber. Teknik uygulamalar gizlenir; bu ekrandan her zaman geri açılabilir.	Snadné čtení: veškerý text bude velký, tučný a černý.\nJednoduchý režim: čtyři velká tlačítka v menu; přehled ukazuje jen hodiny, počasí a tři zprávy. Technické aplikace se skryjí; na této obrazovce je lze kdykoli znovu zapnout.
+%d akış	Kanály: %d
+%d akış alınamadı.\nWi-Fi bağlantısını kontrol edin.	Nepodařilo se stáhnout kanály: %d.\nZkontrolujte připojení Wi-Fi.
+%d akış eklendi (%d akış dosyada).	Přidáno kanálů: %d (v souboru: %d).
+%d dakika	%d minut
+%d yazı · %s	Články: %d · %s
+%s (+%d)	%s (+%d)
+%s / %s · yağış %%%d	%s / %s · srážky %d%%
+Adres yaz	Zadat adresu
+Adını değiştir	Přejmenovat
+Ajanda'daki notlar, bayramlar ve özel günler	Poznámky, svátky a zvláštní dny z Diáře
+Ajanda: bugün ve yarın	Diář: dnes a zítra
+Akış	Kanály
+Akış adresi (RSS / Atom)	Adresa kanálu (RSS / Atom)
+Akış ekle	Přidat kanál
+Akış ekle'ye dokunun: katalogdan popüler bir akış seçin, bir sitenin RSS adresini yazın ya da documents klasörüne attığınız bir .opml dosyasını içe aktarın.	Klepněte na Přidat kanál: vyberte oblíbený kanál z katalogu, zadejte adresu RSS webu nebo importujte soubor .opml ze složky documents.
+Akış eklenemedi	Kanál nelze přidat
+Akış kontrol ediliyor…	Kontrola kanálu…
+Akış listesi dolu.	Seznam kanálů je plný.
+Akışlar %s dosyasına yazıldı.	Kanály byly uloženy do %s.
+Akışları indirmek için Wi-Fi açılsın mı?	Zapnout Wi-Fi a stáhnout kanály?
+Akışı sil	Smazat kanál
+Akışın adı	Název kanálu
+Atasözü	Turecké přísloví
+Bilim (Türkçe)	Věda (turecky)
+Bilim (dünya)	Věda (svět)
+Bir dakika içinde seçilmezse uykuya devam eder.	Pokud do minuty nic nevyberete, znovu usne.
+Bir sitenin RSS / Atom adresi	Adresa RSS / Atom webu
+Bloglar (dünya)	Blogy (svět)
+Bu adreste RSS ya da Atom akışı bulunamadı.	Na této adrese nebyl nalezen kanál RSS ani Atom.
+Bu akış zaten listede.	Tento kanál už v seznamu je.
+Bu akışın kayıtlı yazısı yok.\nYenile'ye dokunun.	Tento kanál nemá uložené články.\nKlepněte na Obnovit.
+Bu bir web adresi değil.	Toto není webová adresa.
+Bu yazının akışta metni yok; tamamı kaynağında.	Kanál neobsahuje text tohoto článku; celý je u zdroje.
+Dosya yazılamadı.	Soubor nelze zapsat.
+Genel	Obecné
+Günün sözü	Přísloví dne
+Güç tuşu: Kindle'a dön	Tlačítko napájení: zpět do Kindlu
+Haber (dünya)	Zprávy (svět)
+Hava Durumu'ndaki ilk şehir; Wi-Fi üç saatte bir kısa süre açılır	První město z Počasí; Wi-Fi se na chvíli zapne každé tři hodiny
+Hava durumu yok: Hava Durumu'nda bir şehir seçin; Wi-Fi ile güncellenir.	Bez počasí: vyberte město v Počasí; aktualizuje se přes Wi-Fi.
+Henüz akış yok	Zatím žádné kanály
+Hepsini okundu say	Označit vše jako přečtené
+Hepsini yenile	Obnovit vše
+Katalog	Katalog
+Katalogdan seç	Vybrat z katalogu
+Kayıtlı bir şey yok.	Nic naplánováno.
+Kindle her %d dakikada bir birkaç saniyeliğine uyanır, ekranı sessizce tazeler ve yeniden derin uykuya geçer; Wi-Fi yalnızca hava durumu için birkaç saatte bir açılır. Güç tuşuna basınca normal Kindle'a dönülür.	Každých %d minut se Kindle na pár sekund probudí, tiše obnoví obrazovku a znovu přejde do hlubokého spánku; Wi-Fi se zapíná jen kvůli počasí, jednou za pár hodin. Tlačítko napájení vrátí běžný Kindle.
+Kindle'a dön	Zpět do Kindlu
+Klasör adı	Název složky
+Klasör seçin	Vyberte složku
+Klasörünü değiştir	Přesunout do jiné složky
+Kültür ve blog (Türkçe)	Kultura a blogy (turecky)
+OPML dışa aktar	Exportovat OPML
+OPML içe aktar	Importovat OPML
+Sonra	Později
+Sonraki ▶	Další ▶
+Teknoloji (Türkçe)	Technologie (turecky)
+Teknoloji (dünya)	Technologie (svět)
+Tümü okundu	Vše přečteno
+Tümünü okundu say	Označit vše jako přečtené
+Türkçe ve dünyadan teknoloji, bilim, blog ve haber akışları	Kanály o technologiích, vědě, blogy a zprávy, turecké i z celého světa
+Uyku Ekranı	Noční obrazovka
+Uyku ekranı duraklatıldı	Noční obrazovka pozastavena
+Uyku ekranını başlat	Spustit noční obrazovku
+Uykudayken ön ışığı kapat	Ve spánku vypnout osvětlení
+Uykuya devam	Spát dál
+Wi-Fi bağlanıyor…	Připojování k Wi-Fi…
+Wi-Fi'ı aç	Zapnout Wi-Fi
+Yarın	Zítra
+Yeni klasör…	Nová složka…
+Yenileme	Obnovení
+Yenileme aralığı	Interval obnovení
+Yenileniyor %d / %d\n%s\n\nDurdurmak için dokunun	Obnovování %d / %d\n%s\n\nKlepnutím zastavíte
+alınamadı	nestaženo
+alınamadı · kayıtlı: %s	nestaženo · uloženo: %s
+documents klasöründe .opml dosyası yok. Wi-Fi ile Yükle ya da USB ile gönderin.	Ve složce documents není žádný soubor .opml. Pošlete ho přes Nahrát přes Wi-Fi nebo USB.
+documents klasöründeki .opml dosyası	Soubor .opml ze složky documents
+documents/akis.opml: yedek ya da başka bir okuyucu için	documents/akis.opml: záloha nebo pro jinou čtečku
+henüz indirilmedi	zatím nestaženo
+Çıkınca ışık eski düzeyine döner	Po odchodu se osvětlení vrátí
+Şiir Defteri kuruluysa onun günün şiiri, değilse bir atasözü	Báseň dne ze Sešitu básní, je-li nainstalován, jinak přísloví
+Şimdi indir	Stáhnout nyní
+☾ %02d:%02d'de güncellendi · sonraki %02d:%02d	☾ obnoveno %02d:%02d · další %02d:%02d

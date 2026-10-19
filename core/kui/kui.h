@@ -111,6 +111,7 @@ typedef enum { KUI_FONT_REG, KUI_FONT_BOLD, KUI_FONT_SERIF, KUI_FONT_SERIF_BOLD 
 typedef enum { KUI_ALIGN_LEFT, KUI_ALIGN_CENTER, KUI_ALIGN_RIGHT } KuiAlign;
 #define KUI_ERR_TOUCH_BUSY (-2) /* touchscreen grabbed by another app (KOReader) */
 int  kui_init(const char *app); /* 0 = ok */
+#define KUI_EXIT_TO_KINDLE 75   /* an app's exit code: the hub exits as well, back to the Kindle's own UI */
 void kui_quit(void);
 int  kui_width(void);
 int  kui_height(void);

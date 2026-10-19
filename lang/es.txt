@@ -740,3 +740,86 @@ Kolay okuma: Kapalı	Lectura fácil: No
 Basit mod: Açık	Modo sencillo: Sí
 Basit mod: Kapalı	Modo sencillo: No
 Kolay okuma: bütün yazılar büyük, kalın ve siyah olur.\nBasit mod: menüde dört büyük düğme; panoda yalnızca saat, hava ve üç haber. Teknik uygulamalar gizlenir; bu ekrandan her zaman geri açılabilir.	Lectura fácil: todo el texto se vuelve grande, en negrita y negro.\nModo sencillo: cuatro botones grandes en el menú; el panel muestra solo la hora, el tiempo y tres noticias. Las apps técnicas se ocultan; siempre se pueden volver a activar desde esta pantalla.
+%d akış	%d fuentes
+%d akış alınamadı.\nWi-Fi bağlantısını kontrol edin.	No se pudieron descargar %d fuentes.\nCompruebe la conexión Wi-Fi.
+%d akış eklendi (%d akış dosyada).	%d fuentes añadidas (%d en el archivo).
+%d dakika	%d minutos
+%d yazı · %s	%d artículos · %s
+%s (+%d)	%s (+%d)
+%s / %s · yağış %%%d	%s / %s · lluvia %d%%
+Adres yaz	Escribir una dirección
+Adını değiştir	Cambiar el nombre
+Ajanda'daki notlar, bayramlar ve özel günler	Notas, festivos y días especiales de la Agenda
+Ajanda: bugün ve yarın	Agenda: hoy y mañana
+Akış	Fuentes
+Akış adresi (RSS / Atom)	Dirección de la fuente (RSS / Atom)
+Akış ekle	Añadir fuente
+Akış ekle'ye dokunun: katalogdan popüler bir akış seçin, bir sitenin RSS adresini yazın ya da documents klasörüne attığınız bir .opml dosyasını içe aktarın.	Toque Añadir fuente: elija una fuente popular del catálogo, escriba la dirección RSS de un sitio o importe un archivo .opml que haya puesto en la carpeta documents.
+Akış eklenemedi	No se pudo añadir la fuente
+Akış kontrol ediliyor…	Comprobando la fuente…
+Akış listesi dolu.	La lista de fuentes está llena.
+Akışlar %s dosyasına yazıldı.	Las fuentes se guardaron en %s.
+Akışları indirmek için Wi-Fi açılsın mı?	¿Activar el Wi-Fi para descargar las fuentes?
+Akışı sil	Eliminar la fuente
+Akışın adı	Nombre de la fuente
+Atasözü	Refrán turco
+Bilim (Türkçe)	Ciencia (turco)
+Bilim (dünya)	Ciencia (mundo)
+Bir dakika içinde seçilmezse uykuya devam eder.	Vuelve a dormir si no se elige nada en un minuto.
+Bir sitenin RSS / Atom adresi	La dirección RSS / Atom de un sitio
+Bloglar (dünya)	Blogs (mundo)
+Bu adreste RSS ya da Atom akışı bulunamadı.	No se encontró ninguna fuente RSS o Atom en esta dirección.
+Bu akış zaten listede.	Esta fuente ya está en la lista.
+Bu akışın kayıtlı yazısı yok.\nYenile'ye dokunun.	Esta fuente no tiene artículos guardados.\nToque Actualizar.
+Bu bir web adresi değil.	Esto no es una dirección web.
+Bu yazının akışta metni yok; tamamı kaynağında.	La fuente no incluye el texto de este artículo; está completo en el origen.
+Dosya yazılamadı.	No se pudo escribir el archivo.
+Genel	General
+Günün sözü	Refrán del día
+Güç tuşu: Kindle'a dön	Botón de encendido: volver al Kindle
+Haber (dünya)	Noticias (mundo)
+Hava Durumu'ndaki ilk şehir; Wi-Fi üç saatte bir kısa süre açılır	La primera ciudad de El tiempo; el Wi-Fi se enciende un momento cada tres horas
+Hava durumu yok: Hava Durumu'nda bir şehir seçin; Wi-Fi ile güncellenir.	Sin tiempo: elija una ciudad en El tiempo; se actualiza por Wi-Fi.
+Henüz akış yok	Aún no hay fuentes
+Hepsini okundu say	Marcar todo como leído
+Hepsini yenile	Actualizar todo
+Katalog	Catálogo
+Katalogdan seç	Elegir del catálogo
+Kayıtlı bir şey yok.	Nada previsto.
+Kindle her %d dakikada bir birkaç saniyeliğine uyanır, ekranı sessizce tazeler ve yeniden derin uykuya geçer; Wi-Fi yalnızca hava durumu için birkaç saatte bir açılır. Güç tuşuna basınca normal Kindle'a dönülür.	Cada %d minutos el Kindle despierta unos segundos, actualiza la pantalla en silencio y vuelve al sueño profundo; el Wi-Fi solo se enciende para el tiempo, cada pocas horas. El botón de encendido vuelve al Kindle normal.
+Kindle'a dön	Volver al Kindle
+Klasör adı	Nombre de la carpeta
+Klasör seçin	Elija una carpeta
+Klasörünü değiştir	Cambiar de carpeta
+Kültür ve blog (Türkçe)	Cultura y blogs (turco)
+OPML dışa aktar	Exportar OPML
+OPML içe aktar	Importar OPML
+Sonra	Más tarde
+Sonraki ▶	Siguiente ▶
+Teknoloji (Türkçe)	Tecnología (turco)
+Teknoloji (dünya)	Tecnología (mundo)
+Tümü okundu	Todo leído
+Tümünü okundu say	Marcar todo como leído
+Türkçe ve dünyadan teknoloji, bilim, blog ve haber akışları	Fuentes de tecnología, ciencia, blogs y noticias, turcas y de todo el mundo
+Uyku Ekranı	Pantalla de reposo
+Uyku ekranı duraklatıldı	Pantalla de reposo en pausa
+Uyku ekranını başlat	Iniciar la pantalla de reposo
+Uykudayken ön ışığı kapat	Apagar la luz en reposo
+Uykuya devam	Seguir durmiendo
+Wi-Fi bağlanıyor…	Conectando al Wi-Fi…
+Wi-Fi'ı aç	Activar Wi-Fi
+Yarın	Mañana
+Yeni klasör…	Carpeta nueva…
+Yenileme	Actualización
+Yenileme aralığı	Intervalo de actualización
+Yenileniyor %d / %d\n%s\n\nDurdurmak için dokunun	Actualizando %d / %d\n%s\n\nToque para detener
+alınamadı	no se pudo descargar
+alınamadı · kayıtlı: %s	no se pudo descargar · guardado: %s
+documents klasöründe .opml dosyası yok. Wi-Fi ile Yükle ya da USB ile gönderin.	No hay ningún archivo .opml en la carpeta documents. Envíe uno con Subir por Wi-Fi o por USB.
+documents klasöründeki .opml dosyası	Un archivo .opml de la carpeta documents
+documents/akis.opml: yedek ya da başka bir okuyucu için	documents/akis.opml: copia de seguridad o para otro lector
+henüz indirilmedi	aún no descargado
+Çıkınca ışık eski düzeyine döner	Al salir la luz vuelve a su nivel
+Şiir Defteri kuruluysa onun günün şiiri, değilse bir atasözü	El poema del día del Cuaderno de poemas si está instalado; si no, un refrán
+Şimdi indir	Descargar ahora
+☾ %02d:%02d'de güncellendi · sonraki %02d:%02d	☾ actualizado a las %02d:%02d · siguiente %02d:%02d

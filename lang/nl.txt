@@ -740,3 +740,86 @@ Kolay okuma: Kapalı	Makkelijk lezen: Uit
 Basit mod: Açık	Eenvoudige modus: Aan
 Basit mod: Kapalı	Eenvoudige modus: Uit
 Kolay okuma: bütün yazılar büyük, kalın ve siyah olur.\nBasit mod: menüde dört büyük düğme; panoda yalnızca saat, hava ve üç haber. Teknik uygulamalar gizlenir; bu ekrandan her zaman geri açılabilir.	Makkelijk lezen: alle tekst wordt groot, vet en zwart.\nEenvoudige modus: vier grote knoppen in het menu; het overzicht toont alleen klok, weer en drie nieuwsberichten. Technische apps worden verborgen; via dit scherm altijd weer aan te zetten.
+%d akış	%d feeds
+%d akış alınamadı.\nWi-Fi bağlantısını kontrol edin.	%d feeds konden niet worden opgehaald.\nControleer de wifiverbinding.
+%d akış eklendi (%d akış dosyada).	%d feeds toegevoegd (%d in het bestand).
+%d dakika	%d minuten
+%d yazı · %s	%d berichten · %s
+%s (+%d)	%s (+%d)
+%s / %s · yağış %%%d	%s / %s · regen %d%%
+Adres yaz	Adres typen
+Adını değiştir	Naam wijzigen
+Ajanda'daki notlar, bayramlar ve özel günler	Notities, feestdagen en bijzondere dagen uit de Agenda
+Ajanda: bugün ve yarın	Agenda: vandaag en morgen
+Akış	Feeds
+Akış adresi (RSS / Atom)	Feedadres (RSS / Atom)
+Akış ekle	Feed toevoegen
+Akış ekle'ye dokunun: katalogdan popüler bir akış seçin, bir sitenin RSS adresini yazın ya da documents klasörüne attığınız bir .opml dosyasını içe aktarın.	Tik op Feed toevoegen: kies een populaire feed uit de catalogus, typ het RSS-adres van een site of importeer een .opml-bestand uit de map documents.
+Akış eklenemedi	Feed kon niet worden toegevoegd
+Akış kontrol ediliyor…	Feed controleren…
+Akış listesi dolu.	De feedlijst is vol.
+Akışlar %s dosyasına yazıldı.	De feeds zijn opgeslagen in %s.
+Akışları indirmek için Wi-Fi açılsın mı?	Wifi inschakelen om de feeds op te halen?
+Akışı sil	Feed verwijderen
+Akışın adı	Naam van de feed
+Atasözü	Turks spreekwoord
+Bilim (Türkçe)	Wetenschap (Turks)
+Bilim (dünya)	Wetenschap (wereld)
+Bir dakika içinde seçilmezse uykuya devam eder.	Slaapt verder als er binnen een minuut niets wordt gekozen.
+Bir sitenin RSS / Atom adresi	Het RSS- / Atom-adres van een site
+Bloglar (dünya)	Blogs (wereld)
+Bu adreste RSS ya da Atom akışı bulunamadı.	Op dit adres is geen RSS- of Atom-feed gevonden.
+Bu akış zaten listede.	Deze feed staat al in de lijst.
+Bu akışın kayıtlı yazısı yok.\nYenile'ye dokunun.	Deze feed heeft geen opgeslagen berichten.\nTik op Vernieuwen.
+Bu bir web adresi değil.	Dit is geen webadres.
+Bu yazının akışta metni yok; tamamı kaynağında.	De feed bevat geen tekst van dit bericht; alles staat bij de bron.
+Dosya yazılamadı.	Het bestand kon niet worden geschreven.
+Genel	Algemeen
+Günün sözü	Spreuk van de dag
+Güç tuşu: Kindle'a dön	Aan/uit-knop: terug naar de Kindle
+Haber (dünya)	Nieuws (wereld)
+Hava Durumu'ndaki ilk şehir; Wi-Fi üç saatte bir kısa süre açılır	De eerste stad uit Weer; wifi gaat elke drie uur even aan
+Hava durumu yok: Hava Durumu'nda bir şehir seçin; Wi-Fi ile güncellenir.	Geen weer: kies een stad in Weer; het wordt via wifi bijgewerkt.
+Henüz akış yok	Nog geen feeds
+Hepsini okundu say	Alles als gelezen markeren
+Hepsini yenile	Alles vernieuwen
+Katalog	Catalogus
+Katalogdan seç	Kiezen uit de catalogus
+Kayıtlı bir şey yok.	Niets gepland.
+Kindle her %d dakikada bir birkaç saniyeliğine uyanır, ekranı sessizce tazeler ve yeniden derin uykuya geçer; Wi-Fi yalnızca hava durumu için birkaç saatte bir açılır. Güç tuşuna basınca normal Kindle'a dönülür.	Elke %d minuten wordt de Kindle een paar seconden wakker, ververst het scherm stil en gaat weer in diepe slaap; wifi gaat alleen voor het weer om de paar uur aan. Met de aan/uit-knop keert u terug naar de gewone Kindle.
+Kindle'a dön	Naar Kindle
+Klasör adı	Mapnaam
+Klasör seçin	Kies een map
+Klasörünü değiştir	Naar andere map
+Kültür ve blog (Türkçe)	Cultuur en blogs (Turks)
+OPML dışa aktar	OPML exporteren
+OPML içe aktar	OPML importeren
+Sonra	Later
+Sonraki ▶	Volgende ▶
+Teknoloji (Türkçe)	Technologie (Turks)
+Teknoloji (dünya)	Technologie (wereld)
+Tümü okundu	Alles gelezen
+Tümünü okundu say	Alles als gelezen markeren
+Türkçe ve dünyadan teknoloji, bilim, blog ve haber akışları	Technologie-, wetenschaps-, blog- en nieuwsfeeds, Turks en uit de hele wereld
+Uyku Ekranı	Slaapscherm
+Uyku ekranı duraklatıldı	Slaapscherm gepauzeerd
+Uyku ekranını başlat	Slaapscherm starten
+Uykudayken ön ışığı kapat	Voorlicht uit tijdens slaap
+Uykuya devam	Verder slapen
+Wi-Fi bağlanıyor…	Verbinden met wifi…
+Wi-Fi'ı aç	Wifi aanzetten
+Yarın	Morgen
+Yeni klasör…	Nieuwe map…
+Yenileme	Vernieuwen
+Yenileme aralığı	Vernieuwingsinterval
+Yenileniyor %d / %d\n%s\n\nDurdurmak için dokunun	Vernieuwen %d / %d\n%s\n\nTik om te stoppen
+alınamadı	niet opgehaald
+alınamadı · kayıtlı: %s	niet opgehaald · opgeslagen: %s
+documents klasöründe .opml dosyası yok. Wi-Fi ile Yükle ya da USB ile gönderin.	Er staat geen .opml-bestand in de map documents. Stuur er een met Uploaden via wifi of via USB.
+documents klasöründeki .opml dosyası	Een .opml-bestand in de map documents
+documents/akis.opml: yedek ya da başka bir okuyucu için	documents/akis.opml: back-up of voor een andere lezer
+henüz indirilmedi	nog niet opgehaald
+Çıkınca ışık eski düzeyine döner	Bij afsluiten keert het licht terug
+Şiir Defteri kuruluysa onun günün şiiri, değilse bir atasözü	Het gedicht van de dag uit het Gedichtenschrift als dat er is, anders een spreekwoord
+Şimdi indir	Nu ophalen
+☾ %02d:%02d'de güncellendi · sonraki %02d:%02d	☾ bijgewerkt %02d:%02d · volgende %02d:%02d
