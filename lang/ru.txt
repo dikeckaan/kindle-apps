@@ -740,3 +740,4 @@ Kolay okuma: Kapalı	Лёгкое чтение: выкл
 Basit mod: Açık	Простой режим: вкл
 Basit mod: Kapalı	Простой режим: выкл
 Kolay okuma: bütün yazılar büyük, kalın ve siyah olur.\nBasit mod: menüde dört büyük düğme; panoda yalnızca saat, hava ve üç haber. Teknik uygulamalar gizlenir; bu ekrandan her zaman geri açılabilir.	Лёгкое чтение: весь текст становится крупным, жирным и чёрным.\nПростой режим: четыре большие кнопки в меню; на панели только часы, погода и три новости. Технические приложения скрываются; их всегда можно вернуть на этом экране.
+Bulmacalar	Задачи

@@ -46,6 +46,19 @@ awk '/pre-install.sh/{s=NR} /cp -f/{c=NR} END{exit !(s && c && s < c)}' "$t/inst
     && grep -q "(deleted)" "$t/pre-install.sh" && grep -q "(deleted)" "$t/uninstall.sh" \
     && ok "ssh package stops every dropbear process before install and on uninstall" || bad "ssh package does not stop the server before replacing it"
 rm -rf "$t"
+# Satranç Bulmacası is part of Satranç now: no package of its own; upgrading chess moves the old app's data first
+[ ! -e dist/packages/kindle-apps-puzzle ] && ! grep -q '"kindle-apps-puzzle"' dist/manifest.json \
+    && ok "no standalone puzzle package" || bad "kindle-apps-puzzle is still packaged"
+t=$(mktemp -d); tar xzf dist/packages/kindle-apps-chess/*.kpkg -C "$t"
+r="$t/root"; mkdir -p "$r/apps/puzzle" "$r/data/puzzle" "$r/versions"
+echo v1 > "$r/data/puzzle/history.txt"; echo name=x > "$r/apps/puzzle/app.ini"; echo 1 > "$r/versions/kindle-apps-puzzle"
+sed "s#/mnt/us/kindle-apps#$r#g" "$t/post-install.sh" > "$t/pi.sh" && sh "$t/pi.sh" \
+    && [ "$(cat "$r/data/chess/puzzle/history.txt" 2>/dev/null)" = v1 ] && [ ! -e "$r/data/puzzle" ] \
+    && [ ! -e "$r/apps/puzzle" ] && [ ! -e "$r/versions/kindle-apps-puzzle" ] && sh "$t/pi.sh" \
+    && [ "$(cat "$r/data/chess/puzzle/history.txt")" = v1 ] \
+    && ok "chess post-install moves puzzle data, then removes the old app (and runs again safely)" \
+    || bad "chess post-install does not migrate the old puzzle app"
+rm -rf "$t"
 for k in dist/packages/*/*.kpkg; do
     t=$(mktemp -d); tar xzf "$k" -C "$t"
     sh -n "$t/install.sh" && sh -n "$t/uninstall.sh" && ! grep -q "@[A-Z_]*@" "$t/install.sh" "$t/uninstall.sh" \

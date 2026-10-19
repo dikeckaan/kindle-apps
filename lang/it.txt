@@ -740,3 +740,4 @@ Kolay okuma: Kapalı	Lettura facile: No
 Basit mod: Açık	Modo semplice: Sì
 Basit mod: Kapalı	Modo semplice: No
 Kolay okuma: bütün yazılar büyük, kalın ve siyah olur.\nBasit mod: menüde dört büyük düğme; panoda yalnızca saat, hava ve üç haber. Teknik uygulamalar gizlenir; bu ekrandan her zaman geri açılabilir.	Lettura facile: tutti i testi diventano grandi, in grassetto e neri.\nModo semplice: quattro grandi pulsanti nel menu; il pannello mostra solo ora, meteo e tre notizie. Le app tecniche vengono nascoste; si possono sempre riattivare da questa schermata.
+Bulmacalar	Problemi

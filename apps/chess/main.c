@@ -1,5 +1,5 @@
-/* Chess for Kindle: single player against Stockfish (6 levels) or two players on one device.
- * Each square remembers what was last drawn on it; after a move only squares whose look changed are redrawn. */
+/* Chess for Kindle: single player against Stockfish (6 levels), two players on one device, or Lichess puzzles
+ * (Bulmacalar, puzzle_ui.c). Each square remembers what was last drawn on it; after a move only squares whose look changed are redrawn. */
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -7,6 +7,7 @@
 #include "chess_game.h"
 #include "kui.h"
 #include "levels.h"
+#include "puzzle_ui.h"
 #include "uci.h"
 
 #define SQ 128
@@ -332,15 +333,21 @@ static int choose(const char *title, const char **labels, int n)
 static int setup(int can_resume)
 {
 	for (;;) {
-		const char *start[3];
+		const char *start[4];
 		int n = 0, resume_idx = -1;
 		if (can_resume) { resume_idx = n; start[n++] = T("Devam et"); }
 		start[n++] = T("Tek oyunculu");
 		int two_idx = n;
 		start[n++] = T("İki oyunculu");
+		int puzzle_idx = n;
+		start[n++] = T("Bulmacalar");
 		int k = choose(T("Satranç"), start, n);
 		if (k < 0) return 0;
 		if (k == resume_idx) return 1;
+		if (k == puzzle_idx) {
+			if (puzzle_run()) return 0;
+			continue;
+		}
 		if (k == two_idx) {
 			const char *fl[] = { T("Tahta sabit"), T("Her hamlede tahtayı çevir") };
 			int f = choose(T("İki oyunculu"), fl, 2);
@@ -408,9 +415,14 @@ int main(void)
 			int t = kui_topbar_hit(kui_width(), 1, e.x, e.y);
 			if (t == KUI_BTN_EXIT) { quit = 1; break; }
 			if (t == KUI_BTN_MENU) {
-				const char *ch[] = { T("Tahtayı çevir"), T("Yeni oyun"), T("Kapat") };
-				int k = kui_dialog(T("Menü"), "", ch, 3, draw_all);
+				const char *ch[] = { T("Tahtayı çevir"), T("Yeni oyun"), T("Bulmacalar"), T("Kapat") };
+				int k = kui_dialog(T("Menü"), "", ch, 4, draw_all);
 				if (k == 0) view_flip = !view_flip;
+				if (k == 2) {
+					engine_cancel(); /* the search would time out meanwhile; it starts again on return */
+					selected = -1;
+					if (puzzle_run()) { quit = 1; break; }
+				}
 				if (k == 1) {
 					engine_cancel();
 					engine_shutdown();

@@ -12,7 +12,7 @@ Kitaplıkta tek bir **"Uygulamalar"** girişi olur; açınca bütün uygulamalar
 | Uygulama | Durum |
 |---|---|
 | 2048 | ✅ |
-| Satranç (Stockfish'e karşı 6 zorluk, iki kişilik) | ✅ |
+| Satranç (Stockfish'e karşı 6 zorluk, iki kişilik; Menü → Bulmacalar: Lichess'in günün bulmacası, ipucu, geçmiş ve seri) | ✅ |
 | Uyku Ayarı (uyku süresini uzat / kapat) | ✅ |
 | SSH Sunucusu (parolalı, menüden aç/kapat) | ✅ |
 | Güvenlik Duvarı (aç/kapat) | ✅ |
@@ -81,6 +81,11 @@ root'un okuyabildiği `/var/local/kindle-apps/ssh` içinde tuzlu ve 10 000 tur S
 ```
 
 Oyun kayıtları ve ayarlar `/mnt/us/kindle-apps/data/` içinde kalır; tamamen silmek için o klasörü de silin.
+
+**Satranç Bulmacası** artık ayrı bir uygulama değil, Satranç'ın içinde (**Menü → Bulmacalar**). Satranç güncellenince
+eski uygulamanın bulmacaları, geçmişi ve serisi `data/chess/puzzle`'a taşınır, eski menü girişi kaldırılır.
+kpm'nin kendi listesinde `kindle-apps-puzzle` görünmeye devam edebilir; zararsızdır, isterseniz
+`kpm uninstall kindle-apps-puzzle` ile silebilirsiniz (verilere dokunmaz).
 
 ### Dil
 

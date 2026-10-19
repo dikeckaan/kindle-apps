@@ -740,3 +740,4 @@ Kolay okuma: Kapalı	Citire ușoară: Nu
 Basit mod: Açık	Mod simplu: Da
 Basit mod: Kapalı	Mod simplu: Nu
 Kolay okuma: bütün yazılar büyük, kalın ve siyah olur.\nBasit mod: menüde dört büyük düğme; panoda yalnızca saat, hava ve üç haber. Teknik uygulamalar gizlenir; bu ekrandan her zaman geri açılabilir.	Citire ușoară: tot textul devine mare, îngroșat și negru.\nMod simplu: patru butoane mari în meniu; panoul arată doar ora, vremea și trei știri. Aplicațiile tehnice sunt ascunse; le puteți reactiva oricând din acest ecran.
+Bulmacalar	Probleme

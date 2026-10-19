@@ -740,3 +740,4 @@ Kolay okuma: Kapalı	Asan oxu: Bağlı
 Basit mod: Açık	Sadə rejim: Açıq
 Basit mod: Kapalı	Sadə rejim: Bağlı
 Kolay okuma: bütün yazılar büyük, kalın ve siyah olur.\nBasit mod: menüde dört büyük düğme; panoda yalnızca saat, hava ve üç haber. Teknik uygulamalar gizlenir; bu ekrandan her zaman geri açılabilir.	Asan oxu: bütün yazılar böyük, qalın və qara olur.\nSadə rejim: menyuda dörd böyük düymə; paneldə yalnız saat, hava və üç xəbər. Texniki tətbiqlər gizlədilir; bu ekrandan həmişə geri açıla bilər.
+Bulmacalar	Tapmacalar

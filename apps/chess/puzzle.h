@@ -1,7 +1,7 @@
 /* Lichess puzzles (pure): API response parsing, the solving state machine, themes, and the solved history. */
-#ifndef PUZZLE_PUZZLE_H
-#define PUZZLE_PUZZLE_H
-#include "chess/chess_rules.h"
+#ifndef CHESS_PUZZLE_H
+#define CHESS_PUZZLE_H
+#include "chess_rules.h"
 
 #define PZ_URL_DAILY "https://lichess.org/api/puzzle/daily"
 #define PZ_URL_NEXT  "https://lichess.org/api/puzzle/next" /* a random puzzle; works without a token */

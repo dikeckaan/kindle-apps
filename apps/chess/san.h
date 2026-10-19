@@ -1,7 +1,7 @@
 /* Standard Algebraic Notation (pure): parse and format moves, replay a PGN move list. */
-#ifndef PUZZLE_SAN_H
-#define PUZZLE_SAN_H
-#include "chess/chess_rules.h"
+#ifndef CHESS_SAN_H
+#define CHESS_SAN_H
+#include "chess_rules.h"
 
 /* "Nbd2", "exd6", "e8=Q+", "O-O-O", "Qxf7#", "e4!?" → the legal move on b. Check marks, annotations and a
  * missing/extra 'x' are tolerated; ambiguous, illegal or malformed text gives -1 (out untouched). */

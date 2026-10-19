@@ -740,3 +740,4 @@ Kolay okuma: Kapalı	Makkelijk lezen: Uit
 Basit mod: Açık	Eenvoudige modus: Aan
 Basit mod: Kapalı	Eenvoudige modus: Uit
 Kolay okuma: bütün yazılar büyük, kalın ve siyah olur.\nBasit mod: menüde dört büyük düğme; panoda yalnızca saat, hava ve üç haber. Teknik uygulamalar gizlenir; bu ekrandan her zaman geri açılabilir.	Makkelijk lezen: alle tekst wordt groot, vet en zwart.\nEenvoudige modus: vier grote knoppen in het menu; het overzicht toont alleen klok, weer en drie nieuwsberichten. Technische apps worden verborgen; via dit scherm altijd weer aan te zetten.
+Bulmacalar	Puzzels
