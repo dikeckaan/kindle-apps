@@ -53,11 +53,22 @@ void news_read(const NewsItem *it, const char *source)
 		y += lh;
 	}
 	KuiButton bnav[2] = { { { 20, h - 100, 160, 90 }, "◀", 1 }, { { w - 180, h - 100, 160, 90 }, "▶", 2 } };
-	for (int pg = 0, full = 1;;) {
-		kui_fill((KuiRect){ 0, 0, w, h }, 255);
-		kui_topbar(T("Gazete"), NULL);
-		int end = pg + 1 < n_pages ? starts[pg + 1] : n;
-		for (int i = starts[pg], y = top; i < end; i++) {
+	/* opening is one partial update of the whole screen (no flash; the caller's screen may have no topbar); a page
+	 * turn refreshes only the text, down to where the longer of the two pages ends, and the page number */
+	for (int pg = 0, upd = 1, prev_end = bottom;;) { /* upd: 0 flash (wake), 1 whole screen, 2 page turn */
+		KuiRect text = { 30, top - 6, w - 60, bottom - (top - 6) }, count = { 190, h - 100, w - 380, 90 };
+		if (upd < 2) { /* kui_topbar and kui_button mark themselves dirty: a page turn leaves them alone */
+			kui_fill((KuiRect){ 0, 0, w, h }, 255);
+			kui_topbar(T("Gazete"), NULL);
+			if (n_pages > 1) {
+				kui_button(&bnav[0], 0);
+				kui_button(&bnav[1], 0);
+			}
+		}
+		kui_fill(text, 255);
+		kui_fill(count, 255);
+		int end = pg + 1 < n_pages ? starts[pg + 1] : n, y = top;
+		for (int i = starts[pg]; i < end; i++) {
 			int lh = kui_line_height(ls[i].f, ls[i].px);
 			if (ls[i].len) {
 				char buf[1024];
@@ -72,20 +83,24 @@ void news_read(const NewsItem *it, const char *source)
 		if (n_pages > 1) {
 			char s[32];
 			snprintf(s, sizeof s, "%d / %d", pg + 1, n_pages);
-			kui_button(&bnav[0], 0);
-			kui_button(&bnav[1], 0);
-			kui_text((KuiRect){ 190, h - 100, w - 380, 90 }, s, KUI_FONT_REG, 34, KUI_ALIGN_CENTER, 0);
+			kui_text(count, s, KUI_FONT_REG, 34, KUI_ALIGN_CENTER, 0);
 		}
-		if (full) kui_flush(1);
+		if (upd == 0) kui_flush(1);
 		else {
-			kui_mark_dirty((KuiRect){ 0, KUI_TOPBAR_H, w, h - KUI_TOPBAR_H });
+			int y1 = (y > prev_end ? y : prev_end) + 6; /* below it both pages are blank */
+			if (upd == 1) kui_mark_dirty((KuiRect){ 0, 0, w, h });
+			else {
+				if (y1 < bottom) text.h = y1 - text.y;
+				kui_mark_dirty(text);
+				kui_mark_dirty(count);
+			}
 			kui_flush(0);
 		}
-		full = 0;
+		prev_end = y;
 		for (;;) {
 			KuiEvent e = kui_next_event(-1);
 			if (e.type == KUI_EV_QUIT) return;
-			if (e.type == KUI_EV_WAKE) { full = 1; break; }
+			if (e.type == KUI_EV_WAKE) { upd = 0; break; }
 			int dlt = 0;
 			if (e.type == KUI_EV_SWIPE) dlt = e.dir == KUI_DIR_LEFT ? 1 : e.dir == KUI_DIR_RIGHT ? -1 : 0;
 			if (e.type == KUI_EV_TAP) {
@@ -95,6 +110,7 @@ void news_read(const NewsItem *it, const char *source)
 			}
 			if (dlt && pg + dlt >= 0 && pg + dlt < n_pages) {
 				pg += dlt;
+				upd = 2;
 				break;
 			}
 		}
