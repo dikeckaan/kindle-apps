@@ -1,0 +1,471 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kindle Apps — e-mürekkep için Türkçe uygulamalar</title>
+<meta name="description" content="Jailbreak'li Kindle için Türkçe, pil dostu, yanıp sönmeyen uygulamalar: Masa Panosu, Gazete, Hava Durumu, Son Depremler, Gökyüzü, Şiir Defteri, Ajanda, Odak, oyunlar ve Dikeç Store.">
+<meta property="og:title" content="Kindle Apps — e-mürekkep için Türkçe uygulamalar">
+<meta property="og:description" content="Kindle'ınızı masa panosuna, gazeteye, yıldız haritasına ve bir şiir defterine çevirin. Pil önce, yanıp sönme yok.">
+<meta property="og:image" content="https://kaandikec.com/kindle-apps/shots/pano.png">
+<meta name="theme-color" content="#f3efe6">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect x='10' y='4' width='44' height='56' rx='7' fill='%23222'/%3E%3Crect x='15' y='9' width='34' height='42' rx='2' fill='%23f3efe6'/%3E%3Crect x='20' y='16' width='24' height='3' fill='%23222'/%3E%3Crect x='20' y='23' width='18' height='2' fill='%23999'/%3E%3Crect x='20' y='28' width='22' height='2' fill='%23999'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,400&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet">
+<style>
+:root {
+	--paper: #f3efe6;
+	--paper-2: #ebe6da;
+	--card: #fbf9f4;
+	--ink: #1c1b19;
+	--ink-2: #4a4741;
+	--ink-3: #7b776e;
+	--rule: #d6d0c2;
+	--bezel: #232220;
+	--bezel-2: #34322f;
+	--screen: #f7f6f2;
+	--accent: #1c1b19;
+	--shadow: 0 1px 0 rgba(0,0,0,.04), 0 18px 40px -18px rgba(40,30,10,.35);
+	--serif: "Newsreader", "Iowan Old Style", Georgia, serif;
+	--sans: "IBM Plex Sans", system-ui, -apple-system, sans-serif;
+	--mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+	:root:not([data-theme="light"]) {
+		--paper: #161614; --paper-2: #1d1d1a; --card: #1f1f1c; --ink: #ece8de; --ink-2: #bdb8ac; --ink-3: #8c877c;
+		--rule: #34322d; --bezel: #0d0d0c; --bezel-2: #2a2926; --screen: #e9e7e1; --accent: #ece8de;
+		--shadow: 0 18px 40px -18px rgba(0,0,0,.8);
+	}
+}
+:root[data-theme="dark"] {
+	--paper: #161614; --paper-2: #1d1d1a; --card: #1f1f1c; --ink: #ece8de; --ink-2: #bdb8ac; --ink-3: #8c877c;
+	--rule: #34322d; --bezel: #0d0d0c; --bezel-2: #2a2926; --screen: #e9e7e1; --accent: #ece8de;
+	--shadow: 0 18px 40px -18px rgba(0,0,0,.8);
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+	margin: 0; background: var(--paper); color: var(--ink); font-family: var(--sans); font-size: 17px; line-height: 1.6;
+	-webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility;
+}
+/* a faint paper grain */
+body::before {
+	content: ""; position: fixed; inset: 0; pointer-events: none; opacity: .35; z-index: 0;
+	background-image: radial-gradient(rgba(0,0,0,.035) 1px, transparent 1px); background-size: 3px 3px;
+}
+a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+img { display: block; max-width: 100%; }
+.hero .wrap > *, .feature > *, .feature .pair > *, .store > *, .grid > *, .step > * { min-width: 0; } /* never wider than the screen */
+.wrap { position: relative; z-index: 1; max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+h1, h2, h3 { font-family: var(--serif); font-weight: 600; letter-spacing: -.01em; line-height: 1.12; margin: 0; }
+h2 { font-size: clamp(30px, 4.2vw, 46px); }
+h3 { font-size: 23px; }
+p { margin: 0 0 1em; color: var(--ink-2); }
+.kicker { font-family: var(--sans); font-size: 12.5px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-3); }
+
+/* ---- masthead ---- */
+.mast { position: relative; z-index: 2; border-bottom: 1px solid var(--rule); }
+.mast .wrap { display: flex; align-items: center; justify-content: space-between; height: 64px; gap: 16px; }
+.brand { white-space: nowrap; display: flex; align-items: center; gap: 10px; font-family: var(--serif); font-weight: 700; font-size: 21px; text-decoration: none; }
+.brand svg { width: 22px; height: 28px; }
+.nav { display: flex; gap: 22px; align-items: center; font-size: 15px; }
+.nav a { text-decoration: none; color: var(--ink-2); }
+.nav a:hover { color: var(--ink); }
+.theme { background: none; border: 1px solid var(--rule); color: var(--ink-2); border-radius: 999px; width: 34px; height: 34px; cursor: pointer; font-size: 15px; }
+@media (max-width: 760px) { .nav a.opt { display: none; } }
+
+/* ---- hero ---- */
+.hero { padding: 64px 0 40px; }
+.hero .wrap { display: grid; grid-template-columns: 1.08fr .92fr; gap: 56px; align-items: center; }
+.hero h1 { font-size: clamp(44px, 6.6vw, 82px); font-weight: 600; }
+.hero h1 em { font-style: italic; font-weight: 400; }
+.hero .lede { font-family: var(--serif); font-size: clamp(19px, 2vw, 23px); line-height: 1.5; color: var(--ink-2); margin: 22px 0 30px; max-width: 34em; }
+.ctas { display: flex; flex-wrap: wrap; gap: 12px; }
+.btn {
+	display: inline-flex; align-items: center; gap: 8px; padding: 12px 20px; border-radius: 6px; font-weight: 600; font-size: 15.5px;
+	text-decoration: none; border: 1.5px solid var(--ink); transition: transform .15s ease;
+}
+.btn.solid { background: var(--ink); color: var(--paper); }
+.btn:hover { transform: translateY(-1px); }
+.facts { display: flex; flex-wrap: wrap; gap: 28px; margin-top: 38px; padding-top: 22px; border-top: 1px solid var(--rule); }
+.facts div { font-size: 14px; color: var(--ink-3); }
+.facts b { display: block; font-family: var(--serif); font-size: 30px; color: var(--ink); font-weight: 600; line-height: 1.1; }
+@media (max-width: 860px) { .hero .wrap { grid-template-columns: 1fr; gap: 36px; } .hero .device-col { order: -1; } .hero .kindle { max-width: 290px; } }
+
+/* ---- the Kindle frame ---- */
+.kindle {
+	position: relative; background: linear-gradient(160deg, var(--bezel-2), var(--bezel) 40%); border-radius: 26px;
+	padding: 22px 18px 54px; box-shadow: var(--shadow), inset 0 1px 0 rgba(255,255,255,.06);
+}
+.kindle::after { /* the logo strip */
+	content: ""; position: absolute; left: 50%; bottom: 22px; width: 54px; height: 6px; margin-left: -27px; border-radius: 3px;
+	background: rgba(255,255,255,.12);
+}
+.kindle .screen { background: var(--screen); border-radius: 3px; overflow: hidden; aspect-ratio: 1072 / 1448; position: relative; }
+.kindle .screen img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(1) contrast(1.02); }
+.hero .kindle { max-width: 420px; margin: 0 auto; transform: rotate(1.2deg); }
+.hero .screen img { position: absolute; inset: 0; opacity: 0; }
+.hero .screen img.on { opacity: 1; }
+/* e-ink page turn: a brief inverted frame, like a full refresh */
+.hero .screen.flash::after { content: ""; position: absolute; inset: 0; background: #111; animation: eink .42s steps(2, end) forwards; }
+@keyframes eink { 0% { opacity: 1; } 55% { opacity: 1; background: #111; } 56% { background: #fff; } 100% { opacity: 0; background: #fff; } }
+.caption { text-align: center; margin-top: 16px; font-size: 13.5px; color: var(--ink-3); min-height: 1.6em; }
+
+/* ---- sections ---- */
+section { padding: 76px 0; position: relative; z-index: 1; }
+section + section { border-top: 1px solid var(--rule); }
+.head { max-width: 760px; margin-bottom: 40px; }
+.head .kicker { margin-bottom: 12px; display: block; }
+.head p { font-size: 18.5px; margin-top: 14px; }
+
+.principles { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; border: 1px solid var(--rule); border-radius: 10px; overflow: hidden; background: var(--card); }
+.principles > div { padding: 26px 24px 24px; }
+.principles > div + div { border-left: 1px solid var(--rule); }
+.principles .ic { font-size: 26px; margin-bottom: 12px; }
+.principles h3 { font-size: 21px; margin-bottom: 8px; }
+.principles p { font-size: 15.5px; margin: 0; }
+@media (max-width: 960px) { .principles { grid-template-columns: 1fr 1fr; } .principles > div:nth-child(3) { border-left: 0; } .principles > div:nth-child(n+3) { border-top: 1px solid var(--rule); } }
+@media (max-width: 560px) { .principles { grid-template-columns: 1fr; } .principles > div + div { border-left: 0; border-top: 1px solid var(--rule); } }
+
+/* feature: pano */
+.feature { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
+.feature .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; align-items: end; }
+.feature .pair .kindle { padding: 14px 12px 38px; border-radius: 18px; }
+.feature .pair .kindle::after { bottom: 15px; width: 38px; margin-left: -19px; height: 5px; }
+.ticks { list-style: none; padding: 0; margin: 24px 0 0; }
+.ticks li { padding: 11px 0 11px 34px; border-top: 1px dashed var(--rule); position: relative; color: var(--ink-2); font-size: 16px; }
+.ticks li::before { content: "☾"; position: absolute; left: 4px; top: 10px; font-size: 17px; color: var(--ink); }
+.ticks li b { color: var(--ink); font-weight: 600; }
+@media (max-width: 860px) { .feature { grid-template-columns: 1fr; } }
+
+/* gallery */
+.tabs { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 30px; }
+.tabs button {
+	font: 500 14.5px var(--sans); color: var(--ink-2); background: transparent; border: 1.5px solid var(--rule); padding: 8px 16px; border-radius: 999px; cursor: pointer;
+}
+.tabs button[aria-pressed="true"] { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 30px 26px; }
+.app { display: flex; flex-direction: column; gap: 14px; }
+.app[hidden] { display: none; }
+.app .kindle { padding: 12px 10px 32px; border-radius: 16px; cursor: zoom-in; transition: transform .2s ease; }
+.app .kindle::after { bottom: 12px; width: 32px; margin-left: -16px; height: 4px; }
+.app .kindle:hover { transform: translateY(-3px); }
+.app h3 { font-size: 21px; }
+.app p { font-size: 15px; margin: 4px 0 0; }
+.tag { display: inline-block; font-size: 11.5px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--ink-3); border: 1px solid var(--rule); border-radius: 4px; padding: 1px 6px; margin-left: 6px; vertical-align: 3px; }
+.mini { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 0; margin-top: 34px; border-top: 1px solid var(--rule); }
+.mini div { padding: 16px 4px; border-bottom: 1px solid var(--rule); font-size: 15px; color: var(--ink-2); }
+.mini b { color: var(--ink); font-family: var(--serif); font-size: 18px; font-weight: 600; display: block; }
+
+/* store */
+.store { display: grid; grid-template-columns: .8fr 1.2fr; gap: 56px; align-items: center; }
+.store .kindle { max-width: 360px; }
+@media (max-width: 860px) { .store { grid-template-columns: 1fr; } .store .kindle { margin: 0 auto; } }
+
+/* install */
+.steps { counter-reset: s; display: grid; gap: 18px; }
+.step { display: grid; grid-template-columns: 52px 1fr; gap: 18px; background: var(--card); border: 1px solid var(--rule); border-radius: 10px; padding: 22px 24px; }
+.step::before { counter-increment: s; content: counter(s); font-family: var(--serif); font-size: 34px; font-weight: 600; line-height: 1; color: var(--ink); }
+.step h3 { font-size: 21px; margin-bottom: 6px; }
+.step p { margin: 0 0 .6em; font-size: 15.5px; }
+pre {
+	position: relative; margin: 10px 0 0; background: var(--paper-2); border: 1px solid var(--rule); border-radius: 8px; padding: 14px 16px; overflow-x: auto;
+	font: 13.5px/1.6 var(--mono); color: var(--ink);
+}
+.copy { position: absolute; top: 8px; right: 8px; font: 500 12px var(--sans); background: var(--card); border: 1px solid var(--rule); border-radius: 5px; padding: 3px 9px; cursor: pointer; color: var(--ink-2); }
+.note { font-size: 14.5px; color: var(--ink-3); margin-top: 22px; }
+
+/* sources */
+.sources { columns: 2 320px; column-gap: 40px; font-size: 15px; }
+.sources div { break-inside: avoid; padding: 10px 0; border-bottom: 1px solid var(--rule); color: var(--ink-2); }
+.sources b { color: var(--ink); }
+
+footer { padding: 46px 0 60px; border-top: 1px solid var(--rule); font-size: 14.5px; color: var(--ink-3); position: relative; z-index: 1; }
+footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 18px; }
+
+/* lightbox */
+dialog { border: 0; padding: 0; background: transparent; max-width: min(92vw, 560px); }
+dialog::backdrop { background: rgba(20,18,14,.72); backdrop-filter: blur(3px); }
+dialog .kindle { padding: 20px 16px 50px; }
+dialog p { color: #eee; text-align: center; margin-top: 12px; font-family: var(--serif); font-size: 18px; }
+
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; scroll-behavior: auto !important; } }
+@media (max-width: 560px) { body { font-size: 16px; } .wrap { padding: 0 16px; } section { padding: 56px 0; } .step { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+
+<header class="mast">
+	<div class="wrap">
+		<a class="brand" href="#">
+			<svg viewBox="0 0 22 28" aria-hidden="true"><rect x="1" y="1" width="20" height="26" rx="4" fill="currentColor"/><rect x="4" y="4" width="14" height="17" rx="1" fill="var(--paper)"/></svg>
+			Kindle Apps
+		</a>
+		<nav class="nav">
+			<a class="opt" href="#ilkeler">İlkeler</a>
+			<a class="opt" href="#uygulamalar">Uygulamalar</a>
+			<a class="opt" href="#store">Dikeç Store</a>
+			<a href="#kurulum">Kurulum</a>
+			<a href="https://github.com/dikeckaan/kindle-apps">GitHub</a>
+			<button class="theme" id="theme" aria-label="Açık / koyu tema">◐</button>
+		</nav>
+	</div>
+</header>
+
+<section class="hero">
+	<div class="wrap">
+		<div>
+			<span class="kicker" style="text-transform:none">JAILBREAK'Lİ KINDLE İÇİN · TÜRKÇE · AÇIK KAYNAK</span>
+			<h1 style="margin-top:14px">E-mürekkebe <em>yakışan</em> uygulamalar.</h1>
+			<p class="lede">Kindle'ınız masa panosuna, sabah gazetesine, yıldız haritasına ve bir şiir defterine dönüşsün — pil
+				günlerce dayansın, ekran her dokunuşta yanıp sönmesin.</p>
+			<div class="ctas">
+				<a class="btn solid" href="#kurulum">Kurulum →</a>
+				<a class="btn" href="#uygulamalar">Uygulamaları gör</a>
+			</div>
+			<div class="facts">
+				<div><b id="n-apps">23</b>uygulama</div>
+				<div><b>20</b>dil</div>
+				<div><b>0</b>reklam, hesap, izleme</div>
+				<div><b>~1 sn</b>dakikada uyanık kalma</div>
+			</div>
+		</div>
+		<div class="device-col">
+			<div class="kindle"><div class="screen" id="hero-screen"></div></div>
+			<div class="caption" id="hero-cap">Masa Panosu</div>
+		</div>
+	</div>
+</section>
+
+<section id="ilkeler">
+	<div class="wrap">
+		<div class="head">
+			<span class="kicker">İlkeler</span>
+			<h2>Önce pil, sonra her şey.</h2>
+			<p>Her uygulama aynı kurallarla yazıldı: işi yoksa cihazı uyandırmaz, ekranı gereksiz yere yenilemez, Kindle'ın
+				sistemine dokunmaz.</p>
+		</div>
+		<div class="principles">
+			<div><div class="ic">☾</div><h3>Derin uyku</h3><p>Masa uygulamaları Kindle'ı gerçekten uyutur; saat çipi istenen aralıkta (1–60 dk) uyandırır, ekran e-mürekkep sayesinde güç harcamadan kalır.</p></div>
+			<div><div class="ic">⌁</div><h3>Wi-Fi yalnızca gerekince</h3><p>Haber, hava ve döviz 1–24 saatte bir çekilir; Wi-Fi o birkaç saniye açılır, sonra kapanır. Pil bile veriyle birlikte okunur.</p></div>
+			<div><div class="ic">▦</div><h3>Yanıp sönmez</h3><p>Yalnızca değişen bölge flaşsız yenilenir. Tam yenileme yalnızca yeni ekranlarda ve saat başı gölgeleri temizlemek için.</p></div>
+			<div><div class="ic">⛨</div><h3>Güvenli</h3><p>Her şey <code>/mnt/us</code> altında; sistem dosyalarına dokunulmaz. SSH parolalı, e-kitaplar yalnızca yasal kaynaklardan.</p></div>
+		</div>
+	</div>
+</section>
+
+<section id="pano">
+	<div class="wrap feature">
+		<div>
+			<span class="kicker">Öne çıkan · Masa Panosu</span>
+			<h2 style="margin:12px 0 16px">Bir bakışta gün.</h2>
+			<p>Büyük saat, hava durumu ve saatlik tahmin, döviz ve gram altın, seçtiğiniz kaynaktan son dakika, tarihte bugün,
+				namaz vakitleri, Ay evresi. Bir başlığa dokunun, haberin tamamı açılsın.</p>
+			<ul class="ticks">
+				<li><b>Pil ve ekran</b> — tahmini kalan süre, ön ışık, uyku aralıkları tek ekranda.</li>
+				<li><b>Uykuda saat</b> her dakika ya da 5 / 15 / 30 / 60 dakikada bir; güç tuşu uyutur ve uyandırır.</li>
+				<li><b>Şarjdayken</b> uyumaz; uykuda ön ışık kapanır, uyanınca geri gelir.</li>
+				<li>Her verinin yanında <b>ne zaman çekildiği</b> yazar; çevrimdışıysa son veriyi gösterir.</li>
+			</ul>
+		</div>
+		<div class="pair">
+			<div><div class="kindle"><div class="screen"><img src="shots/pano.png" alt="Masa Panosu ekranı" loading="lazy"></div></div></div>
+			<div><div class="kindle"><div class="screen"><img src="shots/power.png" alt="Pil ve ekran ayarları" loading="lazy"></div></div></div>
+		</div>
+	</div>
+</section>
+
+<section id="uygulamalar">
+	<div class="wrap">
+		<div class="head">
+			<span class="kicker">Uygulamalar</span>
+			<h2>Kitaplıkta tek bir giriş: Uygulamalar.</h2>
+			<p>Açınca hepsi bir menüde. Aşağıdaki görüntüler uygulamaların kendisinden alındı — gerçek veriyle, Kindle'ın
+				1072 × 1448 ekranında nasıl görünüyorlarsa öyle. Büyütmek için dokunun.</p>
+		</div>
+		<div class="tabs" role="group" aria-label="Kategori">
+			<button aria-pressed="true" data-cat="all">Tümü</button>
+			<button aria-pressed="false" data-cat="masa">Masa & bilgi</button>
+			<button aria-pressed="false" data-cat="kultur">Okuma & kültür</button>
+			<button aria-pressed="false" data-cat="oyun">Oyunlar</button>
+			<button aria-pressed="false" data-cat="arac">Araçlar</button>
+		</div>
+		<div class="grid" id="grid"></div>
+		<div class="mini">
+			<div><b>Wi-Fi ile Yükle</b>Tarayıcıdan PIN'li kitap gönderin; AZW3, PDF, EPUB…</div>
+			<div><b>SSH Sunucusu</b>Parolalı, menüden aç / kapat.</div>
+			<div><b>Güvenlik Duvarı</b>Tek dokunuşla aç / kapat.</div>
+			<div><b>Uyku Ayarı</b>Kindle'ın uyku süresini 5 dk – 2 saat ya da hiç.</div>
+			<div><b>Sistem Bilgisi</b>Pil, depolama, bellek, Wi-Fi, sürüm.</div>
+			<div><b>2048</b>Klasik, e-mürekkep için az yenilemeli.</div>
+		</div>
+	</div>
+</section>
+
+<section id="store">
+	<div class="wrap store">
+		<div class="kindle"><div class="screen"><img src="shots/store.png" alt="Dikeç Store" loading="lazy"></div></div>
+		<div>
+			<span class="kicker">Dikeç Store</span>
+			<h2 style="margin:12px 0 16px">Bilgisayara gerek yok.</h2>
+			<p>Uygulamalar menüsündeki Dikeç Store, depodaki her şeyi kurulu sürümlerle karşılaştırır. Tek dokunuşla kurun,
+				güncelleyin ya da kaldırın; ayarlarınız ve kayıtlarınız kalır. <b>Sırala</b> ile menünün düzenini siz
+				belirleyin.</p>
+			<ul class="ticks">
+				<li><b>Tümü / Kurulu / Güncellenecek</b> sekmeleri, her uygulamanın açıklaması ve sürümü.</li>
+				<li>Wi-Fi kapalıysa yalnızca güncelleme süresince açılır.</li>
+				<li>Menü kendini güncellerken bile çökmez: RAM'deki kopyasından çalışır.</li>
+				<li>Yalnızca bu depodan, HTTPS ile ve güvenli dosya adlarıyla indirir.</li>
+			</ul>
+		</div>
+	</div>
+</section>
+
+<section id="kurulum">
+	<div class="wrap">
+		<div class="head">
+			<span class="kicker">Kurulum</span>
+			<h2>Üç adımda.</h2>
+			<p>Gereken: jailbreak'li, <b>kindlehf</b> (FW ≥ 5.16.3) bir Kindle; KMC araçları ve <code>kpm</code> kurulu
+				(bkz. <a href="https://kindlemodding.org">kindlemodding.org</a>). Kindle Basic 11. nesil, FW 5.19.2 üzerinde test edildi.</p>
+		</div>
+		<div class="steps">
+			<div class="step"><div>
+				<h3>Depoyu ekleyin</h3>
+				<p>En kolayı: <a href="https://github.com/dikeckaan/kindle-apps/releases/latest">Releases</a> sayfasından
+					<code>kindle-apps-depo.sh</code> dosyasını USB ile Kindle'ın <code>documents</code> klasörüne kopyalayın ve
+					kitaplıkta <b>Kindle Apps Deposu</b>'na dokunun. Ya da SSH ile:</p>
+				<pre><button class="copy">Kopyala</button>/var/local/kmc/bin/kpm add-repo https://kaandikec.com/kindle-apps/manifest.json
+/var/local/kmc/bin/kpm update</pre>
+			</div></div>
+			<div class="step"><div>
+				<h3>Çekirdeği kurun</h3>
+				<p>Uygulamalar menüsü, güvenli başlatıcı ve Dikeç Store bu pakette:</p>
+				<pre><button class="copy">Kopyala</button>/var/local/kmc/bin/kpm -y install kindle-apps-core</pre>
+			</div></div>
+			<div class="step"><div>
+				<h3>Gerisini Kindle'dan seçin</h3>
+				<p>Kitaplıkta <b>Uygulamalar</b>'ı açın → <b>Dikeç Store</b> → istediğinize <b>Kur</b>. Güncellemeler de
+					buradan gelir.</p>
+			</div></div>
+		</div>
+		<p class="note">Uygulamalar açılırken KOReader kapalı olmalı (dokunmatik ekranı o kullanır). Her şey yalnızca
+			<code>/mnt/us</code> altına kurulur; kaldırmak için Dikeç Store'da <b>Kaldır</b> ya da <code>kpm uninstall</code>.</p>
+	</div>
+</section>
+
+<section id="kaynaklar">
+	<div class="wrap">
+		<div class="head">
+			<span class="kicker">Veri ve lisanslar</span>
+			<h2>Anahtarsız, açık kaynaklar.</h2>
+			<p>Hiçbir uygulama hesap ya da API anahtarı istemez; veriler aşağıdaki açık kaynaklardan gelir ve ekranda anılır.</p>
+		</div>
+		<div class="sources">
+			<div><b>Open-Meteo</b> — hava durumu (CC BY 4.0)</div>
+			<div><b>TCMB</b> — döviz kurları · <b>Truncgil</b> — altın</div>
+			<div><b>Kandilli Rasathanesi (KRDAE)</b> ve <b>EMSC</b> — depremler</div>
+			<div><b>20 Türk haber kaynağı</b> — RSS/Atom akışları</div>
+			<div><b>Lichess</b> — günün bulmacası (CC0)</div>
+			<div><b>Vikikaynak</b> — kamu malı şiirler (CC BY-SA aktarım)</div>
+			<div><b>Project Gutenberg</b> — telifsiz e-kitaplar</div>
+			<div><b>Yale Bright Star Catalogue</b> (kamu malı), <b>d3-celestial</b> (BSD-3) — gökyüzü</div>
+			<div><b>Natural Earth</b> — harita (kamu malı)</div>
+			<div><b>Diyanet</b> — dinî günler · <b>Aladhan</b> — namaz vakitleri</div>
+			<div><b>Wikimedia</b> — tarihte bugün</div>
+			<div><b>Stockfish</b> (GPL-3), <b>Dropbear</b>, <b>FBInk</b>, <b>DejaVu</b> yazı tipleri</div>
+		</div>
+	</div>
+</section>
+
+<footer>
+	<div class="wrap">
+		<div>Kindle Apps · Kaan Dikeç · <a href="https://github.com/dikeckaan/kindle-apps">github.com/dikeckaan/kindle-apps</a></div>
+		<div>Amazon ile bağlantısı yoktur. Kindle, Amazon.com, Inc.'in ticari markasıdır.</div>
+	</div>
+</footer>
+
+<dialog id="box"><div class="kindle"><div class="screen"><img id="box-img" alt=""></div></div><p id="box-cap"></p></dialog>
+
+<script>
+const APPS = [
+	["pano", "Masa Panosu", "masa", "Saat, hava, döviz, son dakika, tarihte bugün, namaz vakitleri — derin uykuyla."],
+	["clock", "Masa Saati", "masa", "Kocaman saat, tarih ve hava; pil tasarruflu."],
+	["weather", "Hava Durumu", "masa", "Kayıtlı şehirler, saatlik ve 7 günlük tahmin."],
+	["news", "Gazete", "masa", "20 kaynaktan gazete tadında ön sayfa; habere dokun, tamamını oku."],
+	["currency", "Döviz & Altın", "masa", "TCMB kurları, altın fiyatları ve çevirici."],
+	["deprem", "Son Depremler", "masa", "Kandilli'den haritada ve listede; şehrinize uzaklık.", "yeni"],
+	["ajanda", "Ajanda", "masa", "Resmî ve dinî günler, kandiller, notlar ve doğum günleri.", "yeni"],
+	["sky", "Gökyüzü", "kultur", "İnternetsiz canlı yıldız haritası: takımyıldızlar, gezegenler, Ay.", "yeni"],
+	["siir", "Şiir Defteri", "kultur", "Yunus Emre'den Orhan Veli'ye 399 şiir; her gün bir şiir.", "yeni"],
+	["ebooks", "E-Kitap", "kultur", "Project Gutenberg'den telifsiz kitap arama ve indirme."],
+	["puzzle", "Satranç Bulmacası", "oyun", "Lichess'in günün bulmacası, ipucu ve seri.", "yeni"],
+	["chess", "Satranç", "oyun", "Stockfish'e karşı 6 zorluk ya da iki kişilik."],
+	["wordle", "Kelime Oyunu", "oyun", "Türkçe Wordle: 5 harf, kök kelimeler, sınırsız."],
+	["sudoku", "Sudoku", "oyun", "Tek çözümlü bulmacalar, not kipi ve ipucu."],
+	["mines", "Mayın Tarlası", "oyun", "Üç zorluk ve bayrak kipi."],
+	["solitaire", "Solitaire", "oyun", "Klondike; 1 ya da 3 kart çekme, geri al."],
+	["odak", "Odak", "arac", "Pomodoro zamanlayıcı; çalışırken Kindle uyur.", "yeni"],
+	["store", "Dikeç Store", "arac", "Kur, güncelle, kaldır, menüyü sırala."],
+	["hub", "Uygulamalar", "arac", "Hepsinin menüsü; Wi-Fi ve pil bir bakışta."],
+];
+const grid = document.getElementById("grid");
+const box = document.getElementById("box");
+function open(src, cap) {
+	document.getElementById("box-img").src = src;
+	document.getElementById("box-img").alt = cap;
+	document.getElementById("box-cap").textContent = cap;
+	box.showModal();
+}
+box.addEventListener("click", () => box.close());
+for (const [id, name, cat, text, tag] of APPS) {
+	const el = document.createElement("article");
+	el.className = "app";
+	el.dataset.cat = cat;
+	el.innerHTML = `<div class="kindle" tabindex="0" role="button" aria-label="${name} ekranını büyüt"><div class="screen"><img src="shots/${id}.png" alt="${name} ekranı" loading="lazy"></div></div>
+		<div><h3>${name}${tag ? `<span class="tag">${tag}</span>` : ""}</h3><p>${text}</p></div>`;
+	const k = el.querySelector(".kindle");
+	k.addEventListener("click", () => open(`shots/${id}.png`, name));
+	k.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); open(`shots/${id}.png`, name); } });
+	grid.appendChild(el);
+}
+document.querySelectorAll(".tabs button").forEach(b => b.addEventListener("click", () => {
+	document.querySelectorAll(".tabs button").forEach(x => x.setAttribute("aria-pressed", x === b));
+	for (const a of grid.children) a.hidden = b.dataset.cat !== "all" && a.dataset.cat !== b.dataset.cat;
+}));
+document.querySelectorAll(".copy").forEach(b => b.addEventListener("click", () => {
+	const text = b.parentElement.textContent.replace(b.textContent, "").trim();
+	navigator.clipboard.writeText(text).then(() => { b.textContent = "Kopyalandı"; setTimeout(() => b.textContent = "Kopyala", 1600); });
+}));
+
+/* the hero Kindle turns its pages like e-ink: a short full-refresh flash, then the next screen */
+const HERO = [["pano", "Masa Panosu"], ["sky", "Gökyüzü"], ["news", "Gazete"], ["siir", "Şiir Defteri"], ["deprem", "Son Depremler"], ["ajanda", "Ajanda"], ["puzzle", "Satranç Bulmacası"]];
+const scr = document.getElementById("hero-screen"), cap = document.getElementById("hero-cap");
+HERO.forEach(([id, name], i) => {
+	const img = new Image();
+	img.src = `shots/${id}.png`; img.alt = `${name} ekranı`;
+	if (!i) img.className = "on";
+	scr.appendChild(img);
+});
+let cur = 0;
+const still = matchMedia("(prefers-reduced-motion: reduce)").matches;
+setInterval(() => {
+	if (document.hidden) return;
+	const imgs = scr.querySelectorAll("img");
+	const next = (cur + 1) % imgs.length;
+	if (!still) { scr.classList.remove("flash"); void scr.offsetWidth; scr.classList.add("flash"); }
+	setTimeout(() => { imgs[cur].className = ""; imgs[next].className = "on"; cap.textContent = HERO[next][1]; cur = next; }, still ? 0 : 200);
+}, 4200);
+
+/* theme toggle: follows the system until chosen */
+const t = document.getElementById("theme");
+try { const s = localStorage.getItem("theme"); if (s) document.documentElement.dataset.theme = s; } catch (e) {}
+t.addEventListener("click", () => {
+	const dark = document.documentElement.dataset.theme ? document.documentElement.dataset.theme === "dark" : matchMedia("(prefers-color-scheme: dark)").matches;
+	document.documentElement.dataset.theme = dark ? "light" : "dark";
+	try { localStorage.setItem("theme", document.documentElement.dataset.theme); } catch (e) {}
+});
+</script>
+</body>
+</html>

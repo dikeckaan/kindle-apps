@@ -172,6 +172,7 @@ dist:
 	@set -e; $(foreach p,$(PKGS),./tools/stage-app.sh $(p) build/pkg/$(p) $(PKG_$(p)_FILES); ./tools/pack.sh build/pkg/$(p) dist;)
 	./tools/gen-manifest.sh dist
 	./tests/pkg/test_pack.sh
+	cp -R site/. dist/ # the website (GitHub Pages serves dist/: index.html next to manifest.json)
 
 KINDLE ?= 192.168.2.90
 PORT   ?= 22
