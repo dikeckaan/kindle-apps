@@ -740,3 +740,56 @@ Kolay okuma: Kapalı	Helppo lukea: Pois
 Basit mod: Açık	Yksinkertainen tila: Päällä
 Basit mod: Kapalı	Yksinkertainen tila: Pois
 Kolay okuma: bütün yazılar büyük, kalın ve siyah olur.\nBasit mod: menüde dört büyük düğme; panoda yalnızca saat, hava ve üç haber. Teknik uygulamalar gizlenir; bu ekrandan her zaman geri açılabilir.	Helppo lukea: kaikki teksti muuttuu suureksi, lihavoiduksi ja mustaksi.\nYksinkertainen tila: valikossa neljä isoa painiketta; näkymässä vain kello, sää ja kolme uutista. Tekniset sovellukset piilotetaan; ne voi aina palauttaa tästä näkymästä.
+%d kazanma · %d kaybetme · %d berabere	%d voittoa · %d tappiota · %d tasapeliä
+%s kazandı	%s voittaa
+%s pas geçti	%s passasi
+%s teslim oldu	%s luovutti
+13×13	13×13
+9×9 (kısa oyun)	9×9 (lyhyt peli)
+Almak zorunlu (%d taş) · %s	Lyöntipakko (%d nappulaa) · %s
+Almaya devam: sıradaki kareye dokunun	Jatka lyöntiä: napauta seuraavaa ruutua
+Berabere	Tasapeli
+Beyaz %d – Siyah %d · %s	Valkea %d – Musta %d · %s
+Beyaz (ilk hamle)	Valkea (aloittaa)
+Beyaz kazandı	Valkea voittaa
+Buraya oynanamaz (ko ya da intihar)	Tähän ei voi pelata (ko tai itsemurha)
+Dama	Tammi
+Dama (Türk daması)	Tammi (turkkilainen)
+Go	Go
+Go 13×13	Go 13×13
+Go 9×9	Go 9×9
+Kazandınız!	Voitit!
+Kindle düşünüyor…	Kindle miettii…
+Kindle kazandı	Kindle voitti
+Kindle ne kadar iyi oynasın?	Kuinka hyvin Kindlen pitää pelata?
+Kindle pas geçti	Kindle passasi
+Kindle teslim oldu · Kazandınız!	Kindle luovutti · Voitit!
+Kindle'a karşı	Kindleä vastaan
+Kindle'a karşı ya da iki kişi aynı cihazda	Kindleä vastaan tai kaksi pelaajaa samalla laitteella
+Kindle'a karşı: kazanma · kaybetme · beraberlik	Kindleä vastaan: voitot · tappiot · tasapelit
+Masa Oyunları	Lautapelit
+Oyuna dön	Takaisin peliin
+Oyunu bırakıp teslim olunsun mu?	Luovutetaanko tämä peli?
+Pas	Passaa
+Reversi	Reversi
+Sayım	Laskenta
+Sayımı onayla	Vahvista laskenta
+Siyah %d – Beyaz %d + %s · %s %s puanla önde	Musta %d – Valkea %d + %s · %s johtaa %s
+Siyah %d – Beyaz %d + %s · %s puan fark · %s	Musta %d – Valkea %d + %s · ero %s · %s
+Siyah %d – Beyaz %d · %s	Musta %d – Valkea %d · %s
+Siyah (ilk hamle)	Musta (aloittaa)
+Siyah başlar · köşeler değerlidir	Musta aloittaa · kulmat ovat arvokkaita
+Siyah kazandı	Musta voittaa
+Sıra: %s · Beyaz %d – Siyah %d	Vuoro: %s · Valkea %d – Musta %d
+Sıra: %s · Siyah %d – Beyaz %d	Vuoro: %s · Musta %d – Valkea %d
+Sıra: %s · esir: Siyah %d, Beyaz %d	Vuoro: %s · vangit: Musta %d, Valkea %d
+Tahta	Lauta
+Teslim ol	Luovuta
+Teslim oldunuz · Kindle kazandı	Luovutit · Kindle voitti
+Türk daması · almak zorunlu, en çok taşı alan yol seçilir	Turkkilainen tammi · lyönti on pakollinen, pisin lyönti on valittava
+Çin kuralları: alan sayımı, komi 7,5	Kiinalaiset säännöt: aluelaskenta, komi 7,5
+Ölü taşlar hesaplanıyor…	Etsitään kuolleita kiviä…
+İki pas: oyun bitti.\nSoluk taşlar ölü sayıldı; değiştirmek için bir zincire dokunun.	Kaksi passia: peli päättyi.\nHaaleat kivet lasketaan kuolleiksi; napauta ketjua muuttaaksesi.
+İpucu: açık	Vihjeet: päällä
+İpucu: kapalı	Vihjeet: pois
+İstatistikler	Tilastot

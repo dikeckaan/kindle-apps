@@ -740,3 +740,56 @@ Kolay okuma: Kapalı	Lectura fácil: No
 Basit mod: Açık	Modo sencillo: Sí
 Basit mod: Kapalı	Modo sencillo: No
 Kolay okuma: bütün yazılar büyük, kalın ve siyah olur.\nBasit mod: menüde dört büyük düğme; panoda yalnızca saat, hava ve üç haber. Teknik uygulamalar gizlenir; bu ekrandan her zaman geri açılabilir.	Lectura fácil: todo el texto se vuelve grande, en negrita y negro.\nModo sencillo: cuatro botones grandes en el menú; el panel muestra solo la hora, el tiempo y tres noticias. Las apps técnicas se ocultan; siempre se pueden volver a activar desde esta pantalla.
+%d kazanma · %d kaybetme · %d berabere	%d ganadas · %d perdidas · %d tablas
+%s kazandı	%s gana
+%s pas geçti	%s ha pasado
+%s teslim oldu	%s se ha rendido
+13×13	13×13
+9×9 (kısa oyun)	9×9 (partida corta)
+Almak zorunlu (%d taş) · %s	Captura obligatoria (%d fichas) · %s
+Almaya devam: sıradaki kareye dokunun	Sigue capturando: toca la casilla siguiente
+Berabere	Tablas
+Beyaz %d – Siyah %d · %s	Blancas %d – Negras %d · %s
+Beyaz (ilk hamle)	Blancas (salen primero)
+Beyaz kazandı	Ganan las blancas
+Buraya oynanamaz (ko ya da intihar)	Aquí no se puede jugar (ko o suicidio)
+Dama	Damas
+Dama (Türk daması)	Damas (turcas)
+Go	Go
+Go 13×13	Go 13×13
+Go 9×9	Go 9×9
+Kazandınız!	¡Has ganado!
+Kindle düşünüyor…	El Kindle está pensando…
+Kindle kazandı	Ha ganado el Kindle
+Kindle ne kadar iyi oynasın?	¿Qué tan bien debe jugar el Kindle?
+Kindle pas geçti	El Kindle ha pasado
+Kindle teslim oldu · Kazandınız!	El Kindle se ha rendido · ¡Has ganado!
+Kindle'a karşı	Contra el Kindle
+Kindle'a karşı ya da iki kişi aynı cihazda	Contra el Kindle o dos jugadores en un mismo aparato
+Kindle'a karşı: kazanma · kaybetme · beraberlik	Contra el Kindle: victorias · derrotas · tablas
+Masa Oyunları	Juegos de mesa
+Oyuna dön	Volver a la partida
+Oyunu bırakıp teslim olunsun mu?	¿Abandonar y rendirse en esta partida?
+Pas	Pasar
+Reversi	Reversi
+Sayım	Recuento
+Sayımı onayla	Confirmar el recuento
+Siyah %d – Beyaz %d + %s · %s %s puanla önde	Negras %d – Blancas %d + %s · %s gana por %s
+Siyah %d – Beyaz %d + %s · %s puan fark · %s	Negras %d – Blancas %d + %s · diferencia %s · %s
+Siyah %d – Beyaz %d · %s	Negras %d – Blancas %d · %s
+Siyah (ilk hamle)	Negras (salen primero)
+Siyah başlar · köşeler değerlidir	Empiezan las negras · las esquinas valen mucho
+Siyah kazandı	Ganan las negras
+Sıra: %s · Beyaz %d – Siyah %d	Turno: %s · Blancas %d – Negras %d
+Sıra: %s · Siyah %d – Beyaz %d	Turno: %s · Negras %d – Blancas %d
+Sıra: %s · esir: Siyah %d, Beyaz %d	Turno: %s · capturas: Negras %d, Blancas %d
+Tahta	Tablero
+Teslim ol	Rendirse
+Teslim oldunuz · Kindle kazandı	Te has rendido · Ha ganado el Kindle
+Türk daması · almak zorunlu, en çok taşı alan yol seçilir	Damas turcas · capturar es obligatorio, se elige la captura más larga
+Çin kuralları: alan sayımı, komi 7,5	Reglas chinas: recuento por área, komi 7,5
+Ölü taşlar hesaplanıyor…	Buscando piedras muertas…
+İki pas: oyun bitti.\nSoluk taşlar ölü sayıldı; değiştirmek için bir zincire dokunun.	Dos pases: la partida ha terminado.\nLas piedras pálidas cuentan como muertas; toca una cadena para cambiarla.
+İpucu: açık	Pistas: sí
+İpucu: kapalı	Pistas: no
+İstatistikler	Estadísticas

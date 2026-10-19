@@ -740,3 +740,56 @@ Kolay okuma: Kapalı	Lettlest: Av
 Basit mod: Açık	Enkel modus: På
 Basit mod: Kapalı	Enkel modus: Av
 Kolay okuma: bütün yazılar büyük, kalın ve siyah olur.\nBasit mod: menüde dört büyük düğme; panoda yalnızca saat, hava ve üç haber. Teknik uygulamalar gizlenir; bu ekrandan her zaman geri açılabilir.	Lettlest: all tekst blir stor, fet og svart.\nEnkel modus: fire store knapper i menyen; oversikten viser bare klokke, vær og tre nyheter. Tekniske apper skjules; de kan alltid slås på igjen fra denne skjermen.
+%d kazanma · %d kaybetme · %d berabere	%d seire · %d tap · %d remis
+%s kazandı	%s vinner
+%s pas geçti	%s passet
+%s teslim oldu	%s ga opp
+13×13	13×13
+9×9 (kısa oyun)	9×9 (kort parti)
+Almak zorunlu (%d taş) · %s	Slagplikt (%d brikker) · %s
+Almaya devam: sıradaki kareye dokunun	Fortsett å slå: trykk på neste rute
+Berabere	Remis
+Beyaz %d – Siyah %d · %s	Hvit %d – Svart %d · %s
+Beyaz (ilk hamle)	Hvit (begynner)
+Beyaz kazandı	Hvit vinner
+Buraya oynanamaz (ko ya da intihar)	Du kan ikke spille her (ko eller selvmord)
+Dama	Dam
+Dama (Türk daması)	Dam (tyrkisk)
+Go	Go
+Go 13×13	Go 13×13
+Go 9×9	Go 9×9
+Kazandınız!	Du vant!
+Kindle düşünüyor…	Kindle tenker…
+Kindle kazandı	Kindle vant
+Kindle ne kadar iyi oynasın?	Hvor godt skal Kindle spille?
+Kindle pas geçti	Kindle passet
+Kindle teslim oldu · Kazandınız!	Kindle ga opp · Du vant!
+Kindle'a karşı	Mot Kindle
+Kindle'a karşı ya da iki kişi aynı cihazda	Mot Kindle eller to spillere på samme enhet
+Kindle'a karşı: kazanma · kaybetme · beraberlik	Mot Kindle: seire · tap · remis
+Masa Oyunları	Brettspill
+Oyuna dön	Tilbake til partiet
+Oyunu bırakıp teslim olunsun mu?	Gi opp dette partiet?
+Pas	Pass
+Reversi	Reversi
+Sayım	Telling
+Sayımı onayla	Bekreft tellingen
+Siyah %d – Beyaz %d + %s · %s %s puanla önde	Svart %d – Hvit %d + %s · %s leder med %s
+Siyah %d – Beyaz %d + %s · %s puan fark · %s	Svart %d – Hvit %d + %s · margin %s · %s
+Siyah %d – Beyaz %d · %s	Svart %d – Hvit %d · %s
+Siyah (ilk hamle)	Svart (begynner)
+Siyah başlar · köşeler değerlidir	Svart begynner · hjørnene er verdifulle
+Siyah kazandı	Svart vinner
+Sıra: %s · Beyaz %d – Siyah %d	Tur: %s · Hvit %d – Svart %d
+Sıra: %s · Siyah %d – Beyaz %d	Tur: %s · Svart %d – Hvit %d
+Sıra: %s · esir: Siyah %d, Beyaz %d	Tur: %s · fanger: Svart %d, Hvit %d
+Tahta	Brett
+Teslim ol	Gi opp
+Teslim oldunuz · Kindle kazandı	Du ga opp · Kindle vant
+Türk daması · almak zorunlu, en çok taşı alan yol seçilir	Tyrkisk dam · slag er obligatorisk, det lengste slaget må velges
+Çin kuralları: alan sayımı, komi 7,5	Kinesiske regler: områdetelling, komi 7,5
+Ölü taşlar hesaplanıyor…	Leter etter døde steiner…
+İki pas: oyun bitti.\nSoluk taşlar ölü sayıldı; değiştirmek için bir zincire dokunun.	To pass: partiet er over.\nBleke steiner telles som døde; trykk på en kjede for å endre.
+İpucu: açık	Hint: på
+İpucu: kapalı	Hint: av
+İstatistikler	Statistikk

@@ -740,3 +740,56 @@ Kolay okuma: Kapalı	Lecture facile : Non
 Basit mod: Açık	Mode simple : Oui
 Basit mod: Kapalı	Mode simple : Non
 Kolay okuma: bütün yazılar büyük, kalın ve siyah olur.\nBasit mod: menüde dört büyük düğme; panoda yalnızca saat, hava ve üç haber. Teknik uygulamalar gizlenir; bu ekrandan her zaman geri açılabilir.	Lecture facile : tous les textes deviennent grands, gras et noirs.\nMode simple : quatre grands boutons dans le menu ; le tableau de bord n’affiche que l’heure, la météo et trois actualités. Les applis techniques sont masquées ; on peut toujours les réactiver depuis cet écran.
+%d kazanma · %d kaybetme · %d berabere	%d gagnées · %d perdues · %d nulles
+%s kazandı	%s gagne
+%s pas geçti	%s a passé
+%s teslim oldu	%s a abandonné
+13×13	13×13
+9×9 (kısa oyun)	9×9 (partie courte)
+Almak zorunlu (%d taş) · %s	Prise obligatoire (%d pions) · %s
+Almaya devam: sıradaki kareye dokunun	Continuez la prise : touchez la case suivante
+Berabere	Nulle
+Beyaz %d – Siyah %d · %s	Blancs %d – Noirs %d · %s
+Beyaz (ilk hamle)	Blancs (jouent en premier)
+Beyaz kazandı	Les Blancs gagnent
+Buraya oynanamaz (ko ya da intihar)	Coup interdit ici (ko ou suicide)
+Dama	Dames
+Dama (Türk daması)	Dames (turques)
+Go	Go
+Go 13×13	Go 13×13
+Go 9×9	Go 9×9
+Kazandınız!	Vous avez gagné !
+Kindle düşünüyor…	La Kindle réfléchit…
+Kindle kazandı	La Kindle a gagné
+Kindle ne kadar iyi oynasın?	À quel niveau la Kindle doit-elle jouer ?
+Kindle pas geçti	La Kindle a passé
+Kindle teslim oldu · Kazandınız!	La Kindle a abandonné · Vous avez gagné !
+Kindle'a karşı	Contre la Kindle
+Kindle'a karşı ya da iki kişi aynı cihazda	Contre la Kindle ou à deux sur le même appareil
+Kindle'a karşı: kazanma · kaybetme · beraberlik	Contre la Kindle : victoires · défaites · nulles
+Masa Oyunları	Jeux de plateau
+Oyuna dön	Retour à la partie
+Oyunu bırakıp teslim olunsun mu?	Abandonner cette partie ?
+Pas	Passer
+Reversi	Reversi
+Sayım	Décompte
+Sayımı onayla	Valider le décompte
+Siyah %d – Beyaz %d + %s · %s %s puanla önde	Noirs %d – Blancs %d + %s · %s mène de %s
+Siyah %d – Beyaz %d + %s · %s puan fark · %s	Noirs %d – Blancs %d + %s · écart %s · %s
+Siyah %d – Beyaz %d · %s	Noirs %d – Blancs %d · %s
+Siyah (ilk hamle)	Noirs (jouent en premier)
+Siyah başlar · köşeler değerlidir	Les Noirs commencent · les coins sont précieux
+Siyah kazandı	Les Noirs gagnent
+Sıra: %s · Beyaz %d – Siyah %d	Trait : %s · Blancs %d – Noirs %d
+Sıra: %s · Siyah %d – Beyaz %d	Trait : %s · Noirs %d – Blancs %d
+Sıra: %s · esir: Siyah %d, Beyaz %d	Trait : %s · prisonniers : Noirs %d, Blancs %d
+Tahta	Plateau
+Teslim ol	Abandonner
+Teslim oldunuz · Kindle kazandı	Vous avez abandonné · La Kindle a gagné
+Türk daması · almak zorunlu, en çok taşı alan yol seçilir	Dames turques · la prise est obligatoire, la plus longue doit être choisie
+Çin kuralları: alan sayımı, komi 7,5	Règles chinoises : décompte par zones, komi 7,5
+Ölü taşlar hesaplanıyor…	Recherche des pierres mortes…
+İki pas: oyun bitti.\nSoluk taşlar ölü sayıldı; değiştirmek için bir zincire dokunun.	Deux passes : la partie est finie.\nLes pierres pâles sont comptées mortes ; touchez une chaîne pour changer.
+İpucu: açık	Indices : oui
+İpucu: kapalı	Indices : non
+İstatistikler	Statistiques

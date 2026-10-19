@@ -29,6 +29,7 @@ Kitaplıkta tek bir **"Uygulamalar"** girişi olur; açınca bütün uygulamalar
 | Sistem Bilgisi (pil, depolama, bellek, Wi-Fi, sürüm, güvenlik) | ✅ |
 | Wi-Fi ile Yükle (tarayıcıdan PIN'li kitap gönderme) | ✅ |
 | E-Kitap (Project Gutenberg'den telifsiz kitap arama ve indirme, AZW3/EPUB) | ✅ |
+| Masa Oyunları (Reversi, Türk daması, Go 9×9/13×13: Kindle'a karşı 3 zorluk ya da iki kişilik) | ✅ |
 
 ## Gereksinimler
 
@@ -101,6 +102,23 @@ bağlantısını gösterir; görsel indirmez.
 Uygulamayı açınca ekranda `http://<ip>:8080` adresi ve 6 haneli bir PIN görünür. Aynı Wi-Fi'daki telefon ya da bilgisayarın
 tarayıcısında bu adresi açın, PIN'i girip kitapları seçin; dosyalar `documents` klasörüne gelir. Sunucu yalnızca uygulama
 açıkken çalışır; çok sayıda yanlış PIN denemesinde kendini kilitler.
+
+### Masa Oyunları
+
+Üç klasik oyun; her biri Kindle'a karşı (Kolay / Orta / Zor) ya da iki kişi aynı cihazda oynanır. Geri al, yarım kalan
+oyuna devam, Kindle'a karşı kazanma/kaybetme istatistikleri; hamlede yalnızca değişen kareler flaşsız yenilenir.
+
+- **Reversi:** Siyah başlar; hamlesi olmayan taraf otomatik pas geçer, iki taraf da oynayamayınca oyun biter.
+  Küçük noktalar geçerli hamleleri gösterir (İpucu aç/kapat). Kindle alfa-beta arar (hareketlilik, köşeler, kalıcı taşlar).
+- **Dama (Türk daması):** 8×8, taşlar 2. ve 3. sırada, beyaz başlar. Taş bir kare ileri ya da yana gider, geri ve çapraz
+  gitmez; dama (kral) dikey/yatay istediği kadar gider. Almak zorunludur ve **en çok taşı alan yol** seçilmelidir
+  (taş/dama farkı yok); alınan taş hemen kalkar, dama alırken 180° geri dönemez. Alarak son sıraya varan taş, alma
+  sürerse taş olarak (yana) almaya devam eder, hamle bitince dama olur. Hamlesi kalmayan kaybeder; iki tarafta da tek taş
+  kalırsa berabere (ayrıca uygulama kuralı: 50'şer hamle boyunca taş alınmaz ve taş oynanmazsa berabere). Alma sırasında
+  her iniş karesine sırayla dokunulur.
+- **Go (9×9, 13×13):** Çin kuralları, alan sayımı, komi 7,5; intihar yasak, ko için konumsal süper-ko. İki pastan sonra
+  Kindle ölü taşları önerir (soluk gösterilir), bir zincire dokunarak değiştirilir, sonra sayım onaylanır. Kindle
+  Monte Carlo ağaç araması (UCT + RAVE) yapar; düşünme süresi en çok ~3 sn.
 
 ## Sorun giderme
 

@@ -740,3 +740,56 @@ Kolay okuma: Kapalı	Asan oxu: Bağlı
 Basit mod: Açık	Sadə rejim: Açıq
 Basit mod: Kapalı	Sadə rejim: Bağlı
 Kolay okuma: bütün yazılar büyük, kalın ve siyah olur.\nBasit mod: menüde dört büyük düğme; panoda yalnızca saat, hava ve üç haber. Teknik uygulamalar gizlenir; bu ekrandan her zaman geri açılabilir.	Asan oxu: bütün yazılar böyük, qalın və qara olur.\nSadə rejim: menyuda dörd böyük düymə; paneldə yalnız saat, hava və üç xəbər. Texniki tətbiqlər gizlədilir; bu ekrandan həmişə geri açıla bilər.
+%d kazanma · %d kaybetme · %d berabere	%d qələbə · %d məğlubiyyət · %d heç-heçə
+%s kazandı	%s qalib gəldi
+%s pas geçti	%s pas keçdi
+%s teslim oldu	%s təslim oldu
+13×13	13×13
+9×9 (kısa oyun)	9×9 (qısa oyun)
+Almak zorunlu (%d taş) · %s	Daş almaq məcburidir (%d daş) · %s
+Almaya devam: sıradaki kareye dokunun	Almağa davam: növbəti xanaya toxunun
+Berabere	Heç-heçə
+Beyaz %d – Siyah %d · %s	Ağ %d – Qara %d · %s
+Beyaz (ilk hamle)	Ağ (ilk gediş)
+Beyaz kazandı	Ağ qalib gəldi
+Buraya oynanamaz (ko ya da intihar)	Bura oynamaq olmaz (ko və ya intihar)
+Dama	Dama
+Dama (Türk daması)	Dama (Türk daması)
+Go	Go
+Go 13×13	Go 13×13
+Go 9×9	Go 9×9
+Kazandınız!	Qalib gəldiniz!
+Kindle düşünüyor…	Kindle düşünür…
+Kindle kazandı	Kindle qalib gəldi
+Kindle ne kadar iyi oynasın?	Kindle nə qədər yaxşı oynasın?
+Kindle pas geçti	Kindle pas keçdi
+Kindle teslim oldu · Kazandınız!	Kindle təslim oldu · Qalib gəldiniz!
+Kindle'a karşı	Kindle-a qarşı
+Kindle'a karşı ya da iki kişi aynı cihazda	Kindle-a qarşı və ya iki nəfər eyni cihazda
+Kindle'a karşı: kazanma · kaybetme · beraberlik	Kindle-a qarşı: qələbə · məğlubiyyət · heç-heçə
+Masa Oyunları	Stolüstü oyunlar
+Oyuna dön	Oyuna qayıt
+Oyunu bırakıp teslim olunsun mu?	Oyunu buraxıb təslim olunsun?
+Pas	Pas
+Reversi	Reversi
+Sayım	Hesablama
+Sayımı onayla	Hesablamanı təsdiqlə
+Siyah %d – Beyaz %d + %s · %s %s puanla önde	Qara %d – Ağ %d + %s · %s %s xalla öndədir
+Siyah %d – Beyaz %d + %s · %s puan fark · %s	Qara %d – Ağ %d + %s · fərq %s · %s
+Siyah %d – Beyaz %d · %s	Qara %d – Ağ %d · %s
+Siyah (ilk hamle)	Qara (ilk gediş)
+Siyah başlar · köşeler değerlidir	Qara başlayır · künclər dəyərlidir
+Siyah kazandı	Qara qalib gəldi
+Sıra: %s · Beyaz %d – Siyah %d	Növbə: %s · Ağ %d – Qara %d
+Sıra: %s · Siyah %d – Beyaz %d	Növbə: %s · Qara %d – Ağ %d
+Sıra: %s · esir: Siyah %d, Beyaz %d	Növbə: %s · əsir: Qara %d, Ağ %d
+Tahta	Lövhə
+Teslim ol	Təslim ol
+Teslim oldunuz · Kindle kazandı	Təslim oldunuz · Kindle qalib gəldi
+Türk daması · almak zorunlu, en çok taşı alan yol seçilir	Türk daması · daş almaq məcburidir, ən çox daş alan yol seçilir
+Çin kuralları: alan sayımı, komi 7,5	Çin qaydaları: ərazi hesabı, komi 7,5
+Ölü taşlar hesaplanıyor…	Ölü daşlar hesablanır…
+İki pas: oyun bitti.\nSoluk taşlar ölü sayıldı; değiştirmek için bir zincire dokunun.	İki pas: oyun bitdi.\nSolğun daşlar ölü sayıldı; dəyişmək üçün bir zəncirə toxunun.
+İpucu: açık	İpucu: açıq
+İpucu: kapalı	İpucu: bağlı
+İstatistikler	Statistika

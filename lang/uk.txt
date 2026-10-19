@@ -740,3 +740,56 @@ Kolay okuma: Kapalı	Легке читання: вимк
 Basit mod: Açık	Простий режим: увімк
 Basit mod: Kapalı	Простий режим: вимк
 Kolay okuma: bütün yazılar büyük, kalın ve siyah olur.\nBasit mod: menüde dört büyük düğme; panoda yalnızca saat, hava ve üç haber. Teknik uygulamalar gizlenir; bu ekrandan her zaman geri açılabilir.	Легке читання: увесь текст стає великим, жирним і чорним.\nПростий режим: чотири великі кнопки в меню; на панелі лише годинник, погода і три новини. Технічні застосунки приховуються; їх завжди можна повернути на цьому екрані.
+%d kazanma · %d kaybetme · %d berabere	%d перемог · %d поразок · %d нічиїх
+%s kazandı	%s перемагає
+%s pas geçti	%s пасує
+%s teslim oldu	%s здається
+13×13	13×13
+9×9 (kısa oyun)	9×9 (коротка партія)
+Almak zorunlu (%d taş) · %s	Бити обов'язково (%d шашок) · %s
+Almaya devam: sıradaki kareye dokunun	Бийте далі: торкніться наступної клітинки
+Berabere	Нічия
+Beyaz %d – Siyah %d · %s	Білі %d – Чорні %d · %s
+Beyaz (ilk hamle)	Білі (ходять першими)
+Beyaz kazandı	Білі перемогли
+Buraya oynanamaz (ko ya da intihar)	Сюди ходити не можна (ко або самогубство)
+Dama	Шашки
+Dama (Türk daması)	Шашки (турецькі)
+Go	Ґо
+Go 13×13	Ґо 13×13
+Go 9×9	Ґо 9×9
+Kazandınız!	Ви перемогли!
+Kindle düşünüyor…	Kindle думає…
+Kindle kazandı	Kindle переміг
+Kindle ne kadar iyi oynasın?	Наскільки добре грати Kindle?
+Kindle pas geçti	Kindle спасував
+Kindle teslim oldu · Kazandınız!	Kindle здався · Ви перемогли!
+Kindle'a karşı	Проти Kindle
+Kindle'a karşı ya da iki kişi aynı cihazda	Проти Kindle або удвох на одному пристрої
+Kindle'a karşı: kazanma · kaybetme · beraberlik	Проти Kindle: перемоги · поразки · нічиї
+Masa Oyunları	Настільні ігри
+Oyuna dön	Повернутися до гри
+Oyunu bırakıp teslim olunsun mu?	Здатися в цій партії?
+Pas	Пас
+Reversi	Реверсі
+Sayım	Підрахунок
+Sayımı onayla	Підтвердити підрахунок
+Siyah %d – Beyaz %d + %s · %s %s puanla önde	Чорні %d – Білі %d + %s · %s попереду на %s
+Siyah %d – Beyaz %d + %s · %s puan fark · %s	Чорні %d – Білі %d + %s · різниця %s · %s
+Siyah %d – Beyaz %d · %s	Чорні %d – Білі %d · %s
+Siyah (ilk hamle)	Чорні (ходять першими)
+Siyah başlar · köşeler değerlidir	Чорні починають · кути цінні
+Siyah kazandı	Чорні перемогли
+Sıra: %s · Beyaz %d – Siyah %d	Хід: %s · Білі %d – Чорні %d
+Sıra: %s · Siyah %d – Beyaz %d	Хід: %s · Чорні %d – Білі %d
+Sıra: %s · esir: Siyah %d, Beyaz %d	Хід: %s · полонені: Чорні %d, Білі %d
+Tahta	Дошка
+Teslim ol	Здатися
+Teslim oldunuz · Kindle kazandı	Ви здалися · Kindle переміг
+Türk daması · almak zorunlu, en çok taşı alan yol seçilir	Турецькі шашки · бити обов'язково, обирається найдовше взяття
+Çin kuralları: alan sayımı, komi 7,5	Китайські правила: підрахунок території, комі 7,5
+Ölü taşlar hesaplanıyor…	Шукаємо мертві камені…
+İki pas: oyun bitti.\nSoluk taşlar ölü sayıldı; değiştirmek için bir zincire dokunun.	Два паси: партію завершено.\nБлідi камені вважаються мертвими; торкніться групи, щоб змінити.
+İpucu: açık	Підказки: увімк.
+İpucu: kapalı	Підказки: вимк.
+İstatistikler	Статистика

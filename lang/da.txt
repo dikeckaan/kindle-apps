@@ -740,3 +740,56 @@ Kolay okuma: Kapalı	Let læsning: Fra
 Basit mod: Açık	Enkel tilstand: Til
 Basit mod: Kapalı	Enkel tilstand: Fra
 Kolay okuma: bütün yazılar büyük, kalın ve siyah olur.\nBasit mod: menüde dört büyük düğme; panoda yalnızca saat, hava ve üç haber. Teknik uygulamalar gizlenir; bu ekrandan her zaman geri açılabilir.	Let læsning: al tekst bliver stor, fed og sort.\nEnkel tilstand: fire store knapper i menuen; oversigten viser kun ur, vejr og tre nyheder. Tekniske apps skjules; de kan altid slås til igen fra denne skærm.
+%d kazanma · %d kaybetme · %d berabere	%d sejre · %d nederlag · %d remis
+%s kazandı	%s vinder
+%s pas geçti	%s meldte pas
+%s teslim oldu	%s opgav
+13×13	13×13
+9×9 (kısa oyun)	9×9 (kort parti)
+Almak zorunlu (%d taş) · %s	Slagpligt (%d brikker) · %s
+Almaya devam: sıradaki kareye dokunun	Fortsæt med at slå: tryk på næste felt
+Berabere	Remis
+Beyaz %d – Siyah %d · %s	Hvid %d – Sort %d · %s
+Beyaz (ilk hamle)	Hvid (starter)
+Beyaz kazandı	Hvid vinder
+Buraya oynanamaz (ko ya da intihar)	Du kan ikke spille her (ko eller selvmord)
+Dama	Dam
+Dama (Türk daması)	Dam (tyrkisk)
+Go	Go
+Go 13×13	Go 13×13
+Go 9×9	Go 9×9
+Kazandınız!	Du vandt!
+Kindle düşünüyor…	Kindlen tænker…
+Kindle kazandı	Kindlen vandt
+Kindle ne kadar iyi oynasın?	Hvor godt skal Kindlen spille?
+Kindle pas geçti	Kindlen meldte pas
+Kindle teslim oldu · Kazandınız!	Kindlen opgav · Du vandt!
+Kindle'a karşı	Mod Kindlen
+Kindle'a karşı ya da iki kişi aynı cihazda	Mod Kindlen eller to spillere på samme enhed
+Kindle'a karşı: kazanma · kaybetme · beraberlik	Mod Kindlen: sejre · nederlag · remis
+Masa Oyunları	Brætspil
+Oyuna dön	Tilbage til partiet
+Oyunu bırakıp teslim olunsun mu?	Opgive dette parti?
+Pas	Pas
+Reversi	Reversi
+Sayım	Optælling
+Sayımı onayla	Bekræft optællingen
+Siyah %d – Beyaz %d + %s · %s %s puanla önde	Sort %d – Hvid %d + %s · %s fører med %s
+Siyah %d – Beyaz %d + %s · %s puan fark · %s	Sort %d – Hvid %d + %s · forskel %s · %s
+Siyah %d – Beyaz %d · %s	Sort %d – Hvid %d · %s
+Siyah (ilk hamle)	Sort (starter)
+Siyah başlar · köşeler değerlidir	Sort starter · hjørnerne er værdifulde
+Siyah kazandı	Sort vinder
+Sıra: %s · Beyaz %d – Siyah %d	Tur: %s · Hvid %d – Sort %d
+Sıra: %s · Siyah %d – Beyaz %d	Tur: %s · Sort %d – Hvid %d
+Sıra: %s · esir: Siyah %d, Beyaz %d	Tur: %s · fanger: Sort %d, Hvid %d
+Tahta	Bræt
+Teslim ol	Opgiv
+Teslim oldunuz · Kindle kazandı	Du opgav · Kindlen vandt
+Türk daması · almak zorunlu, en çok taşı alan yol seçilir	Tyrkisk dam · slag er obligatorisk, det længste slag skal vælges
+Çin kuralları: alan sayımı, komi 7,5	Kinesiske regler: områdetælling, komi 7,5
+Ölü taşlar hesaplanıyor…	Leder efter døde sten…
+İki pas: oyun bitti.\nSoluk taşlar ölü sayıldı; değiştirmek için bir zincire dokunun.	To pas: partiet er slut.\nBlege sten tæller som døde; tryk på en kæde for at ændre det.
+İpucu: açık	Tip: til
+İpucu: kapalı	Tip: fra
+İstatistikler	Statistik

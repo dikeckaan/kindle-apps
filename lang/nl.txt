@@ -740,3 +740,56 @@ Kolay okuma: Kapalı	Makkelijk lezen: Uit
 Basit mod: Açık	Eenvoudige modus: Aan
 Basit mod: Kapalı	Eenvoudige modus: Uit
 Kolay okuma: bütün yazılar büyük, kalın ve siyah olur.\nBasit mod: menüde dört büyük düğme; panoda yalnızca saat, hava ve üç haber. Teknik uygulamalar gizlenir; bu ekrandan her zaman geri açılabilir.	Makkelijk lezen: alle tekst wordt groot, vet en zwart.\nEenvoudige modus: vier grote knoppen in het menu; het overzicht toont alleen klok, weer en drie nieuwsberichten. Technische apps worden verborgen; via dit scherm altijd weer aan te zetten.
+%d kazanma · %d kaybetme · %d berabere	%d gewonnen · %d verloren · %d remise
+%s kazandı	%s wint
+%s pas geçti	%s heeft gepast
+%s teslim oldu	%s heeft opgegeven
+13×13	13×13
+9×9 (kısa oyun)	9×9 (korte partij)
+Almak zorunlu (%d taş) · %s	Slaan verplicht (%d stukken) · %s
+Almaya devam: sıradaki kareye dokunun	Verder slaan: tik op het volgende veld
+Berabere	Remise
+Beyaz %d – Siyah %d · %s	Wit %d – Zwart %d · %s
+Beyaz (ilk hamle)	Wit (begint)
+Beyaz kazandı	Wit wint
+Buraya oynanamaz (ko ya da intihar)	Hier mag je niet spelen (ko of zelfmoord)
+Dama	Dammen
+Dama (Türk daması)	Dammen (Turks)
+Go	Go
+Go 13×13	Go 13×13
+Go 9×9	Go 9×9
+Kazandınız!	Je hebt gewonnen!
+Kindle düşünüyor…	De Kindle denkt na…
+Kindle kazandı	De Kindle heeft gewonnen
+Kindle ne kadar iyi oynasın?	Hoe goed moet de Kindle spelen?
+Kindle pas geçti	De Kindle heeft gepast
+Kindle teslim oldu · Kazandınız!	De Kindle heeft opgegeven · Je hebt gewonnen!
+Kindle'a karşı	Tegen de Kindle
+Kindle'a karşı ya da iki kişi aynı cihazda	Tegen de Kindle of met z'n tweeën op één apparaat
+Kindle'a karşı: kazanma · kaybetme · beraberlik	Tegen de Kindle: gewonnen · verloren · remise
+Masa Oyunları	Bordspellen
+Oyuna dön	Terug naar de partij
+Oyunu bırakıp teslim olunsun mu?	Opgeven en deze partij beëindigen?
+Pas	Passen
+Reversi	Reversi
+Sayım	Telling
+Sayımı onayla	Telling bevestigen
+Siyah %d – Beyaz %d + %s · %s %s puanla önde	Zwart %d – Wit %d + %s · %s staat %s voor
+Siyah %d – Beyaz %d + %s · %s puan fark · %s	Zwart %d – Wit %d + %s · verschil %s · %s
+Siyah %d – Beyaz %d · %s	Zwart %d – Wit %d · %s
+Siyah (ilk hamle)	Zwart (begint)
+Siyah başlar · köşeler değerlidir	Zwart begint · hoeken zijn waardevol
+Siyah kazandı	Zwart wint
+Sıra: %s · Beyaz %d – Siyah %d	Aan zet: %s · Wit %d – Zwart %d
+Sıra: %s · Siyah %d – Beyaz %d	Aan zet: %s · Zwart %d – Wit %d
+Sıra: %s · esir: Siyah %d, Beyaz %d	Aan zet: %s · gevangen: Zwart %d, Wit %d
+Tahta	Bord
+Teslim ol	Opgeven
+Teslim oldunuz · Kindle kazandı	Je hebt opgegeven · De Kindle heeft gewonnen
+Türk daması · almak zorunlu, en çok taşı alan yol seçilir	Turks dammen · slaan is verplicht, de langste slag moet worden gekozen
+Çin kuralları: alan sayımı, komi 7,5	Chinese regels: gebiedstelling, komi 7,5
+Ölü taşlar hesaplanıyor…	Dode stenen zoeken…
+İki pas: oyun bitti.\nSoluk taşlar ölü sayıldı; değiştirmek için bir zincire dokunun.	Twee keer gepast: de partij is voorbij.\nVervaagde stenen tellen als dood; tik op een groep om dat te wijzigen.
+İpucu: açık	Hints: aan
+İpucu: kapalı	Hints: uit
+İstatistikler	Statistieken
