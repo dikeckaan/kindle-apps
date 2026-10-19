@@ -14,7 +14,7 @@
 # core/kui/trfmt.c
 %d %s %d, %s	
 # apps/kelime/main.c
-%d / %d öğrenildi	
+%d / %d kelime öğretildi · ✓ öğrenildi · • öğretildi · ★ biliyorum · ○ sırada	
 # apps/gorev/main.c
 %d MB · %s açık	
 # apps/akis/main.c
@@ -40,7 +40,7 @@
 # apps/masa/main.c
 %d kazanma · %d kaybetme · %d berabere	
 # apps/kelime/main.c
-%d kelime görüldü · %d öğrenildi · %d tekrar bekliyor	
+%d kelime öğretildi · %d öğrenildi · %d tekrar bekliyor	
 # apps/kelime/main.c
 %d kelime, A1'den C2'ye	
 # apps/upload/main.c
@@ -57,6 +57,8 @@
 %d sn	
 # apps/kelime/main.c
 %d sorudan %d doğru	
+# apps/kelime/main.c
+%d sorudan %d doğru · +%d XP	
 # apps/tarif/main.c
 %d tarif	
 # apps/tarif/main.c
@@ -71,6 +73,8 @@
 %d yanlış harf var; çizili kareler.	
 # apps/akis/main.c
 %d yazı · %s	
+# apps/kelime/main.c
+%d yeni kelime öğrendin!	
 # apps/tarif/main.c
 %d ülke	
 # apps/siir/main.c
@@ -105,6 +109,8 @@
 %s / %s  (%%%d)	
 # apps/uyku/main.c
 %s / %s · yağış %%%d	
+# apps/kelime/main.c
+%s anlamı	
 # apps/gorev/main.c
 %s açık	
 # core/hub/main.c
@@ -129,6 +135,8 @@
 %s pas geçti	
 # apps/weather/main.c
 %s silinsin mi?	
+# apps/kelime/main.c
+%s tanımı	
 # apps/masa/go_ui.c
 %s teslim oldu	
 # apps/vakit/main.c
@@ -150,7 +158,13 @@
 # apps/odak/main.c
 %s · Tur %d · Bitiş %s	
 # apps/kelime/main.c
+%s · kelime %d / %d	
+# apps/kelime/main.c
 %s öğreniyorum · ana dilim %s	
+# apps/kelime/main.c
+%s öğrenmeye nereden başlayalım?	
+# apps/kelime/main.c
+%s: %d / %d doğru	
 # apps/deprem/main.c
 %s° K, %s° D	
 # apps/weather/main.c
@@ -161,14 +175,14 @@
 + Yeni	
 # apps/kelime/main.c
 +%d XP	
-# apps/kelime/main.c
-+%d XP (hatasız ders: +%d)	
 # apps/sky/main.c
 +1 gün	
 # apps/sky/main.c
 +1 sa	
 # apps/odak/main.c
 +5 dk	
+# apps/kelime/main.c
+0: yeni öğretildi · 1: yeni kaçırılan · 5: iyice öğrenildi (aralık 1, 2, 4, 8, 21 gün)	
 # apps/chess/puzzle.c
 1 hamlede mat	
 # apps/sleep/sleep_opts.c
@@ -177,8 +191,6 @@
 10 dakika	
 # apps/masa/go_ui.c
 13×13	
-# apps/kelime/main.c
-1: yeni kaçırılan · 5: iyice öğrenildi (aralık 1, 2, 4, 8, 21 gün)	
 # apps/chess/puzzle.c
 2 hamlede mat	
 # apps/sleep/sleep_opts.c
@@ -299,6 +311,8 @@ Anahtarı sil
 Anastasia matı	
 # apps/sky/skydata.c
 Andromeda	
+# apps/kelime/main.c
+Anladım ▶	
 # apps/ajanda/agenda.c
 Anneler Günü	
 # apps/sky/skydata.c
@@ -393,6 +407,8 @@ Açılış
 Ağustos	
 # apps/vakit/main.c
 B	
+# apps/kelime/main.c
+BUGÜNÜN DERSİ	
 # apps/ajanda/agenda.c
 Babalar Günü	
 # apps/sky/skydata.c
@@ -421,6 +437,8 @@ Başka taş seçmek için ona dokunun
 Başla	
 # apps/kelime/main.c
 Başlangıç	
+# apps/kelime/main.c
+Başlangıç seviyen	
 # apps/notlar/main.c
 Başlık	
 # apps/masa/main.c
@@ -431,6 +449,8 @@ Baştan başla
 Baştan seçmek için taşın kendisine dokunun	
 # apps/sysinfo/main.c
 Bellek	
+# apps/kelime/main.c
+Ben, sen, o	
 # apps/masa/dm_ui.c
 Berabere	
 # apps/ajanda/agenda.c
@@ -479,12 +499,18 @@ Beyaz sağ tarafta, G7'de kendine alan kurmaya başladı.
 Beyaz zinciri kurtaramayacağını görüp G5'e oynadı.	
 # apps/masa/dama.c
 Beyaz'ın başka seçeneği yok, almak zorunlu: d5'teki taş yana atlayıp c5'i aldı ve b5'e kondu.	
+# apps/kelime/main.c
+Bildiğin %d kelime "biliyorum" olarak işaretlendi; ara sıra tekrar sorulur.	
 # apps/news/news.c
 Bilim	
 # apps/akis/akis.c
 Bilim (Türkçe)	
 # apps/akis/akis.c
 Bilim (dünya)	
+# apps/kelime/main.c
+Bilmiyorum	
+# apps/kelime/main.c
+Bilmiyorum, bana öğret	
 # apps/uyku/main.c
 Bir dakika içinde seçilmezse uykuya devam eder.	
 # apps/bulmaca/main.c
@@ -493,6 +519,8 @@ Bir kareye dokunun
 Bir sitenin RSS / Atom adresi	
 # apps/masa/go.c
 Bir taşın yukarı, aşağı, sağ ve soldaki boş komşuları onun özgürlükleridir (halkalar). Yan yana duran aynı renk taşlar bir zincirdir ve özgürlüklerini paylaşır: beyaz taşın 4, siyah zincirin 6 özgürlüğü var.	
+# apps/kelime/main.c
+Biraz biliyorum	
 # apps/odak/main.c
 Bitir	
 # apps/bulmaca/main.c
@@ -534,7 +562,9 @@ Bu bir web adresi değil.
 # apps/bulmaca/main.c
 Bu bulmacadaki bütün harfler silinsin mi?	
 # apps/kelime/main.c
-Bu dil ikilisinde bu seviyede sorulacak kelime bulunamadı.	
+Bu dersin kelimeleri	
+# apps/kelime/main.c
+Bu dil ikilisinin bütün kelimelerini gördün. Tekrarlarla devam et.	
 # apps/sky/main.c
 Bu gece görünen gezegenler: %s	
 # apps/sky/main.c
@@ -545,6 +575,8 @@ Bu gün için not yok.
 Bu hafta	
 # apps/kelime/main.c
 Bu kelime ne demek?	
+# apps/kelime/main.c
+Bu kelimeyi tekrar çalışalım	
 # apps/upload/main.c
 Bu oturumda gelenler (%d)	
 # apps/upload/main.c
@@ -555,8 +587,6 @@ Bu oyun bitirilsin mi?
 Bu sayfada malzeme listesi bulunamadı ya da bağlantı kesildi.	
 # apps/wordle/main.c
 Bu sefer olmadı	
-# apps/kelime/main.c
-Bu seviyede soru yok	
 # apps/deprem/main.c
 Bu süzgeçle deprem yok.	
 # apps/kelime/main.c
@@ -577,6 +607,14 @@ Bugün %s · %d oturum · Seri %d gün
 Bugün Güneş kıble yönünden geçmiyor.	
 # apps/vakit/main.c
 Bugün vakit hesaplanamıyor	
+# apps/kelime/main.c
+Bugün: %d tekrar	
+# apps/kelime/main.c
+Bugün: %d yeni kelime	
+# apps/kelime/main.c
+Bugün: %d yeni kelime + %d tekrar	
+# apps/kelime/main.c
+Bugünlük tekrar bitti. Yeni kelimeler için derse devam et.	
 # apps/bulmaca/main.c
 Bulmaca	
 # apps/bulmaca/main.c
@@ -603,6 +641,8 @@ Bulmacayı %s içinde, hiç harf açmadan çözdünüz.
 Bulmacayı sıfırla	
 # apps/sudoku/main.c
 Bulmacayı çözdünüz.	
+# apps/kelime/main.c
+Bunu zaten biliyorum ★	
 # apps/masa/go_ui.c
 Buraya oynanamaz (ko ya da intihar)	
 # apps/solitaire/main.c
@@ -675,10 +715,18 @@ Derinlik
 Ders	
 # apps/kelime/main.c
 Ders bitti	
+# apps/kelime/main.c
+Derse başla ▶	
+# apps/kelime/main.c
+Derslere başla ▶	
+# apps/kelime/main.c
+Derste yeni kelime:	
 # apps/game2048/main.c
 Devam	
 # apps/chess/main.c
 Devam et	
+# apps/kelime/main.c
+Devam ▶	
 # apps/kelime/main.c
 Değiştir	
 # core/hub/main.c
@@ -815,6 +863,8 @@ Eşitlik
 Favoriler	
 # apps/chess/puzzle.c
 Fedâ	
+# apps/kelime/main.c
+Fiiller %d	
 # apps/chess/main.c
 Fil	
 # apps/chess/puzzle.c
@@ -899,6 +949,8 @@ Güneş doğuşu %s · batışı %s · gün %d sa %d dk
 Güneş şu an ufkun altında	
 # apps/vakit/vakit.c
 Güneşe %s	
+# apps/kelime/main.c
+Günlük şeyler	
 # apps/bulmaca/main.c
 Günün bulmacası	
 # apps/uyku/main.c
@@ -1003,12 +1055,16 @@ Henüz parola yok
 Henüz tarif açılmadı.	
 # apps/chess/puzzle_ui.c
 Henüz çözülen bulmaca yok.	
+# apps/kelime/main.c
+Henüz öğretilmedi	
 # apps/gorev/main.c
 Hepsini durdur	
 # apps/akis/main.c
 Hepsini okundu say	
 # apps/akis/main.c
 Hepsini yenile	
+# apps/kelime/main.c
+Her derste önce yeni kelimeler öğretilir, sonra alıştırma yapılır.	
 # apps/chess/main.c
 Her hamlede tahtayı çevir	
 # apps/masa/dama.c
@@ -1039,6 +1095,8 @@ Hilal (büyüyen)
 Hilal (küçülen)	
 # apps/weather/main.c
 Hissedilen %s	
+# apps/kelime/main.c
+Hiç bilmiyorum	
 # apps/kelime/main.c
 Hiç hata yok, harika!	
 # apps/odak/main.c
@@ -1291,6 +1349,8 @@ Köşe matı
 Kültür	
 # apps/akis/akis.c
 Kültür ve blog (Türkçe)	
+# apps/kelime/main.c
+Küçük kelimeler %d	
 # apps/chess/puzzle.c
 Küçük terfi	
 # apps/sky/skydata.c
@@ -1309,6 +1369,8 @@ Kıble %.0f° %s · %s
 Kıble saati %s: Güneş o an tam kıble yönündedir.	
 # apps/chess/puzzle.c
 Kırlangıç matı	
+# apps/kelime/main.c
+Kısa seviye testi: her seviyeden 5 kelime	
 # apps/deprem/main.c
 Liste	
 # apps/odak/main.c
@@ -1611,7 +1673,7 @@ Savunma hamlesi
 Sayfa	
 # apps/notlar/main.c
 Sayfa %d	
-# apps/vakit/main.c
+# apps/kelime/main.c
 Sayfa %d / %d	
 # apps/notlar/main.c
 Sayfa %d / %d · %d çizgi	
@@ -1619,6 +1681,10 @@ Sayfa %d / %d · %d çizgi
 Sayfa %d/%d	
 # apps/notlar/main.c
 Sayfa resim olarak kaydedildi:\ndocuments/Notlar\n%s	
+# apps/kelime/main.c
+Sayılar	
+# apps/kelime/main.c
+Sayılar %d	
 # apps/masa/go_ui.c
 Sayım	
 # apps/masa/go_ui.c
@@ -1629,10 +1695,12 @@ Sağanak
 Sağlık	
 # apps/masa/reversi.c
 Sekiz yön	
+# apps/kelime/main.c
+Selamlaşma	
 # apps/bulmaca/main.c
 Seri	
 # apps/kelime/main.c
-Seri: %d gün · %ld XP · bugün %d/%d	
+Seri: %d gün · %ld XP · bugün %d/%d XP	
 # apps/kelime/main.c
 Seri: %d gün · bugün %d/%d XP	
 # apps/kelime/main.c
@@ -1644,7 +1712,7 @@ Seri: günün bulmacasını kendi gününde çözdüğünüz ardışık günler.
 # apps/chess/puzzle.c
 Sessiz hamle	
 # apps/kelime/main.c
-Seviyeler	
+Seviye testi	
 # apps/deprem/main.c
 Seçilen yer	
 # apps/vakit/main.c
@@ -1751,6 +1819,8 @@ Sonra
 Sonraki	
 # apps/odak/main.c
 Sonraki aşama kendiliğinden başlasın	
+# apps/kelime/main.c
+Sonraki ders ▶	
 # apps/chess/puzzle_ui.c
 Sonraki hamle	
 # apps/masa/main.c
@@ -1767,8 +1837,6 @@ Sonuç bulunamadı.\nBaşka bir başlık ya da yazar adı deneyin.
 Sonuç yok ya da bağlantı kurulamadı.\nWi-Fi bağlantısını kontrol edin.	
 # apps/deprem/main.c
 Sonuçlar	
-# apps/kelime/main.c
-Sorular öğrendiğin dilde, açıklamalar iki dilde gelir.	
 # apps/sky/skydata.c
 Spika	
 # apps/news/news.c
@@ -1779,8 +1847,12 @@ Sudoku
 Sunucu başlatılamadı	
 # apps/ssh/main.c
 Sunucu başlatılamadı (günlüğe bakın).	
+# apps/kelime/main.c
+Sözlük	
 # apps/wordle/main.c
 Sözlükte yok (yalnızca kök kelimeler)	
+# apps/kelime/main.c
+Sözlüğe bak	
 # apps/sky/skydata.c
 Süheyl	
 # apps/odak/main.c
@@ -1793,6 +1865,10 @@ Süre dolunca ekrandaki kutu yanıp söner (Kindle'da hoparlör yok). Zamanlayı
 Süre: %ld:%02ld	
 # apps/tarif/main.c
 Süreler	
+# apps/kelime/main.c
+Sıfatlar %d	
+# apps/kelime/main.c
+Sıfırdan başla: selamlaşma, sayılar, temel fiiller…	
 # apps/bulmaca/main.c
 Sıfırla	
 # apps/masa/reversi.c
@@ -1819,6 +1895,8 @@ TCMB döviz kurları
 TCMB satış kuru ile	
 # apps/currency/main.c
 TCMB · güncellendi %d %s %02d:%02d	
+# apps/kelime/main.c
+TEKRAR BAKALIM	
 # apps/wordle/main.c
 Tahmin dağılımı	
 # core/kui/powerui.c
@@ -1897,10 +1975,16 @@ Tekrar edilecek kelime yok
 Tekrar edilecek kelimeler	
 # apps/kelime/main.c
 Tekrar kutuları	
+# apps/kelime/main.c
+Tekrar zamanı	
 # apps/upload/main.c
 Telefon ya da bilgisayar aynı Wi-Fi ağında olmalı. Sayfada PIN'i girin, kitapları seçip Gönder'e basın. Uygulamayı kapatınca sunucu durur.	
 # apps/kelime/main.c
 Temel	
+# apps/kelime/main.c
+Temel fiiller	
+# apps/kelime/main.c
+Temel sıfatlar	
 # apps/notlar/main.c
 Temizle	
 # apps/notlar/main.c
@@ -1923,6 +2007,8 @@ TheMealDB API anahtarı
 TheMealDB anahtarı: %s	
 # apps/kelime/main.c
 Toplam: %ld XP · bugün %d XP	
+# apps/kelime/main.c
+Tüm kelimeler öğretildi	
 # apps/currency/main.c
 Tüm kurlar	
 # core/hub/upd_ui.c
@@ -2033,10 +2119,14 @@ Wi-Fi kapalı
 Wi-Fi'yi açın; adres burada görünecek.	
 # apps/akis/main.c
 Wi-Fi'ı aç	
+# apps/kelime/main.c
+YENİ KELİME	
 # apps/ajanda/main.c
 Yaklaşanlar	
 # apps/kelime/main.c
 Yanlış	
+# apps/kelime/main.c
+Yanlış — kartına bir daha bakalım	
 # apps/bulmaca/main.c
 Yardımsız	
 # core/kui/powerui.c
@@ -2079,10 +2169,10 @@ Yeni Ay
 Yeni SSH parolası (en az 6)	
 # apps/pano/pano.c
 Yeni ay	
-# apps/kelime/main.c
-Yeni ders	
 # apps/odak/main.c
 Yeni etiket	
+# apps/kelime/main.c
+Yeni kelime %d / %d	
 # apps/akis/main.c
 Yeni klasör…	
 # apps/ajanda/main.c
@@ -2093,6 +2183,8 @@ Yeni oyun
 Yeni satır	
 # apps/masa/reversi.c
 Yeni taş, rakip taşları sizin iki taşınızın arasında sıkıştırmalı. Aradaki rakip taşlar sizin renginize döner: d4'teki beyaz taş d3 ile d5 arasında kaldı ve siyah oldu (çerçeveli). Sıkıştırmayan bir kareye oynanamaz.	
+# apps/kelime/main.c
+Yeni tekrar	
 # apps/tarif/main.c
 Yeni: %s	
 # apps/ebooks/main.c
@@ -2183,6 +2275,8 @@ daha eski
 derinlik %s km	
 # apps/kelime/main.c
 deyim	
+# apps/kelime/main.c
+dişil	
 # apps/odak/main.c
 dk	
 # apps/akis/main.c
@@ -2193,6 +2287,8 @@ documents klasöründeki .opml dosyası
 documents/akis.opml: yedek ya da başka bir okuyucu için	
 # apps/kelime/main.c
 edat	
+# apps/kelime/main.c
+eril	
 # apps/chess/puzzle.c
 f2/f7 saldırısı	
 # apps/kelime/main.c
@@ -2209,6 +2305,10 @@ isim
 korunuyor	
 # apps/masa/rv_ui.c
 noktalı bir kareye dokunun	
+# apps/kelime/main.c
+nötr	
+# apps/kelime/main.c
+okunuşu: %s	
 # apps/masa/rv_ui.c
 rakibi sıkıştıran bir kareye dokunun	
 # apps/notlar/main.c
@@ -2321,16 +2421,18 @@ zarf
 Ön sayfada kaynak yok.\nKaynaklar'dan seçin.	
 # core/kui/powerui.c
 Ön ışık	
-# apps/kelime/main.c
-Önce birkaç ders yapın; yanlış bildiğiniz kelimeler burada tekrar sorulur.	
 # apps/sudoku/main.c
 Önce boş bir hücre seçin.	
+# apps/kelime/main.c
+Önce kelimeler öğretilir, sonra yalnızca öğrendiklerin sorulur.	
 # apps/masa/dama.c
 Önce oynatacağınız taşa dokunun: kalın çerçeveyle seçilir, gidebileceği kareler noktayla gösterilir. Sonra noktalı kareye dokunun. Taş bir kare ileri ya da yana gider; geri (×) ve çapraz gidemez.	
 # core/hub/main.c
 Önceki	
 # apps/ajanda/main.c
 Önümüzdeki 7 günde not ya da özel gün yok.	
+# apps/kelime/main.c
+Örnek cümle	
 # apps/masa/dm_ui.c
 Örnek oyun	
 # apps/ajanda/main.c
@@ -2345,12 +2447,16 @@ zarf
 Öğleye %s	
 # apps/kelime/main.c
 Öğrendiğim dil	
+# apps/kelime/main.c
+Öğretildi · tekrar kutusu %d / %d	
 # apps/ajanda/agenda.c
 Öğretmenler Günü	
 # apps/tarif/main.c
 Ülkeler, tarif sayısına göre	
 # apps/vakit/vakit.c
 Ümmü'l-Kurâ (Mekke)	
+# apps/kelime/main.c
+Ünite %d: %s	
 # apps/chess/puzzle.c
 Üstünlük	
 # apps/solitaire/main.c
@@ -2406,9 +2512,13 @@ zarf
 # apps/ebooks/main.c
 İndiriliyor…\nGutenberg yavaş olabilir, lütfen bekleyin.	
 # apps/kelime/main.c
+İng.	
+# apps/kelime/main.c
 İngilizce	
 # apps/tarif/main.c
 İngilizce tarif	
+# apps/kelime/main.c
+İnsanlar	
 # apps/chess/puzzle_ui.c
 İpucu	
 # apps/masa/rv_ui.c
@@ -2423,6 +2533,8 @@ zarf
 İpuçları: Kapalı	
 # apps/chess/main.c
 İpuçları: seçtiğiniz taşın gidebileceği kareler	
+# apps/kelime/main.c
+İsimler %d	
 # apps/kelime/main.c
 İspanyolca	
 # apps/bulmaca/main.c
@@ -2513,6 +2625,8 @@ zarf
 “%s” · %d tarif	
 # apps/ajanda/main.c
 … ve %d daha	
+# apps/kelime/main.c
+↻ yanlış bilinenler bir sonraki derste yine sorulur	
 # apps/sky/main.c
 −1 gün	
 # apps/sky/main.c
@@ -2531,6 +2645,8 @@ zarf
 ◀ Önceki	
 # apps/vakit/main.c
 ☀ Güneş şu an %.0f° %s yönünde, %.0f° yüksekte	
+# apps/kelime/main.c
+★ Biliyorum olarak işaretli	
 # apps/tarif/main.c
 ★ Favoriler (%d)	
 # apps/sky/main.c

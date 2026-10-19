@@ -1119,7 +1119,6 @@ deyim	locuzione
 Diller	Lingue
 Öğrendiğim dil	Sto imparando
 Ana dilim	La mia lingua
-Sorular öğrendiğin dilde, açıklamalar iki dilde gelir.	Domande nella lingua che impari, spiegazioni in entrambe le lingue.
 %d kelime, A1'den C2'ye	%d parole, da A1 a C2
 Bu kelime ne demek?	Che cosa significa questa parola?
 %s karşılığı hangisi?	Qual è la parola in %s?
@@ -1132,31 +1131,21 @@ Sonuç	Risultato
 Ders bitti	Lezione finita
 %d sorudan %d doğru	%d domande, %d giuste
 +%d XP	+%d XP
-+%d XP (hatasız ders: +%d)	+%d XP (senza errori: +%d)
 Seri: %d gün · bugün %d/%d XP	Serie: %d giorni · oggi %d/%d XP
 Tekrar edilecek kelimeler	Parole da ripassare
 Hiç hata yok, harika!	Nessun errore, ottimo!
-Yeni ders	Nuova lezione
 Ana ekran	Home
 Tekrar	Ripasso
 Tekrar (%d)	Ripasso (%d)
-Bu seviyede soru yok	Nessuna domanda a questo livello
 Tekrar edilecek kelime yok	Niente da ripassare
-Bu dil ikilisinde bu seviyede sorulacak kelime bulunamadı.	Nessuna parola di questo livello per questa coppia di lingue.
-Önce birkaç ders yapın; yanlış bildiğiniz kelimeler burada tekrar sorulur.	Fai prima qualche lezione; le parole sbagliate tornano qui.
 %s öğreniyorum · ana dilim %s	Imparo %s · la mia lingua %s
 Toplam: %ld XP · bugün %d XP	Totale: %ld XP · oggi %d XP
 Seri: %d gün · en uzun %d gün	Serie: %d giorni · record %d giorni
 %d ders · %d cevap · %%%d doğru	%d lezioni · %d risposte · %d%% giuste
-%d kelime görüldü · %d öğrenildi · %d tekrar bekliyor	%d parole viste · %d imparate · %d da ripassare
-Seviyeler	Livelli
 Tekrar kutuları	Scatole di ripasso
-1: yeni kaçırılan · 5: iyice öğrenildi (aralık 1, 2, 4, 8, 21 gün)	1: appena sbagliata · 5: ben imparata (ogni 1, 2, 4, 8, 21 giorni)
 Değiştir	Cambia
-Seri: %d gün · %ld XP · bugün %d/%d	Serie: %d giorni · %ld XP · oggi %d/%d
 Kaynak: Vikisözlük (CC BY-SA), Tatoeba (CC BY), CEFR-J; seviyeler sıklığa göre	Fonti: Wikizionario (CC BY-SA), Tatoeba (CC BY), CEFR-J; livelli per frequenza
 Kelime listeleri yüklenemedi.	Impossibile caricare gli elenchi di parole.
-%d / %d öğrenildi	%d / %d imparate
 Görev Yöneticisi	Gestione attività
 Arka planda çalışan programlar	Programmi in background
 Arka planda başka program yok.	Nessun altro programma in background.
@@ -1279,3 +1268,72 @@ noktalı bir kareye dokunun	tocca una casella col punto
 rakibi sıkıştıran bir kareye dokunun	tocca una casella che chiude l'avversario
 Siyah %d – Beyaz %d	Nero %d – Bianco %d
 Kindle kısa bir oyun oynayacak. Her dokunuşta bir hamle yapılır ve burada anlatılır. Yeni konan taşın ortasında nokta, çevrilen taşların çevresinde çerçeve olur.	Il Kindle giocherà una breve partita. A ogni tocco fa una mossa, spiegata qui. La nuova pedina ha un punto al centro, quelle girate una cornice.
+%d / %d kelime öğretildi · ✓ öğrenildi · • öğretildi · ★ biliyorum · ○ sırada	%d / %d parole insegnate · ✓ imparata · • insegnata · ★ conosciuta · ○ prossima
+%d kelime öğretildi · %d öğrenildi · %d tekrar bekliyor	%d parole insegnate · %d imparate · %d da ripassare
+%d sorudan %d doğru · +%d XP	%d domande, %d giuste · +%d XP
+%d yeni kelime öğrendin!	Hai imparato %d parole nuove!
+%s anlamı	Significato in %s
+%s tanımı	Definizione in %s
+%s · kelime %d / %d	%s · parola %d / %d
+%s öğrenmeye nereden başlayalım?	Da dove iniziamo con %s?
+%s: %d / %d doğru	%s: %d / %d giuste
+0: yeni öğretildi · 1: yeni kaçırılan · 5: iyice öğrenildi (aralık 1, 2, 4, 8, 21 gün)	0: appena insegnata · 1: appena sbagliata · 5: ben imparata (intervalli 1, 2, 4, 8, 21 giorni)
+Anladım ▶	Capito ▶
+BUGÜNÜN DERSİ	LEZIONE DI OGGI
+Başlangıç seviyen	Il tuo livello di partenza
+Ben, sen, o	Io, tu, lui/lei
+Bildiğin %d kelime "biliyorum" olarak işaretlendi; ara sıra tekrar sorulur.	Le %d parole che conoscevi sono segnate come «conosciute»; tornano ogni tanto.
+Bilmiyorum	Non lo so
+Bilmiyorum, bana öğret	Non la so, insegnamela
+Biraz biliyorum	So un po'
+Bu dersin kelimeleri	Parole di questa lezione
+Bu dil ikilisinin bütün kelimelerini gördün. Tekrarlarla devam et.	Hai visto tutte le parole di questa coppia di lingue. Continua con i ripassi.
+Bu kelimeyi tekrar çalışalım	Ripassiamo questa parola
+Bugün: %d tekrar	Oggi: %d ripassi
+Bugün: %d yeni kelime	Oggi: %d parole nuove
+Bugün: %d yeni kelime + %d tekrar	Oggi: %d parole nuove + %d ripassi
+Bugünlük tekrar bitti. Yeni kelimeler için derse devam et.	Niente più ripassi per oggi. Continua la lezione per parole nuove.
+Bunu zaten biliyorum ★	La conosco già ★
+Derse başla ▶	Inizia la lezione ▶
+Derslere başla ▶	Inizia le lezioni ▶
+Derste yeni kelime:	Parole nuove per lezione:
+Devam ▶	Continua ▶
+Fiiller %d	Verbi %d
+Günlük şeyler	Cose di tutti i giorni
+Henüz öğretilmedi	Non ancora insegnata
+Her derste önce yeni kelimeler öğretilir, sonra alıştırma yapılır.	Ogni lezione prima insegna parole nuove, poi si fa pratica.
+Hiç bilmiyorum	Non so nulla
+Küçük kelimeler %d	Parole brevi %d
+Kısa seviye testi: her seviyeden 5 kelime	Breve test di livello: 5 parole per livello
+Sayılar	Numeri
+Sayılar %d	Numeri %d
+Selamlaşma	Saluti
+Seri: %d gün · %ld XP · bugün %d/%d XP	Serie: %d giorni · %ld XP · oggi %d/%d XP
+Seviye testi	Test di livello
+Sonraki ders ▶	Lezione successiva ▶
+Sözlük	Dizionario
+Sözlüğe bak	Apri il dizionario
+Sıfatlar %d	Aggettivi %d
+Sıfırdan başla: selamlaşma, sayılar, temel fiiller…	Partire da zero: saluti, numeri, verbi di base…
+TEKRAR BAKALIM	RIVEDIAMOLA
+Tekrar zamanı	Ora di ripassare
+Temel fiiller	Verbi di base
+Temel sıfatlar	Aggettivi di base
+Tüm kelimeler öğretildi	Tutte le parole insegnate
+YENİ KELİME	PAROLA NUOVA
+Yanlış — kartına bir daha bakalım	Sbagliato — rivediamo la sua scheda
+Yeni kelime %d / %d	Parola nuova %d / %d
+Yeni tekrar	Altro ripasso
+dişil	femminile
+eril	maschile
+nötr	neutro
+okunuşu: %s	pronuncia: %s
+Önce kelimeler öğretilir, sonra yalnızca öğrendiklerin sorulur.	Prima si insegnano le parole, poi si chiede solo ciò che hai imparato.
+Örnek cümle	Esempio
+Öğretildi · tekrar kutusu %d / %d	Insegnata · scatola di ripasso %d / %d
+Ünite %d: %s	Unità %d: %s
+İng.	ingl.
+İnsanlar	Persone
+İsimler %d	Nomi %d
+↻ yanlış bilinenler bir sonraki derste yine sorulur	↻ le parole sbagliate tornano nella prossima lezione
+★ Biliyorum olarak işaretli	★ Segnata come conosciuta

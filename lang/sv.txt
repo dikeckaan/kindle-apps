@@ -1119,7 +1119,6 @@ deyim	fras
 Diller	Språk
 Öğrendiğim dil	Jag lär mig
 Ana dilim	Mitt språk
-Sorular öğrendiğin dilde, açıklamalar iki dilde gelir.	Frågor på språket du lär dig, förklaringar på båda språken.
 %d kelime, A1'den C2'ye	%d ord, från A1 till C2
 Bu kelime ne demek?	Vad betyder ordet?
 %s karşılığı hangisi?	Vilket är ordet på %s?
@@ -1132,31 +1131,21 @@ Sonuç	Resultat
 Ders bitti	Lektionen klar
 %d sorudan %d doğru	%d frågor, %d rätt
 +%d XP	+%d XP
-+%d XP (hatasız ders: +%d)	+%d XP (felfritt: +%d)
 Seri: %d gün · bugün %d/%d XP	Svit: %d dagar · i dag %d/%d XP
 Tekrar edilecek kelimeler	Ord att repetera
 Hiç hata yok, harika!	Inga fel, toppen!
-Yeni ders	Ny lektion
 Ana ekran	Start
 Tekrar	Repetition
 Tekrar (%d)	Repetition (%d)
-Bu seviyede soru yok	Inga frågor på den här nivån
 Tekrar edilecek kelime yok	Inget att repetera
-Bu dil ikilisinde bu seviyede sorulacak kelime bulunamadı.	Inga ord på den här nivån för språkparet.
-Önce birkaç ders yapın; yanlış bildiğiniz kelimeler burada tekrar sorulur.	Gör först några lektioner; ord du missar kommer tillbaka här.
 %s öğreniyorum · ana dilim %s	Jag lär mig %s · mitt språk %s
 Toplam: %ld XP · bugün %d XP	Totalt: %ld XP · i dag %d XP
 Seri: %d gün · en uzun %d gün	Svit: %d dagar · längsta %d dagar
 %d ders · %d cevap · %%%d doğru	%d lektioner · %d svar · %d %% rätt
-%d kelime görüldü · %d öğrenildi · %d tekrar bekliyor	%d ord sedda · %d inlärda · %d att repetera
-Seviyeler	Nivåer
 Tekrar kutuları	Repetitionslådor
-1: yeni kaçırılan · 5: iyice öğrenildi (aralık 1, 2, 4, 8, 21 gün)	1: nyss fel · 5: väl inlärt (var 1, 2, 4, 8, 21 dag)
 Değiştir	Ändra
-Seri: %d gün · %ld XP · bugün %d/%d	Svit: %d dagar · %ld XP · i dag %d/%d
 Kaynak: Vikisözlük (CC BY-SA), Tatoeba (CC BY), CEFR-J; seviyeler sıklığa göre	Källor: Wiktionary (CC BY-SA), Tatoeba (CC BY), CEFR-J; nivåer efter frekvens
 Kelime listeleri yüklenemedi.	Ordlistorna kunde inte läsas in.
-%d / %d öğrenildi	%d / %d inlärda
 Görev Yöneticisi	Aktivitetshanteraren
 Arka planda çalışan programlar	Program som körs i bakgrunden
 Arka planda başka program yok.	Inga andra program i bakgrunden.
@@ -1279,3 +1268,72 @@ noktalı bir kareye dokunun	tryck på en prickad ruta
 rakibi sıkıştıran bir kareye dokunun	tryck på en ruta som stänger in motståndaren
 Siyah %d – Beyaz %d	Svart %d – Vit %d
 Kindle kısa bir oyun oynayacak. Her dokunuşta bir hamle yapılır ve burada anlatılır. Yeni konan taşın ortasında nokta, çevrilen taşların çevresinde çerçeve olur.	Kindlen spelar ett kort parti. Varje tryck gör ett drag som förklaras här. Den nyss lagda brickan har en prick i mitten, vända brickor får en ram.
+%d / %d kelime öğretildi · ✓ öğrenildi · • öğretildi · ★ biliyorum · ○ sırada	%d / %d ord genomgångna · ✓ inlärt · • genomgånget · ★ känt · ○ näst på tur
+%d kelime öğretildi · %d öğrenildi · %d tekrar bekliyor	%d ord genomgångna · %d inlärda · %d att repetera
+%d sorudan %d doğru · +%d XP	%d frågor, %d rätt · +%d XP
+%d yeni kelime öğrendin!	Du har lärt dig %d nya ord!
+%s anlamı	Betydelse (%s)
+%s tanımı	Definition (%s)
+%s · kelime %d / %d	%s · ord %d / %d
+%s öğrenmeye nereden başlayalım?	Var ska vi börja med %s?
+%s: %d / %d doğru	%s: %d / %d rätt
+0: yeni öğretildi · 1: yeni kaçırılan · 5: iyice öğrenildi (aralık 1, 2, 4, 8, 21 gün)	0: nyss genomgånget · 1: nyss fel · 5: väl inlärt (intervall 1, 2, 4, 8, 21 dagar)
+Anladım ▶	Jag förstår ▶
+BUGÜNÜN DERSİ	DAGENS LEKTION
+Başlangıç seviyen	Din startnivå
+Ben, sen, o	Jag, du, han/hon
+Bildiğin %d kelime "biliyorum" olarak işaretlendi; ara sıra tekrar sorulur.	De %d ord du kunde har markerats som "kända"; de kommer tillbaka ibland.
+Bilmiyorum	Vet inte
+Bilmiyorum, bana öğret	Kan inte, lär mig
+Biraz biliyorum	Jag kan lite
+Bu dersin kelimeleri	Lektionens ord
+Bu dil ikilisinin bütün kelimelerini gördün. Tekrarlarla devam et.	Du har sett alla ord i detta språkpar. Fortsätt med repetitionerna.
+Bu kelimeyi tekrar çalışalım	Vi går igenom ordet igen
+Bugün: %d tekrar	I dag: %d repetitioner
+Bugün: %d yeni kelime	I dag: %d nya ord
+Bugün: %d yeni kelime + %d tekrar	I dag: %d nya ord + %d repetitioner
+Bugünlük tekrar bitti. Yeni kelimeler için derse devam et.	Inga fler repetitioner i dag. Fortsätt lektionen för nya ord.
+Bunu zaten biliyorum ★	Kan redan ★
+Derse başla ▶	Starta lektionen ▶
+Derslere başla ▶	Börja med lektionerna ▶
+Derste yeni kelime:	Nya ord per lektion:
+Devam ▶	Fortsätt ▶
+Fiiller %d	Verb %d
+Günlük şeyler	Vardagssaker
+Henüz öğretilmedi	Inte genomgånget än
+Her derste önce yeni kelimeler öğretilir, sonra alıştırma yapılır.	Varje lektion lär först ut nya ord, sedan övar du på dem.
+Hiç bilmiyorum	Jag kan ingenting
+Küçük kelimeler %d	Småord %d
+Kısa seviye testi: her seviyeden 5 kelime	Kort nivåtest: 5 ord per nivå
+Sayılar	Tal
+Sayılar %d	Tal %d
+Selamlaşma	Hälsningar
+Seri: %d gün · %ld XP · bugün %d/%d XP	Svit: %d dagar · %ld XP · i dag %d/%d XP
+Seviye testi	Nivåtest
+Sonraki ders ▶	Nästa lektion ▶
+Sözlük	Ordlista
+Sözlüğe bak	Öppna ordlistan
+Sıfatlar %d	Adjektiv %d
+Sıfırdan başla: selamlaşma, sayılar, temel fiiller…	Från noll: hälsningar, tal, grundläggande verb…
+TEKRAR BAKALIM	EN GÅNG TILL
+Tekrar zamanı	Dags att repetera
+Temel fiiller	Grundläggande verb
+Temel sıfatlar	Grundläggande adjektiv
+Tüm kelimeler öğretildi	Alla ord genomgångna
+YENİ KELİME	NYTT ORD
+Yanlış — kartına bir daha bakalım	Fel — vi tittar på kortet igen
+Yeni kelime %d / %d	Nytt ord %d / %d
+Yeni tekrar	Ny repetition
+dişil	femininum
+eril	maskulinum
+nötr	neutrum
+okunuşu: %s	uttal: %s
+Önce kelimeler öğretilir, sonra yalnızca öğrendiklerin sorulur.	Först lärs orden ut, sedan frågas bara det du har lärt dig.
+Örnek cümle	Exempelmening
+Öğretildi · tekrar kutusu %d / %d	Genomgånget · repetitionslåda %d / %d
+Ünite %d: %s	Del %d: %s
+İng.	eng.
+İnsanlar	Människor
+İsimler %d	Substantiv %d
+↻ yanlış bilinenler bir sonraki derste yine sorulur	↻ felaktiga ord kommer tillbaka i nästa lektion
+★ Biliyorum olarak işaretli	★ Markerat som känt

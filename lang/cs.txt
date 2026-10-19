@@ -1119,7 +1119,6 @@ deyim	fráze
 Diller	Jazyky
 Öğrendiğim dil	Učím se
 Ana dilim	Můj jazyk
-Sorular öğrendiğin dilde, açıklamalar iki dilde gelir.	Otázky v jazyce, který se učíte, vysvětlení v obou jazycích.
 %d kelime, A1'den C2'ye	%d slov, od A1 do C2
 Bu kelime ne demek?	Co znamená toto slovo?
 %s karşılığı hangisi?	Které je to slovo (%s)?
@@ -1132,31 +1131,21 @@ Sonuç	Výsledek
 Ders bitti	Lekce hotová
 %d sorudan %d doğru	%d otázek, %d správně
 +%d XP	+%d XP
-+%d XP (hatasız ders: +%d)	+%d XP (bez chyby: +%d)
 Seri: %d gün · bugün %d/%d XP	Série: %d dní · dnes %d/%d XP
 Tekrar edilecek kelimeler	Slova k opakování
 Hiç hata yok, harika!	Bez chyby, skvělé!
-Yeni ders	Nová lekce
 Ana ekran	Domů
 Tekrar	Opakování
 Tekrar (%d)	Opakování (%d)
-Bu seviyede soru yok	Na této úrovni nejsou otázky
 Tekrar edilecek kelime yok	Nic k opakování
-Bu dil ikilisinde bu seviyede sorulacak kelime bulunamadı.	Pro tuto dvojici jazyků nejsou na této úrovni slova.
-Önce birkaç ders yapın; yanlış bildiğiniz kelimeler burada tekrar sorulur.	Nejdřív udělejte pár lekcí; chybná slova se tu zopakují.
 %s öğreniyorum · ana dilim %s	Učím se: %s · můj jazyk: %s
 Toplam: %ld XP · bugün %d XP	Celkem: %ld XP · dnes %d XP
 Seri: %d gün · en uzun %d gün	Série: %d dní · nejdelší %d dní
 %d ders · %d cevap · %%%d doğru	%d lekcí · %d odpovědí · %d %% správně
-%d kelime görüldü · %d öğrenildi · %d tekrar bekliyor	%d slov viděno · %d naučeno · %d k opakování
-Seviyeler	Úrovně
 Tekrar kutuları	Krabičky opakování
-1: yeni kaçırılan · 5: iyice öğrenildi (aralık 1, 2, 4, 8, 21 gün)	1: právě chybné · 5: dobře naučené (po 1, 2, 4, 8, 21 dnech)
 Değiştir	Změnit
-Seri: %d gün · %ld XP · bugün %d/%d	Série: %d dní · %ld XP · dnes %d/%d
 Kaynak: Vikisözlük (CC BY-SA), Tatoeba (CC BY), CEFR-J; seviyeler sıklığa göre	Zdroje: Wikislovník (CC BY-SA), Tatoeba (CC BY), CEFR-J; úrovně podle četnosti
 Kelime listeleri yüklenemedi.	Seznamy slov se nepodařilo načíst.
-%d / %d öğrenildi	%d / %d naučeno
 Görev Yöneticisi	Správce úloh
 Arka planda çalışan programlar	Programy běžící na pozadí
 Arka planda başka program yok.	Na pozadí neběží žádné jiné programy.
@@ -1279,3 +1268,72 @@ noktalı bir kareye dokunun	klepněte na pole s tečkou
 rakibi sıkıştıran bir kareye dokunun	klepněte na pole, které sevře soupeře
 Siyah %d – Beyaz %d	Černý %d – Bílý %d
 Kindle kısa bir oyun oynayacak. Her dokunuşta bir hamle yapılır ve burada anlatılır. Yeni konan taşın ortasında nokta, çevrilen taşların çevresinde çerçeve olur.	Kindle odehraje krátkou partii. Každé klepnutí provede jeden tah, který se zde vysvětlí. Nový kámen má uprostřed tečku, otočené kameny mají rámeček.
+%d / %d kelime öğretildi · ✓ öğrenildi · • öğretildi · ★ biliyorum · ○ sırada	%d / %d slov probráno · ✓ naučeno · • probráno · ★ znám · ○ na řadě
+%d kelime öğretildi · %d öğrenildi · %d tekrar bekliyor	%d slov probráno · %d naučeno · %d k opakování
+%d sorudan %d doğru · +%d XP	%d otázek, %d správně · +%d XP
+%d yeni kelime öğrendin!	Naučil ses %d nových slov!
+%s anlamı	Význam (%s)
+%s tanımı	Definice (%s)
+%s · kelime %d / %d	%s · slovo %d / %d
+%s öğrenmeye nereden başlayalım?	Kde začneme? (%s)
+%s: %d / %d doğru	%s: %d / %d správně
+0: yeni öğretildi · 1: yeni kaçırılan · 5: iyice öğrenildi (aralık 1, 2, 4, 8, 21 gün)	0: právě probráno · 1: nedávno chybně · 5: dobře naučeno (intervaly 1, 2, 4, 8, 21 dní)
+Anladım ▶	Rozumím ▶
+BUGÜNÜN DERSİ	DNEŠNÍ LEKCE
+Başlangıç seviyen	Tvoje vstupní úroveň
+Ben, sen, o	Já, ty, on/ona
+Bildiğin %d kelime "biliyorum" olarak işaretlendi; ara sıra tekrar sorulur.	%d slov, která znáš, je označeno jako „znám“; občas se vrátí.
+Bilmiyorum	Nevím
+Bilmiyorum, bana öğret	Neznám, nauč mě
+Biraz biliyorum	Trochu umím
+Bu dersin kelimeleri	Slova této lekce
+Bu dil ikilisinin bütün kelimelerini gördün. Tekrarlarla devam et.	Viděl jsi všechna slova této jazykové dvojice. Pokračuj opakováním.
+Bu kelimeyi tekrar çalışalım	Zopakujme si toto slovo
+Bugün: %d tekrar	Dnes: %d opakování
+Bugün: %d yeni kelime	Dnes: %d nových slov
+Bugün: %d yeni kelime + %d tekrar	Dnes: %d nových slov + %d opakování
+Bugünlük tekrar bitti. Yeni kelimeler için derse devam et.	Na dnes žádné další opakování. Pokračuj v lekci a nauč se nová slova.
+Bunu zaten biliyorum ★	Už to znám ★
+Derse başla ▶	Začít lekci ▶
+Derslere başla ▶	Začít lekce ▶
+Derste yeni kelime:	Nová slova na lekci:
+Devam ▶	Pokračovat ▶
+Fiiller %d	Slovesa %d
+Günlük şeyler	Každodenní věci
+Henüz öğretilmedi	Zatím neprobráno
+Her derste önce yeni kelimeler öğretilir, sonra alıştırma yapılır.	Každá lekce nejdřív naučí nová slova, pak se procvičují.
+Hiç bilmiyorum	Neumím nic
+Küçük kelimeler %d	Drobná slova %d
+Kısa seviye testi: her seviyeden 5 kelime	Krátký rozřazovací test: 5 slov z každé úrovně
+Sayılar	Čísla
+Sayılar %d	Čísla %d
+Selamlaşma	Pozdravy
+Seri: %d gün · %ld XP · bugün %d/%d XP	Série: %d dní · %ld XP · dnes %d/%d XP
+Seviye testi	Rozřazovací test
+Sonraki ders ▶	Další lekce ▶
+Sözlük	Slovník
+Sözlüğe bak	Otevřít slovník
+Sıfatlar %d	Přídavná jména %d
+Sıfırdan başla: selamlaşma, sayılar, temel fiiller…	Od nuly: pozdravy, čísla, základní slovesa…
+TEKRAR BAKALIM	PODÍVEJME SE ZNOVU
+Tekrar zamanı	Čas opakovat
+Temel fiiller	Základní slovesa
+Temel sıfatlar	Základní přídavná jména
+Tüm kelimeler öğretildi	Všechna slova probrána
+YENİ KELİME	NOVÉ SLOVO
+Yanlış — kartına bir daha bakalım	Špatně — podíváme se znovu na kartičku
+Yeni kelime %d / %d	Nové slovo %d / %d
+Yeni tekrar	Další opakování
+dişil	ženský rod
+eril	mužský rod
+nötr	střední rod
+okunuşu: %s	výslovnost: %s
+Önce kelimeler öğretilir, sonra yalnızca öğrendiklerin sorulur.	Nejdřív se slova naučíš, pak se ptáme jen na to, co už znáš.
+Örnek cümle	Příklad
+Öğretildi · tekrar kutusu %d / %d	Probráno · přihrádka %d / %d
+Ünite %d: %s	Oddíl %d: %s
+İng.	angl.
+İnsanlar	Lidé
+İsimler %d	Podstatná jména %d
+↻ yanlış bilinenler bir sonraki derste yine sorulur	↻ chybná slova se vrátí v další lekci
+★ Biliyorum olarak işaretli	★ Označeno jako známé

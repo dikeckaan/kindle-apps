@@ -17,6 +17,7 @@ Sources (all fetched over HTTPS; the dates of the downloads are written to <cach
   * CEFR-J Wordlist 1.5 (Tono Laboratory, TUFS; free for research and commercial use with citation) and the
     Octanove Vocabulary Profile C1/C2 1.0 (CC BY-SA 4.0), via openlanguageprofiles/olp-en-cefrj
   * Tatoeba sentences and translation links (CC BY 2.0 FR), per-language exports
+  * pronunciations: the IPA transcriptions ("sounds") of every language's words in English Wiktionary (ipa_<lang>)
 
 Usage: tools/kelime/fetch.py <cache dir> [name ...]   (no names: everything; names are listed by --list)
 """
@@ -116,7 +117,18 @@ def slim(d, keep_langs):
     return e
 
 
-def fetch_kaikki(cache, name, url, lang, keep_langs, want_lang_code=None):
+def slim_ipa(d, keep_langs=None):
+    """headword, part of speech and up to four IPA transcriptions (with their accent tags); None without any"""
+    ipa = []
+    for snd in d.get("sounds", []):
+        t = snd.get("ipa")
+        tags = [x for x in snd.get("tags", []) if isinstance(x, str)][:4]
+        if t and len(t) <= 60 and [t, tags] not in ipa:
+            ipa.append([t, tags])
+    return {"w": d.get("word", ""), "pos": d.get("pos", ""), "ipa": ipa[:4]} if ipa else None
+
+
+def fetch_kaikki(cache, name, url, lang, keep_langs, want_lang_code=None, slimmer=slim):
     words = freq_words(cache, lang)
     out_path = os.path.join(cache, name + ".jsonl.gz")
     n_in = n_out = 0
@@ -132,7 +144,10 @@ def fetch_kaikki(cache, name, url, lang, keep_langs, want_lang_code=None):
             w = d.get("word", "")
             if w.lower() not in words:
                 continue
-            out.write(json.dumps(slim(d, keep_langs), ensure_ascii=False) + "\n")
+            e = slimmer(d, keep_langs)
+            if e is None:
+                continue
+            out.write(json.dumps(e, ensure_ascii=False) + "\n")
             n_out += 1
             if n_out % 20000 == 0:
                 print(f"{name}: {n_in} read, {n_out} kept", flush=True)
@@ -163,6 +178,8 @@ def jobs():
     for l in LANGS:
         if l != "en":
             j[f"enwikt_{l}"] = lambda c, l=l: fetch_kaikki(c, f"enwikt_{l}", kaikki_url("enwiktionary", ENGLISH_NAMES[l]), l, set(LANGS), l)
+    for l in LANGS:
+        j[f"ipa_{l}"] = lambda c, l=l: fetch_kaikki(c, f"ipa_{l}", kaikki_url("enwiktionary", ENGLISH_NAMES[l]), l, set(LANGS), l, slim_ipa)
     for l in LANGS:
         t = TATOEBA[l]
         j[f"tatoeba_{l}"] = lambda c, t=t, l=l: fetch_plain(

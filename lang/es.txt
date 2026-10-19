@@ -1119,7 +1119,6 @@ deyim	locución
 Diller	Idiomas
 Öğrendiğim dil	Estoy aprendiendo
 Ana dilim	Mi idioma
-Sorular öğrendiğin dilde, açıklamalar iki dilde gelir.	Preguntas en el idioma que aprendes, explicaciones en ambos idiomas.
 %d kelime, A1'den C2'ye	%d palabras, de A1 a C2
 Bu kelime ne demek?	¿Qué significa esta palabra?
 %s karşılığı hangisi?	¿Cuál es la palabra en %s?
@@ -1132,31 +1131,21 @@ Sonuç	Resultado
 Ders bitti	Lección terminada
 %d sorudan %d doğru	%d preguntas, %d correctas
 +%d XP	+%d XP
-+%d XP (hatasız ders: +%d)	+%d XP (sin errores: +%d)
 Seri: %d gün · bugün %d/%d XP	Racha: %d días · hoy %d/%d XP
 Tekrar edilecek kelimeler	Palabras para repasar
 Hiç hata yok, harika!	¡Sin errores, genial!
-Yeni ders	Nueva lección
 Ana ekran	Inicio
 Tekrar	Repaso
 Tekrar (%d)	Repaso (%d)
-Bu seviyede soru yok	No hay preguntas en este nivel
 Tekrar edilecek kelime yok	Nada que repasar
-Bu dil ikilisinde bu seviyede sorulacak kelime bulunamadı.	No hay palabras de este nivel para este par de idiomas.
-Önce birkaç ders yapın; yanlış bildiğiniz kelimeler burada tekrar sorulur.	Haga primero algunas lecciones; las palabras falladas se repiten aquí.
 %s öğreniyorum · ana dilim %s	Aprendo %s · mi idioma %s
 Toplam: %ld XP · bugün %d XP	Total: %ld XP · hoy %d XP
 Seri: %d gün · en uzun %d gün	Racha: %d días · la más larga %d días
 %d ders · %d cevap · %%%d doğru	%d lecciones · %d respuestas · %d %% correctas
-%d kelime görüldü · %d öğrenildi · %d tekrar bekliyor	%d palabras vistas · %d aprendidas · %d por repasar
-Seviyeler	Niveles
 Tekrar kutuları	Cajas de repaso
-1: yeni kaçırılan · 5: iyice öğrenildi (aralık 1, 2, 4, 8, 21 gün)	1: recién fallada · 5: bien aprendida (cada 1, 2, 4, 8, 21 días)
 Değiştir	Cambiar
-Seri: %d gün · %ld XP · bugün %d/%d	Racha: %d días · %ld XP · hoy %d/%d
 Kaynak: Vikisözlük (CC BY-SA), Tatoeba (CC BY), CEFR-J; seviyeler sıklığa göre	Fuentes: Wikcionario (CC BY-SA), Tatoeba (CC BY), CEFR-J; niveles por frecuencia
 Kelime listeleri yüklenemedi.	No se pudieron cargar las listas de palabras.
-%d / %d öğrenildi	%d / %d aprendidas
 Görev Yöneticisi	Administrador de tareas
 Arka planda çalışan programlar	Programas en segundo plano
 Arka planda başka program yok.	No hay otros programas en segundo plano.
@@ -1279,3 +1268,72 @@ noktalı bir kareye dokunun	toca una casilla con punto
 rakibi sıkıştıran bir kareye dokunun	toca una casilla que encierre al rival
 Siyah %d – Beyaz %d	Negras %d – Blancas %d
 Kindle kısa bir oyun oynayacak. Her dokunuşta bir hamle yapılır ve burada anlatılır. Yeni konan taşın ortasında nokta, çevrilen taşların çevresinde çerçeve olur.	El Kindle jugará una partida corta. Cada toque hace una jugada, explicada aquí. La ficha nueva tiene un punto en el centro; las volteadas, un marco.
+%d / %d kelime öğretildi · ✓ öğrenildi · • öğretildi · ★ biliyorum · ○ sırada	%d / %d palabras enseñadas · ✓ aprendida · • enseñada · ★ conocida · ○ próxima
+%d kelime öğretildi · %d öğrenildi · %d tekrar bekliyor	%d palabras enseñadas · %d aprendidas · %d por repasar
+%d sorudan %d doğru · +%d XP	%d preguntas, %d correctas · +%d XP
+%d yeni kelime öğrendin!	¡Has aprendido %d palabras nuevas!
+%s anlamı	Significado en %s
+%s tanımı	Definición en %s
+%s · kelime %d / %d	%s · palabra %d / %d
+%s öğrenmeye nereden başlayalım?	¿Por dónde empezamos con %s?
+%s: %d / %d doğru	%s: %d / %d correctas
+0: yeni öğretildi · 1: yeni kaçırılan · 5: iyice öğrenildi (aralık 1, 2, 4, 8, 21 gün)	0: recién enseñada · 1: fallada hace poco · 5: bien aprendida (intervalos 1, 2, 4, 8, 21 días)
+Anladım ▶	Entendido ▶
+BUGÜNÜN DERSİ	LECCIÓN DE HOY
+Başlangıç seviyen	Tu nivel inicial
+Ben, sen, o	Yo, tú, él/ella
+Bildiğin %d kelime "biliyorum" olarak işaretlendi; ara sıra tekrar sorulur.	Las %d palabras que sabías se marcaron como «conocidas»; vuelven de vez en cuando.
+Bilmiyorum	No lo sé
+Bilmiyorum, bana öğret	No la sé, enséñamela
+Biraz biliyorum	Sé un poco
+Bu dersin kelimeleri	Palabras de esta lección
+Bu dil ikilisinin bütün kelimelerini gördün. Tekrarlarla devam et.	Has visto todas las palabras de este par de idiomas. Sigue con los repasos.
+Bu kelimeyi tekrar çalışalım	Repasemos esta palabra
+Bugün: %d tekrar	Hoy: %d repasos
+Bugün: %d yeni kelime	Hoy: %d palabras nuevas
+Bugün: %d yeni kelime + %d tekrar	Hoy: %d palabras nuevas + %d repasos
+Bugünlük tekrar bitti. Yeni kelimeler için derse devam et.	No hay más repasos por hoy. Sigue con la lección para aprender palabras nuevas.
+Bunu zaten biliyorum ★	Ya la conozco ★
+Derse başla ▶	Empezar la lección ▶
+Derslere başla ▶	Empezar las lecciones ▶
+Derste yeni kelime:	Palabras nuevas por lección:
+Devam ▶	Continuar ▶
+Fiiller %d	Verbos %d
+Günlük şeyler	Cosas cotidianas
+Henüz öğretilmedi	Aún no enseñada
+Her derste önce yeni kelimeler öğretilir, sonra alıştırma yapılır.	Cada lección primero enseña palabras nuevas y luego se practican.
+Hiç bilmiyorum	No sé nada
+Küçük kelimeler %d	Palabras cortas %d
+Kısa seviye testi: her seviyeden 5 kelime	Prueba de nivel breve: 5 palabras por nivel
+Sayılar	Números
+Sayılar %d	Números %d
+Selamlaşma	Saludos
+Seri: %d gün · %ld XP · bugün %d/%d XP	Racha: %d días · %ld XP · hoy %d/%d XP
+Seviye testi	Prueba de nivel
+Sonraki ders ▶	Siguiente lección ▶
+Sözlük	Diccionario
+Sözlüğe bak	Ver el diccionario
+Sıfatlar %d	Adjetivos %d
+Sıfırdan başla: selamlaşma, sayılar, temel fiiller…	Empezar de cero: saludos, números, verbos básicos…
+TEKRAR BAKALIM	VEÁMOSLA OTRA VEZ
+Tekrar zamanı	Hora de repasar
+Temel fiiller	Verbos básicos
+Temel sıfatlar	Adjetivos básicos
+Tüm kelimeler öğretildi	Todas las palabras enseñadas
+YENİ KELİME	PALABRA NUEVA
+Yanlış — kartına bir daha bakalım	Incorrecto — veamos otra vez su tarjeta
+Yeni kelime %d / %d	Palabra nueva %d / %d
+Yeni tekrar	Otro repaso
+dişil	femenino
+eril	masculino
+nötr	neutro
+okunuşu: %s	pronunciación: %s
+Önce kelimeler öğretilir, sonra yalnızca öğrendiklerin sorulur.	Primero se enseñan las palabras; después solo se pregunta lo aprendido.
+Örnek cümle	Ejemplo
+Öğretildi · tekrar kutusu %d / %d	Enseñada · caja de repaso %d / %d
+Ünite %d: %s	Unidad %d: %s
+İng.	ingl.
+İnsanlar	Personas
+İsimler %d	Sustantivos %d
+↻ yanlış bilinenler bir sonraki derste yine sorulur	↻ las palabras falladas vuelven en la próxima lección
+★ Biliyorum olarak işaretli	★ Marcada como conocida

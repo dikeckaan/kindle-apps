@@ -1119,7 +1119,6 @@ deyim	φράση
 Diller	Γλώσσες
 Öğrendiğim dil	Μαθαίνω
 Ana dilim	Η γλώσσα μου
-Sorular öğrendiğin dilde, açıklamalar iki dilde gelir.	Ερωτήσεις στη γλώσσα που μαθαίνεις, εξηγήσεις και στις δύο γλώσσες.
 %d kelime, A1'den C2'ye	%d λέξεις, από A1 έως C2
 Bu kelime ne demek?	Τι σημαίνει αυτή η λέξη;
 %s karşılığı hangisi?	Ποια είναι η λέξη στα %s;
@@ -1132,31 +1131,21 @@ Sonuç	Αποτέλεσμα
 Ders bitti	Το μάθημα τελείωσε
 %d sorudan %d doğru	%d ερωτήσεις, %d σωστές
 +%d XP	+%d XP
-+%d XP (hatasız ders: +%d)	+%d XP (χωρίς λάθη: +%d)
 Seri: %d gün · bugün %d/%d XP	Σερί: %d ημέρες · σήμερα %d/%d XP
 Tekrar edilecek kelimeler	Λέξεις για επανάληψη
 Hiç hata yok, harika!	Κανένα λάθος, τέλεια!
-Yeni ders	Νέο μάθημα
 Ana ekran	Αρχική
 Tekrar	Επανάληψη
 Tekrar (%d)	Επανάληψη (%d)
-Bu seviyede soru yok	Δεν υπάρχουν ερωτήσεις σε αυτό το επίπεδο
 Tekrar edilecek kelime yok	Τίποτα για επανάληψη
-Bu dil ikilisinde bu seviyede sorulacak kelime bulunamadı.	Δεν υπάρχουν λέξεις σε αυτό το επίπεδο για αυτό το ζεύγος γλωσσών.
-Önce birkaç ders yapın; yanlış bildiğiniz kelimeler burada tekrar sorulur.	Κάνε πρώτα μερικά μαθήματα· οι λέξεις που έχασες επανέρχονται εδώ.
 %s öğreniyorum · ana dilim %s	Μαθαίνω %s · η γλώσσα μου %s
 Toplam: %ld XP · bugün %d XP	Σύνολο: %ld XP · σήμερα %d XP
 Seri: %d gün · en uzun %d gün	Σερί: %d ημέρες · μέγιστο %d ημέρες
 %d ders · %d cevap · %%%d doğru	%d μαθήματα · %d απαντήσεις · %d%% σωστές
-%d kelime görüldü · %d öğrenildi · %d tekrar bekliyor	%d λέξεις είδες · %d έμαθες · %d για επανάληψη
-Seviyeler	Επίπεδα
 Tekrar kutuları	Κουτιά επανάληψης
-1: yeni kaçırılan · 5: iyice öğrenildi (aralık 1, 2, 4, 8, 21 gün)	1: μόλις λάθος · 5: καλά μαθημένη (κάθε 1, 2, 4, 8, 21 ημέρες)
 Değiştir	Αλλαγή
-Seri: %d gün · %ld XP · bugün %d/%d	Σερί: %d ημέρες · %ld XP · σήμερα %d/%d
 Kaynak: Vikisözlük (CC BY-SA), Tatoeba (CC BY), CEFR-J; seviyeler sıklığa göre	Πηγές: Βικιλεξικό (CC BY-SA), Tatoeba (CC BY), CEFR-J· επίπεδα κατά συχνότητα
 Kelime listeleri yüklenemedi.	Δεν ήταν δυνατή η φόρτωση των λιστών λέξεων.
-%d / %d öğrenildi	%d / %d μαθημένες
 Görev Yöneticisi	Διαχείριση εργασιών
 Arka planda çalışan programlar	Προγράμματα στο παρασκήνιο
 Arka planda başka program yok.	Κανένα άλλο πρόγραμμα στο παρασκήνιο.
@@ -1279,3 +1268,72 @@ noktalı bir kareye dokunun	πατήστε ένα τετράγωνο με τελ
 rakibi sıkıştıran bir kareye dokunun	πατήστε ένα τετράγωνο που κλείνει τον αντίπαλο
 Siyah %d – Beyaz %d	Μαύρα %d – Λευκά %d
 Kindle kısa bir oyun oynayacak. Her dokunuşta bir hamle yapılır ve burada anlatılır. Yeni konan taşın ortasında nokta, çevrilen taşların çevresinde çerçeve olur.	Το Kindle θα παίξει μια σύντομη παρτίδα. Κάθε πάτημα κάνει μία κίνηση, που εξηγείται εδώ. Το νέο πούλι έχει τελεία στο κέντρο, τα πούλια που γύρισαν έχουν πλαίσιο.
+%d / %d kelime öğretildi · ✓ öğrenildi · • öğretildi · ★ biliyorum · ○ sırada	%d / %d λέξεις διδάχτηκαν · ✓ μαθημένη · • διδαγμένη · ★ γνωστή · ○ επόμενη
+%d kelime öğretildi · %d öğrenildi · %d tekrar bekliyor	%d λέξεις διδάχτηκαν · %d μαθεύτηκαν · %d για επανάληψη
+%d sorudan %d doğru · +%d XP	%d ερωτήσεις, %d σωστές · +%d XP
+%d yeni kelime öğrendin!	Έμαθες %d νέες λέξεις!
+%s anlamı	Σημασία (%s)
+%s tanımı	Ορισμός (%s)
+%s · kelime %d / %d	%s · λέξη %d / %d
+%s öğrenmeye nereden başlayalım?	Από πού ξεκινάμε; (%s)
+%s: %d / %d doğru	%s: %d / %d σωστές
+0: yeni öğretildi · 1: yeni kaçırılan · 5: iyice öğrenildi (aralık 1, 2, 4, 8, 21 gün)	0: μόλις διδάχτηκε · 1: μόλις λάθος · 5: καλά μαθημένη (διαστήματα 1, 2, 4, 8, 21 ημέρες)
+Anladım ▶	Κατάλαβα ▶
+BUGÜNÜN DERSİ	ΣΗΜΕΡΙΝΟ ΜΑΘΗΜΑ
+Başlangıç seviyen	Το επίπεδο εκκίνησής σου
+Ben, sen, o	Εγώ, εσύ, αυτός/αυτή
+Bildiğin %d kelime "biliyorum" olarak işaretlendi; ara sıra tekrar sorulur.	Οι %d λέξεις που ήξερες σημειώθηκαν ως «γνωστές»· επανέρχονται πού και πού.
+Bilmiyorum	Δεν ξέρω
+Bilmiyorum, bana öğret	Δεν την ξέρω, μάθε μου
+Biraz biliyorum	Ξέρω λίγα
+Bu dersin kelimeleri	Οι λέξεις του μαθήματος
+Bu dil ikilisinin bütün kelimelerini gördün. Tekrarlarla devam et.	Είδες όλες τις λέξεις αυτού του ζεύγους γλωσσών. Συνέχισε με τις επαναλήψεις.
+Bu kelimeyi tekrar çalışalım	Ας ξαναδούμε αυτή τη λέξη
+Bugün: %d tekrar	Σήμερα: %d επαναλήψεις
+Bugün: %d yeni kelime	Σήμερα: %d νέες λέξεις
+Bugün: %d yeni kelime + %d tekrar	Σήμερα: %d νέες λέξεις + %d επαναλήψεις
+Bugünlük tekrar bitti. Yeni kelimeler için derse devam et.	Τέλος οι επαναλήψεις για σήμερα. Συνέχισε το μάθημα για νέες λέξεις.
+Bunu zaten biliyorum ★	Την ξέρω ήδη ★
+Derse başla ▶	Έναρξη μαθήματος ▶
+Derslere başla ▶	Ξεκίνα τα μαθήματα ▶
+Derste yeni kelime:	Νέες λέξεις ανά μάθημα:
+Devam ▶	Συνέχεια ▶
+Fiiller %d	Ρήματα %d
+Günlük şeyler	Καθημερινά πράγματα
+Henüz öğretilmedi	Δεν έχει διδαχτεί ακόμη
+Her derste önce yeni kelimeler öğretilir, sonra alıştırma yapılır.	Κάθε μάθημα πρώτα διδάσκει νέες λέξεις και μετά γίνεται εξάσκηση.
+Hiç bilmiyorum	Δεν ξέρω τίποτα
+Küçük kelimeler %d	Μικρές λέξεις %d
+Kısa seviye testi: her seviyeden 5 kelime	Σύντομο τεστ επιπέδου: 5 λέξεις ανά επίπεδο
+Sayılar	Αριθμοί
+Sayılar %d	Αριθμοί %d
+Selamlaşma	Χαιρετισμοί
+Seri: %d gün · %ld XP · bugün %d/%d XP	Σερί: %d ημέρες · %ld XP · σήμερα %d/%d XP
+Seviye testi	Τεστ επιπέδου
+Sonraki ders ▶	Επόμενο μάθημα ▶
+Sözlük	Λεξικό
+Sözlüğe bak	Άνοιγμα λεξικού
+Sıfatlar %d	Επίθετα %d
+Sıfırdan başla: selamlaşma, sayılar, temel fiiller…	Από το μηδέν: χαιρετισμοί, αριθμοί, βασικά ρήματα…
+TEKRAR BAKALIM	ΑΣ ΤΗ ΞΑΝΑΔΟΥΜΕ
+Tekrar zamanı	Ώρα για επανάληψη
+Temel fiiller	Βασικά ρήματα
+Temel sıfatlar	Βασικά επίθετα
+Tüm kelimeler öğretildi	Διδάχτηκαν όλες οι λέξεις
+YENİ KELİME	ΝΕΑ ΛΕΞΗ
+Yanlış — kartına bir daha bakalım	Λάθος — ας ξαναδούμε την κάρτα
+Yeni kelime %d / %d	Νέα λέξη %d / %d
+Yeni tekrar	Νέα επανάληψη
+dişil	θηλυκό
+eril	αρσενικό
+nötr	ουδέτερο
+okunuşu: %s	προφορά: %s
+Önce kelimeler öğretilir, sonra yalnızca öğrendiklerin sorulur.	Πρώτα διδάσκονται οι λέξεις, μετά ερωτάσαι μόνο όσα έμαθες.
+Örnek cümle	Παράδειγμα
+Öğretildi · tekrar kutusu %d / %d	Διδάχτηκε · κουτί επανάληψης %d / %d
+Ünite %d: %s	Ενότητα %d: %s
+İng.	αγγλ.
+İnsanlar	Άνθρωποι
+İsimler %d	Ουσιαστικά %d
+↻ yanlış bilinenler bir sonraki derste yine sorulur	↻ οι λάθος λέξεις επιστρέφουν στο επόμενο μάθημα
+★ Biliyorum olarak işaretli	★ Σημειωμένη ως γνωστή
