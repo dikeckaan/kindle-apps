@@ -243,6 +243,9 @@ static int run_app(const HubApp *a)
 	if (pid > 0) {
 		while (waitpid(pid, &status, 0) < 0 && errno == EINTR) kill(pid, SIGTERM);
 	}
+	if (pid > 0 && status != 0) /* in hub.log: which app, its exit code or signal */
+		fprintf(stderr, "app %s: %s %d\n", a->id, WIFSIGNALED(status) ? "killed by signal" : "exit code",
+			WIFSIGNALED(status) ? WTERMSIG(status) : WEXITSTATUS(status));
 	kui_prevent_sleep(0); /* an app that kept the Kindle awake (Masa Saati) may have crashed */
 	if (kui_init("hub") != 0) exit(1);
 	kui_drain_input(600); /* the end of the tap that closed the app must not hit the menu (its ✕ is in the same corner) */

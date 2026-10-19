@@ -4,7 +4,7 @@
   "name": "Kelime Oyunu",
   "author": "Kaan Dikeç",
   "description": "Türkçe 5 harfli kelime bulmaca (Wordle tarzı), yalnızca kök kelimeler, sınırsız oyun",
-  "version": [2026, 10, 18],
+  "version": [2026, 10, 19],
   "dependencies": [],
   "supported_platforms": ["kindlehf"]
 }

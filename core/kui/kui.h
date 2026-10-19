@@ -177,6 +177,9 @@ void kui_a11y_adjust(int easy, const char *s, int box_w, int box_h, KuiFont *f, 
 int  kui_easy(void);   /* Kolay okuma on */
 int  kui_simple(void); /* Basit mod on */
 void kui_ui_set(const char *key, int v); /* "easy" / "simple", saved in data/ui; this process sees it at once */
+/* crash report (crash.c): signal, address and the last touches go to the app's log */
+void kui_crash_handler_install(const char *app);
+void kui_crash_note_event(int type, int x, int y);
 /* drops touches for ms (the tap that woke the device, or the rest of a tap that closed another app) */
 void kui_drain_input(int ms);
 void kui_topbar(const char *title, const char *right_label); /* right_label may be NULL */

@@ -4,7 +4,7 @@
   "name": "Şiir Defteri",
   "author": "Kaan Dikeç",
   "description": "Klasik Türk şiiri, e-mürekkebe yakışan tırnaklı harflerle: her gün bir şiir, şairler ve şiirleri, rastgele şiir ve favoriler; Yunus Emre'den Orhan Veli'ye kamu malı şiirler, tamamen çevrimdışı",
-  "version": [2026, 10, 18],
+  "version": [2026, 10, 19],
   "dependencies": [],
   "supported_platforms": ["kindlehf"]
 }

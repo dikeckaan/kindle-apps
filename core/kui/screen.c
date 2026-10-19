@@ -46,6 +46,7 @@ static void show_message(const char *msg)
 
 int kui_init(const char *app)
 {
+	kui_crash_handler_install(app);
 	kui_i18n_load_saved(); /* language chosen in the Uygulamalar menu */
 	char path[300];
 	const char *root = getenv("KUI_ROOT");

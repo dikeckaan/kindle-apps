@@ -243,7 +243,10 @@ KuiEvent kui_next_event(int timeout_ms)
 			return (KuiEvent){ KUI_EV_QUIT, 0, 0, KUI_DIR_NONE };
 		if (pf[0].revents & POLLIN) {
 			KuiEvent e = drain_touch();
-			if (e.type != KUI_EV_NONE) return e;
+			if (e.type != KUI_EV_NONE) {
+				kui_crash_note_event((int) e.type, e.x, e.y); /* for a crash report */
+				return e;
+			}
 		}
 	}
 }

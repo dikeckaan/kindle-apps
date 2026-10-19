@@ -4,7 +4,7 @@
   "name": "Ajanda",
   "author": "Kaan Dikeç",
   "description": "Kâğıt ajanda gibi aylık takvim: resmî ve dinî bayramlar (Diyanet tarihleri), kandiller, özel günler, hafta numaraları ve her yıl tekrarlanabilen notlar; tamamen çevrimdışı",
-  "version": [2026, 10, 18],
+  "version": [2026, 10, 19],
   "dependencies": [],
   "supported_platforms": ["kindlehf"]
 }

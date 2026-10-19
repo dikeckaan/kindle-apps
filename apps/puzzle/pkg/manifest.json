@@ -4,7 +4,7 @@
   "name": "Satranç Bulmacası",
   "author": "Kaan Dikeç",
   "description": "Lichess'in günün satranç bulmacası ve daha fazlası; çevrimdışı çalışır, seri takibi",
-  "version": [2026, 10, 18],
+  "version": [2026, 10, 19],
   "dependencies": [],
   "supported_platforms": ["kindlehf"]
 }

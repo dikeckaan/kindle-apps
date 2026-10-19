@@ -4,7 +4,7 @@
   "name": "Masa Panosu",
   "author": "Kaan Dikeç",
   "description": "Masa saati panosu: büyük saat, hava, son dakika haberleri, döviz, tarihte bugün, namaz vakitleri, ay evresi",
-  "version": [2026, 10, 18],
+  "version": [2026, 10, 19],
   "dependencies": [],
   "supported_platforms": ["kindlehf"]
 }
