@@ -87,8 +87,35 @@ static int fetch_feed(int s, int sec)
 
 /* ---- drawing helpers ---- */
 
+/* How a redraw reaches the panel. Only the first page and a wake (the screensaver covered everything) flash; going
+ * to another screen is one partial update of the whole screen, and a change within a screen refreshes only the rects
+ * that changed: the topbar, the masthead and the buttons stay untouched (the core still cleans the panel with a full
+ * refresh every so many updates). */
+enum { UPD_FLASH, UPD_SCREEN, UPD_PAGE, UPD_DATA };
+
+static void show(int upd, const KuiRect *rs, int n)
+{
+	if (upd == UPD_FLASH) {
+		kui_flush(1);
+		return;
+	}
+	if (upd == UPD_SCREEN) kui_mark_dirty((KuiRect){ 0, 0, kui_width(), kui_height() });
+	else
+		for (int i = 0; i < n; i++) kui_mark_dirty(rs[i]);
+	kui_flush(0);
+}
+
+static KuiRect grow(KuiRect r, int dx, int dy) { return (KuiRect){ r.x - dx, r.y - dy, r.w + 2 * dx, r.h + 2 * dy }; }
+
+/* one left-aligned line; inv: white on black (a story being opened) */
+static void ink(KuiRect r, const char *s, KuiFont f, int px, int inv)
+{
+	if (inv) kui_text_on(r, s, f, px, KUI_ALIGN_LEFT, 255, 0);
+	else kui_text(r, s, f, px, KUI_ALIGN_LEFT, 0);
+}
+
 /* draws up to max_lines lines of text wrapped to box.w from box.y; returns the height used */
-static int draw_wrapped(KuiRect box, const char *text, KuiFont f, int px, int max_lines)
+static int draw_wrapped(KuiRect box, const char *text, KuiFont f, int px, int max_lines, int inv)
 {
 	static KuiLine lines[400];
 	int n = kui_wrap_text(text, box.w, f, px, lines, 400), lh = kui_line_height(f, px);
@@ -108,20 +135,20 @@ static int draw_wrapped(KuiRect box, const char *text, KuiFont f, int px, int ma
 				strcpy(buf + len, "…");
 			}
 		}
-		kui_text((KuiRect){ box.x, box.y + i * lh, box.w, lh }, buf, f, px, KUI_ALIGN_LEFT, 0);
+		ink((KuiRect){ box.x, box.y + i * lh, box.w, lh }, buf, f, px, inv);
 	}
 	return n * lh;
 }
 
 /* "HÜRRİYET · 18 Eki 17:54" above a story */
-static void kicker(KuiRect r, const char *source, const char *date, int px)
+static void kicker(KuiRect r, const char *source, const char *date, int px, int inv)
 {
 	char up[96], d[32], s[160];
 	kui_tr_upper_str(source, up, sizeof up);
 	news_show_date(date, d, sizeof d);
 	if (d[0]) snprintf(s, sizeof s, "%s · %s", up, d);
 	else snprintf(s, sizeof s, "%s", up);
-	kui_text(r, s, KUI_FONT_BOLD, kui_fit_px(s, KUI_FONT_BOLD, px, r.w), KUI_ALIGN_LEFT, 0);
+	ink(r, s, KUI_FONT_BOLD, kui_fit_px(s, KUI_FONT_BOLD, px, r.w), inv);
 }
 
 static void status_line(const char *msg)
@@ -134,7 +161,22 @@ static void status_line(const char *msg)
 	kui_flush(0);
 }
 
+/* the bottom bar (◀, the status or Yenile, ▶) and its middle */
+static KuiRect bar_rect(void) { return (KuiRect){ 0, kui_height() - 105, kui_width(), 105 }; }
+static KuiRect bar_mid(void) { return (KuiRect){ 190, kui_height() - 105, kui_width() - 380, 100 }; }
+
 /* ---- one source: its sections and headlines ---- */
+
+/* a headline row; inv paints it white on black at once, before the article opens */
+static void draw_row(const NewsItem *it, int y, int row, int inv)
+{
+	int w = kui_width();
+	char d[32];
+	if (inv) kui_fill((KuiRect){ 20, y, w - 40, row - 6 }, 0);
+	draw_wrapped((KuiRect){ 30, y + 5, w - 60, 0 }, it->title, KUI_FONT_SERIF_BOLD, 36, 2, inv);
+	news_show_date(it->date, d, sizeof d);
+	if (d[0]) ink((KuiRect){ 30, y + 98, w - 60, 36 }, d, KUI_FONT_REG, 28, inv);
+}
 
 static void source_view(int s)
 {
@@ -143,26 +185,30 @@ static void source_view(int s)
 	long when = 0;
 	KuiButton cats[NEWS_MAX_SECTIONS], nav[2];
 	int y0 = KUI_TOPBAR_H + (src[s].n_sec > 1 ? 30 + ((src[s].n_sec + 3) / 4) * 95 : 20);
-	int reload = 1, full = 1, fetched_now = 0;
-	for (;;) {
+	int reload = 1, upd = UPD_SCREEN, fetched_now = 0, quit = 0;
+	/* a page turn refreshes the list and the page number; new items also the sections and the bar */
+	KuiRect list = { 0, y0 - 4, w, per * row + 4 }, cat_area = { 0, KUI_TOPBAR_H + 2, w, y0 - 10 - KUI_TOPBAR_H - 2 };
+	while (!quit) {
 		if (reload) {
 			news_free(items, n);
 			n = load_cached(s, sec, items, &when);
 			fetched_now = 0;
-			if (!n || time(NULL) - when > FRESH_S) {
-				full = 1; /* draw the cached page first, then fetch */
-			}
 		}
 		int pages = n ? (n + per - 1) / per : 1;
 		if (page >= pages) page = pages - 1;
-		kui_fill((KuiRect){ 0, 0, w, h }, 255);
-		kui_topbar(src[s].name, T("Yenile"));
-		int cw = (w - 40 - 3 * 15) / 4;
+		/* kui_topbar and kui_button mark themselves dirty: they are drawn only when their part refreshes */
+		int all = upd == UPD_FLASH || upd == UPD_SCREEN, cw = (w - 40 - 3 * 15) / 4;
+		if (all) {
+			kui_fill((KuiRect){ 0, 0, w, h }, 255);
+			kui_topbar(src[s].name, T("Yenile"));
+			kui_fill((KuiRect){ 20, y0 - 8, w - 40, 3 }, 0);
+		}
 		for (int i = 0; i < src[s].n_sec && src[s].n_sec > 1; i++) {
 			cats[i] = (KuiButton){ { 20 + (i % 4) * (cw + 15), KUI_TOPBAR_H + 20 + (i / 4) * 95, cw, 80 }, T(src[s].sec[i].label), 10 + i };
-			kui_button(&cats[i], i == sec);
+			if (upd != UPD_PAGE) kui_button(&cats[i], i == sec);
 		}
-		kui_fill((KuiRect){ 20, y0 - 8, w - 40, 3 }, 0);
+		kui_fill(list, 255);
+		kui_fill(upd == UPD_PAGE ? bar_mid() : bar_rect(), 255);
 		if (!n)
 			kui_text((KuiRect){ 40, y0 + 200, w - 80, 200 }, offline ? T("Haberler alınamadı.\nWi-Fi bağlantısını kontrol edin.") : T("Yükleniyor…"),
 				 KUI_FONT_REG, 42, KUI_ALIGN_CENTER, 0);
@@ -170,15 +216,12 @@ static void source_view(int s)
 			int k = page * per + i;
 			if (k >= n) break;
 			int y = y0 + i * row;
-			draw_wrapped((KuiRect){ 30, y + 5, w - 60, 0 }, items[k].title, KUI_FONT_SERIF_BOLD, 36, 2);
-			char d[32];
-			news_show_date(items[k].date, d, sizeof d);
-			kui_text((KuiRect){ 30, y + 98, w - 60, 36 }, d, KUI_FONT_REG, 28, KUI_ALIGN_LEFT, 0);
+			draw_row(&items[k], y, row, 0);
 			kui_fill((KuiRect){ 30, y + row - 4, w - 60, 1 }, 0);
 		}
 		nav[0] = (KuiButton){ { 20, h - 100, 160, 90 }, "◀", 1 };
 		nav[1] = (KuiButton){ { w - 180, h - 100, 160, 90 }, "▶", 2 };
-		if (pages > 1) {
+		if (pages > 1 && upd != UPD_PAGE) {
 			kui_button(&nav[0], 0);
 			kui_button(&nav[1], 0);
 		}
@@ -191,59 +234,60 @@ static void source_view(int s)
 				 tm.tm_hour, tm.tm_min);
 			kui_text((KuiRect){ 190, h - 100, w - 380, 90 }, st, KUI_FONT_REG, kui_fit_px(st, KUI_FONT_REG, 30, w - 390), KUI_ALIGN_CENTER, 0);
 		}
-		if (full) kui_flush(1);
-		else {
-			kui_mark_dirty((KuiRect){ 0, KUI_TOPBAR_H, w, h - KUI_TOPBAR_H });
-			kui_flush(0);
-		}
-		full = 0;
-		if (reload && !fetched_now && (!n || time(NULL) - when > FRESH_S)) {
+		KuiRect rs[3] = { list, upd == UPD_PAGE ? bar_mid() : bar_rect(), cat_area };
+		show(upd, rs, upd == UPD_PAGE ? 2 : 3);
+		if (reload && !fetched_now && (!n || time(NULL) - when > FRESH_S)) { /* the cached page is up; now fetch */
 			status_line(T("Güncelleniyor…"));
 			offline = !fetch_feed(s, sec);
 			fetched_now = 1;
 			news_free(items, n);
 			n = load_cached(s, sec, items, &when);
 			reload = 0;
+			upd = UPD_DATA;
 			continue; /* redraw with the new items */
 		}
 		reload = 0;
-		KuiEvent e = kui_next_event(-1);
-		if (e.type == KUI_EV_QUIT) break;
-		if (e.type == KUI_EV_WAKE) { full = 1; continue; }
-		if (e.type == KUI_EV_SWIPE) {
-			if (e.dir == KUI_DIR_LEFT && page + 1 < pages) page++;
-			else if (e.dir == KUI_DIR_RIGHT && page > 0) page--;
-			continue;
-		}
-		if (e.type != KUI_EV_TAP) continue;
-		int hit = kui_topbar_hit(w, 1, e.x, e.y);
-		if (hit == KUI_BTN_EXIT) break;
-		if (hit == KUI_BTN_MENU) {
-			status_line(T("Güncelleniyor…"));
-			offline = !fetch_feed(s, sec);
-			reload = 1;
-			fetched_now = 1;
-			news_free(items, n);
-			n = load_cached(s, sec, items, &when);
-			reload = 0;
-			continue;
-		}
-		int id = src[s].n_sec > 1 ? kui_buttons_hit(cats, src[s].n_sec, e.x, e.y) : 0;
-		if (id >= 10 && id - 10 != sec) {
-			sec = id - 10;
-			page = 0;
-			offline = 0;
-			reload = 1;
-			continue;
-		}
-		id = pages > 1 ? kui_buttons_hit(nav, 2, e.x, e.y) : 0;
-		if (id == 1 && page > 0) { page--; continue; }
-		if (id == 2 && page + 1 < pages) { page++; continue; }
-		if (e.y >= y0 && e.y < y0 + per * row) {
-			int k = page * per + (e.y - y0) / row;
-			if (k < n) {
-				news_read(&items[k], src[s].name);
-				full = 1;
+		for (upd = -1; upd < 0;) { /* until something changed */
+			KuiEvent e = kui_next_event(-1);
+			if (e.type == KUI_EV_QUIT) { quit = 1; break; }
+			if (e.type == KUI_EV_WAKE) upd = UPD_FLASH;
+			if (e.type == KUI_EV_SWIPE) {
+				if (e.dir == KUI_DIR_LEFT && page + 1 < pages) page++, upd = UPD_PAGE;
+				else if (e.dir == KUI_DIR_RIGHT && page > 0) page--, upd = UPD_PAGE;
+			}
+			if (e.type != KUI_EV_TAP) continue;
+			int hit = kui_topbar_hit(w, 1, e.x, e.y);
+			if (hit == KUI_BTN_EXIT) { quit = 1; break; }
+			if (hit == KUI_BTN_MENU) {
+				status_line(T("Güncelleniyor…"));
+				offline = !fetch_feed(s, sec);
+				news_free(items, n);
+				n = load_cached(s, sec, items, &when);
+				upd = UPD_DATA;
+				continue;
+			}
+			int id = src[s].n_sec > 1 ? kui_buttons_hit(cats, src[s].n_sec, e.x, e.y) : 0;
+			if (id >= 10 && id - 10 != sec) {
+				sec = id - 10;
+				page = 0;
+				offline = 0;
+				reload = 1;
+				upd = UPD_DATA;
+				continue;
+			}
+			id = pages > 1 ? kui_buttons_hit(nav, 2, e.x, e.y) : 0;
+			if (id == 1 && page > 0) page--, upd = UPD_PAGE;
+			if (id == 2 && page + 1 < pages) page++, upd = UPD_PAGE;
+			if (id) continue;
+			if (e.y >= y0 && e.y < y0 + per * row) {
+				int i = (e.y - y0) / row, k = page * per + i;
+				if (k < n) {
+					draw_row(&items[k], y0 + i * row, row, 1); /* only this row refreshes, before the reader lays out */
+					kui_mark_dirty((KuiRect){ 20, y0 + i * row, w - 40, row - 6 });
+					kui_flush(0);
+					news_read(&items[k], src[s].name);
+					upd = UPD_SCREEN;
+				}
 			}
 		}
 	}
@@ -257,7 +301,7 @@ static void sources_screen(void)
 	int w = kui_width(), h = kui_height(), cols = 2, rows = (n_src + 1) / 2;
 	int cw = (w - 3 * 30) / cols, rh = (h - KUI_TOPBAR_H - 120) / (rows ? rows : 1);
 	if (rh > 110) rh = 110;
-	for (int full = 1;;) {
+	for (int upd = UPD_SCREEN;;) {
 		kui_fill((KuiRect){ 0, 0, w, h }, 255);
 		kui_topbar(T("Kaynaklar"), NULL);
 		for (int i = 0; i < n_src; i++) {
@@ -269,27 +313,34 @@ static void sources_screen(void)
 		}
 		kui_text((KuiRect){ 30, h - 100, w - 60, 90 }, T("Kaynağa dokunun: haberlerini açar. ☑ / ☐: ön sayfada gösterilsin mi."), KUI_FONT_REG, 28,
 			 KUI_ALIGN_CENTER, 0);
-		if (full) kui_flush(1);
-		else {
-			kui_mark_dirty((KuiRect){ 0, KUI_TOPBAR_H, w, h - KUI_TOPBAR_H });
-			kui_flush(0);
-		}
-		full = 0;
-		KuiEvent e = kui_next_event(-1);
-		if (e.type == KUI_EV_QUIT) return;
-		if (e.type == KUI_EV_WAKE) { full = 1; continue; }
-		if (e.type != KUI_EV_TAP) continue;
-		if (kui_topbar_hit(w, 0, e.x, e.y) == KUI_BTN_EXIT) return;
-		for (int i = 0; i < n_src; i++) {
-			KuiRect r = { 30 + (i / rows) * (cw + 30), KUI_TOPBAR_H + 15 + (i % rows) * rh, cw, rh - 12 };
-			if (!kui_rect_contains(r, e.x, e.y)) continue;
-			if (e.x >= r.x + r.w - 110) {
-				set_enabled(i, !enabled(i));
-			} else {
-				source_view(i);
-				full = 1;
+		show(upd, NULL, 0);
+		for (upd = -1; upd < 0;) { /* until the whole screen changes */
+			KuiEvent e = kui_next_event(-1);
+			if (e.type == KUI_EV_QUIT) return;
+			if (e.type == KUI_EV_WAKE) upd = UPD_FLASH;
+			if (e.type != KUI_EV_TAP) continue;
+			if (kui_topbar_hit(w, 0, e.x, e.y) == KUI_BTN_EXIT) return;
+			for (int i = 0; i < n_src; i++) {
+				KuiRect r = { 30 + (i / rows) * (cw + 30), KUI_TOPBAR_H + 15 + (i % rows) * rh, cw, rh - 12 };
+				if (!kui_rect_contains(r, e.x, e.y)) continue;
+				if (e.x >= r.x + r.w - 110) { /* only the box changes */
+					KuiRect box = { r.x + r.w - 90, r.y + 4, 80, r.h - 8 };
+					set_enabled(i, !enabled(i));
+					kui_fill(box, 255);
+					kui_text(box, enabled(i) ? "☑" : "☐", KUI_FONT_REG, 56, KUI_ALIGN_CENTER, 0);
+					kui_mark_dirty(box);
+					kui_flush(0);
+				} else { /* the source white on black at once, then its page */
+					kui_fill(r, 0);
+					kui_text_on((KuiRect){ r.x + 20, r.y, r.w - 110, r.h }, src[i].name, KUI_FONT_SERIF_BOLD,
+						    kui_fit_px(src[i].name, KUI_FONT_SERIF_BOLD, 38, r.w - 120), KUI_ALIGN_LEFT, 255, 0);
+					kui_mark_dirty(r);
+					kui_flush(0);
+					source_view(i);
+					upd = UPD_SCREEN;
+				}
+				break;
 			}
-			break;
 		}
 	}
 }
@@ -299,8 +350,10 @@ static void sources_screen(void)
 static int front_src[MAX_SRC], n_front_src; /* list index → source */
 static long front_when; /* newest fetch among the front page's feeds */
 
-static void build_front(int fetch_old)
+/* fetch_old: also downloads the feeds older than FRESH_S; returns how many it tried (the bar shows their status) */
+static int build_front(int fetch_old)
 {
+	int tried = 0;
 	n_front_src = 0;
 	front_when = 0;
 	for (int s = 0; s < n_src && n_front_src < MAX_SRC; s++) {
@@ -314,6 +367,7 @@ static void build_front(int fetch_old)
 			char msg[160];
 			snprintf(msg, sizeof msg, T("%s yükleniyor… (%d)"), src[s].name, l + 1);
 			status_line(msg);
+			tried++;
 			if (fetch_feed(s, 0)) {
 				news_free(lists[l], counts[l]);
 				counts[l] = load_cached(s, 0, lists[l], &when);
@@ -330,6 +384,7 @@ static void build_front(int fetch_old)
 	const NewsItem *ptr[MAX_SRC];
 	for (int l = 0; l < n_front_src; l++) ptr[l] = lists[l];
 	n_front = news_front_page(ptr, counts, n_front_src, PER_SOURCE, (long) time(NULL), news_local_off(), front, FRONT_MAX);
+	return tried;
 }
 
 /* story slots of a front page: page 0 has a lead story and six below it, later pages ten */
@@ -348,19 +403,47 @@ static int slots(int page, KuiRect *r)
 static int front_pages(void) { return n_front <= 7 ? 1 : 1 + (n_front - 7 + 9) / 10; }
 static int first_story(int page) { return page == 0 ? 0 : 7 + (page - 1) * 10; }
 
+/* a tapped story turns white on black over its slot and margin (clear of the column and lead rules) */
+static KuiRect pressed_rect(KuiRect slot) { return grow(slot, 6, 4); }
+
+/* story i of the current page in its slot r */
+static void draw_story(int i, KuiRect r, int inv)
+{
+	const NewsRef *ref = &front[first_story(fpage) + i];
+	const NewsItem *it = &lists[ref->src][ref->idx];
+	const char *name = src[front_src[ref->src]].name;
+	int lead = fpage == 0 && i == 0;
+	if (inv) kui_fill(pressed_rect(r), 0);
+	kicker((KuiRect){ r.x, r.y, r.w, 36 }, name, it->date, lead ? 28 : 24, inv);
+	int used = draw_wrapped((KuiRect){ r.x, r.y + 40, r.w, 0 }, it->title, KUI_FONT_SERIF_BOLD, lead ? 54 : 32, lead ? 3 : 4, inv);
+	if (lead && it->text[0])
+		draw_wrapped((KuiRect){ r.x, r.y + 48 + used, r.w, 0 }, it->text, KUI_FONT_SERIF, 32, (r.h - 48 - used) / kui_line_height(KUI_FONT_SERIF, 32),
+			     inv);
+}
+
 static KuiButton fnav[3];
 
-static void draw_front(int full)
+/* a page turn redraws only the masthead's date line and the stories; new data also the bar (kui_topbar and
+ * kui_button mark themselves dirty, so they are drawn only when their part refreshes) */
+static void draw_front(int upd)
 {
-	int w = kui_width(), h = kui_height();
+	int w = kui_width(), h = kui_height(), all = upd == UPD_FLASH || upd == UPD_SCREEN;
 	char s[200], date[96];
-	kui_fill((KuiRect){ 0, 0, w, h }, 255);
-	kui_topbar(T("Gazete"), T("Kaynaklar"));
-	/* masthead */
-	const char *title = T("Gazete");
-	kui_text((KuiRect){ 20, KUI_TOPBAR_H + 5, w - 40, 120 }, title, KUI_FONT_SERIF_BOLD, kui_fit_px(title, KUI_FONT_SERIF_BOLD, 104, w - 60),
-		 KUI_ALIGN_CENTER, 0);
-	kui_fill((KuiRect){ 20, KUI_TOPBAR_H + 128, w - 40, 2 }, 0);
+	KuiRect dateline = { 20, KUI_TOPBAR_H + 132, w - 40, 50 }, stories = { 0, KUI_TOPBAR_H + 200, w, h - 116 - KUI_TOPBAR_H - 200 };
+	if (all) {
+		kui_fill((KuiRect){ 0, 0, w, h }, 255);
+		kui_topbar(T("Gazete"), T("Kaynaklar"));
+		/* masthead */
+		const char *title = T("Gazete");
+		kui_text((KuiRect){ 20, KUI_TOPBAR_H + 5, w - 40, 120 }, title, KUI_FONT_SERIF_BOLD, kui_fit_px(title, KUI_FONT_SERIF_BOLD, 104, w - 60),
+			 KUI_ALIGN_CENTER, 0);
+		kui_fill((KuiRect){ 20, KUI_TOPBAR_H + 128, w - 40, 2 }, 0);
+		kui_fill((KuiRect){ 20, KUI_TOPBAR_H + 185, w - 40, 6 }, 0);
+		kui_fill((KuiRect){ 20, KUI_TOPBAR_H + 195, w - 40, 1 }, 0);
+		kui_fill((KuiRect){ 20, h - 114, w - 40, 1 }, 0); /* the foot of the page, above the buttons */
+	}
+	kui_fill(dateline, 255);
+	kui_fill(stories, 255);
 	time_t now = time(NULL);
 	struct tm tm;
 	localtime_r(&now, &tm);
@@ -375,9 +458,7 @@ static void draw_front(int full)
 		size_t n = strlen(s);
 		snprintf(s + n, sizeof s - n, " · %s", u);
 	}
-	kui_text((KuiRect){ 20, KUI_TOPBAR_H + 132, w - 40, 50 }, s, KUI_FONT_SERIF, kui_fit_px(s, KUI_FONT_SERIF, 30, w - 60), KUI_ALIGN_CENTER, 0);
-	kui_fill((KuiRect){ 20, KUI_TOPBAR_H + 185, w - 40, 6 }, 0);
-	kui_fill((KuiRect){ 20, KUI_TOPBAR_H + 195, w - 40, 1 }, 0);
+	kui_text(dateline, s, KUI_FONT_SERIF, kui_fit_px(s, KUI_FONT_SERIF, 30, w - 60), KUI_ALIGN_CENTER, 0);
 	if (!n_front) {
 		kui_text((KuiRect){ 40, 600, w - 80, 300 },
 			 offline ? T("Haberler alınamadı.\nWi-Fi bağlantısını kontrol edin.") : T("Ön sayfada kaynak yok.\nKaynaklar'dan seçin."), KUI_FONT_SERIF, 42,
@@ -386,30 +467,23 @@ static void draw_front(int full)
 	KuiRect r[12];
 	int ns = slots(fpage, r), first = first_story(fpage);
 	for (int i = 0; i < ns && first + i < n_front; i++) {
-		const NewsRef *ref = &front[first + i];
-		const NewsItem *it = &lists[ref->src][ref->idx];
-		const char *name = src[front_src[ref->src]].name;
-		int lead = fpage == 0 && i == 0;
-		kicker((KuiRect){ r[i].x, r[i].y, r[i].w, 36 }, name, it->date, lead ? 28 : 24);
-		int used = draw_wrapped((KuiRect){ r[i].x, r[i].y + 40, r[i].w, 0 }, it->title, KUI_FONT_SERIF_BOLD, lead ? 54 : 32, lead ? 3 : 4);
-		if (lead && it->text[0])
-			draw_wrapped((KuiRect){ r[i].x, r[i].y + 48 + used, r[i].w, 0 }, it->text, KUI_FONT_SERIF, 32, (r[i].h - 48 - used) / kui_line_height(KUI_FONT_SERIF, 32));
-		if (lead) kui_fill((KuiRect){ 20, r[i].y + r[i].h + 5, w - 40, 2 }, 0);
+		draw_story(i, r[i], 0);
+		if (fpage == 0 && i == 0) kui_fill((KuiRect){ 20, r[i].y + r[i].h + 5, w - 40, 2 }, 0);
 		else if (i % 2 == (fpage == 0 ? 1 : 0)) kui_fill((KuiRect){ r[i].x + r[i].w + 9, r[i].y, 2, r[i].h - 10 }, 0); /* column rule */
 	}
 	fnav[0] = (KuiButton){ { 20, h - 100, 160, 90 }, "◀", 1 };
 	fnav[1] = (KuiButton){ { w - 180, h - 100, 160, 90 }, "▶", 2 };
 	fnav[2] = (KuiButton){ { w / 2 - 150, h - 100, 300, 90 }, T("Yenile"), 3 };
-	if (front_pages() > 1) {
-		kui_button(&fnav[0], 0);
-		kui_button(&fnav[1], 0);
+	if (upd != UPD_PAGE) {
+		kui_fill(bar_rect(), 255);
+		if (front_pages() > 1) {
+			kui_button(&fnav[0], 0);
+			kui_button(&fnav[1], 0);
+		}
+		kui_button(&fnav[2], 0);
 	}
-	kui_button(&fnav[2], 0);
-	if (full) kui_flush(1);
-	else {
-		kui_mark_dirty((KuiRect){ 0, KUI_TOPBAR_H, w, h - KUI_TOPBAR_H });
-		kui_flush(0);
-	}
+	KuiRect rs[3] = { dateline, stories, bar_rect() };
+	show(upd, rs, upd == UPD_PAGE ? 2 : 3);
 }
 
 int main(void)
@@ -418,16 +492,15 @@ int main(void)
 	src = news_sources(&n_src);
 	if (n_src > MAX_SRC) n_src = MAX_SRC;
 	build_front(0); /* cached first: something to read at once */
-	draw_front(1);
-	build_front(1);
-	draw_front(0);
+	draw_front(UPD_FLASH);
+	if (build_front(1)) draw_front(UPD_DATA);
 	for (;;) {
 		KuiEvent e = kui_next_event(-1);
 		if (e.type == KUI_EV_QUIT) break;
-		if (e.type == KUI_EV_WAKE) { draw_front(1); continue; }
+		if (e.type == KUI_EV_WAKE) { draw_front(UPD_FLASH); continue; }
 		if (e.type == KUI_EV_SWIPE) {
-			if (e.dir == KUI_DIR_LEFT && fpage + 1 < front_pages()) fpage++, draw_front(0);
-			else if (e.dir == KUI_DIR_RIGHT && fpage > 0) fpage--, draw_front(0);
+			if (e.dir == KUI_DIR_LEFT && fpage + 1 < front_pages()) fpage++, draw_front(UPD_PAGE);
+			else if (e.dir == KUI_DIR_RIGHT && fpage > 0) fpage--, draw_front(UPD_PAGE);
 			continue;
 		}
 		if (e.type != KUI_EV_TAP) continue;
@@ -438,14 +511,13 @@ int main(void)
 			fpage = 0;
 			offline = 0;
 			build_front(0); /* sources may have changed */
-			draw_front(1);
-			build_front(1);
-			draw_front(0);
+			draw_front(UPD_SCREEN);
+			if (build_front(1)) draw_front(UPD_DATA);
 			continue;
 		}
 		int id = kui_buttons_hit(fnav, 3, e.x, e.y);
-		if (id == 1 && fpage > 0) { fpage--; draw_front(0); continue; }
-		if (id == 2 && fpage + 1 < front_pages()) { fpage++; draw_front(0); continue; }
+		if (id == 1 && fpage > 0) { fpage--; draw_front(UPD_PAGE); continue; }
+		if (id == 2 && fpage + 1 < front_pages()) { fpage++; draw_front(UPD_PAGE); continue; }
 		if (id == 3) {
 			offline = 0;
 			for (int l = 0; l < n_front_src; l++) {
@@ -455,7 +527,7 @@ int main(void)
 				if (!fetch_feed(front_src[l], 0)) offline = 1;
 			}
 			build_front(0);
-			draw_front(0);
+			draw_front(UPD_DATA);
 			continue;
 		}
 		KuiRect r[12];
@@ -463,8 +535,11 @@ int main(void)
 		for (int i = 0; i < ns && first + i < n_front; i++) {
 			if (!kui_rect_contains(r[i], e.x, e.y)) continue;
 			const NewsRef *ref = &front[first + i];
+			draw_story(i, r[i], 1); /* at once, and only the story's rect refreshes */
+			kui_mark_dirty(pressed_rect(r[i]));
+			kui_flush(0);
 			news_read(&lists[ref->src][ref->idx], src[front_src[ref->src]].name);
-			draw_front(1);
+			draw_front(UPD_SCREEN);
 			break;
 		}
 	}
