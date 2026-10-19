@@ -213,6 +213,80 @@ static void test_projection(void)
 	T_ASSERT(ax > ix && ay > iy);
 }
 
+static void test_view(void)
+{
+	DqProj full, p;
+	DqView v;
+	dq_proj_fit(&full, 20, 300, 1032, 520, DQ_MAP_LON0, DQ_MAP_LON1, DQ_MAP_LAT0, DQ_MAP_LAT1);
+	dq_view_reset(&v);
+	T_EQ_INT(v.zoom, 1);
+	T_EQ_INT(dq_view_pan(&v, 0.5, 0), 0); /* nothing to pan at 1× */
+	dq_proj_view(&p, &full, &v);
+	T_ASSERT(p.scale == full.scale && p.lon0 == full.lon0 && p.lat1 == full.lat1);
+	/* 2× around Ankara: Ankara in the middle, same pixel rectangle, distances doubled */
+	v.lat = 39.93, v.lon = 32.86;
+	T_EQ_INT(dq_view_zoom(&v, 1), 1);
+	T_EQ_INT(v.zoom, 2);
+	dq_proj_view(&p, &full, &v);
+	T_ASSERT(p.x == full.x && p.y == full.y && p.w == full.w && p.h == full.h);
+	int ax, ay, ix, iy, fax, fay, fix, fiy;
+	dq_project(&p, 39.93, 32.86, &ax, &ay);
+	T_ASSERT(abs(ax - (p.x + p.w / 2)) <= 1 && abs(ay - (p.y + p.h / 2)) <= 1);
+	dq_project(&p, 41.01, 28.98, &ix, &iy);
+	dq_project(&full, 39.93, 32.86, &fax, &fay);
+	dq_project(&full, 41.01, 28.98, &fix, &fiy);
+	T_ASSERT(abs((ax - ix) - 2 * (fax - fix)) <= 2 && abs((ay - iy) - 2 * (fay - fiy)) <= 2);
+	/* unproject is the inverse */
+	double lat, lon;
+	dq_unproject(&p, ix, iy, &lat, &lon);
+	T_ASSERT(fabs(lat - 41.01) < 0.02 && fabs(lon - 28.98) < 0.02);
+	/* up to 4×, then no further; the visible area never leaves the map */
+	T_EQ_INT(dq_view_zoom(&v, 1), 1);
+	T_EQ_INT(v.zoom, 4);
+	T_EQ_INT(dq_view_zoom(&v, 1), 0);
+	T_EQ_INT(v.zoom, DQ_ZOOM_MAX);
+	v.lat = 50, v.lon = 10; /* far off the map: clamped to the north-west corner */
+	dq_view_clamp(&v);
+	dq_proj_view(&p, &full, &v);
+	int x0, y0;
+	dq_project(&p, DQ_MAP_LAT1, DQ_MAP_LON0, &x0, &y0);
+	T_ASSERT(abs(x0 - p.x) <= 1 && abs(y0 - p.y) <= 1);
+	T_EQ_INT(dq_view_pan(&v, -0.5, -0.5), 0); /* already in the corner */
+	T_EQ_INT(dq_view_pan(&v, 0.5, 0.5), 1);   /* half a view east and south */
+	T_ASSERT(fabs(v.lon - (DQ_MAP_LON0 + (DQ_MAP_LON1 - DQ_MAP_LON0) / 8 + (DQ_MAP_LON1 - DQ_MAP_LON0) / 8)) < 1e-9);
+	T_ASSERT(fabs(v.lat - (DQ_MAP_LAT1 - (DQ_MAP_LAT1 - DQ_MAP_LAT0) / 4)) < 1e-9);
+	for (int i = 0; i < 20; i++) dq_view_pan(&v, 0.5, 0.5);
+	dq_proj_view(&p, &full, &v);
+	dq_project(&p, DQ_MAP_LAT0, DQ_MAP_LON1, &x0, &y0);
+	T_ASSERT(abs(x0 - (p.x + p.w)) <= 1 && abs(y0 - (p.y + p.h)) <= 1); /* south-east corner, not beyond */
+	/* zooming out keeps the centre where possible; at 1× it is the whole map again */
+	T_EQ_INT(dq_view_zoom(&v, -1), 1);
+	T_EQ_INT(v.zoom, 2);
+	T_EQ_INT(dq_view_zoom(&v, -1), 1);
+	T_EQ_INT(v.zoom, 1);
+	T_ASSERT(fabs(v.lat - (DQ_MAP_LAT0 + DQ_MAP_LAT1) / 2) < 1e-9 && fabs(v.lon - (DQ_MAP_LON0 + DQ_MAP_LON1) / 2) < 1e-9);
+	T_EQ_INT(dq_view_zoom(&v, -1), 0);
+	v.zoom = 3; /* not a level: rounded down */
+	dq_view_clamp(&v);
+	T_EQ_INT(v.zoom, 2);
+}
+
+static void test_cities(void)
+{
+	T_ASSERT(dq_n_cities >= 60);
+	for (int i = 0; i < dq_n_cities; i++) {
+		const DqCity *c = &dq_cities[i];
+		T_ASSERT(c->zoom == 1 || c->zoom == 2 || c->zoom == 4);
+		if (i) T_ASSERT(c->zoom >= dq_cities[i - 1].zoom); /* by importance: the 1× ones first */
+		for (int k = 0; k < i; k++) T_ASSERT(strcmp(c->name, dq_cities[k].name) != 0);
+		int in = 0; /* every centre lies inside the Türkiye outline */
+		for (int r = 0; r < dq_map_n_rings; r++)
+			if (dq_map_rings[r].kind == 1 && dq_ring_contains(&dq_map_rings[r], c->lat, c->lon)) in = 1;
+		if (!in) printf("  outside Türkiye: %s\n", c->name);
+		T_ASSERT(in);
+	}
+}
+
 static void test_map_data(void)
 {
 	int tr = 0, in_tr = 0, athens = 0;
@@ -259,6 +333,8 @@ int main(void)
 	T_RUN(test_distance_radius);
 	T_RUN(test_ago);
 	T_RUN(test_projection);
+	T_RUN(test_view);
+	T_RUN(test_cities);
 	T_RUN(test_map_data);
 	return T_DONE();
 }

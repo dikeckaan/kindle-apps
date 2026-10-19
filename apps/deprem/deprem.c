@@ -371,6 +371,59 @@ void dq_project(const DqProj *p, double lat, double lon, int *px, int *py)
 	*py = (int) lround(y);
 }
 
+void dq_unproject(const DqProj *p, int px, int py, double *lat, double *lon)
+{
+	*lon = p->lon0 + (px - p->x) / (p->kx * p->scale);
+	*lat = p->lat1 - (py - p->y) / p->scale;
+}
+
+/* ---- map view (zoom and pan) ---- */
+
+void dq_view_reset(DqView *v)
+{
+	v->zoom = 1;
+	v->lat = (DQ_MAP_LAT0 + DQ_MAP_LAT1) / 2;
+	v->lon = (DQ_MAP_LON0 + DQ_MAP_LON1) / 2;
+}
+
+static double clampd(double x, double lo, double hi) { return x < lo ? lo : x > hi ? hi : x; }
+
+void dq_view_clamp(DqView *v)
+{
+	int z = 1;
+	while (z < DQ_ZOOM_MAX && z * 2 <= v->zoom) z *= 2;
+	v->zoom = z;
+	double hw = (DQ_MAP_LON1 - DQ_MAP_LON0) / (2.0 * z), hh = (DQ_MAP_LAT1 - DQ_MAP_LAT0) / (2.0 * z);
+	v->lon = clampd(v->lon, DQ_MAP_LON0 + hw, DQ_MAP_LON1 - hw);
+	v->lat = clampd(v->lat, DQ_MAP_LAT0 + hh, DQ_MAP_LAT1 - hh);
+}
+
+int dq_view_zoom(DqView *v, int dir)
+{
+	DqView old = *v;
+	v->zoom = dir > 0 ? v->zoom * 2 : v->zoom / 2;
+	dq_view_clamp(v);
+	return v->zoom != old.zoom || v->lat != old.lat || v->lon != old.lon;
+}
+
+int dq_view_pan(DqView *v, double fx, double fy)
+{
+	DqView old = *v;
+	v->lon += fx * (DQ_MAP_LON1 - DQ_MAP_LON0) / v->zoom;
+	v->lat -= fy * (DQ_MAP_LAT1 - DQ_MAP_LAT0) / v->zoom;
+	dq_view_clamp(v);
+	return fabs(v->lat - old.lat) > 1e-9 || fabs(v->lon - old.lon) > 1e-9;
+}
+
+void dq_proj_view(DqProj *p, const DqProj *full, const DqView *v)
+{
+	*p = *full;
+	if (v->zoom <= 1) return; /* exactly the fitted map */
+	p->scale = full->scale * v->zoom;
+	p->lon0 = v->lon - full->w / 2.0 / (p->kx * p->scale);
+	p->lat1 = v->lat + full->h / 2.0 / p->scale;
+}
+
 int dq_proj_height(int w, double lon0, double lon1, double lat0, double lat1)
 {
 	double kx = cos((lat0 + lat1) / 2 * M_PI / 180);
@@ -408,3 +461,36 @@ int dq_ring_scan(const DqProj *p, const DqRing *r, int y, int *xs, int max)
 	}
 	return n & ~1;
 }
+
+/* province centres (approximate); listed by importance: when labels collide the earlier one wins */
+const DqCity dq_cities[] = {
+	{ "İstanbul", 41.04, 28.95, 1 }, { "Ankara", 39.93, 32.86, 1 }, { "İzmir", 38.42, 27.14, 1 },
+	{ "Antalya", 36.89, 30.71, 1 }, { "Adana", 37.00, 35.32, 1 }, { "Samsun", 41.29, 36.33, 1 },
+	{ "Erzurum", 39.90, 41.27, 1 }, { "Diyarbakır", 37.91, 40.24, 1 },
+	{ "Bursa", 40.19, 29.06, 2 }, { "Konya", 37.87, 32.48, 2 }, { "Gaziantep", 37.07, 37.38, 2 },
+	{ "Kayseri", 38.73, 35.48, 2 }, { "Trabzon", 41.00, 39.72, 2 }, { "Van", 38.49, 43.38, 2 },
+	{ "Malatya", 38.35, 38.31, 2 }, { "Eskişehir", 39.78, 30.52, 2 }, { "Denizli", 37.78, 29.09, 2 },
+	{ "Sivas", 39.75, 37.02, 2 }, { "Kahramanmaraş", 37.58, 36.94, 2 }, { "Elazığ", 38.67, 39.22, 2 },
+	{ "Muğla", 37.21, 28.36, 2 }, { "Balıkesir", 39.65, 27.88, 2 }, { "Çanakkale", 40.13, 26.46, 2 },
+	{ "Edirne", 41.68, 26.56, 2 }, { "Hatay", 36.20, 36.16, 2 }, { "Mersin", 36.81, 34.64, 2 },
+	{ "Şanlıurfa", 37.16, 38.79, 2 }, { "Kocaeli", 40.77, 29.92, 2 }, { "Manisa", 38.61, 27.43, 2 },
+	{ "Erzincan", 39.75, 39.49, 2 }, { "Kars", 40.60, 43.10, 2 }, { "Zonguldak", 41.45, 31.79, 2 },
+	{ "Sinop", 42.00, 35.10, 2 }, { "Kastamonu", 41.38, 33.78, 2 }, { "Bingöl", 38.88, 40.50, 2 },
+	{ "Aydın", 37.85, 27.84, 4 }, { "Sakarya", 40.78, 30.40, 4 }, { "Afyonkarahisar", 38.76, 30.54, 4 },
+	{ "Kütahya", 39.42, 29.98, 4 }, { "Uşak", 38.68, 29.41, 4 }, { "Isparta", 37.76, 30.55, 4 },
+	{ "Burdur", 37.72, 30.29, 4 }, { "Aksaray", 38.37, 34.03, 4 }, { "Niğde", 37.97, 34.68, 4 },
+	{ "Nevşehir", 38.62, 34.71, 4 }, { "Kırşehir", 39.15, 34.16, 4 }, { "Yozgat", 39.82, 34.81, 4 },
+	{ "Çorum", 40.55, 34.95, 4 }, { "Tokat", 40.31, 36.55, 4 }, { "Amasya", 40.65, 35.83, 4 },
+	{ "Ordu", 40.98, 37.88, 4 }, { "Giresun", 40.91, 38.39, 4 }, { "Rize", 41.02, 40.52, 4 },
+	{ "Artvin", 41.18, 41.82, 4 }, { "Gümüşhane", 40.46, 39.48, 4 }, { "Bayburt", 40.26, 40.23, 4 },
+	{ "Tunceli", 39.11, 39.55, 4 }, { "Muş", 38.74, 41.49, 4 }, { "Bitlis", 38.40, 42.11, 4 },
+	{ "Siirt", 37.93, 41.94, 4 }, { "Batman", 37.89, 41.13, 4 }, { "Mardin", 37.31, 40.74, 4 },
+	{ "Şırnak", 37.52, 42.46, 4 }, { "Hakkari", 37.58, 43.74, 4 }, { "Ağrı", 39.72, 43.05, 4 },
+	{ "Iğdır", 39.92, 44.05, 4 }, { "Ardahan", 41.11, 42.70, 4 }, { "Adıyaman", 37.76, 38.28, 4 },
+	{ "Osmaniye", 37.07, 36.25, 4 }, { "Kilis", 36.72, 37.12, 4 }, { "Karaman", 37.18, 33.22, 4 },
+	{ "Bolu", 40.73, 31.61, 4 }, { "Düzce", 40.84, 31.16, 4 }, { "Bartın", 41.63, 32.34, 4 },
+	{ "Karabük", 41.20, 32.62, 4 }, { "Çankırı", 40.60, 33.61, 4 }, { "Kırıkkale", 39.85, 33.51, 4 },
+	{ "Bilecik", 40.14, 29.98, 4 }, { "Yalova", 40.65, 29.27, 4 }, { "Tekirdağ", 40.98, 27.51, 4 },
+	{ "Kırklareli", 41.73, 27.22, 4 },
+};
+const int dq_n_cities = (int) (sizeof dq_cities / sizeof dq_cities[0]);

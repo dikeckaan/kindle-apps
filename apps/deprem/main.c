@@ -1,6 +1,7 @@
 /* Son Depremler: recent earthquakes in and around Türkiye from Kandilli (KRDAE), EMSC when Kandilli is down.
  * A map (circle size = magnitude, filled = last 24 h) and a list; tap a quake for its details. The last good
- * list is cached for offline use. Full refresh only when a screen is entered; in-screen changes are partial. */
+ * list is cached for offline use. Full refresh only when a screen is entered; in-screen changes are partial.
+ * The map zooms (+/−, or a long press zooms in around that point) to 2× and 4×, swipes pan it; only the map is redrawn. */
 #include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -35,10 +36,12 @@ static int shown[DQ_MAX], n_shown; /* filtered, newest first */
 static int top[TOP_ROWS], n_top;   /* largest of the filtered */
 static int min_mag_i, period_i, view, page;
 static WxCity city;
+static DqView mview; /* zoom and centre of the main map */
 
 static const double min_mags[3] = { 0, 3, 4 };
-enum { BTN_ALL = 1, BTN_M3, BTN_M4, BTN_24H, BTN_7D, BTN_REFRESH, BTN_PREV, BTN_NEXT };
-static KuiButton fbtn[5], bar_btn, pnav[2];
+enum { BTN_ALL = 1, BTN_M3, BTN_M4, BTN_24H, BTN_7D, BTN_REFRESH, BTN_PREV, BTN_NEXT, BTN_ZIN, BTN_ZOUT, BTN_ZRESET };
+static KuiButton fbtn[5], bar_btn, pnav[2], zbtn[3];
+static int n_zbtn; /* zbtn[] drawn on the main map: +, −, and Türkiye when zoomed */
 
 /* ---- data ---- */
 
@@ -206,9 +209,13 @@ static void line(int x0, int y0, int x1, int y1, unsigned char g)
 
 /* ---- map ---- */
 
-static void map_proj(KuiRect area, DqProj *p)
+/* the map fitted to area, magnified by v (NULL: the whole map) */
+static void map_proj(KuiRect area, const DqView *v, DqProj *p)
 {
-	dq_proj_fit(p, area.x, area.y, area.w, area.h, DQ_MAP_LON0, DQ_MAP_LON1, DQ_MAP_LAT0, DQ_MAP_LAT1);
+	DqProj full;
+	dq_proj_fit(&full, area.x, area.y, area.w, area.h, DQ_MAP_LON0, DQ_MAP_LON1, DQ_MAP_LAT0, DQ_MAP_LAT1);
+	if (v) dq_proj_view(p, &full, v);
+	else *p = full;
 }
 
 static void draw_land(const DqProj *p)
@@ -258,32 +265,105 @@ static void draw_quake(const DqProj *p, const Quake *q, int recent)
 	}
 }
 
-static void draw_city(const DqProj *p, int label)
+/* the city's marker and name box; 0 when it is off the map */
+static int city_rects(const DqProj *p, KuiRect *mark, KuiRect *b)
 {
 	int x, y;
 	dq_project(p, city.lat, city.lon, &x, &y);
-	if (!kui_rect_contains(clip, x, y)) return;
-	kui_fill((KuiRect){ x - 12, y - 12, 24, 24 }, 255);
-	kui_frame((KuiRect){ x - 12, y - 12, 24, 24 }, 4, 0);
-	kui_fill((KuiRect){ x - 4, y - 4, 8, 8 }, 0);
-	if (!label) return;
+	if (!kui_rect_contains(clip, x, y)) return 0;
+	*mark = (KuiRect){ x - 12, y - 12, 24, 24 };
 	int tw = kui_text_width(city.name, KUI_FONT_BOLD, 26) + 16;
-	KuiRect b = { x + 18, y - 20, tw, 40 };
-	if (b.x + b.w > clip.x + clip.w) b.x = x - 18 - tw;
+	*b = (KuiRect){ x + 18, y - 20, tw, 40 };
+	if (b->x + b->w > clip.x + clip.w) b->x = x - 18 - tw;
+	if (b->y < clip.y + 2) b->y = clip.y + 2;
+	if (b->y + b->h > clip.y + clip.h - 2) b->y = clip.y + clip.h - 2 - b->h;
+	return 1;
+}
+
+static void draw_city(const DqProj *p, int label)
+{
+	KuiRect m, b;
+	if (!city_rects(p, &m, &b)) return;
+	kui_fill(m, 255);
+	kui_frame(m, 4, 0);
+	kui_fill((KuiRect){ m.x + 8, m.y + 8, 8, 8 }, 0);
+	if (!label) return;
 	kui_fill(b, 255);
 	kui_frame(b, 2, 0);
 	kui_text(b, city.name, KUI_FONT_BOLD, 26, KUI_ALIGN_CENTER, 0);
 }
 
-/* the map with the quakes idx[0..n) (only `one` when >= 0) */
-static void draw_map(KuiRect area, const int *idx, int n, int one)
+static int overlaps(KuiRect a, KuiRect b) { return a.x < b.x + b.w && b.x < a.x + a.w && a.y < b.y + b.h && b.y < a.y + a.h; }
+
+/* province names for the zoom (more of them when magnified), each where it fits: inside the map, clear of the
+ * zoom buttons, the city box and the names already placed (dq_cities is ordered by importance) */
+static void draw_places(const DqProj *p, int zoom)
+{
+	static KuiRect taken[100];
+	int nt = 0;
+	KuiRect m, b;
+	for (int i = 0; i < n_zbtn; i++) taken[nt++] = zbtn[i].r;
+	if (n_zbtn) taken[nt++] = kui_rect_union(zbtn[0].r, zbtn[1].r); /* the zoom level between + and − */
+	if (city_rects(p, &m, &b)) taken[nt++] = m, taken[nt++] = b;
+	KuiRect inner = { clip.x + 4, clip.y + 4, clip.w - 8, clip.h - 8 };
+	for (int i = 0; i < dq_n_cities && nt < 100; i++) {
+		const DqCity *c = &dq_cities[i];
+		if (c->zoom > zoom || !strcmp(c->name, city.name)) continue;
+		int x, y, tw = kui_text_width(c->name, KUI_FONT_REG, 24);
+		dq_project(p, c->lat, c->lon, &x, &y);
+		KuiRect dot = { x - 4, y - 4, 8, 8 }, t = { x + 10, y - 16, tw + 4, 32 };
+		if (t.x + t.w > inner.x + inner.w) t.x = x - 10 - t.w;
+		KuiRect both = kui_rect_union(dot, t);
+		if (both.x < inner.x || both.y < inner.y || both.x + both.w > inner.x + inner.w || both.y + both.h > inner.y + inner.h) continue;
+		int free = 1;
+		for (int k = 0; k < nt && free; k++)
+			if (overlaps((KuiRect){ both.x - 6, both.y - 2, both.w + 12, both.h + 4 }, taken[k])) free = 0;
+		if (!free) continue;
+		taken[nt++] = both;
+		kui_fill(dot, 0);
+		kui_text(t, c->name, KUI_FONT_REG, 24, KUI_ALIGN_LEFT, 0);
+	}
+}
+
+/* +, the zoom level, − down the right edge of the map; Türkiye (back to 1×) beside + when zoomed */
+static void layout_zoom(KuiRect area, int zoom)
+{
+	int s = 84, x = area.x + area.w - s - 12, y = area.y + 12;
+	zbtn[0] = (KuiButton){ { x, y, s, s }, "+", BTN_ZIN };
+	zbtn[1] = (KuiButton){ { x, y + s + 50, s, s }, "−", BTN_ZOUT };
+	n_zbtn = 2;
+	if (zoom > 1) {
+		const char *l = T("Türkiye");
+		int w = kui_text_width(l, KUI_FONT_BOLD, 34) + 40;
+		zbtn[n_zbtn++] = (KuiButton){ { x - 12 - w, y, w, s }, l, BTN_ZRESET };
+	}
+}
+
+static void draw_zoom(int zoom)
+{
+	char s[8];
+	KuiRect lv = { zbtn[0].r.x, zbtn[0].r.y + zbtn[0].r.h, zbtn[0].r.w, zbtn[1].r.y - zbtn[0].r.y - zbtn[0].r.h };
+	for (int i = 0; i < n_zbtn; i++) kui_button(&zbtn[i], 0);
+	snprintf(s, sizeof s, "%d×", zoom);
+	kui_fill(lv, 255);
+	kui_fill((KuiRect){ lv.x, lv.y, 4, lv.h }, 0);
+	kui_fill((KuiRect){ lv.x + lv.w - 4, lv.y, 4, lv.h }, 0);
+	kui_text(lv, s, KUI_FONT_BOLD, 30, KUI_ALIGN_CENTER, 0);
+}
+
+/* the map with the quakes idx[0..n) (only `one` when >= 0); v: the main map's zoom (with names and zoom buttons),
+ * NULL for the detail screen's whole map */
+static void draw_map(KuiRect area, const int *idx, int n, int one, const DqView *v)
 {
 	DqProj p;
-	map_proj(area, &p);
+	map_proj(area, v, &p);
 	area = (KuiRect){ p.x, p.y, p.w, p.h };
 	clip = area;
+	n_zbtn = 0;
+	if (v) layout_zoom(area, v->zoom);
 	kui_fill(area, 255);
 	draw_land(&p);
+	if (v) draw_places(&p, v->zoom);
 	long day_ago = (long) time(NULL) - 86400;
 	if (one >= 0) {
 		draw_quake(&p, &all[one], 1);
@@ -304,6 +384,7 @@ static void draw_map(KuiRect area, const int *idx, int n, int one)
 			}
 	}
 	draw_city(&p, 1);
+	if (v) draw_zoom(v->zoom);
 	kui_frame(area, 2, 0);
 	kui_mark_dirty(area);
 }
@@ -318,12 +399,14 @@ static KuiRect map_rect(void)
 static int map_hit(int tx, int ty)
 {
 	DqProj p;
-	map_proj(map_rect(), &p);
+	map_proj(map_rect(), &mview, &p);
+	KuiRect area = { p.x, p.y, p.w, p.h };
 	int best = -1;
 	double bd = 1e9;
 	for (int i = 0; i < n_shown; i++) {
 		int x, y;
 		dq_project(&p, all[shown[i]].lat, all[shown[i]].lon, &x, &y);
+		if (!kui_rect_contains(area, x, y)) continue; /* off the zoomed map */
 		double d = hypot(x - tx, y - ty) - quake_r(&all[shown[i]]);
 		if (d < bd) bd = d, best = shown[i];
 	}
@@ -447,7 +530,7 @@ static KuiRect top_rect(int i)
 
 static void draw_map_view(void)
 {
-	draw_map(map_rect(), shown, n_shown, -1);
+	draw_map(map_rect(), shown, n_shown, -1, &mview);
 	draw_legend();
 	KuiRect l = legend_rect();
 	KuiRect hdr = { 20, l.y + l.h + 8, kui_width() - 40, 62 };
@@ -584,7 +667,7 @@ static void draw_detail(int k)
 	detail_row(y + 288, T("Kaynak"), s);
 	y += 380;
 	KuiRect m = { 20, y, w - 40, h - BAR_H - 20 - y };
-	draw_map(m, NULL, 0, k);
+	draw_map(m, NULL, 0, k, NULL);
 	draw_status(0); /* no Yenile here: the bar only says when the data was fetched */
 	kui_flush(1);
 }
@@ -622,6 +705,23 @@ static void save_settings(void)
 	kui_cfg_set_int(settings(), "view", view);
 }
 
+/* zoom / pan: only the map rectangle changes (partial refresh) */
+static void redraw_map(void)
+{
+	draw_map(map_rect(), shown, n_shown, -1, &mview);
+	kui_flush(0);
+}
+
+/* a long press on the map: zoom in around that point (at 4× it only moves there) */
+static void zoom_at(int x, int y)
+{
+	DqProj p;
+	map_proj(map_rect(), &mview, &p);
+	dq_unproject(&p, x, y, &mview.lat, &mview.lon);
+	dq_view_zoom(&mview, 1);
+	redraw_map();
+}
+
 static void turn_page(int d)
 {
 	if (page + d < 0 || page + d >= pages()) return;
@@ -637,6 +737,7 @@ int main(void)
 	min_mag_i = kui_cfg_get_int(settings(), "min_mag", 0) % 3;
 	period_i = kui_cfg_get_int(settings(), "period", 0) % 2;
 	view = kui_cfg_get_int(settings(), "view", 0) % 2;
+	dq_view_reset(&mview);
 	load_city();
 	load_cache();
 	draw_screen();
@@ -653,6 +754,16 @@ int main(void)
 		if (e.type == KUI_EV_SWIPE && view == 1) {
 			if (e.dir == KUI_DIR_LEFT) turn_page(1);
 			else if (e.dir == KUI_DIR_RIGHT) turn_page(-1);
+			continue;
+		}
+		if (e.type == KUI_EV_SWIPE && view == 0) { /* pan: the map follows the finger, half a view at a time */
+			double fx = e.dir == KUI_DIR_LEFT ? 0.5 : e.dir == KUI_DIR_RIGHT ? -0.5 : 0;
+			double fy = e.dir == KUI_DIR_UP ? 0.5 : e.dir == KUI_DIR_DOWN ? -0.5 : 0;
+			if (dq_view_pan(&mview, fx, fy)) redraw_map();
+			continue;
+		}
+		if (e.type == KUI_EV_LONGPRESS && view == 0 && kui_rect_contains(map_rect(), e.x, e.y) && !kui_buttons_hit(zbtn, n_zbtn, e.x, e.y)) {
+			zoom_at(e.x, e.y);
 			continue;
 		}
 		if (e.type != KUI_EV_TAP) continue;
@@ -686,6 +797,13 @@ int main(void)
 		}
 		int k = -1;
 		if (view == 0) {
+			int z = kui_buttons_hit(zbtn, n_zbtn, e.x, e.y);
+			if (z) {
+				int changed = z == BTN_ZRESET || dq_view_zoom(&mview, z == BTN_ZIN ? 1 : -1);
+				if (z == BTN_ZRESET) dq_view_reset(&mview);
+				if (changed) redraw_map();
+				continue;
+			}
 			if (kui_rect_contains(map_rect(), e.x, e.y)) k = map_hit(e.x, e.y);
 			for (int i = 0; i < n_top; i++)
 				if (kui_rect_contains(top_rect(i), e.x, e.y)) k = top[i];
