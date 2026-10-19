@@ -226,40 +226,6 @@ static void settings(void)
 	}
 }
 
-#define RAM_DIR "/tmp/kui-bin"
-
-/* RAM_DIR: ours alone (root-owned, 0700, not a link), so nobody else can swap a file in it between copy and exec */
-static int ram_dir_ok(void)
-{
-	struct stat st;
-	mkdir(RAM_DIR, 0700);
-	return lstat(RAM_DIR, &st) == 0 && S_ISDIR(st.st_mode) && st.st_uid == geteuid() && (st.st_mode & 077) == 0;
-}
-
-/* copies a binary to RAM_DIR/<name>: an update overwrites files on /mnt/us (fuse), and a running program whose binary
- * is replaced there dies with SIGBUS (seen: Satranç while the packages were reinstalled). NULL when it cannot. */
-static const char *ram_copy(const char *exe, const char *name)
-{
-	static char dst[96];
-	char tmp[104];
-	if (!ram_dir_ok()) return NULL;
-	snprintf(dst, sizeof dst, "%s/%s", RAM_DIR, name);
-	snprintf(tmp, sizeof tmp, "%s.new", dst);
-	unlink(tmp);
-	int in = open(exe, O_RDONLY), out = in < 0 ? -1 : open(tmp, O_WRONLY | O_CREAT | O_EXCL | O_NOFOLLOW, 0700);
-	char buf[65536];
-	ssize_t n = 0;
-	while (out >= 0 && (n = read(in, buf, sizeof buf)) > 0)
-		if (write(out, buf, (size_t) n) != n) n = -1;
-	if (in >= 0) close(in);
-	if (out < 0) return NULL;
-	if (close(out) != 0 || n < 0 || rename(tmp, dst) != 0) {
-		unlink(tmp);
-		return NULL;
-	}
-	return dst;
-}
-
 /* Runs an app with the screen and input handed over to it; returns its wait status. */
 static int run_app(const HubApp *a)
 {
@@ -277,7 +243,7 @@ static int run_app(const HubApp *a)
 			dup2(fd, 2);
 			close(fd);
 		}
-		const char *ram = ram_copy(a->exec, "app");
+		const char *ram = kui_ram_copy(a->exec, "app");
 		execl(ram ? ram : a->exec, a->exec, (char *) NULL); /* argv[0] stays the installed path */
 		_exit(127);
 	}
@@ -354,7 +320,7 @@ int main(void)
 					kui_quit();
 					/* run the new hub from a RAM copy (as kui-run.sh does): /mnt/us (fuse) does not keep a
 					 * replaced file alive for the process still running it */
-					const char *ram = ram_copy(self, "hub");
+					const char *ram = kui_ram_copy(self, "hub");
 					execl(ram ? ram : self, self, (char *) NULL);
 					return 1; /* kui-run.sh restores the Kindle UI */
 				}

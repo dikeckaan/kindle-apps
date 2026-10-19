@@ -4,7 +4,7 @@
   "name": "Satranç",
   "author": "Kaan Dikeç",
   "description": "Stockfish'e karşı 6 seviye veya iki kişilik satranç; Lichess bulmacaları (günün bulmacası, seri takibi)",
-  "version": [2026, 10, 20, 1],
+  "version": [2026, 10, 20, 4],
   "dependencies": [],
   "supported_platforms": ["kindlehf"]
 }

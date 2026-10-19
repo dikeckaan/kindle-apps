@@ -173,6 +173,9 @@ int  kui_input_asleep(void); /* 1 while the screensaver is up: do not draw (KUI_
  * while kui-run.sh has its UI paused. kui_flush_sleep: a flashing full refresh even though input is now asleep. */
 void kui_sleep_screen(void);
 void kui_flush_sleep(void);
+/* copies a binary to /tmp/kui-bin/<name> (root-only 0700 dir) and returns that path, NULL on failure: run programs from
+ * RAM so that reinstalling a package cannot SIGBUS them (fuse does not keep a replaced file alive) */
+const char *kui_ram_copy(const char *exe, const char *name);
 int  kui_quit_pending(void); /* 1 once SIGTERM/SIGINT arrived (kui_next_event would return KUI_EV_QUIT) */
 /* Takes the power button from powerd while on (it then arrives as KUI_EV_POWER instead of starting the screensaver);
  * released by kui_quit or when the process ends. 0 = ok, -1 if there is no power key device. */

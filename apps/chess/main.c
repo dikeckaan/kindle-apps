@@ -189,7 +189,8 @@ static void engine_shutdown(void)
 static int engine_ensure(void)
 {
 	if (engine_ok) return 1;
-	if (uci_start(&engine, engine_path) != 0) return 0;
+	const char *ram = kui_ram_copy(engine_path, "stockfish"); /* an update must not kill the engine mid-game */
+	if (uci_start(&engine, ram ? ram : engine_path) != 0) return 0;
 	if (uci_configure(&engine, level_get(game.level)) != 0) {
 		uci_close(&engine);
 		return 0;
