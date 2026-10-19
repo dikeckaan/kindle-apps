@@ -13,3 +13,9 @@ Recipes opened online in the app are fetched from the same Wikibooks APIs (same 
 entered their own TheMealDB API key, from TheMealDB (https://www.themealdb.com; data and imagery credited to
 TheMealDB; its free test key "1" is for development and educational use only, public apps need a supporter key).
 They are kept on the device in data/tarif/cache.txt for offline use.
+
+The online recipe library (https://kaandikec.com/kindle-apps/tarif/v1/, built by tools/tarif/build-shards.py) holds the
+recipes of Turkish Wikibooks (Yemek:), the English Wikibooks Cookbook (Category:Recipes) and the German Wikibooks
+Kochbuch (https://de.wikibooks.org/wiki/Kochbuch), adapted the same way and under the same licence (CC BY-SA 4.0,
+text by the Wikibooks contributors). Each shard file lists the page, revision and authors of its recipes; the app
+shows every recipe's address, revision and licence. Downloaded shards are kept in data/tarif/lib/ (at most 5 MB).

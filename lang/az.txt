@@ -1337,3 +1337,15 @@ okunuşu: %s	oxunuşu: %s
 İsimler %d	İsimlər %d
 ↻ yanlış bilinenler bir sonraki derste yine sorulur	↻ səhv bilinənlər növbəti dərsdə yenə soruşulur
 ★ Biliyorum olarak işaretli	★ Bilirəm kimi işarələnib
+Almanca tarif	Alman resepti
+Tarif kütüphanesi	Resept kitabxanası
+Tarif dizini indiriliyor…	Resept siyahısı endirilir…
+Tarif kütüphaneden indirilemedi.\nWi-Fi bağlantısını kontrol edin.	Resepti kitabxanadan endirmək mümkün olmadı.\nWi-Fi bağlantısını yoxlayın.
+%d tarif · %d Türkçe, %d İngilizce, %d Almanca	%d resept · %d türkcə, %d ingiliscə, %d almanca
+Kütüphaneyi güncelle	Kitabxananı yenilə
+Çevrimiçi kütüphane: %d tarif (%d Türkçe, %d İngilizce, %d Almanca) · dizin: %s	Onlayn kitabxana: %d resept (%d türkcə, %d ingiliscə, %d almanca) · siyahı: %s
+Çevrimiçi kütüphane: henüz indirilmedi	Onlayn kitabxana: hələ endirilməyib
+Anahtar gerekmez. Vikikitap, Wikibooks Cookbook ve Almanca Wikibooks Kochbuch tarifleri kaandikec.com/kindle-apps üzerinden sunulur (CC BY-SA 4.0, Wikibooks katkıcıları). Dizin bir kez indirilir ve haftada bir yenilenir; açılan tarifler en çok 5 MB çevrimdışı saklanır.	Açar lazım deyil. Vikikitap, Wikibooks Cookbook və alman Wikibooks Kochbuch reseptləri kaandikec.com/kindle-apps üzərindən təqdim olunur (CC BY-SA 4.0, Wikibooks müəllifləri). Siyahı bir dəfə endirilir və həftədə bir yenilənir; açılan reseptlər oflayn saxlanılır (ən çox 5 MB).
+Dizin indirilemedi.\nWi-Fi bağlantısını kontrol edin.	Siyahını endirmək mümkün olmadı.\nWi-Fi bağlantısını yoxlayın.
++ %d tarif çevrimiçi kütüphanede (Türkçe, İngilizce, Almanca)	+ %d resept onlayn kitabxanada (türkcə, ingiliscə, almanca)
+Çevrimiçi kütüphane: Wi-Fi açıkken ilk aramada indirilir	Onlayn kitabxana: Wi-Fi açıq olanda ilk axtarışda endirilir

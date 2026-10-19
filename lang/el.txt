@@ -1337,3 +1337,15 @@ okunuşu: %s	προφορά: %s
 İsimler %d	Ουσιαστικά %d
 ↻ yanlış bilinenler bir sonraki derste yine sorulur	↻ οι λάθος λέξεις επιστρέφουν στο επόμενο μάθημα
 ★ Biliyorum olarak işaretli	★ Σημειωμένη ως γνωστή
+Almanca tarif	Γερμανική συνταγή
+Tarif kütüphanesi	Βιβλιοθήκη συνταγών
+Tarif dizini indiriliyor…	Λήψη ευρετηρίου συνταγών…
+Tarif kütüphaneden indirilemedi.\nWi-Fi bağlantısını kontrol edin.	Δεν ήταν δυνατή η λήψη της συνταγής από τη βιβλιοθήκη.\nΕλέγξτε τη σύνδεση Wi-Fi.
+%d tarif · %d Türkçe, %d İngilizce, %d Almanca	%d συνταγές · %d στα τουρκικά, %d στα αγγλικά, %d στα γερμανικά
+Kütüphaneyi güncelle	Ενημέρωση βιβλιοθήκης
+Çevrimiçi kütüphane: %d tarif (%d Türkçe, %d İngilizce, %d Almanca) · dizin: %s	Διαδικτυακή βιβλιοθήκη: %d συνταγές (%d στα τουρκικά, %d στα αγγλικά, %d στα γερμανικά) · ευρετήριο: %s
+Çevrimiçi kütüphane: henüz indirilmedi	Διαδικτυακή βιβλιοθήκη: δεν έχει γίνει λήψη ακόμη
+Anahtar gerekmez. Vikikitap, Wikibooks Cookbook ve Almanca Wikibooks Kochbuch tarifleri kaandikec.com/kindle-apps üzerinden sunulur (CC BY-SA 4.0, Wikibooks katkıcıları). Dizin bir kez indirilir ve haftada bir yenilenir; açılan tarifler en çok 5 MB çevrimdışı saklanır.	Δεν χρειάζεται κλειδί. Συνταγές από το Vikikitap, το Wikibooks Cookbook και το γερμανικό Wikibooks Kochbuch παρέχονται μέσω του kaandikec.com/kindle-apps (CC BY-SA 4.0, συντελεστές του Wikibooks). Το ευρετήριο κατεβαίνει μία φορά και ανανεώνεται κάθε εβδομάδα· οι συνταγές που ανοίγετε μένουν διαθέσιμες εκτός σύνδεσης (έως 5 MB).
+Dizin indirilemedi.\nWi-Fi bağlantısını kontrol edin.	Δεν ήταν δυνατή η λήψη του ευρετηρίου.\nΕλέγξτε τη σύνδεση Wi-Fi.
++ %d tarif çevrimiçi kütüphanede (Türkçe, İngilizce, Almanca)	+ %d συνταγές στη διαδικτυακή βιβλιοθήκη (τουρκικά, αγγλικά, γερμανικά)
+Çevrimiçi kütüphane: Wi-Fi açıkken ilk aramada indirilir	Διαδικτυακή βιβλιοθήκη: γίνεται λήψη στην πρώτη αναζήτηση με ενεργό Wi-Fi

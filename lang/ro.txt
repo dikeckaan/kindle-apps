@@ -1337,3 +1337,15 @@ okunuşu: %s	pronunție: %s
 İsimler %d	Substantive %d
 ↻ yanlış bilinenler bir sonraki derste yine sorulur	↻ cuvintele greșite revin în lecția următoare
 ★ Biliyorum olarak işaretli	★ Marcat ca știut
+Almanca tarif	Rețetă germană
+Tarif kütüphanesi	Biblioteca de rețete
+Tarif dizini indiriliyor…	Se descarcă indexul rețetelor…
+Tarif kütüphaneden indirilemedi.\nWi-Fi bağlantısını kontrol edin.	Rețeta nu a putut fi descărcată din bibliotecă.\nVerificați conexiunea Wi-Fi.
+%d tarif · %d Türkçe, %d İngilizce, %d Almanca	%d rețete · %d în turcă, %d în engleză, %d în germană
+Kütüphaneyi güncelle	Actualizează biblioteca
+Çevrimiçi kütüphane: %d tarif (%d Türkçe, %d İngilizce, %d Almanca) · dizin: %s	Bibliotecă online: %d rețete (%d în turcă, %d în engleză, %d în germană) · index: %s
+Çevrimiçi kütüphane: henüz indirilmedi	Bibliotecă online: încă nedescărcată
+Anahtar gerekmez. Vikikitap, Wikibooks Cookbook ve Almanca Wikibooks Kochbuch tarifleri kaandikec.com/kindle-apps üzerinden sunulur (CC BY-SA 4.0, Wikibooks katkıcıları). Dizin bir kez indirilir ve haftada bir yenilenir; açılan tarifler en çok 5 MB çevrimdışı saklanır.	Nu este nevoie de cheie. Rețetele din Vikikitap, Wikibooks Cookbook și Wikibooks Kochbuch (germană) sunt oferite prin kaandikec.com/kindle-apps (CC BY-SA 4.0, contribuitorii Wikibooks). Indexul se descarcă o dată și se reînnoiește săptămânal; rețetele deschise rămân disponibile offline (până la 5 MB).
+Dizin indirilemedi.\nWi-Fi bağlantısını kontrol edin.	Indexul nu a putut fi descărcat.\nVerificați conexiunea Wi-Fi.
++ %d tarif çevrimiçi kütüphanede (Türkçe, İngilizce, Almanca)	+ %d rețete în biblioteca online (turcă, engleză, germană)
+Çevrimiçi kütüphane: Wi-Fi açıkken ilk aramada indirilir	Bibliotecă online: se descarcă la prima căutare cu Wi-Fi pornit

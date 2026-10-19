@@ -1337,3 +1337,15 @@ okunuşu: %s	uttale: %s
 İsimler %d	Substantiver %d
 ↻ yanlış bilinenler bir sonraki derste yine sorulur	↻ ord du bommet på kommer igjen i neste leksjon
 ★ Biliyorum olarak işaretli	★ Merket som kjent
+Almanca tarif	Tysk oppskrift
+Tarif kütüphanesi	Oppskriftsbibliotek
+Tarif dizini indiriliyor…	Laster ned oppskriftsregisteret…
+Tarif kütüphaneden indirilemedi.\nWi-Fi bağlantısını kontrol edin.	Kunne ikke laste ned oppskriften fra biblioteket.\nSjekk Wi-Fi-tilkoblingen.
+%d tarif · %d Türkçe, %d İngilizce, %d Almanca	%d oppskrifter · %d på tyrkisk, %d på engelsk, %d på tysk
+Kütüphaneyi güncelle	Oppdater biblioteket
+Çevrimiçi kütüphane: %d tarif (%d Türkçe, %d İngilizce, %d Almanca) · dizin: %s	Nettbibliotek: %d oppskrifter (%d på tyrkisk, %d på engelsk, %d på tysk) · register: %s
+Çevrimiçi kütüphane: henüz indirilmedi	Nettbibliotek: ikke lastet ned ennå
+Anahtar gerekmez. Vikikitap, Wikibooks Cookbook ve Almanca Wikibooks Kochbuch tarifleri kaandikec.com/kindle-apps üzerinden sunulur (CC BY-SA 4.0, Wikibooks katkıcıları). Dizin bir kez indirilir ve haftada bir yenilenir; açılan tarifler en çok 5 MB çevrimdışı saklanır.	Ingen nøkkel trengs. Oppskrifter fra Vikikitap, Wikibooks Cookbook og tyske Wikibooks Kochbuch leveres via kaandikec.com/kindle-apps (CC BY-SA 4.0, Wikibooks-bidragsytere). Registeret lastes ned én gang og fornyes hver uke; åpnede oppskrifter lagres frakoblet (opptil 5 MB).
+Dizin indirilemedi.\nWi-Fi bağlantısını kontrol edin.	Kunne ikke laste ned registeret.\nSjekk Wi-Fi-tilkoblingen.
++ %d tarif çevrimiçi kütüphanede (Türkçe, İngilizce, Almanca)	+ %d oppskrifter i nettbiblioteket (tyrkisk, engelsk, tysk)
+Çevrimiçi kütüphane: Wi-Fi açıkken ilk aramada indirilir	Nettbibliotek: lastes ned ved første søk med Wi-Fi på

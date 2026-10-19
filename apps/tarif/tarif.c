@@ -1392,3 +1392,303 @@ void tarif_wiki_url(const char *host, const char *title, char *out, int cap)
 	}
 	out[o < cap ? o : cap - 1] = '\0';
 }
+
+/* ---- online library ---- */
+
+static const TarifLib *name_lib;
+
+static int lang_rank(const char *l) { return !strcmp(l, "tr") ? 0 : !strcmp(l, "en") ? 1 : 2; }
+
+static int cmp_name(const void *a, const void *b)
+{
+	const TarifLibEntry *x = &name_lib->e[*(const int *) a], *y = &name_lib->e[*(const int *) b];
+	int c = strcmp(x->lang, y->lang);
+	return c ? c : strcmp(x->title, y->title);
+}
+
+int tarif_lib_parse(char *buf, TarifLib *lib)
+{
+	memset(lib, 0, sizeof *lib);
+	static const char MAGIC[] = "#tarifler-index\t1\t";
+	if (strncmp(buf, MAGIC, sizeof MAGIC - 1)) return -1;
+	const char *b = buf + sizeof MAGIC - 1;
+	size_t bl = strcspn(b, "\t\r\n");
+	if (bl >= sizeof lib->build) bl = sizeof lib->build - 1;
+	memcpy(lib->build, b, bl);
+	lib->build[bl] = '\0';
+	int lines = 0;
+	for (const char *p = buf; *p; p++) lines += *p == '\n';
+	size_t total = strlen(buf);
+	lib->e = calloc((size_t) lines + 1, sizeof *lib->e);
+	lib->by_name = calloc((size_t) lines + 1, sizeof *lib->by_name);
+	lib->fold = malloc(total + 8 * (size_t) lines + 8);
+	if (!lib->e || !lib->by_name || !lib->fold) {
+		free(lib->e);
+		free(lib->by_name);
+		free(lib->fold);
+		memset(lib, 0, sizeof *lib);
+		return -1;
+	}
+	size_t fo = 0;
+	char *p = strchr(buf, '\n');
+	for (p = p ? p + 1 : buf + total; *p;) {
+		char *e = strchr(p, '\n');
+		char *next = e ? e + 1 : p + strlen(p);
+		if (e) *e = '\0';
+		if (e && e > p && e[-1] == '\r') e[-1] = '\0';
+		char *f[8];
+		if (*p != '#' && split_tabs(p, f, 8) == 7 && *f[1] && *f[2]) { /* malformed lines are skipped */
+			TarifLibEntry *x = &lib->e[lib->n];
+			*x = (TarifLibEntry){ f[1], f[2], f[3], f[4], f[5], lib->fold + fo, atoi(f[0]), atoi(f[6]), 0, 0 };
+			for (const char *k = f[5]; *k; k++) x->n_keys += (k == f[5] || k[-1] == ' ') && *k != ' ';
+			int need = (int) (strlen(f[1]) + strlen(f[3])) + 8;
+			char *o = lib->fold + fo;
+			tarif_fold(f[1], o, need);
+			size_t ol = strlen(o);
+			o[ol++] = ' ';
+			tarif_fold(f[3], o + ol, need - (int) ol);
+			fo += strlen(o) + 1;
+			lib->by_name[lib->n] = lib->n;
+			lib->n++;
+		}
+		p = next;
+	}
+	name_lib = lib;
+	qsort(lib->by_name, (size_t) lib->n, sizeof *lib->by_name, cmp_name);
+	lib->buf = buf;
+	return lib->n;
+}
+
+int tarif_lib_load(const char *path, TarifLib *lib)
+{
+	memset(lib, 0, sizeof *lib);
+	FILE *f = fopen(path, "rb");
+	if (!f) return -1;
+	fseek(f, 0, SEEK_END);
+	long n = ftell(f);
+	fseek(f, 0, SEEK_SET);
+	char *buf = n > 0 ? malloc((size_t) n + 1) : NULL;
+	if (!buf || fread(buf, 1, (size_t) n, f) != (size_t) n) {
+		free(buf);
+		fclose(f);
+		return -1;
+	}
+	fclose(f);
+	buf[n] = '\0';
+	int r = tarif_lib_parse(buf, lib);
+	if (r < 0) free(buf);
+	return r;
+}
+
+void tarif_lib_free(TarifLib *lib)
+{
+	free(lib->buf);
+	free(lib->e);
+	free(lib->by_name);
+	free(lib->fold);
+	memset(lib, 0, sizeof *lib);
+}
+
+int tarif_lib_find_url(const TarifLib *lib, const char *url)
+{
+	static const struct { const char *pre, *lang, *ns; } S[] = {
+		{ "https://tr.wikibooks.org/wiki/", "tr", "Yemek:" },
+		{ "https://en.wikibooks.org/wiki/", "en", "Cookbook:" },
+		{ "https://de.wikibooks.org/wiki/", "de", "Kochbuch/" },
+	};
+	if (!lib->n) return -1;
+	for (size_t s = 0; s < sizeof S / sizeof S[0]; s++) {
+		size_t pl = strlen(S[s].pre);
+		if (strncmp(url, S[s].pre, pl)) continue;
+		char t[400];
+		int o = 0;
+		for (const char *p = url + pl; *p && o < (int) sizeof t - 1; p++) {
+			if (*p == '%' && isxdigit((unsigned char) p[1]) && isxdigit((unsigned char) p[2])) {
+				char h[3] = { p[1], p[2], 0 };
+				t[o++] = (char) strtol(h, NULL, 16);
+				p += 2;
+			} else t[o++] = *p == '_' ? ' ' : *p;
+		}
+		t[o] = '\0';
+		size_t nl = strlen(S[s].ns);
+		if (strncmp(t, S[s].ns, nl)) return -1;
+		const char *title = t + nl;
+		while (*title == ' ') title++;
+		int lo = 0, hi = lib->n - 1;
+		while (lo <= hi) {
+			int mid = (lo + hi) / 2;
+			const TarifLibEntry *x = &lib->e[lib->by_name[mid]];
+			int c = strcmp(x->lang, S[s].lang);
+			if (!c) c = strcmp(x->title, title);
+			if (!c) return lib->by_name[mid];
+			if (c < 0) lo = mid + 1;
+			else hi = mid - 1;
+		}
+		return -1;
+	}
+	return -1;
+}
+
+void tarif_lib_url(const TarifLibEntry *e, char *out, int cap)
+{
+	char t[400];
+	const char *host = !strcmp(e->lang, "tr") ? "tr.wikibooks.org" : !strcmp(e->lang, "de") ? "de.wikibooks.org" : "en.wikibooks.org";
+	const char *ns = !strcmp(e->lang, "tr") ? "Yemek:" : !strcmp(e->lang, "de") ? "Kochbuch/ " : "Cookbook:";
+	snprintf(t, sizeof t, "%s%s", ns, e->title);
+	tarif_wiki_url(host, t, out, cap);
+}
+
+void tarif_lib_mark_dups(TarifLib *lib, const TarifDb *db)
+{
+	for (int i = 0; i < db->n; i++) {
+		int k = tarif_lib_find_url(lib, db->r[i].url);
+		if (k >= 0) lib->e[k].dup = 1;
+	}
+}
+
+void tarif_lib_clear_dups(TarifLib *lib)
+{
+	for (int i = 0; i < lib->n; i++) lib->e[i].dup = 0;
+}
+
+static int words_match(const char *h, char **w, int nw)
+{
+	for (int k = 0; k < nw; k++)
+		if (!has_word_prefix(h, w[k])) return 0;
+	return nw > 0;
+}
+
+static const int *lib_rank;
+static const TarifLib *rank_lib;
+
+static int cmp_lib(const void *a, const void *b)
+{
+	int i = *(const int *) a, j = *(const int *) b;
+	if (lib_rank && lib_rank[i] != lib_rank[j]) return lib_rank[i] - lib_rank[j];
+	int lx = lang_rank(rank_lib->e[i].lang), ly = lang_rank(rank_lib->e[j].lang);
+	return lx != ly ? lx - ly : i - j; /* the index is sorted by title within a language */
+}
+
+int tarif_lib_search(const TarifLib *lib, const char *query, int *out, int max)
+{
+	char q[256], en[256], *w[MAX_WORDS], *we[MAX_WORDS];
+	tarif_fold(query, q, sizeof q);
+	int tr = tarif_translate_query(query, en, sizeof en);
+	int nw = split_words(q, w, MAX_WORDS), ne = tr ? split_words(en, we, MAX_WORDS) : 0, n = 0;
+	if (!nw || !lib->n) return 0;
+	int *rank = calloc((size_t) lib->n, sizeof *rank);
+	if (!rank) return 0;
+	for (int i = 0; i < lib->n && n < max; i++) {
+		const TarifLibEntry *x = &lib->e[i];
+		if (x->dup) continue;
+		const char *first;
+		if (words_match(x->fold, w, nw)) first = w[0];
+		else if (ne && words_match(x->fold, we, ne)) first = we[0];
+		else continue;
+		rank[i] = strncmp(x->fold, first, strlen(first)) != 0;
+		out[n++] = i;
+	}
+	lib_rank = rank;
+	rank_lib = lib;
+	qsort(out, (size_t) n, sizeof *out, cmp_lib);
+	lib_rank = NULL;
+	free(rank);
+	return n;
+}
+
+static const int *lib_m;
+static int cmp_lib_ing(const void *a, const void *b)
+{
+	int i = *(const int *) a, j = *(const int *) b;
+	if (lib_m[i] != lib_m[j]) return lib_m[j] - lib_m[i];
+	int lx = lang_rank(rank_lib->e[i].lang), ly = lang_rank(rank_lib->e[j].lang);
+	if (lx != ly) return lx - ly;
+	int ox = rank_lib->e[i].n_keys - lib_m[i], oy = rank_lib->e[j].n_keys - lib_m[j];
+	return ox != oy ? ox - oy : i - j;
+}
+
+/* the space-separated keyword list has a keyword for query word w */
+static int key_match(const char *keys, const char *w)
+{
+	size_t wl = strlen(w);
+	for (const char *k = keys; *k;) {
+		size_t kl = strcspn(k, " ");
+		if ((kl >= wl && !strncmp(k, w, wl)) || (kl >= 3 && kl < wl && !strncmp(k, w, kl))) return 1;
+		k += kl;
+		while (*k == ' ') k++;
+	}
+	return 0;
+}
+
+int tarif_lib_by_ingredients(const TarifLib *lib, const char *query, int *out, int *matched, int max, int *n_words)
+{
+	char q[256], *w[MAX_WORDS];
+	tarif_fold(query, q, sizeof q);
+	int nw = 0;
+	for (char *p = strtok(q, " "); p && nw < MAX_WORDS; p = strtok(NULL, " "))
+		if (strlen(p) >= 2 && strcmp(p, "ve") && strcmp(p, "and") && strcmp(p, "ile")) w[nw++] = p;
+	if (n_words) *n_words = nw;
+	if (!nw || !lib->n) return 0;
+	int *m = calloc((size_t) lib->n, sizeof *m), n = 0;
+	if (!m) return 0;
+	for (int i = 0; i < lib->n; i++) {
+		if (lib->e[i].dup) continue;
+		for (int k = 0; k < nw; k++) m[i] += key_match(lib->e[i].keys, w[k]);
+		if (m[i] && n < max) out[n++] = i;
+	}
+	lib_m = m;
+	rank_lib = lib;
+	qsort(out, (size_t) n, sizeof *out, cmp_lib_ing);
+	if (matched)
+		for (int i = 0; i < n; i++) matched[i] = m[out[i]];
+	free(m);
+	return n;
+}
+
+int tarif_lib_filter(const TarifLib *lib, const char *cuisine, char tag, int *out, int max)
+{
+	int n = 0, neg = cuisine && cuisine[0] == '!';
+	const char *c = neg ? cuisine + 1 : cuisine;
+	for (int i = 0; i < lib->n && n < max; i++) {
+		const TarifLibEntry *x = &lib->e[i];
+		if (x->dup) continue;
+		if (c && (strcmp(x->cuisine, c) == 0) == neg) continue;
+		if (tag && !strchr(x->tags, tag)) continue;
+		out[n++] = i;
+	}
+	return n;
+}
+
+int tarif_lib_stale(long fetched, long now)
+{
+	return fetched <= 0 || now - fetched >= TARIF_LIB_STALE_S || fetched - now > 24 * 3600;
+}
+
+int tarif_find_title(const TarifDb *db, const char *lang, const char *title)
+{
+	for (int i = 0; i < db->n; i++)
+		if (!strcmp(db->r[i].title, title) && !strcmp(db->r[i].lang, lang)) return i;
+	return -1;
+}
+
+long tarif_source_rev(const TarifDb *db, const char *url)
+{
+	if (!db->buf || !db->n) return 0;
+	size_t ul = strlen(url);
+	/* the comment lines before the first record, each NUL-terminated by tarif_parse */
+	for (const char *p = db->buf; p < db->r[0].lang && *p != '@';) {
+		if (p[0] == '#' && p[1] == ' ' && !strncmp(p + 2, url, ul) && p[2 + ul] == '\t' && !strncmp(p + 3 + ul, "rev ", 4))
+			return atol(p + 7 + ul);
+		p += strlen(p) + 1;
+	}
+	return 0;
+}
+
+int tarif_cache_evict(const long *sizes, int n, long cap)
+{
+	long total = 0;
+	for (int i = 0; i < n; i++) total += sizes[i];
+	int k = 0;
+	while (k < n - 1 && total > cap) total -= sizes[k++];
+	return k;
+}

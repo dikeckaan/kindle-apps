@@ -1337,3 +1337,15 @@ okunuşu: %s	произношение: %s
 İsimler %d	Существительные %d
 ↻ yanlış bilinenler bir sonraki derste yine sorulur	↻ ошибки вернутся на следующем уроке
 ★ Biliyorum olarak işaretli	★ Отмечено как знакомое
+Almanca tarif	Немецкий рецепт
+Tarif kütüphanesi	Библиотека рецептов
+Tarif dizini indiriliyor…	Загрузка указателя рецептов…
+Tarif kütüphaneden indirilemedi.\nWi-Fi bağlantısını kontrol edin.	Не удалось загрузить рецепт из библиотеки.\nПроверьте подключение Wi-Fi.
+%d tarif · %d Türkçe, %d İngilizce, %d Almanca	%d рецептов · %d на турецком, %d на английском, %d на немецком
+Kütüphaneyi güncelle	Обновить библиотеку
+Çevrimiçi kütüphane: %d tarif (%d Türkçe, %d İngilizce, %d Almanca) · dizin: %s	Онлайн-библиотека: %d рецептов (%d на турецком, %d на английском, %d на немецком) · указатель: %s
+Çevrimiçi kütüphane: henüz indirilmedi	Онлайн-библиотека: ещё не загружена
+Anahtar gerekmez. Vikikitap, Wikibooks Cookbook ve Almanca Wikibooks Kochbuch tarifleri kaandikec.com/kindle-apps üzerinden sunulur (CC BY-SA 4.0, Wikibooks katkıcıları). Dizin bir kez indirilir ve haftada bir yenilenir; açılan tarifler en çok 5 MB çevrimdışı saklanır.	Ключ не нужен. Рецепты из Vikikitap, Wikibooks Cookbook и немецкой Wikibooks Kochbuch раздаются через kaandikec.com/kindle-apps (CC BY-SA 4.0, авторы Wikibooks). Указатель загружается один раз и обновляется раз в неделю; открытые рецепты сохраняются для работы без сети (до 5 МБ).
+Dizin indirilemedi.\nWi-Fi bağlantısını kontrol edin.	Не удалось загрузить указатель.\nПроверьте подключение Wi-Fi.
++ %d tarif çevrimiçi kütüphanede (Türkçe, İngilizce, Almanca)	+ %d рецептов в онлайн-библиотеке (турецкий, английский, немецкий)
+Çevrimiçi kütüphane: Wi-Fi açıkken ilk aramada indirilir	Онлайн-библиотека: загружается при первом поиске с включённым Wi-Fi

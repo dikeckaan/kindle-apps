@@ -110,4 +110,50 @@ int  tarif_mealdb_list(const char *json, char (*ids)[16], char (*names)[160], in
 const char *tarif_area_tr(const char *area); /* "Italian" → "İtalya"; unknown → area */
 /* page URL of a wiki title as the bundled set writes it: spaces → '_', bytes outside A-Z a-z 0-9 -._~:/(),' as %XX */
 void tarif_wiki_url(const char *host, const char *title, char *out, int cap);
+/* ---- online library: an index of the recipe shards on the web site (built by tools/tarif/build-shards.py) ----
+ * index.tsv: "#tarifler-index<TAB>1<TAB>build<TAB>count", then per recipe
+ *   id<TAB>title<TAB>lang<TAB>cuisine<TAB>tags<TAB>keywords<TAB>shard
+ * sorted Turkish first, then English, then German, each by title; keywords: main ingredients as folded Turkish words.
+ * s/NNNN.txt: the recipes of shard NNNN in the format above, with a "# url<TAB>rev N<TAB>authors<TAB>licence" line per
+ * recipe on top. */
+typedef struct {
+	const char *title, *lang, *cuisine, *tags, *keys; /* point into TarifLib.buf */
+	const char *fold;  /* folded "title cuisine" */
+	int id, shard, n_keys;
+	unsigned char dup; /* the bundled set (or the saved recipes) has it: lists show that one */
+} TarifLibEntry;
+typedef struct {
+	char *buf, *fold;
+	TarifLibEntry *e;
+	int *by_name; /* entries sorted by lang, then title (byte order) */
+	int n;
+	char build[40];
+} TarifLib;
+#define TARIF_LIB_STALE_S (7L * 24 * 3600) /* the index is fetched again after a week */
+int  tarif_lib_parse(char *buf, TarifLib *lib); /* in place (buf kept, freed by tarif_lib_free); count, -1 when not an index */
+int  tarif_lib_load(const char *path, TarifLib *lib);
+void tarif_lib_free(TarifLib *lib);
+/* entry of a recipe page URL (tr/en/de.wikibooks.org, the namespace prefix dropped as the index does), or -1 */
+int  tarif_lib_find_url(const TarifLib *lib, const char *url);
+/* the page URL of an entry (as the shard's record has it, but for "Kochbuch/" pages written without the space) */
+void tarif_lib_url(const TarifLibEntry *e, char *out, int cap);
+/* marks the entries a set has (by page URL): lists show the set's record, not the library entry */
+void tarif_lib_mark_dups(TarifLib *lib, const TarifDb *db);
+void tarif_lib_clear_dups(TarifLib *lib);
+/* like tarif_search: every query word (or every word of its English translation) a word prefix of title or cuisine;
+ * title prefix matches first, then Turkish, English, German, then by title. Entries marked dup are left out. */
+int  tarif_lib_search(const TarifLib *lib, const char *query, int *out, int max);
+/* "Elimde ne var": entries whose keywords include query words (a keyword starting with the word, or the word starting
+ * with a keyword of 3+ letters: "domatesli"); most matched first, then Turkish first, then fewest other keywords */
+int  tarif_lib_by_ingredients(const TarifLib *lib, const char *query, int *out, int *matched, int max, int *n_words);
+/* like tarif_filter (cuisine NULL = any, "!X" = all but X; tag 0 = any), in index order */
+int  tarif_lib_filter(const TarifLib *lib, const char *cuisine, char tag, int *out, int max);
+int  tarif_lib_stale(long fetched, long now); /* 1 when the index should be fetched again */
+/* the record of a shard (a set parsed from it) with this lang and title, or -1 */
+int  tarif_find_title(const TarifDb *db, const char *lang, const char *title);
+/* revision of url from the "# url<TAB>rev N…" lines on top of a parsed shard; 0 when not listed */
+long tarif_source_rev(const TarifDb *db, const char *url);
+/* shard cache: sizes of the cached shards, least recently used first; returns how many of the oldest to delete so the
+ * rest fit in cap (the newest one is always kept) */
+int  tarif_cache_evict(const long *sizes, int n, long cap);
 #endif

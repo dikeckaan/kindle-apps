@@ -202,6 +202,16 @@ dist:
 	@ids="kindle-apps-core $$(for p in $(PKGS); do python3 -c 'import json,sys;print(json.load(open(sys.argv[1]))["id"])' apps/$$p/pkg/manifest.json; done | tr '\n' ' ')"; \
 		sed "s/@PACKAGES@/$$ids/" tools/kindle-apps-depo.sh.in > dist/kindle-apps-depo.sh # every package, core first
 	cp -R site/. dist/ # the website (GitHub Pages serves dist/: index.html next to manifest.json)
+	@if [ -f $(TARIF_LIB)/v1/index.tsv ]; then mkdir -p dist/tarif && cp -R $(TARIF_LIB)/v1 dist/tarif/ && echo "tarif library: $$(cat $(TARIF_LIB)/v1/manifest.txt | tr '\n' ' ')"; \
+	else echo "note: no $(TARIF_LIB)/v1 (make tarif-lib): dist/ has no Tarifler online library"; fi
+
+# Tarifler online library (dist/tarif/v1: index + recipe shards from Wikibooks; needs network, cached in build/tarif-cache).
+# Not in git: the release workflow builds it with the cache restored (actions/cache).
+TARIF_LIB ?= build/tarif-lib
+tarif-lib:
+	python3 tools/tarif/build-shards.py $(TARIF_LIB) --cache build/tarif-cache
+
+.PHONY: tarif-lib
 
 KINDLE ?= 192.168.2.90
 PORT   ?= 22

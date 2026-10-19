@@ -1,11 +1,16 @@
-/* Tarifler: Turkish and world recipes. A bundled set from Wikibooks works offline; Vikikitap / Wikibooks (and
- * TheMealDB with the user's own key) are searched online, and every recipe opened online is kept for offline use.
+/* Tarifler: Turkish and world recipes. A bundled set from Wikibooks works offline; the online recipe library (an
+ * index and recipe shards built from Wikibooks, served by our GitHub Pages site: tools/tarif/build-shards.py) adds a few
+ * thousand more without any key; Vikikitap / Wikibooks (and TheMealDB with the user's own key) are also searched live,
+ * and every recipe opened online is kept for offline use.
  * Search by name or by what is in the kitchen, a servings scaler, ticking off ingredients, a step-by-step cooking
  * mode that keeps the Kindle awake, named kitchen timers (no speaker: the alarm box flashes), favourites, recents. */
+#include <dirent.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <sys/stat.h>
 #include <time.h>
+#include <unistd.h>
 #include "kui.h"
 #include "net/net.h"
 #include "tarif.h"
@@ -14,11 +19,19 @@
 #define MARGIN 50
 #define BAR_Y (kui_height() - 115) /* bottom button row */
 #define BAR_H 95
-#define MAX_LIST 2000
+#define MAX_LIST 6000
 #define CACHE_MAX (2 * 1024 * 1024)
 #define RECENT_KEEP 40
 #define NET_TIMEOUT_S 25
+/* the online library; $TARIF_LIBRARY_URL overrides the base (tests, a local copy of dist/) */
+#define LIB_URL "https://kaandikec.com/kindle-apps/tarif/v1"
+#define LIB_CACHE_MAX (5L * 1024 * 1024) /* cached shards, least recently used dropped first */
+#define LIB_INDEX_MAX (1L * 1024 * 1024)
+#define LIB_SHARD_MAX (200L * 1024)
+/* MediaWiki asks API clients for a descriptive agent with a contact address */
+#define USER_AGENT "Tarifler/1.0 (https://kaandikec.com/kindle-apps/; ai@kaandikec.com)"
 
+/* a recipe: record i of a set, or (d == &libmark) entry i of the library index, loaded from its shard when opened */
 typedef struct { TarifDb *d; int i; } Ref;
 
 /* copies at most cap - 1 bytes (a deliberate cut, like snprintf's, without gcc's truncation warning) */
@@ -30,7 +43,10 @@ static void scopy(char *d, size_t cap, const char *s)
 }
 
 static TarifDb db, cache; /* bundled set, recipes seen online */
-static TarifKeys favs, recent;
+static TarifLib lib;      /* online library index (empty until downloaded) */
+static TarifDb shard, libmark; /* the library shard last opened; libmark: see Ref */
+static int shard_no = -1, lib_gen; /* lib_gen: changes when the index is replaced (entry numbers change) */
+static TarifKeys favs, recent, lru; /* lru: cached library shard files, least recently used first */
 static TarifTimers timers;
 static char mealdb_key[64];
 static int quitting, awake, cooking, alarm_redraw;
@@ -85,10 +101,19 @@ static int load_db(void)
 	return tarif_load("apps/tarif/data/recipes.txt", &db) > 0 ? 0 : -1; /* development tree (simulator) */
 }
 
+/* library entries the bundled set or the saved recipes have are listed from those */
+static void lib_dups(void)
+{
+	tarif_lib_clear_dups(&lib);
+	tarif_lib_mark_dups(&lib, &db);
+	tarif_lib_mark_dups(&lib, &cache);
+}
+
 static void load_cache(void)
 {
 	tarif_free(&cache);
 	tarif_load(path_of("cache.txt"), &cache);
+	lib_dups();
 }
 
 /* appends one record to the cache (dropping the oldest records past CACHE_MAX) and reloads it */
@@ -121,10 +146,24 @@ static Ref find_url(const char *url)
 	int i = tarif_find_url(&db, url);
 	if (i >= 0) return (Ref){ &db, i };
 	i = tarif_find_url(&cache, url);
-	return i >= 0 ? (Ref){ &cache, i } : (Ref){ NULL, -1 };
+	if (i >= 0) return (Ref){ &cache, i };
+	i = tarif_lib_find_url(&lib, url);
+	return i >= 0 ? (Ref){ &libmark, i } : (Ref){ NULL, -1 };
 }
 
-static const TarifRecipe *R(Ref r) { return &r.d->r[r.i]; }
+/* the record of a ref; for a library entry not opened yet only its index fields (title, lang, cuisine, tags, url) */
+static const TarifRecipe *R(Ref r)
+{
+	if (r.d != &libmark) return &r.d->r[r.i];
+	static TarifRecipe v[4];
+	static char url[4][400];
+	static int k;
+	k = (k + 1) % 4;
+	const TarifLibEntry *e = &lib.e[r.i];
+	tarif_lib_url(e, url[k], sizeof url[k]);
+	v[k] = (TarifRecipe){ e->lang, e->title, e->cuisine, e->tags, url[k], "CC BY-SA 4.0", "", 0, 0, 0, 0, 0, 0 };
+	return &v[k];
+}
 
 /* ---- staying awake: in cooking mode and while a timer runs ---- */
 
@@ -304,18 +343,19 @@ static void add_part(char *s, size_t cap, const char *part)
 	if (o + 1 < cap) snprintf(s + o, cap - o, " · %s", part);
 }
 
-/* "Türkiye · Çorba · Vegan · İngilizce" */
-static void meta_line(const TarifRecipe *r, char *s, size_t cap, const char *english)
+/* "Türkiye · Çorba · Vegan · İngilizce"; full: "İngilizce tarif" (the recipe page) */
+static void meta_line(const TarifRecipe *r, char *s, size_t cap, int full)
 {
 	snprintf(s, cap, "%s", r->cuisine);
 	const char *k = kind_label(r);
 	if (k) add_part(s, cap, k);
 	if (tarif_has_tag(r, 'v')) add_part(s, cap, T("Vegan"));
 	else if (tarif_has_tag(r, 'g')) add_part(s, cap, T("Vejetaryen"));
-	if (strcmp(r->lang, "tr")) add_part(s, cap, english);
+	if (!strcmp(r->lang, "de")) add_part(s, cap, full ? T("Almanca tarif") : T("Almanca"));
+	else if (strcmp(r->lang, "tr")) add_part(s, cap, full ? T("İngilizce tarif") : T("İngilizce"));
 }
 
-static void sub_line(const TarifRecipe *r, char *s, int cap) { meta_line(r, s, (size_t) cap, T("İngilizce")); }
+static void sub_line(const TarifRecipe *r, char *s, int cap) { meta_line(r, s, (size_t) cap, 0); }
 
 /* ---- lists ---- */
 
@@ -422,6 +462,7 @@ static void recipe_row(int i, KuiRect r)
 }
 
 static int recipe_screen(Ref ref);
+static Ref open_lib(int i, int quiet);
 
 /* shows list[0..n) until ✕; returns L_QUIT on quit, L_ACTION when the action button was tapped */
 static int recipes_list(const char *title, const char *head, int n, const char *action, const char *empty)
@@ -442,7 +483,14 @@ static int recipes_list(const char *title, const char *head, int n, const char *
 			return k;
 		}
 		list_words = 0;
-		if (recipe_screen(saved[k]) == L_QUIT) return L_QUIT;
+		Ref r = saved[k];
+		int gen = lib_gen;
+		if (r.d == &libmark && !(r = open_lib(r.i, 0)).d) { /* open_lib told why */
+			if (gen != lib_gen) return L_BACK;
+			continue;
+		}
+		if (recipe_screen(r) == L_QUIT) return L_QUIT;
+		if (gen != lib_gen) return L_BACK; /* a new index: the list's library entries are numbered differently */
 	}
 }
 
@@ -497,7 +545,7 @@ static void layout_recipe(Ref ref)
 	n_items = 0;
 	scale_ings(ref);
 	add_item(IT_TITLE, 0, draw_block(0, 0, tw, r->title, KUI_FONT_BOLD, 46, KUI_ALIGN_LEFT, 3, 0, 0) + 10, r->title);
-	meta_line(r, meta_txt, sizeof meta_txt, T("İngilizce tarif"));
+	meta_line(r, meta_txt, sizeof meta_txt, 1);
 	add_item(IT_META, 0, 50, meta_txt);
 	if (r->intro[0]) add_item(IT_INTRO, 0, draw_block(0, 0, tw, r->intro, KUI_FONT_SERIF, 29, KUI_ALIGN_LEFT, 8, 0, 0) + 14, r->intro);
 	add_item(IT_SERV, 0, 120, NULL);
@@ -520,7 +568,11 @@ static void layout_recipe(Ref ref)
 			if (n_items < MAX_ITEMS) items[n_items++] = (Item){ IT_STEP, s, a, b, (b - a) * lh + (b == n ? 18 : 0), t };
 		}
 	}
-	snprintf(source_txt, sizeof source_txt, T("Kaynak: %s · %s · %s"), source_name(r), r->licence, r->url);
+	char src[80];
+	long rev = ref.d == &shard ? tarif_source_rev(&shard, r->url) : 0; /* library recipes: the page revision */
+	if (rev > 0) snprintf(src, sizeof src, "%s, rev %ld", source_name(r), rev);
+	else snprintf(src, sizeof src, "%s", source_name(r));
+	snprintf(source_txt, sizeof source_txt, T("Kaynak: %s · %s · %s"), src, r->licence, r->url);
 	if (!strcmp(r->licence, "CC BY-SA 4.0"))
 		snprintf(source_txt + strlen(source_txt), sizeof source_txt - strlen(source_txt), "%s",
 			 T(" — Wikibooks katkıcılarının metni, biçimi değiştirildi; aynı lisansla paylaşılır."));
@@ -1035,6 +1087,16 @@ static void hit_url(const Hit *h, char *url, int cap)
 	else tarif_wiki_url(h->src == SRC_TRWB ? "tr.wikibooks.org" : "en.wikibooks.org", h->title, url, cap);
 }
 
+/* the recipe opens without the network: bundled, saved, or a library recipe whose shard is cached */
+static int saved_offline(const char *url)
+{
+	Ref r = find_url(url);
+	if (r.d != &libmark) return r.d != NULL;
+	char name[16];
+	snprintf(name, sizeof name, "%04d.txt", lib.e[r.i].shard);
+	return tarif_keys_has(&lru, name);
+}
+
 static void hit_row(int i, KuiRect r)
 {
 	const Hit *h = &hits[i];
@@ -1046,16 +1108,17 @@ static void hit_row(int i, KuiRect r)
 	kui_text((KuiRect){ r.x + 20, r.y + 8, r.w - 40, 56 }, s, KUI_FONT_BOLD, 36, KUI_ALIGN_LEFT, 0);
 	static const char *const SRC[] = { "Vikikitap", "Wikibooks Cookbook", "TheMealDB" };
 	hit_url(h, url, sizeof url);
-	snprintf(s, sizeof s, "%s · %s%s", SRC[h->src], h->src == SRC_TRWB ? T("Türkçe") : T("İngilizce"), find_url(url).d ? T(" · çevrimdışı kayıtlı") : "");
+	snprintf(s, sizeof s, "%s · %s%s", SRC[h->src], h->src == SRC_TRWB ? T("Türkçe") : T("İngilizce"), saved_offline(url) ? T(" · çevrimdışı kayıtlı") : "");
 	kui_text((KuiRect){ r.x + 20, r.y + 64, r.w - 40, 44 }, s, KUI_FONT_REG, 28, KUI_ALIGN_LEFT, 0x40);
 }
 
-/* fetches the hit (or finds it saved) into the cache; returns its ref, d == NULL on failure */
+/* fetches the hit (or finds it saved, or in the library) into the cache; returns its ref, d == NULL on failure */
 static Ref fetch_hit(const Hit *h)
 {
 	char url[600], api[900], enc[500], *body;
 	hit_url(h, url, sizeof url);
 	Ref ref = find_url(url);
+	if (ref.d == &libmark) ref = open_lib(ref.i, 1); /* a library recipe: its shard (else the page itself, below) */
 	if (ref.d) return ref;
 	TarifBuf b = { 0 };
 	if (h->src == SRC_MEAL) {
@@ -1125,6 +1188,172 @@ static int online_search(const char *query, int by_ing)
 	return ret;
 }
 
+/* ---- the online recipe library: index.tsv once (refreshed weekly), a shard of ~40 recipes per opened recipe ---- */
+
+static long lib_tried; /* last download attempt: a failed one is not retried by itself for ten minutes */
+
+static const char *lib_base(void)
+{
+	const char *u = getenv("TARIF_LIBRARY_URL");
+	return u && *u ? u : LIB_URL;
+}
+
+static const char *lib_path(const char *name) /* <data>/lib/<name>; the directory is created on demand */
+{
+	static char p[4][320];
+	static int k;
+	k = (k + 1) % 4;
+	snprintf(p[k], sizeof p[k], "%s/lib", kui_data_dir("tarif"));
+	mkdir(p[k], 0755);
+	snprintf(p[k], sizeof p[k], "%s/lib/%s", kui_data_dir("tarif"), name);
+	return p[k];
+}
+
+static long lib_fetched(void)
+{
+	char b[32];
+	return kui_read_file(lib_path("fetched"), b, sizeof b) > 0 ? atol(b) : 0;
+}
+
+static void lib_load(void)
+{
+	tarif_lib_free(&lib);
+	tarif_lib_load(lib_path("index.tsv"), &lib);
+	lib_dups();
+	lib_gen++;
+}
+
+/* drops every cached shard: an index of another build numbers them differently */
+static void lib_drop_shards(void)
+{
+	DIR *d = opendir(lib_path(""));
+	struct dirent *de;
+	while (d && (de = readdir(d)))
+		if (strlen(de->d_name) == 8 && !strcmp(de->d_name + 4, ".txt")) remove(lib_path(de->d_name));
+	if (d) closedir(d);
+	tarif_keys_free(&lru);
+	remove(lib_path("lru"));
+	tarif_free(&shard);
+	shard_no = -1;
+}
+
+/* fetches the index when there is none or it is a week old and the Wi-Fi is on; force (Kütüphaneyi güncelle): always,
+ * turning the Wi-Fi on for it. Returns 1 when the library can be used (force: when the download worked). */
+static int lib_update(int force)
+{
+	long now = (long) time(NULL);
+	if (!force && lib.n && !tarif_lib_stale(lib_fetched(), now)) return 1;
+	int wifi = kui_wifi_enabled();
+	if (!force && (wifi == 0 || (lib_tried && now - lib_tried < 600 && now >= lib_tried))) return lib.n > 0;
+	lib_tried = now;
+	busy_screen(T("Tarif kütüphanesi"), T("Tarif dizini indiriliyor…"));
+	if (force && wifi == 0) {
+		kui_wifi_enable(1);
+		kui_wifi_wait(40);
+	}
+	char url[400];
+	snprintf(url, sizeof url, "%s/index.tsv", lib_base());
+	int ok = net_download(url, lib_path("index.new"), LIB_INDEX_MAX, 60) == 0;
+	if (ok) {
+		TarifLib fresh;
+		ok = tarif_lib_load(lib_path("index.new"), &fresh) > 0;
+		if (ok) {
+			int same = lib.n && !strcmp(fresh.build, lib.build);
+			tarif_lib_free(&fresh);
+			if (!same) lib_drop_shards();
+			ok = rename(lib_path("index.new"), lib_path("index.tsv")) == 0;
+		}
+		remove(lib_path("index.new"));
+	}
+	if (ok) {
+		char b[32];
+		kui_write_atomic(lib_path("fetched"), b, snprintf(b, sizeof b, "%ld\n", now));
+		lib_load();
+	}
+	if (force && wifi == 0) kui_wifi_enable(0);
+	return force ? ok : lib.n > 0;
+}
+
+static void loading_bar(void)
+{
+	kui_fill((KuiRect){ 0, BAR_Y - 10, kui_width(), BAR_H + 20 }, 255);
+	kui_text((KuiRect){ 0, BAR_Y, kui_width(), BAR_H }, T("Yükleniyor…"), KUI_FONT_BOLD, 38, KUI_ALIGN_CENTER, 0);
+	kui_mark_dirty((KuiRect){ 0, BAR_Y - 10, kui_width(), BAR_H + 20 });
+	kui_flush(0);
+}
+
+/* shard n into `shard`: from the cache, or (fetch) downloaded into it first; 0 when loaded */
+static int shard_load(int n, int fetch)
+{
+	char name[16];
+	snprintf(name, sizeof name, "%04d.txt", n);
+	if (fetch) {
+		char url[400];
+		snprintf(url, sizeof url, "%s/s/%s", lib_base(), name);
+		int was_off = kui_wifi_enabled() == 0;
+		if (was_off) {
+			kui_wifi_enable(1);
+			kui_wifi_wait(40);
+		}
+		int ok = net_download(url, lib_path(name), LIB_SHARD_MAX, 40) == 0;
+		if (was_off) kui_wifi_enable(0);
+		if (!ok) return -1;
+	}
+	TarifDb d;
+	if (tarif_load(lib_path(name), &d) <= 0) return -1;
+	tarif_free(&shard);
+	shard = d;
+	shard_no = n;
+	return 0;
+}
+
+/* shard n was used: it becomes the newest, and the oldest ones go while the cache is over LIB_CACHE_MAX */
+static void lru_touch(int n)
+{
+	char name[16];
+	snprintf(name, sizeof name, "%04d.txt", n);
+	tarif_keys_touch(&lru, name, TARIF_MAX_KEYS);
+	static long sizes[TARIF_MAX_KEYS];
+	for (int i = 0; i < lru.n; i++) {
+		struct stat st;
+		sizes[i] = stat(lib_path(lru.key[i]), &st) == 0 ? (long) st.st_size : 0;
+	}
+	for (int k = tarif_cache_evict(sizes, lru.n, LIB_CACHE_MAX); k > 0; k--) {
+		remove(lib_path(lru.key[0]));
+		tarif_keys_toggle(&lru, lru.key[0]);
+	}
+	save_keys("lib/lru", &lru);
+}
+
+/* library entry i as a record of its shard (cached, or downloaded now); d == NULL (and a message shown) on failure.
+ * When the downloaded shard does not have it, the site has a newer build: the index is fetched again (lib_gen changes:
+ * callers holding entry numbers must rebuild their lists) and the entry's new shard tried. */
+static Ref open_lib(int i, int quiet)
+{
+	char url[400];
+	tarif_lib_url(&lib.e[i], url, sizeof url);
+	for (int attempt = 0; attempt < 2; attempt++) {
+		const TarifLibEntry *e = &lib.e[i];
+		int n = e->shard, k = -1;
+		if (shard_no == n) k = tarif_find_title(&shard, e->lang, e->title);
+		if (k < 0 && shard_load(n, 0) == 0) k = tarif_find_title(&shard, e->lang, e->title);
+		if (k < 0) { /* not cached (or cached from an older build): download it */
+			loading_bar();
+			if (shard_load(n, 1) == 0) {
+				k = tarif_find_title(&shard, e->lang, e->title);
+				if (k < 0 && !attempt && lib_update(1) && (i = tarif_lib_find_url(&lib, url)) >= 0) continue;
+			}
+		}
+		if (k >= 0) {
+			lru_touch(n);
+			return (Ref){ &shard, k };
+		}
+		break;
+	}
+	if (!quiet) message(T("Tarif açılamadı"), T("Tarif kütüphaneden indirilemedi.\nWi-Fi bağlantısını kontrol edin."));
+	return (Ref){ NULL, -1 };
+}
+
 /* ---- search ---- */
 
 static int ids[MAX_LIST];
@@ -1156,27 +1385,31 @@ static int search_flow(int by_ing)
 		for (;;) {
 			int n = 0, k;
 			list_words = 0;
+			lib_update(0); /* first use (or a week old) with the Wi-Fi on: the library's index */
 			if (by_ing) {
-				static int m[MAX_LIST];
+				static int m[MAX_LIST], tm[MAX_LIST];
+				static Ref tmp[MAX_LIST];
 				int nw;
 				k = tarif_by_ingredients(&db, q[1], ids, m, MAX_LIST, &nw);
-				for (int i = 0; i < k; i++) list_matched[n] = m[i], list[n++] = (Ref){ &db, ids[i] };
+				for (int i = 0; i < k; i++) tm[n] = m[i], tmp[n++] = (Ref){ &db, ids[i] };
 				k = tarif_by_ingredients(&cache, q[1], ids, m, MAX_LIST - n, &nw);
-				for (int i = 0; i < k && n < MAX_LIST; i++) list_matched[n] = m[i], list[n++] = (Ref){ &cache, ids[i] };
+				for (int i = 0; i < k && n < MAX_LIST; i++) tm[n] = m[i], tmp[n++] = (Ref){ &cache, ids[i] };
+				k = tarif_lib_by_ingredients(&lib, q[1], ids, m, MAX_LIST - n, &nw);
+				for (int i = 0; i < k && n < MAX_LIST; i++) tm[n] = m[i], tmp[n++] = (Ref){ &libmark, ids[i] };
 				list_words = nw;
-				/* merged: most matched first (each set is sorted already) */
-				for (int i = 1; i < n; i++)
-					for (int j = i; j > 0 && list_matched[j] > list_matched[j - 1]; j--) {
-						Ref t = list[j];
-						list[j] = list[j - 1], list[j - 1] = t;
-						int x = list_matched[j];
-						list_matched[j] = list_matched[j - 1], list_matched[j - 1] = x;
-					}
+				/* merged: most matched first, otherwise in order (each part is sorted already, Turkish first) */
+				int o = 0;
+				for (int mm = nw; mm >= 1; mm--)
+					for (int i = 0; i < n; i++)
+						if (tm[i] == mm) list_matched[o] = mm, list[o++] = tmp[i];
+				n = o;
 			} else {
 				k = tarif_search(&db, q[0], ids, MAX_LIST);
 				n = add_refs(&db, ids, k, 0);
 				k = tarif_search(&cache, q[0], ids, MAX_LIST - n);
 				n = add_refs(&cache, ids, k, n);
+				k = tarif_lib_search(&lib, q[0], ids, MAX_LIST - n);
+				n = add_refs(&libmark, ids, k, n);
 			}
 			char head[300];
 			snprintf(head, sizeof head, T("“%s” · %d tarif"), q[by_ing], n);
@@ -1220,25 +1453,52 @@ static int show_filter(const char *title, const char *cuisine, char tag)
 	int k = tarif_filter(&db, cuisine, tag, ids, MAX_LIST), n = add_refs(&db, ids, k, 0);
 	k = tarif_filter(&cache, cuisine, tag, ids, MAX_LIST - n);
 	n = add_refs(&cache, ids, k, n);
+	k = tarif_lib_filter(&lib, cuisine, tag, ids, MAX_LIST - n);
+	n = add_refs(&libmark, ids, k, n);
 	char head[160];
-	int tr = 0;
-	for (int i = 0; i < n; i++) tr += !strcmp(R(list[i])->lang, "tr");
-	snprintf(head, sizeof head, T("%d tarif · %d Türkçe, %d İngilizce"), n, tr, n - tr);
+	int tr = 0, de = 0;
+	for (int i = 0; i < n; i++) {
+		const char *l = list[i].d == &libmark ? lib.e[list[i].i].lang : R(list[i])->lang;
+		tr += !strcmp(l, "tr");
+		de += !strcmp(l, "de");
+	}
+	if (de) snprintf(head, sizeof head, T("%d tarif · %d Türkçe, %d İngilizce, %d Almanca"), n, tr, n - tr - de, de);
+	else snprintf(head, sizeof head, T("%d tarif · %d Türkçe, %d İngilizce"), n, tr, n - tr);
 	return recipes_list(title, head, n, NULL, NULL);
+}
+
+/* cuisines but "Türkiye" of the bundled set, the saved recipes and the library together into cu_names / cu_counts,
+ * by count; "Dünya" (no country known) last. Returns the count. */
+static int all_cuisines(void)
+{
+	n_cu = tarif_cuisines(&db, cu_names, cu_counts, 200);
+	const char *cn[200];
+	int cc[200], m = tarif_cuisines(&cache, cn, cc, 200);
+	for (int i = 0; i < m + lib.n; i++) {
+		const char *c = i < m ? cn[i] : lib.e[i - m].cuisine;
+		int add = i < m ? cc[i] : 1;
+		if (i >= m && (lib.e[i - m].dup || !*c || !strcmp(c, "Türkiye"))) continue;
+		int k = 0;
+		while (k < n_cu && strcmp(cu_names[k], c)) k++;
+		if (k < n_cu) cu_counts[k] += add;
+		else if (n_cu < 200) cu_names[n_cu] = c, cu_counts[n_cu++] = add;
+	}
+	for (int i = 1; i < n_cu; i++) /* by count, "Dünya" last (insertion sort: few entries) */
+		for (int j = i; j > 0; j--) {
+			int wa = !strcmp(cu_names[j - 1], "Dünya"), wb = !strcmp(cu_names[j], "Dünya");
+			if (wa == wb ? cu_counts[j - 1] >= cu_counts[j] : wb) break;
+			const char *t = cu_names[j];
+			cu_names[j] = cu_names[j - 1], cu_names[j - 1] = t;
+			int x = cu_counts[j];
+			cu_counts[j] = cu_counts[j - 1], cu_counts[j - 1] = x;
+		}
+	return n_cu;
 }
 
 static int world_screen(void)
 {
-	/* cuisines of the bundled set and the cache together */
-	n_cu = tarif_cuisines(&db, cu_names, cu_counts, 200);
-	const char *cn[200];
-	int cc[200], m = tarif_cuisines(&cache, cn, cc, 200);
-	for (int i = 0; i < m; i++) {
-		int k = 0;
-		while (k < n_cu && strcmp(cu_names[k], cn[i])) k++;
-		if (k < n_cu) cu_counts[k] += cc[i];
-		else if (n_cu < 200) cu_names[n_cu] = cn[i], cu_counts[n_cu++] = cc[i];
-	}
+	all_cuisines();
+	int gen = lib_gen;
 	ListDef L = { T("Dünya mutfağı"), T("Ülkeler, tarif sayısına göre"), NULL, n_cu, 96, cuisine_row, NULL };
 	for (int page = 0;;) {
 		int k = list_screen(&L, &page);
@@ -1246,6 +1506,7 @@ static int world_screen(void)
 		static char c[100];
 		snprintf(c, sizeof c, "%s", cu_names[k]);
 		if (show_filter(c, c, 0) == L_QUIT) return L_QUIT;
+		if (gen != lib_gen) return L_BACK; /* cu_names point into the old index */
 	}
 }
 
@@ -1253,29 +1514,49 @@ static int world_screen(void)
 
 static int sources_screen(void)
 {
-	int w = kui_width();
-	KuiButton key_btn = { { MARGIN, 1180, (w - 2 * MARGIN - 30) / 2, 100 }, T("Anahtar gir"), 1 };
-	KuiButton del_btn = { { MARGIN + key_btn.r.w + 30, 1180, key_btn.r.w, 100 }, T("Anahtarı sil"), 2 };
+	int w = kui_width(), h = kui_height();
+	KuiButton key_btn = { { MARGIN, h - 130, (w - 2 * MARGIN - 30) / 2, 95 }, T("Anahtar gir"), 1 };
+	KuiButton del_btn = { { MARGIN + key_btn.r.w + 30, h - 130, key_btn.r.w, 95 }, T("Anahtarı sil"), 2 };
+	KuiButton upd_btn = { { MARGIN, 0, w - 2 * MARGIN, 95 }, T("Kütüphaneyi güncelle"), 3 };
 	for (int full = 1;;) {
-		kui_fill((KuiRect){ 0, 0, w, kui_height() }, 255);
+		kui_fill((KuiRect){ 0, 0, w, h }, 255);
 		kui_topbar(T("Kaynaklar"), NULL);
-		int y = KUI_TOPBAR_H + 30, tw = w - 2 * MARGIN, tr = 0;
+		int y = KUI_TOPBAR_H + 24, tw = w - 2 * MARGIN, tr = 0;
 		for (int i = 0; i < db.n; i++) tr += !strcmp(db.r[i].lang, "tr");
 		char s[600];
 		snprintf(s, sizeof s, T("Çevrimdışı: %d tarif (%d Türkçe, %d İngilizce) · kaydedilen: %d"), db.n, tr, db.n - tr, cache.n);
-		y += draw_block(MARGIN, y, tw, s, KUI_FONT_BOLD, 32, KUI_ALIGN_LEFT, 3, 0, 1) + 20;
+		y += draw_block(MARGIN, y, tw, s, KUI_FONT_BOLD, 30, KUI_ALIGN_LEFT, 3, 0, 1) + 12;
 		y += draw_block(MARGIN, y, tw,
 				T("Vikikitap Yemek Kitabı (tr.wikibooks.org) ve Wikibooks Cookbook (en.wikibooks.org): Wikibooks katkıcılarının metinleri, "
 				  "CC BY-SA 4.0 lisansıyla. Biçim sadeleştirildi; her tarifin altında sayfa adresi var. İnternette de bu iki kaynakta aranır."),
-				KUI_FONT_REG, 29, KUI_ALIGN_LEFT, 8, 0, 1) + 26;
+				KUI_FONT_REG, 27, KUI_ALIGN_LEFT, 8, 0, 1) + 20;
+		/* the online library */
+		int lt[3] = { 0, 0, 0 };
+		for (int i = 0; i < lib.n; i++) lt[!strcmp(lib.e[i].lang, "tr") ? 0 : !strcmp(lib.e[i].lang, "en") ? 1 : 2]++;
+		if (lib.n) {
+			char d[32] = "";
+			time_t f = (time_t) lib_fetched();
+			struct tm tmv;
+			if (f > 0 && localtime_r(&f, &tmv)) strftime(d, sizeof d, "%d.%m.%Y", &tmv);
+			snprintf(s, sizeof s, T("Çevrimiçi kütüphane: %d tarif (%d Türkçe, %d İngilizce, %d Almanca) · dizin: %s"), lib.n, lt[0], lt[1], lt[2], d);
+		} else snprintf(s, sizeof s, "%s", T("Çevrimiçi kütüphane: henüz indirilmedi"));
+		y += draw_block(MARGIN, y, tw, s, KUI_FONT_BOLD, 30, KUI_ALIGN_LEFT, 3, 0, 1) + 12;
+		y += draw_block(MARGIN, y, tw,
+				T("Anahtar gerekmez. Vikikitap, Wikibooks Cookbook ve Almanca Wikibooks Kochbuch tarifleri kaandikec.com/kindle-apps üzerinden "
+				  "sunulur (CC BY-SA 4.0, Wikibooks katkıcıları). Dizin bir kez indirilir ve haftada bir yenilenir; açılan tarifler en çok 5 MB "
+				  "çevrimdışı saklanır."),
+				KUI_FONT_REG, 27, KUI_ALIGN_LEFT, 8, 0, 1) + 16;
+		upd_btn.r.y = y;
+		kui_button(&upd_btn, 0);
+		y += upd_btn.r.h + 24;
 		y += draw_block(MARGIN, y, tw,
 				T("TheMealDB (themealdb.com) isteğe bağlıdır: ücretsiz deneme anahtarı \"1\" yalnızca geliştirme ve eğitim içindir, herkese açık "
 				  "uygulamalar destekçi anahtarı ister. Kendi anahtarınızı girerseniz çevrimiçi aramada TheMealDB de kullanılır (veri ve görseller: TheMealDB)."),
-				KUI_FONT_REG, 29, KUI_ALIGN_LEFT, 8, 0, 1) + 26;
-		y += draw_block(MARGIN, y, tw, T("Miktarlar kişi sayısına göre yaklaşık ölçeklenir; vegan/vejetaryen etiketleri malzemelerden çıkarılır, alerjiler için tarifi kontrol edin."),
-				KUI_FONT_REG, 27, KUI_ALIGN_LEFT, 5, 0x40, 1);
+				KUI_FONT_REG, 27, KUI_ALIGN_LEFT, 8, 0, 1) + 16;
+		draw_block(MARGIN, y, tw, T("Miktarlar kişi sayısına göre yaklaşık ölçeklenir; vegan/vejetaryen etiketleri malzemelerden çıkarılır, alerjiler için tarifi kontrol edin."),
+			   KUI_FONT_REG, 25, KUI_ALIGN_LEFT, 5, 0x40, 1);
 		snprintf(s, sizeof s, T("TheMealDB anahtarı: %s"), mealdb_key[0] ? mealdb_key : T("yok"));
-		kui_text((KuiRect){ MARGIN, 1100, tw, 60 }, s, KUI_FONT_BOLD, 32, KUI_ALIGN_LEFT, 0);
+		kui_text((KuiRect){ MARGIN, h - 195, tw, 56 }, s, KUI_FONT_BOLD, 30, KUI_ALIGN_LEFT, 0);
 		kui_button(&key_btn, 0);
 		if (mealdb_key[0]) kui_button(&del_btn, 0);
 		flush_screen(full);
@@ -1286,9 +1567,12 @@ static int sources_screen(void)
 			if (e.type == KUI_EV_WAKE) { full = wake_full(); break; }
 			if (e.type != KUI_EV_TAP) continue;
 			if (kui_topbar_hit(w, 0, e.x, e.y) == KUI_BTN_EXIT) return L_BACK;
-			KuiButton bs[2] = { key_btn, del_btn };
-			int id = kui_buttons_hit(bs, mealdb_key[0] ? 2 : 1, e.x, e.y);
-			if (id == 1) {
+			KuiButton bs[3] = { upd_btn, key_btn, del_btn };
+			int id = kui_buttons_hit(bs, mealdb_key[0] ? 3 : 2, e.x, e.y);
+			if (id == 3) {
+				if (!lib_update(1)) message(T("Tarif kütüphanesi"), T("Dizin indirilemedi.\nWi-Fi bağlantısını kontrol edin."));
+				again = 0;
+			} else if (id == 1) {
 				char buf[64];
 				snprintf(buf, sizeof buf, "%s", mealdb_key);
 				if (kui_input_text(T("TheMealDB API anahtarı"), buf, sizeof buf, 0, 1, NULL)) {
@@ -1333,9 +1617,10 @@ static int home(void)
 		for (int i = 0; i < N_CATS; i++) {
 			KuiRect r = { MARGIN + i % 2 * (bw + 24), y + i / 2 * 140, bw, 122 };
 			int n = 0;
-			if (CATS[i].cuisine) n = tarif_filter(&db, CATS[i].cuisine, 0, ids, MAX_LIST) + tarif_filter(&cache, CATS[i].cuisine, 0, ids, MAX_LIST);
-			else if (CATS[i].tag) n = tarif_filter(&db, NULL, CATS[i].tag, ids, MAX_LIST) + tarif_filter(&cache, NULL, CATS[i].tag, ids, MAX_LIST);
-			else n = tarif_cuisines(&db, cu_names, cu_counts, 200);
+			if (CATS[i].cuisine || CATS[i].tag)
+				n = tarif_filter(&db, CATS[i].cuisine, CATS[i].tag, ids, MAX_LIST) + tarif_filter(&cache, CATS[i].cuisine, CATS[i].tag, ids, MAX_LIST) +
+				    tarif_lib_filter(&lib, CATS[i].cuisine, CATS[i].tag, ids, MAX_LIST);
+			else n = all_cuisines();
 			kui_frame(r, 3, 0);
 			kui_text((KuiRect){ r.x + 24, r.y + 10, r.w - 48, 56 }, T(CATS[i].label), KUI_FONT_BOLD,
 				 kui_fit_px(T(CATS[i].label), KUI_FONT_BOLD, 38, r.w - 48), KUI_ALIGN_LEFT, 0);
@@ -1364,7 +1649,12 @@ static int home(void)
 		char foot[300];
 		snprintf(foot, sizeof foot, T("%d tarif çevrimdışı (%d Türkçe) · Vikikitap, Wikibooks · CC BY-SA 4.0"), db.n + cache.n, tr);
 		kui_text((KuiRect){ MARGIN, y, w - 2 * MARGIN, 44 }, foot, KUI_FONT_REG, kui_fit_px(foot, KUI_FONT_REG, 28, w - 2 * MARGIN), KUI_ALIGN_CENTER, 0x40);
-		bs[nb++] = (KuiButton){ { w / 2 - 200, y + 56, 400, 80 }, T("Kaynaklar ve ayarlar"), H_SOURCES };
+		int nl = 0;
+		for (int i = 0; i < lib.n; i++) nl += !lib.e[i].dup;
+		if (nl) snprintf(foot, sizeof foot, T("+ %d tarif çevrimiçi kütüphanede (Türkçe, İngilizce, Almanca)"), nl);
+		else snprintf(foot, sizeof foot, "%s", T("Çevrimiçi kütüphane: Wi-Fi açıkken ilk aramada indirilir"));
+		kui_text((KuiRect){ MARGIN, y + 44, w - 2 * MARGIN, 44 }, foot, KUI_FONT_REG, kui_fit_px(foot, KUI_FONT_REG, 28, w - 2 * MARGIN), KUI_ALIGN_CENTER, 0x40);
+		bs[nb++] = (KuiButton){ { w / 2 - 200, y + 100, 400, 80 }, T("Kaynaklar ve ayarlar"), H_SOURCES };
 		kui_button(&bs[nb - 1], 0);
 		flush_screen(full);
 		full = 1; /* every way back to the home screen is a new screen */
@@ -1386,6 +1676,7 @@ static int home(void)
 			else if (id == H_SOURCES) r = sources_screen();
 			else if (id >= H_CAT) {
 				const Cat *c = &CATS[id - H_CAT];
+				lib_update(0);
 				if (!c->cuisine && !c->tag) r = world_screen();
 				else r = show_filter(T(c->label), c->cuisine, c->tag);
 			}
@@ -1397,7 +1688,9 @@ static int home(void)
 int main(void)
 {
 	if (kui_init("tarif") != 0) return 1;
+	net_set_user_agent(USER_AGENT);
 	load_keys("favs", &favs);
+	load_keys("lib/lru", &lru);
 	load_keys("recent", &recent);
 	load_timers();
 	if (kui_read_file(path_of("mealdb_key"), mealdb_key, sizeof mealdb_key) <= 0) mealdb_key[0] = '\0';
@@ -1414,6 +1707,7 @@ int main(void)
 		kui_quit();
 		return 0;
 	}
+	tarif_lib_load(lib_path("index.tsv"), &lib); /* the library as last downloaded (lib_update fetches it) */
 	load_cache();
 	awake_update();
 	home();
@@ -1421,8 +1715,11 @@ int main(void)
 	if (awake) kui_prevent_sleep(0);
 	tarif_keys_free(&favs);
 	tarif_keys_free(&recent);
+	tarif_keys_free(&lru);
 	tarif_free(&db);
 	tarif_free(&cache);
+	tarif_free(&shard);
+	tarif_lib_free(&lib);
 	kui_quit();
 	return 0;
 }

@@ -1337,3 +1337,15 @@ okunuşu: %s	wymowa: %s
 İsimler %d	Rzeczowniki %d
 ↻ yanlış bilinenler bir sonraki derste yine sorulur	↻ błędne słowa wrócą w następnej lekcji
 ★ Biliyorum olarak işaretli	★ Oznaczone jako znane
+Almanca tarif	Przepis niemiecki
+Tarif kütüphanesi	Biblioteka przepisów
+Tarif dizini indiriliyor…	Pobieranie indeksu przepisów…
+Tarif kütüphaneden indirilemedi.\nWi-Fi bağlantısını kontrol edin.	Nie udało się pobrać przepisu z biblioteki.\nSprawdź połączenie Wi-Fi.
+%d tarif · %d Türkçe, %d İngilizce, %d Almanca	%d przepisów · %d po turecku, %d po angielsku, %d po niemiecku
+Kütüphaneyi güncelle	Aktualizuj bibliotekę
+Çevrimiçi kütüphane: %d tarif (%d Türkçe, %d İngilizce, %d Almanca) · dizin: %s	Biblioteka online: %d przepisów (%d po turecku, %d po angielsku, %d po niemiecku) · indeks: %s
+Çevrimiçi kütüphane: henüz indirilmedi	Biblioteka online: jeszcze nie pobrana
+Anahtar gerekmez. Vikikitap, Wikibooks Cookbook ve Almanca Wikibooks Kochbuch tarifleri kaandikec.com/kindle-apps üzerinden sunulur (CC BY-SA 4.0, Wikibooks katkıcıları). Dizin bir kez indirilir ve haftada bir yenilenir; açılan tarifler en çok 5 MB çevrimdışı saklanır.	Klucz nie jest potrzebny. Przepisy z Vikikitap, Wikibooks Cookbook i niemieckiej Wikibooks Kochbuch są udostępniane przez kaandikec.com/kindle-apps (CC BY-SA 4.0, autorzy Wikibooks). Indeks jest pobierany raz i odświeżany co tydzień; otwarte przepisy są przechowywane offline (do 5 MB).
+Dizin indirilemedi.\nWi-Fi bağlantısını kontrol edin.	Nie udało się pobrać indeksu.\nSprawdź połączenie Wi-Fi.
++ %d tarif çevrimiçi kütüphanede (Türkçe, İngilizce, Almanca)	+ %d przepisów w bibliotece online (turecki, angielski, niemiecki)
+Çevrimiçi kütüphane: Wi-Fi açıkken ilk aramada indirilir	Biblioteka online: pobierana przy pierwszym wyszukiwaniu z włączonym Wi-Fi

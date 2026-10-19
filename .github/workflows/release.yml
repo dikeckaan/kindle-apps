@@ -20,6 +20,21 @@ jobs:
       - uses: actions/checkout@v4
       - name: Fetch dependencies
         run: ./tools/fetch-deps.sh
+      # Tarifler online library (dist/tarif/v1, ~4 MB of recipe shards from Wikibooks) is built here, not kept in git.
+      # The cache keeps the page texts by revision, so a run only fetches pages edited since the last one; when the
+      # Wikibooks API cannot be reached the previous run's library (restored with the cache) is published again.
+      - name: Restore the Tarifler library cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            build/tarif-cache
+            build/tarif-lib
+          key: tarif-lib-${{ github.run_id }}
+          restore-keys: tarif-lib-
+      - name: Tarifler online library
+        run: |
+          make tarif-lib || { echo "::warning::build-shards.py failed, publishing the cached library"; test -f build/tarif-lib/v1/index.tsv; }
+          cat build/tarif-lib/v1/manifest.txt
       - name: Host unit tests
         run: make test
       - name: Translation catalogs
