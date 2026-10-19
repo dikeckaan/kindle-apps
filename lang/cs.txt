@@ -741,3 +741,11 @@ Basit mod: Açık	Jednoduchý režim: Ano
 Basit mod: Kapalı	Jednoduchý režim: Ne
 Kolay okuma: bütün yazılar büyük, kalın ve siyah olur.\nBasit mod: menüde dört büyük düğme; panoda yalnızca saat, hava ve üç haber. Teknik uygulamalar gizlenir; bu ekrandan her zaman geri açılabilir.	Snadné čtení: veškerý text bude velký, tučný a černý.\nJednoduchý režim: čtyři velká tlačítka v menu; přehled ukazuje jen hodiny, počasí a tři zprávy. Technické aplikace se skryjí; na této obrazovce je lze kdykoli znovu zapnout.
 Bulmacalar	Úlohy
+Konum	Poloha
+Şu an: %s	Nyní: %s
+Hava durumundaki şehir (%s)	Město z počasí (%s)
+Haritadan seç	Vybrat na mapě
+Uzaklıklar ve haritadaki ▣ işareti bu konuma göre gösterilir.	Vzdálenosti a značka ▣ na mapě se počítají od této polohy.
+%s yakını	poblíž: %s
+Seçilen yer	Vybrané místo
+Konumunuza dokunun (yakınlaştırabilirsiniz)	Klepněte na svou polohu (lze přiblížit)

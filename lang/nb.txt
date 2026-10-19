@@ -741,3 +741,11 @@ Basit mod: Açık	Enkel modus: På
 Basit mod: Kapalı	Enkel modus: Av
 Kolay okuma: bütün yazılar büyük, kalın ve siyah olur.\nBasit mod: menüde dört büyük düğme; panoda yalnızca saat, hava ve üç haber. Teknik uygulamalar gizlenir; bu ekrandan her zaman geri açılabilir.	Lettlest: all tekst blir stor, fet og svart.\nEnkel modus: fire store knapper i menyen; oversikten viser bare klokke, vær og tre nyheter. Tekniske apper skjules; de kan alltid slås på igjen fra denne skjermen.
 Bulmacalar	Oppgaver
+Konum	Posisjon
+Şu an: %s	Nå: %s
+Hava durumundaki şehir (%s)	Byen fra været (%s)
+Haritadan seç	Velg på kartet
+Uzaklıklar ve haritadaki ▣ işareti bu konuma göre gösterilir.	Avstander og ▣-merket på kartet regnes fra denne posisjonen.
+%s yakını	nær %s
+Seçilen yer	Valgt sted
+Konumunuza dokunun (yakınlaştırabilirsiniz)	Trykk på posisjonen din (du kan zoome)

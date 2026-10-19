@@ -741,3 +741,11 @@ Basit mod: Açık	Modo simples: Sim
 Basit mod: Kapalı	Modo simples: Não
 Kolay okuma: bütün yazılar büyük, kalın ve siyah olur.\nBasit mod: menüde dört büyük düğme; panoda yalnızca saat, hava ve üç haber. Teknik uygulamalar gizlenir; bu ekrandan her zaman geri açılabilir.	Leitura fácil: todo o texto fica grande, em negrito e preto.\nModo simples: quatro botões grandes no menu; o painel mostra só a hora, o tempo e três notícias. As apps técnicas ficam ocultas; pode sempre reativá-las neste ecrã.
 Bulmacalar	Problemas
+Konum	Localização
+Şu an: %s	Agora: %s
+Hava durumundaki şehir (%s)	Cidade do tempo (%s)
+Haritadan seç	Escolher no mapa
+Uzaklıklar ve haritadaki ▣ işareti bu konuma göre gösterilir.	As distâncias e a marca ▣ no mapa são calculadas a partir desta localização.
+%s yakını	perto de %s
+Seçilen yer	Local escolhido
+Konumunuza dokunun (yakınlaştırabilirsiniz)	Toque na sua localização (pode ampliar)

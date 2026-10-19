@@ -741,3 +741,11 @@ Basit mod: Açık	Tryb prosty: Tak
 Basit mod: Kapalı	Tryb prosty: Nie
 Kolay okuma: bütün yazılar büyük, kalın ve siyah olur.\nBasit mod: menüde dört büyük düğme; panoda yalnızca saat, hava ve üç haber. Teknik uygulamalar gizlenir; bu ekrandan her zaman geri açılabilir.	Łatwe czytanie: cały tekst staje się duży, pogrubiony i czarny.\nTryb prosty: cztery duże przyciski w menu; panel pokazuje tylko zegar, pogodę i trzy wiadomości. Aplikacje techniczne są ukryte; zawsze można je przywrócić na tym ekranie.
 Bulmacalar	Zadania
+Konum	Lokalizacja
+Şu an: %s	Teraz: %s
+Hava durumundaki şehir (%s)	Miasto z pogody (%s)
+Haritadan seç	Wybierz na mapie
+Uzaklıklar ve haritadaki ▣ işareti bu konuma göre gösterilir.	Odległości i znak ▣ na mapie liczone są od tej lokalizacji.
+%s yakını	w pobliżu: %s
+Seçilen yer	Wybrane miejsce
+Konumunuza dokunun (yakınlaştırabilirsiniz)	Dotknij swojej lokalizacji (można przybliżyć)

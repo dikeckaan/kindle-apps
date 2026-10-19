@@ -741,3 +741,11 @@ Basit mod: Açık	Простий режим: увімк
 Basit mod: Kapalı	Простий режим: вимк
 Kolay okuma: bütün yazılar büyük, kalın ve siyah olur.\nBasit mod: menüde dört büyük düğme; panoda yalnızca saat, hava ve üç haber. Teknik uygulamalar gizlenir; bu ekrandan her zaman geri açılabilir.	Легке читання: увесь текст стає великим, жирним і чорним.\nПростий режим: чотири великі кнопки в меню; на панелі лише годинник, погода і три новини. Технічні застосунки приховуються; їх завжди можна повернути на цьому екрані.
 Bulmacalar	Задачі
+Konum	Розташування
+Şu an: %s	Зараз: %s
+Hava durumundaki şehir (%s)	Місто з погоди (%s)
+Haritadan seç	Вибрати на мапі
+Uzaklıklar ve haritadaki ▣ işareti bu konuma göre gösterilir.	Відстані та знак ▣ на мапі рахуються від цього місця.
+%s yakını	біля %s
+Seçilen yer	Вибране місце
+Konumunuza dokunun (yakınlaştırabilirsiniz)	Торкніться свого місця (можна наблизити)

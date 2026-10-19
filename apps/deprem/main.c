@@ -59,13 +59,29 @@ static const char *cache_path(void)
 	return p;
 }
 
-static void load_city(void)
+static const char *own_city_path(void)
+{
+	static char p[300];
+	snprintf(p, sizeof p, "%s/city.txt", kui_data_dir("deprem"));
+	return p;
+}
+
+static WxCity weather_city(void)
 {
 	static WxCity c[WX_MAX_CITIES];
 	char p[300];
 	snprintf(p, sizeof p, "%s/cities.txt", kui_data_dir("weather"));
 	wx_cities_load(p, c, WX_MAX_CITIES); /* the weather app's first city (İstanbul / Maltepe when none) */
-	city = c[0];
+	return c[0];
+}
+
+/* the location chosen here (Konum) wins; otherwise the weather app's city */
+static void load_city(void)
+{
+	struct stat st;
+	WxCity c[1];
+	if (stat(own_city_path(), &st) == 0 && wx_cities_load(own_city_path(), c, 1) == 1) city = c[0];
+	else city = weather_city();
 }
 
 static void apply_filter(void)
@@ -516,7 +532,9 @@ static void draw_legend(void)
 	x += 22 + kui_text_width(b, KUI_FONT_REG, 28) + 40;
 	kui_frame((KuiRect){ x - 12, cy - 12, 24, 24 }, 4, 0);
 	kui_fill((KuiRect){ x - 4, cy - 4, 8, 8 }, 0);
-	kui_text((KuiRect){ x + 22, r.y, 300, r.h }, city.name, KUI_FONT_REG, 28, KUI_ALIGN_LEFT, 0);
+	char nm[96];
+	snprintf(nm, sizeof nm, "%s ›", city.name); /* tap: Konum */
+	kui_text((KuiRect){ x + 22, r.y, 300, r.h }, nm, KUI_FONT_BOLD, kui_fit_px(nm, KUI_FONT_BOLD, 28, 290), KUI_ALIGN_LEFT, 0);
 	snprintf(s, sizeof s, T("%d deprem"), n_shown);
 	kui_text((KuiRect){ r.x + r.w - 260, r.y, 250, r.h }, s, KUI_FONT_BOLD, 30, KUI_ALIGN_RIGHT, 0);
 	kui_mark_dirty(r);
@@ -684,6 +702,143 @@ static void detail_screen(int k)
 	}
 }
 
+/* ---- Konum ---- */
+
+static int pick_mode; /* Haritadan seç: the next tap on the map sets the location */
+
+static void set_city(const WxCity *c)
+{
+	city = *c;
+	wx_cities_save(own_city_path(), c, 1);
+}
+
+static void loc_message(const char *msg)
+{
+	const char *ok[] = { T("Tamam") };
+	kui_dialog(T("Konum"), msg, ok, 1, NULL);
+}
+
+/* search with the weather app's geocoder; Wi-Fi only for the request */
+static int search_city(void)
+{
+	char q[96] = "";
+	if (!kui_input_text(T("Şehir veya ilçe ara"), q, sizeof q, 0, 2, NULL)) return 0;
+	int w = kui_width();
+	kui_fill((KuiRect){ 0, 0, w, kui_height() }, 255);
+	kui_topbar(T("Aranıyor…"), NULL);
+	kui_text((KuiRect){ 40, 500, w - 80, 120 }, q, KUI_FONT_BOLD, 48, KUI_ALIGN_CENTER, 0);
+	kui_flush(1);
+	char url[600];
+	char *body = NULL;
+	int len = 0, n = -1;
+	WxCity found[6];
+	int was_off = kui_wifi_enabled() == 0;
+	if (was_off) {
+		kui_wifi_enable(1);
+		kui_wifi_wait(40);
+	}
+	wx_geocode_url(q, kui_lang(), url, sizeof url);
+	if (net_get(url, &body, &len, 20) == 0) n = wx_geocode_parse(body, q, found, 6);
+	free(body);
+	if (was_off) kui_wifi_enable(0);
+	if (n < 0) {
+		loc_message(T("Bağlantı kurulamadı. Wi-Fi açık mı?"));
+		return 0;
+	}
+	if (n == 0) {
+		loc_message(T("Sonuç bulunamadı"));
+		return 0;
+	}
+	KuiButton b[6];
+	char lbl[6][140];
+	for (int full = 1;;) {
+		if (full) {
+			kui_fill((KuiRect){ 0, 0, w, kui_height() }, 255);
+			kui_topbar(T("Sonuçlar"), NULL);
+			for (int i = 0; i < n; i++) {
+				if (found[i].admin[0]) snprintf(lbl[i], sizeof lbl[i], "%s, %s", found[i].name, found[i].admin);
+				else snprintf(lbl[i], sizeof lbl[i], "%s", found[i].name);
+				b[i] = (KuiButton){ { 40, KUI_TOPBAR_H + 40 + i * 170, w - 80, 140 }, lbl[i], i + 1 };
+				kui_button(&b[i], 0);
+			}
+			kui_flush(1);
+			full = 0;
+		}
+		KuiEvent e = kui_next_event(-1);
+		if (e.type == KUI_EV_QUIT) return 0;
+		if (e.type == KUI_EV_WAKE) { full = 1; continue; }
+		if (e.type != KUI_EV_TAP) continue;
+		if (kui_topbar_hit(w, 0, e.x, e.y) == KUI_BTN_EXIT) return 0;
+		int id = kui_buttons_hit(b, n, e.x, e.y);
+		if (id) {
+			set_city(&found[id - 1]);
+			return 1;
+		}
+	}
+}
+
+/* Konum: search a place, pick it on the map, or follow the weather app's city */
+static void location_screen(void)
+{
+	enum { L_SEARCH = 1, L_MAP, L_WEATHER };
+	int w = kui_width();
+	for (int full = 1;;) {
+		char cur[160], wl[160];
+		WxCity wc = weather_city();
+		snprintf(cur, sizeof cur, T("Şu an: %s"), city.name);
+		snprintf(wl, sizeof wl, T("Hava durumundaki şehir (%s)"), wc.name);
+		KuiButton b[3] = { { { 40, KUI_TOPBAR_H + 170, w - 80, 160 }, T("Şehir veya ilçe ara"), L_SEARCH },
+				   { { 40, KUI_TOPBAR_H + 370, w - 80, 160 }, T("Haritadan seç"), L_MAP },
+				   { { 40, KUI_TOPBAR_H + 570, w - 80, 160 }, wl, L_WEATHER } };
+		if (full) {
+			kui_fill((KuiRect){ 0, 0, w, kui_height() }, 255);
+			kui_topbar(T("Konum"), NULL);
+			kui_text((KuiRect){ 40, KUI_TOPBAR_H + 40, w - 80, 90 }, cur, KUI_FONT_BOLD, kui_fit_px(cur, KUI_FONT_BOLD, 44, w - 80), KUI_ALIGN_CENTER, 0);
+			for (int i = 0; i < 3; i++) kui_button(&b[i], 0);
+			kui_text((KuiRect){ 60, KUI_TOPBAR_H + 780, w - 120, 200 },
+				 T("Uzaklıklar ve haritadaki ▣ işareti bu konuma göre gösterilir."), KUI_FONT_REG, 34, KUI_ALIGN_LEFT, 0);
+			kui_flush(1);
+			full = 0;
+		}
+		KuiEvent e = kui_next_event(-1);
+		if (e.type == KUI_EV_QUIT) return;
+		if (e.type == KUI_EV_WAKE) { full = 1; continue; }
+		if (e.type != KUI_EV_TAP) continue;
+		if (kui_topbar_hit(w, 0, e.x, e.y) == KUI_BTN_EXIT) return;
+		int id = kui_buttons_hit(b, 3, e.x, e.y);
+		if (id == L_SEARCH) {
+			if (search_city()) return;
+			full = 1;
+		} else if (id == L_MAP) {
+			pick_mode = 1;
+			return;
+		} else if (id == L_WEATHER) {
+			remove(own_city_path());
+			city = wc;
+			return;
+		}
+	}
+}
+
+/* Haritadan seç: the tapped point, named after the nearest province centre */
+static void pick_on_map(int x, int y)
+{
+	DqProj p;
+	map_proj(map_rect(), &mview, &p);
+	WxCity c = { "", "", 0, 0 };
+	dq_unproject(&p, x, y, &c.lat, &c.lon);
+	int best = -1;
+	double bd = 1e9;
+	for (int i = 0; i < dq_n_cities; i++) {
+		double d = dq_distance_km(c.lat, c.lon, dq_cities[i].lat, dq_cities[i].lon);
+		if (d < bd) bd = d, best = i;
+	}
+	if (best >= 0 && bd < 25) snprintf(c.name, sizeof c.name, "%s", dq_cities[best].name);
+	else if (best >= 0) snprintf(c.name, sizeof c.name, T("%s yakını"), dq_cities[best].name);
+	else snprintf(c.name, sizeof c.name, "%s", T("Seçilen yer"));
+	set_city(&c);
+}
+
 /* ---- main ---- */
 
 static void refresh(void)
@@ -796,6 +951,26 @@ int main(void)
 			continue;
 		}
 		int k = -1;
+		if (view == 0 && pick_mode && !kui_buttons_hit(zbtn, n_zbtn, e.x, e.y)) { /* Haritadan seç: a tap on the map sets the location, anywhere else cancels */
+			pick_mode = 0;
+			if (kui_rect_contains(map_rect(), e.x, e.y)) {
+				pick_on_map(e.x, e.y);
+				draw_content();
+			}
+			status_msg = NULL;
+			draw_status(1);
+			kui_flush(0);
+			continue;
+		}
+		if (view == 0 && kui_rect_contains(legend_rect(), e.x, e.y)) {
+			location_screen();
+			if (pick_mode) {
+				view = 0;
+				status_msg = T("Konumunuza dokunun (yakınlaştırabilirsiniz)");
+			}
+			draw_screen();
+			continue;
+		}
 		if (view == 0) {
 			int z = kui_buttons_hit(zbtn, n_zbtn, e.x, e.y);
 			if (z) {

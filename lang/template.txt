@@ -61,6 +61,8 @@
 %s kuruldu	
 # apps/weather/main.c
 %s silinsin mi?	
+# apps/deprem/main.c
+%s yakını	
 # apps/news/main.c
 %s yükleniyor… (%d)	
 # apps/sky/main.c
@@ -163,7 +165,7 @@ Ara hamle
 Arabacı	
 # core/kui/trfmt.c
 Aralık	
-# apps/ebooks/main.c
+# apps/deprem/main.c
 Aranıyor…	
 # apps/chess/puzzle.c
 Arap matı	
@@ -231,7 +233,7 @@ Basit mod: Açık
 Basit mod: Kapalı	
 # core/hub/upd_ui.c
 Bazı güncellemeler kurulamadı	
-# apps/weather/main.c
+# apps/deprem/main.c
 Bağlantı kurulamadı. Wi-Fi açık mı?	
 # apps/ebooks/main.c
 Bağlantı yok	
@@ -543,6 +545,8 @@ Hamlenizi yapın · Seri: %d
 Harika!	
 # apps/deprem/main.c
 Harita	
+# apps/deprem/main.c
+Haritadan seç	
 # core/hub/main.c
 Hata	
 # apps/sudoku/main.c
@@ -561,6 +565,8 @@ Hava durumu alınamadı.\nWi-Fi bağlantısını kontrol edip Yenile'ye basın.
 Hava durumu yok (Wi-Fi kapalı olabilir)	
 # core/kui/powerui.c
 Hava durumu: %d saatte bir	
+# apps/deprem/main.c
+Hava durumundaki şehir (%s)	
 # apps/chess/main.c
 Hayır	
 # core/kui/trfmt.c
@@ -703,6 +709,10 @@ Kolay okuma: Açık
 Kolay okuma: Kapalı	
 # core/hub/main.c
 Kolay okuma: bütün yazılar büyük, kalın ve siyah olur.\nBasit mod: menüde dört büyük düğme; panoda yalnızca saat, hava ve üç haber. Teknik uygulamalar gizlenir; bu ekrandan her zaman geri açılabilir.	
+# apps/deprem/main.c
+Konum	
+# apps/deprem/main.c
+Konumunuza dokunun (yakınlaştırabilirsiniz)	
 # apps/deprem/main.c
 Koordinatlar	
 # apps/chess/puzzle.c
@@ -997,6 +1007,8 @@ Seri
 Seri: %d · En iyi seri: %d	
 # apps/chess/puzzle.c
 Sessiz hamle	
+# apps/deprem/main.c
+Seçilen yer	
 # apps/ajanda/main.c
 Sil	
 # apps/sky/skydata.c
@@ -1035,11 +1047,11 @@ Sonraki
 Sonraki aşama kendiliğinden başlasın	
 # apps/chess/puzzle_ui.c
 Sonraki hamle	
-# apps/weather/main.c
+# apps/deprem/main.c
 Sonuç bulunamadı	
 # apps/ebooks/main.c
 Sonuç bulunamadı.\nBaşka bir başlık ya da yazar adı deneyin.	
-# apps/ebooks/main.c
+# apps/deprem/main.c
 Sonuçlar	
 # apps/sky/skydata.c
 Spika	
@@ -1125,7 +1137,7 @@ Tüm uygulamalar güncel
 Tümü	
 # core/hub/upd_ui.c
 Tümünü güncelle	
-# apps/news/news.c
+# apps/deprem/main.c
 Türkiye	
 # apps/deprem/main.c
 Türkiye saati	
@@ -1153,6 +1165,8 @@ Uykuya geçiş: %d dk dokunulmazsa
 Uzaklık	
 # apps/sky/main.c
 Uzaklık %s AB (Güneş–Dünya = 1)	
+# apps/deprem/main.c
+Uzaklıklar ve haritadaki ▣ işareti bu konuma göre gösterilir.	
 # apps/odak/main.c
 Uzun mola: %s	
 # apps/odak/main.c
@@ -1409,7 +1423,7 @@ yarım gün
 Şarjda: uyanık kalıyor	
 # apps/weather/main.c
 Şehir ara	
-# apps/weather/main.c
+# apps/deprem/main.c
 Şehir veya ilçe ara	
 # apps/weather/main.c
 Şehirler	
@@ -1441,6 +1455,8 @@ yarım gün
 Şu an: %d dakika	
 # apps/sleep/sleep_opts.c
 Şu an: %d saat	
+# apps/deprem/main.c
+Şu an: %s	
 # apps/sleep/sleep_opts.c
 Şu an: hiç uyumuyor	
 # core/kui/trfmt.c

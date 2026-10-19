@@ -741,3 +741,11 @@ Basit mod: Açık	Enkelt läge: På
 Basit mod: Kapalı	Enkelt läge: Av
 Kolay okuma: bütün yazılar büyük, kalın ve siyah olur.\nBasit mod: menüde dört büyük düğme; panoda yalnızca saat, hava ve üç haber. Teknik uygulamalar gizlenir; bu ekrandan her zaman geri açılabilir.	Lättläst: all text blir stor, fet och svart.\nEnkelt läge: fyra stora knappar i menyn; översikten visar bara klocka, väder och tre nyheter. Tekniska appar döljs; de kan alltid slås på igen från den här skärmen.
 Bulmacalar	Problem
+Konum	Plats
+Şu an: %s	Nu: %s
+Hava durumundaki şehir (%s)	Väderappens stad (%s)
+Haritadan seç	Välj på kartan
+Uzaklıklar ve haritadaki ▣ işareti bu konuma göre gösterilir.	Avstånd och ▣-markeringen på kartan utgår från den här platsen.
+%s yakını	nära %s
+Seçilen yer	Vald plats
+Konumunuza dokunun (yakınlaştırabilirsiniz)	Tryck på din plats (du kan zooma)

@@ -741,3 +741,11 @@ Basit mod: Açık	Enkel tilstand: Til
 Basit mod: Kapalı	Enkel tilstand: Fra
 Kolay okuma: bütün yazılar büyük, kalın ve siyah olur.\nBasit mod: menüde dört büyük düğme; panoda yalnızca saat, hava ve üç haber. Teknik uygulamalar gizlenir; bu ekrandan her zaman geri açılabilir.	Let læsning: al tekst bliver stor, fed og sort.\nEnkel tilstand: fire store knapper i menuen; oversigten viser kun ur, vejr og tre nyheder. Tekniske apps skjules; de kan altid slås til igen fra denne skærm.
 Bulmacalar	Opgaver
+Konum	Placering
+Şu an: %s	Nu: %s
+Hava durumundaki şehir (%s)	Vejrappens by (%s)
+Haritadan seç	Vælg på kortet
+Uzaklıklar ve haritadaki ▣ işareti bu konuma göre gösterilir.	Afstande og ▣-mærket på kortet regnes fra denne placering.
+%s yakını	nær %s
+Seçilen yer	Valgt sted
+Konumunuza dokunun (yakınlaştırabilirsiniz)	Tryk på din placering (du kan zoome)

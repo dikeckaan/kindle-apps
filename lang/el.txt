@@ -741,3 +741,11 @@ Basit mod: Açık	Απλή λειτουργία: Ναι
 Basit mod: Kapalı	Απλή λειτουργία: Όχι
 Kolay okuma: bütün yazılar büyük, kalın ve siyah olur.\nBasit mod: menüde dört büyük düğme; panoda yalnızca saat, hava ve üç haber. Teknik uygulamalar gizlenir; bu ekrandan her zaman geri açılabilir.	Εύκολη ανάγνωση: όλα τα κείμενα γίνονται μεγάλα, έντονα και μαύρα.\nΑπλή λειτουργία: τέσσερα μεγάλα κουμπιά στο μενού· ο πίνακας δείχνει μόνο ώρα, καιρό και τρεις ειδήσεις. Οι τεχνικές εφαρμογές κρύβονται· μπορούν πάντα να ενεργοποιηθούν ξανά από αυτή την οθόνη.
 Bulmacalar	Γρίφοι
+Konum	Τοποθεσία
+Şu an: %s	Τώρα: %s
+Hava durumundaki şehir (%s)	Πόλη του καιρού (%s)
+Haritadan seç	Επιλογή στον χάρτη
+Uzaklıklar ve haritadaki ▣ işareti bu konuma göre gösterilir.	Οι αποστάσεις και το σήμα ▣ στον χάρτη υπολογίζονται από αυτή την τοποθεσία.
+%s yakını	κοντά σε %s
+Seçilen yer	Επιλεγμένο σημείο
+Konumunuza dokunun (yakınlaştırabilirsiniz)	Αγγίξτε την τοποθεσία σας (μπορείτε να μεγεθύνετε)

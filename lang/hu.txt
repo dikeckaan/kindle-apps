@@ -741,3 +741,11 @@ Basit mod: Açık	Egyszerű mód: Be
 Basit mod: Kapalı	Egyszerű mód: Ki
 Kolay okuma: bütün yazılar büyük, kalın ve siyah olur.\nBasit mod: menüde dört büyük düğme; panoda yalnızca saat, hava ve üç haber. Teknik uygulamalar gizlenir; bu ekrandan her zaman geri açılabilir.	Könnyű olvasás: minden szöveg nagy, félkövér és fekete lesz.\nEgyszerű mód: négy nagy gomb a menüben; az áttekintő csak az órát, az időjárást és három hírt mutatja. A technikai alkalmazások elrejtődnek; ezen a képernyőn bármikor visszakapcsolhatók.
 Bulmacalar	Feladványok
+Konum	Hely
+Şu an: %s	Most: %s
+Hava durumundaki şehir (%s)	Az időjárás városa (%s)
+Haritadan seç	Kiválasztás a térképen
+Uzaklıklar ve haritadaki ▣ işareti bu konuma göre gösterilir.	A távolságok és a térkép ▣ jele ehhez a helyhez igazodik.
+%s yakını	%s közelében
+Seçilen yer	Kiválasztott hely
+Konumunuza dokunun (yakınlaştırabilirsiniz)	Koppintson a helyére (nagyíthat)

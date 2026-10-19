@@ -741,3 +741,11 @@ Basit mod: Açık	Mod simplu: Da
 Basit mod: Kapalı	Mod simplu: Nu
 Kolay okuma: bütün yazılar büyük, kalın ve siyah olur.\nBasit mod: menüde dört büyük düğme; panoda yalnızca saat, hava ve üç haber. Teknik uygulamalar gizlenir; bu ekrandan her zaman geri açılabilir.	Citire ușoară: tot textul devine mare, îngroșat și negru.\nMod simplu: patru butoane mari în meniu; panoul arată doar ora, vremea și trei știri. Aplicațiile tehnice sunt ascunse; le puteți reactiva oricând din acest ecran.
 Bulmacalar	Probleme
+Konum	Locație
+Şu an: %s	Acum: %s
+Hava durumundaki şehir (%s)	Orașul din vreme (%s)
+Haritadan seç	Alege pe hartă
+Uzaklıklar ve haritadaki ▣ işareti bu konuma göre gösterilir.	Distanțele și semnul ▣ de pe hartă se calculează față de această locație.
+%s yakını	lângă %s
+Seçilen yer	Loc ales
+Konumunuza dokunun (yakınlaştırabilirsiniz)	Atingeți locația dvs. (puteți mări)

@@ -741,3 +741,11 @@ Basit mod: Açık	Eenvoudige modus: Aan
 Basit mod: Kapalı	Eenvoudige modus: Uit
 Kolay okuma: bütün yazılar büyük, kalın ve siyah olur.\nBasit mod: menüde dört büyük düğme; panoda yalnızca saat, hava ve üç haber. Teknik uygulamalar gizlenir; bu ekrandan her zaman geri açılabilir.	Makkelijk lezen: alle tekst wordt groot, vet en zwart.\nEenvoudige modus: vier grote knoppen in het menu; het overzicht toont alleen klok, weer en drie nieuwsberichten. Technische apps worden verborgen; via dit scherm altijd weer aan te zetten.
 Bulmacalar	Puzzels
+Konum	Locatie
+Şu an: %s	Nu: %s
+Hava durumundaki şehir (%s)	Stad uit het weer (%s)
+Haritadan seç	Kies op de kaart
+Uzaklıklar ve haritadaki ▣ işareti bu konuma göre gösterilir.	Afstanden en het ▣-teken op de kaart gaan uit van deze locatie.
+%s yakını	bij %s
+Seçilen yer	Gekozen plek
+Konumunuza dokunun (yakınlaştırabilirsiniz)	Tik op uw locatie (inzoomen kan)
