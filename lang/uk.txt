@@ -986,3 +986,31 @@ henüz indirilmedi	ще не завантажено
 Şiir Defteri kuruluysa onun günün şiiri, değilse bir atasözü	Вірш дня із «Зошита віршів», якщо його встановлено, інакше прислів'я
 Şimdi indir	Завантажити зараз
 ☾ %02d:%02d'de güncellendi · sonraki %02d:%02d	☾ оновлено о %02d:%02d · наступне %02d:%02d
+%d yanlış harf	Неправильних літер: %d
+%d yanlış harf (çizildi), %d boş kare var.	Неправильних літер: %d (закреслені), порожніх клітинок: %d.
+%d yanlış harf var; çizili kareler.	Неправильних літер: %d; їх закреслено.
+Arşiv	Архів
+Bir kareye dokunun	Торкніться клітинки
+Bitti	Готово
+Bu bulmacadaki bütün harfler silinsin mi?	Стерти всі літери в цьому кросворді?
+Bulmaca	Кросворд
+Bulmaca No. %d	Кросворд № %d
+Bulmacalar yüklenemedi. Uygulamayı yeniden kurun.	Не вдалося завантажити кросворди. Перевстановіть застосунок.
+Bulmacayı %s içinde çözdünüz.	Ви розв’язали кросворд за %s.
+Bulmacayı %s içinde, hiç harf açmadan çözdünüz.	Ви розв’язали кросворд за %s, не відкривши жодної літери.
+Bulmacayı sıfırla	Скинути кросворд
+En kısa süre	Найкращий час
+Harf aç	Відкрити літеру
+Harfler doğru; %d boş kare kaldı.	Літери правильні; залишилося порожніх клітинок: %d.
+Henüz bitmedi	Ще не все
+Kelimeyi kontrol et	Перевірити слово
+No. %d	№ %d
+Ortalama süre	Середній час
+Seri: günün bulmacasını kendi gününde çözdüğünüz ardışık günler. Yardımsız: hiç harf açmadan.	Серія: дні поспіль, коли ви розв’язували кросворд дня. Без підказок: не відкриваючи літер.
+Soldan sağa	По горизонталі
+Sıfırla	Скинути
+Yardımsız	Без підказок
+Yukarıdan aşağıya	По вертикалі
+harf	літер
+Çözülen	Розв’язано
+Şimdilik doğru, %d boş kare	Поки правильно, порожніх клітинок: %d

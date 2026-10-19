@@ -986,3 +986,31 @@ henüz indirilmedi	δεν έχει γίνει λήψη ακόμα
 Şiir Defteri kuruluysa onun günün şiiri, değilse bir atasözü	Το ποίημα της ημέρας από το Τετράδιο ποιημάτων αν είναι εγκατεστημένο, αλλιώς μια παροιμία
 Şimdi indir	Λήψη τώρα
 ☾ %02d:%02d'de güncellendi · sonraki %02d:%02d	☾ ενημέρωση %02d:%02d · επόμενη %02d:%02d
+%d yanlış harf	%d λάθος γράμματα
+%d yanlış harf (çizildi), %d boş kare var.	%d λάθος γράμματα (διαγραμμένα), %d κενά τετράγωνα.
+%d yanlış harf var; çizili kareler.	%d λάθος γράμματα· είναι διαγραμμένα.
+Arşiv	Αρχείο
+Bir kareye dokunun	Αγγίξτε ένα τετράγωνο
+Bitti	Τέλος
+Bu bulmacadaki bütün harfler silinsin mi?	Να σβηστούν όλα τα γράμματα του σταυρόλεξου;
+Bulmaca	Σταυρόλεξο
+Bulmaca No. %d	Σταυρόλεξο αρ. %d
+Bulmacalar yüklenemedi. Uygulamayı yeniden kurun.	Δεν ήταν δυνατή η φόρτωση των σταυρόλεξων. Εγκαταστήστε ξανά την εφαρμογή.
+Bulmacayı %s içinde çözdünüz.	Λύσατε το σταυρόλεξο σε %s.
+Bulmacayı %s içinde, hiç harf açmadan çözdünüz.	Λύσατε το σταυρόλεξο σε %s χωρίς να αποκαλύψετε γράμμα.
+Bulmacayı sıfırla	Επαναφορά σταυρόλεξου
+En kısa süre	Καλύτερος χρόνος
+Harf aç	Αποκάλυψη γράμματος
+Harfler doğru; %d boş kare kaldı.	Τα γράμματα είναι σωστά· απομένουν %d κενά τετράγωνα.
+Henüz bitmedi	Δεν τελείωσε ακόμη
+Kelimeyi kontrol et	Έλεγχος λέξης
+No. %d	Αρ. %d
+Ortalama süre	Μέσος χρόνος
+Seri: günün bulmacasını kendi gününde çözdüğünüz ardışık günler. Yardımsız: hiç harf açmadan.	Σερί: συνεχόμενες μέρες που λύσατε το σταυρόλεξο της ημέρας. Χωρίς βοήθεια: χωρίς αποκάλυψη γράμματος.
+Soldan sağa	Οριζόντια
+Sıfırla	Επαναφορά
+Yardımsız	Χωρίς βοήθεια
+Yukarıdan aşağıya	Κάθετα
+harf	γράμματα
+Çözülen	Λυμένα
+Şimdilik doğru, %d boş kare	Σωστά ως τώρα, %d κενά τετράγωνα

@@ -986,3 +986,31 @@ henüz indirilmedi	încă nedescărcat
 Şiir Defteri kuruluysa onun günün şiiri, değilse bir atasözü	Poezia zilei din Caiet de poezii dacă e instalat, altfel un proverb
 Şimdi indir	Descărcați acum
 ☾ %02d:%02d'de güncellendi · sonraki %02d:%02d	☾ actualizat la %02d:%02d · următoarea %02d:%02d
+%d yanlış harf	%d litere greșite
+%d yanlış harf (çizildi), %d boş kare var.	%d litere greșite (tăiate), %d pătrățele goale.
+%d yanlış harf var; çizili kareler.	%d litere greșite; sunt tăiate.
+Arşiv	Arhivă
+Bir kareye dokunun	Atingeți un pătrățel
+Bitti	Gata
+Bu bulmacadaki bütün harfler silinsin mi?	Ștergeți toate literele din acest careu?
+Bulmaca	Careu
+Bulmaca No. %d	Careul nr. %d
+Bulmacalar yüklenemedi. Uygulamayı yeniden kurun.	Careurile nu au putut fi încărcate. Reinstalați aplicația.
+Bulmacayı %s içinde çözdünüz.	Ați rezolvat careul în %s.
+Bulmacayı %s içinde, hiç harf açmadan çözdünüz.	Ați rezolvat careul în %s fără să dezvăluiți vreo literă.
+Bulmacayı sıfırla	Resetați careul
+En kısa süre	Cel mai bun timp
+Harf aç	Dezvăluie litera
+Harfler doğru; %d boş kare kaldı.	Literele sunt corecte; au rămas %d pătrățele goale.
+Henüz bitmedi	Nu e gata încă
+Kelimeyi kontrol et	Verifică cuvântul
+No. %d	Nr. %d
+Ortalama süre	Timp mediu
+Seri: günün bulmacasını kendi gününde çözdüğünüz ardışık günler. Yardımsız: hiç harf açmadan.	Serie: zile consecutive în care ați rezolvat careul zilei. Fără ajutor: fără să dezvăluiți vreo literă.
+Soldan sağa	Orizontal
+Sıfırla	Resetează
+Yardımsız	Fără ajutor
+Yukarıdan aşağıya	Vertical
+harf	litere
+Çözülen	Rezolvate
+Şimdilik doğru, %d boş kare	Corect până acum, %d pătrățele goale

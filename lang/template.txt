@@ -39,6 +39,12 @@
 %d sa %d dk	
 # apps/deprem/deprem.c
 %d sa önce	
+# apps/bulmaca/main.c
+%d yanlış harf	
+# apps/bulmaca/main.c
+%d yanlış harf (çizildi), %d boş kare var.	
+# apps/bulmaca/main.c
+%d yanlış harf var; çizili kareler.	
 # apps/akis/main.c
 %d yazı · %s	
 # apps/siir/main.c
@@ -247,6 +253,8 @@ Araya girme
 Arka plan	
 # apps/sky/skydata.c
 Arktürüs	
+# apps/bulmaca/main.c
+Arşiv	
 # apps/sky/skydata.c
 Aslan	
 # apps/vakit/main.c
@@ -357,10 +365,14 @@ Bilim (Türkçe)
 Bilim (dünya)	
 # apps/uyku/main.c
 Bir dakika içinde seçilmezse uykuya devam eder.	
+# apps/bulmaca/main.c
+Bir kareye dokunun	
 # apps/akis/main.c
 Bir sitenin RSS / Atom adresi	
 # apps/odak/main.c
 Bitir	
+# apps/bulmaca/main.c
+Bitti	
 # apps/ebooks/main.c
 Biçim:	
 # apps/ebooks/main.c
@@ -385,6 +397,8 @@ Bu akış zaten listede.
 Bu akışın kayıtlı yazısı yok.\nYenile'ye dokunun.	
 # apps/akis/main.c
 Bu bir web adresi değil.	
+# apps/bulmaca/main.c
+Bu bulmacadaki bütün harfler silinsin mi?	
 # apps/sky/main.c
 Bu gece görünen gezegenler: %s	
 # apps/sky/main.c
@@ -417,6 +431,10 @@ Bugün %s · %d oturum · Seri %d gün
 Bugün Güneş kıble yönünden geçmiyor.	
 # apps/vakit/main.c
 Bugün vakit hesaplanamıyor	
+# apps/bulmaca/main.c
+Bulmaca	
+# apps/bulmaca/main.c
+Bulmaca No. %d	
 # apps/chess/puzzle_ui.c
 Bulmaca alınamadı	
 # apps/chess/puzzle_ui.c
@@ -429,6 +447,14 @@ Bulmaca: lichess.org · güncellendi %s
 Bulmaca: lichess.org · çevrimdışı, son veri %s	
 # apps/chess/main.c
 Bulmacalar	
+# apps/bulmaca/main.c
+Bulmacalar yüklenemedi. Uygulamayı yeniden kurun.	
+# apps/bulmaca/main.c
+Bulmacayı %s içinde çözdünüz.	
+# apps/bulmaca/main.c
+Bulmacayı %s içinde, hiç harf açmadan çözdünüz.	
+# apps/bulmaca/main.c
+Bulmacayı sıfırla	
 # apps/sudoku/main.c
 Bulmacayı çözdünüz.	
 # apps/masa/go_ui.c
@@ -537,7 +563,7 @@ Dosya bekleniyor…
 Dosya yazılamadı.	
 # apps/chess/puzzle_ui.c
 Doğru değil, tekrar dene	
-# apps/chess/puzzle_ui.c
+# apps/bulmaca/main.c
 Doğru!	
 # apps/chess/puzzle_ui.c
 Doğru! Devam edin	
@@ -583,8 +609,10 @@ En büyükler
 En fazla 10 şehir kaydedilebilir.	
 # apps/game2048/main.c
 En iyi	
-# apps/wordle/main.c
+# apps/bulmaca/main.c
 En iyi seri	
+# apps/bulmaca/main.c
+En kısa süre	
 # apps/sky/main.c
 En parlak yıldızı: %s	
 # apps/vakit/main.c
@@ -689,7 +717,7 @@ Güneş doğuşu %s · batışı %s · gün %d sa %d dk
 Güneş şu an ufkun altında	
 # apps/vakit/vakit.c
 Güneşe %s	
-# apps/chess/puzzle_ui.c
+# apps/bulmaca/main.c
 Günün bulmacası	
 # apps/uyku/main.c
 Günün sözü	
@@ -719,6 +747,10 @@ Haberler alınamadı.\nWi-Fi bağlantısını kontrol edin.
 Hafta %d · Gün %d	
 # apps/chess/puzzle_ui.c
 Hamlenizi yapın · Seri: %d	
+# apps/bulmaca/main.c
+Harf aç	
+# apps/bulmaca/main.c
+Harfler doğru; %d boş kare kaldı.	
 # apps/wordle/main.c
 Harika!	
 # apps/deprem/main.c
@@ -759,6 +791,8 @@ Haziran
 Hedef para	
 # apps/akis/main.c
 Henüz akış yok	
+# apps/bulmaca/main.c
+Henüz bitmedi	
 # apps/siir/main.c
 Henüz favori şiir yok.\nBir şiirde ☆ düğmesine dokunun.	
 # apps/ebooks/main.c
@@ -903,6 +937,8 @@ Kelime Oyunu
 Kelime listesi bulunamadı. Uygulamayı yeniden kurun.	
 # apps/wordle/main.c
 Kelime: %s	
+# apps/bulmaca/main.c
+Kelimeyi kontrol et	
 # apps/odak/main.c
 Kendiliğinden başladı. Zamanlayıcı için dokunun.	
 # apps/upload/main.c
@@ -1093,6 +1129,8 @@ Namaz vakitleri alınamadı
 Nem %s	
 # core/kui/trfmt.c
 Nisan	
+# apps/bulmaca/main.c
+No. %d	
 # apps/ajanda/main.c
 Not	
 # apps/notlar/main.c
@@ -1135,6 +1173,8 @@ Okuma
 Ons (USD)	
 # apps/chess/levels.c
 Orta	
+# apps/bulmaca/main.c
+Ortalama süre	
 # apps/solitaire/main.c
 Otomatik tamamla	
 # apps/odak/main.c
@@ -1313,10 +1353,12 @@ Sayımı onayla
 Sağanak	
 # apps/news/news.c
 Sağlık	
-# apps/odak/main.c
+# apps/bulmaca/main.c
 Seri	
 # apps/chess/puzzle_ui.c
 Seri: %d · En iyi seri: %d	
+# apps/bulmaca/main.c
+Seri: günün bulmacasını kendi gününde çözdüğünüz ardışık günler. Yardımsız: hiç harf açmadan.	
 # apps/chess/puzzle.c
 Sessiz hamle	
 # apps/deprem/main.c
@@ -1353,6 +1395,8 @@ Siyah oynar
 Skor	
 # apps/game2048/main.c
 Skor: %d	
+# apps/bulmaca/main.c
+Soldan sağa	
 # apps/solitaire/main.c
 Solitaire	
 # apps/odak/main.c
@@ -1403,6 +1447,8 @@ Süheyl
 Süre	
 # apps/mines/main.c
 Süre: %ld:%02ld	
+# apps/bulmaca/main.c
+Sıfırla	
 # apps/chess/main.c
 Sıra: %s	
 # apps/masa/dm_ui.c
@@ -1451,7 +1497,7 @@ Tarayıcıda bu adresi açın:
 Tarihte bugün	
 # apps/pano/main.c
 Tarihte bugün · %d	
-# apps/game2048/main.c
+# apps/bulmaca/main.c
 Tebrikler!	
 # apps/solitaire/main.c
 Tek kart çek	
@@ -1579,6 +1625,8 @@ Wi-Fi'yi açın; adres burada görünecek.
 Wi-Fi'ı aç	
 # apps/ajanda/main.c
 Yaklaşanlar	
+# apps/bulmaca/main.c
+Yardımsız	
 # core/kui/powerui.c
 Yarım	
 # apps/currency/fx.c
@@ -1649,6 +1697,8 @@ Yetersiz taş — berabere
 Yol açma	
 # apps/weather/wx.c
 Yoğun kar	
+# apps/bulmaca/main.c
+Yukarıdan aşağıya	
 # apps/chess/puzzle_ui.c
 Yükleniyor…	
 # apps/sky/main.c
@@ -1705,6 +1755,8 @@ documents/akis.opml: yedek ya da başka bir okuyucu için
 f2/f7 saldırısı	
 # apps/news/main.c
 güncellendi %02d:%02d	
+# apps/bulmaca/main.c
+harf	
 # apps/akis/main.c
 henüz indirilmedi	
 # apps/notlar/main.c
@@ -1761,10 +1813,12 @@ yarım gün
 Çok fazla yanlış PIN denendi.\nGüvenlik için yükleme durduruldu.	
 # apps/wordle/main.c
 Çok iyi!	
-# apps/chess/puzzle_ui.c
+# apps/bulmaca/main.c
 Çözüldü	
 # apps/chess/puzzle_ui.c
 Çözüldü (hatalı) · Seri: %d	
+# apps/bulmaca/main.c
+Çözülen	
 # apps/chess/puzzle_ui.c
 Çözülen: %d / %d	
 # apps/chess/puzzle_ui.c
@@ -1857,7 +1911,7 @@ yarım gün
 İpucu: işaretli taşı oynayın	
 # apps/masa/rv_ui.c
 İpucu: kapalı	
-# apps/odak/main.c
+# apps/bulmaca/main.c
 İstatistik	
 # apps/masa/main.c
 İstatistikler	
@@ -1909,6 +1963,8 @@ yarım gün
 Şimdi	
 # apps/akis/main.c
 Şimdi indir	
+# apps/bulmaca/main.c
+Şimdilik doğru, %d boş kare	
 # apps/chess/puzzle.c
 Şiş	
 # apps/pano/pano.c

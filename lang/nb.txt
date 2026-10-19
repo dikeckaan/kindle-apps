@@ -986,3 +986,31 @@ henüz indirilmedi	ikke hentet ennå
 Şiir Defteri kuruluysa onun günün şiiri, değilse bir atasözü	Dagens dikt fra Diktbok hvis den er installert, ellers et ordtak
 Şimdi indir	Hent nå
 ☾ %02d:%02d'de güncellendi · sonraki %02d:%02d	☾ oppdatert %02d:%02d · neste %02d:%02d
+%d yanlış harf	%d feil bokstaver
+%d yanlış harf (çizildi), %d boş kare var.	%d feil bokstaver (strøket over), %d tomme ruter.
+%d yanlış harf var; çizili kareler.	%d feil bokstaver; de er strøket over.
+Arşiv	Arkiv
+Bir kareye dokunun	Trykk på en rute
+Bitti	Ferdig
+Bu bulmacadaki bütün harfler silinsin mi?	Slette alle bokstavene i dette kryssordet?
+Bulmaca	Kryssord
+Bulmaca No. %d	Kryssord nr. %d
+Bulmacalar yüklenemedi. Uygulamayı yeniden kurun.	Kryssordene kunne ikke lastes inn. Installer appen på nytt.
+Bulmacayı %s içinde çözdünüz.	Du løste kryssordet på %s.
+Bulmacayı %s içinde, hiç harf açmadan çözdünüz.	Du løste kryssordet på %s uten å vise en eneste bokstav.
+Bulmacayı sıfırla	Nullstill kryssordet
+En kısa süre	Raskeste tid
+Harf aç	Vis bokstav
+Harfler doğru; %d boş kare kaldı.	Bokstavene stemmer; %d tomme ruter igjen.
+Henüz bitmedi	Ikke ferdig ennå
+Kelimeyi kontrol et	Kontroller ordet
+No. %d	Nr. %d
+Ortalama süre	Gjennomsnittstid
+Seri: günün bulmacasını kendi gününde çözdüğünüz ardışık günler. Yardımsız: hiç harf açmadan.	Rekke: dager på rad da du løste dagens kryssord. Uten hjelp: uten å vise en bokstav.
+Soldan sağa	Vannrett
+Sıfırla	Nullstill
+Yardımsız	Uten hjelp
+Yukarıdan aşağıya	Loddrett
+harf	bokstaver
+Çözülen	Løst
+Şimdilik doğru, %d boş kare	Riktig så langt, %d tomme ruter

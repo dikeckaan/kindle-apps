@@ -986,3 +986,31 @@ henüz indirilmedi	még nincs letöltve
 Şiir Defteri kuruluysa onun günün şiiri, değilse bir atasözü	A Versesfüzet napi verse, ha telepítve van, különben egy közmondás
 Şimdi indir	Letöltés most
 ☾ %02d:%02d'de güncellendi · sonraki %02d:%02d	☾ frissítve %02d:%02d · következő %02d:%02d
+%d yanlış harf	%d hibás betű
+%d yanlış harf (çizildi), %d boş kare var.	%d hibás betű (áthúzva), %d üres mező.
+%d yanlış harf var; çizili kareler.	%d hibás betű; áthúzva.
+Arşiv	Archívum
+Bir kareye dokunun	Koppintson egy mezőre
+Bitti	Kész
+Bu bulmacadaki bütün harfler silinsin mi?	Törli a rejtvény összes betűjét?
+Bulmaca	Keresztrejtvény
+Bulmaca No. %d	%d. keresztrejtvény
+Bulmacalar yüklenemedi. Uygulamayı yeniden kurun.	A rejtvények nem tölthetők be. Telepítse újra az alkalmazást.
+Bulmacayı %s içinde çözdünüz.	A rejtvényt %s alatt fejtette meg.
+Bulmacayı %s içinde, hiç harf açmadan çözdünüz.	A rejtvényt %s alatt fejtette meg, egyetlen betű felfedése nélkül.
+Bulmacayı sıfırla	Rejtvény törlése
+En kısa süre	Legjobb idő
+Harf aç	Betű felfedése
+Harfler doğru; %d boş kare kaldı.	A betűk jók; még %d üres mező van.
+Henüz bitmedi	Még nincs kész
+Kelimeyi kontrol et	Szó ellenőrzése
+No. %d	%d. szám
+Ortalama süre	Átlagos idő
+Seri: günün bulmacasını kendi gününde çözdüğünüz ardışık günler. Yardımsız: hiç harf açmadan.	Sorozat: egymást követő napok, amikor megfejtette a nap rejtvényét. Segítség nélkül: betű felfedése nélkül.
+Soldan sağa	Vízszintes
+Sıfırla	Törlés
+Yardımsız	Segítség nélkül
+Yukarıdan aşağıya	Függőleges
+harf	betű
+Çözülen	Megfejtve
+Şimdilik doğru, %d boş kare	Eddig jó, %d üres mező

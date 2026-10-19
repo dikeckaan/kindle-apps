@@ -25,6 +25,7 @@ Kitaplıkta tek bir **"Uygulamalar"** girişi olur; açınca bütün uygulamalar
 | Gazete (20 kaynaktan gazete tadında ön sayfa: AA, TRT, Hürriyet, Sözcü, NTV, CNN Türk, BBC Türkçe, Cumhuriyet, Milliyet, Sabah, Habertürk, DW, Euronews…) | ✅ |
 | Mayın Tarlası (3 zorluk, bayrak kipi) | ✅ |
 | Sudoku (3 zorluk, tek çözümlü, not kipi, ipucu) | ✅ |
+| Bulmaca (Türkçe çengel bulmaca: her gün yeni bulmaca + arşiv, harf aç, kelime/bulmaca kontrolü, istatistik; ipuçları Vikisözlük'ten) | ✅ |
 | Solitaire (Klondike, 1 / 3 kart çekme, geri al) | ✅ |
 | Sistem Bilgisi (pil, depolama, bellek, Wi-Fi, sürüm, güvenlik) | ✅ |
 | Wi-Fi ile Yükle (tarayıcıdan PIN'li kitap gönderme) | ✅ |

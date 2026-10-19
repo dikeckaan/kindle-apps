@@ -1,0 +1,10 @@
+{
+  "manifest_version": 2,
+  "id": "kindle-apps-bulmaca",
+  "name": "Bulmaca",
+  "author": "Kaan Dikeç",
+  "description": "Türkçe çengel bulmaca: her gün yeni bir bulmaca ve arşiv; Türkçe klavye, harf açma, kelime ve bulmaca kontrolü, kayıtlı ilerleme ve istatistik; ipuçları Vikisözlük'ten, tamamen çevrimdışı",
+  "version": [2026, 10, 19],
+  "dependencies": [],
+  "supported_platforms": ["kindlehf"]
+}

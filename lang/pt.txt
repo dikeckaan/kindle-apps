@@ -986,3 +986,31 @@ henüz indirilmedi	ainda não transferido
 Şiir Defteri kuruluysa onun günün şiiri, değilse bir atasözü	O poema do dia do Caderno de poemas, se instalado; senão, um provérbio
 Şimdi indir	Transferir agora
 ☾ %02d:%02d'de güncellendi · sonraki %02d:%02d	☾ atualizado às %02d:%02d · seguinte %02d:%02d
+%d yanlış harf	%d letras erradas
+%d yanlış harf (çizildi), %d boş kare var.	%d letras erradas (riscadas), %d quadrados vazios.
+%d yanlış harf var; çizili kareler.	%d letras erradas; estão riscadas.
+Arşiv	Arquivo
+Bir kareye dokunun	Toque num quadrado
+Bitti	Concluído
+Bu bulmacadaki bütün harfler silinsin mi?	Apagar todas as letras desta palavra cruzada?
+Bulmaca	Palavras cruzadas
+Bulmaca No. %d	Palavras cruzadas n.º %d
+Bulmacalar yüklenemedi. Uygulamayı yeniden kurun.	Não foi possível carregar as palavras cruzadas. Reinstale a aplicação.
+Bulmacayı %s içinde çözdünüz.	Resolveu a palavra cruzada em %s.
+Bulmacayı %s içinde, hiç harf açmadan çözdünüz.	Resolveu a palavra cruzada em %s sem revelar nenhuma letra.
+Bulmacayı sıfırla	Reiniciar palavra cruzada
+En kısa süre	Melhor tempo
+Harf aç	Revelar letra
+Harfler doğru; %d boş kare kaldı.	As letras estão certas; faltam %d quadrados vazios.
+Henüz bitmedi	Ainda não terminou
+Kelimeyi kontrol et	Verificar palavra
+No. %d	N.º %d
+Ortalama süre	Tempo médio
+Seri: günün bulmacasını kendi gününde çözdüğünüz ardışık günler. Yardımsız: hiç harf açmadan.	Sequência: dias seguidos em que resolveu a palavra cruzada do dia. Sem ajuda: sem revelar nenhuma letra.
+Soldan sağa	Horizontais
+Sıfırla	Reiniciar
+Yardımsız	Sem ajuda
+Yukarıdan aşağıya	Verticais
+harf	letras
+Çözülen	Resolvidas
+Şimdilik doğru, %d boş kare	Certo até agora, %d quadrados vazios
