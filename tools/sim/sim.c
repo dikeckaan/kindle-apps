@@ -1,9 +1,5 @@
 /* Host simulator for kui apps: replaces screen.c + input.c. Draws into an 8-bit 1072x1448 buffer with
- * stb_truetype (same DejaVu fonts as the device) and writes a PNG at every kui_flush to $KUI_SIM_OUT, named after
- * the refresh the device would do (same policy, core/kui/refresh.c, same settings keys):
- *   <app>_NNN.png             partial update (dirty rects, no flash)
- *   <app>_NNN_full.png        quiet full-screen GC16 update (no flash)
- *   <app>_NNN_full_flash.png  full-screen flash (after a wake, KUI_FLUSH_FLASH, or the ghosting counters)
+ * stb_truetype (same DejaVu fonts as the device) and writes a PNG at every kui_flush to $KUI_SIM_OUT.
  * Input comes from $KUI_SIM, a ';'-separated script:
  *   tap X Y | long X Y | swipe left|right|up|down | wake | none | asleep 0|1
  * When the script is exhausted the app receives KUI_EV_QUIT.
@@ -25,7 +21,6 @@ static int shot, asleep;
 static const char *script;
 static KuiDirty dirty;
 static char app_name[64];
-static KuiRefreshPolicy policy;
 
 static unsigned char *slurp(const char *path)
 {
@@ -63,17 +58,13 @@ int kui_init(const char *app)
 	if (!script) script = getenv("KUI_SIM");
 	if (!script) script = "";
 	memset(fb, 255, sizeof fb);
-	snprintf(path, sizeof path, "%s/settings", kui_data_dir(app));
-	kui_policy_init(&policy, kui_cfg_get_int(path, "full_refresh_every", 25),
-			kui_cfg_get_int(path, "flash_every", KUI_FLASH_EVERY_DEFAULT));
 	return 0;
 }
 
 void kui_quit(void) {}
 int kui_width(void) { return W; }
 int kui_height(void) { return H; }
-void kui_set_refresh_every(int n) { kui_policy_set_every(&policy, n); }
-void kui_request_flash(void) { kui_policy_request_flash(&policy); }
+void kui_set_refresh_every(int n) { (void) n; }
 int kui_input_asleep(void) { return asleep; }
 
 void kui_fill(KuiRect r, unsigned char g)
@@ -287,15 +278,12 @@ void kui_flush(int screen_changed)
 		dirty.n = 0;
 		return;
 	}
-	KuiUpdKind kind = kui_policy_next(&policy, screen_changed);
 	const char *out = getenv("KUI_SIM_OUT");
 	if (out && *out) {
-		static const char *const suffix[] = { "", "_full", "_full_flash" };
-		static const char *const label[] = { "partial", "quiet full", "FLASH" };
 		char path[512];
-		snprintf(path, sizeof path, "%s/%s_%03d%s.png", out, app_name, shot, suffix[kind]);
-		write_png(path, kind != KUI_UPD_PARTIAL, &dirty);
-		fprintf(stderr, "sim: flush %d (%s, %d dirty) -> %s\n", shot, label[kind], dirty.n, path);
+		snprintf(path, sizeof path, "%s/%s_%03d%s.png", out, app_name, shot, screen_changed ? "_full" : "");
+		write_png(path, screen_changed, &dirty);
+		fprintf(stderr, "sim: flush %d (%s, %d dirty) -> %s\n", shot, screen_changed ? "full" : "partial", dirty.n, path);
 	}
 	shot++;
 	dirty.n = 0;
@@ -329,7 +317,6 @@ KuiEvent kui_next_event(int timeout_ms)
 		}
 		if (!strcmp(cmd, "wake")) {
 			asleep = 0;
-			kui_policy_request_flash(&policy); /* as input.c: the redraw after a wake flashes */
 			return (KuiEvent){ KUI_EV_WAKE, 0, 0, KUI_DIR_NONE };
 		}
 		if (!strcmp(cmd, "asleep")) {

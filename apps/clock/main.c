@@ -203,7 +203,6 @@ static void tick(void)
 	now_local(&tm);
 	if (tm.tm_hour != shown_hour || tm.tm_mday != shown_mday) { /* hourly: full refresh clears ghosting */
 		update_weather();
-		kui_request_flash(); /* the minutes' partial updates leave ghosts only a flash clears */
 		full_redraw();
 		return;
 	}
