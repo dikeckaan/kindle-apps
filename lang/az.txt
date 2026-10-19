@@ -740,3 +740,69 @@ Kolay okuma: Kapalı	Asan oxu: Bağlı
 Basit mod: Açık	Sadə rejim: Açıq
 Basit mod: Kapalı	Sadə rejim: Bağlı
 Kolay okuma: bütün yazılar büyük, kalın ve siyah olur.\nBasit mod: menüde dört büyük düğme; panoda yalnızca saat, hava ve üç haber. Teknik uygulamalar gizlenir; bu ekrandan her zaman geri açılabilir.	Asan oxu: bütün yazılar böyük, qalın və qara olur.\nSadə rejim: menyuda dörd böyük düymə; paneldə yalnız saat, hava və üç xəbər. Texniki tətbiqlər gizlədilir; bu ekrandan həmişə geri açıla bilər.
+ · Hanefi ikindi	 · Hənəfi ikindi
+ · yüksek enlem kuralı	 · yüksək en dairəsi qaydası
+%s vakti %s	%s vaxtı %s
+Akşama %s	Axşama %s
+Asr-ı evvel (Şafii)	Əsr-i əvvəl (Şafii)
+Asr-ı sani (Hanefi)	Əsr-i sani (Hənəfi)
+Bugün Güneş kıble yönünden geçmiyor.	Bu gün Günəş qiblə istiqamətindən keçmir.
+Bugün vakit hesaplanamıyor	Bu gün vaxtlar hesablana bilmir
+Büyüyen ay	Böyüyən ay
+Büyüyen hilal	Böyüyən hilal
+Diyanet (Türkiye)	Diyanet (Türkiyə)
+Diyanet: imsak güneş ufkun 18° altındayken, yatsı 17°. Temkin: güneş −7, öğle +5, ikindi +4, akşam +7 dk. Diyanet'in yayımladığı vakitlerle en çok 1 dk fark.	Diyanet: imsak Günəş üfüqdən 18° aşağıda olanda, gecə (işa) 17°-də. Təmkin: günəş −7, günorta +5, ikindi +4, axşam +7 dəq. Diyanet-in dərc etdiyi vaxtlardan ən çox 1 dəq fərq.
+Diğer	Digər
+Enlem ve boylam gir	En və uzunluq daxil edin
+Enlem −90…90, boylam −180…180 olmalı, ör. 41.01, 28.98	En −90…90, uzunluq −180…180 olmalıdır, məs. 41.01, 28.98
+Enlem, boylam (ör. 41.01, 28.98)	En, uzunluq (məs. 41.01, 28.98)
+Fransa (UOIF)	Fransa (UOIF)
+Gri satırlar: Ramazan (imsak ve iftar kalın)	Boz sətirlər: Ramazan (imsak və iftar qalın)
+Gün	Gün
+Güneş doğuşu %s · batışı %s · gün %d sa %d dk	Günəşin doğuşu %s · batışı %s · gün %d saat %d dəq
+Güneş şu an ufkun altında	Günəş indi üfüqdən aşağıdadır
+Güneşe %s	Günəşə %s
+Hava Durumu şehri: %s	Hava şəhəri: %s
+Hesaplama yöntemi	Hesablama üsulu
+Hicri	Hicri
+Hicri tarih: 2016 Hicri Takvim Birliği ölçütüyle (Diyanet'in kullandığı) hesaplanır; nadiren bir gün farklı olabilir.	Hicri tarix: 2016 Hicri Təqvim Birliyi meyarı ilə (Diyanet-in istifadə etdiyi) hesablanır; nadir hallarda bir gün fərqli ola bilər.
+Hicri: %s	Hicri: %s
+Hicri: %s – %s	Hicri: %s – %s
+Karaçi (İslami İlimler Üniv.)	Karaçi (İslam Elmləri Univ.)
+Kindle saati	Kindle saatı
+Kindle'da pusula yok: cihazı, ☀ işareti gökteki Güneş'i gösterecek biçimde çevirin; ok o zaman kıbleyi gösterir.	Kindle-da kompas yoxdur: cihazı ☀ işarəsi göydəki Günəşi göstərənədək çevirin; o zaman ox qibləni göstərir.
+Koordinat	Koordinat
+Kuzey Amerika (ISNA)	Şimali Amerika (ISNA)
+Kâbe'ye uzaklık: %s km · gerçek kuzeye göre	Kəbəyə məsafə: %s km · həqiqi şimala görə
+Küçülen ay	Kiçilən ay
+Küçülen hilal	Kiçilən hilal
+Kıble	Qiblə
+Kıble %.0f° %s · %s	Qiblə %.0f° %s · %s
+Kıble saati %s: Güneş o an tam kıble yönündedir.	Qiblə saatı %s: Günəş o an tam qiblə istiqamətindədir.
+Müslüman Dünya Birliği (MWL)	Müsəlman Dünya Liqası (MWL)
+Mısır (Genel Etüt Kurumu)	Misir (Ümumi Topoqrafiya İdarəsi)
+Recep	Rəcəb
+Saat dilimi	Saat qurşağı
+Sayfa %d / %d	Səhifə %d / %d
+Seçilen yer Vakitler'e kaydedilir (data/vakit/place); Hava Durumu'nun şehir listesi değişmez.	Seçilən yer Namaz vaxtları üçün saxlanılır (data/vakit/place); Hava proqramının şəhər siyahısı dəyişmir.
+Türkiye (81 il)	Türkiyə (81 il)
+Türkiye (UTC+3)	Türkiyə (UTC+3)
+UTC farkı (saat, ör. 3 veya -5 ya da 5,5)	UTC fərqi (saat, məs. 3, -5 və ya 5.5)
+UTC farkı gir	UTC fərqini daxil edin
+Vakitler	Namaz vaxtları
+Vakitler hangi saate göre gösterilsin?	Vaxtlar hansı saata görə göstərilsin?
+Yarın %s %s	Sabah %s %s
+Yatsıya %s	Gecəyə %s
+Yeni Ay	Yeni ay
+Yerin adı	Yerin adı
+Zeval %s · Ay: %s, %%%d aydınlık	Zeval %s · Ay: %s, %d%% işıqlı
+Öğleye %s	Günortaya %s
+Ümmü'l-Kurâ (Mekke)	Ümmül-Qura (Məkkə)
+İkindiye %s	İkindiyə %s
+İmsak %s°, yatsı %s°; temkin yok.	İmsak %s°, gecə %s°; təmkin yoxdur.
+İmsak %s°, yatsı akşamdan %d dk sonra (Ramazan'da %d dk); temkin yok.	İmsak %s°, gecə axşamdan %d dəq sonra (Ramazanda %d dəq); təmkin yoxdur.
+İmsaka %s	İmsaka %s
+İmsakiye	İmsakiyyə
+Şehir	Şəhər
+Şu an: %s (%.2f, %.2f)	İndi: %s (%.2f, %.2f)
+☀ Güneş şu an %.0f° %s yönünde, %.0f° yüksekte	☀ Günəş indi %.0f° %s istiqamətində, %.0f° hündürlükdə

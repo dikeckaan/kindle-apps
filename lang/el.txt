@@ -740,3 +740,69 @@ Kolay okuma: Kapalı	Εύκολη ανάγνωση: Όχι
 Basit mod: Açık	Απλή λειτουργία: Ναι
 Basit mod: Kapalı	Απλή λειτουργία: Όχι
 Kolay okuma: bütün yazılar büyük, kalın ve siyah olur.\nBasit mod: menüde dört büyük düğme; panoda yalnızca saat, hava ve üç haber. Teknik uygulamalar gizlenir; bu ekrandan her zaman geri açılabilir.	Εύκολη ανάγνωση: όλα τα κείμενα γίνονται μεγάλα, έντονα και μαύρα.\nΑπλή λειτουργία: τέσσερα μεγάλα κουμπιά στο μενού· ο πίνακας δείχνει μόνο ώρα, καιρό και τρεις ειδήσεις. Οι τεχνικές εφαρμογές κρύβονται· μπορούν πάντα να ενεργοποιηθούν ξανά από αυτή την οθόνη.
+ · Hanefi ikindi	 · Ασρ Χανεφί
+ · yüksek enlem kuralı	 · κανόνας μεγάλων γεωγρ. πλατών
+%s vakti %s	%s στις %s
+Akşama %s	%s ως το Μαγκρίμπ
+Asr-ı evvel (Şafii)	Πρώιμο Ασρ (Σαφεΐ)
+Asr-ı sani (Hanefi)	Όψιμο Ασρ (Χανεφί)
+Bugün Güneş kıble yönünden geçmiyor.	Σήμερα ο Ήλιος δεν περνά από την κατεύθυνση της κίμπλα.
+Bugün vakit hesaplanamıyor	Σήμερα δεν υπολογίζονται ώρες προσευχής
+Büyüyen ay	Αύξων αμφίκυρτος
+Büyüyen hilal	Αύξων μηνίσκος
+Diyanet (Türkiye)	Diyanet (Τουρκία)
+Diyanet: imsak güneş ufkun 18° altındayken, yatsı 17°. Temkin: güneş −7, öğle +5, ikindi +4, akşam +7 dk. Diyanet'in yayımladığı vakitlerle en çok 1 dk fark.	Diyanet: Φατζρ με τον Ήλιο 18° κάτω από τον ορίζοντα, Ίσα στις 17°. Περιθώρια (temkin): ανατολή −7, Ζουχρ +5, Ασρ +4, Μαγκρίμπ +7 λεπτά. Το πολύ 1 λεπτό διαφορά από τις ώρες που δημοσιεύει η Diyanet.
+Diğer	Άλλο
+Enlem ve boylam gir	Εισαγωγή πλάτους και μήκους
+Enlem −90…90, boylam −180…180 olmalı, ör. 41.01, 28.98	Πλάτος −90…90 και μήκος −180…180, π.χ. 41.01, 28.98
+Enlem, boylam (ör. 41.01, 28.98)	Πλάτος, μήκος (π.χ. 41.01, 28.98)
+Fransa (UOIF)	Γαλλία (UOIF)
+Gri satırlar: Ramazan (imsak ve iftar kalın)	Γκρίζες γραμμές: Ραμαζάνι (Φατζρ και ιφτάρ με έντονα)
+Gün	Ημέρα
+Güneş doğuşu %s · batışı %s · gün %d sa %d dk	Ανατολή %s · δύση %s · ημέρα %d ώ %d λ
+Güneş şu an ufkun altında	Ο Ήλιος είναι κάτω από τον ορίζοντα
+Güneşe %s	%s ως την ανατολή
+Hava Durumu şehri: %s	Πόλη καιρού: %s
+Hesaplama yöntemi	Μέθοδος υπολογισμού
+Hicri	Εγίρα
+Hicri tarih: 2016 Hicri Takvim Birliği ölçütüyle (Diyanet'in kullandığı) hesaplanır; nadiren bir gün farklı olabilir.	Ημερομηνία Εγίρας: με το κριτήριο της Ένωσης Ημερολογίου Εγίρας του 2016 (που χρησιμοποιεί η Diyanet)· σπάνια διαφέρει μία μέρα.
+Hicri: %s	Εγίρα: %s
+Hicri: %s – %s	Εγίρα: %s – %s
+Karaçi (İslami İlimler Üniv.)	Καράτσι (Παν. Ισλαμικών Επιστημών)
+Kindle saati	Ρολόι του Kindle
+Kindle'da pusula yok: cihazı, ☀ işareti gökteki Güneş'i gösterecek biçimde çevirin; ok o zaman kıbleyi gösterir.	Το Kindle δεν έχει πυξίδα: γυρίστε το ώσπου το σήμα ☀ να δείχνει τον Ήλιο στον ουρανό· τότε το βέλος δείχνει την κίμπλα.
+Koordinat	Συντεταγμένες
+Kuzey Amerika (ISNA)	Βόρεια Αμερική (ISNA)
+Kâbe'ye uzaklık: %s km · gerçek kuzeye göre	Απόσταση από την Κάαμπα: %s km · ως προς τον γεωγραφικό βορρά
+Küçülen ay	Φθίνων αμφίκυρτος
+Küçülen hilal	Φθίνων μηνίσκος
+Kıble	Κίμπλα
+Kıble %.0f° %s · %s	Κίμπλα %.0f° %s · %s
+Kıble saati %s: Güneş o an tam kıble yönündedir.	Ώρα κίμπλα %s: ο Ήλιος βρίσκεται τότε ακριβώς στην κατεύθυνση της κίμπλα.
+Müslüman Dünya Birliği (MWL)	Μουσουλμανική Παγκόσμια Ένωση (MWL)
+Mısır (Genel Etüt Kurumu)	Αίγυπτος (Γενική Αρχή Τοπογραφίας)
+Recep	Ρατζάμπ
+Saat dilimi	Ζώνη ώρας
+Sayfa %d / %d	Σελίδα %d / %d
+Seçilen yer Vakitler'e kaydedilir (data/vakit/place); Hava Durumu'nun şehir listesi değişmez.	Ο τόπος που επιλέγετε αποθηκεύεται για τις Ώρες προσευχής (data/vakit/place)· η λίστα πόλεων του καιρού δεν αλλάζει.
+Türkiye (81 il)	Τουρκία (81 επαρχίες)
+Türkiye (UTC+3)	Τουρκία (UTC+3)
+UTC farkı (saat, ör. 3 veya -5 ya da 5,5)	Διαφορά UTC (ώρες, π.χ. 3, -5 ή 5.5)
+UTC farkı gir	Εισαγωγή διαφοράς UTC
+Vakitler	Ώρες προσευχής
+Vakitler hangi saate göre gösterilsin?	Με ποιο ρολόι να φαίνονται οι ώρες;
+Yarın %s %s	Αύριο %s %s
+Yatsıya %s	%s ως το Ίσα
+Yeni Ay	Νέα σελήνη
+Yerin adı	Όνομα τόπου
+Zeval %s · Ay: %s, %%%d aydınlık	Ηλιακό μεσημέρι %s · Σελήνη: %s, φωτισμένη %d%%
+Öğleye %s	%s ως το Ζουχρ
+Ümmü'l-Kurâ (Mekke)	Ουμ αλ-Κούρα (Μέκκα)
+İkindiye %s	%s ως το Ασρ
+İmsak %s°, yatsı %s°; temkin yok.	Φατζρ %s°, Ίσα %s°· χωρίς temkin.
+İmsak %s°, yatsı akşamdan %d dk sonra (Ramazan'da %d dk); temkin yok.	Φατζρ %s°, Ίσα %d λεπτά μετά το Μαγκρίμπ (%d λεπτά τον Ραμαζάνι)· χωρίς temkin.
+İmsaka %s	%s ως το Φατζρ
+İmsakiye	Μηνιαίος πίνακας
+Şehir	Πόλη
+Şu an: %s (%.2f, %.2f)	Τώρα: %s (%.2f, %.2f)
+☀ Güneş şu an %.0f° %s yönünde, %.0f° yüksekte	☀ Ο Ήλιος είναι τώρα στις %.0f° %s, σε ύψος %.0f°

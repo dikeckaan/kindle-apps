@@ -740,3 +740,69 @@ Kolay okuma: Kapalı	Easy reading: Off
 Basit mod: Açık	Simple mode: On
 Basit mod: Kapalı	Simple mode: Off
 Kolay okuma: bütün yazılar büyük, kalın ve siyah olur.\nBasit mod: menüde dört büyük düğme; panoda yalnızca saat, hava ve üç haber. Teknik uygulamalar gizlenir; bu ekrandan her zaman geri açılabilir.	Easy reading: all text becomes large, bold and black.\nSimple mode: four big buttons in the menu; the dashboard shows only the clock, weather and three news items. Technical apps are hidden; you can always turn them back on from this screen.
+ · Hanefi ikindi	 · Hanafi Asr
+ · yüksek enlem kuralı	 · high-latitude rule
+%s vakti %s	%s at %s
+Akşama %s	%s until Maghrib
+Asr-ı evvel (Şafii)	Early Asr (Shafi'i)
+Asr-ı sani (Hanefi)	Later Asr (Hanafi)
+Bugün Güneş kıble yönünden geçmiyor.	Today the Sun does not pass the qibla direction.
+Bugün vakit hesaplanamıyor	No prayer times can be computed today
+Büyüyen ay	Waxing gibbous
+Büyüyen hilal	Waxing crescent
+Diyanet (Türkiye)	Diyanet (Türkiye)
+Diyanet: imsak güneş ufkun 18° altındayken, yatsı 17°. Temkin: güneş −7, öğle +5, ikindi +4, akşam +7 dk. Diyanet'in yayımladığı vakitlerle en çok 1 dk fark.	Diyanet: Fajr with the Sun 18° below the horizon, Isha at 17°. Safety margins (temkin): sunrise −7, Dhuhr +5, Asr +4, Maghrib +7 min. At most 1 min from Diyanet's published times.
+Diğer	Other
+Enlem ve boylam gir	Enter latitude and longitude
+Enlem −90…90, boylam −180…180 olmalı, ör. 41.01, 28.98	Latitude must be −90…90 and longitude −180…180, e.g. 41.01, 28.98
+Enlem, boylam (ör. 41.01, 28.98)	Latitude, longitude (e.g. 41.01, 28.98)
+Fransa (UOIF)	France (UOIF)
+Gri satırlar: Ramazan (imsak ve iftar kalın)	Grey rows: Ramadan (Fajr and iftar in bold)
+Gün	Day
+Güneş doğuşu %s · batışı %s · gün %d sa %d dk	Sunrise %s · sunset %s · day %d h %d min
+Güneş şu an ufkun altında	The Sun is below the horizon now
+Güneşe %s	%s until sunrise
+Hava Durumu şehri: %s	Weather city: %s
+Hesaplama yöntemi	Calculation method
+Hicri	Hijri
+Hicri tarih: 2016 Hicri Takvim Birliği ölçütüyle (Diyanet'in kullandığı) hesaplanır; nadiren bir gün farklı olabilir.	Hijri date: computed with the 2016 Hijri Calendar Union criterion (the one Diyanet uses); it can rarely be a day off.
+Hicri: %s	Hijri: %s
+Hicri: %s – %s	Hijri: %s – %s
+Karaçi (İslami İlimler Üniv.)	Karachi (Univ. of Islamic Sciences)
+Kindle saati	Kindle's clock
+Kindle'da pusula yok: cihazı, ☀ işareti gökteki Güneş'i gösterecek biçimde çevirin; ok o zaman kıbleyi gösterir.	The Kindle has no compass: turn it until the ☀ mark points at the Sun in the sky; the arrow then points to the qibla.
+Koordinat	Coordinates
+Kuzey Amerika (ISNA)	North America (ISNA)
+Kâbe'ye uzaklık: %s km · gerçek kuzeye göre	Distance to the Kaaba: %s km · relative to true north
+Küçülen ay	Waning gibbous
+Küçülen hilal	Waning crescent
+Kıble	Qibla
+Kıble %.0f° %s · %s	Qibla %.0f° %s · %s
+Kıble saati %s: Güneş o an tam kıble yönündedir.	Qibla hour %s: the Sun then stands exactly in the qibla direction.
+Müslüman Dünya Birliği (MWL)	Muslim World League (MWL)
+Mısır (Genel Etüt Kurumu)	Egypt (General Authority of Survey)
+Recep	Rajab
+Saat dilimi	Time zone
+Sayfa %d / %d	Page %d / %d
+Seçilen yer Vakitler'e kaydedilir (data/vakit/place); Hava Durumu'nun şehir listesi değişmez.	The chosen place is saved for Prayer Times (data/vakit/place); the Weather app's city list does not change.
+Türkiye (81 il)	Türkiye (81 provinces)
+Türkiye (UTC+3)	Türkiye (UTC+3)
+UTC farkı (saat, ör. 3 veya -5 ya da 5,5)	UTC offset (hours, e.g. 3, -5 or 5.5)
+UTC farkı gir	Enter UTC offset
+Vakitler	Prayer Times
+Vakitler hangi saate göre gösterilsin?	Which clock should the times follow?
+Yarın %s %s	Tomorrow %s %s
+Yatsıya %s	%s until Isha
+Yeni Ay	New moon
+Yerin adı	Name of the place
+Zeval %s · Ay: %s, %%%d aydınlık	Solar noon %s · Moon: %s, %d%% lit
+Öğleye %s	%s until Dhuhr
+Ümmü'l-Kurâ (Mekke)	Umm al-Qura (Mecca)
+İkindiye %s	%s until Asr
+İmsak %s°, yatsı %s°; temkin yok.	Fajr %s°, Isha %s°; no temkin.
+İmsak %s°, yatsı akşamdan %d dk sonra (Ramazan'da %d dk); temkin yok.	Fajr %s°, Isha %d min after Maghrib (%d min in Ramadan); no temkin.
+İmsaka %s	%s until Fajr
+İmsakiye	Monthly timetable
+Şehir	City
+Şu an: %s (%.2f, %.2f)	Now: %s (%.2f, %.2f)
+☀ Güneş şu an %.0f° %s yönünde, %.0f° yüksekte	☀ The Sun is now at %.0f° %s, %.0f° high

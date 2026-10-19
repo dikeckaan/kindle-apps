@@ -740,3 +740,69 @@ Kolay okuma: Kapalı	Helppo lukea: Pois
 Basit mod: Açık	Yksinkertainen tila: Päällä
 Basit mod: Kapalı	Yksinkertainen tila: Pois
 Kolay okuma: bütün yazılar büyük, kalın ve siyah olur.\nBasit mod: menüde dört büyük düğme; panoda yalnızca saat, hava ve üç haber. Teknik uygulamalar gizlenir; bu ekrandan her zaman geri açılabilir.	Helppo lukea: kaikki teksti muuttuu suureksi, lihavoiduksi ja mustaksi.\nYksinkertainen tila: valikossa neljä isoa painiketta; näkymässä vain kello, sää ja kolme uutista. Tekniset sovellukset piilotetaan; ne voi aina palauttaa tästä näkymästä.
+ · Hanefi ikindi	 · hanafilainen asr
+ · yüksek enlem kuralı	 · korkeiden leveyksien sääntö
+%s vakti %s	%s klo %s
+Akşama %s	%s maghribiin
+Asr-ı evvel (Şafii)	Aikainen asr (šafiilainen)
+Asr-ı sani (Hanefi)	Myöhäinen asr (hanafilainen)
+Bugün Güneş kıble yönünden geçmiyor.	Tänään aurinko ei kulje qiblan suunnassa.
+Bugün vakit hesaplanamıyor	Tänään rukousaikoja ei voi laskea
+Büyüyen ay	Kasvava kuu
+Büyüyen hilal	Kasvava sirppi
+Diyanet (Türkiye)	Diyanet (Turkki)
+Diyanet: imsak güneş ufkun 18° altındayken, yatsı 17°. Temkin: güneş −7, öğle +5, ikindi +4, akşam +7 dk. Diyanet'in yayımladığı vakitlerle en çok 1 dk fark.	Diyanet: fajr, kun aurinko on 18° horisontin alla, isha 17°:ssa. Varmuusmarginaalit (temkin): auringonnousu −7, dhuhr +5, asr +4, maghrib +7 min. Enintään 1 min ero Diyanetin julkaisemiin aikoihin.
+Diğer	Muu
+Enlem ve boylam gir	Anna leveys- ja pituusaste
+Enlem −90…90, boylam −180…180 olmalı, ör. 41.01, 28.98	Leveys −90…90 ja pituus −180…180, esim. 41.01, 28.98
+Enlem, boylam (ör. 41.01, 28.98)	Leveys, pituus (esim. 41.01, 28.98)
+Fransa (UOIF)	Ranska (UOIF)
+Gri satırlar: Ramazan (imsak ve iftar kalın)	Harmaat rivit: ramadan (fajr ja iftar lihavoituina)
+Gün	Päivä
+Güneş doğuşu %s · batışı %s · gün %d sa %d dk	Aur. nousu %s · lasku %s · päivä %d h %d min
+Güneş şu an ufkun altında	Aurinko on horisontin alla
+Güneşe %s	%s auringonnousuun
+Hava Durumu şehri: %s	Sääkaupunki: %s
+Hesaplama yöntemi	Laskentatapa
+Hicri	Hidžra
+Hicri tarih: 2016 Hicri Takvim Birliği ölçütüyle (Diyanet'in kullandığı) hesaplanır; nadiren bir gün farklı olabilir.	Hidžra-päivämäärä: vuoden 2016 Hidžra-kalenteriliiton kriteerillä (jota Diyanet käyttää); harvoin päivän ero.
+Hicri: %s	Hidžra: %s
+Hicri: %s – %s	Hidžra: %s – %s
+Karaçi (İslami İlimler Üniv.)	Karachi (islamilaisten tieteiden yliopisto)
+Kindle saati	Kindlen kello
+Kindle'da pusula yok: cihazı, ☀ işareti gökteki Güneş'i gösterecek biçimde çevirin; ok o zaman kıbleyi gösterir.	Kindlessä ei ole kompassia: käännä sitä, kunnes ☀-merkki osoittaa taivaan aurinkoon; silloin nuoli osoittaa qiblaa.
+Koordinat	Koordinaatit
+Kuzey Amerika (ISNA)	Pohjois-Amerikka (ISNA)
+Kâbe'ye uzaklık: %s km · gerçek kuzeye göre	Etäisyys Kaabaan: %s km · maantieteelliseen pohjoiseen nähden
+Küçülen ay	Vähenevä kuu
+Küçülen hilal	Vähenevä sirppi
+Kıble	Qibla
+Kıble %.0f° %s · %s	Qibla %.0f° %s · %s
+Kıble saati %s: Güneş o an tam kıble yönündedir.	Qibla-aika %s: aurinko on silloin täsmälleen qiblan suunnassa.
+Müslüman Dünya Birliği (MWL)	Muslimimaailman liitto (MWL)
+Mısır (Genel Etüt Kurumu)	Egypti (maanmittausvirasto)
+Recep	Radžab
+Saat dilimi	Aikavyöhyke
+Sayfa %d / %d	Sivu %d / %d
+Seçilen yer Vakitler'e kaydedilir (data/vakit/place); Hava Durumu'nun şehir listesi değişmez.	Valittu paikka tallennetaan Rukousajoille (data/vakit/place); sääsovelluksen kaupunkilista ei muutu.
+Türkiye (81 il)	Turkki (81 maakuntaa)
+Türkiye (UTC+3)	Turkki (UTC+3)
+UTC farkı (saat, ör. 3 veya -5 ya da 5,5)	UTC-ero (tunteina, esim. 3, -5 tai 5.5)
+UTC farkı gir	Anna UTC-ero
+Vakitler	Rukousajat
+Vakitler hangi saate göre gösterilsin?	Minkä kellon mukaan ajat näytetään?
+Yarın %s %s	Huomenna %s %s
+Yatsıya %s	%s ishaan
+Yeni Ay	Uusikuu
+Yerin adı	Paikan nimi
+Zeval %s · Ay: %s, %%%d aydınlık	Keskipäivä %s · Kuu: %s, %d %% valaistu
+Öğleye %s	%s dhuhriin
+Ümmü'l-Kurâ (Mekke)	Umm al-Qura (Mekka)
+İkindiye %s	%s asriin
+İmsak %s°, yatsı %s°; temkin yok.	Fajr %s°, isha %s°; ei temkiniä.
+İmsak %s°, yatsı akşamdan %d dk sonra (Ramazan'da %d dk); temkin yok.	Fajr %s°, isha %d min maghribin jälkeen (ramadanina %d min); ei temkiniä.
+İmsaka %s	%s fajriin
+İmsakiye	Kuukausitaulukko
+Şehir	Kaupunki
+Şu an: %s (%.2f, %.2f)	Nyt: %s (%.2f, %.2f)
+☀ Güneş şu an %.0f° %s yönünde, %.0f° yüksekte	☀ Aurinko on nyt %.0f° %s, %.0f° korkeudella

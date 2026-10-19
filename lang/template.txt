@@ -1,4 +1,8 @@
 # Translatable texts (Turkish source). Catalog lines: source<TAB>translation; \n and \t escaped.
+# apps/vakit/main.c
+ · Hanefi ikindi	
+# apps/vakit/main.c
+ · yüksek enlem kuralı	
 # apps/sysinfo/main.c
 %%%d	
 # apps/sysinfo/main.c
@@ -61,6 +65,8 @@
 %s kuruldu	
 # apps/weather/main.c
 %s silinsin mi?	
+# apps/vakit/main.c
+%s vakti %s	
 # apps/news/main.c
 %s yükleniyor… (%d)	
 # apps/sky/main.c
@@ -131,6 +137,8 @@ Ajanda
 Akrep	
 # apps/pano/pano.c
 Akşam	
+# apps/vakit/vakit.c
+Akşama %s	
 # apps/sky/skydata.c
 Aldebaran	
 # apps/sky/skydata.c
@@ -173,6 +181,10 @@ Araya girme
 Arktürüs	
 # apps/sky/skydata.c
 Aslan	
+# apps/vakit/main.c
+Asr-ı evvel (Şafii)	
+# apps/vakit/main.c
+Asr-ı sani (Hanefi)	
 # apps/chess/main.c
 At	
 # apps/puzzle/puzzle.c
@@ -219,7 +231,7 @@ Açıldı. Gelen bağlantılar engelleniyor.
 Açılış	
 # core/kui/trfmt.c
 Ağustos	
-# apps/weather/wx.c
+# apps/vakit/main.c
 B	
 # apps/ajanda/agenda.c
 Babalar Günü	
@@ -297,6 +309,10 @@ Bugün  en yüksek %s · en düşük %s · ☼ %s – %s
 Bugün %d oturum	
 # apps/odak/main.c
 Bugün %s · %d oturum · Seri %d gün	
+# apps/vakit/main.c
+Bugün Güneş kıble yönünden geçmiyor.	
+# apps/vakit/main.c
+Bugün vakit hesaplanamıyor	
 # apps/puzzle/main.c
 Bulmaca alınamadı	
 # apps/puzzle/main.c
@@ -319,6 +335,10 @@ Bütün şiirlerden biri
 Büyükayı	
 # apps/sky/skydata.c
 Büyükköpek	
+# apps/vakit/vakit.c
+Büyüyen ay	
+# apps/vakit/vakit.c
+Büyüyen hilal	
 # apps/ajanda/agenda.c
 Cemaziyelahir	
 # apps/ajanda/agenda.c
@@ -337,7 +357,7 @@ Cumhuriyet Bayramı
 Cumhuriyet Bayramı arifesi	
 # apps/currency/fx.c
 Cumhuriyet altını	
-# apps/weather/wx.c
+# apps/vakit/main.c
 D	
 # apps/odak/main.c
 DURAKLATILDI	
@@ -375,6 +395,12 @@ Dikeç Store
 Dil	
 # core/hub/main.c
 Dil: %s	
+# apps/vakit/vakit.c
+Diyanet (Türkiye)	
+# apps/vakit/main.c
+Diyanet: imsak güneş ufkun 18° altındayken, yatsı 17°. Temkin: güneş −7, öğle +5, ikindi +4, akşam +7 dk. Diyanet'in yayımladığı vakitlerle en çok 1 dk fark.	
+# apps/vakit/main.c
+Diğer	
 # apps/mines/main.c
 Dokun: aç	
 # apps/mines/main.c
@@ -437,6 +463,12 @@ En iyi
 En iyi seri	
 # apps/sky/main.c
 En parlak yıldızı: %s	
+# apps/vakit/main.c
+Enlem ve boylam gir	
+# apps/vakit/main.c
+Enlem −90…90, boylam −180…180 olmalı, ör. 41.01, 28.98	
+# apps/vakit/main.c
+Enlem, boylam (ör. 41.01, 28.98)	
 # apps/odak/main.c
 Etiket (silmek için basılı tutun)	
 # apps/odak/main.c
@@ -463,11 +495,13 @@ Fil
 Fil oyun sonu	
 # apps/sky/skydata.c
 Fomalhaut	
-# apps/weather/wx.c
+# apps/vakit/vakit.c
+Fransa (UOIF)	
+# apps/vakit/main.c
 G	
-# apps/weather/wx.c
+# apps/vakit/main.c
 GB	
-# apps/weather/wx.c
+# apps/vakit/main.c
 GD	
 # apps/news/main.c
 Gazete	
@@ -485,6 +519,8 @@ Geçerken alma
 Geçmiş	
 # apps/currency/fx.c
 Gram altın	
+# apps/vakit/main.c
+Gri satırlar: Ramazan (imsak ve iftar kalın)	
 # apps/ebooks/main.c
 Gutenberg'e ulaşılamadı. Wi-Fi bağlantısını kontrol edip yeniden deneyin.	
 # apps/weather/wx.c
@@ -493,6 +529,8 @@ Gök gürültülü
 Gökyüzü	
 # apps/wordle/main.c
 Gönder	
+# apps/vakit/main.c
+Gün	
 # apps/news/news.c
 Güncel	
 # core/hub/upd_ui.c
@@ -513,6 +551,12 @@ Gündüz · Güneş batınca yıldızlar görünür (gün batımı %s)
 Gündüz · Güneş bugün batmıyor	
 # apps/pano/pano.c
 Güneş	
+# apps/vakit/main.c
+Güneş doğuşu %s · batışı %s · gün %d sa %d dk	
+# apps/vakit/main.c
+Güneş şu an ufkun altında	
+# apps/vakit/vakit.c
+Güneşe %s	
 # apps/puzzle/main.c
 Günün bulmacası	
 # apps/siir/main.c
@@ -551,6 +595,8 @@ Hataları göster: Kapalı
 Hatalı çözüldü	
 # apps/weather/main.c
 Hava Durumu	
+# apps/vakit/main.c
+Hava Durumu şehri: %s	
 # apps/pano/main.c
 Hava durumu	
 # apps/weather/main.c
@@ -581,12 +627,22 @@ Her hamlede tahtayı çevir
 Her yıl	
 # apps/sky/skydata.c
 Herkül	
+# apps/vakit/main.c
+Hesaplama yöntemi	
 # apps/ajanda/main.c
 Hf	
+# apps/vakit/main.c
+Hicri	
+# apps/vakit/main.c
+Hicri tarih: 2016 Hicri Takvim Birliği ölçütüyle (Diyanet'in kullandığı) hesaplanır; nadiren bir gün farklı olabilir.	
 # apps/ajanda/agenda.c
 Hicri yılbaşı	
 # apps/ajanda/main.c
 Hicri: %d %s %d	
+# apps/vakit/main.c
+Hicri: %s	
+# apps/vakit/main.c
+Hicri: %s – %s	
 # apps/pano/pano.c
 Hilal (büyüyen)	
 # apps/pano/pano.c
@@ -597,13 +653,13 @@ Hissedilen %s
 Hiç mola yok: oturum tamam.	
 # apps/sleep/sleep_opts.c
 Hiç uyuma	
-# apps/weather/wx.c
+# apps/vakit/main.c
 K	
 # apps/ssh/main.c
 KAPALI	
-# apps/weather/wx.c
+# apps/vakit/main.c
 KB	
-# apps/weather/wx.c
+# apps/vakit/main.c
 KD	
 # apps/ajanda/agenda.c
 Kadir Gecesi	
@@ -643,6 +699,8 @@ Kapella
 Kar sağanağı	
 # apps/weather/wx.c
 Kar taneleri	
+# apps/vakit/vakit.c
+Karaçi (İslami İlimler Üniv.)	
 # apps/weather/wx.c
 Karlı	
 # apps/sky/skydata.c
@@ -685,6 +743,10 @@ Kendiliğinden başladı. Zamanlayıcı için dokunun.
 Kilidi aç (yeni PIN)	
 # apps/sleep/main.c
 Kindle bu süre dokunulmadan kalınca uyur.\n"Hiç uyuma" pili hızlı tüketir.\nYeniden başlatınca varsayılana dönebilir.	
+# apps/vakit/main.c
+Kindle saati	
+# apps/vakit/main.c
+Kindle'da pusula yok: cihazı, ☀ işareti gökteki Güneş'i gösterecek biçimde çevirin; ok o zaman kıbleyi gösterir.	
 # apps/ebooks/main.c
 Kitap	
 # apps/ebooks/main.c
@@ -701,6 +763,8 @@ Kolay okuma: Açık
 Kolay okuma: Kapalı	
 # core/hub/main.c
 Kolay okuma: bütün yazılar büyük, kalın ve siyah olur.\nBasit mod: menüde dört büyük düğme; panoda yalnızca saat, hava ve üç haber. Teknik uygulamalar gizlenir; bu ekrandan her zaman geri açılabilir.	
+# apps/vakit/main.c
+Koordinat	
 # apps/deprem/main.c
 Koordinatlar	
 # apps/puzzle/puzzle.c
@@ -741,8 +805,12 @@ Kurulu sürüm: %s
 Kuruluyor…	
 # apps/sky/skydata.c
 Kutup Yıldızı	
+# apps/vakit/vakit.c
+Kuzey Amerika (ISNA)	
 # apps/sky/skydata.c
 Kuğu	
+# apps/vakit/main.c
+Kâbe'ye uzaklık: %s km · gerçek kuzeye göre	
 # apps/puzzle/puzzle.c
 Köşe matı	
 # apps/news/news.c
@@ -753,6 +821,16 @@ Küçük terfi
 Küçükayı	
 # apps/sky/skydata.c
 Küçükköpek	
+# apps/vakit/vakit.c
+Küçülen ay	
+# apps/vakit/vakit.c
+Küçülen hilal	
+# apps/vakit/main.c
+Kıble	
+# apps/vakit/main.c
+Kıble %.0f° %s · %s	
+# apps/vakit/main.c
+Kıble saati %s: Güneş o an tam kıble yönündedir.	
 # apps/puzzle/puzzle.c
 Kırlangıç matı	
 # apps/deprem/main.c
@@ -803,6 +881,10 @@ Motor yanıt vermedi
 Muharrem	
 # apps/wordle/main.c
 Muhteşem!	
+# apps/vakit/vakit.c
+Müslüman Dünya Birliği (MWL)	
+# apps/vakit/vakit.c
+Mısır (Genel Etüt Kurumu)	
 # apps/pano/main.c
 Namaz vakitleri	
 # apps/pano/main.c
@@ -899,7 +981,7 @@ Pil sıcaklığı
 Pil tasarrufu (derin uyku)	
 # apps/pano/main.c
 Pil tasarrufunda Kindle uyur, ekran e-ink sayesinde kalır; Wi-Fi yalnızca veri güncellerken açılır. Aralıkları Pil ve ekran'dan ayarlayın. Uyandırmak için güç tuşuna basın ya da ekrana dokunun.	
-# core/kui/powerui.c
+# apps/vakit/main.c
 Pil ve ekran	
 # apps/pano/main.c
 Pil ve ekran…	
@@ -939,6 +1021,8 @@ Rebiülahir
 Rebiülevvel	
 # apps/ajanda/agenda.c
 Receb	
+# apps/vakit/vakit.c
+Recep	
 # apps/ajanda/agenda.c
 Regaib Kandili	
 # apps/sky/skydata.c
@@ -963,6 +1047,8 @@ SON DAKİKA · %s
 SSH Sunucusu	
 # apps/sysinfo/main.c
 SSH sunucusu	
+# apps/vakit/main.c
+Saat dilimi	
 # apps/ajanda/agenda.c
 Safer	
 # core/kui/trfmt.c
@@ -983,6 +1069,8 @@ Satış
 Savunanı alma	
 # apps/puzzle/puzzle.c
 Savunma hamlesi	
+# apps/vakit/main.c
+Sayfa %d / %d	
 # apps/deprem/main.c
 Sayfa %d/%d	
 # apps/weather/wx.c
@@ -995,6 +1083,8 @@ Seri
 Seri: %d · En iyi seri: %d	
 # apps/puzzle/puzzle.c
 Sessiz hamle	
+# apps/vakit/main.c
+Seçilen yer Vakitler'e kaydedilir (data/vakit/place); Hava Durumu'nun şehir listesi değişmez.	
 # apps/ajanda/main.c
 Sil	
 # apps/sky/skydata.c
@@ -1123,10 +1213,18 @@ Tüm uygulamalar güncel
 Tümü	
 # core/hub/upd_ui.c
 Tümünü güncelle	
-# apps/news/news.c
+# apps/deprem/main.c
 Türkiye	
+# apps/vakit/main.c
+Türkiye (81 il)	
+# apps/vakit/main.c
+Türkiye (UTC+3)	
 # apps/deprem/main.c
 Türkiye saati	
+# apps/vakit/main.c
+UTC farkı (saat, ör. 3 veya -5 ya da 5,5)	
+# apps/vakit/main.c
+UTC farkı gir	
 # apps/odak/main.c
 UZUN MOLA	
 # apps/ajanda/agenda.c
@@ -1155,6 +1253,10 @@ Uzaklık %s AB (Güneş–Dünya = 1)
 Uzun mola: %s	
 # apps/odak/main.c
 Uzun · 50 / 10 dk	
+# apps/vakit/main.c
+Vakitler	
+# apps/vakit/main.c
+Vakitler hangi saate göre gösterilsin?	
 # apps/ajanda/main.c
 Vazgeç	
 # apps/sky/skydata.c
@@ -1183,8 +1285,12 @@ Yarım
 Yarım altın	
 # apps/ajanda/main.c
 Yarım gün	
+# apps/vakit/main.c
+Yarın %s %s	
 # apps/pano/pano.c
 Yatsı	
+# apps/vakit/vakit.c
+Yatsıya %s	
 # apps/sky/skydata.c
 Yay	
 # apps/ebooks/main.c
@@ -1201,6 +1307,8 @@ Yağış %s
 Yengeç	
 # apps/game2048/main.c
 Yeni	
+# apps/vakit/vakit.c
+Yeni Ay	
 # apps/ssh/main.c
 Yeni SSH parolası (en az 6)	
 # apps/pano/pano.c
@@ -1217,6 +1325,8 @@ Yeniden dene
 Yeniden kur	
 # apps/currency/main.c
 Yenile	
+# apps/vakit/main.c
+Yerin adı	
 # apps/chess/chess_game.c
 Yetersiz taş — berabere	
 # apps/puzzle/puzzle.c
@@ -1239,6 +1349,8 @@ Yıldız · %s
 Yıldız · %s · %s	
 # apps/ajanda/agenda.c
 Zafer Bayramı	
+# apps/vakit/main.c
+Zeval %s · Ay: %s, %%%d aydınlık	
 # apps/ajanda/agenda.c
 Zilhicce	
 # apps/ajanda/agenda.c
@@ -1343,8 +1455,12 @@ yarım gün
 Özel · %d / %d dk	
 # apps/pano/pano.c
 Öğle	
+# apps/vakit/vakit.c
+Öğleye %s	
 # apps/ajanda/agenda.c
 Öğretmenler Günü	
+# apps/vakit/vakit.c
+Ümmü'l-Kurâ (Mekke)	
 # apps/puzzle/puzzle.c
 Üstünlük	
 # apps/solitaire/main.c
@@ -1359,6 +1475,8 @@ yarım gün
 İki oyunculu devam	
 # apps/pano/pano.c
 İkindi	
+# apps/vakit/vakit.c
+İkindiye %s	
 # apps/sky/skydata.c
 İkizler	
 # apps/puzzle/puzzle.c
@@ -1367,6 +1485,14 @@ yarım gün
 İlk dördün	
 # apps/pano/pano.c
 İmsak	
+# apps/vakit/main.c
+İmsak %s°, yatsı %s°; temkin yok.	
+# apps/vakit/main.c
+İmsak %s°, yatsı akşamdan %d dk sonra (Ramazan'da %d dk); temkin yok.	
+# apps/vakit/vakit.c
+İmsaka %s	
+# apps/vakit/main.c
+İmsakiye	
 # apps/ebooks/main.c
 İndir	
 # apps/ebooks/main.c
@@ -1405,6 +1531,8 @@ yarım gün
 Şarj oluyor	
 # apps/odak/main.c
 Şarjda: uyanık kalıyor	
+# apps/vakit/main.c
+Şehir	
 # apps/weather/main.c
 Şehir ara	
 # apps/weather/main.c
@@ -1439,6 +1567,8 @@ yarım gün
 Şu an: %d dakika	
 # apps/sleep/sleep_opts.c
 Şu an: %d saat	
+# apps/vakit/main.c
+Şu an: %s (%.2f, %.2f)	
 # apps/sleep/sleep_opts.c
 Şu an: hiç uyumuyor	
 # core/kui/trfmt.c
@@ -1457,6 +1587,8 @@ yarım gün
 ≈ %d gün %d sa	
 # core/kui/battest.c
 ≈ %d sa %d dk	
+# apps/vakit/main.c
+☀ Güneş şu an %.0f° %s yönünde, %.0f° yüksekte	
 # apps/sky/main.c
 ☉ Güneş	
 # apps/sky/main.c

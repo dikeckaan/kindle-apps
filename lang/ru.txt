@@ -740,3 +740,69 @@ Kolay okuma: Kapalı	Лёгкое чтение: выкл
 Basit mod: Açık	Простой режим: вкл
 Basit mod: Kapalı	Простой режим: выкл
 Kolay okuma: bütün yazılar büyük, kalın ve siyah olur.\nBasit mod: menüde dört büyük düğme; panoda yalnızca saat, hava ve üç haber. Teknik uygulamalar gizlenir; bu ekrandan her zaman geri açılabilir.	Лёгкое чтение: весь текст становится крупным, жирным и чёрным.\nПростой режим: четыре большие кнопки в меню; на панели только часы, погода и три новости. Технические приложения скрываются; их всегда можно вернуть на этом экране.
+ · Hanefi ikindi	 · аср по-ханафитски
+ · yüksek enlem kuralı	 · правило высоких широт
+%s vakti %s	%s в %s
+Akşama %s	%s до магриба
+Asr-ı evvel (Şafii)	Ранний аср (шафиитский)
+Asr-ı sani (Hanefi)	Поздний аср (ханафитский)
+Bugün Güneş kıble yönünden geçmiyor.	Сегодня Солнце не проходит через направление киблы.
+Bugün vakit hesaplanamıyor	Сегодня время намаза рассчитать нельзя
+Büyüyen ay	Растущая луна
+Büyüyen hilal	Растущий серп
+Diyanet (Türkiye)	Diyanet (Турция)
+Diyanet: imsak güneş ufkun 18° altındayken, yatsı 17°. Temkin: güneş −7, öğle +5, ikindi +4, akşam +7 dk. Diyanet'in yayımladığı vakitlerle en çok 1 dk fark.	Diyanet: фаджр при Солнце на 18° ниже горизонта, иша на 17°. Запасы (темкин): восход −7, зухр +5, аср +4, магриб +7 мин. Не более 1 мин расхождения с временем, опубликованным Diyanet.
+Diğer	Другое
+Enlem ve boylam gir	Ввести широту и долготу
+Enlem −90…90, boylam −180…180 olmalı, ör. 41.01, 28.98	Широта −90…90 и долгота −180…180, напр. 41.01, 28.98
+Enlem, boylam (ör. 41.01, 28.98)	Широта, долгота (напр. 41.01, 28.98)
+Fransa (UOIF)	Франция (UOIF)
+Gri satırlar: Ramazan (imsak ve iftar kalın)	Серые строки: рамадан (фаджр и ифтар жирным)
+Gün	День
+Güneş doğuşu %s · batışı %s · gün %d sa %d dk	Восход %s · закат %s · день %d ч %d мин
+Güneş şu an ufkun altında	Солнце под горизонтом
+Güneşe %s	%s до восхода
+Hava Durumu şehri: %s	Город погоды: %s
+Hesaplama yöntemi	Метод расчёта
+Hicri	Хиджра
+Hicri tarih: 2016 Hicri Takvim Birliği ölçütüyle (Diyanet'in kullandığı) hesaplanır; nadiren bir gün farklı olabilir.	Дата хиджры: по критерию Союза календаря хиджры 2016 года (его использует Diyanet); изредка может отличаться на день.
+Hicri: %s	Хиджра: %s
+Hicri: %s – %s	Хиджра: %s – %s
+Karaçi (İslami İlimler Üniv.)	Карачи (Унив. исламских наук)
+Kindle saati	Часы Kindle
+Kindle'da pusula yok: cihazı, ☀ işareti gökteki Güneş'i gösterecek biçimde çevirin; ok o zaman kıbleyi gösterir.	В Kindle нет компаса: поверните его так, чтобы знак ☀ указывал на Солнце в небе; тогда стрелка укажет киблу.
+Koordinat	Координаты
+Kuzey Amerika (ISNA)	Северная Америка (ISNA)
+Kâbe'ye uzaklık: %s km · gerçek kuzeye göre	Расстояние до Каабы: %s км · относительно истинного севера
+Küçülen ay	Убывающая луна
+Küçülen hilal	Убывающий серп
+Kıble	Кибла
+Kıble %.0f° %s · %s	Кибла %.0f° %s · %s
+Kıble saati %s: Güneş o an tam kıble yönündedir.	Время киблы %s: Солнце тогда стоит точно в направлении киблы.
+Müslüman Dünya Birliği (MWL)	Всемирная исламская лига (MWL)
+Mısır (Genel Etüt Kurumu)	Египет (Главное управление геодезии)
+Recep	Раджаб
+Saat dilimi	Часовой пояс
+Sayfa %d / %d	Страница %d / %d
+Seçilen yer Vakitler'e kaydedilir (data/vakit/place); Hava Durumu'nun şehir listesi değişmez.	Выбранное место сохраняется для «Времени намаза» (data/vakit/place); список городов погоды не меняется.
+Türkiye (81 il)	Турция (81 провинция)
+Türkiye (UTC+3)	Турция (UTC+3)
+UTC farkı (saat, ör. 3 veya -5 ya da 5,5)	Смещение от UTC (часы, напр. 3, -5 или 5.5)
+UTC farkı gir	Ввести смещение UTC
+Vakitler	Время намаза
+Vakitler hangi saate göre gösterilsin?	По каким часам показывать время?
+Yarın %s %s	Завтра %s %s
+Yatsıya %s	%s до иша
+Yeni Ay	Новолуние
+Yerin adı	Название места
+Zeval %s · Ay: %s, %%%d aydınlık	Истинный полдень %s · Луна: %s, освещена на %d%%
+Öğleye %s	%s до зухра
+Ümmü'l-Kurâ (Mekke)	Умм аль-Кура (Мекка)
+İkindiye %s	%s до асра
+İmsak %s°, yatsı %s°; temkin yok.	Фаджр %s°, иша %s°; без темкина.
+İmsak %s°, yatsı akşamdan %d dk sonra (Ramazan'da %d dk); temkin yok.	Фаджр %s°, иша через %d мин после магриба (в рамадан %d мин); без темкина.
+İmsaka %s	%s до фаджра
+İmsakiye	Таблица на месяц
+Şehir	Город
+Şu an: %s (%.2f, %.2f)	Сейчас: %s (%.2f, %.2f)
+☀ Güneş şu an %.0f° %s yönünde, %.0f° yüksekte	☀ Солнце сейчас на %.0f° %s, высота %.0f°

@@ -740,3 +740,69 @@ Kolay okuma: Kapalı	Snadné čtení: Ne
 Basit mod: Açık	Jednoduchý režim: Ano
 Basit mod: Kapalı	Jednoduchý režim: Ne
 Kolay okuma: bütün yazılar büyük, kalın ve siyah olur.\nBasit mod: menüde dört büyük düğme; panoda yalnızca saat, hava ve üç haber. Teknik uygulamalar gizlenir; bu ekrandan her zaman geri açılabilir.	Snadné čtení: veškerý text bude velký, tučný a černý.\nJednoduchý režim: čtyři velká tlačítka v menu; přehled ukazuje jen hodiny, počasí a tři zprávy. Technické aplikace se skryjí; na této obrazovce je lze kdykoli znovu zapnout.
+ · Hanefi ikindi	 · hanafijský Asr
+ · yüksek enlem kuralı	 · pravidlo vysokých šířek
+%s vakti %s	%s v %s
+Akşama %s	%s do Magribu
+Asr-ı evvel (Şafii)	Časný Asr (šáfiovský)
+Asr-ı sani (Hanefi)	Pozdní Asr (hanafijský)
+Bugün Güneş kıble yönünden geçmiyor.	Dnes Slunce neprochází směrem qibly.
+Bugün vakit hesaplanamıyor	Dnes nelze časy modliteb spočítat
+Büyüyen ay	Dorůstající měsíc
+Büyüyen hilal	Dorůstající srpek
+Diyanet (Türkiye)	Diyanet (Turecko)
+Diyanet: imsak güneş ufkun 18° altındayken, yatsı 17°. Temkin: güneş −7, öğle +5, ikindi +4, akşam +7 dk. Diyanet'in yayımladığı vakitlerle en çok 1 dk fark.	Diyanet: Fadžr při Slunci 18° pod obzorem, Iša při 17°. Rezervy (temkin): východ −7, Zuhr +5, Asr +4, Magrib +7 min. Nejvýše 1 min rozdíl od časů zveřejněných Diyanetem.
+Diğer	Jiné
+Enlem ve boylam gir	Zadat šířku a délku
+Enlem −90…90, boylam −180…180 olmalı, ör. 41.01, 28.98	Šířka −90…90 a délka −180…180, např. 41.01, 28.98
+Enlem, boylam (ör. 41.01, 28.98)	Šířka, délka (např. 41.01, 28.98)
+Fransa (UOIF)	Francie (UOIF)
+Gri satırlar: Ramazan (imsak ve iftar kalın)	Šedé řádky: ramadán (Fadžr a iftar tučně)
+Gün	Den
+Güneş doğuşu %s · batışı %s · gün %d sa %d dk	Východ %s · západ %s · den %d h %d min
+Güneş şu an ufkun altında	Slunce je pod obzorem
+Güneşe %s	%s do východu
+Hava Durumu şehri: %s	Město počasí: %s
+Hesaplama yöntemi	Metoda výpočtu
+Hicri	Hidžra
+Hicri tarih: 2016 Hicri Takvim Birliği ölçütüyle (Diyanet'in kullandığı) hesaplanır; nadiren bir gün farklı olabilir.	Datum hidžry: podle kritéria Unie hidžrského kalendáře z roku 2016 (jak jej používá Diyanet); výjimečně o den jinak.
+Hicri: %s	Hidžra: %s
+Hicri: %s – %s	Hidžra: %s – %s
+Karaçi (İslami İlimler Üniv.)	Karáčí (Univ. islámských věd)
+Kindle saati	Hodiny Kindlu
+Kindle'da pusula yok: cihazı, ☀ işareti gökteki Güneş'i gösterecek biçimde çevirin; ok o zaman kıbleyi gösterir.	Kindle nemá kompas: otočte jej, až značka ☀ ukáže na Slunce na obloze; šipka pak ukazuje qiblu.
+Koordinat	Souřadnice
+Kuzey Amerika (ISNA)	Severní Amerika (ISNA)
+Kâbe'ye uzaklık: %s km · gerçek kuzeye göre	Vzdálenost ke Kaabě: %s km · vůči zeměpisnému severu
+Küçülen ay	Couvající měsíc
+Küçülen hilal	Couvající srpek
+Kıble	Qibla
+Kıble %.0f° %s · %s	Qibla %.0f° %s · %s
+Kıble saati %s: Güneş o an tam kıble yönündedir.	Čas qibly %s: Slunce je tehdy přesně ve směru qibly.
+Müslüman Dünya Birliği (MWL)	Muslimská světová liga (MWL)
+Mısır (Genel Etüt Kurumu)	Egypt (Generální zeměměřický úřad)
+Recep	Radžab
+Saat dilimi	Časové pásmo
+Sayfa %d / %d	Strana %d / %d
+Seçilen yer Vakitler'e kaydedilir (data/vakit/place); Hava Durumu'nun şehir listesi değişmez.	Zvolené místo se uloží pro Časy modliteb (data/vakit/place); seznam měst počasí se nemění.
+Türkiye (81 il)	Turecko (81 provincií)
+Türkiye (UTC+3)	Turecko (UTC+3)
+UTC farkı (saat, ör. 3 veya -5 ya da 5,5)	Posun od UTC (hodiny, např. 3, -5 nebo 5.5)
+UTC farkı gir	Zadat posun od UTC
+Vakitler	Časy modliteb
+Vakitler hangi saate göre gösterilsin?	Podle kterých hodin ukazovat časy?
+Yarın %s %s	Zítra %s %s
+Yatsıya %s	%s do Iši
+Yeni Ay	Nov
+Yerin adı	Název místa
+Zeval %s · Ay: %s, %%%d aydınlık	Sluneční poledne %s · Měsíc: %s, osvětlen z %d %%
+Öğleye %s	%s do Zuhru
+Ümmü'l-Kurâ (Mekke)	Umm al-Kurá (Mekka)
+İkindiye %s	%s do Asru
+İmsak %s°, yatsı %s°; temkin yok.	Fadžr %s°, Iša %s°; bez temkinu.
+İmsak %s°, yatsı akşamdan %d dk sonra (Ramazan'da %d dk); temkin yok.	Fadžr %s°, Iša %d min po Magribu (v ramadánu %d min); bez temkinu.
+İmsaka %s	%s do Fadžru
+İmsakiye	Měsíční rozpis
+Şehir	Město
+Şu an: %s (%.2f, %.2f)	Nyní: %s (%.2f, %.2f)
+☀ Güneş şu an %.0f° %s yönünde, %.0f° yüksekte	☀ Slunce je teď na %.0f° %s, %.0f° vysoko

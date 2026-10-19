@@ -740,3 +740,69 @@ Kolay okuma: Kapalı	Let læsning: Fra
 Basit mod: Açık	Enkel tilstand: Til
 Basit mod: Kapalı	Enkel tilstand: Fra
 Kolay okuma: bütün yazılar büyük, kalın ve siyah olur.\nBasit mod: menüde dört büyük düğme; panoda yalnızca saat, hava ve üç haber. Teknik uygulamalar gizlenir; bu ekrandan her zaman geri açılabilir.	Let læsning: al tekst bliver stor, fed og sort.\nEnkel tilstand: fire store knapper i menuen; oversigten viser kun ur, vejr og tre nyheder. Tekniske apps skjules; de kan altid slås til igen fra denne skærm.
+ · Hanefi ikindi	 · hanafitisk Asr
+ · yüksek enlem kuralı	 · regel for høje breddegrader
+%s vakti %s	%s kl. %s
+Akşama %s	%s til Maghrib
+Asr-ı evvel (Şafii)	Tidlig Asr (shafiitisk)
+Asr-ı sani (Hanefi)	Sen Asr (hanafitisk)
+Bugün Güneş kıble yönünden geçmiyor.	I dag passerer solen ikke qibla-retningen.
+Bugün vakit hesaplanamıyor	I dag kan ingen bedetider beregnes
+Büyüyen ay	Tiltagende måne
+Büyüyen hilal	Tiltagende segl
+Diyanet (Türkiye)	Diyanet (Tyrkiet)
+Diyanet: imsak güneş ufkun 18° altındayken, yatsı 17°. Temkin: güneş −7, öğle +5, ikindi +4, akşam +7 dk. Diyanet'in yayımladığı vakitlerle en çok 1 dk fark.	Diyanet: Fajr når solen står 18° under horisonten, Isha ved 17°. Marginer (temkin): solopgang −7, Dhuhr +5, Asr +4, Maghrib +7 min. Højst 1 min fra Diyanets offentliggjorte tider.
+Diğer	Andet
+Enlem ve boylam gir	Indtast bredde- og længdegrad
+Enlem −90…90, boylam −180…180 olmalı, ör. 41.01, 28.98	Breddegrad −90…90 og længdegrad −180…180, f.eks. 41.01, 28.98
+Enlem, boylam (ör. 41.01, 28.98)	Breddegrad, længdegrad (f.eks. 41.01, 28.98)
+Fransa (UOIF)	Frankrig (UOIF)
+Gri satırlar: Ramazan (imsak ve iftar kalın)	Grå rækker: ramadan (Fajr og iftar med fed)
+Gün	Dag
+Güneş doğuşu %s · batışı %s · gün %d sa %d dk	Solopgang %s · nedgang %s · dag %d t %d min
+Güneş şu an ufkun altında	Solen er under horisonten
+Güneşe %s	%s til solopgang
+Hava Durumu şehri: %s	Vejrby: %s
+Hesaplama yöntemi	Beregningsmetode
+Hicri	Hijri
+Hicri tarih: 2016 Hicri Takvim Birliği ölçütüyle (Diyanet'in kullandığı) hesaplanır; nadiren bir gün farklı olabilir.	Hijri-dato: efter kriteriet fra Hijri-kalenderunionen 2016 (som Diyanet bruger); kan en sjælden gang afvige en dag.
+Hicri: %s	Hijri: %s
+Hicri: %s – %s	Hijri: %s – %s
+Karaçi (İslami İlimler Üniv.)	Karachi (Univ. for islamiske videnskaber)
+Kindle saati	Kindlens ur
+Kindle'da pusula yok: cihazı, ☀ işareti gökteki Güneş'i gösterecek biçimde çevirin; ok o zaman kıbleyi gösterir.	Kindlen har intet kompas: drej den, til ☀-mærket peger mod solen på himlen; så peger pilen mod qibla.
+Koordinat	Koordinater
+Kuzey Amerika (ISNA)	Nordamerika (ISNA)
+Kâbe'ye uzaklık: %s km · gerçek kuzeye göre	Afstand til Kaba: %s km · i forhold til geografisk nord
+Küçülen ay	Aftagende måne
+Küçülen hilal	Aftagende segl
+Kıble	Qibla
+Kıble %.0f° %s · %s	Qibla %.0f° %s · %s
+Kıble saati %s: Güneş o an tam kıble yönündedir.	Qibla-tid %s: da står solen præcis i qibla-retningen.
+Müslüman Dünya Birliği (MWL)	Den Muslimske Verdensliga (MWL)
+Mısır (Genel Etüt Kurumu)	Egypten (Opmålingsmyndigheden)
+Recep	Rajab
+Saat dilimi	Tidszone
+Sayfa %d / %d	Side %d / %d
+Seçilen yer Vakitler'e kaydedilir (data/vakit/place); Hava Durumu'nun şehir listesi değişmez.	Det valgte sted gemmes til Bedetider (data/vakit/place); vejr-appens byliste ændres ikke.
+Türkiye (81 il)	Tyrkiet (81 provinser)
+Türkiye (UTC+3)	Tyrkiet (UTC+3)
+UTC farkı (saat, ör. 3 veya -5 ya da 5,5)	UTC-forskel (timer, f.eks. 3, -5 eller 5.5)
+UTC farkı gir	Indtast UTC-forskel
+Vakitler	Bedetider
+Vakitler hangi saate göre gösterilsin?	Efter hvilket ur skal tiderne vises?
+Yarın %s %s	I morgen %s %s
+Yatsıya %s	%s til Isha
+Yeni Ay	Nymåne
+Yerin adı	Stedets navn
+Zeval %s · Ay: %s, %%%d aydınlık	Middagshøjde %s · Månen: %s, %d %% belyst
+Öğleye %s	%s til Dhuhr
+Ümmü'l-Kurâ (Mekke)	Umm al-Qura (Mekka)
+İkindiye %s	%s til Asr
+İmsak %s°, yatsı %s°; temkin yok.	Fajr %s°, Isha %s°; uden temkin.
+İmsak %s°, yatsı akşamdan %d dk sonra (Ramazan'da %d dk); temkin yok.	Fajr %s°, Isha %d min efter Maghrib (%d min i ramadanen); uden temkin.
+İmsaka %s	%s til Fajr
+İmsakiye	Månedsoversigt
+Şehir	By
+Şu an: %s (%.2f, %.2f)	Nu: %s (%.2f, %.2f)
+☀ Güneş şu an %.0f° %s yönünde, %.0f° yüksekte	☀ Solen står nu på %.0f° %s, %.0f° højt

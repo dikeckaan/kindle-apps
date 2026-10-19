@@ -1,0 +1,10 @@
+{
+  "manifest_version": 2,
+  "id": "kindle-apps-vakit",
+  "name": "Vakitler",
+  "author": "Kaan Dikeç",
+  "description": "Namaz vakitleri (Diyanet yöntemi, yurt dışı için MWL, ISNA, Ümmü'l-Kurâ…), sonraki vakte geri sayım, aylık imsakiye ve Ramazan, kıble pusulası ve Kâbe'ye uzaklık, güneş doğuş/batış, ay evresi ve hicri tarih; 81 il ve dünya şehirleri, tamamen çevrimdışı hesaplanır, Kindle dakikalar arasında uyur",
+  "version": [2026, 10, 19],
+  "dependencies": [],
+  "supported_platforms": ["kindlehf"]
+}

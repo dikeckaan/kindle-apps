@@ -740,3 +740,69 @@ Kolay okuma: Kapalı	Lättläst: Av
 Basit mod: Açık	Enkelt läge: På
 Basit mod: Kapalı	Enkelt läge: Av
 Kolay okuma: bütün yazılar büyük, kalın ve siyah olur.\nBasit mod: menüde dört büyük düğme; panoda yalnızca saat, hava ve üç haber. Teknik uygulamalar gizlenir; bu ekrandan her zaman geri açılabilir.	Lättläst: all text blir stor, fet och svart.\nEnkelt läge: fyra stora knappar i menyn; översikten visar bara klocka, väder och tre nyheter. Tekniska appar döljs; de kan alltid slås på igen från den här skärmen.
+ · Hanefi ikindi	 · hanafitisk Asr
+ · yüksek enlem kuralı	 · regel för höga breddgrader
+%s vakti %s	%s kl. %s
+Akşama %s	%s till Maghrib
+Asr-ı evvel (Şafii)	Tidig Asr (shafiitisk)
+Asr-ı sani (Hanefi)	Sen Asr (hanafitisk)
+Bugün Güneş kıble yönünden geçmiyor.	I dag passerar solen inte qiblariktningen.
+Bugün vakit hesaplanamıyor	I dag kan inga bönetider beräknas
+Büyüyen ay	Tilltagande måne
+Büyüyen hilal	Tilltagande skära
+Diyanet (Türkiye)	Diyanet (Turkiet)
+Diyanet: imsak güneş ufkun 18° altındayken, yatsı 17°. Temkin: güneş −7, öğle +5, ikindi +4, akşam +7 dk. Diyanet'in yayımladığı vakitlerle en çok 1 dk fark.	Diyanet: Fajr när solen står 18° under horisonten, Isha vid 17°. Marginaler (temkin): soluppgång −7, Dhuhr +5, Asr +4, Maghrib +7 min. Högst 1 min från Diyanets publicerade tider.
+Diğer	Annat
+Enlem ve boylam gir	Ange latitud och longitud
+Enlem −90…90, boylam −180…180 olmalı, ör. 41.01, 28.98	Latitud −90…90 och longitud −180…180, t.ex. 41.01, 28.98
+Enlem, boylam (ör. 41.01, 28.98)	Latitud, longitud (t.ex. 41.01, 28.98)
+Fransa (UOIF)	Frankrike (UOIF)
+Gri satırlar: Ramazan (imsak ve iftar kalın)	Grå rader: ramadan (Fajr och iftar i fetstil)
+Gün	Dag
+Güneş doğuşu %s · batışı %s · gün %d sa %d dk	Soluppgång %s · nedgång %s · dag %d h %d min
+Güneş şu an ufkun altında	Solen är under horisonten
+Güneşe %s	%s till soluppgång
+Hava Durumu şehri: %s	Väderstad: %s
+Hesaplama yöntemi	Beräkningsmetod
+Hicri	Hijri
+Hicri tarih: 2016 Hicri Takvim Birliği ölçütüyle (Diyanet'in kullandığı) hesaplanır; nadiren bir gün farklı olabilir.	Hijridatum: enligt 2016 års kriterium från Hijrikalenderunionen (som Diyanet använder); kan någon gång skilja en dag.
+Hicri: %s	Hijri: %s
+Hicri: %s – %s	Hijri: %s – %s
+Karaçi (İslami İlimler Üniv.)	Karachi (Univ. för islamiska vetenskaper)
+Kindle saati	Kindlens klocka
+Kindle'da pusula yok: cihazı, ☀ işareti gökteki Güneş'i gösterecek biçimde çevirin; ok o zaman kıbleyi gösterir.	Kindlen har ingen kompass: vrid den tills ☀-tecknet pekar mot solen på himlen; då pekar pilen mot qibla.
+Koordinat	Koordinater
+Kuzey Amerika (ISNA)	Nordamerika (ISNA)
+Kâbe'ye uzaklık: %s km · gerçek kuzeye göre	Avstånd till Kaba: %s km · mot geografisk nord
+Küçülen ay	Avtagande måne
+Küçülen hilal	Avtagande skära
+Kıble	Qibla
+Kıble %.0f° %s · %s	Qibla %.0f° %s · %s
+Kıble saati %s: Güneş o an tam kıble yönündedir.	Qibla-tid %s: då står solen exakt i qiblariktningen.
+Müslüman Dünya Birliği (MWL)	Muslimska världsligan (MWL)
+Mısır (Genel Etüt Kurumu)	Egypten (Lantmäterimyndigheten)
+Recep	Rajab
+Saat dilimi	Tidszon
+Sayfa %d / %d	Sida %d / %d
+Seçilen yer Vakitler'e kaydedilir (data/vakit/place); Hava Durumu'nun şehir listesi değişmez.	Den valda platsen sparas för Bönetider (data/vakit/place); väderappens stadslista ändras inte.
+Türkiye (81 il)	Turkiet (81 provinser)
+Türkiye (UTC+3)	Turkiet (UTC+3)
+UTC farkı (saat, ör. 3 veya -5 ya da 5,5)	UTC-skillnad (timmar, t.ex. 3, -5 eller 5.5)
+UTC farkı gir	Ange UTC-skillnad
+Vakitler	Bönetider
+Vakitler hangi saate göre gösterilsin?	Efter vilken klocka ska tiderna visas?
+Yarın %s %s	I morgon %s %s
+Yatsıya %s	%s till Isha
+Yeni Ay	Nymåne
+Yerin adı	Platsens namn
+Zeval %s · Ay: %s, %%%d aydınlık	Soltopp %s · Månen: %s, %d %% belyst
+Öğleye %s	%s till Dhuhr
+Ümmü'l-Kurâ (Mekke)	Umm al-Qura (Mecka)
+İkindiye %s	%s till Asr
+İmsak %s°, yatsı %s°; temkin yok.	Fajr %s°, Isha %s°; utan temkin.
+İmsak %s°, yatsı akşamdan %d dk sonra (Ramazan'da %d dk); temkin yok.	Fajr %s°, Isha %d min efter Maghrib (%d min under ramadan); utan temkin.
+İmsaka %s	%s till Fajr
+İmsakiye	Månadstabell
+Şehir	Stad
+Şu an: %s (%.2f, %.2f)	Nu: %s (%.2f, %.2f)
+☀ Güneş şu an %.0f° %s yönünde, %.0f° yüksekte	☀ Solen står nu på %.0f° %s, %.0f° högt

@@ -740,3 +740,69 @@ Kolay okuma: Kapalı	Lecture facile : Non
 Basit mod: Açık	Mode simple : Oui
 Basit mod: Kapalı	Mode simple : Non
 Kolay okuma: bütün yazılar büyük, kalın ve siyah olur.\nBasit mod: menüde dört büyük düğme; panoda yalnızca saat, hava ve üç haber. Teknik uygulamalar gizlenir; bu ekrandan her zaman geri açılabilir.	Lecture facile : tous les textes deviennent grands, gras et noirs.\nMode simple : quatre grands boutons dans le menu ; le tableau de bord n’affiche que l’heure, la météo et trois actualités. Les applis techniques sont masquées ; on peut toujours les réactiver depuis cet écran.
+ · Hanefi ikindi	 · Asr hanafite
+ · yüksek enlem kuralı	 · règle des hautes latitudes
+%s vakti %s	%s à %s
+Akşama %s	%s avant le Maghrib
+Asr-ı evvel (Şafii)	Asr précoce (chaféite)
+Asr-ı sani (Hanefi)	Asr tardif (hanafite)
+Bugün Güneş kıble yönünden geçmiyor.	Aujourd'hui, le Soleil ne passe pas dans la direction de la qibla.
+Bugün vakit hesaplanamıyor	Aucun horaire calculable aujourd'hui
+Büyüyen ay	Gibbeuse croissante
+Büyüyen hilal	Premier croissant
+Diyanet (Türkiye)	Diyanet (Turquie)
+Diyanet: imsak güneş ufkun 18° altındayken, yatsı 17°. Temkin: güneş −7, öğle +5, ikindi +4, akşam +7 dk. Diyanet'in yayımladığı vakitlerle en çok 1 dk fark.	Diyanet : Fajr avec le Soleil à 18° sous l'horizon, Icha à 17°. Marges (temkin) : lever −7, Dhuhr +5, Asr +4, Maghrib +7 min. Au plus 1 min d'écart avec les horaires publiés par la Diyanet.
+Diğer	Autre
+Enlem ve boylam gir	Saisir latitude et longitude
+Enlem −90…90, boylam −180…180 olmalı, ör. 41.01, 28.98	Latitude −90…90 et longitude −180…180, p. ex. 41.01, 28.98
+Enlem, boylam (ör. 41.01, 28.98)	Latitude, longitude (p. ex. 41.01, 28.98)
+Fransa (UOIF)	France (UOIF)
+Gri satırlar: Ramazan (imsak ve iftar kalın)	Lignes grises : ramadan (Fajr et iftar en gras)
+Gün	Jour
+Güneş doğuşu %s · batışı %s · gün %d sa %d dk	Lever %s · coucher %s · jour %d h %d min
+Güneş şu an ufkun altında	Le Soleil est sous l'horizon
+Güneşe %s	%s avant le lever
+Hava Durumu şehri: %s	Ville météo : %s
+Hesaplama yöntemi	Méthode de calcul
+Hicri	Hégire
+Hicri tarih: 2016 Hicri Takvim Birliği ölçütüyle (Diyanet'in kullandığı) hesaplanır; nadiren bir gün farklı olabilir.	Date de l'hégire : calculée selon le critère de l'Union du calendrier hégirien de 2016 (celui de la Diyanet) ; rarement un jour d'écart.
+Hicri: %s	Hégire : %s
+Hicri: %s – %s	Hégire : %s – %s
+Karaçi (İslami İlimler Üniv.)	Karachi (Univ. des sciences islamiques)
+Kindle saati	Horloge du Kindle
+Kindle'da pusula yok: cihazı, ☀ işareti gökteki Güneş'i gösterecek biçimde çevirin; ok o zaman kıbleyi gösterir.	Le Kindle n'a pas de boussole : tournez-le jusqu'à ce que le signe ☀ montre le Soleil dans le ciel ; la flèche indique alors la qibla.
+Koordinat	Coordonnées
+Kuzey Amerika (ISNA)	Amérique du Nord (ISNA)
+Kâbe'ye uzaklık: %s km · gerçek kuzeye göre	Distance à la Kaaba : %s km · par rapport au nord géographique
+Küçülen ay	Gibbeuse décroissante
+Küçülen hilal	Dernier croissant
+Kıble	Qibla
+Kıble %.0f° %s · %s	Qibla %.0f° %s · %s
+Kıble saati %s: Güneş o an tam kıble yönündedir.	Heure de la qibla %s : le Soleil est alors exactement dans la direction de la qibla.
+Müslüman Dünya Birliği (MWL)	Ligue islamique mondiale (MWL)
+Mısır (Genel Etüt Kurumu)	Égypte (Autorité générale du cadastre)
+Recep	Rajab
+Saat dilimi	Fuseau horaire
+Sayfa %d / %d	Page %d / %d
+Seçilen yer Vakitler'e kaydedilir (data/vakit/place); Hava Durumu'nun şehir listesi değişmez.	Le lieu choisi est enregistré pour les heures de prière (data/vakit/place) ; la liste de villes de la météo ne change pas.
+Türkiye (81 il)	Turquie (81 provinces)
+Türkiye (UTC+3)	Turquie (UTC+3)
+UTC farkı (saat, ör. 3 veya -5 ya da 5,5)	Décalage UTC (heures, p. ex. 3, -5 ou 5.5)
+UTC farkı gir	Saisir le décalage UTC
+Vakitler	Heures de prière
+Vakitler hangi saate göre gösterilsin?	Selon quelle heure afficher les horaires ?
+Yarın %s %s	Demain %s %s
+Yatsıya %s	%s avant l'Icha
+Yeni Ay	Nouvelle lune
+Yerin adı	Nom du lieu
+Zeval %s · Ay: %s, %%%d aydınlık	Midi solaire %s · Lune : %s, éclairée à %d %%
+Öğleye %s	%s avant le Dhuhr
+Ümmü'l-Kurâ (Mekke)	Umm al-Qura (La Mecque)
+İkindiye %s	%s avant l'Asr
+İmsak %s°, yatsı %s°; temkin yok.	Fajr %s°, Icha %s° ; sans temkin.
+İmsak %s°, yatsı akşamdan %d dk sonra (Ramazan'da %d dk); temkin yok.	Fajr %s°, Icha %d min après le Maghrib (%d min pendant le ramadan) ; sans temkin.
+İmsaka %s	%s avant le Fajr
+İmsakiye	Calendrier du mois
+Şehir	Ville
+Şu an: %s (%.2f, %.2f)	Actuel : %s (%.2f, %.2f)
+☀ Güneş şu an %.0f° %s yönünde, %.0f° yüksekte	☀ Le Soleil est à %.0f° %s, à %.0f° de hauteur
