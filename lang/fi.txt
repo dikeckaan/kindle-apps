@@ -856,8 +856,6 @@ Not silinsin mi?	Poistetaanko muistiinpano?
 %s teslim oldu	%s luovutti
 13×13	13×13
 9×9 (kısa oyun)	9×9 (lyhyt peli)
-Almak zorunlu (%d taş) · %s	Lyöntipakko (%d nappulaa) · %s
-Almaya devam: sıradaki kareye dokunun	Jatka lyöntiä: napauta seuraavaa ruutua
 Berabere	Tasapeli
 Beyaz %d – Siyah %d · %s	Valkea %d – Musta %d · %s
 Beyaz (ilk hamle)	Valkea (aloittaa)
@@ -890,9 +888,6 @@ Siyah %d – Beyaz %d · %s	Musta %d – Valkea %d · %s
 Siyah (ilk hamle)	Musta (aloittaa)
 Siyah başlar · köşeler değerlidir	Musta aloittaa · kulmat ovat arvokkaita
 Siyah kazandı	Musta voittaa
-Sıra: %s · Beyaz %d – Siyah %d	Vuoro: %s · Valkea %d – Musta %d
-Sıra: %s · Siyah %d – Beyaz %d	Vuoro: %s · Musta %d – Valkea %d
-Sıra: %s · esir: Siyah %d, Beyaz %d	Vuoro: %s · vangit: Musta %d, Valkea %d
 Tahta	Lauta
 Teslim ol	Luovuta
 Teslim oldunuz · Kindle kazandı	Luovutit · Kindle voitti
@@ -1186,3 +1181,95 @@ Sistem servisleri, SSH ve Kindle Apps hiçbir zaman durdurulmaz.	Järjestelmäpa
 Arka planda program var	Taustalla on ohjelma käynnissä
 Arkada açık program: %s. Ekranı ve dokunmayı kullanabilir.	Auki taustalla: %s. Se voi käyttää näyttöä ja kosketusta.
 Arkada açık programlar: %s. Ekranı ve dokunmayı kullanabilirler.	Auki taustalla: %s. Ne voivat käyttää näyttöä ja kosketusta.
+Amaç	Tavoite
+Her oyuncunun 16 taşı vardır. Beyaz aşağıdadır ve ilk hamleyi yapar. Rakibin bütün taşlarını alan ya da onu hiç hamle yapamaz hâle getiren kazanır.	Kummallakin pelaajalla on 16 nappulaa. Valkea on alhaalla ja aloittaa. Voittaa se, joka lyö kaikki vastustajan nappulat tai jättää sen ilman siirtoja.
+Taş nasıl oynanır?	Miten nappula liikkuu?
+Önce oynatacağınız taşa dokunun: kalın çerçeveyle seçilir, gidebileceği kareler noktayla gösterilir. Sonra noktalı kareye dokunun. Taş bir kare ileri ya da yana gider; geri (×) ve çapraz gidemez.	Napauta ensin siirrettävää nappulaa: se saa paksun kehyksen, ja ruudut, joihin se voi siirtyä, näytetään pisteillä. Napauta sitten pisteruutua. Nappula siirtyy yhden ruudun eteen tai sivulle; ei taakse (×) eikä vinottain.
+Taş alma	Lyönti
+Rakip taş hemen önünüzde ya da yanınızdaysa ve arkasındaki kare boşsa, üzerinden atlayıp onu alırsınız. Atladıktan sonra yine alabiliyorsanız devam edersiniz: e4 önce e5'i, sonra f6'yı alıp g6'ya konuyor.	Jos vastustajan nappula on aivan edessäsi tai vieressäsi ja sen takana on tyhjä ruutu, hyppäät sen yli ja lyöt sen. Jos voit hypyn jälkeen lyödä taas, jatkat: e4 lyö ensin e5:n, sitten f6:n ja päätyy g6:een.
+Almak zorunlu	Lyöntipakko
+Alabiliyorsanız almak zorunludur ve en çok taşı alan yol seçilmelidir. Uygulama oynayabilecek taşları çerçeveyle gösterir: c3 tek taş alabilirdi, f3 ise iki taş alıyor; bu yüzden yalnızca f3 oynayabilir.	Jos voit lyödä, sinun on lyötävä, ja on valittava reitti, joka lyö eniten nappuloita. Sovellus kehystää nappulat, joilla saa siirtää: c3 voisi lyödä yhden, f3 lyö kaksi; siksi vain f3 saa siirtää.
+Dama olmak	Kuninkaaksi
+Son sıraya ulaşan taş dama olur (♛). Dama, düz çizgilerde istediği kadar kare gider. Uzaktaki bir taşı, arası boşsa atlayıp arkasındaki herhangi bir boş kareye konarak alır: b2'deki dama b6'yı alabilir.	Viimeiselle riville päässyt nappula kruunataan kuninkaaksi (♛). Kuningas liikkuu suoria linjoja niin monta ruutua kuin haluaa. Se lyö kauempanakin olevan nappulan, jos väli on tyhjä, ja päätyy mihin tahansa tyhjään ruutuun sen takana: b2:n kuningas voi lyödä b6:n.
+Oyunun sonu	Pelin loppu
+Taşı kalmayan ya da hiç hamle yapamayan kaybeder. Burada Siyah'ın a2'deki taşı hiçbir yere gidemez: Beyaz kazandı. İki tarafın da yalnızca birer taşı kalırsa oyun berabere biter.	Se, jolta loppuvat nappulat tai siirrot, häviää. Tässä Mustan nappula a2:ssa ei pääse mihinkään: Valkea voitti. Jos kummallakin on jäljellä vain yksi nappula, peli päättyy tasapeliin.
+Beyaz h3'teki taşını bir kare ileri, h4'e sürdü. Beyaz yukarı, Siyah aşağı doğru ilerler.	Valkea siirsi nappulansa h3:sta yhden ruudun eteen, h4:ään. Valkea etenee ylöspäin, Musta alaspäin.
+Siyah d6'dan d5'e ilerledi.	Musta siirtyi d6:sta d5:een.
+Beyaz e3'ten e4'e çıktı.	Valkea siirtyi e3:sta e4:ään.
+Siyah d4'e indi. Önünde d3'teki beyaz taş var ve arkası (d5) boş: alınabilir!	Musta siirtyi alas d4:ään. Sen edessä on valkea nappula d3:ssa ja takana (d5) on tyhjää: se voidaan lyödä!
+Beyaz d3'ten d4'ün üzerinden d5'e atladı ve siyah taşı aldı. Almak zorunludur.	Valkea hyppäsi d3:sta d4:n yli d5:een ja löi mustan nappulan. Lyönti on pakollinen.
+Siyah e5'e oynadı. Bu bir hata: e4'teki beyaz taş şimdi art arda iki taş alabilir.	Musta siirsi e5:een. Virhe: e4:n valkea nappula voi nyt lyödä kaksi nappulaa peräkkäin.
+Beyaz e5'i ve e7'yi art arda aldı ve son sıraya, e8'e ulaşıp dama oldu (♛). d5'ten tek taş almak yasaktı: en çok alan yol zorunludur.	Valkea löi e5:n ja e7:n peräkkäin, pääsi viimeiselle riville e8:aan ja kruunattiin kuninkaaksi (♛). Yhden nappulan lyönti d5:stä oli kielletty: pisin lyönti on pakollinen.
+Siyah c5'e oynadı ve d5'teki beyaz taşa yandan saldırdı.	Musta siirsi c5:een ja hyökkäsi d5:n valkeaa nappulaa vastaan sivulta.
+Beyaz'ın başka seçeneği yok, almak zorunlu: d5'teki taş yana atlayıp c5'i aldı ve b5'e kondu.	Valkealla ei ole valinnanvaraa, lyönti on pakollinen: d5:n nappula hyppäsi sivulle, löi c5:n ja päätyi b5:een.
+Siyah b6'dan b4'e atlayıp b5'i geri aldı. Durum: Beyaz 15 taş (biri dama), Siyah 12 taş.	Musta hyppäsi b6:sta b4:ään ja löi takaisin b5:n. Tilanne: Valkea 15 nappulaa (yksi kuningas), Musta 12 nappulaa.
+Beyaz %d – Siyah %d	Valkea %d – Musta %d
+Almaya devam: sıradaki noktalı kareye dokunun	Jatka lyöntiä: napauta seuraavaa pisteruutua
+Baştan seçmek için taşın kendisine dokunun	Napauta nappulaa itseään valitaksesi uudelleen
+Taş seçildi: gideceği noktalı kareye dokunun	Nappula valittu: napauta pisteruutua
+Başka taş seçmek için ona dokunun	Napauta toista nappulaa valitaksesi sen
+En çok taş alan yol zorunlu: %d taş	Pisin lyönti on pakollinen: %d nappulaa
+Zorunlu alma var: çerçeveli taşlardan birini seçin	Lyöntipakko: valitse kehystetty nappula
+bir taş seçin	valitse nappula
+Kindle kısa bir oyun oynayacak. Her dokunuşta bir hamle yapılır ve burada anlatılır. Taşın çıktığı ve vardığı kare çerçeveli, alınan taşların yeri çarpı ile gösterilir.	Kindle pelaa lyhyen pelin. Jokainen napautus tekee yhden siirron, joka selitetään tässä. Nappulan lähtö- ja tuloruutu on kehystetty, lyödyt nappulat merkitään rastilla.
+Nasıl oynanır?	Miten pelataan?
+Örnek oyun	Esimerkkipeli
+Siyah ve Beyaz sırayla boş noktalara taş koyar; Siyah başlar. Konan taş bir daha yerinden oynamaz. Amaç, taşlarınızla tahtanın rakibinizden daha büyük bir bölümünü çevirmektir.	Musta ja Valkea asettavat vuorotellen kiviä tyhjiin pisteisiin; Musta aloittaa. Asetettu kivi ei enää liiku. Tavoitteena on ympäröidä kivilläsi suurempi osa laudasta kuin vastustaja.
+Hamle nasıl yapılır?	Miten siirto tehdään?
+Çizgilerin kesiştiği boş bir noktaya dokunun; taşınız oraya konur. Son konan taşın ortasında halka vardır. Sıranızı geçmek için alttaki Pas düğmesine dokunun.	Napauta tyhjää pistettä, jossa viivat risteävät; kivesi asetetaan siihen. Viimeksi asetetun kiven keskellä on rengas. Ohita vuorosi alhaalla olevalla Passaa-painikkeella.
+Özgürlük	Vapaudet
+Bir taşın yukarı, aşağı, sağ ve soldaki boş komşuları onun özgürlükleridir (halkalar). Yan yana duran aynı renk taşlar bir zincirdir ve özgürlüklerini paylaşır: beyaz taşın 4, siyah zincirin 6 özgürlüğü var.	Kiven tyhjät naapuripisteet ylhäällä, alhaalla, oikealla ja vasemmalla ovat sen vapauksia (renkaat). Vierekkäiset samanväriset kivet muodostavat ketjun ja jakavat vapautensa: valkealla kivellä on 4, mustalla ketjulla 6 vapautta.
+Esir alma	Vangitseminen
+Rakip taşın son özgürlüğünü de kapatırsanız taş tahtadan alınır ve esiriniz olur. Bu beyaz taşın tek özgürlüğü kaldı (atari): Siyah E4'e oynarsa onu alır. Hiç özgürlüğü kalmayacak bir yere, bir şey almıyorsa, taş konamaz.	Jos suljet vastustajan kiven viimeisen vapauden, se poistetaan laudalta ja siitä tulee vankisi. Tällä valkealla kivellä on yksi vapaus jäljellä (atari): jos Musta pelaa E4:ään, se vangitaan. Kiveä ei saa asettaa paikkaan, jossa sillä ei olisi vapauksia, ellei se vangitse jotain.
+Ko	Ko
+Siyah F5'e oynayıp E5'teki beyaz taşı aldı. Beyaz hemen E5'e oynayıp geri alamaz (×); önce başka bir yere oynamalı. Buna ko denir: aynı durumun sonsuza dek tekrarlanmasını önler.	Musta pelasi F5:een ja vangitsi E5:n valkean kiven. Valkea ei saa heti pelata E5:een ja vangita takaisin (×); sen on ensin pelattava muualle. Tämä on ko-sääntö: se estää saman tilanteen toistumisen loputtomasti.
+Oyunun sonu ve sayım	Pelin loppu ja laskenta
+İki oyuncu art arda pas geçince oyun biter. Puanınız: taşlarınız ve çevirdiğiniz boş noktalar (kareler); Beyaz'a 7,5 komi eklenir. Burada Siyah 47, Beyaz 34 + 7,5: Siyah kazandı. Ölü taşları Kindle önerir; değiştirmek için zincire dokunun.	Peli päättyy, kun molemmat pelaajat passaavat peräkkäin. Pisteesi: kivesi ja ympäröimäsi tyhjät pisteet (ruudut); Valkea saa 7,5 komia. Tässä Musta 47, Valkea 34 + 7,5: Musta voitti. Kindle ehdottaa kuolleet kivet; muuta napauttamalla ketjua.
+Siyah C3'e taş koydu. Taşlar çizgilerin kesiştiği noktalara konur ve bir daha oynamaz.	Musta asetti kiven C3:een. Kivet asetetaan viivojen risteyksiin, eivätkä ne enää liiku.
+Beyaz B2'ye oynadı. Bu taşın 4 özgürlüğü (boş komşusu) var: A2, B1, C2 ve B3.	Valkea pelasi B2:een. Tällä kivellä on 4 vapautta (tyhjää naapuria): A2, B1, C2 ja B3.
+Siyah C2 ile bir özgürlüğü kapattı: B2'nin 3 özgürlüğü kaldı.	Musta sulki yhden vapauden C2:lla: B2:lle jäi 3 vapautta.
+Beyaz sağ tarafta, G7'de kendine alan kurmaya başladı.	Valkea alkoi rakentaa aluetta oikealle puolelle, G7:ään.
+Siyah B3'e oynadı: B2'nin artık yalnızca 2 özgürlüğü var (A2 ve B1).	Musta pelasi B3:een: B2:lla on nyt vain 2 vapautta (A2 ja B1).
+Beyaz G3 ile sağ tarafı genişletti.	Valkea laajensi oikeaa puolta G3:lla.
+Siyah B1'e oynadı: B2'nin tek özgürlüğü kaldı (A2). Buna atari denir: bir sonraki hamlede alınabilir.	Musta pelasi B1:een: B2:lle jäi yksi vapaus (A2). Tätä kutsutaan atariksi: kivi voidaan vangita seuraavalla siirrolla.
+Beyaz A2'ye uzayarak kaçmaya çalıştı. A2 ile B2 artık bir zincir; özgürlükleri birlikte sayılır: A1 ve A3.	Valkea yritti paeta jatkamalla A2:een. A2 ja B2 ovat nyt ketju; niiden vapaudet lasketaan yhdessä: A1 ja A3.
+Siyah A3 ile zinciri yine atariye düşürdü. Beyaz A1'e oynayamaz: orada taşlarının hiç özgürlüğü kalmazdı.	Musta asetti ketjun taas atariin A3:lla. Valkea ei voi pelata A1:een: siellä sen kivillä ei olisi yhtään vapautta.
+Beyaz zinciri kurtaramayacağını görüp G5'e oynadı.	Valkea näki, ettei ketjua voi pelastaa, ja pelasi G5:een.
+Siyah A1'e oynadı: zincirin son özgürlüğü kapandı, A2 ve B2 tahtadan alındı (×). Siyah'ın 2 esiri var. Sol alt köşe Siyah'ın, sağ taraf Beyaz'ın alanı oluyor.	Musta pelasi A1:een: ketjun viimeinen vapaus suljettiin, A2 ja B2 poistettiin laudalta (×). Mustalla on 2 vankia. Vasen alakulma tulee Mustan alueeksi, oikea puoli Valkean.
+Ölü taşları değiştirmek için zincire dokunun, sonra Sayımı onayla	Muuta kuolleita kiviä napauttamalla ketjua, sitten Vahvista laskenta
+Esir: Siyah %d, Beyaz %d	Vangit: Musta %d, Valkea %d
+sıra geçmek için Pas	ohita vuoro: Passaa
+boş bir kesişime dokunun	napauta tyhjää risteystä
+Kindle kısa bir oyun oynayacak. Her dokunuşta bir hamle yapılır ve burada anlatılır. Son konan taşın ortasında halka olur, alınan taşların yeri çarpı ile gösterilir.	Kindle pelaa lyhyen pelin. Jokainen napautus tekee yhden siirron, joka selitetään tässä. Viimeksi asetetun kiven keskellä on rengas, vangitut kivet merkitään rastilla.
+Sıra sizde (%s)	Sinun vuorosi (%s)
+Sıra Siyah'ta	Mustan vuoro
+Sıra Beyaz'da	Valkean vuoro
+Hamle %d / %d	Siirto %d / %d
+Baştan	Alusta
+Sonraki hamle ▶	Seuraava siirto ▶
+◀ Geri	◀ Takaisin
+%s oyununu ilk kez açıyorsunuz. Nasıl oynandığını resimlerle kısaca gösterelim mi?	Avaat pelin %s ensimmäistä kertaa. Näytetäänkö lyhyesti kuvin, miten sitä pelataan?
+Göster	Näytä
+Gerek yok	Ei kiitos
+Siyah ve Beyaz sırayla tahtaya taş koyar; Siyah başlar. Oyun bitince tahtada daha çok taşı olan kazanır. Başlangıçta ortada ikişer taş vardır.	Musta ja Valkea asettavat vuorotellen nappuloita laudalle; Musta aloittaa. Pelin lopussa voittaa se, jolla on enemmän nappuloita laudalla. Aluksi keskellä on kaksi nappulaa kumpaakin väriä.
+Sıra sizdeyken noktalı karelerden birine dokunun; taşınız oraya konur. Noktalar oynayabileceğiniz kareleri gösterir (İpucu düğmesiyle açılıp kapanır). Burada Siyah d3'e dokunuyor.	Kun on vuorosi, napauta pisteruutua; nappulasi asetetaan siihen. Pisteet näyttävät, mihin voit pelata (Vihje-painike näyttää tai piilottaa ne). Tässä Musta napauttaa d3:a.
+Sıkıştır ve çevir	Saarra ja käännä
+Yeni taş, rakip taşları sizin iki taşınızın arasında sıkıştırmalı. Aradaki rakip taşlar sizin renginize döner: d4'teki beyaz taş d3 ile d5 arasında kaldı ve siyah oldu (çerçeveli). Sıkıştırmayan bir kareye oynanamaz.	Uuden nappulan on saarrettava vastustajan nappuloita kahden omasi väliin. Väliin jääneet nappulat vaihtuvat sinun värisiksesi: d4:n valkea nappula jäi d3:n ja d5:n väliin ja muuttui mustaksi (kehystetty). Ruutuun, joka ei saarra mitään, ei voi pelata.
+Sekiz yön	Kahdeksan suuntaa
+Sıkıştırma düz, yan ve çapraz, sekiz yönde de olur; bir hamle birkaç yönde birden çevirebilir. Siyah d4'e oynadı ve beş beyaz taşı çevirdi. c5 çevrilmedi: arkasında siyah taş yok.	Saartaminen toimii kaikkiin kahdeksaan suuntaan: pysty-, vaaka- ja vinosuunnassa; yksi siirto voi kääntää useaan suuntaan kerralla. Musta pelasi d4:ään ja käänsi viisi valkeaa nappulaa. c5 ei kääntynyt: sen takana ei ole mustaa nappulaa.
+Hiç oynayacak yeri olmayan pas geçer; uygulama bunu kendiliğinden yapar ve durum satırında yazar. Burada Beyaz hiçbir siyah taşı sıkıştıramıyor, bu yüzden sıra yine Siyah'ta (nokta: d1).	Jolla ei ole laillista siirtoa, passaa; sovellus tekee sen itse ja kertoo sen tilarivillä. Tässä Valkea ei voi saartaa yhtään mustaa nappulaa, joten vuoro on taas Mustalla (piste: d1).
+İki taraf da oynayamayınca (çoğu zaman tahta dolunca) oyun biter ve taşlar sayılır. Burada Siyah 40 – Beyaz 24: Siyah kazandı. Köşedeki taş hiç çevrilemez; bu yüzden köşeler çok değerlidir.	Kun kumpikaan ei voi pelata (yleensä laudan täytyttyä), peli päättyy ja nappulat lasketaan. Tässä Musta 40 – Valkea 24: Musta voitti. Kulmanappulaa ei voi koskaan kääntää; siksi kulmat ovat hyvin arvokkaita.
+Siyah d3'e oynadı: d4'teki beyaz taşı d5'teki kendi taşıyla sıkıştırdı ve çevirdi.	Musta pelasi d3:een: saartoi d4:n valkean nappulan omalla d5:n nappulallaan ja käänsi sen.
+Beyaz c5'e oynadı: d5'teki siyah taşı e5 ile sıkıştırıp beyaza çevirdi.	Valkea pelasi c5:een: saartoi d5:n mustan nappulan e5:llä ja käänsi sen valkeaksi.
+Siyah f6'ya oynadı: e5'i çaprazda d4 ile sıkıştırıp çevirdi.	Musta pelasi f6:een: saartoi e5:n vinottain d4:llä ja käänsi sen.
+Beyaz f5'e oynadı: e5'i yatayda d5 ile sıkıştırıp geri aldı. Bir taş defalarca renk değiştirebilir.	Valkea pelasi f5:een: saartoi e5:n vaakasuunnassa d5:llä ja otti sen takaisin. Nappula voi vaihtaa väriä monta kertaa.
+Siyah e6'ya oynadı: e5'i dikeyde e4 ile sıkıştırdı.	Musta pelasi e6:een: saartoi e5:n pystysuunnassa e4:llä.
+Beyaz e3'e oynadı: d4'ü çaprazda c5 ile sıkıştırdı.	Valkea pelasi e3:een: saartoi d4:n vinottain c5:llä.
+Siyah c4'e oynadı ve iki yönde birden sıkıştırdı: d4 (yatay) ve d5 (çapraz) siyah oldu.	Musta pelasi c4:ään ja saartoi kahteen suuntaan kerralla: d4 (vaaka) ja d5 (vino) muuttuivat mustiksi.
+Beyaz e7'ye oynadı: e6, e5 ve e4'ü aşağıdaki e3 ile sıkıştırdı. Aynı sırada üç taş birden döndü.	Valkea pelasi e7:ään: saartoi e6:n, e5:n ja e4:n alla olevalla e3:lla. Kolme nappulaa samalla linjalla kääntyi kerralla.
+Siyah f4'e oynadı: f5'i dikeyde, e4'ü yatayda sıkıştırdı.	Musta pelasi f4:ään: saartoi f5:n pystysuunnassa ja e4:n vaakasuunnassa.
+Beyaz c3'e oynadı ve üç yönde birden çevirdi: c4, d4 ve d3. Durum: Siyah 5 – Beyaz 9. Oyun tahta dolana kadar böyle sürer.	Valkea pelasi c3:een ja käänsi kolmeen suuntaan kerralla: c4, d4 ja d3. Tilanne: Musta 5 – Valkea 9. Näin jatketaan, kunnes lauta on täynnä.
+noktalı bir kareye dokunun	napauta pisteruutua
+rakibi sıkıştıran bir kareye dokunun	napauta ruutua, joka saartaa vastustajan
+Siyah %d – Beyaz %d	Musta %d – Valkea %d
+Kindle kısa bir oyun oynayacak. Her dokunuşta bir hamle yapılır ve burada anlatılır. Yeni konan taşın ortasında nokta, çevrilen taşların çevresinde çerçeve olur.	Kindle pelaa lyhyen pelin. Jokainen napautus tekee yhden siirron, joka selitetään tässä. Uuden nappulan keskellä on piste, käännetyt nappulat saavat kehyksen.

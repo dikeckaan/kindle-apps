@@ -85,34 +85,39 @@ static int look(int sq)
 	       must_capture(sq) << 8 | flip << 9;
 }
 
-static void draw_cell(int sq)
+/* one square: piece (DM_*) and UM_* marks; shared by the game and the lessons */
+static void draw_square(KuiRect r, int p, int marks)
 {
-	KuiRect r = cell_rect(sq);
-	int cx = r.x + CELL / 2, cy = r.y + CELL / 2, p = game.pos.b[sq], lm = last_mark(sq);
+	int cx = r.x + r.w / 2, cy = r.y + r.h / 2, under = -1;
 	kui_fill(r, UI_BOARD_GRAY);
 	kui_frame(r, 1, 0x44);
-	if (lm == 1) kui_frame((KuiRect){ r.x + 5, r.y + 5, r.w - 10, r.h - 10 }, 3, 0x55);
-	if (must_capture(sq)) kui_frame((KuiRect){ r.x + 3, r.y + 3, r.w - 6, r.h - 6 }, 7, 0x77);
+	if (marks & UM_LAST) kui_frame((KuiRect){ r.x + 5, r.y + 5, r.w - 10, r.h - 10 }, 2, 0x77); /* thin: the last move */
+	if (marks & UM_MUST) kui_frame((KuiRect){ r.x + 3, r.y + 3, r.w - 6, r.h - 6 }, 9, 0x44); /* thick: must capture */
 	if (p) {
 		int white = dm_color(p) == 0;
-		ui_disc(cx, cy, CELL / 2 - 14, white);
+		under = white ? 255 : 0;
+		ui_disc(cx, cy, r.w / 2 - r.w * 14 / 124, white);
 		if (dm_is_king(p)) {
-			ui_ring(cx, cy, CELL / 2 - 24, 4, white ? 0 : 255);
-			KuiRect g = { cx - 30, cy - 30, 60, 60 };
-			if (white) kui_text(g, "♛", KUI_FONT_REG, 46, KUI_ALIGN_CENTER, 0);
-			else kui_text_on(g, "♛", KUI_FONT_REG, 46, KUI_ALIGN_CENTER, 255, 0);
+			int gs = r.w * 60 / 124;
+			ui_ring(cx, cy, r.w / 2 - r.w * 24 / 124, 4, white ? 0 : 255);
+			KuiRect g = { cx - gs / 2, cy - gs / 2, gs, gs };
+			if (white) kui_text(g, "♛", KUI_FONT_REG, r.w * 46 / 124, KUI_ALIGN_CENTER, 0);
+			else kui_text_on(g, "♛", KUI_FONT_REG, r.w * 46 / 124, KUI_ALIGN_CENTER, 255, 0);
 		}
-	} else if (lm == 2) {
-		ui_dot(cx, cy, 9, 0x88); /* a piece was taken here by the last move */
 	}
-	if (is_via(sq)) ui_ring(cx, cy, 26, 6, 0x22);
-	if (is_target(sq)) ui_dot(cx, cy, 15, 0x22);
-	if (sq == sel) kui_frame(r, 8, 0);
-	kui_mark_dirty(r);
+	ui_cell_marks(r, marks & ~(UM_LAST | UM_MUST), under);
+}
+
+static void draw_cell(int sq)
+{
+	int lm = last_mark(sq);
+	int marks = (lm == 1 ? UM_LAST : 0) | (lm == 2 && !game.pos.b[sq] ? UM_X : 0) | (must_capture(sq) ? UM_MUST : 0) |
+		    (is_via(sq) ? UM_VIA : 0) | (is_target(sq) ? UM_DOT : 0) | (sq == sel ? UM_FRAME : 0);
+	draw_square(cell_rect(sq), game.pos.b[sq], marks);
+	kui_mark_dirty(cell_rect(sq));
 	drawn[sq] = look(sq);
 }
 
-static const char *side_name(int s) { return s ? T("Siyah") : T("Beyaz"); }
 
 static const char *result_text(DmResult r)
 {
@@ -131,23 +136,30 @@ static void status_text(char *out, int cap)
 		snprintf(out, (size_t) cap, T("Beyaz %d – Siyah %d · %s"), cnt[0], cnt[1], result_text(dm_result(&game.pos)));
 		return;
 	}
-	if (npre) {
-		snprintf(out, (size_t) cap, "%s", T("Almaya devam: sıradaki kareye dokunun"));
-		return;
+	char counts[80];
+	snprintf(counts, sizeof counts, T("Beyaz %d – Siyah %d"), cnt[0], cnt[1]);
+	if (!human_turn())
+		snprintf(out, (size_t) cap, "%s\n%s", T("Kindle düşünüyor…"), counts);
+	else if (npre)
+		snprintf(out, (size_t) cap, "%s\n%s", T("Almaya devam: sıradaki noktalı kareye dokunun"),
+			 T("Baştan seçmek için taşın kendisine dokunun"));
+	else if (sel >= 0)
+		snprintf(out, (size_t) cap, "%s\n%s · %s", T("Taş seçildi: gideceği noktalı kareye dokunun"),
+			 T("Başka taş seçmek için ona dokunun"), counts);
+	else if (nlegal && legal[0].ncap) {
+		char need[80];
+		snprintf(need, sizeof need, T("En çok taş alan yol zorunlu: %d taş"), legal[0].ncap);
+		snprintf(out, (size_t) cap, "%s\n%s · %s", T("Zorunlu alma var: çerçeveli taşlardan birini seçin"), need, counts);
+	} else {
+		snprintf(out, (size_t) cap, "%s: %s\n%s", ui_turn_text(game.mode == 1, game.pos.side == 1), T("bir taş seçin"), counts);
 	}
-	char base[120];
-	snprintf(base, sizeof base, T("Sıra: %s · Beyaz %d – Siyah %d"), side_name(game.pos.side), cnt[0], cnt[1]);
-	if (human_turn() && nlegal && legal[0].ncap)
-		snprintf(out, (size_t) cap, T("Almak zorunlu (%d taş) · %s"), legal[0].ncap, base);
-	else
-		snprintf(out, (size_t) cap, "%s", base);
 }
 
 static void update_board(void)
 {
 	for (int sq = 0; sq < 64; sq++)
 		if (drawn[sq] != look(sq)) draw_cell(sq);
-	char s[200];
+	char s[512];
 	status_text(s, sizeof s);
 	ui_status(s, 0);
 	kui_flush(0);
@@ -157,14 +169,14 @@ static void draw_all(void)
 {
 	int w = kui_width(), h = kui_height();
 	kui_fill((KuiRect){ 0, 0, w, h }, 255);
-	kui_topbar(T("Dama"), NULL);
+	kui_topbar(T("Dama"), T("Menü"));
 	kui_frame((KuiRect){ UI_BOARD_X - 5, UI_BOARD_Y - 5, UI_BOARD_W + 10, UI_BOARD_W + 10 }, 5, 0);
 	for (int sq = 0; sq < 64; sq++) draw_cell(sq);
 	const char *labels[2] = { T("Geri al"), T("Yeni oyun") };
 	static const int ids[2] = { BTN_UNDO, BTN_NEW };
 	ui_layout_buttons(buttons, 2, labels, ids);
 	for (int i = 0; i < 2; i++) kui_button(&buttons[i], 0);
-	char s[200];
+	char s[512];
 	status_text(s, sizeof s);
 	ui_status(s, 1);
 	kui_flush(1);
@@ -195,7 +207,7 @@ static int check_end(void)
 		ui_stats_record("dama", game.level, out);
 		counted = 1;
 	}
-	char s[200];
+	char s[512];
 	status_text(s, sizeof s);
 	const char *ch[] = { T("Yeni oyun"), T("Tahtaya bak") };
 	int k = kui_dialog(T("Oyun bitti"), s, ch, 2, draw_all);
@@ -266,18 +278,82 @@ static void undo(void)
 	ai_turn();
 }
 
+/* ---- lessons: "Nasıl oynanır?" pages and the scripted "Örnek oyun" ---- */
+
+static int lesson_piece(char c)
+{
+	const char *k = c ? strchr("wWbB", c) : NULL;
+	return k ? DM_WMAN + (int) (k - "wWbB") : DM_EMPTY;
+}
+
+static void lesson_cell(const UiPic *pic, int i, KuiRect r) { draw_square(r, pic->piece[i], pic->marks[i]); }
+
+static void howto_page(int k, UiPic *pic) { ui_pic_from_page(&dm_pages[k], 8, lesson_piece, pic); }
+
+/* the position after k scripted moves: start and end of the last move framed, its path ringed, the taken crossed */
+static void demo_page(int k, UiPic *pic)
+{
+	Dm d;
+	DmMove m = { 0 };
+	dm_init(&d);
+	for (int i = 0; i < k && i < dm_ndemo; i++)
+		if (dm_parse_move(&d, dm_demo[i].move, &m) == 0) dm_apply(&d, &m);
+	memset(pic, 0, sizeof *pic);
+	int cnt[2] = { 0, 0 };
+	for (int q = 0; q < 64; q++) {
+		pic->piece[q] = d.b[q];
+		if (d.b[q]) cnt[dm_color(d.b[q])]++;
+	}
+	if (k > 0) {
+		pic->marks[m.from] |= UM_LAST;
+		pic->marks[m.path[m.n - 1]] |= UM_LAST;
+		for (int i = 0; i + 1 < m.n; i++) pic->marks[m.path[i]] |= UM_VIA;
+		for (int i = 0; i < m.ncap; i++) pic->marks[m.cap[i]] |= UM_X;
+	}
+	snprintf(pic->head, sizeof pic->head, T("Beyaz %d – Siyah %d"), cnt[0], cnt[1]);
+	snprintf(pic->text, sizeof pic->text, "%s",
+		 k == 0 ? T("Kindle kısa bir oyun oynayacak. Her dokunuşta bir hamle yapılır ve burada anlatılır. Taşın "
+			    "çıktığı ve vardığı kare çerçeveli, alınan taşların yeri çarpı ile gösterilir.")
+			: T(dm_demo[k - 1].caption));
+}
+
+static const UiLesson *howto(void)
+{
+	static char title[80];
+	static UiLesson l;
+	snprintf(title, sizeof title, "%s · %s", T("Dama"), T("Nasıl oynanır?"));
+	l = (UiLesson){ title, 8, 0, dm_npages, 0, howto_page, lesson_cell };
+	return &l;
+}
+
+static const UiLesson *demo(void)
+{
+	static char title[80];
+	static UiLesson l;
+	snprintf(title, sizeof title, "%s · %s", T("Dama"), T("Örnek oyun"));
+	l = (UiLesson){ title, 8, 0, dm_ndemo + 1, 1, demo_page, lesson_cell };
+	return &l;
+}
+
 static int setup(int can_resume)
 {
 	for (;;) {
-		const char *opts[3];
+		const char *opts[5];
 		int n = 0, resume = -1;
 		if (can_resume) { resume = n; opts[n++] = T("Devam et"); }
 		int one = n;
 		opts[n++] = T("Kindle'a karşı");
 		opts[n++] = T("İki oyunculu");
+		int learn = n;
+		opts[n++] = T("Nasıl oynanır?");
+		opts[n++] = T("Örnek oyun");
 		int k = ui_choose(T("Dama"), T("Türk daması · almak zorunlu, en çok taşı alan yol seçilir"), opts, n);
 		if (k < 0) return k == UI_QUIT ? UI_QUIT : 0;
 		if (k == resume) return 1;
+		if (k >= learn) {
+			if (ui_lesson(k == learn ? howto() : demo()) == UI_QUIT) return UI_QUIT;
+			continue;
+		}
 		if (k != one) {
 			dm_game_new(&game, 2, 2, 0);
 			return 1;
@@ -316,6 +392,7 @@ int dama_screen(void)
 	static char buf[16384];
 	int can_resume = kui_read_file(ui_save_path("dama"), buf, sizeof buf) > 0 && dm_game_load(&game, buf) == 0 &&
 			 dm_result(&game.pos) == DM_ONGOING;
+	if (ui_offer_howto("dama", T("Dama"), howto()) == UI_QUIT) return UI_QUIT;
 	int s = setup(can_resume);
 	if (s != 1) return s;
 	start();
@@ -334,7 +411,14 @@ int dama_screen(void)
 			draw_all();
 			break;
 		case KUI_EV_TAP: {
-			if (kui_topbar_hit(kui_width(), 0, e.x, e.y) == KUI_BTN_EXIT) { save(); return 0; }
+			int top = kui_topbar_hit(kui_width(), 1, e.x, e.y);
+			if (top == KUI_BTN_EXIT) { save(); return 0; }
+			if (top == KUI_BTN_MENU) {
+				if (ui_game_menu(howto(), demo()) == UI_QUIT) { save(); return UI_QUIT; }
+				for (int i = 0; i < 64; i++) drawn[i] = -1;
+				draw_all();
+				break;
+			}
 			int id = kui_buttons_hit(buttons, 2, e.x, e.y);
 			if (id == BTN_UNDO) {
 				undo();

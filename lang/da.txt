@@ -856,8 +856,6 @@ Not silinsin mi?	Slet noten?
 %s teslim oldu	%s opgav
 13×13	13×13
 9×9 (kısa oyun)	9×9 (kort parti)
-Almak zorunlu (%d taş) · %s	Slagpligt (%d brikker) · %s
-Almaya devam: sıradaki kareye dokunun	Fortsæt med at slå: tryk på næste felt
 Berabere	Remis
 Beyaz %d – Siyah %d · %s	Hvid %d – Sort %d · %s
 Beyaz (ilk hamle)	Hvid (starter)
@@ -890,9 +888,6 @@ Siyah %d – Beyaz %d · %s	Sort %d – Hvid %d · %s
 Siyah (ilk hamle)	Sort (starter)
 Siyah başlar · köşeler değerlidir	Sort starter · hjørnerne er værdifulde
 Siyah kazandı	Sort vinder
-Sıra: %s · Beyaz %d – Siyah %d	Tur: %s · Hvid %d – Sort %d
-Sıra: %s · Siyah %d – Beyaz %d	Tur: %s · Sort %d – Hvid %d
-Sıra: %s · esir: Siyah %d, Beyaz %d	Tur: %s · fanger: Sort %d, Hvid %d
 Tahta	Bræt
 Teslim ol	Opgiv
 Teslim oldunuz · Kindle kazandı	Du opgav · Kindlen vandt
@@ -1186,3 +1181,95 @@ Sistem servisleri, SSH ve Kindle Apps hiçbir zaman durdurulmaz.	Systemtjenester
 Arka planda program var	Et program kører i baggrunden
 Arkada açık program: %s. Ekranı ve dokunmayı kullanabilir.	Åbent i baggrunden: %s. Det kan bruge skærmen og berøring.
 Arkada açık programlar: %s. Ekranı ve dokunmayı kullanabilirler.	Åbne i baggrunden: %s. De kan bruge skærmen og berøring.
+Amaç	Mål
+Her oyuncunun 16 taşı vardır. Beyaz aşağıdadır ve ilk hamleyi yapar. Rakibin bütün taşlarını alan ya da onu hiç hamle yapamaz hâle getiren kazanır.	Hver spiller har 16 brikker. Hvid står nederst og trækker først. Den, der slår alle modstanderens brikker eller efterlader den uden træk, vinder.
+Taş nasıl oynanır?	Hvordan flytter en brik?
+Önce oynatacağınız taşa dokunun: kalın çerçeveyle seçilir, gidebileceği kareler noktayla gösterilir. Sonra noktalı kareye dokunun. Taş bir kare ileri ya da yana gider; geri (×) ve çapraz gidemez.	Tryk først på den brik, du vil flytte: den får en tyk ramme, og de felter, den kan gå til, vises med prikker. Tryk så på et prikket felt. Brikken går ét felt frem eller til siden; ikke tilbage (×) eller diagonalt.
+Taş alma	Slag
+Rakip taş hemen önünüzde ya da yanınızdaysa ve arkasındaki kare boşsa, üzerinden atlayıp onu alırsınız. Atladıktan sonra yine alabiliyorsanız devam edersiniz: e4 önce e5'i, sonra f6'yı alıp g6'ya konuyor.	Står en modstanderbrik lige foran eller ved siden af dig, og feltet bagved er tomt, springer du over og slår den. Kan du slå igen efter springet, fortsætter du: e4 slår først e5, så f6 og lander på g6.
+Almak zorunlu	Slagpligt
+Alabiliyorsanız almak zorunludur ve en çok taşı alan yol seçilmelidir. Uygulama oynayabilecek taşları çerçeveyle gösterir: c3 tek taş alabilirdi, f3 ise iki taş alıyor; bu yüzden yalnızca f3 oynayabilir.	Kan du slå, skal du slå, og vejen, der slår flest brikker, skal vælges. Appen rammer de brikker ind, der må flytte: c3 kunne slå én brik, f3 slår to; derfor må kun f3 flytte.
+Dama olmak	Bliv dam
+Son sıraya ulaşan taş dama olur (♛). Dama, düz çizgilerde istediği kadar kare gider. Uzaktaki bir taşı, arası boşsa atlayıp arkasındaki herhangi bir boş kareye konarak alır: b2'deki dama b6'yı alabilir.	En brik, der når sidste række, bliver dam (♛). Damen går så mange felter, den vil, i lige linjer. Den slår en brik på afstand, hvis felterne imellem er tomme, og lander på et vilkårligt tomt felt bagved: damen på b2 kan slå b6.
+Oyunun sonu	Spillets slutning
+Taşı kalmayan ya da hiç hamle yapamayan kaybeder. Burada Siyah'ın a2'deki taşı hiçbir yere gidemez: Beyaz kazandı. İki tarafın da yalnızca birer taşı kalırsa oyun berabere biter.	Den, der mangler brikker eller træk, taber. Her kan Sorts brik på a2 ikke flytte nogen steder: Hvid vandt. Har begge kun én brik tilbage, ender partiet remis.
+Beyaz h3'teki taşını bir kare ileri, h4'e sürdü. Beyaz yukarı, Siyah aşağı doğru ilerler.	Hvid flyttede brikken på h3 ét felt frem, til h4. Hvid går opad, Sort nedad.
+Siyah d6'dan d5'e ilerledi.	Sort gik fra d6 til d5.
+Beyaz e3'ten e4'e çıktı.	Hvid gik fra e3 til e4.
+Siyah d4'e indi. Önünde d3'teki beyaz taş var ve arkası (d5) boş: alınabilir!	Sort gik ned til d4. Foran den står den hvide brik på d3, og bagved (d5) er tomt: den kan slås!
+Beyaz d3'ten d4'ün üzerinden d5'e atladı ve siyah taşı aldı. Almak zorunludur.	Hvid sprang fra d3 over d4 til d5 og slog den sorte brik. Slag er obligatorisk.
+Siyah e5'e oynadı. Bu bir hata: e4'teki beyaz taş şimdi art arda iki taş alabilir.	Sort spillede e5. En fejl: den hvide brik på e4 kan nu slå to brikker i træk.
+Beyaz e5'i ve e7'yi art arda aldı ve son sıraya, e8'e ulaşıp dama oldu (♛). d5'ten tek taş almak yasaktı: en çok alan yol zorunludur.	Hvid slog e5 og e7 i træk, nåede sidste række på e8 og blev dam (♛). At slå én brik fra d5 var ikke tilladt: det længste slag er obligatorisk.
+Siyah c5'e oynadı ve d5'teki beyaz taşa yandan saldırdı.	Sort spillede c5 og angreb den hvide brik på d5 fra siden.
+Beyaz'ın başka seçeneği yok, almak zorunlu: d5'teki taş yana atlayıp c5'i aldı ve b5'e kondu.	Hvid har intet valg, slag er obligatorisk: brikken på d5 sprang til siden, slog c5 og landede på b5.
+Siyah b6'dan b4'e atlayıp b5'i geri aldı. Durum: Beyaz 15 taş (biri dama), Siyah 12 taş.	Sort sprang fra b6 til b4 og slog b5 tilbage. Stilling: Hvid 15 brikker (én dam), Sort 12 brikker.
+Beyaz %d – Siyah %d	Hvid %d – Sort %d
+Almaya devam: sıradaki noktalı kareye dokunun	Fortsæt med at slå: tryk på næste prikkede felt
+Baştan seçmek için taşın kendisine dokunun	Tryk på selve brikken for at vælge igen
+Taş seçildi: gideceği noktalı kareye dokunun	Brik valgt: tryk på et prikket felt
+Başka taş seçmek için ona dokunun	Tryk på en anden brik for at vælge den
+En çok taş alan yol zorunlu: %d taş	Længste slag er obligatorisk: %d brikker
+Zorunlu alma var: çerçeveli taşlardan birini seçin	Slagpligt: vælg en indrammet brik
+bir taş seçin	vælg en brik
+Kindle kısa bir oyun oynayacak. Her dokunuşta bir hamle yapılır ve burada anlatılır. Taşın çıktığı ve vardığı kare çerçeveli, alınan taşların yeri çarpı ile gösterilir.	Kindlen spiller et kort parti. Hvert tryk udfører ét træk, som forklares her. Brikkens start- og slutfelt er indrammet, slåede brikker markeres med kryds.
+Nasıl oynanır?	Hvordan spiller man?
+Örnek oyun	Eksempelparti
+Siyah ve Beyaz sırayla boş noktalara taş koyar; Siyah başlar. Konan taş bir daha yerinden oynamaz. Amaç, taşlarınızla tahtanın rakibinizden daha büyük bir bölümünü çevirmektir.	Sort og Hvid lægger skiftevis sten på tomme punkter; Sort begynder. En lagt sten flyttes aldrig. Målet er at omringe en større del af brættet end modstanderen med dine sten.
+Hamle nasıl yapılır?	Hvordan laver man et træk?
+Çizgilerin kesiştiği boş bir noktaya dokunun; taşınız oraya konur. Son konan taşın ortasında halka vardır. Sıranızı geçmek için alttaki Pas düğmesine dokunun.	Tryk på et tomt punkt, hvor linjerne krydser; din sten lægges der. Den senest lagte sten har en ring i midten. Tryk på Pas-knappen nederst for at melde pas.
+Özgürlük	Friheder
+Bir taşın yukarı, aşağı, sağ ve soldaki boş komşuları onun özgürlükleridir (halkalar). Yan yana duran aynı renk taşlar bir zincirdir ve özgürlüklerini paylaşır: beyaz taşın 4, siyah zincirin 6 özgürlüğü var.	En stens tomme nabopunkter op, ned, til højre og venstre er dens friheder (ringe). Sten i samme farve, der ligger op ad hinanden, danner en kæde og deler friheder: den hvide sten har 4, den sorte kæde 6 friheder.
+Esir alma	Fangst
+Rakip taşın son özgürlüğünü de kapatırsanız taş tahtadan alınır ve esiriniz olur. Bu beyaz taşın tek özgürlüğü kaldı (atari): Siyah E4'e oynarsa onu alır. Hiç özgürlüğü kalmayacak bir yere, bir şey almıyorsa, taş konamaz.	Lukker du en modstanderstens sidste frihed, fjernes den og bliver din fange. Denne hvide sten har én frihed tilbage (atari): spiller Sort E4, fanges den. Du må ikke lægge en sten, hvor den ingen friheder har, medmindre den fanger noget.
+Ko	Ko
+Siyah F5'e oynayıp E5'teki beyaz taşı aldı. Beyaz hemen E5'e oynayıp geri alamaz (×); önce başka bir yere oynamalı. Buna ko denir: aynı durumun sonsuza dek tekrarlanmasını önler.	Sort spillede F5 og fangede den hvide sten på E5. Hvid må ikke straks spille E5 og tage igen (×); først skal Hvid spille et andet sted. Det kaldes ko: det forhindrer, at samme stilling gentages i det uendelige.
+Oyunun sonu ve sayım	Slutning og optælling
+İki oyuncu art arda pas geçince oyun biter. Puanınız: taşlarınız ve çevirdiğiniz boş noktalar (kareler); Beyaz'a 7,5 komi eklenir. Burada Siyah 47, Beyaz 34 + 7,5: Siyah kazandı. Ölü taşları Kindle önerir; değiştirmek için zincire dokunun.	Partiet slutter, når begge spillere melder pas efter hinanden. Dine point: dine sten og de tomme punkter, du har omringet (firkanter); Hvid får 7,5 i komi. Her Sort 47, Hvid 34 + 7,5: Sort vandt. Kindlen foreslår døde sten; tryk på en kæde for at ændre.
+Siyah C3'e taş koydu. Taşlar çizgilerin kesiştiği noktalara konur ve bir daha oynamaz.	Sort lagde en sten på C3. Sten lægges, hvor linjerne krydser, og flyttes aldrig.
+Beyaz B2'ye oynadı. Bu taşın 4 özgürlüğü (boş komşusu) var: A2, B1, C2 ve B3.	Hvid spillede B2. Stenen har 4 friheder (tomme naboer): A2, B1, C2 og B3.
+Siyah C2 ile bir özgürlüğü kapattı: B2'nin 3 özgürlüğü kaldı.	Sort lukkede en frihed med C2: B2 har 3 friheder tilbage.
+Beyaz sağ tarafta, G7'de kendine alan kurmaya başladı.	Hvid begyndte at bygge område i højre side, på G7.
+Siyah B3'e oynadı: B2'nin artık yalnızca 2 özgürlüğü var (A2 ve B1).	Sort spillede B3: B2 har nu kun 2 friheder (A2 og B1).
+Beyaz G3 ile sağ tarafı genişletti.	Hvid udvidede højre side med G3.
+Siyah B1'e oynadı: B2'nin tek özgürlüğü kaldı (A2). Buna atari denir: bir sonraki hamlede alınabilir.	Sort spillede B1: B2 har én frihed tilbage (A2). Det kaldes atari: stenen kan fanges i næste træk.
+Beyaz A2'ye uzayarak kaçmaya çalıştı. A2 ile B2 artık bir zincir; özgürlükleri birlikte sayılır: A1 ve A3.	Hvid prøvede at flygte ved at forlænge til A2. A2 og B2 er nu en kæde; frihederne tælles sammen: A1 og A3.
+Siyah A3 ile zinciri yine atariye düşürdü. Beyaz A1'e oynayamaz: orada taşlarının hiç özgürlüğü kalmazdı.	Sort satte kæden i atari igen med A3. Hvid kan ikke spille A1: der ville stenene ingen friheder have.
+Beyaz zinciri kurtaramayacağını görüp G5'e oynadı.	Hvid så, at kæden ikke kunne reddes, og spillede G5.
+Siyah A1'e oynadı: zincirin son özgürlüğü kapandı, A2 ve B2 tahtadan alındı (×). Siyah'ın 2 esiri var. Sol alt köşe Siyah'ın, sağ taraf Beyaz'ın alanı oluyor.	Sort spillede A1: kædens sidste frihed blev lukket, A2 og B2 blev fjernet (×). Sort har 2 fanger. Nederste venstre hjørne bliver Sorts område, højre side Hvids.
+Ölü taşları değiştirmek için zincire dokunun, sonra Sayımı onayla	Tryk på en kæde for at ændre døde sten, derefter Bekræft optællingen
+Esir: Siyah %d, Beyaz %d	Fanger: Sort %d, Hvid %d
+sıra geçmek için Pas	tryk Pas for at stå over
+boş bir kesişime dokunun	tryk på et tomt skæringspunkt
+Kindle kısa bir oyun oynayacak. Her dokunuşta bir hamle yapılır ve burada anlatılır. Son konan taşın ortasında halka olur, alınan taşların yeri çarpı ile gösterilir.	Kindlen spiller et kort parti. Hvert tryk udfører ét træk, som forklares her. Den senest lagte sten har en ring i midten, fangede sten markeres med kryds.
+Sıra sizde (%s)	Din tur (%s)
+Sıra Siyah'ta	Sort i trækket
+Sıra Beyaz'da	Hvid i trækket
+Hamle %d / %d	Træk %d / %d
+Baştan	Forfra
+Sonraki hamle ▶	Næste træk ▶
+◀ Geri	◀ Tilbage
+%s oyununu ilk kez açıyorsunuz. Nasıl oynandığını resimlerle kısaca gösterelim mi?	Du åbner %s for første gang. Vil du se en kort illustreret vejledning i, hvordan man spiller?
+Göster	Vis
+Gerek yok	Nej tak
+Siyah ve Beyaz sırayla tahtaya taş koyar; Siyah başlar. Oyun bitince tahtada daha çok taşı olan kazanır. Başlangıçta ortada ikişer taş vardır.	Sort og Hvid lægger skiftevis brikker på brættet; Sort begynder. Når spillet er slut, vinder den med flest brikker på brættet. Fra start står der to brikker af hver farve i midten.
+Sıra sizdeyken noktalı karelerden birine dokunun; taşınız oraya konur. Noktalar oynayabileceğiniz kareleri gösterir (İpucu düğmesiyle açılıp kapanır). Burada Siyah d3'e dokunuyor.	Når det er din tur, trykker du på et prikket felt; din brik lægges der. Prikkerne viser, hvor du kan spille (slås til og fra med Hint-knappen). Her trykker Sort på d3.
+Sıkıştır ve çevir	Indeslut og vend
+Yeni taş, rakip taşları sizin iki taşınızın arasında sıkıştırmalı. Aradaki rakip taşlar sizin renginize döner: d4'teki beyaz taş d3 ile d5 arasında kaldı ve siyah oldu (çerçeveli). Sıkıştırmayan bir kareye oynanamaz.	Den nye brik skal indeslutte modstanderbrikker mellem to af dine. Brikkerne imellem skifter til din farve: den hvide brik på d4 kom mellem d3 og d5 og blev sort (indrammet). Du må ikke spille på et felt, der ikke indeslutter noget.
+Sekiz yön	Otte retninger
+Sıkıştırma düz, yan ve çapraz, sekiz yönde de olur; bir hamle birkaç yönde birden çevirebilir. Siyah d4'e oynadı ve beş beyaz taşı çevirdi. c5 çevrilmedi: arkasında siyah taş yok.	Indeslutning sker i alle otte retninger: lodret, vandret og diagonalt; ét træk kan vende i flere retninger på én gang. Sort spillede d4 og vendte fem hvide brikker. c5 blev ikke vendt: der er ingen sort brik bagved.
+Hiç oynayacak yeri olmayan pas geçer; uygulama bunu kendiliğinden yapar ve durum satırında yazar. Burada Beyaz hiçbir siyah taşı sıkıştıramıyor, bu yüzden sıra yine Siyah'ta (nokta: d1).	Den, der ikke har noget lovligt træk, melder pas; appen gør det automatisk og viser det i statuslinjen. Her kan Hvid ikke indeslutte nogen sort brik, så det er Sorts tur igen (prik: d1).
+İki taraf da oynayamayınca (çoğu zaman tahta dolunca) oyun biter ve taşlar sayılır. Burada Siyah 40 – Beyaz 24: Siyah kazandı. Köşedeki taş hiç çevrilemez; bu yüzden köşeler çok değerlidir.	Når ingen kan spille (oftest når brættet er fuldt), slutter spillet, og brikkerne tælles. Her Sort 40 – Hvid 24: Sort vandt. En hjørnebrik kan aldrig vendes; derfor er hjørnerne meget værdifulde.
+Siyah d3'e oynadı: d4'teki beyaz taşı d5'teki kendi taşıyla sıkıştırdı ve çevirdi.	Sort spillede d3: indesluttede den hvide brik på d4 med sin brik på d5 og vendte den.
+Beyaz c5'e oynadı: d5'teki siyah taşı e5 ile sıkıştırıp beyaza çevirdi.	Hvid spillede c5: indesluttede den sorte brik på d5 med e5 og vendte den til hvid.
+Siyah f6'ya oynadı: e5'i çaprazda d4 ile sıkıştırıp çevirdi.	Sort spillede f6: indesluttede e5 diagonalt med d4 og vendte den.
+Beyaz f5'e oynadı: e5'i yatayda d5 ile sıkıştırıp geri aldı. Bir taş defalarca renk değiştirebilir.	Hvid spillede f5: indesluttede e5 vandret med d5 og tog den tilbage. En brik kan skifte farve mange gange.
+Siyah e6'ya oynadı: e5'i dikeyde e4 ile sıkıştırdı.	Sort spillede e6: indesluttede e5 lodret med e4.
+Beyaz e3'e oynadı: d4'ü çaprazda c5 ile sıkıştırdı.	Hvid spillede e3: indesluttede d4 diagonalt med c5.
+Siyah c4'e oynadı ve iki yönde birden sıkıştırdı: d4 (yatay) ve d5 (çapraz) siyah oldu.	Sort spillede c4 og indesluttede i to retninger på én gang: d4 (vandret) og d5 (diagonalt) blev sorte.
+Beyaz e7'ye oynadı: e6, e5 ve e4'ü aşağıdaki e3 ile sıkıştırdı. Aynı sırada üç taş birden döndü.	Hvid spillede e7: indesluttede e6, e5 og e4 med e3 nedenunder. Tre brikker på samme linje vendte på én gang.
+Siyah f4'e oynadı: f5'i dikeyde, e4'ü yatayda sıkıştırdı.	Sort spillede f4: indesluttede f5 lodret og e4 vandret.
+Beyaz c3'e oynadı ve üç yönde birden çevirdi: c4, d4 ve d3. Durum: Siyah 5 – Beyaz 9. Oyun tahta dolana kadar böyle sürer.	Hvid spillede c3 og vendte i tre retninger på én gang: c4, d4 og d3. Stilling: Sort 5 – Hvid 9. Sådan fortsætter det, til brættet er fuldt.
+noktalı bir kareye dokunun	tryk på et prikket felt
+rakibi sıkıştıran bir kareye dokunun	tryk på et felt, der indeslutter modstanderen
+Siyah %d – Beyaz %d	Sort %d – Hvid %d
+Kindle kısa bir oyun oynayacak. Her dokunuşta bir hamle yapılır ve burada anlatılır. Yeni konan taşın ortasında nokta, çevrilen taşların çevresinde çerçeve olur.	Kindlen spiller et kort parti. Hvert tryk udfører ét træk, som forklares her. Den nylagte brik har en prik i midten, vendte brikker får en ramme.

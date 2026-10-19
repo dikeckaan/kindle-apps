@@ -856,8 +856,6 @@ Not silinsin mi?	Effacer cette note ?
 %s teslim oldu	%s a abandonné
 13×13	13×13
 9×9 (kısa oyun)	9×9 (partie courte)
-Almak zorunlu (%d taş) · %s	Prise obligatoire (%d pions) · %s
-Almaya devam: sıradaki kareye dokunun	Continuez la prise : touchez la case suivante
 Berabere	Nulle
 Beyaz %d – Siyah %d · %s	Blancs %d – Noirs %d · %s
 Beyaz (ilk hamle)	Blancs (jouent en premier)
@@ -890,9 +888,6 @@ Siyah %d – Beyaz %d · %s	Noirs %d – Blancs %d · %s
 Siyah (ilk hamle)	Noirs (jouent en premier)
 Siyah başlar · köşeler değerlidir	Les Noirs commencent · les coins sont précieux
 Siyah kazandı	Les Noirs gagnent
-Sıra: %s · Beyaz %d – Siyah %d	Trait : %s · Blancs %d – Noirs %d
-Sıra: %s · Siyah %d – Beyaz %d	Trait : %s · Noirs %d – Blancs %d
-Sıra: %s · esir: Siyah %d, Beyaz %d	Trait : %s · prisonniers : Noirs %d, Blancs %d
 Tahta	Plateau
 Teslim ol	Abandonner
 Teslim oldunuz · Kindle kazandı	Vous avez abandonné · La Kindle a gagné
@@ -1186,3 +1181,95 @@ Sistem servisleri, SSH ve Kindle Apps hiçbir zaman durdurulmaz.	Les services sy
 Arka planda program var	Un programme tourne en arrière-plan
 Arkada açık program: %s. Ekranı ve dokunmayı kullanabilir.	Ouvert en arrière-plan : %s. Il peut utiliser l'écran et le tactile.
 Arkada açık programlar: %s. Ekranı ve dokunmayı kullanabilirler.	Ouverts en arrière-plan : %s. Ils peuvent utiliser l'écran et le tactile.
+Amaç	But du jeu
+Her oyuncunun 16 taşı vardır. Beyaz aşağıdadır ve ilk hamleyi yapar. Rakibin bütün taşlarını alan ya da onu hiç hamle yapamaz hâle getiren kazanır.	Chaque joueur a 16 pions. Les Blancs sont en bas et jouent en premier. On gagne en prenant tous les pions adverses ou en bloquant l'adversaire.
+Taş nasıl oynanır?	Comment jouer un pion ?
+Önce oynatacağınız taşa dokunun: kalın çerçeveyle seçilir, gidebileceği kareler noktayla gösterilir. Sonra noktalı kareye dokunun. Taş bir kare ileri ya da yana gider; geri (×) ve çapraz gidemez.	Touchez d'abord le pion à jouer : il est encadré en gras et ses cases possibles sont marquées d'un point. Touchez ensuite une case à point. Un pion avance d'une case vers l'avant ou de côté ; jamais en arrière (×) ni en diagonale.
+Taş alma	La prise
+Rakip taş hemen önünüzde ya da yanınızdaysa ve arkasındaki kare boşsa, üzerinden atlayıp onu alırsınız. Atladıktan sonra yine alabiliyorsanız devam edersiniz: e4 önce e5'i, sonra f6'yı alıp g6'ya konuyor.	Si un pion adverse est juste devant ou à côté du vôtre et que la case derrière est libre, sautez par-dessus pour le prendre. Si vous pouvez encore prendre après le saut, continuez : e4 prend e5, puis f6, et arrive en g6.
+Almak zorunlu	Prise obligatoire
+Alabiliyorsanız almak zorunludur ve en çok taşı alan yol seçilmelidir. Uygulama oynayabilecek taşları çerçeveyle gösterir: c3 tek taş alabilirdi, f3 ise iki taş alıyor; bu yüzden yalnızca f3 oynayabilir.	Si vous pouvez prendre, vous devez le faire, par le chemin qui prend le plus de pions. L'appli encadre les pions jouables : c3 pourrait prendre un pion, f3 en prend deux ; seul f3 peut donc jouer.
+Dama olmak	Devenir dame
+Son sıraya ulaşan taş dama olur (♛). Dama, düz çizgilerde istediği kadar kare gider. Uzaktaki bir taşı, arası boşsa atlayıp arkasındaki herhangi bir boş kareye konarak alır: b2'deki dama b6'yı alabilir.	Un pion qui atteint la dernière rangée devient dame (♛). La dame va aussi loin qu'elle veut en ligne droite. Elle prend un pion éloigné si la voie est libre, en se posant sur n'importe quelle case libre derrière : la dame en b2 peut prendre b6.
+Oyunun sonu	Fin de partie
+Taşı kalmayan ya da hiç hamle yapamayan kaybeder. Burada Siyah'ın a2'deki taşı hiçbir yere gidemez: Beyaz kazandı. İki tarafın da yalnızca birer taşı kalırsa oyun berabere biter.	Qui n'a plus de pions ou de coups perd. Ici, le pion noir en a2 ne peut aller nulle part : les Blancs ont gagné. S'il ne reste qu'un pion de chaque côté, la partie est nulle.
+Beyaz h3'teki taşını bir kare ileri, h4'e sürdü. Beyaz yukarı, Siyah aşağı doğru ilerler.	Les Blancs ont avancé le pion de h3 d'une case, en h4. Les Blancs montent, les Noirs descendent.
+Siyah d6'dan d5'e ilerledi.	Les Noirs ont avancé de d6 en d5.
+Beyaz e3'ten e4'e çıktı.	Les Blancs sont montés de e3 en e4.
+Siyah d4'e indi. Önünde d3'teki beyaz taş var ve arkası (d5) boş: alınabilir!	Les Noirs sont descendus en d4. Devant, le pion blanc en d3, et derrière (d5) la case est libre : il peut être pris !
+Beyaz d3'ten d4'ün üzerinden d5'e atladı ve siyah taşı aldı. Almak zorunludur.	Les Blancs ont sauté de d3 par-dessus d4 en d5 et pris le pion noir. La prise est obligatoire.
+Siyah e5'e oynadı. Bu bir hata: e4'teki beyaz taş şimdi art arda iki taş alabilir.	Les Noirs ont joué e5. Une erreur : le pion blanc en e4 peut maintenant prendre deux pions d'affilée.
+Beyaz e5'i ve e7'yi art arda aldı ve son sıraya, e8'e ulaşıp dama oldu (♛). d5'ten tek taş almak yasaktı: en çok alan yol zorunludur.	Les Blancs ont pris e5 puis e7, atteint la dernière rangée en e8 et obtenu une dame (♛). Prendre un seul pion depuis d5 était interdit : la prise la plus longue est obligatoire.
+Siyah c5'e oynadı ve d5'teki beyaz taşa yandan saldırdı.	Les Noirs ont joué c5 et attaquent de côté le pion blanc en d5.
+Beyaz'ın başka seçeneği yok, almak zorunlu: d5'teki taş yana atlayıp c5'i aldı ve b5'e kondu.	Les Blancs n'ont pas le choix, la prise est obligatoire : le pion en d5 a sauté de côté par-dessus c5 et s'est posé en b5.
+Siyah b6'dan b4'e atlayıp b5'i geri aldı. Durum: Beyaz 15 taş (biri dama), Siyah 12 taş.	Les Noirs ont sauté de b6 en b4 et repris b5. Score : Blancs 15 pions (dont une dame), Noirs 12.
+Beyaz %d – Siyah %d	Blancs %d – Noirs %d
+Almaya devam: sıradaki noktalı kareye dokunun	Continuez la prise : touchez la case à point suivante
+Baştan seçmek için taşın kendisine dokunun	Touchez le pion lui-même pour rechoisir
+Taş seçildi: gideceği noktalı kareye dokunun	Pion choisi : touchez une case à point
+Başka taş seçmek için ona dokunun	Touchez un autre pion pour le choisir
+En çok taş alan yol zorunlu: %d taş	Prise la plus longue obligatoire : %d pions
+Zorunlu alma var: çerçeveli taşlardan birini seçin	Prise obligatoire : choisissez un pion encadré
+bir taş seçin	choisissez un pion
+Kindle kısa bir oyun oynayacak. Her dokunuşta bir hamle yapılır ve burada anlatılır. Taşın çıktığı ve vardığı kare çerçeveli, alınan taşların yeri çarpı ile gösterilir.	La Kindle va jouer une courte partie. Chaque toucher joue un coup, expliqué ici. Les cases de départ et d'arrivée sont encadrées, les pions pris marqués d'une croix.
+Nasıl oynanır?	Comment jouer ?
+Örnek oyun	Partie exemple
+Siyah ve Beyaz sırayla boş noktalara taş koyar; Siyah başlar. Konan taş bir daha yerinden oynamaz. Amaç, taşlarınızla tahtanın rakibinizden daha büyük bir bölümünü çevirmektir.	Les Noirs et les Blancs posent tour à tour une pierre sur un point libre ; les Noirs commencent. Une pierre posée ne bouge plus. Le but : entourer avec vos pierres une plus grande partie du plateau que l'adversaire.
+Hamle nasıl yapılır?	Comment jouer un coup ?
+Çizgilerin kesiştiği boş bir noktaya dokunun; taşınız oraya konur. Son konan taşın ortasında halka vardır. Sıranızı geçmek için alttaki Pas düğmesine dokunun.	Touchez un point libre où les lignes se croisent ; votre pierre y est posée. La dernière pierre posée porte un anneau au centre. Pour passer votre tour, touchez le bouton Passer en bas.
+Özgürlük	Libertés
+Bir taşın yukarı, aşağı, sağ ve soldaki boş komşuları onun özgürlükleridir (halkalar). Yan yana duran aynı renk taşlar bir zincirdir ve özgürlüklerini paylaşır: beyaz taşın 4, siyah zincirin 6 özgürlüğü var.	Les points libres voisins d'une pierre, en haut, en bas, à gauche et à droite, sont ses libertés (anneaux). Les pierres voisines de même couleur forment une chaîne et partagent leurs libertés : la pierre blanche en a 4, la chaîne noire 6.
+Esir alma	Capture
+Rakip taşın son özgürlüğünü de kapatırsanız taş tahtadan alınır ve esiriniz olur. Bu beyaz taşın tek özgürlüğü kaldı (atari): Siyah E4'e oynarsa onu alır. Hiç özgürlüğü kalmayacak bir yere, bir şey almıyorsa, taş konamaz.	Si vous bouchez la dernière liberté d'une pierre adverse, elle est retirée et devient votre prisonnier. Cette pierre blanche n'a plus qu'une liberté (atari) : si les Noirs jouent E4, ils la capturent. On ne peut pas jouer là où sa pierre n'aurait aucune liberté, sauf si elle capture.
+Ko	Ko
+Siyah F5'e oynayıp E5'teki beyaz taşı aldı. Beyaz hemen E5'e oynayıp geri alamaz (×); önce başka bir yere oynamalı. Buna ko denir: aynı durumun sonsuza dek tekrarlanmasını önler.	Les Noirs ont joué F5 et capturé la pierre blanche en E5. Les Blancs ne peuvent pas reprendre aussitôt en E5 (×) ; ils doivent d'abord jouer ailleurs. C'est le ko : il empêche la même position de se répéter sans fin.
+Oyunun sonu ve sayım	Fin de partie et décompte
+İki oyuncu art arda pas geçince oyun biter. Puanınız: taşlarınız ve çevirdiğiniz boş noktalar (kareler); Beyaz'a 7,5 komi eklenir. Burada Siyah 47, Beyaz 34 + 7,5: Siyah kazandı. Ölü taşları Kindle önerir; değiştirmek için zincire dokunun.	La partie finit quand les deux joueurs passent l'un après l'autre. Vos points : vos pierres et les points libres que vous entourez (carrés) ; les Blancs reçoivent 7,5 de komi. Ici Noirs 47, Blancs 34 + 7,5 : les Noirs gagnent. La Kindle propose les pierres mortes ; touchez une chaîne pour changer.
+Siyah C3'e taş koydu. Taşlar çizgilerin kesiştiği noktalara konur ve bir daha oynamaz.	Les Noirs ont posé une pierre en C3. Les pierres se posent sur les intersections et ne bougent plus.
+Beyaz B2'ye oynadı. Bu taşın 4 özgürlüğü (boş komşusu) var: A2, B1, C2 ve B3.	Les Blancs ont joué B2. Cette pierre a 4 libertés (voisins libres) : A2, B1, C2 et B3.
+Siyah C2 ile bir özgürlüğü kapattı: B2'nin 3 özgürlüğü kaldı.	Les Noirs ont bouché une liberté avec C2 : il en reste 3 à B2.
+Beyaz sağ tarafta, G7'de kendine alan kurmaya başladı.	Les Blancs commencent un territoire à droite, en G7.
+Siyah B3'e oynadı: B2'nin artık yalnızca 2 özgürlüğü var (A2 ve B1).	Les Noirs ont joué B3 : B2 n'a plus que 2 libertés (A2 et B1).
+Beyaz G3 ile sağ tarafı genişletti.	Les Blancs ont agrandi le côté droit avec G3.
+Siyah B1'e oynadı: B2'nin tek özgürlüğü kaldı (A2). Buna atari denir: bir sonraki hamlede alınabilir.	Les Noirs ont joué B1 : B2 n'a plus qu'une liberté (A2). C'est l'atari : elle peut être capturée au coup suivant.
+Beyaz A2'ye uzayarak kaçmaya çalıştı. A2 ile B2 artık bir zincir; özgürlükleri birlikte sayılır: A1 ve A3.	Les Blancs ont tenté de fuir en prolongeant en A2. A2 et B2 forment une chaîne ; leurs libertés se comptent ensemble : A1 et A3.
+Siyah A3 ile zinciri yine atariye düşürdü. Beyaz A1'e oynayamaz: orada taşlarının hiç özgürlüğü kalmazdı.	Les Noirs remettent la chaîne en atari avec A3. Les Blancs ne peuvent pas jouer A1 : leurs pierres n'y auraient aucune liberté.
+Beyaz zinciri kurtaramayacağını görüp G5'e oynadı.	Voyant la chaîne perdue, les Blancs ont joué G5.
+Siyah A1'e oynadı: zincirin son özgürlüğü kapandı, A2 ve B2 tahtadan alındı (×). Siyah'ın 2 esiri var. Sol alt köşe Siyah'ın, sağ taraf Beyaz'ın alanı oluyor.	Les Noirs ont joué A1 : la dernière liberté est bouchée, A2 et B2 sont retirées (×). Les Noirs ont 2 prisonniers. Le coin inférieur gauche devient territoire noir, le côté droit territoire blanc.
+Ölü taşları değiştirmek için zincire dokunun, sonra Sayımı onayla	Touchez une chaîne pour changer les pierres mortes, puis Valider le décompte
+Esir: Siyah %d, Beyaz %d	Prisonniers : Noirs %d, Blancs %d
+sıra geçmek için Pas	Passer pour céder votre tour
+boş bir kesişime dokunun	touchez une intersection libre
+Kindle kısa bir oyun oynayacak. Her dokunuşta bir hamle yapılır ve burada anlatılır. Son konan taşın ortasında halka olur, alınan taşların yeri çarpı ile gösterilir.	La Kindle va jouer une courte partie. Chaque toucher joue un coup, expliqué ici. La dernière pierre posée porte un anneau, les pierres capturées sont marquées d'une croix.
+Sıra sizde (%s)	À vous (%s)
+Sıra Siyah'ta	Trait aux Noirs
+Sıra Beyaz'da	Trait aux Blancs
+Hamle %d / %d	Coup %d / %d
+Baştan	Recommencer
+Sonraki hamle ▶	Coup suivant ▶
+◀ Geri	◀ Retour
+%s oyununu ilk kez açıyorsunuz. Nasıl oynandığını resimlerle kısaca gösterelim mi?	Vous ouvrez %s pour la première fois. Voulez-vous voir rapidement en images comment jouer ?
+Göster	Afficher
+Gerek yok	Non merci
+Siyah ve Beyaz sırayla tahtaya taş koyar; Siyah başlar. Oyun bitince tahtada daha çok taşı olan kazanır. Başlangıçta ortada ikişer taş vardır.	Les Noirs et les Blancs posent tour à tour un pion sur le plateau ; les Noirs commencent. À la fin, celui qui a le plus de pions sur le plateau gagne. Au départ, deux pions de chaque couleur sont au centre.
+Sıra sizdeyken noktalı karelerden birine dokunun; taşınız oraya konur. Noktalar oynayabileceğiniz kareleri gösterir (İpucu düğmesiyle açılıp kapanır). Burada Siyah d3'e dokunuyor.	À votre tour, touchez une case à point ; votre pion y est posé. Les points montrent les cases jouables (bouton Indices pour les afficher ou non). Ici, les Noirs touchent d3.
+Sıkıştır ve çevir	Encadrer et retourner
+Yeni taş, rakip taşları sizin iki taşınızın arasında sıkıştırmalı. Aradaki rakip taşlar sizin renginize döner: d4'teki beyaz taş d3 ile d5 arasında kaldı ve siyah oldu (çerçeveli). Sıkıştırmayan bir kareye oynanamaz.	Le nouveau pion doit encadrer des pions adverses entre deux des vôtres. Ceux-ci prennent votre couleur : le pion blanc en d4, pris entre d3 et d5, est devenu noir (encadré). Impossible de jouer sur une case qui n'encadre rien.
+Sekiz yön	Huit directions
+Sıkıştırma düz, yan ve çapraz, sekiz yönde de olur; bir hamle birkaç yönde birden çevirebilir. Siyah d4'e oynadı ve beş beyaz taşı çevirdi. c5 çevrilmedi: arkasında siyah taş yok.	L'encadrement marche dans les huit directions : droit, de côté et en diagonale ; un coup peut retourner dans plusieurs directions à la fois. Les Noirs ont joué d4 et retourné cinq pions blancs. c5 non : aucun pion noir derrière.
+Hiç oynayacak yeri olmayan pas geçer; uygulama bunu kendiliğinden yapar ve durum satırında yazar. Burada Beyaz hiçbir siyah taşı sıkıştıramıyor, bu yüzden sıra yine Siyah'ta (nokta: d1).	Qui n'a aucun coup possible passe ; l'appli le fait toute seule et l'indique dans la ligne d'état. Ici, les Blancs ne peuvent encadrer aucun pion noir : c'est donc encore aux Noirs (point : d1).
+İki taraf da oynayamayınca (çoğu zaman tahta dolunca) oyun biter ve taşlar sayılır. Burada Siyah 40 – Beyaz 24: Siyah kazandı. Köşedeki taş hiç çevrilemez; bu yüzden köşeler çok değerlidir.	Quand personne ne peut jouer (souvent plateau plein), la partie finit et on compte les pions. Ici Noirs 40 – Blancs 24 : les Noirs gagnent. Un pion de coin ne peut jamais être retourné : les coins sont très précieux.
+Siyah d3'e oynadı: d4'teki beyaz taşı d5'teki kendi taşıyla sıkıştırdı ve çevirdi.	Les Noirs ont joué d3 : ils encadrent le pion blanc en d4 avec leur pion en d5 et le retournent.
+Beyaz c5'e oynadı: d5'teki siyah taşı e5 ile sıkıştırıp beyaza çevirdi.	Les Blancs ont joué c5 : ils encadrent le pion noir en d5 avec e5 et le rendent blanc.
+Siyah f6'ya oynadı: e5'i çaprazda d4 ile sıkıştırıp çevirdi.	Les Noirs ont joué f6 : ils encadrent e5 en diagonale avec d4 et le retournent.
+Beyaz f5'e oynadı: e5'i yatayda d5 ile sıkıştırıp geri aldı. Bir taş defalarca renk değiştirebilir.	Les Blancs ont joué f5 : ils encadrent e5 à l'horizontale avec d5 et le reprennent. Un pion peut changer de couleur bien des fois.
+Siyah e6'ya oynadı: e5'i dikeyde e4 ile sıkıştırdı.	Les Noirs ont joué e6 : ils encadrent e5 à la verticale avec e4.
+Beyaz e3'e oynadı: d4'ü çaprazda c5 ile sıkıştırdı.	Les Blancs ont joué e3 : ils encadrent d4 en diagonale avec c5.
+Siyah c4'e oynadı ve iki yönde birden sıkıştırdı: d4 (yatay) ve d5 (çapraz) siyah oldu.	Les Noirs ont joué c4 et encadrent dans deux directions : d4 (horizontale) et d5 (diagonale) deviennent noirs.
+Beyaz e7'ye oynadı: e6, e5 ve e4'ü aşağıdaki e3 ile sıkıştırdı. Aynı sırada üç taş birden döndü.	Les Blancs ont joué e7 : ils encadrent e6, e5 et e4 avec e3 en bas. Trois pions d'une même ligne retournés d'un coup.
+Siyah f4'e oynadı: f5'i dikeyde, e4'ü yatayda sıkıştırdı.	Les Noirs ont joué f4 : ils encadrent f5 à la verticale et e4 à l'horizontale.
+Beyaz c3'e oynadı ve üç yönde birden çevirdi: c4, d4 ve d3. Durum: Siyah 5 – Beyaz 9. Oyun tahta dolana kadar böyle sürer.	Les Blancs ont joué c3 et retournent dans trois directions : c4, d4 et d3. Score : Noirs 5 – Blancs 9. On continue ainsi jusqu'à ce que le plateau soit plein.
+noktalı bir kareye dokunun	touchez une case à point
+rakibi sıkıştıran bir kareye dokunun	touchez une case qui encadre l'adversaire
+Siyah %d – Beyaz %d	Noirs %d – Blancs %d
+Kindle kısa bir oyun oynayacak. Her dokunuşta bir hamle yapılır ve burada anlatılır. Yeni konan taşın ortasında nokta, çevrilen taşların çevresinde çerçeve olur.	La Kindle va jouer une courte partie. Chaque toucher joue un coup, expliqué ici. Le nouveau pion porte un point au centre, les pions retournés un cadre.

@@ -57,6 +57,16 @@ void go_toggle_dead(const Go *g, int p, unsigned char *dead); /* flips the whole
 int  go_ai(const Go *g, const MasaLimits *lim, MasaStats *st);
 int  go_ai_winrate(void); /* the last go_ai's estimated winning chance, per cent */
 
+/* lessons (9×9): board rows 'B' black, 'W' white; points as "C3" (columns A–J without I, row 1 at the bottom),
+ * "pas" = GO_PASS */
+int  go_parse_pt(const Go *g, const char *s); /* -1 when not a point */
+void go_pt_name(const Go *g, int p, char out[4]);
+void go_from_rows(Go *g, int n, const char *const *rows, int side); /* stones placed as they are, nothing captured */
+extern const MasaPage go_pages[];
+extern const int go_npages;
+extern const MasaStep go_demo[]; /* from an empty 9×9 board */
+extern const int go_ndemo;
+
 #define GO_MAX_PLIES 600
 typedef struct {
 	Go pos;

@@ -293,3 +293,87 @@ int rv_game_load(RvGame *g, const char *buf)
 	*g = t;
 	return 0;
 }
+
+/* ---- lessons ---- */
+
+int rv_parse_sq(const char *s)
+{
+	if (!s) return -1;
+	if (strcmp(s, "pas") == 0) return RV_PASS;
+	if (s[0] < 'a' || s[0] > 'h' || s[1] < '1' || s[1] > '8' || s[2]) return -1;
+	return (8 - (s[1] - '0')) * 8 + (s[0] - 'a');
+}
+
+void rv_sq_name(int sq, char out[3])
+{
+	out[0] = (char) ('a' + (sq & 7));
+	out[1] = (char) ('0' + 8 - (sq >> 3));
+	out[2] = '\0';
+}
+
+void rv_from_rows(Rv *r, const char *const *rows, int side)
+{
+	r->disc[0] = r->disc[1] = 0;
+	r->side = side;
+	for (int row = 0; row < 8; row++)
+		for (int c = 0; c < 8 && rows[row] && rows[row][c]; c++) {
+			char ch = rows[row][c];
+			if (ch == 'B') r->disc[0] |= 1ULL << (row * 8 + c);
+			if (ch == 'W') r->disc[1] |= 1ULL << (row * 8 + c);
+		}
+}
+
+const MasaPage rv_pages[] = {
+	{ N_("Amaç"),
+	  N_("Siyah ve Beyaz sırayla tahtaya taş koyar; Siyah başlar. Oyun bitince tahtada daha çok taşı olan kazanır. "
+	     "Başlangıçta ortada ikişer taş vardır."),
+	  0,
+	  { "........", "........", "........", "...BW...", "...WB...", "........", "........", "........" },
+	  { NULL } },
+	{ N_("Hamle nasıl yapılır?"),
+	  N_("Sıra sizdeyken noktalı karelerden birine dokunun; taşınız oraya konur. Noktalar oynayabileceğiniz kareleri "
+	     "gösterir (İpucu düğmesiyle açılıp kapanır). Burada Siyah d3'e dokunuyor."),
+	  0,
+	  { "........", "........", "........", "...BW...", "...WB...", "........", "........", "........" },
+	  { "........", "........", "....o...", ".....o..", "..o.....", "...@....", "........", "........" } },
+	{ N_("Sıkıştır ve çevir"),
+	  N_("Yeni taş, rakip taşları sizin iki taşınızın arasında sıkıştırmalı. Aradaki rakip taşlar sizin renginize döner: "
+	     "d4'teki beyaz taş d3 ile d5 arasında kaldı ve siyah oldu (çerçeveli). Sıkıştırmayan bir kareye oynanamaz."),
+	  0,
+	  { "........", "........", "........", "...BW...", "...BB...", "...B....", "........", "........" },
+	  { "........", "........", "........", "........", "...c....", "...n....", "........", "........" } },
+	{ N_("Sekiz yön"),
+	  N_("Sıkıştırma düz, yan ve çapraz, sekiz yönde de olur; bir hamle birkaç yönde birden çevirebilir. Siyah d4'e "
+	     "oynadı ve beş beyaz taşı çevirdi. c5 çevrilmedi: arkasında siyah taş yok."),
+	  0,
+	  { "........", "........", "...B.B..", "..WBB...", ".BBBBB..", "...B....", "...B....", "........" },
+	  { "........", "........", "........", "...cc...", "..cnc...", "...c....", "........", "........" } },
+	{ N_("Pas"),
+	  N_("Hiç oynayacak yeri olmayan pas geçer; uygulama bunu kendiliğinden yapar ve durum satırında yazar. Burada Beyaz "
+	     "hiçbir siyah taşı sıkıştıramıyor, bu yüzden sıra yine Siyah'ta (nokta: d1)."),
+	  1,
+	  { "........", "........", "........", "........", "........", "........", "........", "BBW....." },
+	  { "........", "........", "........", "........", "........", "........", "........", "...o...." } },
+	{ N_("Oyunun sonu"),
+	  N_("İki taraf da oynayamayınca (çoğu zaman tahta dolunca) oyun biter ve taşlar sayılır. Burada Siyah 40 – Beyaz 24: "
+	     "Siyah kazandı. Köşedeki taş hiç çevrilemez; bu yüzden köşeler çok değerlidir."),
+	  0,
+	  { "WWWWWWWB", "WBBWWWBB", "WBBWWBWB", "WBBBBWWB", "WBBBBBBB", "WBBWWWBB", "WBBBBBBB", "BBBBBBBB" },
+	  { "*......*", "........", "........", "........", "........", "........", "........", "*......*" } },
+};
+const int rv_npages = (int) (sizeof rv_pages / sizeof rv_pages[0]);
+
+const MasaStep rv_demo[] = {
+	{ "d3", N_("Siyah d3'e oynadı: d4'teki beyaz taşı d5'teki kendi taşıyla sıkıştırdı ve çevirdi.") },
+	{ "c5", N_("Beyaz c5'e oynadı: d5'teki siyah taşı e5 ile sıkıştırıp beyaza çevirdi.") },
+	{ "f6", N_("Siyah f6'ya oynadı: e5'i çaprazda d4 ile sıkıştırıp çevirdi.") },
+	{ "f5", N_("Beyaz f5'e oynadı: e5'i yatayda d5 ile sıkıştırıp geri aldı. Bir taş defalarca renk değiştirebilir.") },
+	{ "e6", N_("Siyah e6'ya oynadı: e5'i dikeyde e4 ile sıkıştırdı.") },
+	{ "e3", N_("Beyaz e3'e oynadı: d4'ü çaprazda c5 ile sıkıştırdı.") },
+	{ "c4", N_("Siyah c4'e oynadı ve iki yönde birden sıkıştırdı: d4 (yatay) ve d5 (çapraz) siyah oldu.") },
+	{ "e7", N_("Beyaz e7'ye oynadı: e6, e5 ve e4'ü aşağıdaki e3 ile sıkıştırdı. Aynı sırada üç taş birden döndü.") },
+	{ "f4", N_("Siyah f4'e oynadı: f5'i dikeyde, e4'ü yatayda sıkıştırdı.") },
+	{ "c3", N_("Beyaz c3'e oynadı ve üç yönde birden çevirdi: c4, d4 ve d3. Durum: Siyah 5 – Beyaz 9. Oyun tahta "
+		   "dolana kadar böyle sürer.") },
+};
+const int rv_ndemo = (int) (sizeof rv_demo / sizeof rv_demo[0]);

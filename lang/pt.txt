@@ -856,8 +856,6 @@ Not silinsin mi?	Apagar esta nota?
 %s teslim oldu	%s desistiu
 13×13	13×13
 9×9 (kısa oyun)	9×9 (partida curta)
-Almak zorunlu (%d taş) · %s	Captura obrigatória (%d peças) · %s
-Almaya devam: sıradaki kareye dokunun	Continue a capturar: toque na casa seguinte
 Berabere	Empate
 Beyaz %d – Siyah %d · %s	Brancas %d – Pretas %d · %s
 Beyaz (ilk hamle)	Brancas (jogam primeiro)
@@ -890,9 +888,6 @@ Siyah %d – Beyaz %d · %s	Pretas %d – Brancas %d · %s
 Siyah (ilk hamle)	Pretas (jogam primeiro)
 Siyah başlar · köşeler değerlidir	As pretas começam · os cantos valem muito
 Siyah kazandı	As pretas vencem
-Sıra: %s · Beyaz %d – Siyah %d	Vez: %s · Brancas %d – Pretas %d
-Sıra: %s · Siyah %d – Beyaz %d	Vez: %s · Pretas %d – Brancas %d
-Sıra: %s · esir: Siyah %d, Beyaz %d	Vez: %s · capturas: Pretas %d, Brancas %d
 Tahta	Tabuleiro
 Teslim ol	Desistir
 Teslim oldunuz · Kindle kazandı	Você desistiu · O Kindle venceu
@@ -1186,3 +1181,95 @@ Sistem servisleri, SSH ve Kindle Apps hiçbir zaman durdurulmaz.	Serviços do si
 Arka planda program var	Há um programa em segundo plano
 Arkada açık program: %s. Ekranı ve dokunmayı kullanabilir.	Aberto em segundo plano: %s. Pode usar a tela e o toque.
 Arkada açık programlar: %s. Ekranı ve dokunmayı kullanabilirler.	Abertos em segundo plano: %s. Podem usar a tela e o toque.
+Amaç	Objetivo
+Her oyuncunun 16 taşı vardır. Beyaz aşağıdadır ve ilk hamleyi yapar. Rakibin bütün taşlarını alan ya da onu hiç hamle yapamaz hâle getiren kazanır.	Cada jogador tem 16 peças. As brancas estão em baixo e jogam primeiro. Ganha quem capturar todas as peças do adversário ou o deixar sem lances.
+Taş nasıl oynanır?	Como se move uma peça?
+Önce oynatacağınız taşa dokunun: kalın çerçeveyle seçilir, gidebileceği kareler noktayla gösterilir. Sonra noktalı kareye dokunun. Taş bir kare ileri ya da yana gider; geri (×) ve çapraz gidemez.	Toque primeiro na peça a mover: fica com uma moldura grossa e as casas possíveis aparecem com um ponto. Depois toque numa casa com ponto. A peça anda uma casa para a frente ou para o lado; não recua (×) nem anda na diagonal.
+Taş alma	Capturar
+Rakip taş hemen önünüzde ya da yanınızdaysa ve arkasındaki kare boşsa, üzerinden atlayıp onu alırsınız. Atladıktan sonra yine alabiliyorsanız devam edersiniz: e4 önce e5'i, sonra f6'yı alıp g6'ya konuyor.	Se uma peça adversária estiver mesmo à sua frente ou ao lado e a casa atrás dela estiver livre, salte por cima e capture-a. Se depois do salto puder capturar de novo, continue: e4 captura e5, depois f6, e para em g6.
+Almak zorunlu	Captura obrigatória
+Alabiliyorsanız almak zorunludur ve en çok taşı alan yol seçilmelidir. Uygulama oynayabilecek taşları çerçeveyle gösterir: c3 tek taş alabilirdi, f3 ise iki taş alıyor; bu yüzden yalnızca f3 oynayabilir.	Se puder capturar, é obrigatório, e tem de escolher a sequência que captura mais peças. A aplicação marca com moldura as peças que podem jogar: c3 capturaria uma peça, f3 captura duas; por isso só f3 pode jogar.
+Dama olmak	Promoção a dama
+Son sıraya ulaşan taş dama olur (♛). Dama, düz çizgilerde istediği kadar kare gider. Uzaktaki bir taşı, arası boşsa atlayıp arkasındaki herhangi bir boş kareye konarak alır: b2'deki dama b6'yı alabilir.	A peça que chega à última fila torna-se dama (♛). A dama anda quantas casas quiser em linha reta. Captura uma peça distante se o caminho estiver livre, parando em qualquer casa livre atrás dela: a dama em b2 pode capturar b6.
+Oyunun sonu	Fim do jogo
+Taşı kalmayan ya da hiç hamle yapamayan kaybeder. Burada Siyah'ın a2'deki taşı hiçbir yere gidemez: Beyaz kazandı. İki tarafın da yalnızca birer taşı kalırsa oyun berabere biter.	Perde quem fica sem peças ou sem lances. Aqui a peça preta em a2 não pode mover-se: as brancas vencem. Se cada lado ficar com apenas uma peça, é empate.
+Beyaz h3'teki taşını bir kare ileri, h4'e sürdü. Beyaz yukarı, Siyah aşağı doğru ilerler.	As brancas avançaram a peça de h3 uma casa, para h4. As brancas sobem, as pretas descem.
+Siyah d6'dan d5'e ilerledi.	As pretas avançaram de d6 para d5.
+Beyaz e3'ten e4'e çıktı.	As brancas subiram de e3 para e4.
+Siyah d4'e indi. Önünde d3'teki beyaz taş var ve arkası (d5) boş: alınabilir!	As pretas desceram para d4. A peça tem a branca de d3 à frente e a casa atrás (d5) livre: pode ser capturada!
+Beyaz d3'ten d4'ün üzerinden d5'e atladı ve siyah taşı aldı. Almak zorunludur.	As brancas saltaram de d3 por cima de d4 para d5 e capturaram a peça preta. Capturar é obrigatório.
+Siyah e5'e oynadı. Bu bir hata: e4'teki beyaz taş şimdi art arda iki taş alabilir.	As pretas jogaram e5. É um erro: a peça branca em e4 pode agora capturar duas peças seguidas.
+Beyaz e5'i ve e7'yi art arda aldı ve son sıraya, e8'e ulaşıp dama oldu (♛). d5'ten tek taş almak yasaktı: en çok alan yol zorunludur.	As brancas capturaram e5 e e7 seguidas, chegaram à última fila em e8 e fizeram dama (♛). Capturar só uma peça a partir de d5 era proibido: a captura mais longa é obrigatória.
+Siyah c5'e oynadı ve d5'teki beyaz taşa yandan saldırdı.	As pretas jogaram c5 e atacaram de lado a peça branca em d5.
+Beyaz'ın başka seçeneği yok, almak zorunlu: d5'teki taş yana atlayıp c5'i aldı ve b5'e kondu.	As brancas não têm escolha, capturar é obrigatório: a peça de d5 saltou para o lado, capturou c5 e parou em b5.
+Siyah b6'dan b4'e atlayıp b5'i geri aldı. Durum: Beyaz 15 taş (biri dama), Siyah 12 taş.	As pretas saltaram de b6 para b4 e recapturaram b5. Situação: brancas 15 peças (uma dama), pretas 12.
+Beyaz %d – Siyah %d	Brancas %d – Pretas %d
+Almaya devam: sıradaki noktalı kareye dokunun	Continue a capturar: toque na próxima casa com ponto
+Baştan seçmek için taşın kendisine dokunun	Toque na própria peça para escolher de novo
+Taş seçildi: gideceği noktalı kareye dokunun	Peça escolhida: toque na casa com ponto de destino
+Başka taş seçmek için ona dokunun	Para escolher outra peça, toque nela
+En çok taş alan yol zorunlu: %d taş	Captura mais longa obrigatória: %d peças
+Zorunlu alma var: çerçeveli taşlardan birini seçin	Captura obrigatória: escolha uma peça com moldura
+bir taş seçin	escolha uma peça
+Kindle kısa bir oyun oynayacak. Her dokunuşta bir hamle yapılır ve burada anlatılır. Taşın çıktığı ve vardığı kare çerçeveli, alınan taşların yeri çarpı ile gösterilir.	O Kindle vai jogar uma partida curta. Cada toque faz um lance, explicado aqui. As casas de partida e de chegada ficam com moldura; as peças capturadas são marcadas com uma cruz.
+Nasıl oynanır?	Como jogar?
+Örnek oyun	Partida de exemplo
+Siyah ve Beyaz sırayla boş noktalara taş koyar; Siyah başlar. Konan taş bir daha yerinden oynamaz. Amaç, taşlarınızla tahtanın rakibinizden daha büyük bir bölümünü çevirmektir.	Pretas e brancas colocam pedras à vez nos pontos vazios; as pretas começam. Uma pedra colocada nunca mais se move. O objetivo é cercar com as suas pedras uma parte do tabuleiro maior que a do adversário.
+Hamle nasıl yapılır?	Como se joga?
+Çizgilerin kesiştiği boş bir noktaya dokunun; taşınız oraya konur. Son konan taşın ortasında halka vardır. Sıranızı geçmek için alttaki Pas düğmesine dokunun.	Toque num ponto vazio onde as linhas se cruzam; a sua pedra é colocada aí. A última pedra jogada tem um anel no centro. Para passar a vez, toque no botão Passar em baixo.
+Özgürlük	Liberdades
+Bir taşın yukarı, aşağı, sağ ve soldaki boş komşuları onun özgürlükleridir (halkalar). Yan yana duran aynı renk taşlar bir zincirdir ve özgürlüklerini paylaşır: beyaz taşın 4, siyah zincirin 6 özgürlüğü var.	Os pontos vazios vizinhos de uma pedra (acima, abaixo, à direita e à esquerda) são as suas liberdades (anéis). Pedras da mesma cor lado a lado formam uma cadeia e partilham liberdades: a pedra branca tem 4, a cadeia preta 6.
+Esir alma	Capturar
+Rakip taşın son özgürlüğünü de kapatırsanız taş tahtadan alınır ve esiriniz olur. Bu beyaz taşın tek özgürlüğü kaldı (atari): Siyah E4'e oynarsa onu alır. Hiç özgürlüğü kalmayacak bir yere, bir şey almıyorsa, taş konamaz.	Se fechar a última liberdade de uma pedra adversária, ela sai do tabuleiro e torna-se sua prisioneira. Esta pedra branca só tem uma liberdade (atari): se as pretas jogarem E4, capturam-na. Não se pode jogar onde a pedra fique sem liberdades, a não ser que capture.
+Ko	Ko
+Siyah F5'e oynayıp E5'teki beyaz taşı aldı. Beyaz hemen E5'e oynayıp geri alamaz (×); önce başka bir yere oynamalı. Buna ko denir: aynı durumun sonsuza dek tekrarlanmasını önler.	As pretas jogaram F5 e capturaram a pedra branca de E5. As brancas não podem recapturar logo em E5 (×); têm de jogar noutro sítio primeiro. Chama-se ko: evita que a mesma posição se repita sem fim.
+Oyunun sonu ve sayım	Fim do jogo e contagem
+İki oyuncu art arda pas geçince oyun biter. Puanınız: taşlarınız ve çevirdiğiniz boş noktalar (kareler); Beyaz'a 7,5 komi eklenir. Burada Siyah 47, Beyaz 34 + 7,5: Siyah kazandı. Ölü taşları Kindle önerir; değiştirmek için zincire dokunun.	O jogo termina quando os dois jogadores passam seguidos. Os seus pontos: as suas pedras e os pontos vazios que cerca (quadrados); as brancas recebem 7,5 de komi. Aqui pretas 47, brancas 34 + 7,5: as pretas vencem. O Kindle sugere as pedras mortas; toque numa cadeia para mudar.
+Siyah C3'e taş koydu. Taşlar çizgilerin kesiştiği noktalara konur ve bir daha oynamaz.	As pretas colocaram uma pedra em C3. As pedras vão para os cruzamentos das linhas e não se movem mais.
+Beyaz B2'ye oynadı. Bu taşın 4 özgürlüğü (boş komşusu) var: A2, B1, C2 ve B3.	As brancas jogaram B2. Esta pedra tem 4 liberdades (vizinhos vazios): A2, B1, C2 e B3.
+Siyah C2 ile bir özgürlüğü kapattı: B2'nin 3 özgürlüğü kaldı.	As pretas fecharam uma liberdade com C2: B2 fica com 3.
+Beyaz sağ tarafta, G7'de kendine alan kurmaya başladı.	As brancas começaram a formar território à direita, em G7.
+Siyah B3'e oynadı: B2'nin artık yalnızca 2 özgürlüğü var (A2 ve B1).	As pretas jogaram B3: B2 tem agora só 2 liberdades (A2 e B1).
+Beyaz G3 ile sağ tarafı genişletti.	As brancas alargaram o lado direito com G3.
+Siyah B1'e oynadı: B2'nin tek özgürlüğü kaldı (A2). Buna atari denir: bir sonraki hamlede alınabilir.	As pretas jogaram B1: B2 fica com uma só liberdade (A2). Chama-se atari: pode ser capturada no próximo lance.
+Beyaz A2'ye uzayarak kaçmaya çalıştı. A2 ile B2 artık bir zincir; özgürlükleri birlikte sayılır: A1 ve A3.	As brancas estenderam-se para A2 para fugir. A2 e B2 são agora uma cadeia; as liberdades contam-se juntas: A1 e A3.
+Siyah A3 ile zinciri yine atariye düşürdü. Beyaz A1'e oynayamaz: orada taşlarının hiç özgürlüğü kalmazdı.	Com A3, as pretas voltaram a pôr a cadeia em atari. As brancas não podem jogar A1: as suas pedras ficariam sem liberdades.
+Beyaz zinciri kurtaramayacağını görüp G5'e oynadı.	Vendo que não podem salvar a cadeia, as brancas jogaram G5.
+Siyah A1'e oynadı: zincirin son özgürlüğü kapandı, A2 ve B2 tahtadan alındı (×). Siyah'ın 2 esiri var. Sol alt köşe Siyah'ın, sağ taraf Beyaz'ın alanı oluyor.	As pretas jogaram A1: a última liberdade fechou-se e A2 e B2 saíram do tabuleiro (×). As pretas têm 2 prisioneiros. O canto inferior esquerdo é das pretas, o lado direito das brancas.
+Ölü taşları değiştirmek için zincire dokunun, sonra Sayımı onayla	Toque numa cadeia para mudar as pedras mortas e depois em Confirmar a contagem
+Esir: Siyah %d, Beyaz %d	Capturas: Pretas %d, Brancas %d
+sıra geçmek için Pas	use Passar para ceder a vez
+boş bir kesişime dokunun	toque num cruzamento vazio
+Kindle kısa bir oyun oynayacak. Her dokunuşta bir hamle yapılır ve burada anlatılır. Son konan taşın ortasında halka olur, alınan taşların yeri çarpı ile gösterilir.	O Kindle vai jogar uma partida curta. Cada toque faz um lance, explicado aqui. A última pedra jogada tem um anel no centro; as pedras capturadas são marcadas com uma cruz.
+Sıra sizde (%s)	Sua vez (%s)
+Sıra Siyah'ta	Vez das pretas
+Sıra Beyaz'da	Vez das brancas
+Hamle %d / %d	Lance %d / %d
+Baştan	Do início
+Sonraki hamle ▶	Próximo lance ▶
+◀ Geri	◀ Voltar
+%s oyununu ilk kez açıyorsunuz. Nasıl oynandığını resimlerle kısaca gösterelim mi?	Está a abrir %s pela primeira vez. Quer ver em imagens, de forma breve, como se joga?
+Göster	Mostrar
+Gerek yok	Não, obrigado
+Siyah ve Beyaz sırayla tahtaya taş koyar; Siyah başlar. Oyun bitince tahtada daha çok taşı olan kazanır. Başlangıçta ortada ikişer taş vardır.	Pretas e brancas colocam peças à vez no tabuleiro; as pretas começam. No fim, ganha quem tiver mais peças no tabuleiro. No início há duas peças de cada cor no centro.
+Sıra sizdeyken noktalı karelerden birine dokunun; taşınız oraya konur. Noktalar oynayabileceğiniz kareleri gösterir (İpucu düğmesiyle açılıp kapanır). Burada Siyah d3'e dokunuyor.	Na sua vez, toque numa das casas com ponto; a sua peça é colocada aí. Os pontos mostram onde pode jogar (o botão Dicas liga-os e desliga-os). Aqui as pretas tocam em d3.
+Sıkıştır ve çevir	Prender e virar
+Yeni taş, rakip taşları sizin iki taşınızın arasında sıkıştırmalı. Aradaki rakip taşlar sizin renginize döner: d4'teki beyaz taş d3 ile d5 arasında kaldı ve siyah oldu (çerçeveli). Sıkıştırmayan bir kareye oynanamaz.	A nova peça tem de prender peças adversárias entre duas peças suas. As peças presas mudam para a sua cor: a branca em d4 ficou entre d3 e d5 e passou a preta (com moldura). Não se pode jogar numa casa que não prenda nada.
+Sekiz yön	Oito direções
+Sıkıştırma düz, yan ve çapraz, sekiz yönde de olur; bir hamle birkaç yönde birden çevirebilir. Siyah d4'e oynadı ve beş beyaz taşı çevirdi. c5 çevrilmedi: arkasında siyah taş yok.	Pode prender-se na vertical, na horizontal e na diagonal, nas oito direções; um lance pode virar em várias direções ao mesmo tempo. As pretas jogaram d4 e viraram cinco peças brancas. c5 não virou: não tem peça preta atrás.
+Hiç oynayacak yeri olmayan pas geçer; uygulama bunu kendiliğinden yapar ve durum satırında yazar. Burada Beyaz hiçbir siyah taşı sıkıştıramıyor, bu yüzden sıra yine Siyah'ta (nokta: d1).	Quem não tem onde jogar passa; a aplicação fá-lo sozinha e indica-o na linha de estado. Aqui as brancas não conseguem prender nenhuma peça preta, por isso a vez volta às pretas (ponto: d1).
+İki taraf da oynayamayınca (çoğu zaman tahta dolunca) oyun biter ve taşlar sayılır. Burada Siyah 40 – Beyaz 24: Siyah kazandı. Köşedeki taş hiç çevrilemez; bu yüzden köşeler çok değerlidir.	Quando nenhum lado pode jogar (quase sempre com o tabuleiro cheio), o jogo acaba e contam-se as peças. Aqui pretas 40 – brancas 24: as pretas vencem. Uma peça num canto nunca pode ser virada; por isso os cantos valem muito.
+Siyah d3'e oynadı: d4'teki beyaz taşı d5'teki kendi taşıyla sıkıştırdı ve çevirdi.	As pretas jogaram d3: prenderam a branca em d4 com a sua peça em d5 e viraram-na.
+Beyaz c5'e oynadı: d5'teki siyah taşı e5 ile sıkıştırıp beyaza çevirdi.	As brancas jogaram c5: prenderam a preta em d5 com e5 e viraram-na para branca.
+Siyah f6'ya oynadı: e5'i çaprazda d4 ile sıkıştırıp çevirdi.	As pretas jogaram f6: prenderam e5 na diagonal com d4 e viraram-na.
+Beyaz f5'e oynadı: e5'i yatayda d5 ile sıkıştırıp geri aldı. Bir taş defalarca renk değiştirebilir.	As brancas jogaram f5: prenderam e5 na horizontal com d5 e recuperaram-na. Uma peça pode mudar de cor muitas vezes.
+Siyah e6'ya oynadı: e5'i dikeyde e4 ile sıkıştırdı.	As pretas jogaram e6: prenderam e5 na vertical com e4.
+Beyaz e3'e oynadı: d4'ü çaprazda c5 ile sıkıştırdı.	As brancas jogaram e3: prenderam d4 na diagonal com c5.
+Siyah c4'e oynadı ve iki yönde birden sıkıştırdı: d4 (yatay) ve d5 (çapraz) siyah oldu.	As pretas jogaram c4 e prenderam em duas direções: d4 (horizontal) e d5 (diagonal) ficaram pretas.
+Beyaz e7'ye oynadı: e6, e5 ve e4'ü aşağıdaki e3 ile sıkıştırdı. Aynı sırada üç taş birden döndü.	As brancas jogaram e7: prenderam e6, e5 e e4 com e3 em baixo. Três peças da mesma linha viraram de uma vez.
+Siyah f4'e oynadı: f5'i dikeyde, e4'ü yatayda sıkıştırdı.	As pretas jogaram f4: prenderam f5 na vertical e e4 na horizontal.
+Beyaz c3'e oynadı ve üç yönde birden çevirdi: c4, d4 ve d3. Durum: Siyah 5 – Beyaz 9. Oyun tahta dolana kadar böyle sürer.	As brancas jogaram c3 e viraram em três direções: c4, d4 e d3. Situação: pretas 5 – brancas 9. O jogo continua assim até o tabuleiro encher.
+noktalı bir kareye dokunun	toque numa casa com ponto
+rakibi sıkıştıran bir kareye dokunun	toque numa casa que prenda o adversário
+Siyah %d – Beyaz %d	Pretas %d – Brancas %d
+Kindle kısa bir oyun oynayacak. Her dokunuşta bir hamle yapılır ve burada anlatılır. Yeni konan taşın ortasında nokta, çevrilen taşların çevresinde çerçeve olur.	O Kindle vai jogar uma partida curta. Cada toque faz um lance, explicado aqui. A peça nova tem um ponto no centro; as peças viradas ficam com moldura.

@@ -856,8 +856,6 @@ Not silinsin mi?	Usunąć tę notatkę?
 %s teslim oldu	%s poddaje się
 13×13	13×13
 9×9 (kısa oyun)	9×9 (krótka partia)
-Almak zorunlu (%d taş) · %s	Bicie obowiązkowe (%d piony) · %s
-Almaya devam: sıradaki kareye dokunun	Bij dalej: dotknij następnego pola
 Berabere	Remis
 Beyaz %d – Siyah %d · %s	Białe %d – Czarne %d · %s
 Beyaz (ilk hamle)	Białe (zaczynają)
@@ -890,9 +888,6 @@ Siyah %d – Beyaz %d · %s	Czarne %d – Białe %d · %s
 Siyah (ilk hamle)	Czarne (zaczynają)
 Siyah başlar · köşeler değerlidir	Zaczynają czarne · rogi są cenne
 Siyah kazandı	Wygrywają czarne
-Sıra: %s · Beyaz %d – Siyah %d	Ruch: %s · Białe %d – Czarne %d
-Sıra: %s · Siyah %d – Beyaz %d	Ruch: %s · Czarne %d – Białe %d
-Sıra: %s · esir: Siyah %d, Beyaz %d	Ruch: %s · jeńcy: Czarne %d, Białe %d
 Tahta	Plansza
 Teslim ol	Poddaj się
 Teslim oldunuz · Kindle kazandı	Poddałeś się · Kindle wygrał
@@ -1186,3 +1181,95 @@ Sistem servisleri, SSH ve Kindle Apps hiçbir zaman durdurulmaz.	Usługi systemo
 Arka planda program var	W tle działa program
 Arkada açık program: %s. Ekranı ve dokunmayı kullanabilir.	Otwarty w tle: %s. Może używać ekranu i dotyku.
 Arkada açık programlar: %s. Ekranı ve dokunmayı kullanabilirler.	Otwarte w tle: %s. Mogą używać ekranu i dotyku.
+Amaç	Cel gry
+Her oyuncunun 16 taşı vardır. Beyaz aşağıdadır ve ilk hamleyi yapar. Rakibin bütün taşlarını alan ya da onu hiç hamle yapamaz hâle getiren kazanır.	Każdy gracz ma 16 pionów. Białe stoją na dole i wykonują pierwszy ruch. Wygrywa ten, kto zbije wszystkie piony przeciwnika lub pozbawi go ruchów.
+Taş nasıl oynanır?	Jak ruszać pionem?
+Önce oynatacağınız taşa dokunun: kalın çerçeveyle seçilir, gidebileceği kareler noktayla gösterilir. Sonra noktalı kareye dokunun. Taş bir kare ileri ya da yana gider; geri (×) ve çapraz gidemez.	Najpierw dotknij piona, którym chcesz zagrać: dostanie grubą ramkę, a pola, na które może iść, oznaczy kropka. Potem dotknij pola z kropką. Pion idzie o jedno pole do przodu lub w bok; nie do tyłu (×) i nie po skosie.
+Taş alma	Bicie
+Rakip taş hemen önünüzde ya da yanınızdaysa ve arkasındaki kare boşsa, üzerinden atlayıp onu alırsınız. Atladıktan sonra yine alabiliyorsanız devam edersiniz: e4 önce e5'i, sonra f6'yı alıp g6'ya konuyor.	Jeśli pion przeciwnika stoi tuż przed twoim lub obok, a pole za nim jest wolne, przeskakujesz go i zbijasz. Jeśli po skoku możesz bić dalej, kontynuujesz: e4 bije najpierw e5, potem f6 i staje na g6.
+Almak zorunlu	Bicie obowiązkowe
+Alabiliyorsanız almak zorunludur ve en çok taşı alan yol seçilmelidir. Uygulama oynayabilecek taşları çerçeveyle gösterir: c3 tek taş alabilirdi, f3 ise iki taş alıyor; bu yüzden yalnızca f3 oynayabilir.	Jeśli możesz bić, musisz, i to drogą, która zbija najwięcej pionów. Aplikacja zaznacza ramką piony, którymi można grać: c3 zbiłby jeden pion, f3 bije dwa, więc grać może tylko f3.
+Dama olmak	Promocja na damkę
+Son sıraya ulaşan taş dama olur (♛). Dama, düz çizgilerde istediği kadar kare gider. Uzaktaki bir taşı, arası boşsa atlayıp arkasındaki herhangi bir boş kareye konarak alır: b2'deki dama b6'yı alabilir.	Pion, który dojdzie do ostatniego rzędu, staje się damką (♛). Damka chodzi po liniach prostych o dowolną liczbę pól. Bije odległy pion, jeśli droga jest wolna, lądując na dowolnym wolnym polu za nim: damka z b2 może zbić b6.
+Oyunun sonu	Koniec gry
+Taşı kalmayan ya da hiç hamle yapamayan kaybeder. Burada Siyah'ın a2'deki taşı hiçbir yere gidemez: Beyaz kazandı. İki tarafın da yalnızca birer taşı kalırsa oyun berabere biter.	Przegrywa ten, komu zabraknie pionów lub ruchów. Tu czarny pion na a2 nie może się ruszyć: wygrywają białe. Jeśli obu stronom zostanie po jednym pionie, jest remis.
+Beyaz h3'teki taşını bir kare ileri, h4'e sürdü. Beyaz yukarı, Siyah aşağı doğru ilerler.	Białe przesunęły pion z h3 o jedno pole naprzód, na h4. Białe idą w górę, czarne w dół.
+Siyah d6'dan d5'e ilerledi.	Czarne poszły z d6 na d5.
+Beyaz e3'ten e4'e çıktı.	Białe poszły z e3 na e4.
+Siyah d4'e indi. Önünde d3'teki beyaz taş var ve arkası (d5) boş: alınabilir!	Czarny pion zszedł na d4. Przed nim stoi biały pion z d3, a pole za nim (d5) jest wolne: można go zbić!
+Beyaz d3'ten d4'ün üzerinden d5'e atladı ve siyah taşı aldı. Almak zorunludur.	Białe skoczyły z d3 przez d4 na d5 i zbiły czarnego piona. Bicie jest obowiązkowe.
+Siyah e5'e oynadı. Bu bir hata: e4'teki beyaz taş şimdi art arda iki taş alabilir.	Czarne zagrały e5. To błąd: biały pion z e4 może teraz zbić dwa piony z rzędu.
+Beyaz e5'i ve e7'yi art arda aldı ve son sıraya, e8'e ulaşıp dama oldu (♛). d5'ten tek taş almak yasaktı: en çok alan yol zorunludur.	Białe zbiły z rzędu e5 i e7, doszły do ostatniego rzędu na e8 i zdobyły damkę (♛). Zbicie jednego piona z d5 było zabronione: obowiązuje najdłuższe bicie.
+Siyah c5'e oynadı ve d5'teki beyaz taşa yandan saldırdı.	Czarne zagrały c5 i zaatakowały z boku białego piona na d5.
+Beyaz'ın başka seçeneği yok, almak zorunlu: d5'teki taş yana atlayıp c5'i aldı ve b5'e kondu.	Białe nie mają wyboru, bicie jest obowiązkowe: pion z d5 skoczył w bok, zbił c5 i stanął na b5.
+Siyah b6'dan b4'e atlayıp b5'i geri aldı. Durum: Beyaz 15 taş (biri dama), Siyah 12 taş.	Czarne skoczyły z b6 na b4 i odbiły b5. Stan: białe 15 pionów (w tym damka), czarne 12.
+Beyaz %d – Siyah %d	Białe %d – Czarne %d
+Almaya devam: sıradaki noktalı kareye dokunun	Bij dalej: dotknij następnego pola z kropką
+Baştan seçmek için taşın kendisine dokunun	Dotknij samego piona, aby wybrać od nowa
+Taş seçildi: gideceği noktalı kareye dokunun	Pion wybrany: dotknij pola z kropką
+Başka taş seçmek için ona dokunun	Aby wybrać inny pion, dotknij go
+En çok taş alan yol zorunlu: %d taş	Obowiązkowe najdłuższe bicie (pionów: %d)
+Zorunlu alma var: çerçeveli taşlardan birini seçin	Bicie obowiązkowe: wybierz pion w ramce
+bir taş seçin	wybierz pion
+Kindle kısa bir oyun oynayacak. Her dokunuşta bir hamle yapılır ve burada anlatılır. Taşın çıktığı ve vardığı kare çerçeveli, alınan taşların yeri çarpı ile gösterilir.	Kindle zagra krótką partię. Każde dotknięcie wykonuje jeden ruch, opisany tutaj. Pole startu i pole docelowe mają ramkę, a miejsca zbitych pionów oznacza krzyżyk.
+Nasıl oynanır?	Jak grać?
+Örnek oyun	Przykładowa partia
+Siyah ve Beyaz sırayla boş noktalara taş koyar; Siyah başlar. Konan taş bir daha yerinden oynamaz. Amaç, taşlarınızla tahtanın rakibinizden daha büyük bir bölümünü çevirmektir.	Czarne i białe na zmianę kładą kamienie na wolnych punktach; zaczynają czarne. Położony kamień już się nie rusza. Celem jest otoczenie swoimi kamieniami większej części planszy niż przeciwnik.
+Hamle nasıl yapılır?	Jak wykonać ruch?
+Çizgilerin kesiştiği boş bir noktaya dokunun; taşınız oraya konur. Son konan taşın ortasında halka vardır. Sıranızı geçmek için alttaki Pas düğmesine dokunun.	Dotknij wolnego punktu, w którym przecinają się linie; twój kamień zostanie tam położony. Ostatni kamień ma w środku pierścień. Aby oddać ruch, dotknij przycisku Pas na dole.
+Özgürlük	Oddechy
+Bir taşın yukarı, aşağı, sağ ve soldaki boş komşuları onun özgürlükleridir (halkalar). Yan yana duran aynı renk taşlar bir zincirdir ve özgürlüklerini paylaşır: beyaz taşın 4, siyah zincirin 6 özgürlüğü var.	Wolne sąsiednie punkty kamienia (u góry, u dołu, z prawej i z lewej) to jego oddechy (pierścienie). Stykające się kamienie jednego koloru tworzą łańcuch i dzielą oddechy: biały kamień ma 4 oddechy, czarny łańcuch 6.
+Esir alma	Zbijanie
+Rakip taşın son özgürlüğünü de kapatırsanız taş tahtadan alınır ve esiriniz olur. Bu beyaz taşın tek özgürlüğü kaldı (atari): Siyah E4'e oynarsa onu alır. Hiç özgürlüğü kalmayacak bir yere, bir şey almıyorsa, taş konamaz.	Jeśli zamkniesz ostatni oddech kamienia przeciwnika, schodzi on z planszy i staje się twoim jeńcem. Ten biały kamień ma tylko jeden oddech (atari): jeśli czarne zagrają E4, zbiją go. Nie można położyć kamienia tam, gdzie nie miałby oddechów, chyba że coś zbija.
+Ko	Ko
+Siyah F5'e oynayıp E5'teki beyaz taşı aldı. Beyaz hemen E5'e oynayıp geri alamaz (×); önce başka bir yere oynamalı. Buna ko denir: aynı durumun sonsuza dek tekrarlanmasını önler.	Czarne zagrały F5 i zbiły biały kamień z E5. Białe nie mogą od razu odbić na E5 (×); najpierw muszą zagrać gdzie indziej. To jest ko: zapobiega powtarzaniu się tej samej pozycji w nieskończoność.
+Oyunun sonu ve sayım	Koniec gry i liczenie
+İki oyuncu art arda pas geçince oyun biter. Puanınız: taşlarınız ve çevirdiğiniz boş noktalar (kareler); Beyaz'a 7,5 komi eklenir. Burada Siyah 47, Beyaz 34 + 7,5: Siyah kazandı. Ölü taşları Kindle önerir; değiştirmek için zincire dokunun.	Gra kończy się, gdy obaj gracze spasują po kolei. Twoje punkty: twoje kamienie i otoczone wolne punkty (kwadraty); białe dostają 7,5 komi. Tu czarne 47, białe 34 + 7,5: wygrywają czarne. Martwe kamienie proponuje Kindle; dotknij łańcucha, aby to zmienić.
+Siyah C3'e taş koydu. Taşlar çizgilerin kesiştiği noktalara konur ve bir daha oynamaz.	Czarne położyły kamień na C3. Kamienie kładzie się na przecięciach linii i już się nie ruszają.
+Beyaz B2'ye oynadı. Bu taşın 4 özgürlüğü (boş komşusu) var: A2, B1, C2 ve B3.	Białe zagrały B2. Ten kamień ma 4 oddechy (wolnych sąsiadów): A2, B1, C2 i B3.
+Siyah C2 ile bir özgürlüğü kapattı: B2'nin 3 özgürlüğü kaldı.	Czarne zamknęły jeden oddech ruchem C2: B2 ma już tylko 3.
+Beyaz sağ tarafta, G7'de kendine alan kurmaya başladı.	Białe zaczęły budować teren po prawej, na G7.
+Siyah B3'e oynadı: B2'nin artık yalnızca 2 özgürlüğü var (A2 ve B1).	Czarne zagrały B3: B2 ma teraz tylko 2 oddechy (A2 i B1).
+Beyaz G3 ile sağ tarafı genişletti.	Białe poszerzyły prawą stronę ruchem G3.
+Siyah B1'e oynadı: B2'nin tek özgürlüğü kaldı (A2). Buna atari denir: bir sonraki hamlede alınabilir.	Czarne zagrały B1: B2 został jeden oddech (A2). To jest atari: kamień można zbić w następnym ruchu.
+Beyaz A2'ye uzayarak kaçmaya çalıştı. A2 ile B2 artık bir zincir; özgürlükleri birlikte sayılır: A1 ve A3.	Białe próbowały uciec, przedłużając na A2. A2 i B2 to teraz łańcuch; ich oddechy liczy się razem: A1 i A3.
+Siyah A3 ile zinciri yine atariye düşürdü. Beyaz A1'e oynayamaz: orada taşlarının hiç özgürlüğü kalmazdı.	Ruchem A3 czarne znów dały łańcuchowi atari. Białe nie mogą zagrać A1: ich kamienie nie miałyby tam oddechów.
+Beyaz zinciri kurtaramayacağını görüp G5'e oynadı.	Białe uznały, że łańcucha nie uratują, i zagrały G5.
+Siyah A1'e oynadı: zincirin son özgürlüğü kapandı, A2 ve B2 tahtadan alındı (×). Siyah'ın 2 esiri var. Sol alt köşe Siyah'ın, sağ taraf Beyaz'ın alanı oluyor.	Czarne zagrały A1: ostatni oddech łańcucha zamknięty, A2 i B2 zeszły z planszy (×). Czarne mają 2 jeńców. Lewy dolny róg należy do czarnych, prawa strona do białych.
+Ölü taşları değiştirmek için zincire dokunun, sonra Sayımı onayla	Dotknij łańcucha, aby zmienić martwe kamienie, potem Zatwierdź liczenie
+Esir: Siyah %d, Beyaz %d	Jeńcy: Czarne %d, Białe %d
+sıra geçmek için Pas	przycisk Pas oddaje ruch
+boş bir kesişime dokunun	dotknij wolnego przecięcia
+Kindle kısa bir oyun oynayacak. Her dokunuşta bir hamle yapılır ve burada anlatılır. Son konan taşın ortasında halka olur, alınan taşların yeri çarpı ile gösterilir.	Kindle zagra krótką partię. Każde dotknięcie wykonuje jeden ruch, opisany tutaj. Ostatni kamień ma w środku pierścień, a miejsca zbitych kamieni oznacza krzyżyk.
+Sıra sizde (%s)	Twój ruch (%s)
+Sıra Siyah'ta	Ruch czarnych
+Sıra Beyaz'da	Ruch białych
+Hamle %d / %d	Ruch %d / %d
+Baştan	Od początku
+Sonraki hamle ▶	Następny ruch ▶
+◀ Geri	◀ Wstecz
+%s oyununu ilk kez açıyorsunuz. Nasıl oynandığını resimlerle kısaca gösterelim mi?	Otwierasz %s po raz pierwszy. Pokazać krótko na obrazkach, jak się gra?
+Göster	Pokaż
+Gerek yok	Nie, dzięki
+Siyah ve Beyaz sırayla tahtaya taş koyar; Siyah başlar. Oyun bitince tahtada daha çok taşı olan kazanır. Başlangıçta ortada ikişer taş vardır.	Czarne i białe na zmianę kładą pionki na planszy; zaczynają czarne. Na koniec wygrywa ten, kto ma więcej pionków na planszy. Na początku w środku stoją po dwa pionki każdego koloru.
+Sıra sizdeyken noktalı karelerden birine dokunun; taşınız oraya konur. Noktalar oynayabileceğiniz kareleri gösterir (İpucu düğmesiyle açılıp kapanır). Burada Siyah d3'e dokunuyor.	Gdy jest twój ruch, dotknij jednego z pól z kropką; twój pionek zostanie tam położony. Kropki pokazują, gdzie możesz zagrać (włącza je i wyłącza przycisk Podpowiedzi). Tu czarne dotykają d3.
+Sıkıştır ve çevir	Zamknij i odwróć
+Yeni taş, rakip taşları sizin iki taşınızın arasında sıkıştırmalı. Aradaki rakip taşlar sizin renginize döner: d4'teki beyaz taş d3 ile d5 arasında kaldı ve siyah oldu (çerçeveli). Sıkıştırmayan bir kareye oynanamaz.	Nowy pionek musi zamknąć pionki przeciwnika między dwoma twoimi. Zamknięte pionki zmieniają kolor na twój: biały pionek na d4 znalazł się między d3 a d5 i stał się czarny (w ramce). Nie można zagrać na pole, które niczego nie zamyka.
+Sekiz yön	Osiem kierunków
+Sıkıştırma düz, yan ve çapraz, sekiz yönde de olur; bir hamle birkaç yönde birden çevirebilir. Siyah d4'e oynadı ve beş beyaz taşı çevirdi. c5 çevrilmedi: arkasında siyah taş yok.	Zamykać można w pionie, w poziomie i po skosie, we wszystkich ośmiu kierunkach; jeden ruch może odwracać w kilku kierunkach naraz. Czarne zagrały d4 i odwróciły pięć białych pionków. c5 się nie odwrócił: za nim nie ma czarnego pionka.
+Hiç oynayacak yeri olmayan pas geçer; uygulama bunu kendiliğinden yapar ve durum satırında yazar. Burada Beyaz hiçbir siyah taşı sıkıştıramıyor, bu yüzden sıra yine Siyah'ta (nokta: d1).	Kto nie ma gdzie zagrać, pasuje; aplikacja robi to sama i pisze o tym w wierszu stanu. Tu białe nie mogą zamknąć żadnego czarnego pionka, więc znów ruch czarnych (kropka: d1).
+İki taraf da oynayamayınca (çoğu zaman tahta dolunca) oyun biter ve taşlar sayılır. Burada Siyah 40 – Beyaz 24: Siyah kazandı. Köşedeki taş hiç çevrilemez; bu yüzden köşeler çok değerlidir.	Gdy żadna strona nie może grać (zwykle przy pełnej planszy), gra się kończy i liczy się pionki. Tu czarne 40 – białe 24: wygrywają czarne. Pionka w rogu nie da się odwrócić, dlatego rogi są tak cenne.
+Siyah d3'e oynadı: d4'teki beyaz taşı d5'teki kendi taşıyla sıkıştırdı ve çevirdi.	Czarne zagrały d3: zamknęły białego pionka na d4 swoim pionkiem na d5 i odwróciły go.
+Beyaz c5'e oynadı: d5'teki siyah taşı e5 ile sıkıştırıp beyaza çevirdi.	Białe zagrały c5: zamknęły czarnego pionka na d5 z e5 i zmieniły go na białego.
+Siyah f6'ya oynadı: e5'i çaprazda d4 ile sıkıştırıp çevirdi.	Czarne zagrały f6: zamknęły e5 po skosie z d4 i odwróciły go.
+Beyaz f5'e oynadı: e5'i yatayda d5 ile sıkıştırıp geri aldı. Bir taş defalarca renk değiştirebilir.	Białe zagrały f5: zamknęły e5 w poziomie z d5 i odzyskały go. Pionek może wiele razy zmieniać kolor.
+Siyah e6'ya oynadı: e5'i dikeyde e4 ile sıkıştırdı.	Czarne zagrały e6: zamknęły e5 w pionie z e4.
+Beyaz e3'e oynadı: d4'ü çaprazda c5 ile sıkıştırdı.	Białe zagrały e3: zamknęły d4 po skosie z c5.
+Siyah c4'e oynadı ve iki yönde birden sıkıştırdı: d4 (yatay) ve d5 (çapraz) siyah oldu.	Czarne zagrały c4 i zamknęły w dwóch kierunkach naraz: d4 (w poziomie) i d5 (po skosie) stały się czarne.
+Beyaz e7'ye oynadı: e6, e5 ve e4'ü aşağıdaki e3 ile sıkıştırdı. Aynı sırada üç taş birden döndü.	Białe zagrały e7: zamknęły e6, e5 i e4 z e3 na dole. Trzy pionki w jednym rzędzie odwróciły się naraz.
+Siyah f4'e oynadı: f5'i dikeyde, e4'ü yatayda sıkıştırdı.	Czarne zagrały f4: zamknęły f5 w pionie i e4 w poziomie.
+Beyaz c3'e oynadı ve üç yönde birden çevirdi: c4, d4 ve d3. Durum: Siyah 5 – Beyaz 9. Oyun tahta dolana kadar böyle sürer.	Białe zagrały c3 i odwróciły w trzech kierunkach naraz: c4, d4 i d3. Stan: czarne 5 – białe 9. Tak gra toczy się do zapełnienia planszy.
+noktalı bir kareye dokunun	dotknij pola z kropką
+rakibi sıkıştıran bir kareye dokunun	dotknij pola, które zamyka przeciwnika
+Siyah %d – Beyaz %d	Czarne %d – Białe %d
+Kindle kısa bir oyun oynayacak. Her dokunuşta bir hamle yapılır ve burada anlatılır. Yeni konan taşın ortasında nokta, çevrilen taşların çevresinde çerçeve olur.	Kindle zagra krótką partię. Każde dotknięcie wykonuje jeden ruch, opisany tutaj. Nowy pionek ma kropkę w środku, a odwrócone pionki mają ramkę.

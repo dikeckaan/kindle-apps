@@ -335,3 +335,107 @@ int dm_game_load(DmGame *g, const char *buf)
 	*g = t;
 	return 0;
 }
+
+/* ---- lessons ---- */
+
+void dm_sq_name(int sq, char out[3])
+{
+	out[0] = (char) ('a' + (sq & 7));
+	out[1] = (char) ('0' + 8 - (sq >> 3));
+	out[2] = '\0';
+}
+
+static int parse_sq(const char *s)
+{
+	if (s[0] < 'a' || s[0] > 'h' || s[1] < '1' || s[1] > '8') return -1;
+	return (8 - (s[1] - '0')) * 8 + (s[0] - 'a');
+}
+
+int dm_parse_move(const Dm *d, const char *s, DmMove *out)
+{
+	int sq[DM_MAX_PATH + 1], n = 0;
+	for (const char *p = s;; p += 3) {
+		if (n > DM_MAX_PATH || (sq[n++] = parse_sq(p)) < 0) return -1;
+		if (!p[2]) break;
+		if (p[2] != '-' && p[2] != 'x') return -1;
+	}
+	if (n < 2) return -1;
+	static DmMove ms[DM_MAX_MOVES];
+	int k = dm_moves(d, ms, DM_MAX_MOVES);
+	for (int i = 0; i < k; i++) {
+		if (ms[i].from != sq[0] || ms[i].n != n - 1) continue;
+		int same = 1;
+		for (int j = 0; j < ms[i].n; j++)
+			if (ms[i].path[j] != sq[j + 1]) same = 0;
+		if (same) {
+			*out = ms[i];
+			return 0;
+		}
+	}
+	return -1;
+}
+
+void dm_from_rows(Dm *d, const char *const *rows, int side)
+{
+	dm_clear(d, side);
+	for (int r = 0; r < 8; r++)
+		for (int c = 0; c < 8 && rows[r] && rows[r][c]; c++) {
+			const char *k = strchr("wWbB", rows[r][c]);
+			if (k && *k) d->b[r * 8 + c] = (unsigned char) (DM_WMAN + (k - "wWbB"));
+		}
+}
+
+const MasaPage dm_pages[] = {
+	{ N_("Amaç"),
+	  N_("Her oyuncunun 16 taşı vardır. Beyaz aşağıdadır ve ilk hamleyi yapar. Rakibin bütün taşlarını alan ya da onu "
+	     "hiç hamle yapamaz hâle getiren kazanır."),
+	  0,
+	  { "........", "bbbbbbbb", "bbbbbbbb", "........", "........", "wwwwwwww", "wwwwwwww", "........" },
+	  { NULL } },
+	{ N_("Taş nasıl oynanır?"),
+	  N_("Önce oynatacağınız taşa dokunun: kalın çerçeveyle seçilir, gidebileceği kareler noktayla gösterilir. Sonra "
+	     "noktalı kareye dokunun. Taş bir kare ileri ya da yana gider; geri (×) ve çapraz gidemez."),
+	  0,
+	  { "........", "..bb.b..", ".b...b..", "........", "...w....", "..w..w..", "........", "........" },
+	  { "........", "........", "........", "...o....", "..o*o...", "...x....", "........", "........" } },
+	{ N_("Taş alma"),
+	  N_("Rakip taş hemen önünüzde ya da yanınızdaysa ve arkasındaki kare boşsa, üzerinden atlayıp onu alırsınız. "
+	     "Atladıktan sonra yine alabiliyorsanız devam edersiniz: e4 önce e5'i, sonra f6'yı alıp g6'ya konuyor."),
+	  0,
+	  { "........", "........", ".b...b..", "....b...", "....w...", ".w....w.", "........", "........" },
+	  { "........", "........", "....vxo.", "....x...", "....*...", "........", "........", "........" } },
+	{ N_("Almak zorunlu"),
+	  N_("Alabiliyorsanız almak zorunludur ve en çok taşı alan yol seçilmelidir. Uygulama oynayabilecek taşları "
+	     "çerçeveyle gösterir: c3 tek taş alabilirdi, f3 ise iki taş alıyor; bu yüzden yalnızca f3 oynayabilir."),
+	  0,
+	  { "........", ".b....b.", "........", "......b.", "..b..b..", "..w..w..", "........", "........" },
+	  { "........", "........", "........", ".....v.o", "........", "..x..#..", "........", "........" } },
+	{ N_("Dama olmak"),
+	  N_("Son sıraya ulaşan taş dama olur (♛). Dama, düz çizgilerde istediği kadar kare gider. Uzaktaki bir taşı, "
+	     "arası boşsa atlayıp arkasındaki herhangi bir boş kareye konarak alır: b2'deki dama b6'yı alabilir."),
+	  0,
+	  { "........", "........", ".b......", "........", "....b...", "........", ".W......", "........" },
+	  { ".o......", ".o......", ".x......", "........", "........", "........", ".*......", "........" } },
+	{ N_("Oyunun sonu"),
+	  N_("Taşı kalmayan ya da hiç hamle yapamayan kaybeder. Burada Siyah'ın a2'deki taşı hiçbir yere gidemez: Beyaz "
+	     "kazandı. İki tarafın da yalnızca birer taşı kalırsa oyun berabere biter."),
+	  1,
+	  { "........", "........", "........", "........", "........", "........", "bww.....", "W......." },
+	  { "........", "........", "........", "........", "........", "........", "x.......", "........" } },
+};
+const int dm_npages = (int) (sizeof dm_pages / sizeof dm_pages[0]);
+
+const MasaStep dm_demo[] = {
+	{ "h3-h4", N_("Beyaz h3'teki taşını bir kare ileri, h4'e sürdü. Beyaz yukarı, Siyah aşağı doğru ilerler.") },
+	{ "d6-d5", N_("Siyah d6'dan d5'e ilerledi.") },
+	{ "e3-e4", N_("Beyaz e3'ten e4'e çıktı.") },
+	{ "d5-d4", N_("Siyah d4'e indi. Önünde d3'teki beyaz taş var ve arkası (d5) boş: alınabilir!") },
+	{ "d3xd5", N_("Beyaz d3'ten d4'ün üzerinden d5'e atladı ve siyah taşı aldı. Almak zorunludur.") },
+	{ "e6-e5", N_("Siyah e5'e oynadı. Bu bir hata: e4'teki beyaz taş şimdi art arda iki taş alabilir.") },
+	{ "e4xe6xe8", N_("Beyaz e5'i ve e7'yi art arda aldı ve son sıraya, e8'e ulaşıp dama oldu (♛). d5'ten tek taş almak "
+			 "yasaktı: en çok alan yol zorunludur.") },
+	{ "c6-c5", N_("Siyah c5'e oynadı ve d5'teki beyaz taşa yandan saldırdı.") },
+	{ "d5xb5", N_("Beyaz'ın başka seçeneği yok, almak zorunlu: d5'teki taş yana atlayıp c5'i aldı ve b5'e kondu.") },
+	{ "b6xb4", N_("Siyah b6'dan b4'e atlayıp b5'i geri aldı. Durum: Beyaz 15 taş (biri dama), Siyah 12 taş.") },
+};
+const int dm_ndemo = (int) (sizeof dm_demo / sizeof dm_demo[0]);

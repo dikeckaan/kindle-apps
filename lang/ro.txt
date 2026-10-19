@@ -856,8 +856,6 @@ Not silinsin mi?	Ștergeți această notiță?
 %s teslim oldu	%s a abandonat
 13×13	13×13
 9×9 (kısa oyun)	9×9 (partidă scurtă)
-Almak zorunlu (%d taş) · %s	Captură obligatorie (%d piese) · %s
-Almaya devam: sıradaki kareye dokunun	Continuați captura: atingeți căsuța următoare
 Berabere	Remiză
 Beyaz %d – Siyah %d · %s	Albul %d – Negrul %d · %s
 Beyaz (ilk hamle)	Albul (mută primul)
@@ -890,9 +888,6 @@ Siyah %d – Beyaz %d · %s	Negrul %d – Albul %d · %s
 Siyah (ilk hamle)	Negrul (mută primul)
 Siyah başlar · köşeler değerlidir	Începe negrul · colțurile sunt valoroase
 Siyah kazandı	Câștigă negrul
-Sıra: %s · Beyaz %d – Siyah %d	La mutare: %s · Albul %d – Negrul %d
-Sıra: %s · Siyah %d – Beyaz %d	La mutare: %s · Negrul %d – Albul %d
-Sıra: %s · esir: Siyah %d, Beyaz %d	La mutare: %s · capturi: Negrul %d, Albul %d
 Tahta	Tablă
 Teslim ol	Abandonați
 Teslim oldunuz · Kindle kazandı	Ați abandonat · Kindle a câștigat
@@ -1186,3 +1181,95 @@ Sistem servisleri, SSH ve Kindle Apps hiçbir zaman durdurulmaz.	Serviciile de s
 Arka planda program var	Un program rulează în fundal
 Arkada açık program: %s. Ekranı ve dokunmayı kullanabilir.	Deschis în fundal: %s. Poate folosi ecranul și atingerea.
 Arkada açık programlar: %s. Ekranı ve dokunmayı kullanabilirler.	Deschise în fundal: %s. Pot folosi ecranul și atingerea.
+Amaç	Scopul jocului
+Her oyuncunun 16 taşı vardır. Beyaz aşağıdadır ve ilk hamleyi yapar. Rakibin bütün taşlarını alan ya da onu hiç hamle yapamaz hâle getiren kazanır.	Fiecare jucător are 16 piese. Albul stă jos și mută primul. Câștigă cine ia toate piesele adversarului sau îl lasă fără mutări.
+Taş nasıl oynanır?	Cum se mută o piesă?
+Önce oynatacağınız taşa dokunun: kalın çerçeveyle seçilir, gidebileceği kareler noktayla gösterilir. Sonra noktalı kareye dokunun. Taş bir kare ileri ya da yana gider; geri (×) ve çapraz gidemez.	Atingeți întâi piesa pe care o mutați: primește un chenar gros, iar căsuțele unde poate merge sunt marcate cu un punct. Apoi atingeți o căsuță cu punct. Piesa merge o căsuță înainte sau lateral; nu înapoi (×) și nici pe diagonală.
+Taş alma	Capturarea
+Rakip taş hemen önünüzde ya da yanınızdaysa ve arkasındaki kare boşsa, üzerinden atlayıp onu alırsınız. Atladıktan sonra yine alabiliyorsanız devam edersiniz: e4 önce e5'i, sonra f6'yı alıp g6'ya konuyor.	Dacă o piesă adversă stă chiar în fața piesei dvs. sau alături și căsuța din spatele ei e liberă, săriți peste ea și o capturați. Dacă după salt puteți captura din nou, continuați: e4 ia e5, apoi f6 și ajunge pe g6.
+Almak zorunlu	Captura e obligatorie
+Alabiliyorsanız almak zorunludur ve en çok taşı alan yol seçilmelidir. Uygulama oynayabilecek taşları çerçeveyle gösterir: c3 tek taş alabilirdi, f3 ise iki taş alıyor; bu yüzden yalnızca f3 oynayabilir.	Dacă puteți captura, sunteți obligat, și trebuie aleasă calea care ia cele mai multe piese. Aplicația încadrează piesele care pot muta: c3 ar lua o piesă, f3 ia două; de aceea doar f3 poate muta.
+Dama olmak	Transformarea în damă
+Son sıraya ulaşan taş dama olur (♛). Dama, düz çizgilerde istediği kadar kare gider. Uzaktaki bir taşı, arası boşsa atlayıp arkasındaki herhangi bir boş kareye konarak alır: b2'deki dama b6'yı alabilir.	Piesa care ajunge pe ultimul rând devine damă (♛). Dama merge pe linii drepte oricâte căsuțe. Ia o piesă aflată la distanță dacă drumul e liber, aterizând pe orice căsuță liberă din spatele ei: dama de pe b2 poate lua b6.
+Oyunun sonu	Sfârșitul jocului
+Taşı kalmayan ya da hiç hamle yapamayan kaybeder. Burada Siyah'ın a2'deki taşı hiçbir yere gidemez: Beyaz kazandı. İki tarafın da yalnızca birer taşı kalırsa oyun berabere biter.	Pierde cine rămâne fără piese sau fără mutări. Aici piesa neagră de pe a2 nu se poate mișca: câștigă albul. Dacă ambele părți rămân cu câte o singură piesă, e remiză.
+Beyaz h3'teki taşını bir kare ileri, h4'e sürdü. Beyaz yukarı, Siyah aşağı doğru ilerler.	Albul a mutat piesa de pe h3 o căsuță înainte, pe h4. Albul avansează în sus, negrul în jos.
+Siyah d6'dan d5'e ilerledi.	Negrul a avansat de pe d6 pe d5.
+Beyaz e3'ten e4'e çıktı.	Albul a urcat de pe e3 pe e4.
+Siyah d4'e indi. Önünde d3'teki beyaz taş var ve arkası (d5) boş: alınabilir!	Negrul a coborât pe d4. În fața ei e piesa albă de pe d3, iar în spate (d5) e liber: poate fi capturată!
+Beyaz d3'ten d4'ün üzerinden d5'e atladı ve siyah taşı aldı. Almak zorunludur.	Albul a sărit de pe d3 peste d4 pe d5 și a luat piesa neagră. Captura e obligatorie.
+Siyah e5'e oynadı. Bu bir hata: e4'teki beyaz taş şimdi art arda iki taş alabilir.	Negrul a jucat e5. E o greșeală: piesa albă de pe e4 poate acum lua două piese la rând.
+Beyaz e5'i ve e7'yi art arda aldı ve son sıraya, e8'e ulaşıp dama oldu (♛). d5'ten tek taş almak yasaktı: en çok alan yol zorunludur.	Albul a luat la rând e5 și e7, a ajuns pe ultimul rând, pe e8, și a devenit damă (♛). Să ia o singură piesă de pe d5 era interzis: captura cea mai lungă e obligatorie.
+Siyah c5'e oynadı ve d5'teki beyaz taşa yandan saldırdı.	Negrul a jucat c5 și a atacat din lateral piesa albă de pe d5.
+Beyaz'ın başka seçeneği yok, almak zorunlu: d5'teki taş yana atlayıp c5'i aldı ve b5'e kondu.	Albul nu are de ales, captura e obligatorie: piesa de pe d5 a sărit lateral, a luat c5 și a ajuns pe b5.
+Siyah b6'dan b4'e atlayıp b5'i geri aldı. Durum: Beyaz 15 taş (biri dama), Siyah 12 taş.	Negrul a sărit de pe b6 pe b4 și a recapturat b5. Situația: albul 15 piese (una e damă), negrul 12.
+Beyaz %d – Siyah %d	Albul %d – Negrul %d
+Almaya devam: sıradaki noktalı kareye dokunun	Continuați captura: atingeți următoarea căsuță cu punct
+Baştan seçmek için taşın kendisine dokunun	Atingeți chiar piesa pentru a alege din nou
+Taş seçildi: gideceği noktalı kareye dokunun	Piesă aleasă: atingeți o căsuță cu punct
+Başka taş seçmek için ona dokunun	Atingeți altă piesă pentru a o alege
+En çok taş alan yol zorunlu: %d taş	Captura cea mai lungă e obligatorie: %d piese
+Zorunlu alma var: çerçeveli taşlardan birini seçin	Captură obligatorie: alegeți o piesă încadrată
+bir taş seçin	alegeți o piesă
+Kindle kısa bir oyun oynayacak. Her dokunuşta bir hamle yapılır ve burada anlatılır. Taşın çıktığı ve vardığı kare çerçeveli, alınan taşların yeri çarpı ile gösterilir.	Kindle va juca o partidă scurtă. Fiecare atingere face o mutare, explicată aici. Căsuța de plecare și cea de sosire au chenar; locul pieselor capturate e marcat cu o cruce.
+Nasıl oynanır?	Cum se joacă?
+Örnek oyun	Partidă demonstrativă
+Siyah ve Beyaz sırayla boş noktalara taş koyar; Siyah başlar. Konan taş bir daha yerinden oynamaz. Amaç, taşlarınızla tahtanın rakibinizden daha büyük bir bölümünü çevirmektir.	Negrul și albul pun pe rând pietre pe punctele libere; începe negrul. O piatră pusă nu se mai mută. Scopul este să înconjurați cu pietrele dvs. o parte mai mare a tablei decât adversarul.
+Hamle nasıl yapılır?	Cum se mută?
+Çizgilerin kesiştiği boş bir noktaya dokunun; taşınız oraya konur. Son konan taşın ortasında halka vardır. Sıranızı geçmek için alttaki Pas düğmesine dokunun.	Atingeți un punct liber unde se intersectează liniile; piatra dvs. se așază acolo. Ultima piatră pusă are un inel în centru. Ca să cedați rândul, atingeți butonul Pas de jos.
+Özgürlük	Libertăți
+Bir taşın yukarı, aşağı, sağ ve soldaki boş komşuları onun özgürlükleridir (halkalar). Yan yana duran aynı renk taşlar bir zincirdir ve özgürlüklerini paylaşır: beyaz taşın 4, siyah zincirin 6 özgürlüğü var.	Punctele libere vecine unei pietre (sus, jos, dreapta, stânga) sunt libertățile ei (inelele). Pietrele alăturate de aceeași culoare formează un lanț și își împart libertățile: piatra albă are 4, lanțul negru 6.
+Esir alma	Capturarea
+Rakip taşın son özgürlüğünü de kapatırsanız taş tahtadan alınır ve esiriniz olur. Bu beyaz taşın tek özgürlüğü kaldı (atari): Siyah E4'e oynarsa onu alır. Hiç özgürlüğü kalmayacak bir yere, bir şey almıyorsa, taş konamaz.	Dacă închideți ultima libertate a unei pietre adverse, ea iese de pe tablă și devine prizoniera dvs. Această piatră albă mai are o singură libertate (atari): dacă negrul joacă E4, o capturează. Nu puteți pune o piatră unde n-ar avea nicio libertate, decât dacă ea capturează ceva.
+Ko	Ko
+Siyah F5'e oynayıp E5'teki beyaz taşı aldı. Beyaz hemen E5'e oynayıp geri alamaz (×); önce başka bir yere oynamalı. Buna ko denir: aynı durumun sonsuza dek tekrarlanmasını önler.	Negrul a jucat F5 și a capturat piatra albă de pe E5. Albul nu poate recaptura imediat jucând E5 (×); trebuie să joace întâi în altă parte. Asta se numește ko: împiedică repetarea la nesfârșit a aceleiași poziții.
+Oyunun sonu ve sayım	Sfârșitul și numărarea
+İki oyuncu art arda pas geçince oyun biter. Puanınız: taşlarınız ve çevirdiğiniz boş noktalar (kareler); Beyaz'a 7,5 komi eklenir. Burada Siyah 47, Beyaz 34 + 7,5: Siyah kazandı. Ölü taşları Kindle önerir; değiştirmek için zincire dokunun.	Jocul se termină când ambii jucători pasează unul după altul. Punctele dvs.: pietrele dvs. și punctele libere înconjurate (pătrățele); albul primește komi 7,5. Aici negrul 47, albul 34 + 7,5: câștigă negrul. Kindle propune pietrele moarte; atingeți un lanț pentru a schimba.
+Siyah C3'e taş koydu. Taşlar çizgilerin kesiştiği noktalara konur ve bir daha oynamaz.	Negrul a pus o piatră pe C3. Pietrele se pun la intersecțiile liniilor și nu se mai mută.
+Beyaz B2'ye oynadı. Bu taşın 4 özgürlüğü (boş komşusu) var: A2, B1, C2 ve B3.	Albul a jucat B2. Această piatră are 4 libertăți (vecini liberi): A2, B1, C2 și B3.
+Siyah C2 ile bir özgürlüğü kapattı: B2'nin 3 özgürlüğü kaldı.	Negrul a închis o libertate cu C2: B2 mai are 3.
+Beyaz sağ tarafta, G7'de kendine alan kurmaya başladı.	Albul a început să-și facă teritoriu în dreapta, la G7.
+Siyah B3'e oynadı: B2'nin artık yalnızca 2 özgürlüğü var (A2 ve B1).	Negrul a jucat B3: B2 mai are doar 2 libertăți (A2 și B1).
+Beyaz G3 ile sağ tarafı genişletti.	Albul a extins partea dreaptă cu G3.
+Siyah B1'e oynadı: B2'nin tek özgürlüğü kaldı (A2). Buna atari denir: bir sonraki hamlede alınabilir.	Negrul a jucat B1: B2 mai are o singură libertate (A2). Asta se numește atari: poate fi capturată la mutarea următoare.
+Beyaz A2'ye uzayarak kaçmaya çalıştı. A2 ile B2 artık bir zincir; özgürlükleri birlikte sayılır: A1 ve A3.	Albul a încercat să scape prelungind pe A2. A2 și B2 sunt acum un lanț; libertățile se numără împreună: A1 și A3.
+Siyah A3 ile zinciri yine atariye düşürdü. Beyaz A1'e oynayamaz: orada taşlarının hiç özgürlüğü kalmazdı.	Cu A3, negrul a pus din nou lanțul în atari. Albul nu poate juca A1: acolo pietrele lui n-ar avea nicio libertate.
+Beyaz zinciri kurtaramayacağını görüp G5'e oynadı.	Văzând că nu poate salva lanțul, albul a jucat G5.
+Siyah A1'e oynadı: zincirin son özgürlüğü kapandı, A2 ve B2 tahtadan alındı (×). Siyah'ın 2 esiri var. Sol alt köşe Siyah'ın, sağ taraf Beyaz'ın alanı oluyor.	Negrul a jucat A1: ultima libertate a lanțului s-a închis, A2 și B2 au ieșit de pe tablă (×). Negrul are 2 prizonieri. Colțul din stânga jos devine al negrului, partea dreaptă a albului.
+Ölü taşları değiştirmek için zincire dokunun, sonra Sayımı onayla	Atingeți un lanț pentru a schimba pietrele moarte, apoi Confirmați numărarea
+Esir: Siyah %d, Beyaz %d	Capturi: Negrul %d, Albul %d
+sıra geçmek için Pas	butonul Pas cedează rândul
+boş bir kesişime dokunun	atingeți o intersecție liberă
+Kindle kısa bir oyun oynayacak. Her dokunuşta bir hamle yapılır ve burada anlatılır. Son konan taşın ortasında halka olur, alınan taşların yeri çarpı ile gösterilir.	Kindle va juca o partidă scurtă. Fiecare atingere face o mutare, explicată aici. Ultima piatră pusă are un inel în centru; locul pietrelor capturate e marcat cu o cruce.
+Sıra sizde (%s)	Rândul dvs. (%s)
+Sıra Siyah'ta	Mută negrul
+Sıra Beyaz'da	Mută albul
+Hamle %d / %d	Mutarea %d / %d
+Baştan	De la început
+Sonraki hamle ▶	Mutarea următoare ▶
+◀ Geri	◀ Înapoi
+%s oyununu ilk kez açıyorsunuz. Nasıl oynandığını resimlerle kısaca gösterelim mi?	Deschideți %s pentru prima dată. Vă arătăm pe scurt, în imagini, cum se joacă?
+Göster	Arată
+Gerek yok	Nu e nevoie
+Siyah ve Beyaz sırayla tahtaya taş koyar; Siyah başlar. Oyun bitince tahtada daha çok taşı olan kazanır. Başlangıçta ortada ikişer taş vardır.	Negrul și albul pun pe rând piese pe tablă; începe negrul. La final câștigă cine are mai multe piese pe tablă. La început, în centru sunt câte două piese din fiecare culoare.
+Sıra sizdeyken noktalı karelerden birine dokunun; taşınız oraya konur. Noktalar oynayabileceğiniz kareleri gösterir (İpucu düğmesiyle açılıp kapanır). Burada Siyah d3'e dokunuyor.	Când e rândul dvs., atingeți una dintre căsuțele cu punct; piesa dvs. se așază acolo. Punctele arată unde puteți juca (butonul Indicii le pornește și le oprește). Aici negrul atinge d3.
+Sıkıştır ve çevir	Prinde și întoarce
+Yeni taş, rakip taşları sizin iki taşınızın arasında sıkıştırmalı. Aradaki rakip taşlar sizin renginize döner: d4'teki beyaz taş d3 ile d5 arasında kaldı ve siyah oldu (çerçeveli). Sıkıştırmayan bir kareye oynanamaz.	Piesa nouă trebuie să prindă piese adverse între două piese ale dvs. Piesele prinse iau culoarea dvs.: piesa albă de pe d4 a rămas între d3 și d5 și a devenit neagră (încadrată). Nu se poate juca pe o căsuță care nu prinde nimic.
+Sekiz yön	Opt direcții
+Sıkıştırma düz, yan ve çapraz, sekiz yönde de olur; bir hamle birkaç yönde birden çevirebilir. Siyah d4'e oynadı ve beş beyaz taşı çevirdi. c5 çevrilmedi: arkasında siyah taş yok.	Prinderea merge pe verticală, orizontală și diagonală, în toate cele opt direcții; o mutare poate întoarce piese în mai multe direcții deodată. Negrul a jucat d4 și a întors cinci piese albe. c5 nu s-a întors: în spatele ei nu e nicio piesă neagră.
+Hiç oynayacak yeri olmayan pas geçer; uygulama bunu kendiliğinden yapar ve durum satırında yazar. Burada Beyaz hiçbir siyah taşı sıkıştıramıyor, bu yüzden sıra yine Siyah'ta (nokta: d1).	Cine nu are unde juca pasează; aplicația face asta singură și o scrie în linia de stare. Aici albul nu poate prinde nicio piesă neagră, așa că mută din nou negrul (punct: d1).
+İki taraf da oynayamayınca (çoğu zaman tahta dolunca) oyun biter ve taşlar sayılır. Burada Siyah 40 – Beyaz 24: Siyah kazandı. Köşedeki taş hiç çevrilemez; bu yüzden köşeler çok değerlidir.	Când nicio parte nu mai poate juca (de obicei cu tabla plină), jocul se termină și se numără piesele. Aici negrul 40 – albul 24: câștigă negrul. O piesă din colț nu poate fi întoarsă niciodată; de aceea colțurile sunt atât de valoroase.
+Siyah d3'e oynadı: d4'teki beyaz taşı d5'teki kendi taşıyla sıkıştırdı ve çevirdi.	Negrul a jucat d3: a prins piesa albă de pe d4 cu propria piesă de pe d5 și a întors-o.
+Beyaz c5'e oynadı: d5'teki siyah taşı e5 ile sıkıştırıp beyaza çevirdi.	Albul a jucat c5: a prins piesa neagră de pe d5 cu e5 și a făcut-o albă.
+Siyah f6'ya oynadı: e5'i çaprazda d4 ile sıkıştırıp çevirdi.	Negrul a jucat f6: a prins e5 pe diagonală cu d4 și a întors-o.
+Beyaz f5'e oynadı: e5'i yatayda d5 ile sıkıştırıp geri aldı. Bir taş defalarca renk değiştirebilir.	Albul a jucat f5: a prins e5 pe orizontală cu d5 și a recâștigat-o. O piesă își poate schimba culoarea de multe ori.
+Siyah e6'ya oynadı: e5'i dikeyde e4 ile sıkıştırdı.	Negrul a jucat e6: a prins e5 pe verticală cu e4.
+Beyaz e3'e oynadı: d4'ü çaprazda c5 ile sıkıştırdı.	Albul a jucat e3: a prins d4 pe diagonală cu c5.
+Siyah c4'e oynadı ve iki yönde birden sıkıştırdı: d4 (yatay) ve d5 (çapraz) siyah oldu.	Negrul a jucat c4 și a prins în două direcții deodată: d4 (orizontal) și d5 (diagonal) au devenit negre.
+Beyaz e7'ye oynadı: e6, e5 ve e4'ü aşağıdaki e3 ile sıkıştırdı. Aynı sırada üç taş birden döndü.	Albul a jucat e7: a prins e6, e5 și e4 cu e3 de jos. Trei piese din același rând s-au întors deodată.
+Siyah f4'e oynadı: f5'i dikeyde, e4'ü yatayda sıkıştırdı.	Negrul a jucat f4: a prins f5 pe verticală și e4 pe orizontală.
+Beyaz c3'e oynadı ve üç yönde birden çevirdi: c4, d4 ve d3. Durum: Siyah 5 – Beyaz 9. Oyun tahta dolana kadar böyle sürer.	Albul a jucat c3 și a întors în trei direcții deodată: c4, d4 și d3. Situația: negrul 5 – albul 9. Jocul continuă așa până se umple tabla.
+noktalı bir kareye dokunun	atingeți o căsuță cu punct
+rakibi sıkıştıran bir kareye dokunun	atingeți o căsuță care prinde adversarul
+Siyah %d – Beyaz %d	Negrul %d – Albul %d
+Kindle kısa bir oyun oynayacak. Her dokunuşta bir hamle yapılır ve burada anlatılır. Yeni konan taşın ortasında nokta, çevrilen taşların çevresinde çerçeve olur.	Kindle va juca o partidă scurtă. Fiecare atingere face o mutare, explicată aici. Piesa nouă are un punct în centru; piesele întoarse au chenar.
