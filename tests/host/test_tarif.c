@@ -441,8 +441,228 @@ static void test_bundled_file(void)
 	tarif_free(&db);
 }
 
+static const char *INDEX =
+	"#tarifler-index\t1\tabc123\t6\n"
+	"0\tMercimek Çorbası\ttr\tTürkiye\tcvg\tmercimek sogan tereyag\t0\n"
+	"1\tİmam Bayıldı\ttr\tTürkiye\tavg\tpatlican sogan domates zeytinyag\t0\n"
+	"2\tLentil Soup\ten\tHindistan\tc\tmercimek sogan domates\t1\n"
+	"3\tMenemen (Eggs with Onion, Green Pepper, and Tomato)\ten\tTürkiye\tkg\tyumurta sogan biber domates\t1\n"
+	"broken line without tabs\n"
+	"4\tLinsensuppe\tde\tAlmanya\tc\tmercimek havuc patates\t2\n"
+	"5\tTomatensalat\tde\tDünya\tsvg\tdomates sogan\t2\n";
+
+static void load_lib(TarifLib *lib)
+{
+	char *b = strdup(INDEX);
+	T_EQ_INT(tarif_lib_parse(b, lib), 6);
+}
+
+static void test_lib_parse(void)
+{
+	TarifLib lib;
+	load_lib(&lib);
+	T_EQ_STR(lib.build, "abc123");
+	T_EQ_STR(lib.e[1].title, "İmam Bayıldı");
+	T_EQ_STR(lib.e[1].fold, "imam bayildi turkiye");
+	T_EQ_STR(lib.e[4].lang, "de");
+	T_EQ_INT(lib.e[4].id, 4);
+	T_EQ_INT(lib.e[4].shard, 2);
+	T_EQ_INT(lib.e[1].n_keys, 4);
+	T_EQ_STR(lib.e[0].keys, "mercimek sogan tereyag");
+	tarif_lib_free(&lib);
+	char bad[] = "0\tno header\ttr\tTürkiye\t\t\t0\n";
+	T_EQ_INT(tarif_lib_parse(bad, &lib), -1);
+	T_EQ_INT(tarif_lib_parse(strdup("#tarifler-index\t1\tx\t0\n"), &lib), 0);
+	tarif_lib_free(&lib);
+	T_EQ_INT(tarif_lib_load("no/such/index.tsv", &lib), -1);
+}
+
+static void test_lib_find(void)
+{
+	TarifLib lib;
+	load_lib(&lib);
+	T_EQ_INT(tarif_lib_find_url(&lib, "https://tr.wikibooks.org/wiki/Yemek:%C4%B0mam_Bay%C4%B1ld%C4%B1"), 1);
+	T_EQ_INT(tarif_lib_find_url(&lib, "https://en.wikibooks.org/wiki/Cookbook:Menemen_(Eggs_with_Onion,_Green_Pepper,_and_Tomato)"), 3);
+	T_EQ_INT(tarif_lib_find_url(&lib, "https://de.wikibooks.org/wiki/Kochbuch/_Linsensuppe"), 4);
+	T_EQ_INT(tarif_lib_find_url(&lib, "https://de.wikibooks.org/wiki/Kochbuch/Linsensuppe"), 4);
+	T_EQ_INT(tarif_lib_find_url(&lib, "https://en.wikibooks.org/wiki/Cookbook:Linsensuppe"), -1); /* other language */
+	T_EQ_INT(tarif_lib_find_url(&lib, "https://www.themealdb.com/meal/1"), -1);
+	char u[300];
+	for (int i = 0; i < lib.n; i++) { /* the derived URL leads back to the entry */
+		tarif_lib_url(&lib.e[i], u, sizeof u);
+		T_EQ_INT(tarif_lib_find_url(&lib, u), i);
+	}
+	tarif_lib_url(&lib.e[4], u, sizeof u);
+	T_EQ_STR(u, "https://de.wikibooks.org/wiki/Kochbuch/_Linsensuppe");
+	T_EQ_INT(tarif_lib_find_url(&lib, "https://en.wikibooks.org/wiki/Lentil_Soup"), -1); /* not the Cookbook */
+	/* recipes the bundled set has are left out of the library's lists */
+	TarifDb db;
+	load(&db);
+	T_EQ_STR(db.r[1].url, "https://en.wikibooks.org/wiki/Cookbook:Lentil_Soup");
+	tarif_lib_mark_dups(&lib, &db);
+	T_EQ_INT(lib.e[2].dup, 1);
+	T_EQ_INT(lib.e[0].dup, 0); /* the sample's Turkish URLs are not page URLs of these titles */
+	int out[10];
+	T_EQ_INT(tarif_lib_search(&lib, "lentil", out, 10), 0);
+	tarif_lib_clear_dups(&lib);
+	T_EQ_INT(tarif_lib_search(&lib, "lentil", out, 10), 1);
+	tarif_free(&db);
+	tarif_lib_free(&lib);
+}
+
+static void test_lib_search(void)
+{
+	TarifLib lib;
+	load_lib(&lib);
+	int out[10];
+	/* word prefixes of title or cuisine; Turkish recipes first */
+	T_EQ_INT(tarif_lib_search(&lib, "MERCİMEK", out, 10), 2); /* "Lentil Soup" through the translation */
+	T_EQ_INT(out[0], 0);
+	T_EQ_INT(out[1], 2);
+	T_EQ_INT(tarif_lib_search(&lib, "türk", out, 10), 3);
+	T_EQ_INT(out[0], 0);
+	T_EQ_INT(out[1], 1);
+	T_EQ_INT(out[2], 3);
+	/* a Turkish query also finds English titles through its translation */
+	T_EQ_INT(tarif_lib_search(&lib, "mercimek çorbası", out, 10), 2);
+	T_EQ_INT(out[0], 0);
+	T_EQ_INT(out[1], 2);
+	/* title prefix matches come first */
+	T_EQ_INT(tarif_lib_search(&lib, "soup", out, 10), 1);
+	T_EQ_INT(tarif_lib_search(&lib, "tomato", out, 10), 1);
+	T_EQ_INT(out[0], 3);
+	T_EQ_INT(tarif_lib_search(&lib, "tomatensalat", out, 10), 1);
+	T_EQ_INT(out[0], 5);
+	T_EQ_INT(tarif_lib_search(&lib, "", out, 10), 0);
+	T_EQ_INT(tarif_lib_search(&lib, "türk", out, 2), 2); /* max */
+	tarif_lib_free(&lib);
+}
+
+static void test_lib_ingredients(void)
+{
+	TarifLib lib;
+	load_lib(&lib);
+	int out[10], m[10], nw;
+	T_EQ_INT(tarif_lib_by_ingredients(&lib, "domates, soğan", out, m, 10, &nw), 5);
+	T_EQ_INT(nw, 2);
+	/* both matched: Turkish first, then English, German; within a language fewest other keywords */
+	T_EQ_INT(out[0], 1);
+	T_EQ_INT(m[0], 2);
+	T_EQ_INT(out[1], 2);
+	T_EQ_INT(out[2], 3);
+	T_EQ_INT(out[3], 5);
+	T_EQ_INT(out[4], 0);
+	T_EQ_INT(m[4], 1);
+	/* a word with a suffix matches its keyword; a partial word matches too */
+	T_EQ_INT(tarif_lib_by_ingredients(&lib, "patatesli", out, m, 10, &nw), 1);
+	T_EQ_INT(out[0], 4);
+	T_EQ_INT(tarif_lib_by_ingredients(&lib, "yumur", out, m, 10, &nw), 1);
+	T_EQ_INT(out[0], 3);
+	T_EQ_INT(tarif_lib_by_ingredients(&lib, "ve", out, m, 10, &nw), 0);
+	T_EQ_INT(nw, 0);
+	T_EQ_INT(tarif_lib_by_ingredients(&lib, "kuzu", out, m, 10, &nw), 0);
+	tarif_lib_free(&lib);
+}
+
+static void test_lib_filter(void)
+{
+	TarifLib lib;
+	load_lib(&lib);
+	int out[10];
+	T_EQ_INT(tarif_lib_filter(&lib, "Türkiye", 0, out, 10), 3);
+	T_EQ_INT(tarif_lib_filter(&lib, "!Türkiye", 0, out, 10), 3);
+	T_EQ_INT(out[0], 2);
+	T_EQ_INT(tarif_lib_filter(&lib, NULL, 'c', out, 10), 3);
+	T_EQ_INT(tarif_lib_filter(&lib, NULL, 'v', out, 10), 3);
+	T_EQ_INT(tarif_lib_filter(&lib, "Almanya", 'c', out, 10), 1);
+	T_EQ_INT(out[0], 4);
+	tarif_lib_free(&lib);
+	long now = 1800000000L;
+	T_ASSERT(tarif_lib_stale(0, now));
+	T_ASSERT(!tarif_lib_stale(now - 3600, now));
+	T_ASSERT(!tarif_lib_stale(now - TARIF_LIB_STALE_S + 60, now));
+	T_ASSERT(tarif_lib_stale(now - TARIF_LIB_STALE_S, now));
+	T_ASSERT(tarif_lib_stale(now + 3 * 24 * 3600, now)); /* the clock went back */
+}
+
+static void test_shard(void)
+{
+	char *b = strdup("# Tarifler online recipe library, shard 0002\n"
+			 "# SOURCES: page, revision, authors, licence of every recipe below:\n"
+			 "# https://de.wikibooks.org/wiki/Kochbuch/_Linsensuppe\trev 1234\tWikibooks-Autoren\tCC BY-SA 4.0\n"
+			 "# https://de.wikibooks.org/wiki/Kochbuch/_Tomatensalat\trev 98765\tWikibooks-Autoren\tCC BY-SA 4.0\n"
+			 "@R\tde\tLinsensuppe\tAlmanya\tc\t4\thttps://de.wikibooks.org/wiki/Kochbuch/_Linsensuppe\tCC BY-SA 4.0\n"
+			 "-200 g Linsen\n-1 Möhre\n*Kochen.\n"
+			 "@R\tde\tTomatensalat\tDünya\tsvg\t0\thttps://de.wikibooks.org/wiki/Kochbuch/_Tomatensalat\tCC BY-SA 4.0\n"
+			 "-4 Tomaten\n-1 Zwiebel\n*Schneiden.\n");
+	TarifDb db;
+	T_EQ_INT(tarif_parse(b, &db), 2);
+	T_EQ_INT(tarif_find_title(&db, "de", "Tomatensalat"), 1);
+	T_EQ_INT(tarif_find_title(&db, "en", "Tomatensalat"), -1);
+	T_EQ_INT(tarif_find_title(&db, "de", "Tomaten"), -1);
+	T_EQ_INT((int) tarif_source_rev(&db, "https://de.wikibooks.org/wiki/Kochbuch/_Tomatensalat"), 98765);
+	T_EQ_INT((int) tarif_source_rev(&db, "https://de.wikibooks.org/wiki/Kochbuch/_Linsensuppe"), 1234);
+	T_EQ_INT((int) tarif_source_rev(&db, "https://de.wikibooks.org/wiki/Kochbuch/_Linsen"), 0);
+	tarif_free(&db);
+	TarifDb bundled;
+	load(&bundled);
+	T_EQ_INT((int) tarif_source_rev(&bundled, "https://tr.wikibooks.org/wiki/Yemek:Mercimek"), 0);
+	tarif_free(&bundled);
+}
+
+static void test_cache_evict(void)
+{
+	long s[4] = { 40, 30, 20, 50 }; /* least recently used first */
+	T_EQ_INT(tarif_cache_evict(s, 4, 200), 0);
+	T_EQ_INT(tarif_cache_evict(s, 4, 140), 0);
+	T_EQ_INT(tarif_cache_evict(s, 4, 139), 1);
+	T_EQ_INT(tarif_cache_evict(s, 4, 100), 1);
+	T_EQ_INT(tarif_cache_evict(s, 4, 99), 2);
+	T_EQ_INT(tarif_cache_evict(s, 4, 10), 3); /* the newest stays even when it is over the cap */
+	T_EQ_INT(tarif_cache_evict(s, 0, 10), 0);
+}
+
+static void test_library_file(void)
+{
+	/* the built library, when tools/tarif/build-shards.py has run (CI builds it before make dist) */
+	TarifLib lib;
+	if (tarif_lib_load("build/tarif-lib/v1/index.tsv", &lib) < 0) return;
+	T_ASSERT(lib.n > 1000);
+	int *out = malloc((size_t) lib.n * sizeof *out), n = 0;
+	for (int i = 0; i < lib.n; i++) {
+		T_ASSERT(lib.e[i].id == i);
+		T_ASSERT(!strcmp(lib.e[i].lang, "tr") || !strcmp(lib.e[i].lang, "en") || !strcmp(lib.e[i].lang, "de"));
+		n += lib.e[i].shard >= 0;
+	}
+	T_EQ_INT(n, lib.n);
+	T_ASSERT(tarif_lib_search(&lib, "çorba", out, lib.n) > 20);
+	T_ASSERT(tarif_lib_by_ingredients(&lib, "domates yumurta", out, NULL, lib.n, &n) > 100);
+	/* a recipe of the index is in its shard */
+	char p[64];
+	snprintf(p, sizeof p, "build/tarif-lib/v1/s/%04d.txt", lib.e[lib.n - 1].shard);
+	TarifDb db;
+	T_ASSERT(tarif_load(p, &db) > 0);
+	int k = tarif_find_title(&db, lib.e[lib.n - 1].lang, lib.e[lib.n - 1].title);
+	T_ASSERT(k >= 0);
+	if (k >= 0) {
+		T_EQ_INT(tarif_lib_find_url(&lib, db.r[k].url), lib.n - 1);
+		T_ASSERT(tarif_source_rev(&db, db.r[k].url) > 0);
+	}
+	tarif_free(&db);
+	free(out);
+	tarif_lib_free(&lib);
+}
+
 int main(void)
 {
+	T_RUN(test_lib_parse);
+	T_RUN(test_lib_find);
+	T_RUN(test_lib_search);
+	T_RUN(test_lib_ingredients);
+	T_RUN(test_lib_filter);
+	T_RUN(test_shard);
+	T_RUN(test_cache_evict);
+	T_RUN(test_library_file);
 	T_RUN(test_parse);
 	T_RUN(test_fold);
 	T_RUN(test_search);

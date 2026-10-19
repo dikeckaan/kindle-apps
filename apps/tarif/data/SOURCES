@@ -1,6 +1,8 @@
 # Tarifler: source page, revision, authors and licence of every bundled recipe.
 # Licence text: https://creativecommons.org/licenses/by-sa/4.0/ — the recipes in recipes.txt are adapted from these
 # pages (markup removed, lists and steps re-arranged) and are shared under the same licence.
+# The online recipe library (kaandikec.com/kindle-apps/tarif/v1, tools/tarif/build-shards.py) lists the sources of
+# its recipes at the top of every shard file.
 https://tr.wikibooks.org/wiki/Yemek:Ahududu_re%C3%A7eli	rev 60864	Vikikitap katkıcıları	CC BY-SA 4.0
 https://tr.wikibooks.org/wiki/Yemek:Akhisar_K%C3%B6ftesi	rev 34122	Vikikitap katkıcıları	CC BY-SA 4.0
 https://tr.wikibooks.org/wiki/Yemek:Alinazik	rev 60663	Vikikitap katkıcıları	CC BY-SA 4.0

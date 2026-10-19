@@ -175,6 +175,33 @@ static void test_download_timeout(void)
 	T_ASSERT(!exists(DL));
 }
 
+static void test_user_agent(void)
+{
+	use_fake("ok");
+	char *body = NULL, args[2048];
+	int len = 0;
+	/* default agent */
+	T_EQ_INT(net_get("https://example.com/", &body, &len, 5), 0);
+	free(body);
+	read_args(args, sizeof args);
+	T_ASSERT(strstr(args, "-A\n" NET_DEFAULT_UA "\n") != NULL);
+	/* a descriptive one, for every request until reset; control characters are dropped */
+	net_set_user_agent("Tarifler/1.0 (https://example.com/; a@example.com)\r\nX: y");
+	T_EQ_INT(net_get("https://example.com/", &body, &len, 5), 0);
+	free(body);
+	read_args(args, sizeof args);
+	T_ASSERT(strstr(args, "-A\nTarifler/1.0 (https://example.com/; a@example.com)X: y\n") != NULL);
+	T_EQ_INT(net_download("https://example.com/", "build/host/ua_dl", 100, 5), 0);
+	read_args(args, sizeof args);
+	T_ASSERT(strstr(args, "-A\nTarifler/1.0") != NULL);
+	unlink("build/host/ua_dl");
+	net_set_user_agent(NULL);
+	T_EQ_INT(net_get("https://example.com/", &body, &len, 5), 0);
+	free(body);
+	read_args(args, sizeof args);
+	T_ASSERT(strstr(args, "-A\n" NET_DEFAULT_UA "\n") != NULL);
+}
+
 int main(void)
 {
 	T_RUN(test_get_returns_body);
@@ -188,5 +215,6 @@ int main(void)
 	T_RUN(test_download_renames_on_success);
 	T_RUN(test_download_failure_leaves_nothing);
 	T_RUN(test_download_timeout);
+	T_RUN(test_user_agent);
 	return T_DONE();
 }

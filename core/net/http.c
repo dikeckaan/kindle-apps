@@ -26,6 +26,17 @@ static const char *curl_path(void)
 	return curl && *curl ? curl : "/usr/bin/curl";
 }
 
+static char user_agent[200] = NET_DEFAULT_UA;
+
+void net_set_user_agent(const char *ua)
+{
+	/* printable ASCII only: the value is one argv entry, but a header must not carry control characters */
+	int o = 0;
+	for (const char *p = ua && *ua ? ua : NET_DEFAULT_UA; *p && o < (int) sizeof user_agent - 1; p++)
+		if (*p >= 0x20 && *p < 0x7f) user_agent[o++] = *p;
+	user_agent[o] = '\0';
+}
+
 /* only web URLs: anything else (an option-like "-o…", file://) never reaches curl's argv */
 static int url_ok(const char *url) { return !strncmp(url, "https://", 8) || !strncmp(url, "http://", 7); }
 
@@ -55,7 +66,7 @@ int net_get(const char *url, char **body, int *len, int timeout_s)
 		close(fds[0]);
 		close(fds[1]);
 		execl(curl, curl, "-fsSL", "--max-time", tmax, "--connect-timeout", "10", "--proto", "=http,https",
-		      "--proto-redir", "=http,https", "-A", "Mozilla/5.0 (Kindle; kindle-apps)", url, (char *) NULL);
+		      "--proto-redir", "=http,https", "-A", user_agent, url, (char *) NULL);
 		_exit(127);
 	}
 	close(fds[1]);
@@ -133,7 +144,7 @@ int net_download(const char *url, const char *path, long max_bytes, int timeout_
 		close(fds[1]);
 		close(out);
 		execl(curl, curl, "-fsSL", "--max-time", tmax, "--connect-timeout", "10", "--proto", "=http,https", "--proto-redir",
-		      "=http,https", "-A", "Mozilla/5.0 (Kindle; kindle-apps)", url, (char *) NULL);
+		      "=http,https", "-A", user_agent, url, (char *) NULL);
 		_exit(127);
 	}
 	close(fds[1]);

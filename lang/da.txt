@@ -1186,3 +1186,15 @@ Sistem servisleri, SSH ve Kindle Apps hiçbir zaman durdurulmaz.	Systemtjenester
 Arka planda program var	Et program kører i baggrunden
 Arkada açık program: %s. Ekranı ve dokunmayı kullanabilir.	Åbent i baggrunden: %s. Det kan bruge skærmen og berøring.
 Arkada açık programlar: %s. Ekranı ve dokunmayı kullanabilirler.	Åbne i baggrunden: %s. De kan bruge skærmen og berøring.
+Almanca tarif	Tysk opskrift
+Tarif kütüphanesi	Opskriftsbibliotek
+Tarif dizini indiriliyor…	Henter opskriftsregistret…
+Tarif kütüphaneden indirilemedi.\nWi-Fi bağlantısını kontrol edin.	Kunne ikke hente opskriften fra biblioteket.\nTjek Wi-Fi-forbindelsen.
+%d tarif · %d Türkçe, %d İngilizce, %d Almanca	%d opskrifter · %d på tyrkisk, %d på engelsk, %d på tysk
+Kütüphaneyi güncelle	Opdater biblioteket
+Çevrimiçi kütüphane: %d tarif (%d Türkçe, %d İngilizce, %d Almanca) · dizin: %s	Onlinebibliotek: %d opskrifter (%d på tyrkisk, %d på engelsk, %d på tysk) · register: %s
+Çevrimiçi kütüphane: henüz indirilmedi	Onlinebibliotek: ikke hentet endnu
+Anahtar gerekmez. Vikikitap, Wikibooks Cookbook ve Almanca Wikibooks Kochbuch tarifleri kaandikec.com/kindle-apps üzerinden sunulur (CC BY-SA 4.0, Wikibooks katkıcıları). Dizin bir kez indirilir ve haftada bir yenilenir; açılan tarifler en çok 5 MB çevrimdışı saklanır.	Ingen nøgle nødvendig. Opskrifter fra Vikikitap, Wikibooks Cookbook og den tyske Wikibooks Kochbuch leveres via kaandikec.com/kindle-apps (CC BY-SA 4.0, Wikibooks-bidragydere). Registret hentes én gang og fornyes hver uge; åbnede opskrifter gemmes offline (op til 5 MB).
+Dizin indirilemedi.\nWi-Fi bağlantısını kontrol edin.	Kunne ikke hente registret.\nTjek Wi-Fi-forbindelsen.
++ %d tarif çevrimiçi kütüphanede (Türkçe, İngilizce, Almanca)	+ %d opskrifter i onlinebiblioteket (tyrkisk, engelsk, tysk)
+Çevrimiçi kütüphane: Wi-Fi açıkken ilk aramada indirilir	Onlinebibliotek: hentes ved første søgning med Wi-Fi tændt

@@ -1186,3 +1186,15 @@ Sistem servisleri, SSH ve Kindle Apps hiçbir zaman durdurulmaz.	Systemdienste, 
 Arka planda program var	Ein Programm läuft im Hintergrund
 Arkada açık program: %s. Ekranı ve dokunmayı kullanabilir.	Im Hintergrund geöffnet: %s. Es kann Bildschirm und Touch-Eingaben nutzen.
 Arkada açık programlar: %s. Ekranı ve dokunmayı kullanabilirler.	Im Hintergrund geöffnet: %s. Sie können Bildschirm und Touch-Eingaben nutzen.
+Almanca tarif	Deutsches Rezept
+Tarif kütüphanesi	Rezeptbibliothek
+Tarif dizini indiriliyor…	Rezeptverzeichnis wird geladen…
+Tarif kütüphaneden indirilemedi.\nWi-Fi bağlantısını kontrol edin.	Rezept konnte nicht aus der Bibliothek geladen werden.\nWLAN-Verbindung prüfen.
+%d tarif · %d Türkçe, %d İngilizce, %d Almanca	%d Rezepte · %d Türkisch, %d Englisch, %d Deutsch
+Kütüphaneyi güncelle	Bibliothek aktualisieren
+Çevrimiçi kütüphane: %d tarif (%d Türkçe, %d İngilizce, %d Almanca) · dizin: %s	Online-Bibliothek: %d Rezepte (%d Türkisch, %d Englisch, %d Deutsch) · Verzeichnis: %s
+Çevrimiçi kütüphane: henüz indirilmedi	Online-Bibliothek: noch nicht geladen
+Anahtar gerekmez. Vikikitap, Wikibooks Cookbook ve Almanca Wikibooks Kochbuch tarifleri kaandikec.com/kindle-apps üzerinden sunulur (CC BY-SA 4.0, Wikibooks katkıcıları). Dizin bir kez indirilir ve haftada bir yenilenir; açılan tarifler en çok 5 MB çevrimdışı saklanır.	Kein Schlüssel nötig. Rezepte aus Vikikitap, dem Wikibooks Cookbook und dem deutschen Wikibooks-Kochbuch werden über kaandikec.com/kindle-apps bereitgestellt (CC BY-SA 4.0, Wikibooks-Autoren). Das Verzeichnis wird einmal geladen und wöchentlich erneuert; geöffnete Rezepte bleiben offline gespeichert (bis 5 MB).
+Dizin indirilemedi.\nWi-Fi bağlantısını kontrol edin.	Verzeichnis konnte nicht geladen werden.\nWLAN-Verbindung prüfen.
++ %d tarif çevrimiçi kütüphanede (Türkçe, İngilizce, Almanca)	+ %d Rezepte in der Online-Bibliothek (Türkisch, Englisch, Deutsch)
+Çevrimiçi kütüphane: Wi-Fi açıkken ilk aramada indirilir	Online-Bibliothek: wird bei der ersten Suche mit WLAN geladen

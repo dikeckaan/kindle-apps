@@ -1186,3 +1186,15 @@ Sistem servisleri, SSH ve Kindle Apps hiçbir zaman durdurulmaz.	Systeemdiensten
 Arka planda program var	Er draait een programma op de achtergrond
 Arkada açık program: %s. Ekranı ve dokunmayı kullanabilir.	Open op de achtergrond: %s. Het kan het scherm en aanraking gebruiken.
 Arkada açık programlar: %s. Ekranı ve dokunmayı kullanabilirler.	Open op de achtergrond: %s. Ze kunnen het scherm en aanraking gebruiken.
+Almanca tarif	Duits recept
+Tarif kütüphanesi	Receptenbibliotheek
+Tarif dizini indiriliyor…	Receptenindex downloaden…
+Tarif kütüphaneden indirilemedi.\nWi-Fi bağlantısını kontrol edin.	Kan het recept niet uit de bibliotheek downloaden.\nControleer de wifi-verbinding.
+%d tarif · %d Türkçe, %d İngilizce, %d Almanca	%d recepten · %d Turks, %d Engels, %d Duits
+Kütüphaneyi güncelle	Bibliotheek bijwerken
+Çevrimiçi kütüphane: %d tarif (%d Türkçe, %d İngilizce, %d Almanca) · dizin: %s	Online bibliotheek: %d recepten (%d Turks, %d Engels, %d Duits) · index: %s
+Çevrimiçi kütüphane: henüz indirilmedi	Online bibliotheek: nog niet gedownload
+Anahtar gerekmez. Vikikitap, Wikibooks Cookbook ve Almanca Wikibooks Kochbuch tarifleri kaandikec.com/kindle-apps üzerinden sunulur (CC BY-SA 4.0, Wikibooks katkıcıları). Dizin bir kez indirilir ve haftada bir yenilenir; açılan tarifler en çok 5 MB çevrimdışı saklanır.	Geen sleutel nodig. Recepten uit Vikikitap, het Wikibooks Cookbook en het Duitse Wikibooks-Kochbuch worden aangeboden via kaandikec.com/kindle-apps (CC BY-SA 4.0, Wikibooks-bijdragers). De index wordt één keer gedownload en wekelijks vernieuwd; geopende recepten blijven offline bewaard (tot 5 MB).
+Dizin indirilemedi.\nWi-Fi bağlantısını kontrol edin.	Kan de index niet downloaden.\nControleer de wifi-verbinding.
++ %d tarif çevrimiçi kütüphanede (Türkçe, İngilizce, Almanca)	+ %d recepten in de online bibliotheek (Turks, Engels, Duits)
+Çevrimiçi kütüphane: Wi-Fi açıkken ilk aramada indirilir	Online bibliotheek: wordt bij de eerste zoekopdracht met wifi gedownload

@@ -62,6 +62,8 @@
 # apps/tarif/main.c
 %d tarif · %d Türkçe, %d İngilizce	
 # apps/tarif/main.c
+%d tarif · %d Türkçe, %d İngilizce, %d Almanca	
+# apps/tarif/main.c
 %d tarif çevrimdışı (%d Türkçe) · Vikikitap, Wikibooks · CC BY-SA 4.0	
 # apps/bulmaca/main.c
 %d yanlış harf	
@@ -151,6 +153,8 @@
 %s öğreniyorum · ana dilim %s	
 # apps/deprem/main.c
 %s° K, %s° D	
+# apps/tarif/main.c
++ %d tarif çevrimiçi kütüphanede (Türkçe, İngilizce, Almanca)	
 # apps/weather/main.c
 + Ekle	
 # apps/ajanda/main.c
@@ -263,6 +267,8 @@ Algol
 Almak zorunlu (%d taş) · %s	
 # apps/kelime/main.c
 Almanca	
+# apps/tarif/main.c
+Almanca tarif	
 # apps/masa/dm_ui.c
 Almaya devam: sıradaki kareye dokunun	
 # apps/sky/skydata.c
@@ -285,6 +291,8 @@ Ana ekran
 Ana yemek	
 # apps/tarif/main.c
 Ana yemekler	
+# apps/tarif/main.c
+Anahtar gerekmez. Vikikitap, Wikibooks Cookbook ve Almanca Wikibooks Kochbuch tarifleri kaandikec.com/kindle-apps üzerinden sunulur (CC BY-SA 4.0, Wikibooks katkıcıları). Dizin bir kez indirilir ve haftada bir yenilenir; açılan tarifler en çok 5 MB çevrimdışı saklanır.	
 # apps/tarif/main.c
 Anahtar gir	
 # apps/tarif/main.c
@@ -643,6 +651,8 @@ Diller
 Diyanet (Türkiye)	
 # apps/vakit/main.c
 Diyanet: imsak güneş ufkun 18° altındayken, yatsı 17°. Temkin: güneş −7, öğle +5, ikindi +4, akşam +7 dk. Diyanet'in yayımladığı vakitlerle en çok 1 dk fark.	
+# apps/tarif/main.c
+Dizin indirilemedi.\nWi-Fi bağlantısını kontrol edin.	
 # apps/vakit/main.c
 Diğer	
 # apps/mines/main.c
@@ -1215,6 +1225,8 @@ Köşe matı
 Kültür	
 # apps/akis/akis.c
 Kültür ve blog (Türkçe)	
+# apps/tarif/main.c
+Kütüphaneyi güncelle	
 # apps/chess/puzzle.c
 Küçük terfi	
 # apps/sky/skydata.c
@@ -1714,6 +1726,12 @@ Tarif ara (ad ya da ülke)
 # apps/tarif/main.c
 Tarif açılamadı	
 # apps/tarif/main.c
+Tarif dizini indiriliyor…	
+# apps/tarif/main.c
+Tarif kütüphaneden indirilemedi.\nWi-Fi bağlantısını kontrol edin.	
+# apps/tarif/main.c
+Tarif kütüphanesi	
+# apps/tarif/main.c
 Tarifler	
 # apps/tarif/main.c
 Tarifler yüklenemedi.	
@@ -2097,6 +2115,12 @@ zarf
 Çevrimiçi ara	
 # apps/tarif/main.c
 Çevrimiçi aranıyor…	
+# apps/tarif/main.c
+Çevrimiçi kütüphane: %d tarif (%d Türkçe, %d İngilizce, %d Almanca) · dizin: %s	
+# apps/tarif/main.c
+Çevrimiçi kütüphane: Wi-Fi açıkken ilk aramada indirilir	
+# apps/tarif/main.c
+Çevrimiçi kütüphane: henüz indirilmedi	
 # apps/tarif/main.c
 Çevrimiçi sonuçlar	
 # apps/currency/fx.c

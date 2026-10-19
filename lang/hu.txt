@@ -1186,3 +1186,15 @@ Sistem servisleri, SSH ve Kindle Apps hiçbir zaman durdurulmaz.	A rendszerszolg
 Arka planda program var	Egy program fut a háttérben
 Arkada açık program: %s. Ekranı ve dokunmayı kullanabilir.	A háttérben nyitva: %s. Használhatja a képernyőt és az érintést.
 Arkada açık programlar: %s. Ekranı ve dokunmayı kullanabilirler.	A háttérben nyitva: %s. Használhatják a képernyőt és az érintést.
+Almanca tarif	Német recept
+Tarif kütüphanesi	Receptkönyvtár
+Tarif dizini indiriliyor…	A receptjegyzék letöltése…
+Tarif kütüphaneden indirilemedi.\nWi-Fi bağlantısını kontrol edin.	A receptet nem sikerült letölteni a könyvtárból.\nEllenőrizze a Wi-Fi-kapcsolatot.
+%d tarif · %d Türkçe, %d İngilizce, %d Almanca	%d recept · %d török, %d angol, %d német
+Kütüphaneyi güncelle	Könyvtár frissítése
+Çevrimiçi kütüphane: %d tarif (%d Türkçe, %d İngilizce, %d Almanca) · dizin: %s	Online könyvtár: %d recept (%d török, %d angol, %d német) · jegyzék: %s
+Çevrimiçi kütüphane: henüz indirilmedi	Online könyvtár: még nincs letöltve
+Anahtar gerekmez. Vikikitap, Wikibooks Cookbook ve Almanca Wikibooks Kochbuch tarifleri kaandikec.com/kindle-apps üzerinden sunulur (CC BY-SA 4.0, Wikibooks katkıcıları). Dizin bir kez indirilir ve haftada bir yenilenir; açılan tarifler en çok 5 MB çevrimdışı saklanır.	Nem kell kulcs. A Vikikitap, a Wikibooks Cookbook és a német Wikibooks Kochbuch receptjei a kaandikec.com/kindle-apps oldalról érhetők el (CC BY-SA 4.0, a Wikibooks szerkesztői). A jegyzék egyszer töltődik le, és hetente frissül; a megnyitott receptek offline is megmaradnak (legfeljebb 5 MB).
+Dizin indirilemedi.\nWi-Fi bağlantısını kontrol edin.	A jegyzéket nem sikerült letölteni.\nEllenőrizze a Wi-Fi-kapcsolatot.
++ %d tarif çevrimiçi kütüphanede (Türkçe, İngilizce, Almanca)	+ %d recept az online könyvtárban (török, angol, német)
+Çevrimiçi kütüphane: Wi-Fi açıkken ilk aramada indirilir	Online könyvtár: az első keresésnél töltődik le, ha be van kapcsolva a Wi-Fi

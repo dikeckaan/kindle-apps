@@ -1186,3 +1186,15 @@ Sistem servisleri, SSH ve Kindle Apps hiçbir zaman durdurulmaz.	Systémové slu
 Arka planda program var	Na pozadí běží program
 Arkada açık program: %s. Ekranı ve dokunmayı kullanabilir.	Otevřeno na pozadí: %s. Může používat obrazovku a dotyk.
 Arkada açık programlar: %s. Ekranı ve dokunmayı kullanabilirler.	Otevřeno na pozadí: %s. Mohou používat obrazovku a dotyk.
+Almanca tarif	Německý recept
+Tarif kütüphanesi	Knihovna receptů
+Tarif dizini indiriliyor…	Stahuje se rejstřík receptů…
+Tarif kütüphaneden indirilemedi.\nWi-Fi bağlantısını kontrol edin.	Recept se nepodařilo stáhnout z knihovny.\nZkontrolujte připojení Wi-Fi.
+%d tarif · %d Türkçe, %d İngilizce, %d Almanca	%d receptů · %d turecky, %d anglicky, %d německy
+Kütüphaneyi güncelle	Aktualizovat knihovnu
+Çevrimiçi kütüphane: %d tarif (%d Türkçe, %d İngilizce, %d Almanca) · dizin: %s	Online knihovna: %d receptů (%d turecky, %d anglicky, %d německy) · rejstřík: %s
+Çevrimiçi kütüphane: henüz indirilmedi	Online knihovna: zatím nestažena
+Anahtar gerekmez. Vikikitap, Wikibooks Cookbook ve Almanca Wikibooks Kochbuch tarifleri kaandikec.com/kindle-apps üzerinden sunulur (CC BY-SA 4.0, Wikibooks katkıcıları). Dizin bir kez indirilir ve haftada bir yenilenir; açılan tarifler en çok 5 MB çevrimdışı saklanır.	Klíč není potřeba. Recepty z Vikikitap, Wikibooks Cookbook a německé Wikibooks Kochbuch se poskytují přes kaandikec.com/kindle-apps (CC BY-SA 4.0, přispěvatelé Wikibooks). Rejstřík se stáhne jednou a obnovuje se jednou týdně; otevřené recepty zůstávají offline (až 5 MB).
+Dizin indirilemedi.\nWi-Fi bağlantısını kontrol edin.	Rejstřík se nepodařilo stáhnout.\nZkontrolujte připojení Wi-Fi.
++ %d tarif çevrimiçi kütüphanede (Türkçe, İngilizce, Almanca)	+ %d receptů v online knihovně (turecky, anglicky, německy)
+Çevrimiçi kütüphane: Wi-Fi açıkken ilk aramada indirilir	Online knihovna: stáhne se při prvním hledání se zapnutou Wi-Fi

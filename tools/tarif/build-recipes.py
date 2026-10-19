@@ -20,13 +20,13 @@ Output format (UTF-8), one recipe per "@R" line, then its lines:
 
 Usage: tools/tarif/build-recipes.py [outdir] [--cache DIR]   (needs network; --cache keeps the API answers)
 """
-import hashlib, html, json, os, re, sys, urllib.parse, urllib.request
+import os, re, sys
 
-UA = "kindle-apps-tarif/1.0 (https://github.com/dikeckaan/kindle-apps; build-recipes.py)"
-TR, EN = "tr.wikibooks.org", "en.wikibooks.org"
-LICENCE = "CC BY-SA 4.0"
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from wikirecipe import (TR, EN, LICENCE, all_pages, members, contents, parse, has_alcohol, diet_tags, tags_from, categories,  # noqa: E402
+                        record, page_url, set_cache, SKIP_CATS)
+
 PER_CUISINE = 10
-CACHE = None
 
 # English Wikibooks cuisine categories → the cuisine's Turkish name in the app
 CUISINES = {
@@ -69,186 +69,6 @@ TR_TAGS = [("çorba", "c"), ("et yemek", "a"), ("tavuk", "a"), ("balık", "a"), 
            ("hamur", "h"), ("ekmek", "h"), ("kahvaltı", "k"), ("hoşaf", "i"), ("içecek", "i"), ("sandviç", "k"), ("tost", "k"), ("omlet", "k"), ("menemen", "k"), ("cacık", "s"), ("humus", "s"), ("ezme", "s"), ("piyaz", "s"),
            ("kısır", "s"), ("turşu", "s"), ("vegan", "v"),
            ("vejetaryen", "g")]
-SKIP_CATS = ("alcoholic", "cocktail", "kokteyl", "pet recipes", "disambiguation", "alkollü")
-MEAT = ("et ", "eti", "kıyma", "kuşbaşı", "tavuk", "piliç", "hindi", "kuzu", "dana", "sucuk", "pastırma", "salam", "sosis", "ciğer",
-        "balık", "balığ", "levrek", "hamsi", "somon", "ton ", "karides", "midye", "kalamar", "işkembe", "paça", "dil ", "beyin", "et suyu", "tavuk suyu",
-        "jelatin", "beef", "pork", "chicken", "lamb", "mutton", "veal", "bacon", "ham", "sausage", "fish", "shrimp", "prawn", "anchov",
-        "tuna", "salmon", "turkey", "duck", "goat meat", "meat", "stock", "broth", "gelatin", "lard", "oyster", "crab", "squid", "mussel")
-ANIMAL = ("süt", "yoğurt", "peynir", "tereyağ", "krema", "kaymak", "yumurta", "bal", "lor", "kaşar", "beyaz peynir", "milk", "yogurt",
-          "yoghurt", "cheese", "butter", "cream", "egg", "honey", "ghee", "paneer", "mayonnaise")
-
-
-def get(host, params):
-    params = dict(params, format="json", formatversion="2")
-    url = f"https://{host}/w/api.php?" + urllib.parse.urlencode(params)
-    if CACHE:
-        p = os.path.join(CACHE, hashlib.sha1(url.encode()).hexdigest() + ".json")
-        if os.path.exists(p):
-            with open(p, encoding="utf-8") as f: return json.load(f)
-    with urllib.request.urlopen(urllib.request.Request(url, headers={"User-Agent": UA}), timeout=90) as r:
-        data = json.load(r)
-    if CACHE:
-        with open(p, "w", encoding="utf-8") as f: json.dump(data, f)
-    return data
-
-
-def all_pages(host, ns):
-    out, cont = [], {}
-    while True:
-        d = get(host, dict(action="query", list="allpages", apnamespace=ns, aplimit=500, apfilterredir="nonredirects", **cont))
-        out += [p["title"] for p in d["query"]["allpages"]]
-        if "continue" not in d: return out
-        cont = {"apcontinue": d["continue"]["apcontinue"]}
-
-
-def members(host, cat):
-    out, cont = [], {}
-    while True:
-        d = get(host, dict(action="query", list="categorymembers", cmtitle=cat, cmlimit=500, cmnamespace=102 if host == EN else 100, **cont))
-        out += [m["title"] for m in d["query"]["categorymembers"]]
-        if "continue" not in d: return out
-        cont = {"cmcontinue": d["continue"]["cmcontinue"]}
-
-
-def contents(host, titles):
-    """title → (revid, wikitext) for existing pages, 40 titles per request"""
-    res = {}
-    for i in range(0, len(titles), 40):
-        d = get(host, dict(action="query", prop="revisions", rvprop="ids|content", rvslots="main", titles="|".join(titles[i:i + 40])))
-        for p in d["query"]["pages"]:
-            if "revisions" in p:
-                rv = p["revisions"][0]
-                res[p["title"]] = (rv["revid"], rv["slots"]["main"]["content"])
-    return res
-
-
-# ---- wikitext cleaning (the app's tarif_wiki_parse does the same for pages fetched online) ----
-
-def strip_templates(s):
-    out, depth, i = [], 0, 0
-    while i < len(s):
-        if s.startswith("{{", i): depth += 1; i += 2; continue
-        if s.startswith("}}", i) and depth: depth -= 1; i += 2; continue
-        if not depth: out.append(s[i])
-        i += 1
-    return "".join(out)
-
-
-def clean(s):
-    s = re.sub(r"<ref[^>/]*/>", "", s)
-    s = re.sub(r"<ref[^>]*>.*?</ref>", "", s, flags=re.S)
-    s = re.sub(r"<!--.*?-->", "", s, flags=re.S)
-    s = re.sub(r"\[\[(?:File|Image|Dosya|Resim|Category|Kategori):[^\[\]]*(?:\[\[[^\]]*\]\][^\[\]]*)*\]\]", "", s, flags=re.I)
-    s = re.sub(r"\[\[[^\]|]*\|([^\]]*)\]\]", r"\1", s)
-    s = re.sub(r"\[\[([^\]]*)\]\]", lambda m: m.group(1).split(":")[-1], s)
-    s = re.sub(r"\[https?://\S+ ([^\]]*)\]", r"\1", s)
-    s = re.sub(r"\[https?://\S+\]", "", s)
-    s = re.sub(r"'{2,}", "", s)
-    s = re.sub(r"__[A-Za-z]+__", "", s)
-    s = re.sub(r"<br\s*/?>", " ", s)
-    s = re.sub(r"<[^>]+>", "", s)
-    s = html.unescape(s).replace(" ", " ").replace("\t", " ")
-    return re.sub(r"\s+", " ", s).strip()
-
-
-ING_RE = re.compile(r"malzeme|gerekli|ihtiya|ingredient", re.I)
-STEP_RE = re.compile(r"hazırlan|yapılış|yapımı|tarif|pişir|procedure|direction|method|preparation|instruction|steps", re.I)
-
-
-def parse(text):
-    """→ (intro, [('+'|'-', text)], [steps], servings) from a recipe page's wikitext"""
-    text = re.sub(r"\{\|.*?\|\}", "", text, flags=re.S)  # tables
-    serv = 0
-    m = re.search(r"servings\s*=\s*(\d+)", text) or re.search(r"(\d+)\s*kişilik", text) or re.search(r"[Ss]erves (\d+)", text)
-    if m and 0 < int(m.group(1)) <= 30: serv = int(m.group(1))
-    text = strip_templates(text)
-    intro, ings, steps, sect = [], [], [], "intro"
-    for line in text.split("\n"):
-        h = re.match(r"^(={2,})\s*(.*?)\s*\1\s*$", line.strip())
-        if h:
-            title, level = clean(h.group(2)), len(h.group(1))
-            if ING_RE.search(title) and (level == 2 or sect != "ing"): sect = "ing"
-            elif STEP_RE.search(title) and (level == 2 or sect != "step"): sect = "step"
-            elif sect == "ing" and level > 2: ings.append(("+", title.rstrip(":")))
-            elif level == 2 or sect != "ing": sect = "other"
-            continue
-        raw = line.strip()
-        if not raw: continue
-        bullet = re.match(r"^([*#:;]+)\s*(.*)$", raw)
-        body = clean(bullet.group(2) if bullet else raw)
-        if not body: continue
-        if sect == "intro" and (body.startswith(("<", "|")) or "listesine dön" in body): continue
-        if sect == "intro" and not bullet and len(" ".join(intro)) < 400: intro.append(body)
-        elif sect == "ing":
-            if bullet: ings.append(("-", body))
-            elif re.match(r"^\d+\s*kişilik:?$|^serves", body, re.I): continue
-            elif body.endswith(":") and len(body) < 60: ings.append(("+", body.rstrip(":")))
-            else: ings += [("-", p.strip()) for p in re.split(r",\s*(?![^()]*\))", body) if p.strip()]
-        elif sect == "step":
-            if bullet: steps.append(body)
-            else: steps += split_paragraph(body)
-    ings = [(k, v.rstrip(",;. ")[:300]) for k, v in ings if len(v.rstrip(",;. ")) > 1]
-    return " ".join(intro)[:500], ings, [s[:1200] for s in steps if len(s) > 2], serv
-
-
-def split_paragraph(p):
-    """a long method paragraph → steps of about two sentences (one per screen in cooking mode)"""
-    if len(p) < 320: return [p]
-    sents = re.split(r"(?<=[.!?])\s+(?=[A-ZÇĞİÖŞÜ0-9])", p)
-    out, cur = [], ""
-    for s in sents:
-        if cur and len(cur) + len(s) > 280: out.append(cur); cur = s
-        else: cur = (cur + " " + s).strip()
-    if cur: out.append(cur)
-    return out
-
-
-def tr_lower(s):
-    return s.replace("İ", "i").replace("I", "ı").lower()
-
-
-ALCOHOL = ("aperol", "prosecco", "votka", "vodka", " rom ", " rum", " cin ", " gin", "şarap", "wine", "bira", "beer", "likör", "liqueur",
-           "rakı", "whisk", "viski", "tekila", "tequila", "brandy", "konyak", "cognac", "champagne", "şampanya", "vermut", "vermouth",
-           "bourbon", "sake", "kahlua", "cointreau", "triple sec", "sherry", "port wine", "marsala", "cider")
-
-
-def has_alcohol(ings):
-    words = " " + " ".join(tr_lower(v) for k, v in ings if k == "-") + " "
-    return any(w in words for w in ALCOHOL)
-
-
-def diet_tags(ings, cats_tags, steps):
-    words = " " + " ".join(tr_lower(v) for k, v in ings if k == "-") + " "
-    t = ""
-    meat = any(w in words or w in " " + tr_lower(" ".join(steps)) for w in MEAT)
-    if "v" in cats_tags or (not meat and not any(re.search(r"(?<![a-zçğıöşü])" + re.escape(w), words) for w in ANIMAL)): t += "vg"
-    elif "g" in cats_tags or not meat: t += "g"
-    return t
-
-
-def tags_from(cats, table):
-    t = ""
-    for c in cats:
-        for key, tag in table:
-            if key.lower() in c.lower() and tag not in t: t += tag
-    return t
-
-
-def categories(text):
-    return [c.strip() for c in re.findall(r"\[\[\s*(?:Category|Kategori)\s*:\s*([^\]|]+)", text, flags=re.I)]
-
-
-def record(lang, title, cuisine, tags, serv, url, intro, ings, steps):
-    t = "".join(sorted(set(tags), key="catshkivg".index))
-    out = [f"@R\t{lang}\t{title}\t{cuisine}\t{t}\t{serv}\t{url}\t{LICENCE}"]
-    if intro: out.append("=" + intro)
-    out += [k + v for k, v in ings]
-    out += ["*" + s for s in steps]
-    return "\n".join(out)
-
-
-def page_url(host, title):
-    return f"https://{host}/wiki/" + urllib.parse.quote(title.replace(" ", "_"), safe=":/(),'")
 
 
 def build_tr():
@@ -304,11 +124,9 @@ def build_en():
 
 
 def main():
-    global CACHE
     args = sys.argv[1:]
     if "--cache" in args:
-        i = args.index("--cache"); CACHE = args[i + 1]; del args[i:i + 2]
-        os.makedirs(CACHE, exist_ok=True)
+        i = args.index("--cache"); set_cache(args[i + 1]); del args[i:i + 2]
     out = args[0] if args else "apps/tarif/data"
     os.makedirs(out, exist_ok=True)
     tr, tr_src = build_tr()
@@ -321,7 +139,9 @@ def main():
     with open(os.path.join(out, "SOURCES"), "w", encoding="utf-8") as f:
         f.write("# Tarifler: source page, revision, authors and licence of every bundled recipe.\n"
                 "# Licence text: https://creativecommons.org/licenses/by-sa/4.0/ — the recipes in recipes.txt are adapted from these\n"
-                "# pages (markup removed, lists and steps re-arranged) and are shared under the same licence.\n")
+                "# pages (markup removed, lists and steps re-arranged) and are shared under the same licence.\n"
+                "# The online recipe library (kaandikec.com/kindle-apps/tarif/v1, tools/tarif/build-shards.py) lists the sources of\n"
+                "# its recipes at the top of every shard file.\n")
         f.write("\n".join(tr_src + en_src) + "\n")
     print(f"{len(tr)} Turkish-language recipes, {len(en)} English-language recipes")
 

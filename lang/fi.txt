@@ -1186,3 +1186,15 @@ Sistem servisleri, SSH ve Kindle Apps hiçbir zaman durdurulmaz.	Järjestelmäpa
 Arka planda program var	Taustalla on ohjelma käynnissä
 Arkada açık program: %s. Ekranı ve dokunmayı kullanabilir.	Auki taustalla: %s. Se voi käyttää näyttöä ja kosketusta.
 Arkada açık programlar: %s. Ekranı ve dokunmayı kullanabilirler.	Auki taustalla: %s. Ne voivat käyttää näyttöä ja kosketusta.
+Almanca tarif	Saksankielinen resepti
+Tarif kütüphanesi	Reseptikirjasto
+Tarif dizini indiriliyor…	Ladataan reseptihakemistoa…
+Tarif kütüphaneden indirilemedi.\nWi-Fi bağlantısını kontrol edin.	Reseptiä ei voitu ladata kirjastosta.\nTarkista Wi-Fi-yhteys.
+%d tarif · %d Türkçe, %d İngilizce, %d Almanca	%d reseptiä · %d turkiksi, %d englanniksi, %d saksaksi
+Kütüphaneyi güncelle	Päivitä kirjasto
+Çevrimiçi kütüphane: %d tarif (%d Türkçe, %d İngilizce, %d Almanca) · dizin: %s	Verkkokirjasto: %d reseptiä (%d turkiksi, %d englanniksi, %d saksaksi) · hakemisto: %s
+Çevrimiçi kütüphane: henüz indirilmedi	Verkkokirjasto: ei vielä ladattu
+Anahtar gerekmez. Vikikitap, Wikibooks Cookbook ve Almanca Wikibooks Kochbuch tarifleri kaandikec.com/kindle-apps üzerinden sunulur (CC BY-SA 4.0, Wikibooks katkıcıları). Dizin bir kez indirilir ve haftada bir yenilenir; açılan tarifler en çok 5 MB çevrimdışı saklanır.	Avainta ei tarvita. Vikikitapin, Wikibooks Cookbookin ja saksankielisen Wikibooks Kochbuchin reseptit tarjotaan osoitteesta kaandikec.com/kindle-apps (CC BY-SA 4.0, Wikibooksin kirjoittajat). Hakemisto ladataan kerran ja päivitetään viikoittain; avatut reseptit säilyvät offline-käytössä (enintään 5 Mt).
+Dizin indirilemedi.\nWi-Fi bağlantısını kontrol edin.	Hakemistoa ei voitu ladata.\nTarkista Wi-Fi-yhteys.
++ %d tarif çevrimiçi kütüphanede (Türkçe, İngilizce, Almanca)	+ %d reseptiä verkkokirjastossa (turkki, englanti, saksa)
+Çevrimiçi kütüphane: Wi-Fi açıkken ilk aramada indirilir	Verkkokirjasto: ladataan ensimmäisessä haussa, kun Wi-Fi on päällä
