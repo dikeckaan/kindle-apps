@@ -11,15 +11,21 @@ if [ "$(id -u)" != "0" ]; then
 fi
 
 # Run from RAM copies: an update replaces files on /mnt/us (fuse), which does not keep a replaced file alive for
-# a shell still reading this script or for the hub binary still running.
+# a shell still reading this script or for a binary still running. The copies live in a directory only root can
+# write to, so nothing can be swapped in between copy and exec.
+RAM=/tmp/kui-bin
+mkdir -m 700 "$RAM" 2>/dev/null
+RAM_OK=0
+[ -d "$RAM" ] && [ ! -h "$RAM" ] && [ "$(stat -c %u:%a "$RAM" 2>/dev/null)" = "0:700" ] && RAM_OK=1
 case "$0" in
-    /tmp/kui-run.*) ;;
-    *) S=/tmp/kui-run.$$.sh; cp -f "$0" "$S" 2>/dev/null && exec /bin/sh "$S" "$APP_ID" "$@" ;;
+    "$RAM"/run.*) ;;
+    *) if [ "$RAM_OK" = 1 ]; then
+           S="$RAM/run.$$.sh"; rm -f "$S" && cp "$0" "$S" 2>/dev/null && exec /bin/sh "$S" "$APP_ID" "$@"
+       fi ;;
 esac
-if [ "$APP_ID" = hub ] && [ -f "$1" ]; then
-    cp -f "$1" /tmp/kui-hub.new && chmod +x /tmp/kui-hub.new && mv -f /tmp/kui-hub.new /tmp/kui-hub && { shift; set -- /tmp/kui-hub "$@"; }
-elif [ -f "$1" ]; then # an app started directly (KUAL): also from RAM, so an update cannot SIGBUS it
-    cp -f "$1" /tmp/kui-app-direct.new && chmod +x /tmp/kui-app-direct.new && mv -f /tmp/kui-app-direct.new /tmp/kui-app-direct && { shift; set -- /tmp/kui-app-direct "$@"; }
+if [ "$RAM_OK" = 1 ] && [ -f "$1" ]; then
+    B=app-direct; [ "$APP_ID" = hub ] && B=hub
+    rm -f "$RAM/$B.new" && cp "$1" "$RAM/$B.new" && chmod 700 "$RAM/$B.new" && mv -f "$RAM/$B.new" "$RAM/$B" && { shift; set -- "$RAM/$B" "$@"; }
 fi
 
 export KUI_ROOT="${KUI_ROOT:-/mnt/us/kindle-apps}"
@@ -34,7 +40,7 @@ if ! mkdir "$LOCK" 2>/dev/null; then
     owner=$(cat "$LOCK/pid" 2>/dev/null)
     if [ -n "$owner" ] && kill -0 "$owner" 2>/dev/null; then
         echo "kui-run: already running (pid $owner)" >&2
-        case "$0" in /tmp/kui-run.*) rm -f "$0" ;; esac
+        case "$0" in "$RAM"/run.*) rm -f "$0" ;; esac
         exit 3
     fi
     rm -rf "$LOCK" && mkdir "$LOCK" || exit 3
@@ -78,7 +84,7 @@ restore() {
     lipc-set-prop com.lab126.pillow disableEnablePillow enable 2>/dev/null
     lipc-set-prop com.lab126.appmgrd start app://com.lab126.booklet.home 2>/dev/null
     rm -rf "$LOCK"
-    case "$0" in /tmp/kui-run.*) rm -f "$0" ;; esac
+    case "$0" in "$RAM"/run.*) rm -f "$0" ;; esac
 }
 trap restore EXIT
 trap 'exit 130' INT TERM HUP

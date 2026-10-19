@@ -6,6 +6,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <sys/stat.h>
 #include <sys/wait.h>
 #include <unistd.h>
 #include "appreg.h"
@@ -225,12 +226,27 @@ static void settings(void)
 	}
 }
 
-/* copies the app's binary to RAM: an update overwrites files on /mnt/us (fuse), and a running program whose binary is
- * replaced there dies with SIGBUS (seen: Satranç while the packages were reinstalled). NULL when the copy fails. */
-static const char *ram_copy(const char *exe)
+#define RAM_DIR "/tmp/kui-bin"
+
+/* RAM_DIR: ours alone (root-owned, 0700, not a link), so nobody else can swap a file in it between copy and exec */
+static int ram_dir_ok(void)
 {
-	static const char *dst = "/tmp/kui-app", *tmp = "/tmp/kui-app.new";
-	int in = open(exe, O_RDONLY), out = in < 0 ? -1 : open(tmp, O_WRONLY | O_CREAT | O_TRUNC, 0755);
+	struct stat st;
+	mkdir(RAM_DIR, 0700);
+	return lstat(RAM_DIR, &st) == 0 && S_ISDIR(st.st_mode) && st.st_uid == geteuid() && (st.st_mode & 077) == 0;
+}
+
+/* copies a binary to RAM_DIR/<name>: an update overwrites files on /mnt/us (fuse), and a running program whose binary
+ * is replaced there dies with SIGBUS (seen: Satranç while the packages were reinstalled). NULL when it cannot. */
+static const char *ram_copy(const char *exe, const char *name)
+{
+	static char dst[96];
+	char tmp[104];
+	if (!ram_dir_ok()) return NULL;
+	snprintf(dst, sizeof dst, "%s/%s", RAM_DIR, name);
+	snprintf(tmp, sizeof tmp, "%s.new", dst);
+	unlink(tmp);
+	int in = open(exe, O_RDONLY), out = in < 0 ? -1 : open(tmp, O_WRONLY | O_CREAT | O_EXCL | O_NOFOLLOW, 0700);
 	char buf[65536];
 	ssize_t n = 0;
 	while (out >= 0 && (n = read(in, buf, sizeof buf)) > 0)
@@ -261,7 +277,7 @@ static int run_app(const HubApp *a)
 			dup2(fd, 2);
 			close(fd);
 		}
-		const char *ram = ram_copy(a->exec);
+		const char *ram = ram_copy(a->exec, "app");
 		execl(ram ? ram : a->exec, a->exec, (char *) NULL); /* argv[0] stays the installed path */
 		_exit(127);
 	}
@@ -338,9 +354,8 @@ int main(void)
 					kui_quit();
 					/* run the new hub from a RAM copy (as kui-run.sh does): /mnt/us (fuse) does not keep a
 					 * replaced file alive for the process still running it */
-					execl("/bin/sh", "sh", "-c",
-					      "cp -f \"$1\" /tmp/kui-hub.new && chmod +x /tmp/kui-hub.new && mv -f /tmp/kui-hub.new /tmp/kui-hub && "
-					      "exec /tmp/kui-hub; exec \"$1\"", "sh", self, (char *) NULL);
+					const char *ram = ram_copy(self, "hub");
+					execl(ram ? ram : self, self, (char *) NULL);
 					return 1; /* kui-run.sh restores the Kindle UI */
 				}
 				scan();
