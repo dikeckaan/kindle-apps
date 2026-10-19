@@ -1162,3 +1162,27 @@ Seri: %d gün · %ld XP · bugün %d/%d	Stime: %d dage · %ld XP · i dag %d/%d
 Kaynak: Vikisözlük (CC BY-SA), Tatoeba (CC BY), CEFR-J; seviyeler sıklığa göre	Kilder: Wiktionary (CC BY-SA), Tatoeba (CC BY), CEFR-J; niveauer efter hyppighed
 Kelime listeleri yüklenemedi.	Ordlisterne kunne ikke indlæses.
 %d / %d öğrenildi	%d / %d lært
+Görev Yöneticisi	Jobliste
+Arka planda çalışan programlar	Programmer, der kører i baggrunden
+Arka planda başka program yok.	Ingen andre programmer i baggrunden.
+%d MB · %s açık	%d MB · har kørt i %s
+%s açık	har kørt i %s
+Boş bellek: %d MB	Ledig hukommelse: %d MB
+Boş bellek: %d MB → %d MB	Ledig hukommelse: %d MB → %d MB
+Boş bellek: bilinmiyor	Ledig hukommelse: ukendt
+Hepsini durdur	Stop alle
+Durdur	Stop
+Durdurulacak: %s.\nSistem servisleri, SSH ve Kindle Apps açık kalır.	Stoppes: %s.\nSystemtjenester, SSH og Kindle Apps bliver ved med at køre.
+Kapatılıyor: %s…	Lukker: %s…
+%s kapatılamadı.	%s kunne ikke lukkes.
+Korunanları göster (%d)	Vis beskyttede (%d)
+◀ Programlara dön	◀ Tilbage til programmerne
+Korunanlar: hiçbir zaman durdurulmaz	Beskyttede: stoppes aldrig
+Korunan üçüncü taraf program yok.	Ingen beskyttede tredjepartsprogrammer.
+korunuyor	beskyttet
+Paket yöneticisi (kpm)	Pakkehåndtering (kpm)
+Jailbreak aracı	Jailbreak-værktøj
+Sistem servisleri, SSH ve Kindle Apps hiçbir zaman durdurulmaz.	Systemtjenester, SSH og Kindle Apps stoppes aldrig.
+Arka planda program var	Et program kører i baggrunden
+Arkada açık program: %s. Ekranı ve dokunmayı kullanabilir.	Åbent i baggrunden: %s. Det kan bruge skærmen og berøring.
+Arkada açık programlar: %s. Ekranı ve dokunmayı kullanabilirler.	Åbne i baggrunden: %s. De kan bruge skærmen og berøring.

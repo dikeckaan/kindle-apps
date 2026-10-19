@@ -1162,3 +1162,27 @@ Seri: %d gün · %ld XP · bugün %d/%d	Σερί: %d ημέρες · %ld XP · �
 Kaynak: Vikisözlük (CC BY-SA), Tatoeba (CC BY), CEFR-J; seviyeler sıklığa göre	Πηγές: Βικιλεξικό (CC BY-SA), Tatoeba (CC BY), CEFR-J· επίπεδα κατά συχνότητα
 Kelime listeleri yüklenemedi.	Δεν ήταν δυνατή η φόρτωση των λιστών λέξεων.
 %d / %d öğrenildi	%d / %d μαθημένες
+Görev Yöneticisi	Διαχείριση εργασιών
+Arka planda çalışan programlar	Προγράμματα στο παρασκήνιο
+Arka planda başka program yok.	Κανένα άλλο πρόγραμμα στο παρασκήνιο.
+%d MB · %s açık	%d MB · σε λειτουργία %s
+%s açık	σε λειτουργία %s
+Boş bellek: %d MB	Ελεύθερη μνήμη: %d MB
+Boş bellek: %d MB → %d MB	Ελεύθερη μνήμη: %d MB → %d MB
+Boş bellek: bilinmiyor	Ελεύθερη μνήμη: άγνωστη
+Hepsini durdur	Διακοπή όλων
+Durdur	Διακοπή
+Durdurulacak: %s.\nSistem servisleri, SSH ve Kindle Apps açık kalır.	Θα σταματήσουν: %s.\nΟι υπηρεσίες συστήματος, το SSH και τα Kindle Apps συνεχίζουν.
+Kapatılıyor: %s…	Κλείσιμο: %s…
+%s kapatılamadı.	Δεν ήταν δυνατό το κλείσιμο: %s.
+Korunanları göster (%d)	Εμφάνιση προστατευμένων (%d)
+◀ Programlara dön	◀ Πίσω στα προγράμματα
+Korunanlar: hiçbir zaman durdurulmaz	Προστατευμένα: δεν σταματούν ποτέ
+Korunan üçüncü taraf program yok.	Κανένα προστατευμένο πρόγραμμα τρίτων.
+korunuyor	προστατεύεται
+Paket yöneticisi (kpm)	Διαχείριση πακέτων (kpm)
+Jailbreak aracı	Εργαλείο jailbreak
+Sistem servisleri, SSH ve Kindle Apps hiçbir zaman durdurulmaz.	Οι υπηρεσίες συστήματος, το SSH και τα Kindle Apps δεν σταματούν ποτέ.
+Arka planda program var	Ένα πρόγραμμα τρέχει στο παρασκήνιο
+Arkada açık program: %s. Ekranı ve dokunmayı kullanabilir.	Ανοιχτό στο παρασκήνιο: %s. Μπορεί να χρησιμοποιεί την οθόνη και την αφή.
+Arkada açık programlar: %s. Ekranı ve dokunmayı kullanabilirler.	Ανοιχτά στο παρασκήνιο: %s. Μπορεί να χρησιμοποιούν την οθόνη και την αφή.

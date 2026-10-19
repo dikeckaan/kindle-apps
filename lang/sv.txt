@@ -1162,3 +1162,27 @@ Seri: %d gün · %ld XP · bugün %d/%d	Svit: %d dagar · %ld XP · i dag %d/%d
 Kaynak: Vikisözlük (CC BY-SA), Tatoeba (CC BY), CEFR-J; seviyeler sıklığa göre	Källor: Wiktionary (CC BY-SA), Tatoeba (CC BY), CEFR-J; nivåer efter frekvens
 Kelime listeleri yüklenemedi.	Ordlistorna kunde inte läsas in.
 %d / %d öğrenildi	%d / %d inlärda
+Görev Yöneticisi	Aktivitetshanteraren
+Arka planda çalışan programlar	Program som körs i bakgrunden
+Arka planda başka program yok.	Inga andra program i bakgrunden.
+%d MB · %s açık	%d MB · har körts i %s
+%s açık	har körts i %s
+Boş bellek: %d MB	Ledigt minne: %d MB
+Boş bellek: %d MB → %d MB	Ledigt minne: %d MB → %d MB
+Boş bellek: bilinmiyor	Ledigt minne: okänt
+Hepsini durdur	Stoppa alla
+Durdur	Stoppa
+Durdurulacak: %s.\nSistem servisleri, SSH ve Kindle Apps açık kalır.	Stoppas: %s.\nSystemtjänster, SSH och Kindle Apps fortsätter att köras.
+Kapatılıyor: %s…	Stänger: %s…
+%s kapatılamadı.	%s kunde inte stängas.
+Korunanları göster (%d)	Visa skyddade (%d)
+◀ Programlara dön	◀ Tillbaka till programmen
+Korunanlar: hiçbir zaman durdurulmaz	Skyddade: stoppas aldrig
+Korunan üçüncü taraf program yok.	Inga skyddade tredjepartsprogram.
+korunuyor	skyddad
+Paket yöneticisi (kpm)	Pakethanterare (kpm)
+Jailbreak aracı	Jailbreak-verktyg
+Sistem servisleri, SSH ve Kindle Apps hiçbir zaman durdurulmaz.	Systemtjänster, SSH och Kindle Apps stoppas aldrig.
+Arka planda program var	Ett program körs i bakgrunden
+Arkada açık program: %s. Ekranı ve dokunmayı kullanabilir.	Öppet i bakgrunden: %s. Det kan använda skärmen och pekfunktionen.
+Arkada açık programlar: %s. Ekranı ve dokunmayı kullanabilirler.	Öppna i bakgrunden: %s. De kan använda skärmen och pekfunktionen.

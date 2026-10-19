@@ -9,6 +9,7 @@
 #include <sys/wait.h>
 #include <unistd.h>
 #include "appreg.h"
+#include "guard.h"
 #include "kui.h"
 #include "upd_ui.h"
 
@@ -35,7 +36,7 @@ static void scan(void)
 	n_apps = hub_scan_apps(root(), apps, MAX_APPS - 1);
 	hub_apply_order(root(), apps, n_apps); /* the user's order from Dikeç Store → Sırala */
 	if (kui_simple()) { /* Basit mod: the technical apps (and the store) stay out of the way */
-		static const char *const hidden[] = { "ssh", "firewall", "sysinfo", "sleep", "upload" };
+		static const char *const hidden[] = { "ssh", "firewall", "sysinfo", "sleep", "upload", "gorev" };
 		int k = 0;
 		for (int i = 0; i < n_apps; i++) {
 			int hide = 0;
@@ -263,6 +264,7 @@ int main(void)
 	kui_battery_max_age(5 * 60);
 	scan();
 	draw();
+	if (hub_guard(draw)) draw(); /* a background program (KUAL game, KOReader) would draw over us */
 	for (;;) {
 		/* every 30 s while on screen: Wi-Fi (and the battery, read every 5 min); nothing behind the screensaver */
 		KuiEvent e = kui_next_event(kui_input_asleep() ? -1 : 30000);
@@ -334,6 +336,7 @@ int main(void)
 			scan();
 			if (page >= pages()) page = pages() - 1;
 			draw();
+			if (hub_guard(draw)) draw();
 			if (st != 0 && !(WIFSIGNALED(st) && WTERMSIG(st) == SIGTERM)) {
 				char msg[96];
 				snprintf(msg, sizeof msg, T("%s beklenmedik şekilde kapandı"), T(apps[k].name));

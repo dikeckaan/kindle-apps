@@ -28,6 +28,7 @@ Kitaplıkta tek bir **"Uygulamalar"** girişi olur; açınca bütün uygulamalar
 | Bulmaca (Türkçe çengel bulmaca: her gün yeni bulmaca + arşiv, harf aç, kelime/bulmaca kontrolü, istatistik; ipuçları Vikisözlük'ten) | ✅ |
 | Solitaire (Klondike, 1 / 3 kart çekme, geri al) | ✅ |
 | Sistem Bilgisi (pil, depolama, bellek, Wi-Fi, sürüm, güvenlik) | ✅ |
+| Görev Yöneticisi (arka planda kalan KUAL oyunları, KOReader, kterm: bellek, süre, tek tek ya da hepsini kapat; sistem servisleri, SSH ve Kindle Apps korunur) | ✅ |
 | Wi-Fi ile Yükle (tarayıcıdan PIN'li kitap gönderme) | ✅ |
 | E-Kitap (Project Gutenberg'den telifsiz kitap arama ve indirme, AZW3/EPUB) | ✅ |
 | Masa Oyunları (Reversi, Türk daması, Go 9×9/13×13: Kindle'a karşı 3 zorluk ya da iki kişilik) | ✅ |
@@ -39,7 +40,8 @@ Kitaplıkta tek bir **"Uygulamalar"** girişi olur; açınca bütün uygulamalar
 
 - Jailbreak'li, **kindlehf** (FW ≥ 5.16.3) bir Kindle; KMC araçları ve `kpm` kurulu
   (bkz. [kindlemodding.org](https://kindlemodding.org)). Kindle Basic 11. nesil (FW 5.19.2) üzerinde test edildi.
-- Uygulamalar açılırken **KOReader kapalı olmalı** (dokunmatik ekranı o kullanır).
+- Uygulamalar açılırken **KOReader kapalı olmalı** (dokunmatik ekranı o kullanır). Arkada ekranı kullanan bir program
+  (KOReader, KUAL oyunu, kterm) açık kalmışsa Uygulamalar bunu söyler ve kapatmayı önerir.
 
 ## Kurulum
 

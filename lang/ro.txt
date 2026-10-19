@@ -1162,3 +1162,27 @@ Seri: %d gün · %ld XP · bugün %d/%d	Serie: %d zile · %ld XP · azi %d/%d
 Kaynak: Vikisözlük (CC BY-SA), Tatoeba (CC BY), CEFR-J; seviyeler sıklığa göre	Surse: Wikționar (CC BY-SA), Tatoeba (CC BY), CEFR-J; niveluri după frecvență
 Kelime listeleri yüklenemedi.	Listele de cuvinte nu au putut fi încărcate.
 %d / %d öğrenildi	%d / %d învățate
+Görev Yöneticisi	Manager de activități
+Arka planda çalışan programlar	Programe care rulează în fundal
+Arka planda başka program yok.	Niciun alt program în fundal.
+%d MB · %s açık	%d MB · rulează de %s
+%s açık	rulează de %s
+Boş bellek: %d MB	Memorie liberă: %d MB
+Boş bellek: %d MB → %d MB	Memorie liberă: %d MB → %d MB
+Boş bellek: bilinmiyor	Memorie liberă: necunoscută
+Hepsini durdur	Oprește tot
+Durdur	Oprește
+Durdurulacak: %s.\nSistem servisleri, SSH ve Kindle Apps açık kalır.	Vor fi oprite: %s.\nServiciile de sistem, SSH și Kindle Apps rămân pornite.
+Kapatılıyor: %s…	Se închide: %s…
+%s kapatılamadı.	%s nu a putut fi închis.
+Korunanları göster (%d)	Arată cele protejate (%d)
+◀ Programlara dön	◀ Înapoi la programe
+Korunanlar: hiçbir zaman durdurulmaz	Protejate: nu se opresc niciodată
+Korunan üçüncü taraf program yok.	Niciun program terț protejat.
+korunuyor	protejat
+Paket yöneticisi (kpm)	Manager de pachete (kpm)
+Jailbreak aracı	Unealtă de jailbreak
+Sistem servisleri, SSH ve Kindle Apps hiçbir zaman durdurulmaz.	Serviciile de sistem, SSH și Kindle Apps nu se opresc niciodată.
+Arka planda program var	Un program rulează în fundal
+Arkada açık program: %s. Ekranı ve dokunmayı kullanabilir.	Deschis în fundal: %s. Poate folosi ecranul și atingerea.
+Arkada açık programlar: %s. Ekranı ve dokunmayı kullanabilirler.	Deschise în fundal: %s. Pot folosi ecranul și atingerea.

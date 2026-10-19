@@ -1162,3 +1162,27 @@ Seri: %d gün · %ld XP · bugün %d/%d	Série : %d jours · %ld XP · aujourd'h
 Kaynak: Vikisözlük (CC BY-SA), Tatoeba (CC BY), CEFR-J; seviyeler sıklığa göre	Sources : Wiktionnaire (CC BY-SA), Tatoeba (CC BY), CEFR-J ; niveaux selon la fréquence
 Kelime listeleri yüklenemedi.	Les listes de mots n'ont pas pu être chargées.
 %d / %d öğrenildi	%d / %d appris
+Görev Yöneticisi	Gestionnaire des tâches
+Arka planda çalışan programlar	Programmes en arrière-plan
+Arka planda başka program yok.	Aucun autre programme en arrière-plan.
+%d MB · %s açık	%d Mo · actif depuis %s
+%s açık	actif depuis %s
+Boş bellek: %d MB	Mémoire libre : %d Mo
+Boş bellek: %d MB → %d MB	Mémoire libre : %d Mo → %d Mo
+Boş bellek: bilinmiyor	Mémoire libre : inconnue
+Hepsini durdur	Tout arrêter
+Durdur	Arrêter
+Durdurulacak: %s.\nSistem servisleri, SSH ve Kindle Apps açık kalır.	Seront arrêtés : %s.\nLes services système, SSH et Kindle Apps restent actifs.
+Kapatılıyor: %s…	Fermeture : %s…
+%s kapatılamadı.	Impossible de fermer %s.
+Korunanları göster (%d)	Afficher les protégés (%d)
+◀ Programlara dön	◀ Retour aux programmes
+Korunanlar: hiçbir zaman durdurulmaz	Protégés : jamais arrêtés
+Korunan üçüncü taraf program yok.	Aucun programme tiers protégé.
+korunuyor	protégé
+Paket yöneticisi (kpm)	Gestionnaire de paquets (kpm)
+Jailbreak aracı	Outil de jailbreak
+Sistem servisleri, SSH ve Kindle Apps hiçbir zaman durdurulmaz.	Les services système, SSH et Kindle Apps ne sont jamais arrêtés.
+Arka planda program var	Un programme tourne en arrière-plan
+Arkada açık program: %s. Ekranı ve dokunmayı kullanabilir.	Ouvert en arrière-plan : %s. Il peut utiliser l'écran et le tactile.
+Arkada açık programlar: %s. Ekranı ve dokunmayı kullanabilirler.	Ouverts en arrière-plan : %s. Ils peuvent utiliser l'écran et le tactile.

@@ -65,6 +65,12 @@ restore() {
     if [ -f /etc/upstart/statusbar.conf ] && ! status statusbar 2>/dev/null | grep -q running; then
         start statusbar >/dev/null 2>&1
     fi
+    # Görev Yöneticisi / the hub guard stopped a program whose launcher had stopped the framework (KOReader's
+    # STOP_FRAMEWORK) and could not bring it back itself: start it now that our app is gone.
+    if [ -f "$LOCK/start_gui" ] && [ -f /etc/upstart/lab126_gui.conf ] && status lab126_gui 2>/dev/null | grep -q 'stop/'; then
+        echo "=== $(date) restore $APP_ID: starting the framework (lab126_gui)" >> "$LOG"
+        start lab126_gui >/dev/null 2>&1
+    fi
     echo "=== $(date) restore $APP_ID (paused_statusbar=$PAUSED_STATUSBAR, now: $(status statusbar 2>/dev/null))" >> "$LOG"
     killall -CONT awesome 2>/dev/null
     lipc-set-prop com.lab126.pillow disableEnablePillow enable 2>/dev/null

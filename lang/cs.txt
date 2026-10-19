@@ -1162,3 +1162,27 @@ Seri: %d gün · %ld XP · bugün %d/%d	Série: %d dní · %ld XP · dnes %d/%d
 Kaynak: Vikisözlük (CC BY-SA), Tatoeba (CC BY), CEFR-J; seviyeler sıklığa göre	Zdroje: Wikislovník (CC BY-SA), Tatoeba (CC BY), CEFR-J; úrovně podle četnosti
 Kelime listeleri yüklenemedi.	Seznamy slov se nepodařilo načíst.
 %d / %d öğrenildi	%d / %d naučeno
+Görev Yöneticisi	Správce úloh
+Arka planda çalışan programlar	Programy běžící na pozadí
+Arka planda başka program yok.	Na pozadí neběží žádné jiné programy.
+%d MB · %s açık	%d MB · běží %s
+%s açık	běží %s
+Boş bellek: %d MB	Volná paměť: %d MB
+Boş bellek: %d MB → %d MB	Volná paměť: %d MB → %d MB
+Boş bellek: bilinmiyor	Volná paměť: neznámá
+Hepsini durdur	Zastavit vše
+Durdur	Zastavit
+Durdurulacak: %s.\nSistem servisleri, SSH ve Kindle Apps açık kalır.	Zastaví se: %s.\nSystémové služby, SSH a Kindle Apps poběží dál.
+Kapatılıyor: %s…	Zavírání: %s…
+%s kapatılamadı.	%s se nepodařilo zavřít.
+Korunanları göster (%d)	Zobrazit chráněné (%d)
+◀ Programlara dön	◀ Zpět na programy
+Korunanlar: hiçbir zaman durdurulmaz	Chráněné: nikdy se nezastaví
+Korunan üçüncü taraf program yok.	Žádné chráněné programy třetích stran.
+korunuyor	chráněno
+Paket yöneticisi (kpm)	Správce balíčků (kpm)
+Jailbreak aracı	Nástroj jailbreaku
+Sistem servisleri, SSH ve Kindle Apps hiçbir zaman durdurulmaz.	Systémové služby, SSH a Kindle Apps se nikdy nezastaví.
+Arka planda program var	Na pozadí běží program
+Arkada açık program: %s. Ekranı ve dokunmayı kullanabilir.	Otevřeno na pozadí: %s. Může používat obrazovku a dotyk.
+Arkada açık programlar: %s. Ekranı ve dokunmayı kullanabilirler.	Otevřeno na pozadí: %s. Mohou používat obrazovku a dotyk.

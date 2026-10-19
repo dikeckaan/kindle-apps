@@ -1162,3 +1162,27 @@ Seri: %d gün · %ld XP · bugün %d/%d	Putki: %d päivää · %ld XP · tänä�
 Kaynak: Vikisözlük (CC BY-SA), Tatoeba (CC BY), CEFR-J; seviyeler sıklığa göre	Lähteet: Wikisanakirja (CC BY-SA), Tatoeba (CC BY), CEFR-J; tasot yleisyyden mukaan
 Kelime listeleri yüklenemedi.	Sanalistoja ei voitu ladata.
 %d / %d öğrenildi	%d / %d opittu
+Görev Yöneticisi	Tehtävienhallinta
+Arka planda çalışan programlar	Taustalla käynnissä olevat ohjelmat
+Arka planda başka program yok.	Taustalla ei ole muita ohjelmia.
+%d MB · %s açık	%d Mt · käynnissä %s
+%s açık	käynnissä %s
+Boş bellek: %d MB	Vapaa muisti: %d Mt
+Boş bellek: %d MB → %d MB	Vapaa muisti: %d Mt → %d Mt
+Boş bellek: bilinmiyor	Vapaa muisti: tuntematon
+Hepsini durdur	Pysäytä kaikki
+Durdur	Pysäytä
+Durdurulacak: %s.\nSistem servisleri, SSH ve Kindle Apps açık kalır.	Pysäytetään: %s.\nJärjestelmäpalvelut, SSH ja Kindle Apps jäävät käyntiin.
+Kapatılıyor: %s…	Suljetaan: %s…
+%s kapatılamadı.	Ohjelmaa %s ei voitu sulkea.
+Korunanları göster (%d)	Näytä suojatut (%d)
+◀ Programlara dön	◀ Takaisin ohjelmiin
+Korunanlar: hiçbir zaman durdurulmaz	Suojatut: ei koskaan pysäytetä
+Korunan üçüncü taraf program yok.	Ei suojattuja kolmannen osapuolen ohjelmia.
+korunuyor	suojattu
+Paket yöneticisi (kpm)	Paketinhallinta (kpm)
+Jailbreak aracı	Jailbreak-työkalu
+Sistem servisleri, SSH ve Kindle Apps hiçbir zaman durdurulmaz.	Järjestelmäpalveluita, SSH:ta ja Kindle Appsia ei koskaan pysäytetä.
+Arka planda program var	Taustalla on ohjelma käynnissä
+Arkada açık program: %s. Ekranı ve dokunmayı kullanabilir.	Auki taustalla: %s. Se voi käyttää näyttöä ja kosketusta.
+Arkada açık programlar: %s. Ekranı ve dokunmayı kullanabilirler.	Auki taustalla: %s. Ne voivat käyttää näyttöä ja kosketusta.

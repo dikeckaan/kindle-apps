@@ -1162,3 +1162,27 @@ Seri: %d gün · %ld XP · bugün %d/%d	Серія: %d дн. · %ld XP · сьо
 Kaynak: Vikisözlük (CC BY-SA), Tatoeba (CC BY), CEFR-J; seviyeler sıklığa göre	Джерела: Вікісловник (CC BY-SA), Tatoeba (CC BY), CEFR-J; рівні за частотністю
 Kelime listeleri yüklenemedi.	Не вдалося завантажити списки слів.
 %d / %d öğrenildi	%d / %d вивчено
+Görev Yöneticisi	Диспетчер завдань
+Arka planda çalışan programlar	Програми у фоні
+Arka planda başka program yok.	Інших програм у фоні немає.
+%d MB · %s açık	%d МБ · працює %s
+%s açık	працює %s
+Boş bellek: %d MB	Вільна пам'ять: %d МБ
+Boş bellek: %d MB → %d MB	Вільна пам'ять: %d МБ → %d МБ
+Boş bellek: bilinmiyor	Вільна пам'ять: невідомо
+Hepsini durdur	Зупинити всі
+Durdur	Зупинити
+Durdurulacak: %s.\nSistem servisleri, SSH ve Kindle Apps açık kalır.	Буде зупинено: %s.\nСистемні служби, SSH і Kindle Apps працюватимуть далі.
+Kapatılıyor: %s…	Закриття: %s…
+%s kapatılamadı.	Не вдалося закрити: %s.
+Korunanları göster (%d)	Показати захищені (%d)
+◀ Programlara dön	◀ Назад до програм
+Korunanlar: hiçbir zaman durdurulmaz	Захищені: ніколи не зупиняються
+Korunan üçüncü taraf program yok.	Немає захищених сторонніх програм.
+korunuyor	захищено
+Paket yöneticisi (kpm)	Менеджер пакетів (kpm)
+Jailbreak aracı	Інструмент джейлбрейку
+Sistem servisleri, SSH ve Kindle Apps hiçbir zaman durdurulmaz.	Системні служби, SSH і Kindle Apps ніколи не зупиняються.
+Arka planda program var	У фоні працює програма
+Arkada açık program: %s. Ekranı ve dokunmayı kullanabilir.	Відкрито у фоні: %s. Може використовувати екран і дотики.
+Arkada açık programlar: %s. Ekranı ve dokunmayı kullanabilirler.	Відкриті у фоні: %s. Можуть використовувати екран і дотики.

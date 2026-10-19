@@ -1162,3 +1162,27 @@ Seri: %d gün · %ld XP · bugün %d/%d	Seriya: %d gün · %ld XP · bu gün %d/
 Kaynak: Vikisözlük (CC BY-SA), Tatoeba (CC BY), CEFR-J; seviyeler sıklığa göre	Mənbə: Vikilüğət (CC BY-SA), Tatoeba (CC BY), CEFR-J; səviyyələr tezliyə görə
 Kelime listeleri yüklenemedi.	Söz siyahıları yüklənmədi.
 %d / %d öğrenildi	%d / %d öyrənildi
+Görev Yöneticisi	Tapşırıq meneceri
+Arka planda çalışan programlar	Arxa planda işləyən proqramlar
+Arka planda başka program yok.	Arxa planda başqa proqram yoxdur.
+%d MB · %s açık	%d MB · %s açıqdır
+%s açık	%s açıqdır
+Boş bellek: %d MB	Boş yaddaş: %d MB
+Boş bellek: %d MB → %d MB	Boş yaddaş: %d MB → %d MB
+Boş bellek: bilinmiyor	Boş yaddaş: naməlum
+Hepsini durdur	Hamısını dayandır
+Durdur	Dayandır
+Durdurulacak: %s.\nSistem servisleri, SSH ve Kindle Apps açık kalır.	Dayandırılacaq: %s.\nSistem xidmətləri, SSH və Kindle Apps açıq qalır.
+Kapatılıyor: %s…	Bağlanır: %s…
+%s kapatılamadı.	%s bağlana bilmədi.
+Korunanları göster (%d)	Qorunanları göstər (%d)
+◀ Programlara dön	◀ Proqramlara qayıt
+Korunanlar: hiçbir zaman durdurulmaz	Qorunanlar: heç vaxt dayandırılmır
+Korunan üçüncü taraf program yok.	Qorunan üçüncü tərəf proqramı yoxdur.
+korunuyor	qorunur
+Paket yöneticisi (kpm)	Paket meneceri (kpm)
+Jailbreak aracı	Jailbreak aləti
+Sistem servisleri, SSH ve Kindle Apps hiçbir zaman durdurulmaz.	Sistem xidmətləri, SSH və Kindle Apps heç vaxt dayandırılmır.
+Arka planda program var	Arxa planda proqram var
+Arkada açık program: %s. Ekranı ve dokunmayı kullanabilir.	Arxada açıq proqram: %s. Ekrandan və toxunuşdan istifadə edə bilər.
+Arkada açık programlar: %s. Ekranı ve dokunmayı kullanabilirler.	Arxada açıq proqramlar: %s. Ekrandan və toxunuşdan istifadə edə bilərlər.

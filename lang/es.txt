@@ -1162,3 +1162,27 @@ Seri: %d gün · %ld XP · bugün %d/%d	Racha: %d días · %ld XP · hoy %d/%d
 Kaynak: Vikisözlük (CC BY-SA), Tatoeba (CC BY), CEFR-J; seviyeler sıklığa göre	Fuentes: Wikcionario (CC BY-SA), Tatoeba (CC BY), CEFR-J; niveles por frecuencia
 Kelime listeleri yüklenemedi.	No se pudieron cargar las listas de palabras.
 %d / %d öğrenildi	%d / %d aprendidas
+Görev Yöneticisi	Administrador de tareas
+Arka planda çalışan programlar	Programas en segundo plano
+Arka planda başka program yok.	No hay otros programas en segundo plano.
+%d MB · %s açık	%d MB · activo desde hace %s
+%s açık	activo desde hace %s
+Boş bellek: %d MB	Memoria libre: %d MB
+Boş bellek: %d MB → %d MB	Memoria libre: %d MB → %d MB
+Boş bellek: bilinmiyor	Memoria libre: desconocida
+Hepsini durdur	Detener todo
+Durdur	Detener
+Durdurulacak: %s.\nSistem servisleri, SSH ve Kindle Apps açık kalır.	Se detendrán: %s.\nLos servicios del sistema, SSH y Kindle Apps siguen en marcha.
+Kapatılıyor: %s…	Cerrando: %s…
+%s kapatılamadı.	No se pudo cerrar %s.
+Korunanları göster (%d)	Mostrar protegidos (%d)
+◀ Programlara dön	◀ Volver a los programas
+Korunanlar: hiçbir zaman durdurulmaz	Protegidos: nunca se detienen
+Korunan üçüncü taraf program yok.	No hay programas de terceros protegidos.
+korunuyor	protegido
+Paket yöneticisi (kpm)	Gestor de paquetes (kpm)
+Jailbreak aracı	Herramienta de jailbreak
+Sistem servisleri, SSH ve Kindle Apps hiçbir zaman durdurulmaz.	Los servicios del sistema, SSH y Kindle Apps nunca se detienen.
+Arka planda program var	Hay un programa en segundo plano
+Arkada açık program: %s. Ekranı ve dokunmayı kullanabilir.	Abierto en segundo plano: %s. Puede usar la pantalla y el tacto.
+Arkada açık programlar: %s. Ekranı ve dokunmayı kullanabilirler.	Abiertos en segundo plano: %s. Pueden usar la pantalla y el tacto.
