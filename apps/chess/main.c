@@ -31,7 +31,7 @@ static KuiButton buttons[4];
 static int n_buttons;
 static int review = -1;   /* inceleme: the plies of the position shown (0..game.n); -1 = playing */
 static Board review_pos;
-static char strip_drawn[400];
+static char strip_drawn[420];
 static char sans[GAME_MAX_PLIES][HIST_SAN_MAX];
 static int selected = -1, last_from = -1, last_to = -1;
 static int drawn[64]; /* look of each square as drawn; -1 = unknown */

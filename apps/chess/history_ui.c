@@ -119,7 +119,7 @@ static void save_pgn(void)
 {
 	static char buf[24576];
 	const char *root = getenv("KUI_ROOT");
-	char dir[300], path[400], name[64], date[16], white[96], black[96], msg[300];
+	char dir[300], path[400], name[64], date[40], white[96], black[96], msg[300];
 	snprintf(dir, sizeof dir, "%s", root && *root ? root : "/mnt/us/kindle-apps");
 	char *slash = strrchr(dir, '/');
 	if (slash && slash != dir) *slash = '\0';
