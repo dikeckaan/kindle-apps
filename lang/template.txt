@@ -445,6 +445,8 @@ Başka taş seçmek için ona dokunun
 Başla	
 # apps/kelime/main.c
 Başlangıç	
+# apps/chess/main.c
+Başlangıç konumu	
 # apps/kelime/main.c
 Başlangıç seviyen	
 # apps/notlar/main.c
@@ -465,7 +467,7 @@ Berabere
 Berat Kandili	
 # apps/sky/skydata.c
 Betelgöz	
-# apps/chess/main.c
+# apps/chess/history_ui.c
 Beyaz	
 # apps/masa/dm_ui.c
 Beyaz %d – Siyah %d	
@@ -991,8 +993,12 @@ Haberler alınamadı.\nWi-Fi bağlantısını kontrol edin.
 Hafta %d · Gün %d	
 # apps/masa/main.c
 Hamle %d / %d	
+# apps/chess/history_ui.c
+Hamle geçmişi	
 # apps/masa/go.c
 Hamle nasıl yapılır?	
+# apps/chess/main.c
+Hamleler burada görünecek	
 # apps/chess/puzzle_ui.c
 Hamlenizi yapın · Seri: %d	
 # apps/tarif/main.c
@@ -1053,6 +1059,8 @@ Henüz bitmedi
 Henüz favori tarif yok.\nBir tarifte ☆ düğmesine dokunun.	
 # apps/siir/main.c
 Henüz favori şiir yok.\nBir şiirde ☆ düğmesine dokunun.	
+# apps/chess/history_ui.c
+Henüz hamle yok.	
 # apps/ebooks/main.c
 Henüz kitap indirilmedi.	
 # apps/notlar/main.c
@@ -1383,7 +1391,7 @@ Kıble saati %s: Güneş o an tam kıble yönündedir.
 Kırlangıç matı	
 # apps/kelime/main.c
 Kısa seviye testi: her seviyeden 5 kelime	
-# apps/deprem/main.c
+# apps/chess/main.c
 Liste	
 # apps/odak/main.c
 MOLA	
@@ -1507,13 +1515,15 @@ Otomatik tamamla
 Oturum bitti	
 # apps/wordle/main.c
 Oynanan	
+# apps/chess/history_ui.c
+Oyun PGN olarak kaydedildi:\ndocuments/Satranc\n%s	
 # apps/chess/main.c
 Oyun bitti	
 # apps/chess/puzzle.c
 Oyun ortası	
 # apps/chess/puzzle.c
 Oyun sonu	
-# apps/masa/go_ui.c
+# apps/chess/main.c
 Oyuna dön	
 # apps/masa/go_ui.c
 Oyunu bırakıp teslim olunsun mu?	
@@ -1523,6 +1533,10 @@ Oyunun sonu
 Oyunun sonu ve sayım	
 # apps/sky/skydata.c
 Oğlak	
+# apps/chess/history_ui.c
+PGN kaydedilemedi.	
+# apps/chess/history_ui.c
+PGN olarak kaydet	
 # apps/gorev/main.c
 Paket yöneticisi (kpm)	
 # apps/sky/main.c
@@ -1689,7 +1703,7 @@ Sayfa %d
 Sayfa %d / %d	
 # apps/notlar/main.c
 Sayfa %d / %d · %d çizgi	
-# apps/deprem/main.c
+# apps/chess/history_ui.c
 Sayfa %d/%d	
 # apps/notlar/main.c
 Sayfa resim olarak kaydedildi:\ndocuments/Notlar\n%s	
@@ -1741,7 +1755,7 @@ Sisli
 Sistem Bilgisi	
 # apps/gorev/main.c
 Sistem servisleri, SSH ve Kindle Apps hiçbir zaman durdurulmaz.	
-# apps/chess/main.c
+# apps/chess/history_ui.c
 Siyah	
 # apps/masa/rv_ui.c
 Siyah %d – Beyaz %d	
@@ -1797,6 +1811,8 @@ Siyah oynar
 Siyah ve Beyaz sırayla boş noktalara taş koyar; Siyah başlar. Konan taş bir daha yerinden oynamaz. Amaç, taşlarınızla tahtanın rakibinizden daha büyük bir bölümünü çevirmektir.	
 # apps/masa/reversi.c
 Siyah ve Beyaz sırayla tahtaya taş koyar; Siyah başlar. Oyun bitince tahtada daha çok taşı olan kazanır. Başlangıçta ortada ikişer taş vardır.	
+# apps/chess/history_ui.c
+Siz	
 # apps/game2048/main.c
 Skor	
 # apps/game2048/main.c
@@ -2035,6 +2051,8 @@ Tüm uygulamalar güncel
 Tümü	
 # apps/akis/main.c
 Tümü okundu	
+# apps/chess/main.c
+Tümü ›	
 # core/hub/upd_ui.c
 Tümünü güncelle	
 # apps/akis/main.c
@@ -2279,6 +2297,8 @@ az önce
 bağlaç	
 # apps/sysinfo/main.c
 bağlı değil	
+# apps/chess/main.c
+başlangıç	
 # apps/kelime/main.c
 belirleyici	
 # apps/masa/dm_ui.c
@@ -2525,6 +2545,8 @@ zarf
 İmsakiye	
 # apps/notlar/main.c
 İnce	
+# apps/chess/main.c
+İnceleme: %s (%d/%d)	
 # apps/ebooks/main.c
 İndir	
 # apps/ebooks/main.c

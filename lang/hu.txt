@@ -1349,3 +1349,14 @@ Anahtar gerekmez. Vikikitap, Wikibooks Cookbook ve Almanca Wikibooks Kochbuch ta
 Dizin indirilemedi.\nWi-Fi bağlantısını kontrol edin.	A jegyzéket nem sikerült letölteni.\nEllenőrizze a Wi-Fi-kapcsolatot.
 + %d tarif çevrimiçi kütüphanede (Türkçe, İngilizce, Almanca)	+ %d recept az online könyvtárban (török, angol, német)
 Çevrimiçi kütüphane: Wi-Fi açıkken ilk aramada indirilir	Online könyvtár: az első keresésnél töltődik le, ha be van kapcsolva a Wi-Fi
+Henüz hamle yok.	Még nincs lépés.
+Hamle geçmişi	Lépéstörténet
+PGN olarak kaydet	Mentés PGN-ként
+Siz	Ön
+Oyun PGN olarak kaydedildi:\ndocuments/Satranc\n%s	A játszma PGN-ként mentve:\ndocuments/Satranc\n%s
+PGN kaydedilemedi.	A PGN mentése nem sikerült.
+başlangıç	kezdet
+İnceleme: %s (%d/%d)	Visszanézés: %s (%d/%d)
+Başlangıç konumu	Kiinduló állás
+Hamleler burada görünecek	Itt jelennek meg a lépések
+Tümü ›	Mind ›

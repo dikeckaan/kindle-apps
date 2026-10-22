@@ -1349,3 +1349,14 @@ Anahtar gerekmez. Vikikitap, Wikibooks Cookbook ve Almanca Wikibooks Kochbuch ta
 Dizin indirilemedi.\nWi-Fi bağlantısını kontrol edin.	Indexul nu a putut fi descărcat.\nVerificați conexiunea Wi-Fi.
 + %d tarif çevrimiçi kütüphanede (Türkçe, İngilizce, Almanca)	+ %d rețete în biblioteca online (turcă, engleză, germană)
 Çevrimiçi kütüphane: Wi-Fi açıkken ilk aramada indirilir	Bibliotecă online: se descarcă la prima căutare cu Wi-Fi pornit
+Henüz hamle yok.	Încă nicio mutare.
+Hamle geçmişi	Istoricul mutărilor
+PGN olarak kaydet	Salvează ca PGN
+Siz	Dvs.
+Oyun PGN olarak kaydedildi:\ndocuments/Satranc\n%s	Partida a fost salvată ca PGN:\ndocuments/Satranc\n%s
+PGN kaydedilemedi.	PGN-ul nu a putut fi salvat.
+başlangıç	început
+İnceleme: %s (%d/%d)	Revizuire: %s (%d/%d)
+Başlangıç konumu	Poziția inițială
+Hamleler burada görünecek	Mutările vor apărea aici
+Tümü ›	Toate ›

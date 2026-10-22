@@ -1349,3 +1349,14 @@ Anahtar gerekmez. Vikikitap, Wikibooks Cookbook ve Almanca Wikibooks Kochbuch ta
 Dizin indirilemedi.\nWi-Fi bağlantısını kontrol edin.	Hakemistoa ei voitu ladata.\nTarkista Wi-Fi-yhteys.
 + %d tarif çevrimiçi kütüphanede (Türkçe, İngilizce, Almanca)	+ %d reseptiä verkkokirjastossa (turkki, englanti, saksa)
 Çevrimiçi kütüphane: Wi-Fi açıkken ilk aramada indirilir	Verkkokirjasto: ladataan ensimmäisessä haussa, kun Wi-Fi on päällä
+Henüz hamle yok.	Ei vielä siirtoja.
+Hamle geçmişi	Siirtohistoria
+PGN olarak kaydet	Tallenna PGN-muodossa
+Siz	Sinä
+Oyun PGN olarak kaydedildi:\ndocuments/Satranc\n%s	Peli tallennettu PGN-muodossa:\ndocuments/Satranc\n%s
+PGN kaydedilemedi.	PGN:n tallennus epäonnistui.
+başlangıç	alku
+İnceleme: %s (%d/%d)	Tarkastelu: %s (%d/%d)
+Başlangıç konumu	Alkuasema
+Hamleler burada görünecek	Siirrot näkyvät tässä
+Tümü ›	Kaikki ›

@@ -1349,3 +1349,14 @@ Anahtar gerekmez. Vikikitap, Wikibooks Cookbook ve Almanca Wikibooks Kochbuch ta
 Dizin indirilemedi.\nWi-Fi bağlantısını kontrol edin.	Nie udało się pobrać indeksu.\nSprawdź połączenie Wi-Fi.
 + %d tarif çevrimiçi kütüphanede (Türkçe, İngilizce, Almanca)	+ %d przepisów w bibliotece online (turecki, angielski, niemiecki)
 Çevrimiçi kütüphane: Wi-Fi açıkken ilk aramada indirilir	Biblioteka online: pobierana przy pierwszym wyszukiwaniu z włączonym Wi-Fi
+Henüz hamle yok.	Brak ruchów.
+Hamle geçmişi	Historia ruchów
+PGN olarak kaydet	Zapisz jako PGN
+Siz	Ty
+Oyun PGN olarak kaydedildi:\ndocuments/Satranc\n%s	Partię zapisano jako PGN:\ndocuments/Satranc\n%s
+PGN kaydedilemedi.	Nie udało się zapisać PGN.
+başlangıç	początek
+İnceleme: %s (%d/%d)	Przegląd: %s (%d/%d)
+Başlangıç konumu	Pozycja początkowa
+Hamleler burada görünecek	Tu pojawią się ruchy
+Tümü ›	Wszystkie ›

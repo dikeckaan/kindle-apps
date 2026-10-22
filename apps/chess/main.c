@@ -1,11 +1,16 @@
 /* Chess for Kindle: single player against Stockfish (6 levels), two players on one device, or Lichess puzzles
- * (Bulmacalar, puzzle_ui.c). Each square remembers what was last drawn on it; after a move only squares whose look changed are redrawn. */
+ * (Bulmacalar, puzzle_ui.c). Each square remembers what was last drawn on it; after a move only squares whose look changed are redrawn.
+ * Under the status line a strip shows the latest moves in figurine SAN (♞f3: the same in every language, and no clash
+ * between letters such as K = king / Kale); a tap on it opens Hamle geçmişi (history_ui.c). A move tapped there is
+ * shown on this board read-only ("inceleme"), stepped with ◀ ▶ or swipes, until "Oyuna dön". */
 #include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
 #include "chess_game.h"
+#include "history.h"
+#include "history_ui.h"
 #include "kui.h"
 #include "levels.h"
 #include "puzzle_ui.h"
@@ -14,15 +19,20 @@
 #define SQ 128
 #define ENGINE_TIMEOUT_MS 10000
 
-enum { BTN_UNDO = 1, BTN_NEW };
+enum { BTN_UNDO = 1, BTN_NEW, BTN_PREV, BTN_NEXT, BTN_LIST, BTN_BACK };
 
 static Game game;
 static Uci engine;
 static int engine_ok, thinking, view_flip, over;
 static long think_started;
 static char save_path[300], engine_path[300];
-static KuiRect board_r, status_r;
-static KuiButton buttons[2];
+static KuiRect board_r, status_r, strip_r;
+static KuiButton buttons[4];
+static int n_buttons;
+static int review = -1;   /* inceleme: the plies of the position shown (0..game.n); -1 = playing */
+static Board review_pos;
+static char strip_drawn[400];
+static char sans[GAME_MAX_PLIES][HIST_SAN_MAX];
 static int selected = -1, last_from = -1, last_to = -1;
 static int drawn[64]; /* look of each square as drawn; -1 = unknown */
 static char status_drawn[160];
@@ -36,9 +46,12 @@ static long now_ms(void)
 
 /* ---- geometry ---- */
 
+/* the position on the board: the game, or the reviewed one */
+static const Board *shown(void) { return review >= 0 ? &review_pos : &game.pos; }
+
 static int bottom_side(void)
 {
-	int s = game.mode == 1 ? game.human_side : (game.flip ? game.pos.side : 0);
+	int s = game.mode == 1 ? game.human_side : (game.flip && review < 0 ? game.pos.side : 0);
 	return view_flip ? !s : s;
 }
 
@@ -84,7 +97,7 @@ static int show_hints = 1;
 
 static int is_target(int sq)
 {
-	if (selected < 0 || !show_hints) return 0;
+	if (selected < 0 || review >= 0 || !show_hints) return 0;
 	Move ms[CHESS_MAX_MOVES];
 	int n = chess_legal_moves(&game.pos, ms);
 	for (int i = 0; i < n; i++)
@@ -93,7 +106,7 @@ static int is_target(int sq)
 }
 
 /* piece | selected<<5 | target<<6 | last-move<<7 | bottom-side<<8 encodes everything that affects a square's look */
-static int square_look(int sq) { return game.pos.sq[sq] | (sq == selected) << 5 | is_target(sq) << 6 | (sq == last_from || sq == last_to) << 7 | bottom_side() << 8; }
+static int square_look(int sq) { return shown()->sq[sq] | (sq == selected) << 5 | is_target(sq) << 6 | (sq == last_from || sq == last_to) << 7 | bottom_side() << 8; }
 
 static void draw_square(int sq)
 {
@@ -101,7 +114,7 @@ static void draw_square(int sq)
 	int dark = ((sq & 7) + (sq >> 3)) % 2 == 0;
 	kui_fill(r, dark ? 0xBB : 0xFF);
 	if (sq == last_from || sq == last_to) kui_frame((KuiRect){ r.x + 4, r.y + 4, r.w - 8, r.h - 8 }, 3, 0x55);
-	int p = game.pos.sq[sq];
+	int p = shown()->sq[sq];
 	if (p != EMPTY) {
 		int c = chess_piece_color(p), t = c ? p - 6 : p;
 		if (c == 0) kui_text_on(r, glyph_solid[t], KUI_FONT_REG, 104, KUI_ALIGN_CENTER, 0xFF, dark ? 0xBB : 0xFF); /* white body */
@@ -116,8 +129,24 @@ static void draw_square(int sq)
 	drawn[sq] = square_look(sq);
 }
 
+/* "12. ♞f3" or "12… ♞c6" for ply i */
+static void move_label(int i, char *out, int cap)
+{
+	char fig[HIST_SAN_MAX];
+	san_figurine(sans[i], fig, sizeof fig);
+	snprintf(out, (size_t) cap, history_is_black(&game, i) ? "%d… %s" : "%d. %s", history_move_no(&game, i), fig);
+}
+
 static void status_text(char *out, int cap)
 {
+	if (review >= 0) {
+		char mv[48];
+		history_sans(&game, sans);
+		if (review == 0) snprintf(mv, sizeof mv, "%s", T("başlangıç"));
+		else move_label(review - 1, mv, sizeof mv);
+		snprintf(out, (size_t) cap, T("İnceleme: %s (%d/%d)"), mv, review, game.n);
+		return;
+	}
 	Result res = game_result(&game);
 	const char *color = game.pos.side ? T("Siyah") : T("Beyaz");
 	if (res != RES_ONGOING) snprintf(out, (size_t) cap, "%s", T(result_text(res, game.pos.side)));
@@ -137,12 +166,63 @@ static void draw_status(int force)
 	snprintf(status_drawn, sizeof status_drawn, "%s", s);
 }
 
+/* the moves [from, upto) as one line: "… 12. ♞f3 ♞c6 13. e4" */
+static int strip_line(int from, int upto, char *out, int cap)
+{
+	int o = snprintf(out, (size_t) cap, "%s", from > 0 ? "… " : "");
+	for (int i = from; i < upto && o < cap; i++) {
+		char fig[HIST_SAN_MAX];
+		san_figurine(sans[i], fig, sizeof fig);
+		if (!history_is_black(&game, i)) o += snprintf(out + o, (size_t) (cap - o), "%d. ", history_move_no(&game, i));
+		else if (i == from) o += snprintf(out + o, (size_t) (cap - o), "%d… ", history_move_no(&game, i));
+		if (o < cap) o += snprintf(out + o, (size_t) (cap - o), i + 1 < upto ? "%s " : "%s", fig);
+	}
+	return o < cap ? o : cap - 1;
+}
+
+#define STRIP_PX 42
+#define STRIP_MORE_W 150
+
+/* the latest moves up to the shown position; in review the last one (the reviewed move) is underlined */
+static void draw_strip(int force)
+{
+	char s[400], key[420];
+	int upto = review >= 0 ? review : game.n, maxw = strip_r.w - 32 - STRIP_MORE_W;
+	history_sans(&game, sans);
+	int from = upto;
+	while (from > 0) {
+		strip_line(from - 1, upto, s, sizeof s);
+		if (kui_text_width(s, KUI_FONT_REG, STRIP_PX) > maxw) break;
+		from--;
+	}
+	if (from > 0 && from < upto - 1 && history_is_black(&game, from)) from++; /* start with a full move */
+	if (upto == 0) snprintf(s, sizeof s, "%s", review >= 0 ? T("Başlangıç konumu") : T("Hamleler burada görünecek"));
+	else strip_line(from, upto, s, sizeof s);
+	snprintf(key, sizeof key, "%d|%s", review >= 0, s);
+	if (!force && strcmp(key, strip_drawn) == 0) return;
+	snprintf(strip_drawn, sizeof strip_drawn, "%s", key);
+	kui_fill(strip_r, 255);
+	kui_frame(strip_r, 2, 0x88);
+	KuiRect tr = { strip_r.x + 16, strip_r.y, maxw, strip_r.h };
+	kui_text(tr, s, KUI_FONT_REG, STRIP_PX, KUI_ALIGN_LEFT, upto ? 0 : 0x55);
+	if (review > 0) {
+		char fig[HIST_SAN_MAX];
+		san_figurine(sans[review - 1], fig, sizeof fig);
+		int fw = kui_text_width(fig, KUI_FONT_REG, STRIP_PX), sw = kui_text_width(s, KUI_FONT_REG, STRIP_PX);
+		kui_fill((KuiRect){ tr.x + sw - fw, strip_r.y + strip_r.h - 12, fw, 4 }, 0);
+	}
+	KuiRect more = { strip_r.x + strip_r.w - STRIP_MORE_W - 16, strip_r.y, STRIP_MORE_W, strip_r.h };
+	kui_text(more, T("Tümü ›"), KUI_FONT_BOLD, kui_fit_px(T("Tümü ›"), KUI_FONT_BOLD, 36, STRIP_MORE_W), KUI_ALIGN_RIGHT, 0);
+	kui_mark_dirty(strip_r);
+}
+
 /* redraw only squares whose look changed */
 static void update_board(void)
 {
 	for (int sq = 0; sq < 64; sq++)
 		if (drawn[sq] != square_look(sq)) draw_square(sq);
 	draw_status(0);
+	draw_strip(0);
 	kui_flush(0);
 }
 
@@ -153,13 +233,25 @@ static void draw_all(void)
 	kui_topbar(T("Satranç"), T("Menü"));
 	board_r = (KuiRect){ (w - 8 * SQ) / 2, KUI_TOPBAR_H + 30, 8 * SQ, 8 * SQ };
 	kui_frame((KuiRect){ board_r.x - 4, board_r.y - 4, board_r.w + 8, board_r.h + 8 }, 4, 0);
-	status_r = (KuiRect){ 20, board_r.y + board_r.h + 14, w - 40, 80 };
-	int by = h - 24 - 120, bw = (w - 3 * 40) / 2;
-	buttons[0] = (KuiButton){ { 40, by, bw, 120 }, T("Geri al"), BTN_UNDO };
-	buttons[1] = (KuiButton){ { 80 + bw, by, bw, 120 }, T("Yeni oyun"), BTN_NEW };
-	for (int i = 0; i < 2; i++) kui_button(&buttons[i], 0);
+	status_r = (KuiRect){ 20, board_r.y + board_r.h + 10, w - 40, 60 };
+	strip_r = (KuiRect){ 24, status_r.y + status_r.h + 4, w - 48, 66 };
+	int by = h - 20 - 104;
+	if (review < 0) {
+		int bw = (w - 3 * 40) / 2;
+		buttons[0] = (KuiButton){ { 40, by, bw, 104 }, T("Geri al"), BTN_UNDO };
+		buttons[1] = (KuiButton){ { 80 + bw, by, bw, 104 }, T("Yeni oyun"), BTN_NEW };
+		n_buttons = 2;
+	} else {
+		buttons[0] = (KuiButton){ { 40, by, 170, 104 }, "◀", BTN_PREV };
+		buttons[1] = (KuiButton){ { 230, by, 170, 104 }, "▶", BTN_NEXT };
+		buttons[2] = (KuiButton){ { 420, by, 250, 104 }, T("Liste"), BTN_LIST };
+		buttons[3] = (KuiButton){ { 690, by, w - 730, 104 }, T("Oyuna dön"), BTN_BACK };
+		n_buttons = 4;
+	}
+	for (int i = 0; i < n_buttons; i++) kui_button(&buttons[i], 0);
 	for (int sq = 0; sq < 64; sq++) draw_square(sq);
 	draw_status(1);
+	draw_strip(1);
 	kui_flush(1);
 }
 
@@ -203,7 +295,7 @@ static void engine_failed(void);
 
 static void maybe_start_engine(void)
 {
-	if (game.mode != 1 || over || thinking || game.pos.side == game.human_side) return;
+	if (game.mode != 1 || over || thinking || review >= 0 || game.pos.side == game.human_side) return;
 	if (game_result(&game) != RES_ONGOING) return;
 	char pos[GAME_MAX_PLIES * 6 + 128];
 	game_uci_position(&game, pos, sizeof pos);
@@ -285,7 +377,7 @@ static int choose_promotion(void)
 
 static void tap_square(int sq)
 {
-	if (over || thinking || sq < 0) return;
+	if (over || thinking || review >= 0 || sq < 0) return;
 	if (game.mode == 1 && game.pos.side != game.human_side) return;
 	int p = game.pos.sq[sq];
 	if (selected >= 0 && is_target(sq)) {
@@ -317,6 +409,49 @@ static void undo(void)
 	for (int i = 0; i < 64; i++) drawn[i] = -1;
 	update_board();
 	maybe_start_engine();
+}
+
+/* ---- inceleme (review): a past position, read-only ---- */
+
+static void review_show(int plies)
+{
+	if (plies < 0) plies = 0;
+	if (plies > game.n) plies = game.n;
+	review = plies;
+	chess_from_fen(&review_pos, game.start_fen);
+	for (int i = 0; i < plies; i++) chess_make(&review_pos, game.hist[i]);
+	last_from = plies ? game.hist[plies - 1].from : -1;
+	last_to = plies ? game.hist[plies - 1].to : -1;
+}
+
+static void review_step(int d)
+{
+	if (review + d < 0 || review + d > game.n) return;
+	review_show(review + d);
+	update_board();
+}
+
+static void review_end(void)
+{
+	review = -1;
+	sync_last_move();
+	for (int i = 0; i < 64; i++) drawn[i] = -1;
+	draw_all();
+	maybe_start_engine();
+}
+
+/* Hamle geçmişi, then the tapped move in review; returns 1 when the app should quit */
+static int open_history(void)
+{
+	engine_cancel(); /* restarts when play resumes */
+	selected = -1;
+	int k = history_ui_run(&game, review > 0 ? review - 1 : -1);
+	if (k == -2) return 1;
+	if (k >= 0) review_show(k);
+	for (int i = 0; i < 64; i++) drawn[i] = -1;
+	draw_all();
+	if (review < 0) maybe_start_engine();
+	return 0;
 }
 
 /* ---- setup screens ---- */
@@ -429,6 +564,10 @@ int main(void)
 		}
 		switch (e.type) {
 		case KUI_EV_QUIT: quit = 1; break;
+		case KUI_EV_SWIPE:
+			if (review >= 0 && e.dir == KUI_DIR_LEFT) review_step(1);
+			if (review >= 0 && e.dir == KUI_DIR_RIGHT) review_step(-1);
+			break;
 		case KUI_EV_WAKE:
 			for (int i = 0; i < 64; i++) drawn[i] = -1;
 			draw_all();
@@ -439,7 +578,12 @@ int main(void)
 			if (t == KUI_BTN_MENU) {
 				const char *ch[] = { T("Tahtayı çevir"), T("Yeni oyun"), T("Bulmacalar"),
 						     show_hints ? T("İpuçları: Açık") : T("İpuçları: Kapalı") };
+				/* the full move list (Hamle geçmişi) opens with a tap on the move strip */
 				int k = kui_dialog(T("Menü"), T("İpuçları: seçtiğiniz taşın gidebileceği kareler"), ch, 4, draw_all);
+				if (k >= 0 && review >= 0) {
+					review = -1; /* every choice ends the review */
+					sync_last_move();
+				}
 				if (k == 0) view_flip = !view_flip;
 				if (k == 3) { /* ✕ closes the menu */
 					char sp[300];
@@ -467,8 +611,18 @@ int main(void)
 				maybe_start_engine();
 				break;
 			}
-			int id = kui_buttons_hit(buttons, 2, e.x, e.y);
-			if (id == BTN_UNDO) undo();
+			if (kui_rect_contains(strip_r, e.x, e.y)) {
+				if (open_history()) quit = 1;
+				break;
+			}
+			int id = kui_buttons_hit(buttons, n_buttons, e.x, e.y);
+			if (id == BTN_PREV) review_step(-1);
+			else if (id == BTN_NEXT) review_step(1);
+			else if (id == BTN_LIST) {
+				if (open_history()) quit = 1;
+			} else if (id == BTN_BACK) review_end();
+			else if (review >= 0) break;
+			else if (id == BTN_UNDO) undo();
 			else if (id == BTN_NEW) {
 				const char *ch[] = { T("Evet"), T("Hayır") };
 				if (kui_dialog(T("Yeni oyun"), T("Bu oyun bitirilsin mi?"), ch, 2, draw_all) == 0) {

@@ -1349,3 +1349,14 @@ Anahtar gerekmez. Vikikitap, Wikibooks Cookbook ve Almanca Wikibooks Kochbuch ta
 Dizin indirilemedi.\nWi-Fi bağlantısını kontrol edin.	Не вдалося завантажити покажчик.\nПеревірте підключення Wi-Fi.
 + %d tarif çevrimiçi kütüphanede (Türkçe, İngilizce, Almanca)	+ %d рецептів в онлайн-бібліотеці (турецька, англійська, німецька)
 Çevrimiçi kütüphane: Wi-Fi açıkken ilk aramada indirilir	Онлайн-бібліотека: завантажується під час першого пошуку з увімкненим Wi-Fi
+Henüz hamle yok.	Ходів поки немає.
+Hamle geçmişi	Історія ходів
+PGN olarak kaydet	Зберегти як PGN
+Siz	Ви
+Oyun PGN olarak kaydedildi:\ndocuments/Satranc\n%s	Партію збережено у PGN:\ndocuments/Satranc\n%s
+PGN kaydedilemedi.	Не вдалося зберегти PGN.
+başlangıç	початок
+İnceleme: %s (%d/%d)	Перегляд: %s (%d/%d)
+Başlangıç konumu	Початкова позиція
+Hamleler burada görünecek	Тут з’являться ходи
+Tümü ›	Усі ›
