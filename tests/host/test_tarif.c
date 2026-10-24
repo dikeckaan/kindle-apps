@@ -363,6 +363,20 @@ static void test_wiki(void)
 	tarif_buf_free(&b);
 	T_EQ_INT(tarif_wiki_record(&b, "* [[Amerikan Mutfağı]]\n* [[Fransız Mutfağı]]\n", "tr", "Yemek:İçindekiler", "u"), -1);
 	T_EQ_INT(b.len, 0);
+	/* a page without headings or bullets (Yemek:Ayvalı Bulgur Pilavı) */
+	const char *plain = "Servis: 4 kişilik\nHazırlama Süresi:\n30 dakika\n\nMalzeme:\nAna Yemek :\n1 adet Ayva\n"
+			    "1 su bardağı Bulgur\n2 su bardağı su\n  tuz,karabiber\n\t\t\n\n"
+			    "Ayvanın kabuklarını soyun ve dilimleyin. Tereyağını eritin, soğanı kavurun. Bulguru ekleyip 10 dakika pişirin.\n\n"
+			    "[[Kategori:Pilav tarifleri]]";
+	T_EQ_INT(tarif_wiki_record(&b, plain, "tr", "Ayvalı Bulgur Pilavı", "u"), 0);
+	copy = strdup(b.s);
+	T_EQ_INT(tarif_parse(copy, &db), 1);
+	r = &db.r[0];
+	T_EQ_INT(r->servings, 4);
+	T_EQ_INT(r->n_ing, 5);
+	T_EQ_INT(r->n_steps, 1);
+	tarif_free(&db);
+	tarif_buf_free(&b);
 	/* a long method paragraph becomes several steps */
 	char lw[3000] = "==Ingredients==\n*a b\n*c d\n==Method==\n";
 	for (int i = 0; i < 12; i++) strcat(lw, "Stir the pot gently and wait a little while. ");

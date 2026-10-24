@@ -128,7 +128,7 @@ def clean(s):
     return re.sub(r"\s+", " ", s).strip()
 
 
-ING_RE = re.compile(r"malzeme|gerekli|ihtiya|ingredient|zutat", re.I)
+ING_RE = re.compile(r"malzeme|gerekli|ihtiya|çindekiler|ingredient|zutat", re.I)
 STEP_RE = re.compile(r"hazırlan|yapılış|yapımı|tarif|pişir|procedure|direction|method|preparation|instruction|steps|zubereitung|anleitung", re.I)
 BOLD_ONLY = re.compile(r"^'{3,}[^']{1,60}'{3,}:?$")
 
@@ -142,6 +142,7 @@ def parse(text):
     if m and 0 < int(m.group(1)) <= 30: serv = int(m.group(1))
     text = strip_templates(text)
     intro, ings, steps, sect = [], [], [], "intro"
+    plain = gap = False  # plain: the section began at a "Malzeme:" line, not a heading; gap: a blank line since
     for line in text.split("\n"):
         h = re.match(r"^(={2,})\s*(.*?)\s*\1\s*$", line.strip())
         if h:
@@ -150,18 +151,34 @@ def parse(text):
             elif STEP_RE.search(title) and (level == 2 or sect != "step"): sect = "step"
             elif sect == "ing" and level > 2: ings.append(("+", title.rstrip(":")))
             elif level == 2 or sect != "ing": sect = "other"
+            plain = False
             continue
         raw = line.strip()
-        if not raw: continue
+        if not raw:
+            gap = True
+            continue
         bullet = re.match(r"^([*#:;]+)\s*(.*)$", raw)
         body = clean(bullet.group(2) if bullet else raw)
         if not body: continue
+        if not bullet and len(body) < 40:  # pages without headings: "Malzeme:" / "Yapılışı:" label lines (as tarif_wiki_record)
+            label = body.rstrip(": ")
+            if len(label.split()) <= 3 and sect != "ing" and ING_RE.search(label):
+                sect, plain, gap = "ing", True, False
+                continue
+            if len(label.split()) <= 3 and (body.endswith(":") or raw.startswith("'''")) and STEP_RE.search(label):
+                sect = "step"
+                continue
+        # after the ingredient list and a blank line, a paragraph of sentences is the method (pages without its heading)
+        if (sect == "ing" and gap and not bullet and sum(k == "-" for k, _ in ings) >= 2 and len(body) >= 80
+                and (". " in body or (plain and body.endswith(".")))):
+            sect = "step"
+        gap = False
         if sect == "intro" and (body.startswith(("<", "|")) or "listesine dön" in body): continue
         if sect == "intro" and not bullet and len(" ".join(intro)) < 400: intro.append(body)
         elif sect == "ing":
             if bullet: ings.append(("-", body))
             elif re.match(r"^\d+\s*kişilik:?$|^serves", body, re.I): continue
-            elif body.endswith(":") and len(body) < 60: ings.append(("+", body.rstrip(":")))
+            elif body.endswith(":") and len(body) < 60: ings.append(("+", body.rstrip(": ")))
             else: ings += [("-", p.strip()) for p in re.split(r",\s*(?![^()]*\))", body) if p.strip()]
         elif sect == "step":
             if not bullet and BOLD_ONLY.match(raw): continue  # "'''Teig'''": a part name, not a step

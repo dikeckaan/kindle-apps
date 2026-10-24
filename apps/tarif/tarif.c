@@ -1139,7 +1139,7 @@ static void tags_from_category(const char *c, char *tags)
 
 int tarif_wiki_record(TarifBuf *b, const char *wikitext, const char *lang, const char *title, const char *url)
 {
-	static const char *const ING[] = { "malzeme", "gerekli", "ihtiya", "ingredient", NULL };
+	static const char *const ING[] = { "malzeme", "gerekli", "ihtiya", "icindekiler", "ingredient", NULL };
 	static const char *const STEP[] = { "hazirlan", "yapilis", "yapimi", "tarif", "pisir", "procedure", "direction", "method", "preparation",
 					    "instruction", "steps", NULL };
 	int serv = 0;
@@ -1186,6 +1186,7 @@ int tarif_wiki_record(TarifBuf *b, const char *wikitext, const char *lang, const
 	TarifBuf ing = { 0 }, steps = { 0 }, intro = { 0 };
 	int n_ing = 0, n_steps = 0;
 	enum { S_INTRO, S_ING, S_STEP, S_OTHER } sect = S_INTRO;
+	int plain = 0, gap = 0; /* plain: the section began at a "Malzeme:" line, not a heading; gap: a blank line since */
 	static char line[8192];
 	for (char *p = text; *p;) {
 		char *e = strchr(p, '\n');
@@ -1201,6 +1202,7 @@ int tarif_wiki_record(TarifBuf *b, const char *wikitext, const char *lang, const
 			char h[300], f[300];
 			clean_inline(p + lv, len - lv - rv, h, sizeof h);
 			tarif_fold(h, f, sizeof f);
+			plain = 0;
 			if (heading_matches(f, ING) && (lv == 2 || sect != S_ING)) sect = S_ING;
 			else if (heading_matches(f, STEP) && (lv == 2 || sect != S_STEP)) sect = S_STEP;
 			else if (sect == S_ING && lv > 2) {
@@ -1211,12 +1213,40 @@ int tarif_wiki_record(TarifBuf *b, const char *wikitext, const char *lang, const
 			p = next;
 			continue;
 		}
-		if (!len) { p = next; continue; }
+		if (!len) {
+			gap = 1;
+			p = next;
+			continue;
+		}
 		int bullet = 0;
 		while (bullet < len && strchr("*#:;", p[bullet])) bullet++;
 		clean_inline(p + bullet, len - bullet, line, sizeof line);
 		size_t ll = strlen(line);
 		if (!ll) { p = next; continue; }
+		if (!bullet && ll < 40) { /* pages without headings: "Malzeme:" / "Yapılışı:" label lines */
+			char h[64], f[64];
+			size_t hl = ll; /* < 40 */
+			memcpy(h, line, hl + 1);
+			int colon = hl && h[hl - 1] == ':';
+			while (hl && strchr(": ", h[hl - 1])) h[--hl] = '\0';
+			tarif_fold(h, f, sizeof f);
+			int words = 1;
+			for (const char *c = h; *c; c++) words += *c == ' ';
+			if (words <= 3 && sect != S_ING && heading_matches(f, ING)) {
+				sect = S_ING, plain = 1, gap = 0;
+				p = next;
+				continue;
+			}
+			if (words <= 3 && (colon || !strncmp(p, "'''", 3)) && heading_matches(f, STEP)) { /* "Yapılışı:", '''Yapılışı''' */
+				sect = S_STEP;
+				p = next;
+				continue;
+			}
+		}
+		/* after the ingredient list and a blank line, a paragraph of sentences is the method (pages without its heading) */
+		if (sect == S_ING && gap && !bullet && n_ing >= 2 && ll >= 80 && (strstr(line, ". ") || (plain && line[ll - 1] == '.')))
+			sect = S_STEP;
+		gap = 0;
 		if (sect == S_INTRO) {
 			if (!bullet && line[0] != '<' && line[0] != '|' && !strstr(line, "listesine dön") && intro.len < 400) {
 				if (intro.len) tarif_buf_add(&intro, " ", 1);
@@ -1229,7 +1259,8 @@ int tarif_wiki_record(TarifBuf *b, const char *wikitext, const char *lang, const
 			} else if (strstr(line, "kişilik") && ll < 20) {
 				/* "4 kişilik:" */
 			} else if (line[ll - 1] == ':' && ll < 60) {
-				line[ll - 1] = '\0';
+				line[--ll] = '\0';
+				while (ll && line[ll - 1] == ' ') line[--ll] = '\0';
 				tarif_rec_line(&ing, '+', line, -1);
 			} else { /* "Un, şeker, …" in one paragraph: split at commas outside parentheses */
 				int depth = 0;
